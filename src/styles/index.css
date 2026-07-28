@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-gray-950 text-white font-body;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :root {
+    --age-track: 'adults';
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 rounded-2xl font-display text-lg font-bold
+      bg-naira-green hover:bg-naira-green-light
+      text-white shadow-lg hover:shadow-naira-green/40
+      transition-all duration-200 active:scale-95;
+  }
+
+  .btn-gold {
+    @apply px-6 py-3 rounded-2xl font-display text-lg font-bold
+      bg-naira-gold hover:bg-naira-gold-light
+      text-gray-900 shadow-lg hover:shadow-naira-gold/40
+      transition-all duration-200 active:scale-95;
+  }
+
+  .card-glass {
+    @apply bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl;
+  }
+
+  .zone-card {
+    @apply relative rounded-2xl p-5 cursor-pointer
+      transition-all duration-300 hover:scale-105 hover:-translate-y-1;
+  }
+
+  .mastery-bar-track {
+    @apply h-3 rounded-full bg-white/10 overflow-hidden;
+  }
+
+  .mastery-bar-fill {
+    @apply h-full rounded-full transition-all duration-1000 ease-out;
+  }
+
+  .answer-option {
+    @apply w-full text-left p-4 rounded-xl border-2 border-white/10
+      bg-white/5 hover:bg-white/10 hover:border-white/30
+      font-body text-base transition-all duration-150
+      cursor-pointer;
+  }
+
+  .answer-correct {
+    @apply border-naira-green bg-naira-green/20 text-naira-green-light;
+  }
+
+  .answer-wrong {
+    @apply border-red-500 bg-red-500/20 text-red-300;
+  }
+
+  .badge-chip {
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full
+      text-xs font-bold uppercase tracking-wide;
+  }
+
+  .ankara-bg {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23008751' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .shimmer {
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.08) 50%, transparent 100%);
+    background-size: 200% 100%;
+    animation: shimmer 2s linear infinite;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.03);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0,135,81,0.4);
+  border-radius: 3px;
+}
+
+/* Timer ring animation */
+@keyframes timer-drain {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: 283; }
+}

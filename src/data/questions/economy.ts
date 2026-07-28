@@ -1,0 +1,195 @@
+import type { Question } from '../../types';
+
+const questions: Question[] = [
+  {
+    id: 'ec-001',
+    text: 'What is inflation?',
+    options: [
+      'When your savings account balance grows',
+      'A general rise in prices across the economy, reducing purchasing power',
+      'When the government prints less money',
+      'When your income increases each year',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens', 'adults'],
+    category: 'economy',
+    explanation:
+      'Inflation means your money buys less over time. If ₦1,000 used to buy 10 items and now buys only 8 due to 20% inflation, your purchasing power has fallen. Nigeria has experienced high inflation rates in recent years.',
+  },
+  {
+    id: 'ec-002',
+    text: 'Which institution sets monetary policy and controls inflation in Nigeria?',
+    options: [
+      'Federal Ministry of Finance',
+      'Central Bank of Nigeria (CBN)',
+      'National Assembly',
+      'Nigerian Stock Exchange',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens', 'adults'],
+    category: 'economy',
+    explanation:
+      'The CBN (Central Bank of Nigeria) is responsible for monetary policy — controlling money supply, setting interest rates (MPR), and managing the exchange rate to stabilize prices and the economy.',
+  },
+  {
+    id: 'ec-003',
+    text: 'Nigeria\'s inflation rate in 2024 was approximately:',
+    options: ['5%', '15%', '28–33%', '45%'],
+    correctIndex: 2,
+    difficulty: 'hard',
+    ageTrack: ['adults'],
+    category: 'economy',
+    explanation:
+      'Nigeria\'s inflation rose sharply in 2023–2024, reaching approximately 28–33% due to fuel subsidy removal, naira devaluation, and food price increases. This significantly eroded purchasing power for ordinary Nigerians.',
+  },
+  {
+    id: 'ec-004',
+    text: 'If Nigeria\'s exchange rate moves from ₦800/$ to ₦1,600/$, what has happened to the naira?',
+    options: [
+      'The naira has strengthened (appreciated)',
+      'The naira has weakened (depreciated) by 50%',
+      'The dollar has lost value',
+      'Nothing significant has changed',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['adults'],
+    category: 'economy',
+    explanation:
+      'When more naira are needed to buy one dollar, the naira has depreciated (weakened). Going from ₦800 to ₦1,600/$ means the naira lost 50% of its value against the dollar. This makes imports more expensive and drives up local prices.',
+  },
+  {
+    id: 'ec-005',
+    text: 'What does "GDP" stand for and what does it measure?',
+    options: [
+      'General Development Plan — a government spending document',
+      'Gross Domestic Product — the total value of all goods and services produced in a country in a year',
+      'Government Development Programs — CBN initiatives',
+      'Global Dollar Parity — exchange rate alignment',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['adults'],
+    category: 'economy',
+    explanation:
+      'GDP (Gross Domestic Product) measures a country\'s economic output. Nigeria has Africa\'s largest GDP. A growing GDP generally means more jobs and income; a shrinking GDP (recession) means hardship for many.',
+  },
+  {
+    id: 'ec-006',
+    text: 'What is the Monetary Policy Rate (MPR) in Nigeria used for?',
+    options: [
+      'The interest rate banks charge you for loans',
+      'The benchmark rate set by CBN that influences all other lending and deposit rates in the economy',
+      'The rate at which naira is exchanged for other currencies',
+      'The annual salary increase for civil servants',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    ageTrack: ['adults'],
+    category: 'economy',
+    explanation:
+      'The MPR (Monetary Policy Rate) is the CBN\'s policy signal rate. When CBN raises MPR, banks raise their loan rates to slow borrowing and reduce inflation. When CBN cuts MPR, borrowing becomes cheaper to stimulate growth.',
+  },
+  {
+    id: 'ec-007',
+    text: 'Why did removing Nigeria\'s fuel subsidy in 2023 cause prices to rise?',
+    options: [
+      'It had no effect on prices',
+      'The government used the savings to buy more goods from abroad',
+      'Fuel is an input cost — higher fuel prices increase transport and production costs for almost everything',
+      'It only affected luxury goods',
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    ageTrack: ['adults'],
+    category: 'economy',
+    explanation:
+      'Fuel is a core input for transportation, electricity generation, and manufacturing in Nigeria. When fuel prices rise, every good transported, refrigerated, or manufactured becomes more expensive — contributing directly to inflation across the economy.',
+  },
+  {
+    id: 'ec-008',
+    text: 'If inflation is 25% per year and your savings account earns 12% interest, what is your REAL return?',
+    options: ['37% gain', '13% gain', '−13% (you\'re losing purchasing power)', '25% gain'],
+    correctIndex: 2,
+    difficulty: 'hard',
+    ageTrack: ['adults'],
+    category: 'economy',
+    explanation:
+      'Real return = nominal return − inflation = 12% − 25% = −13%. Despite earning 12% interest, you are losing purchasing power because inflation is outpacing your returns. This is why Nigerians need investments that beat inflation, not just savings accounts.',
+  },
+  // --- Kids easy questions ---
+  {
+    id: 'ec-009',
+    text: 'When things in the market cost more money than they used to, this is called:',
+    options: ['Saving', 'Inflation', 'Profit', 'Investment'],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'economy',
+    explanation: 'Inflation means prices are rising over time. When inflation is high, ₦100 buys less than it used to. That is why it is important to save and invest so your money grows.',
+  },
+  {
+    id: 'ec-010',
+    text: 'What does it mean when we say Nigeria "produces oil"?',
+    options: [
+      'Nigeria makes cooking oil in factories',
+      'Nigeria digs up crude oil from the ground and sells it to earn money',
+      'Nigeria imports oil from other countries',
+      'Nigeria uses oil only for cars',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'economy',
+    explanation: 'Nigeria is one of Africa\'s biggest oil producers. Crude oil is drilled from the ground, especially in the Niger Delta, and sold to other countries. Oil earns Nigeria a large part of its income.',
+  },
+  {
+    id: 'ec-011',
+    text: 'A market is a place where people:',
+    options: [
+      'Only buy food',
+      'Buy and sell goods and services',
+      'Go to school',
+      'Pay taxes',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'economy',
+    explanation: 'A market is where buyers and sellers meet to exchange goods and services for money. Markets can be physical (like Balogun Market) or online (like Jumia).',
+  },
+  {
+    id: 'ec-012',
+    text: 'If lots of people want to buy something but there is very little of it, what usually happens to the price?',
+    options: [
+      'The price goes down',
+      'The price stays the same',
+      'The price goes up',
+      'The item becomes free',
+    ],
+    correctIndex: 2,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'economy',
+    explanation: 'When demand is high and supply is low, prices rise. This is supply and demand — one of the most important rules of economics. It explains why prices change for things like fuel, food, and school supplies.',
+  },
+  {
+    id: 'ec-013',
+    text: 'Which of these is an example of a Nigerian farmer contributing to the economy?',
+    options: [
+      'Spending money at a market',
+      'Growing yams and selling them at the market',
+      'Watching TV at home',
+      'Borrowing money from a bank',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'economy',
+    explanation: 'Farmers produce food that feeds families and earns money through sales. Agriculture is one of the biggest parts of Nigeria\'s economy and employs millions of people.',
+  },
+];
+
+export default questions;

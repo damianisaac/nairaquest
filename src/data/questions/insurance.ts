@@ -1,0 +1,195 @@
+import type { Question } from '../../types';
+
+const questions: Question[] = [
+  {
+    id: 'in-001',
+    text: 'What is the main purpose of insurance?',
+    options: [
+      'To make you rich quickly',
+      'To transfer financial risk from you to an insurance company in exchange for premiums',
+      'To store your money safely like a savings account',
+      'To borrow money at low interest',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens', 'adults'],
+    category: 'insurance',
+    explanation:
+      'Insurance pools risk: many people pay small premiums so the insurer can pay out large amounts when any individual suffers a loss. You trade a small certain cost (premium) for protection against a large uncertain loss.',
+  },
+  {
+    id: 'in-002',
+    text: 'What does NHIS stand for in Nigeria?',
+    options: [
+      'National Housing Insurance Scheme',
+      'National Health Insurance Scheme',
+      'Nigerian Health Investment System',
+      'National Hospital Insurance Service',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens', 'adults'],
+    category: 'insurance',
+    explanation:
+      'NHIS (National Health Insurance Scheme) provides affordable healthcare to Nigerians through contributory health insurance. Employees in formal employment typically have contributions made by both employer and employee to NHIS.',
+  },
+  {
+    id: 'in-003',
+    text: 'Taiwo does not have health insurance. She suddenly needs surgery that costs ₦800,000. She must pay out of pocket. This illustrates what risk?',
+    options: [
+      'Credit risk',
+      'The catastrophic financial impact of uninsured healthcare costs',
+      'Inflation risk',
+      'Investment risk',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['adults'],
+    category: 'insurance',
+    explanation:
+      'A single health emergency can wipe out years of savings without insurance. ₦800,000 could represent 5+ years of savings for many Nigerians. Health insurance converts this unpredictable catastrophic cost into manageable monthly premiums.',
+  },
+  {
+    id: 'in-004',
+    text: 'What is a "premium" in insurance?',
+    options: [
+      'The bonus paid when you file a successful claim',
+      'The regular payment you make to maintain your insurance coverage',
+      'The maximum amount your insurance will pay out',
+      'The excess you pay before insurance kicks in',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens', 'adults'],
+    category: 'insurance',
+    explanation:
+      'A premium is the regular payment (monthly, quarterly, or annually) you make to keep your insurance active. If you stop paying premiums, your coverage lapses and you\'re no longer protected.',
+  },
+  {
+    id: 'in-005',
+    text: 'What is the difference between a "claim" and a "premium" in insurance?',
+    options: [
+      'They are the same thing with different names',
+      'Premium = what you pay regularly; Claim = what you request from the insurer after a covered loss',
+      'Premium = the payout; Claim = your monthly contribution',
+      'Premium is for life insurance; Claim is for car insurance',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['teens', 'adults'],
+    category: 'insurance',
+    explanation:
+      'Premium: your regular payment to maintain coverage. Claim: your formal request to the insurer for compensation after a covered event (accident, illness, death). The insurer reviews the claim and pays out if it\'s valid and covered by your policy.',
+  },
+  {
+    id: 'in-006',
+    text: 'Bature\'s car is insured for ₦3 million. He crashes and total repair cost is ₦600,000. His "excess" is ₦50,000. How much does the insurance company pay?',
+    options: ['₦600,000', '₦550,000', '₦3,000,000', '₦50,000'],
+    correctIndex: 1,
+    difficulty: 'hard',
+    ageTrack: ['adults'],
+    category: 'insurance',
+    explanation:
+      'The excess (deductible) is what you pay first before insurance covers the rest. ₦600,000 − ₦50,000 excess = ₦550,000 paid by the insurer. Higher excess = lower premium, but you carry more of the initial loss yourself.',
+  },
+  {
+    id: 'in-007',
+    text: 'Why is "third party motor insurance" compulsory in Nigeria?',
+    options: [
+      'To fund government road construction',
+      'To ensure that if you injure another person or damage their property in an accident, they are compensated',
+      'It is not compulsory — it is optional',
+      'To cover your own car repairs',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['adults'],
+    category: 'insurance',
+    explanation:
+      'Third party insurance is legally required for all vehicles in Nigeria. It covers damages or injuries you cause to OTHER people and their property in an accident. It does NOT cover your own vehicle. Comprehensive insurance covers both you and third parties.',
+  },
+  {
+    id: 'in-008',
+    text: 'Which Nigerian regulatory body oversees insurance companies?',
+    options: ['CBN', 'NAICOM (National Insurance Commission)', 'SEC Nigeria', 'EFCC'],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['adults'],
+    category: 'insurance',
+    explanation:
+      'NAICOM (National Insurance Commission) licenses and supervises insurance companies in Nigeria to ensure they remain financially capable of paying claims. Always verify that an insurer is NAICOM-licensed before buying a policy.',
+  },
+  // --- Kids easy questions ---
+  {
+    id: 'in-009',
+    text: 'What is insurance?',
+    options: [
+      'A type of savings account with very high interest',
+      'A way to protect yourself from big money losses by paying a small regular fee',
+      'A government tax for emergencies',
+      'A lottery where you can win money',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'insurance',
+    explanation: 'Insurance means you pay a small amount regularly (a premium) so that if something bad happens — like illness or an accident — the insurance company helps cover the big costs.',
+  },
+  {
+    id: 'in-010',
+    text: 'If Ola pays for health insurance and gets sick, who helps pay for his hospital treatment?',
+    options: [
+      'Nobody — he pays everything himself',
+      'The insurance company covers the medical bills',
+      'The government pays all costs',
+      'His employer covers all costs',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'insurance',
+    explanation: 'Health insurance covers medical costs when you are sick or injured. Instead of paying a huge hospital bill all at once, your insurance company covers part or all of it.',
+  },
+  {
+    id: 'in-011',
+    text: 'Why do people buy car insurance?',
+    options: [
+      'To make their car go faster',
+      'So they do not have to pay for fuel',
+      'To protect against costly repairs or accidents',
+      'Because cars come with free insurance',
+    ],
+    correctIndex: 2,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'insurance',
+    explanation: 'Car insurance covers the cost of repairs or compensation if your car is in an accident or gets stolen. In Nigeria, third-party car insurance is required by law.',
+  },
+  {
+    id: 'in-012',
+    text: 'What is the regular payment you make to keep your insurance active called?',
+    options: ['Interest', 'Tax', 'Premium', 'Dividend'],
+    correctIndex: 2,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'insurance',
+    explanation: 'A premium is the regular fee you pay for insurance coverage. It is usually paid monthly or yearly. Think of it like paying for protection — so one big accident does not wipe out all your savings.',
+  },
+  {
+    id: 'in-013',
+    text: 'Which of these is an example of insurance helping someone?',
+    options: [
+      'Amaka saves ₦500 every week in her piggy bank',
+      'Emeka\'s car is damaged in an accident and his insurance company pays for repairs',
+      'Bola borrows money from her friend',
+      'Tunde earns a salary from his job',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'insurance',
+    explanation: 'Insurance kicks in when something unexpected and costly happens. Without it, Emeka would have to pay the full repair bill himself — which could be very expensive.',
+  },
+];
+
+export default questions;

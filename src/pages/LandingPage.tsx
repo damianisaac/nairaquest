@@ -1,0 +1,252 @@
+import { useState, lazy, Suspense } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useGameStore } from '../store/gameStore';
+import TopNav from '../components/ui/TopNav';
+import { sound } from '../components/ui/SoundController';
+import type { AgeTrack, UserRole } from '../types';
+
+const HeroScene = lazy(() => import('../components/3d/HeroScene'));
+
+type OnboardingTrack = AgeTrack | 'teacher';
+
+const AGE_TRACKS: { id: OnboardingTrack; label: string; emoji: string; desc: string; color: string }[] = [
+  {
+    id: 'kids',
+    label: 'Kids',
+    emoji: '🌟',
+    desc: 'Ages 6–12 · Fun, colorful, no penalties',
+    color: '#22c55e',
+  },
+  {
+    id: 'teens',
+    label: 'Teens',
+    emoji: '🚀',
+    desc: 'Ages 13–17 · Compete, badge up, level up',
+    color: '#8b5cf6',
+  },
+  {
+    id: 'adults',
+    label: 'Adults',
+    emoji: '💼',
+    desc: 'Full financial mastery · Investing, loans, tax',
+    color: '#d4af37',
+  },
+  {
+    id: 'teacher',
+    label: 'Teacher',
+    emoji: '👨‍🏫',
+    desc: 'Set up a classroom, assign zones, track students',
+    color: '#0ea5e9',
+  },
+];
+
+
+function OnboardingModal({ onClose: _onClose }: { onClose: () => void }) {
+  const [name, setName] = useState('');
+  const [selectedTrack, setSelectedTrack] = useState<OnboardingTrack>('adults');
+  const { createProfile } = useGameStore();
+  const navigate = useNavigate();
+
+  const handleStart = () => {
+    if (!name.trim()) return;
+    const ageTrack: AgeTrack = selectedTrack === 'teacher' ? 'adults' : selectedTrack;
+    const userRole: UserRole = selectedTrack === 'teacher' ? 'teacher' : 'general';
+    createProfile(name.trim(), ageTrack, userRole);
+    sound.levelUp();
+    if (selectedTrack === 'teacher') navigate('/teacher');
+    else navigate('/map');
+  };
+
+  return (
+    <motion.div
+      className="fixed inset-0 z-[100] flex items-center justify-center p-4"
+      style={{ background: 'rgba(0,0,0,0.75)', backdropFilter: 'blur(8px)' }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <motion.div
+        className="w-full max-w-md card-glass p-6 space-y-6"
+        initial={{ scale: 0.85, y: 20 }}
+        animate={{ scale: 1, y: 0 }}
+        exit={{ scale: 0.85, y: 20 }}
+        transition={{ type: 'spring', stiffness: 300, damping: 25 }}
+      >
+        <div className="text-center">
+          <motion.div
+            className="text-5xl mb-3"
+            animate={{ rotate: [0, -10, 10, -5, 0] }}
+            transition={{ duration: 1, repeat: Infinity, repeatDelay: 2 }}
+          >
+            🐚
+          </motion.div>
+          <h2 className="font-display text-2xl text-white">Welcome, Explorer!</h2>
+          <p className="text-white/60 text-sm mt-1">Let's set up your adventure profile</p>
+        </div>
+
+        {/* Name input */}
+        <div>
+          <label className="block text-sm text-white/60 mb-2">What should we call you?</label>
+          <input
+            className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/30 focus:outline-none focus:border-naira-green transition-colors"
+            placeholder="Your name or nickname"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            onKeyDown={(e) => e.key === 'Enter' && handleStart()}
+            maxLength={24}
+            autoFocus
+          />
+        </div>
+
+        {/* Age track */}
+        <div>
+          <label className="block text-sm text-white/60 mb-3">Choose your adventure track:</label>
+          <div className="space-y-2">
+            {AGE_TRACKS.map((track) => (
+              <button
+                key={track.id}
+                onClick={() => { setSelectedTrack(track.id); sound.click(); }}
+                className={`w-full flex items-center gap-3 p-3 rounded-xl border-2 transition-all ${
+                  selectedTrack === track.id
+                    ? 'border-current bg-white/10'
+                    : 'border-white/10 bg-white/5 hover:bg-white/8'
+                }`}
+                style={selectedTrack === track.id ? { borderColor: track.color, color: track.color } : {}}
+              >
+                <span className="text-2xl">{track.emoji}</span>
+                <div className="text-left">
+                  <div className="font-bold text-sm text-white">{track.label}</div>
+                  <div className="text-xs text-white/50">{track.desc}</div>
+                </div>
+                {selectedTrack === track.id && (
+                  <motion.div
+                    className="ml-auto w-5 h-5 rounded-full flex items-center justify-center text-xs"
+                    style={{ background: track.color }}
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                  >
+                    ✓
+                  </motion.div>
+                )}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <button
+          className="btn-gold w-full"
+          onClick={handleStart}
+          disabled={!name.trim()}
+          style={{ opacity: name.trim() ? 1 : 0.5, cursor: name.trim() ? 'pointer' : 'not-allowed' }}
+        >
+          Enter the Adventure →
+        </button>
+      </motion.div>
+    </motion.div>
+  );
+}
+
+export default function LandingPage() {
+  const { profile, liteMode } = useGameStore();
+  const [showOnboarding, setShowOnboarding] = useState(false);
+  const navigate = useNavigate();
+
+  const handleCTA = () => {
+    sound.click();
+    if (profile) {
+      navigate('/map');
+    } else {
+      setShowOnboarding(true);
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-gray-950 ankara-bg overflow-x-hidden">
+      <TopNav />
+
+      {/* Hero Section */}
+      <section className="relative min-h-[100svh] flex flex-col items-center justify-between px-4 pt-24 pb-8 sm:pt-20 sm:pb-16">
+        {/* Background */}
+        <div className="absolute inset-0 z-0 bg-gray-950">
+          {/* Mobile: natural-ratio render so no pixel of the image is cropped */}
+          <img
+            src="/banner.jpeg"
+            className="sm:hidden absolute top-0 left-0 w-full"
+            style={{ height: 'auto' }}
+            alt=""
+          />
+          {/* Desktop: full-bleed cover */}
+          <img
+            src="/banner.jpeg"
+            className="hidden sm:block absolute inset-0 w-full h-full object-cover object-center"
+            alt=""
+          />
+          {!liteMode && (
+            <Suspense fallback={null}>
+              <HeroScene />
+            </Suspense>
+          )}
+          {/* Gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-950/40 via-gray-950/20 to-gray-950 sm:from-gray-950/30 sm:via-transparent sm:to-gray-950" />
+        </div>
+
+        {/* Hero content — centred vertically on mobile, pushed to bottom on desktop */}
+        <div className="relative z-10 text-center max-w-2xl mx-auto space-y-5 sm:space-y-6 flex-1 flex flex-col items-center justify-center sm:justify-end pb-4 sm:pb-0">
+          <motion.div
+            className="flex flex-col gap-3 justify-center items-center w-full"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+          >
+            <motion.button
+              className="btn-gold text-lg sm:text-xl px-7 py-3.5 sm:px-8 sm:py-4 shadow-xl shadow-naira-gold/20 animate-pulse-glow w-full sm:w-auto"
+              onClick={handleCTA}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+            >
+              {profile ? `Continue Adventure →` : 'Start Your Adventure →'}
+            </motion.button>
+            {profile && (
+              <div className="text-white/60 text-sm">
+                Welcome back, <span className="text-white font-semibold">{profile.name}</span> · Lv {profile.level}
+              </div>
+            )}
+          </motion.div>
+
+          {/* Age track pills */}
+          {!profile && (
+            <motion.div
+              className="flex flex-wrap justify-center gap-2 sm:gap-3"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.8 }}
+            >
+              {AGE_TRACKS.map((t) => (
+                <div
+                  key={t.id}
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 border border-white/15 text-sm text-white/70"
+                >
+                  <span>{t.emoji}</span>
+                  <span>{t.label}</span>
+                </div>
+              ))}
+            </motion.div>
+          )}
+        </div>
+
+        <footer className="relative z-10 border-t border-white/5 pt-4 text-center text-white/30 text-xs w-full mt-4 sm:mt-6">
+          <p>NairaQuest · Financial literacy for every Nigerian · 🇳🇬</p>
+          <p className="mt-0.5">Content is educational. Always consult a licensed financial advisor for personal financial decisions.</p>
+        </footer>
+      </section>
+
+      {/* Onboarding Modal */}
+      <AnimatePresence>
+        {showOnboarding && (
+          <OnboardingModal onClose={() => setShowOnboarding(false)} />
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
