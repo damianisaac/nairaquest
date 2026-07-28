@@ -106,6 +106,7 @@ export function computeSessionResult(params: {
     levelAfter,
     streakDay: prevProfile.dailyStreak,
     xpEarned: pointsEarned,
+    isPracticeMode: false,
   };
 }
 

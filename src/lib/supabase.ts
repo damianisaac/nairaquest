@@ -36,6 +36,7 @@ export interface DbCategoryProgress {
   peak_mastery_points: number;
   questions_answered: number;
   last_practiced: number | null;
+  answered_question_ids: string[] | null;
   updated_at: string;
 }
 

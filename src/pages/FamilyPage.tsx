@@ -15,7 +15,6 @@ import {
 import { CATEGORIES, CATEGORY_MAP } from '../data/categories';
 import { generateInviteCode, sampleDuelQuestions } from '../utils/social';
 import TopNav from '../components/ui/TopNav';
-import MasteryBar from '../components/ui/MasteryBar';
 import { sound } from '../components/ui/SoundController';
 import type { CategoryId, Difficulty, FamilyGroup, Duel, FamilyMember } from '../types';
 

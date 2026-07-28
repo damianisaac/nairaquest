@@ -18,7 +18,7 @@ import { sound } from '../components/ui/SoundController';
 import type { CategoryId } from '../types';
 
 // Activity suggestions keyed by weak category
-const ACTIVITY_TIPS: Record<CategoryId, string[]> = {
+const ACTIVITY_TIPS: Partial<Record<CategoryId, string[]>> = {
   'money-basics': [
     'Give your child ₦500 and ask them to plan how to spend it over a week.',
     'Play "market stall" at home: set prices for toys, let them pay and get change.',
