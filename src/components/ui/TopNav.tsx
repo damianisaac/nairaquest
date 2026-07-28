@@ -53,7 +53,8 @@ export default function TopNav() {
           className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-naira-green/20 border border-naira-green/40 text-white text-xs sm:text-sm font-bold hover:bg-naira-green/30 transition-colors"
           onClick={() => sound.click()}
         >
-          NairaQuest: Nigeria's #1 Financial Literacy Game
+          <span className="sm:hidden">₦ NairaQuest</span>
+          <span className="hidden sm:inline">NairaQuest: Nigeria's #1 Financial Literacy Game</span>
         </Link>
 
         <div className="flex items-center gap-2">

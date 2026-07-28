@@ -166,13 +166,13 @@ export default function LandingPage() {
       <TopNav />
 
       {/* Hero Section */}
-      <section className="relative min-h-[100svh] flex flex-col items-center justify-between px-4 pt-24 pb-8 sm:pt-20 sm:pb-16">
+      <section className="relative min-h-[100svh] flex flex-col items-center justify-between px-4 pt-28 pb-8 sm:pt-20 sm:pb-16">
         {/* Background */}
         <div className="absolute inset-0 z-0 bg-gray-950">
-          {/* Mobile: natural-ratio render so no pixel of the image is cropped */}
+          {/* Mobile: start below the fixed nav so the banner logo isn't covered */}
           <img
             src="/banner.jpeg"
-            className="sm:hidden absolute top-0 left-0 w-full"
+            className="sm:hidden absolute top-14 left-0 w-full"
             style={{ height: 'auto' }}
             alt=""
           />
