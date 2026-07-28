@@ -1,5 +1,5 @@
-import { useState, lazy, Suspense } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState, useEffect, lazy, Suspense } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useGameStore } from '../store/gameStore';
 import TopNav from '../components/ui/TopNav';
@@ -151,6 +151,15 @@ export default function LandingPage() {
   const { profile, liteMode } = useGameStore();
   const [showOnboarding, setShowOnboarding] = useState(false);
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  // TopNav "Start" button deep-links here via ?onboard=1
+  useEffect(() => {
+    if (searchParams.get('onboard') === '1' && !profile) {
+      setShowOnboarding(true);
+      setSearchParams({}, { replace: true });
+    }
+  }, [searchParams, profile, setSearchParams]);
 
   const handleCTA = () => {
     sound.click();
@@ -191,8 +200,8 @@ export default function LandingPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-gray-950/40 via-gray-950/20 to-gray-950 sm:from-gray-950/30 sm:via-transparent sm:to-gray-950" />
         </div>
 
-        {/* Hero content — centred vertically on mobile, pushed to bottom on desktop */}
-        <div className="relative z-10 text-center max-w-2xl mx-auto space-y-5 sm:space-y-6 flex-1 flex flex-col items-center justify-center sm:justify-end pb-4 sm:pb-0">
+        {/* Hero content — pushed to bottom on all screen sizes */}
+        <div className="relative z-10 text-center max-w-2xl mx-auto space-y-5 sm:space-y-6 flex-1 flex flex-col items-center justify-end pb-4 sm:pb-0">
           <motion.div
             className="flex flex-col gap-3 justify-center items-center w-full"
             initial={{ opacity: 0, y: 20 }}
@@ -225,7 +234,8 @@ export default function LandingPage() {
               {AGE_TRACKS.map((t) => (
                 <div
                   key={t.id}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 border border-white/15 text-sm text-white/70"
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full backdrop-blur-sm border text-sm font-semibold text-white"
+                  style={{ background: 'rgba(3,7,18,0.72)', borderColor: 'rgba(255,255,255,0.25)' }}
                 >
                   <span>{t.emoji}</span>
                   <span>{t.label}</span>
