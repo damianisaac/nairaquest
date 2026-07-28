@@ -74,6 +74,7 @@ export function useAuth() {
           peakMasteryPoints: row.peak_mastery_points,
           questionsAnswered: row.questions_answered,
           lastPracticed: row.last_practiced,
+          answeredQuestionIds: row.answered_question_ids ?? [],
         };
       }
       // Fill missing categories with defaults
@@ -85,6 +86,7 @@ export function useAuth() {
             peakMasteryPoints: 0,
             questionsAnswered: 0,
             lastPracticed: null,
+            answeredQuestionIds: [],
           };
         }
       }

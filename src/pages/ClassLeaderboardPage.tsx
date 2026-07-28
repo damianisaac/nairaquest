@@ -5,7 +5,6 @@ import { useGameStore } from '../store/gameStore';
 import { useAuth } from '../hooks/useAuth';
 import { isSupabaseConfigured } from '../lib/supabase';
 import { fetchClassRoster } from '../lib/supabase-social';
-import { fetchClassByCode } from '../lib/supabase-social';
 import { CATEGORY_MAP } from '../data/categories';
 import TopNav from '../components/ui/TopNav';
 import MasteryBar from '../components/ui/MasteryBar';

@@ -11,7 +11,7 @@ import type { ClassInfo, UserRole } from '../types';
 export default function ClassJoinPage() {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const { profile, createProfile, setClassContext, classContext } = useGameStore();
+  const { profile, createProfile, setClassContext } = useGameStore();
   const { user } = useAuth();
 
   const [codeInput, setCodeInput] = useState(searchParams.get('code') ?? '');
