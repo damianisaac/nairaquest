@@ -1,28 +1,7 @@
 import { useRef, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Torus, Float, Stars } from '@react-three/drei';
+import { Stars } from '@react-three/drei';
 import * as THREE from 'three';
-
-function NairaGlobe() {
-  const meshRef = useRef<THREE.Mesh>(null!);
-
-  useFrame((state) => {
-    meshRef.current.rotation.y += 0.004;
-    meshRef.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.3) * 0.1;
-  });
-
-  return (
-    <mesh ref={meshRef}>
-      <sphereGeometry args={[1.8, 64, 64]} />
-      <meshStandardMaterial
-        color="#008751"
-        metalness={0.3}
-        roughness={0.6}
-        wireframe={false}
-      />
-    </mesh>
-  );
-}
 
 function FloatingCoin({ position, delay = 0 }: { position: [number, number, number]; delay?: number }) {
   const meshRef = useRef<THREE.Mesh>(null!);
@@ -42,20 +21,6 @@ function FloatingCoin({ position, delay = 0 }: { position: [number, number, numb
   );
 }
 
-function NairaRing() {
-  const ref = useRef<THREE.Mesh>(null!);
-
-  useFrame((state) => {
-    ref.current.rotation.z += 0.008;
-    ref.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.4) * 0.2;
-  });
-
-  return (
-    <Torus ref={ref} args={[2.8, 0.06, 16, 100]} position={[0, 0, 0]}>
-      <meshStandardMaterial color="#d4af37" metalness={0.8} roughness={0.2} />
-    </Torus>
-  );
-}
 
 function Particles() {
   const points = useRef<THREE.Points>(null!);

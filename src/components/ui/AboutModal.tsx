@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, type ReactElement } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { sound } from './SoundController';
@@ -138,7 +138,7 @@ function JoinContent({ onClose }: { onClose: () => void }) {
   );
 }
 
-const TAB_COMPONENTS: Record<TabId, (props: { onClose: () => void }) => JSX.Element> = {
+const TAB_COMPONENTS: Record<TabId, (props: { onClose: () => void }) => ReactElement> = {
   about:    () => <AboutContent />,
   why:      () => <WhyContent />,
   founders: () => <FoundersContent />,
