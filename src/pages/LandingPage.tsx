@@ -169,9 +169,9 @@ export default function LandingPage() {
       <section className="relative min-h-[100svh] flex flex-col items-center justify-between px-4 pt-28 pb-8 sm:pt-20 sm:pb-16">
         {/* Background */}
         <div className="absolute inset-0 z-0 bg-gray-950">
-          {/* Mobile: start below the fixed nav so the banner logo isn't covered */}
+          {/* Mobile: portrait-optimised image, starts below the fixed nav */}
           <img
-            src="/banner.jpeg"
+            src="/banner-mobile.jpeg"
             className="sm:hidden absolute top-14 left-0 w-full"
             style={{ height: 'auto' }}
             alt=""
