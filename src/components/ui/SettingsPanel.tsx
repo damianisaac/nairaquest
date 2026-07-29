@@ -100,6 +100,7 @@ export default function SettingsPanel({ onClose }: { onClose: () => void }) {
     musicEnabled, toggleMusic,
     notificationsEnabled, toggleNotifications,
     liteMode, setLiteMode,
+    accessibilityMode, toggleAccessibilityMode,
     questionTimerSeconds, setQuestionTimer, timerManuallySet,
     excludedCategoryIds, toggleCategoryExclusion,
     updateAgeTrack,
@@ -350,6 +351,12 @@ export default function SettingsPanel({ onClose }: { onClose: () => void }) {
               description="Daily nudge to keep your streak alive"
               checked={notificationsEnabled}
               onChange={toggleNotifications}
+            />
+            <ToggleRow
+              label="♿ Accessibility Mode"
+              description="Questions and options are read aloud. Answer by tapping or saying A, B, C or D. Timer pauses while reading."
+              checked={accessibilityMode}
+              onChange={toggleAccessibilityMode}
             />
           </Section>
 

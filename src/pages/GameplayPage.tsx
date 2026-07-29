@@ -7,12 +7,14 @@ import TopNav from '../components/ui/TopNav';
 import Cowrie from '../components/mascot/Cowrie';
 import ConsequenceReplay from '../components/ui/ConsequenceReplay';
 import { sound } from '../components/ui/SoundController';
+import { useAccessibility, matchVoiceToOption } from '../hooks/useAccessibility';
 
 type FeedbackState = 'none' | 'correct' | 'wrong';
 
 export default function GameplayPage() {
   const navigate = useNavigate();
-  const { session, submitAnswer, endSession, profile, questionTimerSeconds } = useGameStore();
+  const { session, submitAnswer, endSession, profile, questionTimerSeconds, accessibilityMode } = useGameStore();
+  const { speak, speakQueue, stopSpeaking, startListening, stopListening, isSpeaking, isListening, sttSupported } = useAccessibility(accessibilityMode);
 
   const questionTime = questionTimerSeconds;
 
@@ -21,9 +23,11 @@ export default function GameplayPage() {
   const [timeLeft, setTimeLeft] = useState(questionTime);
   const [showConsequence, setShowConsequence] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
+  const [readingComplete, setReadingComplete] = useState(false);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const answeredRef = useRef(false);
   const endedRef = useRef(false);
+  const timerPausedRef = useRef(false); // true while TTS is reading
   // Refs to avoid closure-stale-state bugs in timeouts
   const selectedIndexRef = useRef<number | null>(null);
   const submittedRef = useRef(false); // one submit per question, prevents double-advance
@@ -46,6 +50,7 @@ export default function GameplayPage() {
     setTimeLeft(questionTime);
     answeredRef.current = false;
     timerRef.current = setInterval(() => {
+      if (timerPausedRef.current) return; // paused while TTS is reading
       setTimeLeft((t) => {
         if (t <= 1) {
           clearTimer();
@@ -70,8 +75,40 @@ export default function GameplayPage() {
     setSelectedIndex(null);
     setFeedback('none');
     setShowConsequence(false);
+    setReadingComplete(false);
     return clearTimer;
   }, [session?.currentIndex, startTimer]);
+
+  // Accessibility: read question + options aloud when question changes
+  useEffect(() => {
+    if (!session || session.completed || !accessibilityMode) {
+      timerPausedRef.current = false;
+      return;
+    }
+    timerPausedRef.current = true;
+    setReadingComplete(false);
+    stopSpeaking();
+    const q = session.questions[session.currentIndex];
+    const texts = [
+      `Question ${session.currentIndex + 1}: ${q.text}`,
+      `Option A: ${q.options[0]}`,
+      `Option B: ${q.options[1]}`,
+      `Option C: ${q.options[2]}`,
+      `Option D: ${q.options[3]}`,
+    ];
+    const timer = setTimeout(() => {
+      speakQueue(texts, () => {
+        timerPausedRef.current = false;
+        setReadingComplete(true);
+      });
+    }, 350);
+    return () => {
+      clearTimeout(timer);
+      stopSpeaking();
+      timerPausedRef.current = false;
+    };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [session?.currentIndex, accessibilityMode]);
 
   if (!session || !profile) {
     navigate('/map');
@@ -138,6 +175,20 @@ export default function GameplayPage() {
     commitAnswer(selectedIndexRef.current ?? -1);
   }
 
+  function handleVoiceTap() {
+    if (isListening) { stopListening(); return; }
+    startListening((transcript) => {
+      if (feedback !== 'none' || answeredRef.current) return;
+      const idx = matchVoiceToOption(transcript, question.options);
+      if (idx !== null) {
+        handleAnswer(idx);
+      } else {
+        // Unrecognised — re-read the options
+        speak(`Sorry, I didn't catch that. Say A, B, C, or D.`);
+      }
+    });
+  }
+
   const difficultyColors = { easy: '#22c55e', medium: '#f59e0b', hard: '#ef4444' };
   const diffColor = difficultyColors[question.difficulty];
 
@@ -162,6 +213,17 @@ export default function GameplayPage() {
       </AnimatePresence>
 
       <main className="flex-1 pt-20 pb-6 px-4 max-w-2xl mx-auto w-full flex flex-col">
+
+        {/* Accessibility mode banner */}
+        {accessibilityMode && (
+          <div className="mb-3 flex items-center gap-2 px-3 py-2 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs">
+            <span className="text-base">{isSpeaking ? '🔊' : readingComplete ? '🎙️' : '⏳'}</span>
+            <span>
+              {isSpeaking ? 'Reading aloud…' : readingComplete ? 'Tap an option or use the mic to answer' : 'Preparing audio…'}
+            </span>
+          </div>
+        )}
+
         {/* Progress bar */}
         <div className="mb-4">
           <div className="flex items-center justify-between text-xs text-white/40 mb-1.5">
@@ -279,6 +341,40 @@ export default function GameplayPage() {
                 );
               })}
             </div>
+
+            {/* Accessibility mic button */}
+            {accessibilityMode && feedback === 'none' && (
+              <div className="flex flex-col items-center gap-2 mb-4">
+                <motion.button
+                  onClick={handleVoiceTap}
+                  disabled={isSpeaking && !isListening}
+                  className={`w-16 h-16 rounded-full flex items-center justify-center text-2xl shadow-lg transition-all ${
+                    isListening
+                      ? 'bg-red-500 border-2 border-red-300 shadow-red-500/40'
+                      : readingComplete
+                      ? 'bg-naira-green/80 border-2 border-naira-green shadow-naira-green/30 hover:bg-naira-green'
+                      : 'bg-white/10 border-2 border-white/20 opacity-50'
+                  }`}
+                  animate={isListening ? { scale: [1, 1.08, 1] } : {}}
+                  transition={{ repeat: Infinity, duration: 0.8 }}
+                >
+                  {isListening ? '⏹' : '🎙️'}
+                </motion.button>
+                <p className="text-xs text-white/40">
+                  {isListening ? 'Listening… say A, B, C or D' : sttSupported ? 'Tap mic to answer with voice' : 'Voice input not supported on this browser'}
+                </p>
+              </div>
+            )}
+
+            {/* Replay audio button (after answering) */}
+            {accessibilityMode && feedback !== 'none' && (
+              <button
+                onClick={() => speak(`${feedback === 'correct' ? 'Correct!' : 'Not quite.'} ${question.explanation}`)}
+                className="mb-4 w-full flex items-center justify-center gap-2 py-2 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs hover:bg-blue-500/20 transition-colors"
+              >
+                🔊 Read explanation aloud
+              </button>
+            )}
 
             {/* Explanation (shown after answering) */}
             <AnimatePresence>

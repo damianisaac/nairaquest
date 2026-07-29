@@ -40,6 +40,7 @@ interface GameState {
   musicEnabled: boolean;        // background music
   notificationsEnabled: boolean;
   liteMode: boolean;
+  accessibilityMode: boolean;   // TTS + voice answer
   classContext: ClassContext | null;
   questionTimerSeconds: number;
   timerManuallySet: boolean;
@@ -58,6 +59,7 @@ interface GameState {
   toggleMusic: () => void;
   toggleNotifications: () => void;
   setLiteMode: (value: boolean) => void;
+  toggleAccessibilityMode: () => void;
   setQuestionTimer: (seconds: number, manual?: boolean) => void;
   toggleCategoryExclusion: (categoryId: CategoryId) => void;
   resetCategoryProgress: (categoryId: CategoryId) => void;
@@ -75,6 +77,7 @@ export const useGameStore = create<GameState>()(
       musicEnabled: true,
       notificationsEnabled: false,
       liteMode: false,
+      accessibilityMode: false,
       classContext: null,
       questionTimerSeconds: 20,
       timerManuallySet: false,
@@ -269,6 +272,7 @@ export const useGameStore = create<GameState>()(
       toggleMusic: () => set((s) => ({ musicEnabled: !s.musicEnabled })),
       toggleNotifications: () => set((s) => ({ notificationsEnabled: !s.notificationsEnabled })),
       setLiteMode: (value) => set({ liteMode: value }),
+      toggleAccessibilityMode: () => set((s) => ({ accessibilityMode: !s.accessibilityMode })),
       setQuestionTimer: (seconds, manual = true) => set({ questionTimerSeconds: seconds, timerManuallySet: manual }),
       toggleCategoryExclusion: (categoryId) => set((s) => {
         const excluded = s.excludedCategoryIds;
