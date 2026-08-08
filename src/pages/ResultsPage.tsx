@@ -1,4 +1,4 @@
-import { useEffect, useRef, useMemo } from 'react';
+import { useEffect, useRef, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useGameStore } from '../store/gameStore';
@@ -11,26 +11,31 @@ import { sound } from '../components/ui/SoundController';
 import { formatPlayNaira, WALLET_NAMES, getStreakMultiplierDisplay } from '../utils/wallet';
 import { isCategoryUnlocked } from '../utils/scoring';
 import { ALL_QUESTIONS } from '../data/questions';
+import CelebrationOverlay from '../components/celebration/CelebrationOverlay';
+import { buildCelebrationConfig } from '../utils/celebration';
 import type { CategoryId } from '../types';
 
 export default function ResultsPage() {
   const navigate = useNavigate();
   const { lastResult, profile, progress, resetSession, startSession } = useGameStore();
   const soundPlayed = useRef(false);
+  const [celebrationDone, setCelebrationDone] = useState(false);
 
+  // Build celebration config once (stable reference)
+  const celebrationConfig = useMemo(() => {
+    if (!lastResult || !profile) return null;
+    return buildCelebrationConfig(lastResult, progress, profile.ageTrack);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lastResult?.categoryId, lastResult?.newMastery]);
+
+  // Level-up sound plays AFTER the celebration overlay dismisses
   useEffect(() => {
-    if (!lastResult || soundPlayed.current) return;
+    if (!lastResult || soundPlayed.current || !celebrationDone) return;
     soundPlayed.current = true;
-    const accuracy = lastResult.correctCount / lastResult.totalCount;
-    if (accuracy >= 0.8) {
-      setTimeout(() => sound.levelUp(), 400);
-    } else if (accuracy >= 0.5) {
-      setTimeout(() => sound.correct(), 400);
-    }
     if (lastResult.levelAfter > lastResult.levelBefore) {
-      setTimeout(() => sound.levelUp(), 1200);
+      setTimeout(() => sound.levelUp(), 400);
     }
-  }, [lastResult]);
+  }, [lastResult, celebrationDone]);
 
   if (!lastResult || !profile) {
     navigate('/map');
@@ -100,6 +105,14 @@ export default function ResultsPage() {
       className="min-h-screen flex flex-col"
       style={{ background: `linear-gradient(135deg, ${cat.colorDark}20 0%, #030712 50%)` }}
     >
+      {/* ── Tiered celebration overlay (fires before results are read) ── */}
+      {celebrationConfig && !celebrationDone && (
+        <CelebrationOverlay
+          config={celebrationConfig}
+          onDismiss={() => setCelebrationDone(true)}
+        />
+      )}
+
       <TopNav />
       <main className="flex-1 pt-20 pb-10 px-4 max-w-lg mx-auto w-full">
         {/* Score header */}
