@@ -178,21 +178,14 @@ export default function LandingPage() {
       <section className="relative min-h-[100svh] flex flex-col items-center justify-between px-4 pt-28 pb-8 sm:pt-20 sm:pb-16">
         {/* Background */}
         <div className="absolute inset-0 z-0 bg-gray-950">
-          {/* Mobile: portrait-optimised still image, offset below fixed nav */}
-          <img
-            src="/banner-mobile.jpeg"
-            className="sm:hidden absolute top-14 left-0 w-full"
-            style={{ height: 'auto' }}
-            alt=""
-          />
-          {/* Desktop: animated video background */}
+          {/* Full-bleed video background on all screen sizes */}
           <video
             autoPlay
             muted
             loop
             playsInline
             poster="/banner.jpeg"
-            className="hidden sm:block absolute inset-0 w-full h-full object-cover object-center"
+            className="absolute inset-0 w-full h-full object-cover object-center"
           >
             <source src="/banner.mp4" type="video/mp4" />
           </video>
