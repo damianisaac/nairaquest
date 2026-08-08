@@ -178,19 +178,24 @@ export default function LandingPage() {
       <section className="relative min-h-[100svh] flex flex-col items-center justify-between px-4 pt-28 pb-8 sm:pt-20 sm:pb-16">
         {/* Background */}
         <div className="absolute inset-0 z-0 bg-gray-950">
-          {/* Mobile: portrait-optimised image, starts below the fixed nav */}
+          {/* Mobile: portrait-optimised still image, offset below fixed nav */}
           <img
             src="/banner-mobile.jpeg"
             className="sm:hidden absolute top-14 left-0 w-full"
             style={{ height: 'auto' }}
             alt=""
           />
-          {/* Desktop: full-bleed cover */}
-          <img
-            src="/banner.jpeg"
+          {/* Desktop: animated video background */}
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/banner.jpeg"
             className="hidden sm:block absolute inset-0 w-full h-full object-cover object-center"
-            alt=""
-          />
+          >
+            <source src="/banner.mp4" type="video/mp4" />
+          </video>
           {!liteMode && (
             <Suspense fallback={null}>
               <HeroScene />
