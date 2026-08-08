@@ -201,6 +201,8 @@ export default function LandingPage() {
               <HeroScene />
             </Suspense>
           )}
+          {/* Subtle full-screen overlay — high transparency, just takes the edge off */}
+          <div className="absolute inset-0 bg-gray-950/20" />
         </div>
 
         {/* Hero content — pushed to bottom on all screen sizes */}
