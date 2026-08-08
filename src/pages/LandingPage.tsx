@@ -279,9 +279,14 @@ export default function LandingPage() {
 
         </div>
 
-        <footer className="relative z-10 border-t border-white/5 pt-4 text-center text-white/30 text-xs w-full mt-4 sm:mt-6">
-          <p>NairaQuest · Financial literacy for every Nigerian · 🇳🇬</p>
-          <p className="mt-0.5">Content is educational. Always consult a licensed financial advisor for personal financial decisions.</p>
+        <footer className="relative z-10 w-full mt-4 sm:mt-6">
+          <div
+            className="text-center text-white/70 text-xs px-4 py-3 rounded-xl mx-auto max-w-lg"
+            style={{ background: 'rgba(3,7,18,0.6)', backdropFilter: 'blur(8px)' }}
+          >
+            <p className="font-semibold">NairaQuest · Financial literacy for every Nigerian · 🇳🇬</p>
+            <p className="mt-0.5 text-white/45">Content is educational. Always consult a licensed financial advisor for personal financial decisions.</p>
+          </div>
         </footer>
       </section>
 
