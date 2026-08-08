@@ -1,9 +1,12 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { useGameStore } from './store/gameStore';
 import LandingPage from './pages/LandingPage';
 import WorldMapPage from './pages/WorldMapPage';
+import KidsDashboard from './pages/KidsDashboard';
+import TeensDashboard from './pages/TeensDashboard';
+import AdultsDashboard from './pages/AdultsDashboard';
 import CategoryPage from './pages/CategoryPage';
 import GameplayPage from './pages/GameplayPage';
 import ResultsPage from './pages/ResultsPage';
@@ -21,6 +24,18 @@ import ClassJoinPage from './pages/ClassJoinPage';
 import ClassLeaderboardPage from './pages/ClassLeaderboardPage';
 import SoundController from './components/ui/SoundController';
 import WalletOnboardingModal from './components/ui/WalletOnboardingModal';
+
+/** Redirects /map → the correct track dashboard, or /map itself if no profile */
+function MapRedirect() {
+  const { profile } = useGameStore();
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (!profile) { navigate('/', { replace: true }); return; }
+    const dest = profile.ageTrack === 'kids' ? '/kids' : profile.ageTrack === 'teens' ? '/teens' : '/adults';
+    navigate(dest, { replace: true });
+  }, [profile, navigate]);
+  return null;
+}
 
 function WalletDisclaimerGate() {
   const { profile } = useGameStore();
@@ -55,7 +70,11 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/auth" element={<AuthPage />} />
-        <Route path="/map" element={<WorldMapPage />} />
+        <Route path="/map" element={<MapRedirect />} />
+        <Route path="/map/classic" element={<WorldMapPage />} />
+        <Route path="/kids" element={<KidsDashboard />} />
+        <Route path="/teens" element={<TeensDashboard />} />
+        <Route path="/adults" element={<AdultsDashboard />} />
         <Route path="/category/:id" element={<CategoryPage />} />
         <Route path="/play" element={<GameplayPage />} />
         <Route path="/results" element={<ResultsPage />} />

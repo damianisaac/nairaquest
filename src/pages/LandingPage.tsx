@@ -42,9 +42,15 @@ const AGE_TRACKS: { id: OnboardingTrack; label: string; emoji: string; desc: str
 ];
 
 
-function OnboardingModal({ onClose: _onClose }: { onClose: () => void }) {
+function OnboardingModal({
+  onClose: _onClose,
+  defaultTrack = 'adults',
+}: {
+  onClose: () => void;
+  defaultTrack?: OnboardingTrack;
+}) {
   const [name, setName] = useState('');
-  const [selectedTrack, setSelectedTrack] = useState<OnboardingTrack>('adults');
+  const [selectedTrack, setSelectedTrack] = useState<OnboardingTrack>(defaultTrack);
   const { createProfile } = useGameStore();
   const navigate = useNavigate();
 
@@ -55,7 +61,9 @@ function OnboardingModal({ onClose: _onClose }: { onClose: () => void }) {
     createProfile(name.trim(), ageTrack, userRole);
     sound.levelUp();
     if (selectedTrack === 'teacher') navigate('/teacher');
-    else navigate('/map');
+    else if (selectedTrack === 'kids') navigate('/kids');
+    else if (selectedTrack === 'teens') navigate('/teens');
+    else navigate('/adults');
   };
 
   return (
@@ -150,6 +158,7 @@ function OnboardingModal({ onClose: _onClose }: { onClose: () => void }) {
 export default function LandingPage() {
   const { profile, liteMode } = useGameStore();
   const [showOnboarding, setShowOnboarding] = useState(false);
+  const [defaultTrack, setDefaultTrack] = useState<OnboardingTrack>('adults');
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -172,11 +181,27 @@ export default function LandingPage() {
     };
   }, []);
 
+  /** Returns the correct dashboard route for an existing profile */
+  const trackRoute = (track: AgeTrack) =>
+    track === 'kids' ? '/kids' : track === 'teens' ? '/teens' : '/adults';
+
   const handleCTA = () => {
     sound.click();
     if (profile) {
-      navigate('/map');
+      navigate(trackRoute(profile.ageTrack));
     } else {
+      setShowOnboarding(true);
+    }
+  };
+
+  /** Called when a track pill is clicked */
+  const handleTrackPill = (track: OnboardingTrack) => {
+    sound.click();
+    if (profile) {
+      // Existing user — go to their own dashboard (ignore the pill that was clicked)
+      navigate(trackRoute(profile.ageTrack));
+    } else {
+      setDefaultTrack(track);
       setShowOnboarding(true);
     }
   };
@@ -259,7 +284,7 @@ export default function LandingPage() {
             )}
           </motion.div>
 
-          {/* Age track pills */}
+          {/* Age track pills — clickable, open onboarding pre-set to that track */}
           {!profile && (
             <motion.div
               className="flex flex-wrap justify-center gap-2 sm:gap-3"
@@ -268,14 +293,15 @@ export default function LandingPage() {
               transition={{ delay: 0.8 }}
             >
               {AGE_TRACKS.map((t) => (
-                <div
+                <button
                   key={t.id}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full backdrop-blur-sm border text-sm font-semibold text-white"
+                  onClick={() => handleTrackPill(t.id)}
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full backdrop-blur-sm border text-sm font-semibold text-white hover:scale-105 active:scale-95 transition-transform"
                   style={{ background: 'rgba(3,7,18,0.72)', borderColor: 'rgba(255,255,255,0.25)' }}
                 >
                   <span>{t.emoji}</span>
                   <span>{t.label}</span>
-                </div>
+                </button>
               ))}
             </motion.div>
           )}
@@ -306,7 +332,10 @@ export default function LandingPage() {
       {/* Onboarding Modal */}
       <AnimatePresence>
         {showOnboarding && (
-          <OnboardingModal onClose={() => setShowOnboarding(false)} />
+          <OnboardingModal
+            onClose={() => setShowOnboarding(false)}
+            defaultTrack={defaultTrack}
+          />
         )}
       </AnimatePresence>
     </div>

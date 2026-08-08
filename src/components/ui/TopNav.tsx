@@ -215,7 +215,15 @@ export default function TopNav() {
               exit={{ opacity: 0, scale: 0.92, y: -8 }}
               transition={{ duration: 0.15 }}
             >
-              <NavItem icon="🗺️" label="World Map" onClick={() => { setMenuOpen(false); navigate('/map'); }} />
+              <NavItem
+                icon="🗺️"
+                label="My Dashboard"
+                onClick={() => {
+                  setMenuOpen(false);
+                  const dest = profile.ageTrack === 'kids' ? '/kids' : profile.ageTrack === 'teens' ? '/teens' : '/adults';
+                  navigate(dest);
+                }}
+              />
               <NavItem icon="👤" label="Profile" onClick={() => { setMenuOpen(false); navigate('/profile'); }} />
               <NavItem icon="🏆" label="Leaderboard" onClick={() => { setMenuOpen(false); navigate('/leaderboard'); }} />
               <NavItem
