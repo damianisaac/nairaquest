@@ -201,8 +201,8 @@ export default function LandingPage() {
               <HeroScene />
             </Suspense>
           )}
-          {/* Gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-gray-950/40 via-gray-950/20 to-gray-950 sm:from-gray-950/30 sm:via-transparent sm:to-gray-950" />
+          {/* Footer-only dark strip — keeps footer text readable, video shows through everywhere else */}
+          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-gray-950 via-gray-950/80 to-transparent" />
         </div>
 
         {/* Hero content — pushed to bottom on all screen sizes */}
