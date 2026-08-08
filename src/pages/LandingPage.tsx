@@ -284,7 +284,17 @@ export default function LandingPage() {
             className="text-center text-white/70 text-xs px-4 py-3 rounded-xl mx-auto max-w-lg"
             style={{ background: 'rgba(3,7,18,0.6)', backdropFilter: 'blur(8px)' }}
           >
-            <p className="font-semibold">NairaQuest · Financial literacy for every Nigerian · 🇳🇬</p>
+            <p className="font-semibold">
+              © 2026 NairaQuest🇳🇬 · Powered by{' '}
+              <a
+                href="https://virtuallysafe.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-naira-green hover:text-naira-green-light underline underline-offset-2 transition-colors"
+              >
+                VirtuallySafe
+              </a>
+            </p>
             <p className="mt-0.5 text-white/45">Content is educational. Always consult a licensed financial advisor for personal financial decisions.</p>
           </div>
         </footer>
