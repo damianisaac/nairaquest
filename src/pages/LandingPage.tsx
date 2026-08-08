@@ -205,36 +205,36 @@ export default function LandingPage() {
           <div className="absolute inset-0 bg-gray-950/20" />
         </div>
 
-        {/* NairaQuest title — centred in the hero */}
-        <motion.div
-          className="relative z-10 flex-1 flex flex-col items-center justify-center gap-3 pointer-events-none select-none"
-          initial={{ opacity: 0, scale: 0.85 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, ease: 'easeOut' }}
-        >
-          <h1
-            className="font-display text-6xl sm:text-8xl md:text-9xl font-black tracking-tight"
-            style={{
-              background: 'linear-gradient(135deg, #d4af37 0%, #22c55e 40%, #00b86a 70%, #d4af37 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-              WebkitTextStroke: '0.1px white',
-              filter: 'drop-shadow(0 2px 8px #000) drop-shadow(0 4px 20px #000)',
-            }}
-          >
-            NairaQuest
-          </h1>
-          <p
-            className="font-display text-base sm:text-xl md:text-2xl font-semibold tracking-wide text-white"
-            style={{ textShadow: '0 2px 8px #000, 0 4px 20px #000' }}
-          >
-            Nigeria's #1 Financial Literacy Game
-          </p>
-        </motion.div>
+        {/* Title + CTA — all centred together */}
+        <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center max-w-2xl mx-auto w-full gap-6 pb-4 sm:pb-0">
 
-        {/* Hero content — pushed to bottom on all screen sizes */}
-        <div className="relative z-10 text-center max-w-2xl mx-auto space-y-5 sm:space-y-6 flex flex-col items-center pb-4 sm:pb-0">
+          {/* NairaQuest title */}
+          <motion.div
+            className="flex flex-col items-center gap-2 pointer-events-none select-none"
+            initial={{ opacity: 0, scale: 0.85 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, ease: 'easeOut' }}
+          >
+            <h1
+              className="font-display text-6xl sm:text-8xl md:text-9xl font-black tracking-tight"
+              style={{
+                background: 'linear-gradient(135deg, #d4af37 0%, #22c55e 40%, #00b86a 70%, #d4af37 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                WebkitTextStroke: '0.1px white',
+                filter: 'drop-shadow(0 2px 8px #000) drop-shadow(0 4px 20px #000)',
+              }}
+            >
+              NairaQuest
+            </h1>
+            <p
+              className="font-display text-base sm:text-xl md:text-2xl font-semibold tracking-wide text-white"
+              style={{ textShadow: '0 2px 8px #000, 0 4px 20px #000' }}
+            >
+              Nigeria's #1 Financial Literacy Game
+            </p>
+          </motion.div>
           <motion.div
             className="flex flex-col gap-3 justify-center items-center w-full"
             initial={{ opacity: 0, y: 20 }}
@@ -276,6 +276,7 @@ export default function LandingPage() {
               ))}
             </motion.div>
           )}
+
         </div>
 
         <footer className="relative z-10 border-t border-white/5 pt-4 text-center text-white/30 text-xs w-full mt-4 sm:mt-6">
