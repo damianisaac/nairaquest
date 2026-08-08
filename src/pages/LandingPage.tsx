@@ -219,6 +219,7 @@ export default function LandingPage() {
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
+              WebkitTextStroke: '2px white',
               filter: 'drop-shadow(0 2px 8px #000) drop-shadow(0 4px 20px #000)',
             }}
           >
