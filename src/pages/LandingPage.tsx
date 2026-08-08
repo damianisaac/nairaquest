@@ -295,7 +295,7 @@ export default function LandingPage() {
                 VirtuallySafe
               </a>
             </p>
-            <p className="mt-0.5 text-white/45">Content is educational. Always consult a licensed financial advisor for personal financial decisions.</p>
+            <p className="mt-0.5 text-white/45 whitespace-nowrap overflow-hidden text-ellipsis">Content is educational. Always consult a licensed financial advisor for personal financial decisions.</p>
           </div>
         </footer>
       </section>
