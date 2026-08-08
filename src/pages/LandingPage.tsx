@@ -201,8 +201,6 @@ export default function LandingPage() {
               <HeroScene />
             </Suspense>
           )}
-          {/* Footer-only dark strip — keeps footer text readable, video shows through everywhere else */}
-          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-gray-950 via-gray-950/80 to-transparent" />
         </div>
 
         {/* Hero content — pushed to bottom on all screen sizes */}
