@@ -183,6 +183,163 @@ const questions: Question[] = [
     explanation:
       '$500 × ₦1,500 = ₦750,000. This is the naira equivalent at that rate. Remember: transfer services also add fees and typically offer you a slightly worse rate than the mid-market rate. Always calculate the full cost before sending money internationally.',
   },
+  // ── Teens Medium ──────────────────────────────────────────────────────────
+  {
+    id: 'fx-018',
+    text: 'Tunde wants to send $500 to his cousin studying in Canada. Rate at bank: ₦1,500/$. Rate via Lemfi app: ₦1,480/$. How much does he save by using Lemfi (excluding platform fees)?',
+    options: ['He saves ₦1,000', 'He saves ₦10,000', 'He saves ₦100', 'He saves ₦5,000'],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['teens'],
+    category: 'forex',
+    explanation:
+      'At the bank: $500 × ₦1,500 = ₦750,000. On Lemfi: $500 × ₦1,480 = ₦740,000. He saves ₦10,000 by using the better rate. On large international transfers, comparing exchange rates and fees can save significant amounts. Always shop around for the best rate and lowest total cost.',
+  },
+  {
+    id: 'fx-019',
+    text: 'Nigeria\'s naira depreciates from ₦800/$ to ₦1,600/$. Your friend who earns in dollars says this is good for them. You earn only naira. How does this affect you differently?',
+    options: [
+      'It affects both of you equally',
+      'Your dollar-earning friend benefits — their dollar income converts to more naira. You are hurt — your naira buys fewer imported goods and inflation rises',
+      'It only matters for international travellers',
+      'You both lose money equally',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['teens'],
+    category: 'forex',
+    explanation:
+      'Currency depreciation creates winners and losers. Dollar earners (diaspora, exporters, remote workers) gain — their income is worth twice as much in naira. Naira earners suffer — everything imported becomes more expensive. This is why remote-working Nigerians earning in dollars have a significant financial advantage.',
+  },
+  {
+    id: 'fx-020',
+    text: 'What does "hedging against currency risk" mean for a Nigerian importer?',
+    options: [
+      'Only buying goods from Nigeria to avoid forex entirely',
+      'Using financial instruments or contracts to lock in an exchange rate in advance, protecting against naira depreciation before an import payment is due',
+      'Getting government subsidies to cover import costs',
+      'Buying insurance against exchange rate movements',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['teens'],
+    category: 'forex',
+    explanation:
+      'Currency hedging reduces risk from exchange rate fluctuations. Example: a Nigerian importer expecting to pay $100,000 in 3 months can use a forward contract to lock in today\'s rate, so even if the naira falls further, they pay the agreed rate. Without hedging, a 20% naira fall between order and payment means a 20% higher naira cost.',
+  },
+  {
+    id: 'fx-021',
+    text: 'What is a "domiciliary account" and why might a Nigerian teenager benefit from having one?',
+    options: [
+      'A savings account for students — beneficial because interest rates are higher',
+      'A foreign currency bank account held in Nigeria — beneficial if you earn or receive money in dollars/pounds/euros, or want to save in a currency stronger than the naira',
+      'A joint account held with a parent — beneficial for controlled spending',
+      'An account used only for school fees payments',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['teens'],
+    category: 'forex',
+    explanation:
+      'A domiciliary account holds foreign currency in a Nigerian bank. If you receive money from abroad (family, remote work, scholarships), you can keep it in dollars without converting to naira — protecting it from devaluation. As more young Nigerians work remotely for foreign clients, dom accounts have become essential.',
+  },
+  {
+    id: 'fx-022',
+    text: 'If the naira strengthens from ₦1,500/$ to ₦1,200/$, what happens to the cost of importing a phone priced at $200?',
+    options: [
+      'Cost stays at ₦300,000 regardless of exchange rate',
+      'Cost falls from ₦300,000 to ₦240,000 — naira appreciation makes imports cheaper',
+      'Cost rises because appreciation means inflation',
+      'The phone price in dollars also falls',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['teens'],
+    category: 'forex',
+    explanation:
+      'At ₦1,500/$: $200 phone = ₦300,000. At ₦1,200/$: $200 phone = ₦240,000. Naira strengthening (appreciation) makes imports cheaper — you need fewer naira to buy the same dollar amount. This is why naira stability and strength benefits ordinary Nigerians who buy imported goods.',
+  },
+  // ── Adults Hard ─────────────────────────────────────────────────────────────
+  {
+    id: 'fx-023',
+    text: 'What is a "forward exchange contract" and how would a Nigerian exporter use one?',
+    options: [
+      'A contract to buy goods from a foreign country in advance',
+      'An agreement to exchange currency at a pre-agreed rate on a future date — an exporter uses it to lock in today\'s rate on dollars they expect to receive in 3 months, eliminating uncertainty from naira fluctuations',
+      'A CBN licence allowing unlimited forex purchases',
+      'A contract between banks for overnight dollar lending',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    ageTrack: ['adults'],
+    category: 'forex',
+    explanation:
+      'Forward contracts lock in an exchange rate for a future transaction. An exporter expecting $1M in 3 months can lock in ₦1,500/$ now. If naira strengthens to ₦1,200/$, they still get ₦1,500/$. If naira weakens to ₦1,800/$, they miss out on the gain but had certainty for planning. Used heavily in oil exports and agricultural commodity trade.',
+  },
+  {
+    id: 'fx-024',
+    text: 'What is "carry trade" in the context of currency markets and why is it risky?',
+    options: [
+      'Physically carrying cash across borders for profit',
+      'Borrowing in a low-interest currency and investing in a high-interest currency to profit from the interest differential — risky because exchange rate movements can wipe out the interest gain',
+      'A trading strategy where you trade forex only during African market hours',
+      'Buying naira assets with dollars when the naira is weak',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    ageTrack: ['adults'],
+    category: 'forex',
+    explanation:
+      'Classic carry trade: borrow US dollars at 5% and invest in Nigerian treasury bills at 22% — pocketing the 17% spread. The risk: if the naira depreciates 20%+ against the dollar, your naira returns when converted back to dollars turn negative. This is why foreign investors fled Nigeria after the 2016 and 2023 devaluations — carry trade collapsed.',
+  },
+  {
+    id: 'fx-025',
+    text: 'What is "currency risk" and how does it affect a Nigerian company that borrowed in US dollars to fund local operations?',
+    options: [
+      'Currency risk only affects importers, not borrowers',
+      'If the naira depreciates after the loan is taken, the naira cost of repaying the dollar loan increases — a company earning only naira may find repayment cripplingly expensive',
+      'Dollar borrowing is always safer than naira borrowing because the dollar is stable',
+      'Currency risk is managed entirely by the CBN on behalf of businesses',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    ageTrack: ['adults'],
+    category: 'forex',
+    explanation:
+      'Dollar-denominated loans are deadly for naira-revenue businesses when naira depreciates. Example: ₦800M borrowed at $1M when rate was ₦800/$. After naira falls to ₦1,600/$, repaying $1M costs ₦1,600M — double. Many Nigerian companies collapsed post-2023 devaluation because of unhedged dollar debt. This is called a "currency mismatch."',
+  },
+  {
+    id: 'fx-026',
+    text: 'Nigeria has experienced periods of "multiple exchange rates" (official vs parallel rates). What economic problems does this create?',
+    options: [
+      'It is beneficial — different rates serve different groups\' needs',
+      'It creates arbitrage opportunities (buy cheap at official rate, sell high at parallel rate), discourages genuine investment, and leads to capital flight as market participants lose confidence',
+      'Multiple rates only cause problems for importers, not the general economy',
+      'It strengthens the naira by creating competition',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    ageTrack: ['adults'],
+    category: 'forex',
+    explanation:
+      'Multiple exchange rates cause severe distortions: (1) Arbitrage — connected individuals get cheap official-rate dollars and sell at parallel rates for massive profit. (2) Misallocation — resources flow into arbitrage rather than production. (3) Corruption — access to official rates becomes a political favour. (4) Capital flight — investors distrust the system. This is why the 2023 unification was necessary despite the painful devaluation.',
+  },
+  {
+    id: 'fx-027',
+    text: 'The CBN uses "sterilisation" to manage excess naira liquidity after forex interventions. What does sterilisation mean?',
+    options: [
+      'Physically destroying old naira notes to reduce supply',
+      'When CBN sells naira (to support the naira\'s value), it creates excess dollars in the system — sterilisation means CBN then issues treasury bills or bonds to absorb excess naira and prevent inflation',
+      'Cleaning contaminated banknotes',
+      'Converting foreign debt into naira-denominated debt',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    ageTrack: ['adults'],
+    category: 'forex',
+    explanation:
+      'When CBN intervenes in forex markets (selling dollars to defend the naira), it receives naira in return — increasing naira in the system, which could cause inflation. Sterilisation = CBN issues bonds/T-bills to "mop up" this excess naira, keeping money supply controlled. Without sterilisation, forex interventions would fuel inflation.',
+  },
   // --- Kids easy questions ---
   {
     id: 'fx-013',

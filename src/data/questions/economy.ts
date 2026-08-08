@@ -190,6 +190,249 @@ const questions: Question[] = [
     category: 'economy',
     explanation: 'Farmers produce food that feeds families and earns money through sales. Agriculture is one of the biggest parts of Nigeria\'s economy and employs millions of people.',
   },
+  // ── Teens Easy ─────────────────────────────────────────────────────────────
+  {
+    id: 'ec-014',
+    text: 'Before the exam break, a pack of indomie cost ₦200. After the break it costs ₦280. What economic concept explains this?',
+    options: ['Profit', 'Inflation', 'Tax', 'Exchange rate'],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'economy',
+    explanation:
+      'Inflation is the general rise in prices over time. The 40% jump in noodle prices (₦200 → ₦280) is a real-life example of how inflation eats into purchasing power. In Nigeria, food inflation has been particularly sharp due to fuel costs and naira devaluation.',
+  },
+  {
+    id: 'ec-015',
+    text: 'Amara\'s mum gives her ₦500 for lunch every day. Six months ago, ₦500 bought a full meal + a drink. Today ₦500 only buys the meal. What happened?',
+    options: [
+      'Amara is eating more food now',
+      'Her mum gave her less money',
+      'Inflation reduced the purchasing power of ₦500',
+      'The canteen owner is cheating',
+    ],
+    correctIndex: 2,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'economy',
+    explanation:
+      'Purchasing power is how much your money can buy. When inflation rises, the same ₦500 buys less. This is why "the value of money" decreases over time during inflation — and why saving money in a mattress for years without earning interest is a bad idea.',
+  },
+  {
+    id: 'ec-016',
+    text: 'Your school\'s tuck shop sells the last 5 Ribena drinks for ₦300 each. When they restock 50 bottles, the price drops to ₦220. Which economic law explains this?',
+    options: [
+      'Inflation',
+      'Supply and demand — more supply with the same demand lowers the price',
+      'GDP growth',
+      'Currency devaluation',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'economy',
+    explanation:
+      'When supply is scarce relative to demand, prices rise. When supply increases, prices fall — that\'s the law of supply and demand. It governs everything from data bundles to fuel prices to the cost of goods in your market.',
+  },
+  {
+    id: 'ec-017',
+    text: 'Nigeria earns a lot of money from selling crude oil. When global oil prices crash, what usually happens to Nigeria\'s government budget?',
+    options: [
+      'The budget automatically increases',
+      'The government has less revenue, so it may cut spending or borrow more',
+      'Nigeria earns more because it sells more oil',
+      'The naira gets stronger',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'economy',
+    explanation:
+      'Oil revenues fund over 50% of Nigeria\'s government budget. When oil prices fall, the government earns less, which means less money for schools, roads, and hospitals — or the government must borrow more. This is why Nigeria\'s fortunes are tightly linked to global oil prices.',
+  },
+  {
+    id: 'ec-018',
+    text: 'Kemi\'s family imports tomatoes from Niger Republic. The naira falls from ₦800/$ to ₦1,600/$. What happens to the cost of imported tomatoes for Kemi\'s family?',
+    options: [
+      'The price stays the same',
+      'The price roughly doubles in naira terms — importing becomes twice as expensive',
+      'The price falls because the naira is weaker',
+      'The dollar price of tomatoes falls',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'economy',
+    explanation:
+      'When the naira weakens, anything priced in foreign currency costs more naira to buy. If tomatoes cost $1/kg and the rate goes from ₦800 to ₦1,600/$, the naira cost doubles from ₦800 to ₦1,600. Naira devaluation directly raises prices of imported goods — and many Nigerian goods use imported inputs.',
+  },
+  {
+    id: 'ec-019',
+    text: 'What does it mean when the economy is in a "recession"?',
+    options: [
+      'Prices are rising very fast',
+      'The economy shrinks for two consecutive quarters — output, jobs, and incomes all fall',
+      'The government is printing more money',
+      'Inflation has been defeated',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'economy',
+    explanation:
+      'A recession means the economy is contracting — businesses produce less, companies lay off workers, and incomes fall. Nigeria experienced recessions in 2016 and 2020. During recessions, unemployment rises and it becomes harder to get jobs or grow a business.',
+  },
+  {
+    id: 'ec-020',
+    text: 'Your data plan used to cost ₦1,000 for 5GB. Now the same plan costs ₦1,500. Meanwhile, your dad\'s salary has not changed. What does this mean for your family\'s real income?',
+    options: [
+      'Real income increased — you are earning the same amount',
+      'Real income fell — the same salary now buys less than before',
+      'Real income is unaffected by data prices',
+      'Real income only changes when the salary amount changes',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'economy',
+    explanation:
+      '"Real income" is purchasing power — what your money can actually buy. When prices rise faster than salaries, real income falls even if the naira amount stays the same. This is inflation\'s silent tax on ordinary people.',
+  },
+  {
+    id: 'ec-021',
+    text: 'When Nigeria\'s government spends heavily on building roads and schools, this usually:',
+    options: [
+      'Only benefits politicians and contractors',
+      'Stimulates economic activity — construction jobs are created, businesses along new roads grow, and students get better education',
+      'Always causes inflation immediately',
+      'Has no effect on ordinary citizens',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'economy',
+    explanation:
+      'Government spending is one of the drivers of GDP. Infrastructure investment creates direct jobs (construction workers) and indirect effects (businesses thrive along new roads, trade increases). The debate is always whether the spending is efficient and where the money actually goes.',
+  },
+  // ── Teens Medium ──────────────────────────────────────────────────────────
+  {
+    id: 'ec-022',
+    text: 'Nigeria\'s inflation is 28%. Tunde\'s savings account earns 15% interest. What is his REAL return on savings?',
+    options: ['43% gain', '13% gain', '−13% (he is losing purchasing power)', '28% gain'],
+    correctIndex: 2,
+    difficulty: 'medium',
+    ageTrack: ['teens'],
+    category: 'economy',
+    explanation:
+      'Real return = Interest rate − Inflation = 15% − 28% = −13%. Tunde earns 15% but loses 28% in purchasing power — net result is a 13% loss in what his money can buy. This is why investing to beat inflation is critical. A savings account is losing value in high-inflation Nigeria.',
+  },
+  {
+    id: 'ec-023',
+    text: 'The CBN raises its Monetary Policy Rate (MPR) from 18% to 22%. What effect is this likely to have on loans and inflation?',
+    options: [
+      'Loans become cheaper; inflation rises',
+      'Loans become more expensive; inflation tends to slow down as borrowing and spending decrease',
+      'No effect on loans; only government bonds are affected',
+      'Loans become cheaper; inflation slows down',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['teens'],
+    category: 'economy',
+    explanation:
+      'When the CBN raises the MPR, commercial banks raise their loan rates. More expensive credit means less borrowing, less spending, less demand — which puts downward pressure on prices (inflation). This is the classic interest rate tool for fighting inflation, though it also slows economic growth.',
+  },
+  {
+    id: 'ec-024',
+    text: 'The naira moved from ₦460/$ in 2022 to ₦1,600/$ in 2024. By approximately what percentage did the naira depreciate?',
+    options: ['About 50%', 'About 100%', 'About 247%', 'About 25%'],
+    correctIndex: 2,
+    difficulty: 'medium',
+    ageTrack: ['teens'],
+    category: 'economy',
+    explanation:
+      'Depreciation % = (New rate − Old rate) ÷ Old rate × 100 = (1,600 − 460) ÷ 460 × 100 ≈ 247%. The naira lost about 71% of its value from the dollar\'s perspective (you need 3.5× more naira to buy one dollar). This explains why imports, fuel, and goods with foreign inputs became dramatically more expensive.',
+  },
+  {
+    id: 'ec-025',
+    text: 'What does "diversifying Nigeria\'s economy beyond oil" mean, and why does it matter to teenagers?',
+    options: [
+      'Making more types of crude oil to export',
+      'Growing other sectors (agriculture, tech, manufacturing) so Nigeria has multiple income sources instead of depending on one commodity whose price it cannot control',
+      'Selling oil to more countries',
+      'Investing oil money in foreign countries',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['teens'],
+    category: 'economy',
+    explanation:
+      'Nigeria relies on oil for 90%+ of export earnings. When oil prices crash, the whole economy suffers. Diversification — growing Agric, Nollywood, fintech, textiles — creates more stable jobs and opportunities, especially for young Nigerians who will inherit this economy.',
+  },
+  {
+    id: 'ec-026',
+    text: 'When Nigeria\'s government spends more money than it collects in taxes (a "budget deficit"), it typically does what to cover the gap?',
+    options: [
+      'Cuts salaries of all civil servants',
+      'Borrows — from Nigerians via bonds, from banks, or from international lenders like the World Bank and IMF',
+      'Prints money immediately, causing instant inflation',
+      'Raises VAT by 50% overnight',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['teens'],
+    category: 'economy',
+    explanation:
+      'A budget deficit is covered by borrowing — selling treasury bills and bonds domestically, or taking foreign loans. Nigeria\'s national debt has grown significantly. Excessive borrowing can lead to debt service costs eating up revenue (Nigeria currently spends over 60% of revenue on debt repayment), leaving less for schools and hospitals.',
+  },
+  {
+    id: 'ec-027',
+    text: 'Jide\'s dad is a petrol trader. He hears Nigeria will fully remove fuel subsidy. Why does he expect that to affect the prices of almost everything — not just fuel?',
+    options: [
+      'Because the government will tax all goods when subsidy is removed',
+      'Because fuel is an input cost for transportation, electricity generation, and production — higher fuel costs ripple through every industry',
+      'Because removing subsidy means petrol is free and businesses save money',
+      'It only affects car owners',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['teens'],
+    category: 'economy',
+    explanation:
+      'Fuel is a systemic cost. Transporters who carry food raise prices. Generators running on petrol mean higher costs for businesses. Factories using fuel for power charge more. Removing subsidy in 2023 caused cascading price increases across virtually every sector of Nigeria\'s economy.',
+  },
+  {
+    id: 'ec-028',
+    text: 'What is the difference between "inflation" and "stagflation"?',
+    options: [
+      'They are the same thing',
+      'Inflation = rising prices with economic growth; stagflation = rising prices AND economic stagnation (no growth, high unemployment at the same time)',
+      'Stagflation = very fast inflation; regular inflation = slow price rises',
+      'Stagflation only happens in developed countries',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['teens'],
+    category: 'economy',
+    explanation:
+      'Stagflation is the worst of both worlds: prices are rising (inflation) but the economy isn\'t growing and unemployment is high. It\'s hard to fix because the tools for fighting inflation (raising rates) make unemployment worse. Nigeria experienced stagflationary conditions in 2016 and post-2023.',
+  },
+  {
+    id: 'ec-029',
+    text: 'Nigeria\'s GDP is about $500 billion. South Africa\'s is about $380 billion. Yet Nigerians on average are not significantly richer than South Africans. What metric explains this?',
+    options: [
+      'GDP per capita — South Africa has far fewer people, so the GDP is shared among fewer people',
+      'Trade balance — South Africa exports more',
+      'Currency strength — the rand is stronger',
+      'Government spending — South Africa spends more on citizens',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    ageTrack: ['teens'],
+    category: 'economy',
+    explanation:
+      'GDP per capita divides total output by population. Nigeria has ~220 million people; South Africa has ~60 million. Nigeria\'s $500B ÷ 220M ≈ $2,273 per person; South Africa\'s $380B ÷ 60M ≈ $6,333 per person. Population size matters — a large economy doesn\'t automatically mean wealthy citizens.',
+  },
 ];
 
 export default questions;

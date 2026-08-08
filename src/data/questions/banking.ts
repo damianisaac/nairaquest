@@ -156,6 +156,103 @@ const questions: Question[] = [
     explanation:
       'NDIC (Nigeria Deposit Insurance Corporation) insures bank deposits up to ₦5 million per depositor per bank. If a licensed bank fails, NDIC compensates depositors up to this limit. Always keep deposits in NDIC-insured banks.',
   },
+  // ── Teens Easy ─────────────────────────────────────────────────────────────
+  {
+    id: 'bk-019',
+    text: 'Nneka wants to send ₦5,000 to her friend but does not want to visit a bank. What is the fastest option available to her?',
+    options: [
+      'Post cash via courier',
+      'Use her bank\'s mobile app or USSD code (*737#, *894#, etc.) to transfer instantly',
+      'Visit the bank and use the teller window',
+      'Wait until next month\'s bank statement',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'banking',
+    explanation:
+      'Mobile banking apps and USSD codes allow instant transfers 24/7. Major Nigerian banks use codes like *894# (GTBank), *737# (Access), *326# (UBA), *770# (First Bank). USSD works even without internet — just a phone signal.',
+  },
+  {
+    id: 'bk-020',
+    text: 'What does a "bank statement" show you?',
+    options: [
+      'Your personal ID information',
+      'All money that came in and went out of your account over a specific period',
+      'Your credit score',
+      'The interest rate on your savings',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'banking',
+    explanation:
+      'A bank statement is a record of all transactions — deposits, withdrawals, transfers, and fees — over a specific period. It\'s essential for budgeting, verifying your balance, catching fraudulent transactions, and showing proof of income to landlords or loan officers.',
+  },
+  {
+    id: 'bk-021',
+    text: 'Dare receives an SMS: "Congratulations! You have won ₦5M. Click this link and enter your BVN to claim." What should he do?',
+    options: [
+      'Click and enter his BVN — he might be a lucky winner',
+      'Delete it and report to his bank — this is a phishing scam targeting his BVN and financial information',
+      'Call the number in the message to verify',
+      'Forward to his friends to help them win too',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'banking',
+    explanation:
+      'This is a classic phishing scam — fake prizes designed to steal your BVN, account details, or OTPs. Your BVN links all your accounts. Never click suspicious links or share BVN in response to unsolicited messages. Real winnings don\'t require your banking details.',
+    consequenceReplay: {
+      scenario: 'Dare clicks and enters his BVN, thinking it is legitimate.',
+      outcome: 'Scammers use his BVN to access his bank details and transfer his savings within 2 hours.',
+      lesson: 'Legitimate competitions never need your BVN or PIN. When in doubt, ignore and delete.',
+    },
+  },
+  {
+    id: 'bk-022',
+    text: 'What is the difference between a current account and a savings account?',
+    options: [
+      'They are exactly the same',
+      'A current account is for frequent transactions (businesses/salaries) with no interest; a savings account earns interest but may limit withdrawals',
+      'A current account earns higher interest than a savings account',
+      'Only adults can have savings accounts',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'banking',
+    explanation:
+      'Current accounts are designed for frequent daily use — paying salaries, business transactions, cheques. No interest, but unlimited transactions. Savings accounts earn interest but may limit the number of withdrawals per month. Most Nigerians have both: a current account for daily spending and a savings account for building reserves.',
+  },
+  {
+    id: 'bk-023',
+    text: 'Funke has ₦200,000 in her GTBank savings account. Her account earns 4% interest per year. How much interest does she earn after 12 months?',
+    options: ['₦4,000', '₦8,000', '₦2,000', '₦20,000'],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'banking',
+    explanation:
+      '₦200,000 × 4% = ₦8,000 interest per year. With Nigeria\'s inflation often exceeding 20–30%, ₦8,000 interest on ₦200,000 in savings is actually a real loss in purchasing power. This illustrates why simply keeping money in a savings account is not enough for wealth building.',
+  },
+  {
+    id: 'bk-024',
+    text: 'What does "KYC" mean in banking and why does your bank ask for your documents?',
+    options: [
+      'Keep Your Cash — a programme to encourage savings',
+      'Know Your Customer — a process banks use to verify your identity and prevent money laundering and fraud',
+      'Key Your Code — the process for setting up your internet banking PIN',
+      'Keep Your Credentials — a reminder to protect your login details',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'banking',
+    explanation:
+      'KYC (Know Your Customer) is a CBN-mandated process where banks verify your identity using documents (NIN, passport, utility bill). It\'s required to open accounts and prevents financial crime. Without proper KYC, your account is restricted to lower transaction limits (Tier 1).',
+  },
   // --- Kids easy questions ---
   {
     id: 'bk-011',

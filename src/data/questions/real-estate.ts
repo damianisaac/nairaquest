@@ -259,6 +259,291 @@ const questions: Question[] = [
     category: 'real-estate',
     explanation: 'Land fraud is common in Nigeria — people sell land they do not own, or land on disputed territory. Always verify documents with a lawyer and at the land registry before paying any money.',
   },
+  // ── Teens Easy ─────────────────────────────────────────────────────────────
+  {
+    id: 're-018',
+    text: 'What is the main difference between renting a house and buying one?',
+    options: [
+      'Renting is always more expensive in the long run',
+      'Renting = you pay to use someone else\'s property and own nothing; buying = you own the asset and build wealth over time',
+      'Buying a house is always better no matter your situation',
+      'They are basically the same thing financially',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'real-estate',
+    explanation:
+      'When you rent, your money goes to the landlord — you don\'t own anything. When you buy, you\'re building an asset that can appreciate in value. However, buying requires a large upfront amount and carries risks (market downturns, maintenance costs). The best choice depends on your financial situation and goals.',
+  },
+  {
+    id: 're-019',
+    text: 'Sola\'s family rents their house for ₦500,000 per year. If property prices in their area double in 10 years, does Sola\'s family benefit from this increase?',
+    options: [
+      'Yes — their rent stays the same so they benefit',
+      'No — as renters they do not own the property, so any increase in property value goes entirely to the landlord',
+      'Yes — their rent increases at the same rate as property values',
+      'They both benefit equally',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'real-estate',
+    explanation:
+      'Property appreciation (rising values) only benefits owners. If you rent for 20 years, all that rent is paid with nothing to show for it — while the landlord\'s asset doubles or triples. This is why homeownership is often described as "forced saving" — your mortgage payments build equity you own.',
+  },
+  {
+    id: 're-020',
+    text: 'What does "location, location, location" mean in real estate?',
+    options: [
+      'You should buy property far from the city where land is cheap',
+      'The location of a property is one of the biggest factors determining its value and desirability',
+      'You should buy three properties in different locations',
+      'Location only matters for commercial properties',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'real-estate',
+    explanation:
+      'A house in Lekki is worth far more than the same house in a remote area — because of access to jobs, schools, hospitals, amenities, and safety. Location is the one thing about a property you cannot change, which is why it dominates property values.',
+  },
+  {
+    id: 're-021',
+    text: 'Kunle\'s family buys a house in an up-and-coming Lagos neighbourhood for ₦25 million. Five years later it is worth ₦40 million. What is this increase called?',
+    options: ['Inflation', 'Capital appreciation', 'Rental income', 'Compound interest'],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'real-estate',
+    explanation:
+      'Capital appreciation is the increase in value of an asset over time. Kunle\'s family gained ₦15 million (60% return) in 5 years just by holding the property. Real estate in high-growth areas like Lagos, Abuja, and Port Harcourt has historically appreciated faster than inflation.',
+  },
+  {
+    id: 're-022',
+    text: 'Adaeze\'s uncle wants to buy land but the seller has no documents — only a verbal agreement from the village chief. What should her uncle do?',
+    options: [
+      'Buy it immediately — the village chief\'s word is enough',
+      'Refuse or insist on proper legal documentation; a verbal agreement has no legal protection',
+      'Pay half now and get documents later',
+      'Take pictures of the land as proof of purchase',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'real-estate',
+    explanation:
+      'Land fraud is extremely common in Nigeria. Without legal documents (C of O, Deed of Assignment, Survey Plan), there\'s no legal proof of ownership. The same land can be sold multiple times. NEVER buy land without verifying documents through a lawyer and at the state Land Registry.',
+  },
+  {
+    id: 're-023',
+    text: 'What is a landlord?',
+    options: [
+      'A person who cleans houses for others',
+      'A person who owns property and rents it out to tenants',
+      'A government official who manages public land',
+      'A builder who constructs houses',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'real-estate',
+    explanation:
+      'A landlord owns property and collects rent from tenants who live in or use the space. Being a landlord can be a great source of passive income — but it comes with responsibilities like maintenance, dealing with tenants, and paying property taxes.',
+  },
+  {
+    id: 're-024',
+    text: 'Tunde is looking at two properties. Property A is in a flood-prone area. Property B is on higher ground. Both cost the same. Which should he prefer and why?',
+    options: [
+      'Property A — flood zones are near water so they are scenic',
+      'Property B — flood risk can destroy the property, reduce its value, make it hard to resell, and is an insurance nightmare',
+      'They are equal — location doesn\'t matter as much as size',
+      'Property A — rebuilding after floods is covered by standard insurance',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'real-estate',
+    explanation:
+      'Flood-prone properties face structural damage, lower resale value, difficulty getting insurance, and potential for catastrophic loss. In Lagos especially, properties in flood plains have repeatedly suffered devastating losses. Always check flood risk before buying.',
+  },
+  {
+    id: 're-025',
+    text: 'What is a "tenant"?',
+    options: [
+      'Someone who owns a house',
+      'Someone who pays rent to live in or use a property owned by someone else',
+      'A building contractor',
+      'An estate agent',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'real-estate',
+    explanation:
+      'Tenants pay rent to landlords in exchange for the right to live in or use the property. In Nigeria, tenants typically pay rent 1–2 years in advance — a large upfront cost that can make renting feel like buying.',
+  },
+  {
+    id: 're-026',
+    text: 'Why do properties in Lagos Island typically cost more than in remote rural areas of Nigeria?',
+    options: [
+      'Because island soil is more expensive',
+      'Because Lagos Island has greater access to jobs, business opportunities, infrastructure, and amenities — making it more desirable and driving up demand',
+      'Because the government sets higher prices for island properties',
+      'Because island properties are always larger',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'real-estate',
+    explanation:
+      'Property values are driven by desirability and demand. Lagos Island (Victoria Island, Ikoyi) has the best road access, commercial hubs, schools, hospitals, and entertainment — so more people want to be there. High demand + limited supply = high prices. This is pure supply and demand applied to real estate.',
+  },
+  {
+    id: 're-027',
+    text: 'What is a "mortgage"?',
+    options: [
+      'A type of rent for very expensive properties',
+      'A long-term loan specifically for buying property, where the property itself is the collateral',
+      'A government housing scheme for the poor',
+      'An insurance policy that covers your house',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'real-estate',
+    explanation:
+      'A mortgage lets you buy a property now and pay for it over many years (10–30 years). The bank gives you the money to buy, and you repay monthly. If you stop paying, the bank can seize the property. Mortgage rates in Nigeria are 20–25% per year — very high compared to 3–5% in the US or UK.',
+  },
+  // ── Teens Medium ──────────────────────────────────────────────────────────
+  {
+    id: 're-028',
+    text: 'Bisi buys a house for ₦20 million using a 25% annual interest mortgage over 15 years. Why is the total repayment dramatically higher than ₦20 million?',
+    options: [
+      'Because house prices always rise',
+      'Because compound interest on a 25% mortgage over 15 years means total repayments could exceed ₦100 million — far more than the original purchase price',
+      'Mortgages in Nigeria have fixed total repayments',
+      'Because government adds taxes after purchase',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['teens'],
+    category: 'real-estate',
+    explanation:
+      'Nigerian mortgage rates of 20–25% are punishing. A ₦20M loan at 25% annual interest on a 15-year mortgage can result in total repayments of ₦80M–₦100M+. This is why many Nigerians struggle with formal mortgages and why the NHF scheme (6% rate) from the Federal Mortgage Bank is so valuable.',
+  },
+  {
+    id: 're-029',
+    text: 'What does it mean to "invest in real estate" beyond just buying your own home to live in?',
+    options: [
+      'Always buying in the most expensive area',
+      'Buying properties to generate income (rent) or capital gains (selling higher), using real estate as a wealth-building asset rather than just shelter',
+      'Buying only commercial properties, not residential',
+      'Buying land and leaving it idle for 50 years',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['teens'],
+    category: 'real-estate',
+    explanation:
+      'Real estate investment means: (1) Buy-to-let — purchase property to earn rental income. (2) Buy-to-sell — buy at a low price, improve it, sell higher. (3) Land banking — buy land in a growth area and wait for it to appreciate. Each strategy requires capital, market knowledge, and patience.',
+  },
+  {
+    id: 're-030',
+    text: 'Emeka\'s family bought a property without verifying it with the state Land Registry. Three years later, someone else claims to have bought the same land from the same "seller." Who is most likely to win legally?',
+    options: [
+      'Emeka\'s family — they paid first',
+      'The person whose purchase was registered at the Land Registry — registration creates legal proof of ownership',
+      'Neither — the government takes the land back',
+      'The seller decides who keeps it',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['teens'],
+    category: 'real-estate',
+    explanation:
+      'Nigeria has suffered widespread "double sales" of the same property to multiple buyers. The Land Registry exists to prevent this — registration creates the legal record of ownership. Without registration, even a genuine buyer has weak legal standing. Always register your property purchase.',
+  },
+  {
+    id: 're-031',
+    text: 'What is "negative equity" in property?',
+    options: [
+      'When you own more property than you can manage',
+      'When the property is worth LESS than what you owe on the mortgage — selling it won\'t even cover the loan',
+      'When your rental income is less than your mortgage payment',
+      'When land value drops due to flooding',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['teens'],
+    category: 'real-estate',
+    explanation:
+      'If you bought a house for ₦40M with a ₦35M mortgage, and property values fall to ₦30M, you\'re in negative equity — selling it only gives you ₦30M but you still owe ₦35M. This traps owners in properties they can\'t sell without a loss. It\'s why buying at inflated prices with large mortgages is risky.',
+  },
+  {
+    id: 're-032',
+    text: 'What is the "gross rental yield" of a property and why does it matter to investors?',
+    options: [
+      'It is the profit after all expenses',
+      'Annual rent income ÷ property purchase price × 100% — it tells you what percentage return the rent gives you on your investment',
+      'The property\'s value increase over one year',
+      'The interest rate on the mortgage',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['teens'],
+    category: 'real-estate',
+    explanation:
+      'Gross rental yield = (Annual rent ÷ Property value) × 100. Example: A ₦20M property renting for ₦2M/year gives 10% yield. This helps compare real estate investment returns against other options like stocks (15–20%) or treasury bills (18%). In Lagos, typical gross yields are 5–10%.',
+  },
+  {
+    id: 're-033',
+    text: 'Adaeze wants to buy a property. The asking price is ₦15M. A valuation survey says it\'s worth ₦11M. What should she do?',
+    options: [
+      'Pay the ₦15M immediately — sellers always know the real value',
+      'Negotiate down toward the ₦11M valuation, or walk away — paying ₦4M above market value is a bad start to any investment',
+      'Ignore the valuation — surveyors are often wrong',
+      'Pay ₦15M to show she is a serious buyer',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['teens'],
+    category: 'real-estate',
+    explanation:
+      'A professional valuation survey is your objective market price guide. Paying ₦4M above market value (27% premium) means: (1) you overpaid immediately, (2) you need the market to rise before you can break even on a sale, (3) your rental yield is based on an inflated price. Negotiate hard or walk away.',
+  },
+  {
+    id: 're-034',
+    text: 'What is an "estate agent" and what fees should a buyer expect to pay in Nigeria?',
+    options: [
+      'An estate agent is a government official; their fees are free',
+      'A licensed professional who helps buyers and sellers transact property; buyers typically pay 5–10% of the property price as commission',
+      'An estate agent manages apartment complexes for landlords; tenants pay them nothing',
+      'Estate agents only work for sellers, not buyers',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['teens'],
+    category: 'real-estate',
+    explanation:
+      'Estate agents (NIESV-registered in Nigeria) connect buyers and sellers. Their commission (typically 5–10% of sale price) is usually paid by the buyer on residential transactions. On a ₦25M property, that\'s ₦1.25M–₦2.5M. Always clarify fees upfront and use registered estate agents — not random "property dealers."',
+  },
+  {
+    id: 're-035',
+    text: 'What is "off-plan property" and what is the main risk?',
+    options: [
+      'Property that has no planning permission — it is illegal',
+      'Property you buy before construction is complete, based on architectural plans — the main risk is developers abandoning or delaying projects, leaving you with nothing',
+      'A property with no title documents',
+      'Property sold below market value',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['teens'],
+    category: 'real-estate',
+    explanation:
+      'Off-plan purchases can offer lower entry prices and capital growth during construction. But in Nigeria, many developers have abandoned projects — leaving buyers who paid millions with empty land. Always: verify the developer\'s track record, use an escrow arrangement, check state approvals, and have a lawyer review all contracts.',
+  },
 ];
 
 export default questions;

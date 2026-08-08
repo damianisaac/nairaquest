@@ -190,6 +190,168 @@ const questions: Question[] = [
     category: 'insurance',
     explanation: 'Insurance kicks in when something unexpected and costly happens. Without it, Emeka would have to pay the full repair bill himself — which could be very expensive.',
   },
+  // ── Teens Easy ────────────────────────────────────────────────────────────
+  {
+    id: 'in-014',
+    text: 'Your friend says, "Insurance is just a waste of money — I\'ve never needed to make a claim." How would you respond?',
+    options: [
+      'Agree — if you\'ve never claimed, the premiums were wasted',
+      'Disagree — insurance is for unpredictable events; the fact that you\'ve never claimed means you\'ve been lucky, not that the cover was pointless',
+      'Agree — only buy insurance if you expect to need it',
+      'Agree — most insurance companies don\'t pay claims anyway',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'insurance',
+    explanation:
+      'Insurance\'s value is in protection, not payouts. A year without a claim means nothing bad happened — that\'s the goal. The moment something catastrophic happens (accident, illness, fire), uninsured people face financial ruin while insured people are protected. Think of it like a seatbelt — you don\'t regret wearing it when nothing happens.',
+  },
+  {
+    id: 'in-015',
+    text: 'Ade\'s school announces a school trip requires "personal accident insurance" for every student. What does this type of insurance cover?',
+    options: [
+      'Loss of school books or uniform',
+      'Medical costs and compensation if a student is injured during the trip',
+      'Travel delays or flight cancellations',
+      'The full cost of the trip if parents cannot pay',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'insurance',
+    explanation:
+      'Personal accident insurance pays out if you\'re injured in an accident — covering medical treatment, hospital stays, or (in serious cases) permanent disability payments. Schools require it for trips because a single serious injury could cost millions in medical bills without coverage.',
+  },
+  {
+    id: 'in-016',
+    text: 'What is the difference between "third party" and "comprehensive" car insurance in Nigeria?',
+    options: [
+      'Third party covers your car; comprehensive covers others',
+      'Third party covers injury or damage to OTHER people if you cause an accident; comprehensive covers both others AND your own vehicle',
+      'Comprehensive is cheaper because it covers more',
+      'Both cover the same things with different prices',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'insurance',
+    explanation:
+      'Third party is the minimum legal requirement in Nigeria — it protects others but NOT your own vehicle. Comprehensive insurance covers damage to your car AND third parties. Third party is cheaper; comprehensive is pricier but gives full protection. For new or expensive vehicles, comprehensive is usually worth it.',
+  },
+  {
+    id: 'in-017',
+    text: 'If Jumoke pays ₦50,000 annual premium for health insurance and never visits the hospital that year, has she "wasted" her money?',
+    options: [
+      'Yes — she should only buy insurance when she is already sick',
+      'No — she paid ₦50,000 for the security of knowing she was covered all year. If something had happened, the insurance would have paid far more than ₦50,000',
+      'Yes — she should switch to saving the ₦50,000 instead',
+      'Partly — she should get a refund for unused coverage',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'insurance',
+    explanation:
+      'Insurance is not meant to "profit" you — it\'s protection. Jumoke\'s ₦50,000 premium bought peace of mind and financial security for an entire year. A single hospitalisation in Nigeria can cost ₦500,000–₦5,000,000. Not making a claim is a good outcome, not evidence of wasted money.',
+  },
+  // ── Adults Hard ─────────────────────────────────────────────────────────────
+  {
+    id: 'in-018',
+    text: 'What is "adverse selection" in insurance and how do insurance companies combat it?',
+    options: [
+      'When insurance companies choose not to pay valid claims — combated by customer complaints to NAICOM',
+      'When high-risk individuals are more likely to seek insurance (making the insured pool riskier than the general population) — combated through underwriting, exclusions, and risk-based pricing',
+      'When insurers select only the best customers — combated by anti-discrimination regulations',
+      'When customers choose the cheapest insurer — combated by price regulations',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    ageTrack: ['adults'],
+    category: 'insurance',
+    explanation:
+      'Adverse selection: sick people buy more health insurance; reckless drivers buy more car insurance. This makes the pool riskier and drives up costs for everyone. Insurers combat it through medical underwriting (health questionnaires), actuarial risk classification, exclusion clauses, waiting periods, and risk-based premiums.',
+  },
+  {
+    id: 'in-019',
+    text: 'What is "reinsurance" and why is it important for Nigerian insurance companies?',
+    options: [
+      'Insurance companies selling policies to individuals after initially refusing',
+      'When insurers buy insurance themselves to cap their exposure to large or catastrophic losses — critical for Nigerian insurers operating with thin capital bases',
+      'Renewing an existing insurance policy',
+      'When two insurance companies share a single customer\'s policy',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    ageTrack: ['adults'],
+    category: 'insurance',
+    explanation:
+      'Reinsurance lets insurers transfer part of their risk to reinsurers (like Swiss Re, Munich Re). If a single catastrophic claim (say, an oil refinery explosion) exceeds a Nigerian insurer\'s capacity, reinsurance absorbs the excess. Nigeria\'s Africa Re (African Reinsurance Corporation based in Lagos) is a major continental reinsurer.',
+  },
+  {
+    id: 'in-020',
+    text: 'What is the "principle of indemnity" in insurance and why doesn\'t life insurance follow it strictly?',
+    options: [
+      'It means insurers always pay full replacement cost — life insurance follows it perfectly',
+      'It means insurance should restore you to the same financial position before the loss (not profit from it). Life insurance doesn\'t follow it strictly because you cannot objectively quantify the financial value of a life',
+      'It means insurance is mandatory for all assets — life insurance is optional',
+      'It means premiums must equal claims — life insurance uses a different premium model',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    ageTrack: ['adults'],
+    category: 'insurance',
+    explanation:
+      'Indemnity means you should not profit from insurance — only be restored to your pre-loss position. For property (fire, car), this is straightforward. For life insurance, there\'s no objective "value of a life" — so it works as an "agreed value" contract where the sum assured is pre-agreed, and beneficiaries can receive amounts exceeding direct financial loss.',
+  },
+  {
+    id: 'in-021',
+    text: 'NAICOM mandates minimum paid-up capital of ₦10 billion for life insurers in Nigeria. What is the purpose of this capital requirement?',
+    options: [
+      'To ensure the government gets tax revenue from large insurers',
+      'To ensure insurers have enough financial cushion to pay claims even if investment losses or unexpected catastrophic events occur — protecting policyholders',
+      'To prevent small companies from entering the market to protect existing insurers\' profits',
+      'To fund NAICOM\'s operational budget',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    ageTrack: ['adults'],
+    category: 'insurance',
+    explanation:
+      'Solvency capital requirements ensure insurers can pay claims even under adverse scenarios. An insurer that cannot pay claims is worthless. NAICOM raised minimum capital requirements to ₦8–10B (2023 recapitalisation) to consolidate the industry and ensure financial robustness. Undercapitalised insurers collapse when large claims arrive.',
+  },
+  {
+    id: 'in-022',
+    text: 'What is "moral hazard" in insurance and give a Nigerian example?',
+    options: [
+      'When insurance companies behave unethically by denying valid claims',
+      'When having insurance causes people to take more risks than they would without it — e.g., a car owner with comprehensive insurance driving more recklessly because "the insurance will cover it"',
+      'When insurance premiums are so high people cannot afford them',
+      'When people commit fraud by making false claims',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    ageTrack: ['adults'],
+    category: 'insurance',
+    explanation:
+      'Moral hazard: insurance changes behaviour by reducing the financial consequences of risky actions. Examples: a comprehensively insured driver taking less care; a business with fire insurance cutting corners on fire safety. Insurers combat moral hazard with deductibles (so the insured still bears some cost), co-insurance, and claims investigations.',
+  },
+  {
+    id: 'in-023',
+    text: 'Under Nigeria\'s Insurance Act, what is "subrogation" and why does it matter after a claims payout?',
+    options: [
+      'The insurer\'s right to cancel your policy after a claim',
+      'After paying a claim, the insurer acquires the legal right to pursue the responsible third party for recovery — preventing the insured from "double recovering" from both the insurer and the liable party',
+      'The process of renewing an insurance contract after a year',
+      'The right of the insured to switch insurers without losing their claim history',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    ageTrack: ['adults'],
+    category: 'insurance',
+    explanation:
+      'Subrogation: if Insurer A pays out ₦5M for your car damaged by Driver B\'s negligence, Insurer A can then sue Driver B to recover that ₦5M. This prevents you from getting the ₦5M from the insurer AND suing Driver B yourself (double recovery). It also incentivises the party at fault to bear ultimate costs through their liability insurance.',
+  },
 ];
 
 export default questions;

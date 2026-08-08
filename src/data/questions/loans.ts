@@ -205,6 +205,281 @@ const questions: Question[] = [
     category: 'loans',
     explanation: 'Loans are best used for investments in your future — like education — that will help you earn enough to pay back the debt. Borrowing for luxuries or gambling is very risky.',
   },
+  // ── Teens Easy ─────────────────────────────────────────────────────────────
+  {
+    id: 'ln-015',
+    text: 'Your friend Dayo wants to buy the latest ₦180,000 iPhone by borrowing from a loan app. He earns ₦25,000 a month. What is the smartest advice?',
+    options: [
+      'Go for it — monthly repayments will be easy',
+      'Do not borrow; save for a few months or buy a cheaper phone you can afford',
+      'Borrow from two apps to cover the cost',
+      'Ask his parents to guarantee the loan',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'loans',
+    explanation:
+      'Borrowing ₦180,000 on a ₦25,000 salary means over 7 months\' salary — plus interest — just for a phone. Loan apps charge 5–15% per month. Save first, or get a phone within your budget. Borrowing for depreciating items (gadgets, clothes) is almost always a bad deal.',
+  },
+  {
+    id: 'ln-016',
+    text: 'What does it mean to "default" on a loan?',
+    options: [
+      'Paying the loan back early',
+      'Failing to repay a loan according to the agreed terms',
+      'Negotiating a lower interest rate',
+      'Switching from one loan to another',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'loans',
+    explanation:
+      'Defaulting means you stop repaying a loan without agreement from the lender. Consequences include: late fees, damaged credit record, legal action, and harassment from debt collectors. If you\'re struggling, always contact the lender early to renegotiate — don\'t just disappear.',
+  },
+  {
+    id: 'ln-017',
+    text: 'Chioma borrows ₦5,000 from her classmate. Her classmate asks for ₦5,500 back. What is the ₦500 called?',
+    options: ['A gift', 'Interest', 'Tax', 'A fine'],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'loans',
+    explanation:
+      'Interest is the fee you pay for using someone else\'s money. Chioma\'s interest rate is ₦500 ÷ ₦5,000 = 10% of the loan. Before borrowing, always ask: "How much will I pay back in total?" That total — principal + interest — is your real cost.',
+  },
+  {
+    id: 'ln-018',
+    text: 'You need ₦15,000 for school fees. Option A: borrow from a friend, pay back ₦16,000 next month. Option B: use a loan app at 20% per month. Which is smarter?',
+    options: [
+      'Option B — apps are more professional',
+      'Option A — the total cost is much lower (₦1,000 vs. ₦3,000 interest)',
+      'Both are the same',
+      'Neither — never borrow for school fees',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'loans',
+    explanation:
+      'Option A costs ₦1,000 in interest. Option B costs ₦15,000 × 20% = ₦3,000 in one month. Always compare total repayment amounts, not just the speed of the loan. Loan apps are fast but very expensive.',
+  },
+  {
+    id: 'ln-019',
+    text: 'Which of these is the BEST reason for a teenager to borrow money?',
+    options: [
+      'To buy a new gaming console everyone at school has',
+      'To invest in a skill course that will help earn income later',
+      'To bet on a football match',
+      'To pay for clothes for a party',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'loans',
+    explanation:
+      'Borrowing makes sense when the return justifies the cost — like a skill course that helps you earn. Borrowing for consumption (clothes, gadgets, entertainment) means you pay back more than you got in value, leaving you worse off.',
+  },
+  {
+    id: 'ln-020',
+    text: 'A loan app sends Kelechi a message: "₦50,000 approved! No documents needed. Just download and collect." What should Kelechi do?',
+    options: [
+      'Download and collect the money immediately',
+      'Read the terms carefully — high-interest or predatory loan apps can charge 30–100% monthly',
+      'Share the link with friends',
+      'Download because no-document loans are always government-approved',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'loans',
+    explanation:
+      'Many predatory loan apps target young Nigerians. They approve quickly with no documents — then charge 30–100% monthly interest and can access your contacts to harass you if you miss payment. Always check the APR (Annual Percentage Rate) before accepting any loan.',
+    consequenceReplay: {
+      scenario: 'Kelechi downloads and borrows ₦50,000 from the app.',
+      outcome: 'The app charges 30% monthly. After 3 months of missed payments, agents call his entire contact list, including his parents and school friends, to demand repayment.',
+      lesson: 'Loan apps with no documentation are almost always predatory. The interest and shame of harassment is not worth it.',
+    },
+  },
+  {
+    id: 'ln-021',
+    text: 'Fatima wants to borrow ₦10,000. Two options: Bank loan at 25% per year OR a street lender at 25% per WEEK. Which is better?',
+    options: [
+      'Street lender — it is faster and simpler',
+      'Bank loan — 25% per year is dramatically cheaper than 25% per week',
+      'Both are the same interest rate',
+      'Neither — all loans should be avoided',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'loans',
+    explanation:
+      '25% per year means ₦2,500 interest on ₦10,000 over a year. 25% per week compounds to over 1,300% annually. Street lenders (shylocks/loan sharks) are incredibly expensive and dangerous. Always compare the ANNUAL rate, not just the short-term rate.',
+  },
+  {
+    id: 'ln-022',
+    text: 'What does it mean to "repay a loan in instalments"?',
+    options: [
+      'Paying back all the money at once on one day',
+      'Paying back the loan in smaller amounts spread over several weeks or months',
+      'Getting an extension to avoid paying at all',
+      'Paying only the interest and never the original amount',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'loans',
+    explanation:
+      'Instalment repayment breaks down a large debt into smaller, manageable payments over time. For example, repaying ₦30,000 in 3 instalments of ₦10,000 per month. This is how most formal loans work — making it easier on your budget.',
+  },
+  {
+    id: 'ln-023',
+    text: 'Tobi sees an ad: "Borrow ₦100,000 — pay back only ₦105,000 after 2 months!" He thinks this sounds great. What should he check first?',
+    options: [
+      'Whether the app has a nice logo',
+      'The actual monthly interest rate — ₦5,000 on ₦100,000 over 2 months = 2.5% per month = 30% per year, which is high',
+      'How fast the money arrives',
+      'Whether his friends have used it',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'loans',
+    explanation:
+      'Always calculate the RATE, not just the total. ₦5,000 extra on ₦100,000 in 2 months = 2.5% per month. Annualised that\'s 30% — comparable to credit card rates in the US, but high for Nigeria. The question is whether your income can comfortably cover this.',
+  },
+  {
+    id: 'ln-024',
+    text: 'Zainab\'s older sister says, "Never get a loan to invest in the stock market." Do you agree?',
+    options: [
+      'No — stocks always go up so it is safe to borrow to invest',
+      'Yes — investing borrowed money is very risky because if the investment falls, you still owe the full loan plus interest',
+      'Only borrow if you are very confident about the stock',
+      'Stocks and loans are unrelated',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['teens'],
+    category: 'loans',
+    explanation:
+      'Borrowing to invest (called "leverage") amplifies BOTH gains AND losses. If you borrow ₦100,000 to invest and the stock drops 30%, you lose ₦30,000 — but still owe back the full ₦100,000 plus interest. This is how people end up in serious debt.',
+  },
+  // ── Teens Medium ──────────────────────────────────────────────────────────
+  {
+    id: 'ln-025',
+    text: 'Emeka borrowed ₦50,000 at 30% annual simple interest for 18 months. What total amount does he repay?',
+    options: ['₦65,000', '₦72,500', '₦60,000', '₦80,000'],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['teens'],
+    category: 'loans',
+    explanation:
+      'Simple interest: I = P × R × T = ₦50,000 × 0.30 × 1.5 years = ₦22,500. Total repayment = ₦50,000 + ₦22,500 = ₦72,500. He pays back 45% more than he borrowed. Always calculate total repayment before signing any loan agreement.',
+  },
+  {
+    id: 'ln-026',
+    text: 'A student loan app charges 3% per month. How much interest does Adaobi owe after 6 months on a ₦20,000 loan (simple interest)?',
+    options: ['₦600', '₦3,600', '₦1,800', '₦6,000'],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['teens'],
+    category: 'loans',
+    explanation:
+      '3% per month × 6 months = 18% total. ₦20,000 × 18% = ₦3,600 in interest. Total repayment = ₦23,600. Annualised, 3% monthly = ~36% per year — very expensive. Compare: typical bank personal loans in Nigeria are 20–30% per year.',
+  },
+  {
+    id: 'ln-027',
+    text: 'Bisi\'s credit report shows she missed 3 loan repayments last year. Why does this matter now, even though she\'s repaid the loan?',
+    options: [
+      'It does not matter once a loan is fully repaid',
+      'Credit bureaus keep records for years — future lenders will see the missed payments and may reject her applications or charge higher rates',
+      'Only banks see credit records, not fintech apps',
+      'She can pay to have the record deleted',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['teens'],
+    category: 'loans',
+    explanation:
+      'In Nigeria, credit bureaus (CRC, CreditRegistry, FirstCentral) keep repayment history. Missed payments stay on your record and signal higher risk to future lenders — meaning loan rejections or higher interest rates. Good credit is built over years of consistent on-time repayments.',
+  },
+  {
+    id: 'ln-028',
+    text: 'Tolu is comparing two loans for ₦30,000: Option A: 2% per month (repay in 6 months). Option B: 25% per year (repay in 6 months). Which is cheaper and by how much?',
+    options: [
+      'Option A is cheaper — 2% sounds small',
+      'Option B is cheaper — Option A costs ₦3,600 vs Option B\'s ₦3,750',
+      'Option B is significantly cheaper — it costs ₦3,750 vs ₦3,600',
+      'Option B is cheaper — it costs only ₦3,750 interest vs ₦3,600',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['teens'],
+    category: 'loans',
+    explanation:
+      'Option A: 2% × 6 months = 12% total → ₦30,000 × 12% = ₦3,600. Option B: 25% per year ÷ 2 (for 6 months) = 12.5% → ₦30,000 × 12.5% = ₦3,750. Option A is actually slightly cheaper here! Monthly rates can seem small but add up. Always convert to annual rates to compare fairly.',
+  },
+  {
+    id: 'ln-029',
+    text: 'What is "collateral" and why do banks ask for it before giving large loans?',
+    options: [
+      'An extra fee paid upfront — banks use it as profit',
+      'An asset pledged as security; if you fail to repay, the bank can sell it to recover the loan',
+      'A government guarantee that all loans will be repaid',
+      'A co-signer who agrees to repay if you cannot',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['teens'],
+    category: 'loans',
+    explanation:
+      'Collateral (land, car, equipment) reduces the lender\'s risk. If you default, they can seize and sell the asset. Banks offer lower interest rates when collateral is provided because their risk is covered. Without collateral (unsecured loans), rates are higher.',
+  },
+  {
+    id: 'ln-030',
+    text: 'What is "loan sharks" and how are they different from microfinance banks?',
+    options: [
+      'Loan sharks are just informal banks with higher rates — they are safe',
+      'Loan sharks operate illegally with extreme rates (50–200% monthly) and use threats/harassment; microfinance banks are regulated by the CBN',
+      'Microfinance banks charge higher rates than loan sharks',
+      'They are the same — both are regulated by the CBN',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['teens'],
+    category: 'loans',
+    explanation:
+      'Loan sharks (shylocks) are unlicensed and unregulated — they charge illegal rates and resort to threats, harassment, or even violence for collection. Microfinance banks are CBN-licensed and must follow consumer protection rules, with maximum rates set by regulation. Always borrow from licensed lenders.',
+  },
+  {
+    id: 'ln-031',
+    text: 'Rasheed takes two loans at once — ₦10,000 from Kuda and ₦15,000 from FairMoney. Both charge 5% monthly. What is his total monthly interest burden?',
+    options: ['₦500', '₦1,250', '₦750', '₦2,500'],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['teens'],
+    category: 'loans',
+    explanation:
+      'Kuda interest: ₦10,000 × 5% = ₦500. FairMoney interest: ₦15,000 × 5% = ₦750. Total monthly interest = ₦500 + ₦750 = ₦1,250. Stacking multiple loans multiplies your interest burden fast. This is called over-indebtedness — a common trap among young people.',
+  },
+  {
+    id: 'ln-032',
+    text: 'Aisha needs ₦25,000 for school fees. She can either save ₦5,000/month for 5 months OR borrow immediately at 5% per month for 5 months. What is the financial difference?',
+    options: [
+      'Saving costs ₦6,250 in opportunity cost — borrowing is cheaper',
+      'Saving costs ₦0 in fees; borrowing costs ₦6,902 total repayment (compound) — saving saves over ₦6,900',
+      'They are identical in total cost',
+      'Borrowing always costs less because you get the money faster',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    ageTrack: ['teens'],
+    category: 'loans',
+    explanation:
+      'Saving: you pay exactly ₦25,000 — no extra cost. Borrowing at 5%/month compound for 5 months: ₦25,000 × (1.05)^5 = ₦31,907 — you pay ₦6,907 extra. Saving first is always cheaper than borrowing, if you can wait. The price of impatience is ₦6,907.',
+  },
 ];
 
 export default questions;
