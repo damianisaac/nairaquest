@@ -205,8 +205,29 @@ export default function LandingPage() {
           <div className="absolute inset-0 bg-gray-950/20" />
         </div>
 
+        {/* NairaQuest title — centred in the hero */}
+        <motion.div
+          className="relative z-10 flex-1 flex items-center justify-center pointer-events-none select-none"
+          initial={{ opacity: 0, scale: 0.85 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
+        >
+          <h1
+            className="font-display text-6xl sm:text-8xl md:text-9xl font-black tracking-tight drop-shadow-2xl"
+            style={{
+              background: 'linear-gradient(135deg, #d4af37 0%, #22c55e 40%, #00b86a 70%, #d4af37 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              filter: 'drop-shadow(0 4px 24px rgba(212,175,55,0.45))',
+            }}
+          >
+            NairaQuest
+          </h1>
+        </motion.div>
+
         {/* Hero content — pushed to bottom on all screen sizes */}
-        <div className="relative z-10 text-center max-w-2xl mx-auto space-y-5 sm:space-y-6 flex-1 flex flex-col items-center justify-end pb-4 sm:pb-0">
+        <div className="relative z-10 text-center max-w-2xl mx-auto space-y-5 sm:space-y-6 flex flex-col items-center pb-4 sm:pb-0">
           <motion.div
             className="flex flex-col gap-3 justify-center items-center w-full"
             initial={{ opacity: 0, y: 20 }}
