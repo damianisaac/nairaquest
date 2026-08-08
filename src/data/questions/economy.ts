@@ -433,6 +433,82 @@ const questions: Question[] = [
     explanation:
       'GDP per capita divides total output by population. Nigeria has ~220 million people; South Africa has ~60 million. Nigeria\'s $500B ÷ 220M ≈ $2,273 per person; South Africa\'s $380B ÷ 60M ≈ $6,333 per person. Population size matters — a large economy doesn\'t automatically mean wealthy citizens.',
   },
+  // ── Kids Easy (top-up to 10) ──────────────────────────────────────────────
+  {
+    id: 'ec-030',
+    text: 'When a shop has a lot of something to sell and nobody is buying it, what usually happens to the price?',
+    options: [
+      'The price goes up because it is rare',
+      'The price goes down to attract buyers',
+      'The shop closes immediately',
+      'The price stays the same no matter what',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'economy',
+    explanation: 'When there is too much supply and not enough demand, sellers lower prices to attract buyers. This is the law of supply and demand — a key rule that controls prices everywhere in the world.',
+  },
+  {
+    id: 'ec-031',
+    text: 'Fatima\'s favourite biscuit used to cost ₦100. Now it costs ₦150. The biscuit did not get bigger or better. What most likely happened?',
+    options: [
+      'The seller is being greedy',
+      'Inflation raised the general price level — the cost of ingredients and transport went up',
+      'The government increased the price',
+      'The biscuit is now imported from abroad',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'economy',
+    explanation: 'Rising prices often reflect inflation — when the costs of making and transporting goods go up, sellers charge more. Inflation is not necessarily anyone\'s "fault" — it is usually caused by factors across the whole economy like fuel costs and money supply.',
+  },
+  {
+    id: 'ec-032',
+    text: 'What does the government use taxes (like VAT on goods) for?',
+    options: [
+      'To keep the money in a government vault forever',
+      'To fund schools, hospitals, roads, and public services that everyone uses',
+      'To buy luxury cars for politicians only',
+      'To send money to other countries',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'economy',
+    explanation: 'Taxes are how the government collects money to pay for things that benefit everyone — schools, roads, hospitals, security, and more. When you pay tax, you contribute to the country\'s shared resources.',
+  },
+  {
+    id: 'ec-033',
+    text: 'What does it mean when people say Nigeria\'s economy "grew by 3%"?',
+    options: [
+      'Nigeria\'s population increased by 3%',
+      'The total value of all goods and services produced in Nigeria increased by 3% compared to last year',
+      'The naira got 3% stronger',
+      'Fuel prices dropped by 3%',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'economy',
+    explanation: 'Economic growth means the country produced more goods and services than the year before. A 3% growth means the economy is 3% bigger. Growing economies usually create more jobs and better living standards over time.',
+  },
+  {
+    id: 'ec-034',
+    text: 'Why does the price of bread often go up when the price of fuel goes up?',
+    options: [
+      'They are made from the same ingredients',
+      'Fuel powers the vehicles that transport flour and bread, and the ovens that bake it — so higher fuel costs mean higher bread prices',
+      'The government links bread and fuel prices',
+      'They have no connection',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'economy',
+    explanation: 'Fuel is an "input cost" — it is needed to produce and deliver almost everything. When fuel gets expensive, bakeries pay more to run ovens, trucks pay more to deliver flour, and these costs are passed to customers as higher bread prices.',
+  },
 ];
 
 export default questions;

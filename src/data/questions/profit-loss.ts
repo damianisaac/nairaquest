@@ -256,6 +256,37 @@ const questions: Question[] = [
     category: 'profit-loss',
     explanation: 'If Product A: sells at ₦500, variable cost ₦200 → contribution margin ₦300. Product B: sells at ₦1,000, variable cost ₦800 → contribution margin ₦200. Despite higher price, Product B contributes less per unit. If constrained on shelf space or production time, prioritise A. Contribution margin thinking optimises product mix.',
   },
+  // ── Kids Easy top-up ────────────────────────────────────────────────────────
+  {
+    id: 'pl-019',
+    text: 'Emeka buys mangoes for ₦1,200 and sells them all for ₦1,800. Did he make a profit or a loss — and how much?',
+    options: [
+      'Loss of ₦600',
+      'Profit of ₦600 (₦1,800 − ₦1,200)',
+      'Profit of ₦3,000',
+      'No profit and no loss',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'profit-loss',
+    explanation: 'Profit = Selling Price − Cost Price. ₦1,800 − ₦1,200 = ₦600 profit. Emeka earned more than he spent, so he made a profit. If he had sold them for ₦1,000, he would have made a ₦200 loss (₦1,000 − ₦1,200 = −₦200).',
+  },
+  {
+    id: 'pl-020',
+    text: 'Fatima spent ₦3,000 making beaded necklaces but sold them for only ₦2,500. What happened?',
+    options: [
+      'She made a profit of ₦500',
+      'She made a loss of ₦500 — her selling price was less than her cost',
+      'She broke even — no profit or loss',
+      'She made a profit of ₦2,500',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'profit-loss',
+    explanation: 'When your selling price is LESS than your cost, you make a loss. ₦2,500 − ₦3,000 = −₦500. Fatima lost ₦500. To avoid this, always add up your costs first, then set a selling price that covers costs AND gives you a profit.',
+  },
 ];
 
 export default questions;

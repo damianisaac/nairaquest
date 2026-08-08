@@ -305,6 +305,22 @@ const questions: Question[] = [
     category: 'taxes',
     explanation: 'Tax evasion (not paying taxes you owe) is illegal in Nigeria and everywhere. It reduces the government\'s ability to fund schools, hospitals, and infrastructure for everyone.',
   },
+  // ── Kids Easy top-up ────────────────────────────────────────────────────────
+  {
+    id: 'tx-021',
+    text: 'When Tunde buys a new phone at a shop in Lagos, the price includes something called VAT. What is VAT?',
+    options: [
+      'Value Added Toys — a children\'s tax',
+      'Value Added Tax — a percentage added to the price of many goods and services that goes to the government',
+      'Vehicle Access Tax — a fee for transportation',
+      'A special discount for regular customers',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'taxes',
+    explanation: 'VAT (Value Added Tax) is 7.5% added to the price of many goods and services in Nigeria. When you pay ₦350 for a product whose base price is ₦326, the extra ₦24 is VAT. Businesses collect this on behalf of the government to fund public services.',
+  },
 ];
 
 export default questions;

@@ -480,6 +480,67 @@ const questions: Question[] = [
     explanation:
       'Saving: you pay exactly ₦25,000 — no extra cost. Borrowing at 5%/month compound for 5 months: ₦25,000 × (1.05)^5 = ₦31,907 — you pay ₦6,907 extra. Saving first is always cheaper than borrowing, if you can wait. The price of impatience is ₦6,907.',
   },
+  // ── Kids Easy (bring to 10) ──────────────────────────────────────────────
+  {
+    id: 'ln-033',
+    text: 'Bola borrows ₦500 from her mum and promises to pay back ₦600 next week. What is the extra ₦100 called?',
+    options: [
+      'A gift from Bola',
+      'Interest — the extra money paid for using someone else\'s money',
+      'Change',
+      'A discount',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'loans',
+    explanation: 'Interest is the cost of borrowing money. When you borrow ₦500 and repay ₦600, the extra ₦100 is interest — it is what you pay for the privilege of using money that belongs to someone else. Banks and lenders charge interest on all loans.',
+  },
+  {
+    id: 'ln-034',
+    text: 'Chidi borrowed his classmate\'s pencil case and forgot to return it for three weeks. His classmate was upset. What does this teach us about borrowing?',
+    options: [
+      'Borrowing anything is always a bad idea',
+      'When you borrow something, you must return it on time — this applies to money too',
+      'It does not matter when you return borrowed items',
+      'You should only borrow from strangers',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'loans',
+    explanation: 'Borrowing comes with a responsibility to return what you took on the agreed date. Late loan repayments damage trust, ruin friendships, and — in formal banking — lead to penalties, higher interest, and a bad credit record. Always borrow only what you can repay on time.',
+  },
+  {
+    id: 'ln-035',
+    text: 'Which is the BETTER choice for Amara who needs ₦2,000 for school supplies?',
+    options: [
+      'Borrow ₦2,000 from a money lender who charges ₦500 interest per week',
+      'Save ₦500 per week from her pocket money for 4 weeks and buy it without borrowing',
+      'Steal the supplies from the school store',
+      'Give up on getting the supplies',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'loans',
+    explanation: 'Saving up to buy something is almost always better than borrowing — especially from high-interest money lenders. Amara saves ₦500 × 4 weeks = ₦2,000 at zero cost. Borrowing the same amount at ₦500 interest/week would cost her ₦4,500 if she takes 5 weeks to pay back. Patience saves money.',
+  },
+  {
+    id: 'ln-036',
+    text: 'What does it mean to "repay a loan"?',
+    options: [
+      'To borrow more money from a different person',
+      'To pay back the money you borrowed, plus any interest agreed upon',
+      'To forget about the money you owe',
+      'To give the lender a gift instead of cash',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'loans',
+    explanation: 'Repaying a loan means returning the exact amount you borrowed plus interest (the cost of borrowing). If you borrowed ₦1,000 at 10% interest, you repay ₦1,100. Repaying on time shows you are trustworthy — which matters for getting loans again in the future.',
+  },
 ];
 
 export default questions;

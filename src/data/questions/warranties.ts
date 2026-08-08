@@ -276,6 +276,37 @@ const questions: Question[] = [
     category: 'warranties',
     explanation: 'The FCCPA 2018 established statutory quality rights regardless of express warranties. Consumers can seek remedies through the FCCPC for goods that are defective, unsafe, or not fit for purpose. This significantly strengthens Nigerian consumers\' legal position beyond what sellers voluntarily commit to.',
   },
+  // ── Kids Easy top-up ────────────────────────────────────────────────────────
+  {
+    id: 'wt-019',
+    text: 'Sola buys a new radio. Two weeks later it stops working. The shop says it has a 3-month warranty. What should Sola do?',
+    options: [
+      'Throw the radio away and buy a new one',
+      'Return to the shop with proof of purchase — the warranty means it should be repaired or replaced for free',
+      'Fix it herself to save time',
+      'Accept that electronics break and move on',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'warranties',
+    explanation: 'A warranty is a promise from the seller or manufacturer: if the product breaks down within the warranty period due to a manufacturing fault, they will fix or replace it for free. Always keep your receipt as proof of purchase — you need it to claim your warranty. Sola is within her 3-month warranty, so the radio should be repaired or replaced at no cost.',
+  },
+  {
+    id: 'wt-020',
+    text: 'What does it mean when a product comes with a "1-year warranty"?',
+    options: [
+      'The product is guaranteed to last exactly 1 year and then break',
+      'If the product develops a fault within 1 year (due to manufacturer defect, not misuse), the seller will repair or replace it for free',
+      'You must pay for repairs after 1 year even if the problem existed before',
+      'Warranties only apply to cars and not other products',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'warranties',
+    explanation: 'A 1-year warranty means the manufacturer stands behind their product for 12 months. If a manufacturing defect causes it to fail within that period, they fix or replace it for free. Note: accidental damage (dropping it, pouring water on it) is usually NOT covered — warranties cover factory faults, not user damage.',
+  },
 ];
 
 export default questions;

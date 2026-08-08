@@ -544,6 +544,82 @@ const questions: Question[] = [
     explanation:
       'Off-plan purchases can offer lower entry prices and capital growth during construction. But in Nigeria, many developers have abandoned projects — leaving buyers who paid millions with empty land. Always: verify the developer\'s track record, use an escrow arrangement, check state approvals, and have a lawyer review all contracts.',
   },
+  // ── Kids Easy (top-up to 10) ──────────────────────────────────────────────
+  {
+    id: 're-036',
+    text: 'What does a landlord do if a tenant does not pay rent?',
+    options: [
+      'Nothing — rent is optional',
+      'The landlord can legally ask the tenant to leave the property',
+      'The government pays the rent for the tenant',
+      'The landlord must give the property for free',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'real-estate',
+    explanation: 'Rent is a legal agreement — the tenant pays the landlord in exchange for using the property. If rent is not paid, the landlord can take legal action to have the tenant leave. This is why it is very important for families to always plan for rent in their budget.',
+  },
+  {
+    id: 're-037',
+    text: 'Why do people sometimes prefer to own a house instead of renting one?',
+    options: [
+      'Owning is always cheaper every month',
+      'When you own your home, you are building wealth — the property is yours and its value can grow over time',
+      'Renting means you can never have visitors',
+      'Owned homes are always bigger than rented ones',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'real-estate',
+    explanation: 'When you own a home, every payment builds your ownership of the asset. Over time, the property may also increase in value. Renting means you use the space but build no ownership — rent money goes entirely to the landlord.',
+  },
+  {
+    id: 're-038',
+    text: 'What does "property maintenance" mean?',
+    options: [
+      'Painting a house a different colour every year',
+      'Taking care of a property by fixing things like leaking roofs, broken pipes, and cracked walls',
+      'Selling a property to someone else',
+      'Paying rent every month',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'real-estate',
+    explanation: 'Maintenance means keeping a property in good condition. Landlords are usually responsible for major repairs. Well-maintained properties keep their value and attract good tenants.',
+  },
+  {
+    id: 're-039',
+    text: 'Yemi\'s family is moving from a one-bedroom flat to a three-bedroom house. The new rent is higher. What does this mean for their monthly budget?',
+    options: [
+      'Nothing — rent does not affect the budget',
+      'They need to budget more for rent each month, which means less money for other things unless their income also increases',
+      'Their income will automatically increase',
+      'The government will help pay the extra rent',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'real-estate',
+    explanation: 'Higher rent means less money available for food, school, transport, and savings. Before moving to a more expensive home, families should check that their income can comfortably cover the new rent without cutting essential expenses.',
+  },
+  {
+    id: 're-040',
+    text: 'If Bola\'s family buys land today and the value of land in their area doubles in 10 years, what has happened to their investment?',
+    options: [
+      'They lost money',
+      'The value of their asset doubled — they made a profit without doing any extra work',
+      'The government will take the extra value',
+      'Nothing changes — land value is always fixed',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'real-estate',
+    explanation: 'When land appreciates (increases in value), the owner profits without doing anything extra. If they bought land for ₦5 million and it is now worth ₦10 million, they have ₦5 million in extra wealth. This is why land ownership is one of the most popular wealth-building strategies in Nigeria.',
+  },
 ];
 
 export default questions;

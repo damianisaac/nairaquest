@@ -611,6 +611,82 @@ const questions: Question[] = [
     explanation:
       'Financial confidence is built through regular, low-stakes engagement — not through occasional crisis reviews. When looking at your finances becomes a normal, unremarkable habit rather than something you only do when forced, it loses much of its power to trigger anxiety.',
   },
+  // ── Kids Easy (rotation variety) ─────────────────────────────────────────
+  {
+    id: 'fw-035',
+    text: 'Adaeze really wants to buy a new toy but her mum says they should save the money instead. Adaeze feels upset. What is the BEST thing for her to do?',
+    options: [
+      'Cry until her mum changes her mind',
+      'Understand that waiting and saving is sometimes wiser than spending now',
+      'Ask a neighbour to buy it for her',
+      'Take the money without telling her mum',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'mindset',
+    explanation: 'It is normal to feel disappointed when you cannot have something you want. But learning to wait and save — called "delayed gratification" — is one of the most powerful money habits you can build from a young age.',
+  },
+  {
+    id: 'fw-036',
+    text: 'Your classmate got new shoes and now everyone is talking about them. You feel like you NEED new shoes too even though yours are still good. What is this feeling called?',
+    options: [
+      'A real need',
+      'Peer pressure and social spending — wanting things because others have them, not because you actually need them',
+      'Financial planning',
+      'Smart shopping',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'mindset',
+    explanation: 'Wanting things because others have them is called peer pressure or social spending. It is one of the biggest traps for money. Before spending, always ask: "Do I actually need this, or do I just want it because someone else has it?"',
+  },
+  {
+    id: 'fw-037',
+    text: 'Emeka made a bad investment — he spent his savings on something that turned out to be worthless. What is the BEST response to this mistake?',
+    options: [
+      'Give up on managing money — it is too hard',
+      'Learn from what went wrong and make better decisions next time',
+      'Never tell anyone about the mistake',
+      'Blame everyone else for the bad decision',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'mindset',
+    explanation: 'Everyone makes financial mistakes — even adults. The key is to learn from them. What went wrong? Why? What would you do differently? A growth mindset turns mistakes into lessons.',
+  },
+  {
+    id: 'fw-038',
+    text: 'Tunde worries every day that his family does not have enough money. This constant worry about money is called:',
+    options: [
+      'Budgeting',
+      'Financial stress — it affects health, focus, and relationships',
+      'Investment planning',
+      'Smart saving',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'mindset',
+    explanation: 'Financial stress is real — it affects how well you sleep, how you concentrate at school, and how you treat people around you. Building good money habits (saving, budgeting) reduces financial stress by giving you more control over your money.',
+  },
+  {
+    id: 'fw-039',
+    text: 'What does "being grateful for what you have" have to do with managing money?',
+    options: [
+      'Nothing — gratitude and money are unrelated',
+      'It helps reduce the urge to spend money on things you do not need just to feel better or impress others',
+      'It means you should never buy anything new',
+      'Grateful people automatically become rich',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'mindset',
+    explanation: 'Contentment — being happy with what you have — reduces impulsive spending. Many people spend money to chase a feeling (status, happiness, belonging). Gratitude helps you recognise what you already have, so you spend less on things you don\'t really need.',
+  },
 ];
 
 export default questions;

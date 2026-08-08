@@ -236,6 +236,37 @@ const questions: Question[] = [
     category: 'abbreviations',
     explanation: 'Nigerian ETFs (e.g., Vetiva Banking Index ETF, Meristem ETF) give low-cost diversified equity exposure. Nigerian REITs allow retail investors to access real estate income without directly owning property. Both democratise investing — previously accessible only to the wealthy — for ordinary Nigerian investors.',
   },
+  // ── Kids Easy top-up ────────────────────────────────────────────────────────
+  {
+    id: 'ab-019',
+    text: 'What does "ATM" stand for?',
+    options: [
+      'Automated Transfer Machine',
+      'Automated Teller Machine — the cash machine outside the bank',
+      'Approved Treasury Management',
+      'Account Transaction Monitor',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'abbreviations',
+    explanation: 'ATM stands for Automated Teller Machine. It is the machine that lets you withdraw cash, check your balance, and do other banking tasks without going inside the bank. The "teller" is an old banking word for the person who handles cash — the ATM does that job automatically.',
+  },
+  {
+    id: 'ab-020',
+    text: 'What do the letters "PIN" stand for when you use an ATM card?',
+    options: [
+      'Personal Identity Number',
+      'Personal Identification Number — a secret code that proves it is really you using the card',
+      'Payment Initiation Network',
+      'Private Internet Number',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'abbreviations',
+    explanation: 'PIN stands for Personal Identification Number. Your PIN is a secret 4–6 digit code that only you should know. Never share your PIN with anyone — not friends, not even bank staff. Anyone with your card AND your PIN can take your money.',
+  },
 ];
 
 export default questions;

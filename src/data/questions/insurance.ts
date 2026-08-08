@@ -352,6 +352,82 @@ const questions: Question[] = [
     explanation:
       'Subrogation: if Insurer A pays out ₦5M for your car damaged by Driver B\'s negligence, Insurer A can then sue Driver B to recover that ₦5M. This prevents you from getting the ₦5M from the insurer AND suing Driver B yourself (double recovery). It also incentivises the party at fault to bear ultimate costs through their liability insurance.',
   },
+  // ── Kids Easy (top-up to 10) ──────────────────────────────────────────────
+  {
+    id: 'in-024',
+    text: 'Tunde\'s dad has life insurance. If his dad passes away, what happens?',
+    options: [
+      'The family loses everything they own',
+      'The insurance company pays a sum of money to help support the family',
+      'The government takes over the house',
+      'Nothing changes for the family',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'insurance',
+    explanation: 'Life insurance pays a lump sum to your family if you die. It gives your loved ones financial protection when they need it most. Many Nigerian families use life insurance payouts to cover school fees, rent, and daily expenses after losing the family\'s breadwinner.',
+  },
+  {
+    id: 'in-025',
+    text: 'Why do more people buy insurance when something risky is about to happen (like travelling in bad weather)?',
+    options: [
+      'Because insurance companies offer discounts before storms',
+      'Because people think about risk more when danger feels real — they want protection',
+      'Insurance is only bought before risky events',
+      'Because the government forces people to buy it then',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'insurance',
+    explanation: 'When people feel risk is close, they are more motivated to protect themselves. This is why smart people buy insurance BEFORE the risky event — not after. Once the accident happens, it is too late to get insurance for it.',
+  },
+  {
+    id: 'in-026',
+    text: 'Ngozi\'s family has fire insurance on their house. A fire damages the kitchen. What should they do first?',
+    options: [
+      'Fix the kitchen themselves without telling the insurance company',
+      'Contact the insurance company to file a claim and report the damage',
+      'Move out of the house immediately',
+      'Buy new insurance from a different company',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'insurance',
+    explanation: 'When insured damage occurs, the first step is to notify your insurance company and file a claim. They will assess the damage and determine how much they will pay. Never start repairs before the insurer has assessed — it can invalidate your claim.',
+  },
+  {
+    id: 'in-027',
+    text: 'Which of these is NOT covered by typical car insurance in Nigeria?',
+    options: [
+      'Damage to another person\'s car if you crash into them',
+      'Servicing and maintenance of your car (oil change, tyres)',
+      'Theft of your car (with comprehensive insurance)',
+      'Damage to your car from an accident',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'insurance',
+    explanation: 'Insurance covers unexpected events (accidents, theft, fire). Routine maintenance (oil changes, tyre replacements) is a normal cost of owning a car that you pay yourself. Insurance is for the unexpected — not the predictable.',
+  },
+  {
+    id: 'in-028',
+    text: 'Amara\'s school requires all students to have health insurance for the term. Why might a school require this?',
+    options: [
+      'To make money from students',
+      'So that if a student gets sick or injured at school, medical costs are covered without burdening the family suddenly',
+      'Because the government forces all schools to do this',
+      'So students can see a doctor anytime they want free of charge',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'insurance',
+    explanation: 'Schools require health insurance to protect students and their families from unexpected medical bills. An accident during sport or a sudden illness can be expensive — insurance means treatment happens quickly without the family first having to find emergency money.',
+  },
 ];
 
 export default questions;

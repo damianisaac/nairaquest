@@ -251,6 +251,37 @@ const questions: Question[] = [
     category: 'time-money',
     explanation: 'Two projects cost ₦5M each. Project A has IRR of 22%; Project B has IRR of 14%. If your cost of capital is 15%, only Project A is worthwhile. IRR enables ranking of competing investments by their inherent return, regardless of size or duration — essential for serious capital allocation decisions.',
   },
+  // ── Kids Easy top-up ────────────────────────────────────────────────────────
+  {
+    id: 'tm-019',
+    text: 'Ngozi can earn ₦50/hour doing chores. If she watches TV for 2 hours instead, what did those 2 hours cost her?',
+    options: [
+      'Nothing — TV is free',
+      '₦100 in lost earnings — choosing TV means giving up money she could have earned',
+      '₦50 — one hour of TV is always worth ₦50',
+      'She earns money by watching TV',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'time-money',
+    explanation: 'This is called "opportunity cost" — what you give up when you choose one option over another. Ngozi\'s 2 hours watching TV cost her ₦100 in potential earnings (2 × ₦50). Time is a resource. Using it wisely means choosing activities that match your goals.',
+  },
+  {
+    id: 'tm-020',
+    text: 'Emeka starts saving ₦200 every week. His friend Bola starts saving the same amount but waits 3 years to begin. Who will have more money after they both save for 5 years?',
+    options: [
+      'Bola — he will save harder to catch up',
+      'Emeka — he started earlier and had more time for his money to grow',
+      'They will have exactly the same amount',
+      'It depends on which bank they use',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'time-money',
+    explanation: 'Emeka saves for 5 full years; Bola only saves for 2 years (he waited 3 years). Starting sooner means more time for savings to accumulate and grow with interest. The lesson: the best time to start saving is NOW, not "later."',
+  },
 ];
 
 export default questions;

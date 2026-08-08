@@ -276,6 +276,37 @@ const questions: Question[] = [
     category: 'consumer-skills',
     explanation: 'Traditional caveat emptor said: "buyer, inspect before you buy." The FCCPA 2018 and modern consumer law reverses much of this — sellers must ensure products are safe, descriptions are accurate, and consumers have recourse for defects. This is why NAFDAC registration, warranties, and return policies are legally required.',
   },
+  // ── Kids Easy top-up ────────────────────────────────────────────────────────
+  {
+    id: 'cs-019',
+    text: 'Kelechi wants to buy a toy at the market. Before paying, what should she check?',
+    options: [
+      'The colour of the packaging only',
+      'The price, whether it is in good condition, and if there is a receipt',
+      'Whether her friends have it too',
+      'The shop owner\'s name',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'consumer-skills',
+    explanation: 'A smart shopper checks the price (to know if they can afford it), the condition (so they do not buy a broken item), and asks for a receipt (proof of purchase if something goes wrong later). These are basic consumer skills.',
+  },
+  {
+    id: 'cs-020',
+    text: 'Tunde paid ₦500 for a biscuit and the trader gave him ₦150 change from ₦500. Did he get the right change for a ₦350 biscuit?',
+    options: [
+      'Yes — ₦150 is correct',
+      'No — ₦500 − ₦350 = ₦150, so yes the change is actually correct',
+      'No — the correct change should be ₦250',
+      'It does not matter — change is a gift from the seller',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'consumer-skills',
+    explanation: '₦500 − ₦350 = ₦150. The change is correct! Always calculate your change before leaving any shop. A quick mental check — what did I give minus what did I spend — prevents you from being short-changed.',
+  },
 ];
 
 export default questions;

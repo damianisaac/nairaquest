@@ -276,6 +276,37 @@ const questions: Question[] = [
     category: 'marketing',
     explanation: 'Marketing ROI requires discipline: define success metrics before the campaign (not after), use UTM tracking links or promo codes to attribute sales, and measure revenue net of product costs. A ₦2M campaign with 300% ROI — generating ₦8M revenue — is strong. One generating ₦1.5M revenue (−25% ROI) needs urgent revision.',
   },
+  // ── Kids Easy top-up ────────────────────────────────────────────────────────
+  {
+    id: 'mk-019',
+    text: 'Ngozi sells handmade bracelets. She tells her friends they are colourful, durable, and cost only ₦200. What is she doing?',
+    options: [
+      'Wasting time talking about bracelets',
+      'Marketing — telling potential customers about her product\'s features and price to attract buyers',
+      'Complaining to her friends',
+      'Setting up a bank account',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'marketing',
+    explanation: 'Marketing is how you let people know what you are selling, why it is good, and what it costs. Ngozi is doing word-of-mouth marketing — one of the oldest and most effective forms, especially for small businesses. Without marketing, even the best product can go unnoticed.',
+  },
+  {
+    id: 'mk-020',
+    text: 'Emeka makes two types of chin-chin: spicy and sweet. He notices the sweet ones sell out every day but the spicy ones sit on the shelf. What should Emeka do?',
+    options: [
+      'Stop selling completely',
+      'Make more sweet chin-chin and less spicy, or find out why spicy ones aren\'t selling and adjust',
+      'Increase the price of sweet chin-chin since it sells well',
+      'Give away the spicy ones for free to everyone',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'marketing',
+    explanation: 'Paying attention to which products sell well is smart business. Emeka should make more of what customers want (sweet) and review the spicy version — maybe lower the price, change the recipe, or market it differently. Data from sales is one of the best ways to improve a business.',
+  },
 ];
 
 export default questions;

@@ -266,6 +266,37 @@ const questions: Question[] = [
     category: 'financial-planning',
     explanation: 'Dollar-cost averaging (DCA) means investing ₦10,000 every month whether the market is up or down. When prices fall, you buy more units; when high, fewer. Over time, your average cost is lower than trying to time the market. Ideal for long-term goal-based investing in Nigerian equities or mutual funds.',
   },
+  // ── Kids Easy top-up ────────────────────────────────────────────────────────
+  {
+    id: 'fp-020',
+    text: 'Sola wants to buy new football boots that cost ₦3,000 but she only has ₦900. What is the best plan?',
+    options: [
+      'Borrow ₦3,000 and worry about paying it back later',
+      'Set a savings goal: save ₦500/week from her pocket money and buy the boots in 5 weeks',
+      'Give up and never get the boots',
+      'Spend the ₦900 on something else instead',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'financial-planning',
+    explanation: 'A savings goal turns a big purchase into manageable steps. ₦3,000 ÷ ₦500 per week = 6 weeks. Sola already has ₦900 (almost 2 weeks saved), so she only needs about 4 more weeks. Planning ahead means she gets what she wants without debt or stress.',
+  },
+  {
+    id: 'fp-021',
+    text: 'What does it mean to have a "financial goal"?',
+    options: [
+      'Wanting to be rich without a plan',
+      'A specific thing you want to buy or achieve with money, with a clear amount and a target date',
+      'Just thinking about money a lot',
+      'Saving whatever is left after spending',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'financial-planning',
+    explanation: 'A financial goal is specific: "I want to save ₦5,000 for new school shoes by next month." It has a target amount and a deadline. Goals help you stay focused and resist spending money on unplanned things.',
+  },
 ];
 
 export default questions;

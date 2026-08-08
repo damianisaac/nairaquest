@@ -276,6 +276,37 @@ const questions: Question[] = [
     category: 'government-finance',
     explanation: 'Dutch Disease: oil revenues strengthen the naira, making Nigerian manufacturers and farmers unable to compete with cheaper imports. This stunts non-oil sectors. Nigeria\'s decades of oil dependence, weak manufacturing, and food import reliance are partly attributable to this dynamic — hence diversification urgency.',
   },
+  // ── Kids Easy top-up ────────────────────────────────────────────────────────
+  {
+    id: 'gf-019',
+    text: 'What are taxes used for in Nigeria?',
+    options: [
+      'To pay the president\'s personal bills',
+      'To fund public services like roads, hospitals, schools, and security that everyone benefits from',
+      'To store money in government bank accounts',
+      'Taxes are just collected but never spent',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'government-finance',
+    explanation: 'When people and businesses pay taxes, that money funds public goods: roads, public schools, hospitals, police, streetlights, and more. These are services the whole community benefits from, paid for by everyone contributing their share through taxes.',
+  },
+  {
+    id: 'gf-020',
+    text: 'Adaeze notices that when she buys a bottle of Coke at a shop, the price is ₦350, but when she visited a factory the wholesale price was ₦250. What accounts for the difference?',
+    options: [
+      'The shop is cheating her',
+      'The shop adds its own costs and profit margin, and some of the difference may include VAT (Value Added Tax)',
+      'The factory price includes a government rebate',
+      'All price differences are illegal under Nigerian law',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'government-finance',
+    explanation: 'Shops buy goods cheaply and sell at a higher price to cover rent, staff wages, electricity, and profit. In Nigeria, VAT of 7.5% is also added to many goods and services. These markups and taxes explain why shop prices are higher than factory/wholesale prices.',
+  },
 ];
 
 export default questions;

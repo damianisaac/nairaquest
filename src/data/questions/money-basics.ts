@@ -244,6 +244,72 @@ const questions: Question[] = [
     explanation:
       'From Robert Kiyosaki\'s "Rich Dad Poor Dad" framework: assets generate income or appreciate (rental property, stocks, business). Liabilities cost you money over time (loans, depreciating cars, consumer debt). Building more assets than liabilities is the path to wealth.',
   },
+  // ── Kids Easy (rotation variety) ─────────────────────────────────────────
+  {
+    id: 'mb-019',
+    text: 'Chidi has 3 coins of ₦50 each. How much money does he have in total?',
+    options: ['₦100', '₦150', '₦200', '₦50'],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'money-basics',
+    explanation: '3 × ₦50 = ₦150. Counting money is the first step to managing it. Practice adding up coins and notes so you always know how much you have.',
+  },
+  {
+    id: 'mb-020',
+    text: 'Ngozi wants to buy a biscuit for ₦100 but she only has ₦70. What should she do?',
+    options: [
+      'Take the biscuit and pay later',
+      'Save ₦30 more before buying it',
+      'Ask the seller to give it for free',
+      'Buy a different biscuit for ₦200',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'money-basics',
+    explanation: 'If you do not have enough money for something, the right thing is to save up the rest first. Never take something you cannot afford — that is stealing.',
+  },
+  {
+    id: 'mb-021',
+    text: 'What is the safest place for Amara to keep her pocket money so it does not get lost?',
+    options: [
+      'Under her pillow',
+      'In a piggy bank or savings account',
+      'In her school bag',
+      'In her pocket at all times',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'money-basics',
+    explanation: 'A piggy bank keeps your money safe at home. A savings account at a bank is even safer — banks protect your money and you can get it back any time.',
+  },
+  {
+    id: 'mb-022',
+    text: 'Tunde spends ALL his pocket money the same day he gets it. What problem might this cause?',
+    options: [
+      'No problem — spending is fun',
+      'He will have nothing left for things he needs later in the week',
+      'He gets more money the next day',
+      'Spending everything makes you richer',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'money-basics',
+    explanation: 'Spending all your money at once leaves nothing for emergencies or future needs. A good habit is to save part of your money before spending the rest.',
+  },
+  {
+    id: 'mb-023',
+    text: 'Adaeze has ₦500. She spends ₦200 on food. How much does she have left?',
+    options: ['₦200', '₦700', '₦300', '₦100'],
+    correctIndex: 2,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'money-basics',
+    explanation: '₦500 − ₦200 = ₦300. Knowing how much you have after spending is very important. Always track your money so you know what is left.',
+  },
 ];
 
 export default questions;

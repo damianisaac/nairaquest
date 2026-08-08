@@ -281,6 +281,37 @@ const questions: Question[] = [
     category: 'credit-debit',
     explanation: 'A secured credit card is backed by your own deposit (e.g., deposit ₦50,000 → get ₦50,000 limit). The bank has no risk, so they issue it easily. Using it responsibly builds your credit history, eventually qualifying you for unsecured credit at better rates.',
   },
+  // ── Kids Easy top-up ────────────────────────────────────────────────────────
+  {
+    id: 'cd-020',
+    text: 'Amara has a debit card. She buys a book for ₦800. What happens to her bank account immediately?',
+    options: [
+      'Nothing — debit cards do not connect to her account',
+      '₦800 is taken out of her account right away',
+      '₦800 is added to her account',
+      'She pays later at the end of the month',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'credit-debit',
+    explanation: 'A debit card takes money directly from your bank account the moment you use it. This is different from a credit card, which lets you spend money you do not yet have and pay later. Debit = your own money now.',
+  },
+  {
+    id: 'cd-021',
+    text: 'What is the safest thing to do if you lose your debit card?',
+    options: [
+      'Wait and hope nobody finds it',
+      'Call your bank immediately to block (freeze) the card so nobody else can use it',
+      'Ask a friend to find it for you',
+      'Try using your card number from memory online',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'credit-debit',
+    explanation: 'The moment you realise your debit card is lost, call your bank or use their app to block it immediately. Anyone who finds your card could use it to spend your money at shops or online. Acting fast protects your savings.',
+  },
 ];
 
 export default questions;

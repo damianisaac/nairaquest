@@ -266,6 +266,37 @@ const questions: Question[] = [
     category: 'philanthropy',
     explanation: 'Zakat (one of Islam\'s Five Pillars) requires Muslims with wealth above the nisab (minimum threshold) to give 2.5% annually to eight specified categories (poor, debtors, travellers, etc.). In Nigeria, Zakat boards coordinate collection and distribution. Economically, it serves as a built-in wealth redistribution and poverty alleviation mechanism.',
   },
+  // ── Kids Easy top-up ────────────────────────────────────────────────────────
+  {
+    id: 'ph-019',
+    text: 'Sola has ₦1,000 saved. She decides to give ₦100 to a classmate who lost their lunch money. What is Sola practising?',
+    options: [
+      'Wasting her savings',
+      'Generosity and philanthropy — sharing with others in need',
+      'A bad financial decision',
+      'Lending money at interest',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'philanthropy',
+    explanation: 'Philanthropy simply means giving to help others. Sola still has ₦900 and her classmate has lunch. Practising generosity — even in small amounts — builds empathy and community. Many financial experts recommend giving as part of a healthy money plan, because it teaches that money is a tool to improve lives, not just to accumulate.',
+  },
+  {
+    id: 'ph-020',
+    text: 'Why is it important to help people in your community who are struggling financially?',
+    options: [
+      'It is not important — everyone should take care of themselves only',
+      'A stronger community where people help each other means everyone is safer and happier, including you',
+      'Because the government will reward you with money',
+      'Only rich people are allowed to help others',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'philanthropy',
+    explanation: 'Communities where people support each other are more stable and resilient. In Nigerian culture, this is deeply embedded — from family support networks to cooperative savings (ajo/esusu). Helping others is not just kindness; it builds social bonds that benefit everyone when hard times hit.',
+  },
 ];
 
 export default questions;

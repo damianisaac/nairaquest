@@ -271,6 +271,37 @@ const questions: Question[] = [
     category: 'risk-management',
     explanation: 'Comprehensive risk management stacks multiple tools: revenue diversification (reduces business risk), insurance (transfers operational risks), emergency fund (liquidity risk), multiple banks (reduces single-bank failure exposure). No single tool is sufficient alone.',
   },
+  // ── Kids Easy top-up ────────────────────────────────────────────────────────
+  {
+    id: 'rm-019',
+    text: 'Adaeze keeps all her savings under her mattress. What is the biggest risk with this plan?',
+    options: [
+      'The bank will be upset with her',
+      'The money could be stolen, lost in a fire, or destroyed by flood — she has no protection',
+      'Cash under a mattress earns double interest',
+      'The government can legally take it',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'risk-management',
+    explanation: 'Keeping large amounts of cash at home is risky because it can be stolen, burned, or damaged by water. A bank account is safer — banks are regulated, your money is insured up to ₦5 million by the NDIC, and you still have access to it when you need it.',
+  },
+  {
+    id: 'rm-020',
+    text: 'Kelechi\'s dad is a farmer. If he plants only one crop and a disease destroys it, what happens?',
+    options: [
+      'He loses only a little because one crop is a small risk',
+      'He could lose all his income for that season — this is why farmers should grow different crops to spread risk',
+      'The government will replace the crop for free',
+      'It does not matter — he can borrow money to survive',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    ageTrack: ['kids'],
+    category: 'risk-management',
+    explanation: 'Depending on one crop (or one income source) is risky — if something goes wrong, you lose everything. Spreading risk by planting different crops (diversification) means a problem with one crop does not destroy all income. This same idea applies to saving in different places or having more than one skill.',
+  },
 ];
 
 export default questions;
