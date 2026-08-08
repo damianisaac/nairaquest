@@ -184,7 +184,6 @@ export default function LandingPage() {
             muted
             loop
             playsInline
-            poster="/banner.jpeg"
             className="absolute inset-0 w-full h-full object-cover object-center"
           >
             <source src="/banner.mp4" type="video/mp4" />
