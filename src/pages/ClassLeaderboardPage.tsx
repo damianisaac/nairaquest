@@ -7,7 +7,6 @@ import { isSupabaseConfigured } from '../lib/supabase';
 import { fetchClassRoster } from '../lib/supabase-social';
 import { CATEGORY_MAP } from '../data/categories';
 import TopNav from '../components/ui/TopNav';
-import MasteryBar from '../components/ui/MasteryBar';
 import { sound } from '../components/ui/SoundController';
 import type { ClassMemberRow } from '../types';
 
@@ -16,7 +15,7 @@ const MEDALS = ['🥇', '🥈', '🥉'];
 export default function ClassLeaderboardPage() {
   const { classId } = useParams<{ classId: string }>();
   const navigate = useNavigate();
-  const { profile, classContext } = useGameStore();
+  const { classContext } = useGameStore();
   const { user } = useAuth();
 
   const [loading, setLoading] = useState(true);

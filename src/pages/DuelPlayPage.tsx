@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useGameStore } from '../store/gameStore';
 import { useAuth } from '../hooks/useAuth';
 import { isSupabaseConfigured } from '../lib/supabase';
 import { fetchDuel, submitDuelScore } from '../lib/supabase-social';
@@ -15,7 +14,6 @@ const TIMER_SECONDS = 30;
 export default function DuelPlayPage() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const { profile } = useGameStore();
   const { user } = useAuth();
 
   const [loading, setLoading] = useState(true);
