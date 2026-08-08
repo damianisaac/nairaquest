@@ -21,9 +21,12 @@ export default function ProfilePage() {
   const navigate = useNavigate();
   const state = useGameStore();
   const { profile, updateAgeTrack, equipAvatarItems } = state;
-  const { user, syncNow } = useAuth();
+  const { user, syncNow, signOut } = useAuth();
+  const { clearProfile } = state;
   const [showTrackModal, setShowTrackModal] = useState(false);
   const [showAvatarCustomizer, setShowAvatarCustomizer] = useState(false);
+  const [showSignOutConfirm, setShowSignOutConfirm] = useState(false);
+  const [signingOut, setSigningOut] = useState(false);
 
   if (!profile) {
     navigate('/');
@@ -229,6 +232,13 @@ export default function ProfilePage() {
           >
             Continue Adventure →
           </button>
+
+          <button
+            className="w-full py-3 rounded-xl border border-red-500/30 text-red-400 hover:bg-red-500/10 hover:border-red-500/60 transition-all text-sm font-semibold"
+            onClick={() => { sound.click(); setShowSignOutConfirm(true); }}
+          >
+            🚪 Sign Out
+          </button>
         </motion.div>
       </main>
 
@@ -240,6 +250,70 @@ export default function ProfilePage() {
             onSave={(ids) => equipAvatarItems(ids)}
             onClose={() => setShowAvatarCustomizer(false)}
           />
+        )}
+      </AnimatePresence>
+
+      {/* Sign-out confirmation modal */}
+      <AnimatePresence>
+        {showSignOutConfirm && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <motion.div
+              className="card-glass p-6 w-full max-w-sm space-y-4"
+              initial={{ scale: 0.85, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.85, opacity: 0 }}
+            >
+              <div className="text-center">
+                <div className="text-4xl mb-3">🚪</div>
+                <h3 className="font-display text-white text-lg mb-1">Sign Out?</h3>
+                <p className="text-sm text-white/60 leading-relaxed">
+                  {user
+                    ? 'Your progress is saved to the cloud. You can sign back in anytime to continue.'
+                    : 'You are not signed in, so your progress is saved locally on this device only. Signing out will clear your local profile.'}
+                </p>
+                {!user && (
+                  <div className="mt-3 px-3 py-2 rounded-lg bg-yellow-500/10 border border-yellow-500/30 text-xs text-yellow-400">
+                    ⚠️ Consider signing in first to back up your progress to the cloud.
+                  </div>
+                )}
+              </div>
+
+              <div className="space-y-2 pt-1">
+                <button
+                  disabled={signingOut}
+                  className="w-full py-3 rounded-xl bg-red-500/20 border border-red-500/40 text-red-400 hover:bg-red-500/30 transition-all text-sm font-bold disabled:opacity-50"
+                  onClick={async () => {
+                    setSigningOut(true);
+                    sound.click();
+                    if (user) await signOut();
+                    clearProfile();
+                    navigate('/', { replace: true });
+                  }}
+                >
+                  {signingOut ? 'Signing out…' : 'Yes, sign out'}
+                </button>
+                <button
+                  className="w-full py-2 text-sm text-white/40 hover:text-white/70 transition-colors"
+                  onClick={() => { sound.click(); setShowSignOutConfirm(false); }}
+                >
+                  Cancel
+                </button>
+                {!user && (
+                  <button
+                    className="w-full py-2 text-sm text-naira-green hover:text-naira-green-light transition-colors"
+                    onClick={() => { sound.click(); setShowSignOutConfirm(false); navigate('/auth'); }}
+                  >
+                    → Sign in to back up first
+                  </button>
+                )}
+              </div>
+            </motion.div>
+          </motion.div>
         )}
       </AnimatePresence>
 

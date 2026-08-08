@@ -64,6 +64,7 @@ interface GameState {
   toggleCategoryExclusion: (categoryId: CategoryId) => void;
   resetCategoryProgress: (categoryId: CategoryId) => void;
   resetAllProgress: () => void;
+  clearProfile: () => void;
 }
 
 export const useGameStore = create<GameState>()(
@@ -296,6 +297,7 @@ export const useGameStore = create<GameState>()(
         },
       })),
       resetAllProgress: () => set({ progress: makeDefaultProgress(), lastResult: null, session: null, excludedCategoryIds: [] }),
+      clearProfile: () => set({ profile: null, progress: makeDefaultProgress(), session: null, lastResult: null, excludedCategoryIds: [] }),
     }),
     { name: 'nairaquest-v2' } // bumped from v1 → clean state with new wallet fields
   )
