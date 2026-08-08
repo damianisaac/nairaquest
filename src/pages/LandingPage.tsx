@@ -212,18 +212,20 @@ export default function LandingPage() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, ease: 'easeOut' }}
         >
-          <h1
-            className="font-display text-6xl sm:text-8xl md:text-9xl font-black tracking-tight drop-shadow-2xl"
-            style={{
-              background: 'linear-gradient(135deg, #d4af37 0%, #22c55e 40%, #00b86a 70%, #d4af37 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-              filter: 'drop-shadow(0 4px 24px rgba(212,175,55,0.45))',
-            }}
-          >
-            NairaQuest
-          </h1>
+          <div className="px-8 py-4 rounded-3xl" style={{ background: 'rgba(3,7,18,0.35)', backdropFilter: 'blur(12px)' }}>
+            <h1
+              className="font-display text-6xl sm:text-8xl md:text-9xl font-black tracking-tight"
+              style={{
+                background: 'linear-gradient(135deg, #d4af37 0%, #22c55e 40%, #00b86a 70%, #d4af37 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                filter: 'drop-shadow(0 2px 12px rgba(212,175,55,0.5))',
+              }}
+            >
+              NairaQuest
+            </h1>
+          </div>
         </motion.div>
 
         {/* Hero content — pushed to bottom on all screen sizes */}
