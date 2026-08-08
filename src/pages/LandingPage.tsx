@@ -271,7 +271,7 @@ export default function LandingPage() {
 
         </div>
 
-        <footer className="relative z-10 w-full mt-4 sm:mt-10">
+        <footer className="relative z-10 w-full mt-4 sm:mt-16">
           <div
             className="text-center text-white/70 text-xs px-6 py-3 rounded-xl mx-auto w-max max-w-full"
             style={{ background: 'rgba(3,7,18,0.6)', backdropFilter: 'blur(8px)' }}
