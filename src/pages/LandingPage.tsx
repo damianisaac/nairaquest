@@ -207,7 +207,7 @@ export default function LandingPage() {
 
         {/* NairaQuest title — centred in the hero */}
         <motion.div
-          className="relative z-10 flex-1 flex items-center justify-center pointer-events-none select-none"
+          className="relative z-10 flex-1 flex flex-col items-center justify-center gap-3 pointer-events-none select-none"
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, ease: 'easeOut' }}
@@ -225,6 +225,12 @@ export default function LandingPage() {
           >
             NairaQuest
           </h1>
+          <p
+            className="font-display text-base sm:text-xl md:text-2xl font-semibold tracking-wide text-white"
+            style={{ textShadow: '0 2px 8px #000, 0 4px 20px #000' }}
+          >
+            Nigeria's #1 Financial Literacy Game
+          </p>
         </motion.div>
 
         {/* Hero content — pushed to bottom on all screen sizes */}
