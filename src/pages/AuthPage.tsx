@@ -133,7 +133,7 @@ export default function AuthPage() {
           </motion.div>
           <h1 className="font-display text-3xl text-white">NairaQuest</h1>
           <p className="text-white/50 text-sm mt-1">
-            {mode === 'sign-in' ? 'Sign in to sync your progress across devices' : 'Create your account to save progress everywhere'}
+            {mode === 'sign-in' ? 'Sign up to keep your streak and earnings' : 'Sign up to keep your streak and earnings'}
           </p>
         </div>
 
@@ -286,12 +286,12 @@ export default function AuthPage() {
 
         {/* Skip to local play */}
         <p className="text-center text-xs text-white/30 mt-4">
-          No account?{' '}
+          Want to Play as Guest?{' '}
           <button
-            className="text-naira-green hover:underline"
+            className="text-white/50 hover:text-white/70 hover:underline transition-colors"
             onClick={() => { sound.click(); navigate('/'); }}
           >
-            Play locally without syncing
+            Playing as guest won't save your earnings
           </button>
         </p>
       </motion.div>

@@ -117,7 +117,7 @@ export default function TopNav() {
               className="btn-primary py-1.5 px-4 text-sm"
               onClick={() => { sound.click(); navigate('/?onboard=1'); }}
             >
-              Start
+              Play as Guest
             </button>
           )}
 
@@ -127,7 +127,7 @@ export default function TopNav() {
               onClick={() => { sound.click(); navigate('/auth'); }}
               className="flex items-center px-3 py-1.5 rounded-xl bg-blue-500/20 border border-blue-500/30 text-xs text-blue-300 font-semibold hover:bg-blue-500/30 transition-all"
             >
-              Login
+              Sign Up / Login
             </button>
           )}
 
