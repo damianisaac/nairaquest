@@ -42,8 +42,9 @@ create table if not exists public.category_progress (
   mastery_points      integer not null default 0,
   peak_mastery_points integer not null default 0,
   questions_answered  integer not null default 0,
-  last_practiced      bigint,
-  updated_at          timestamptz not null default now(),
+  last_practiced        bigint,
+  answered_question_ids text[] not null default '{}',
+  updated_at            timestamptz not null default now(),
   unique (user_id, category_id)
 );
 

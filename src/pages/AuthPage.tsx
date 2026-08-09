@@ -21,6 +21,7 @@ export default function AuthPage() {
   const [mode, setMode] = useState<Mode>('sign-in');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [pendingConfirm, setPendingConfirm] = useState(false);
 
   // Form state
   const [email, setEmail] = useState('');
@@ -86,13 +87,20 @@ export default function AuthPage() {
       if (mode === 'sign-in') {
         const { error: err } = await signIn(email, password);
         if (err) { setError(err.message); return; }
+        sound.levelUp();
+        navigate(profile ? '/map' : '/');
       } else {
         if (!name.trim()) { setError('Please enter your name.'); return; }
-        const { error: err } = await signUp(email, password, name.trim(), ageTrack);
-        if (err) { setError(err.message); return; }
+        const result = await signUp(email, password, name.trim(), ageTrack);
+        if (result.error) { setError(result.error.message); return; }
+        sound.levelUp();
+        if (result.needsConfirmation) {
+          // Email confirmation required — stay on page, show message
+          setPendingConfirm(true);
+        } else {
+          navigate('/map');
+        }
       }
-      sound.levelUp();
-      navigate('/map');
     } finally {
       setLoading(false);
     }
@@ -250,6 +258,31 @@ export default function AuthPage() {
             )}
           </button>
         </form>
+
+        {/* Email confirmation pending */}
+        <AnimatePresence>
+          {pendingConfirm && (
+            <motion.div
+              className="mt-4 p-4 rounded-2xl text-center"
+              style={{ background: 'rgba(34,197,94,0.08)', border: '1px solid rgba(34,197,94,0.25)' }}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+            >
+              <div className="text-3xl mb-2">📧</div>
+              <h3 className="font-display text-naira-green text-base mb-1">Check your email!</h3>
+              <p className="text-white/60 text-sm leading-relaxed">
+                We sent a confirmation link to <strong className="text-white">{email}</strong>.
+                Click it to activate your account, then come back to sign in.
+              </p>
+              <button
+                className="mt-3 text-sm text-naira-green hover:underline"
+                onClick={() => { setPendingConfirm(false); setMode('sign-in'); sound.click(); }}
+              >
+                → Go to Sign In
+              </button>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {/* Skip to local play */}
         <p className="text-center text-xs text-white/30 mt-4">

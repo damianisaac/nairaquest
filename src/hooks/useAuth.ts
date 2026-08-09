@@ -141,6 +141,7 @@ export function useAuth() {
           peak_mastery_points: p.peakMasteryPoints,
           questions_answered: p.questionsAnswered,
           last_practiced: p.lastPracticed,
+          answered_question_ids: p.answeredQuestionIds ?? [],
         });
       })
     );
@@ -168,11 +169,16 @@ export function useAuth() {
   }, [pullFromCloud]);
 
   const handleSignUp = async (email: string, password: string, name: string, ageTrack: 'kids' | 'teens' | 'adults') => {
-    const { user, error } = await signUp(email, password, name, ageTrack);
-    if (error || !user) return { error };
+    const { user, error, needsConfirmation } = await signUp(email, password, name, ageTrack);
+    if (error) return { error };
+    // Always create a local profile so the user can play immediately
     store.createProfile(name, ageTrack);
-    await pushToCloud(user.id);
-    return { error: null };
+    // If email confirmation is required, user doesn't have a session yet —
+    // skip the cloud push until they verify and the onAuthStateChange fires
+    if (user && !needsConfirmation) {
+      await pushToCloud(user.id);
+    }
+    return { error: null, needsConfirmation };
   };
 
   const handleSignIn = async (email: string, password: string) => {

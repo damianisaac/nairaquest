@@ -64,9 +64,10 @@ export interface CategoryLeaderboardRow {
 
 export async function signUp(email: string, password: string, _name: string, _ageTrack: AgeTrack) {
   const { data, error } = await supabase.auth.signUp({ email, password });
-  if (error || !data.user) return { error };
-  // Profile is created via upsert after signUp (name and ageTrack passed by caller via upsertProfile)
-  return { user: data.user, error: null };
+  if (error) return { error, user: null, needsConfirmation: false };
+  // If email confirmation is on, data.session is null even though data.user exists
+  const needsConfirmation = !!data.user && !data.session;
+  return { user: data.user ?? null, error: null, needsConfirmation };
 }
 
 export async function signIn(email: string, password: string) {
@@ -110,6 +111,7 @@ export async function upsertProgress(userId: string, categoryId: CategoryId, pro
   peak_mastery_points: number;
   questions_answered: number;
   last_practiced: number | null;
+  answered_question_ids?: string[];
 }) {
   return supabase.from('category_progress').upsert(
     { user_id: userId, category_id: categoryId, ...progress },
