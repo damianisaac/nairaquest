@@ -9,9 +9,16 @@ import { sound } from '../components/ui/SoundController';
 import type { CategoryId, Difficulty } from '../types';
 
 const DIFFICULTY_INFO = {
-  easy: { label: 'Easy (Kids Zone)', emoji: '🌱', desc: 'Perfect for beginners. Covers key concepts.', color: '#22c55e' },
-  medium: { label: 'Medium (Teens Zone)', emoji: '⚡', desc: 'Scenario-based. Requires some reasoning.', color: '#f59e0b' },
-  hard: { label: 'Hard (Adults Zone)', emoji: '🔥', desc: 'Advanced concepts. Real challenge.', color: '#ef4444' },
+  easy:   { label: 'Kids Zone',   emoji: '🌱', desc: 'Perfect for beginners. Covers key concepts.',  color: '#22c55e', track: 'kids'   },
+  medium: { label: 'Teens Zone',  emoji: '⚡', desc: 'Scenario-based. Requires some reasoning.',     color: '#f59e0b', track: 'teens'  },
+  hard:   { label: 'Adults Zone', emoji: '🔥', desc: 'Advanced concepts. Real challenge.',            color: '#ef4444', track: 'adults' },
+};
+
+/** Map ageTrack → the one difficulty that belongs to it */
+const TRACK_DIFFICULTY: Record<string, 'easy' | 'medium' | 'hard'> = {
+  kids:   'easy',
+  teens:  'medium',
+  adults: 'hard',
 };
 
 export default function CategoryPage() {
@@ -56,14 +63,16 @@ export default function CategoryPage() {
     {} as Record<Difficulty, { count: number; completed: boolean }>
   );
 
-  const allCleared = (['easy', 'medium', 'hard'] as Difficulty[]).every(
-    (d) => difficultyStatus[d].count === 0 || difficultyStatus[d].completed
-  );
+  // Zone "cleared" means the user's own difficulty tier is done
+  const allCleared =
+    difficultyStatus[myDifficulty]?.count > 0 && difficultyStatus[myDifficulty]?.completed;
 
-  // First difficulty that has questions and hasn't been completed
-  const recommendedDiff = (['easy', 'medium', 'hard'] as Difficulty[]).find(
-    (d) => difficultyStatus[d].count > 0 && !difficultyStatus[d].completed
-  ) ?? null;
+  // Only recommend the difficulty that belongs to the user's own track
+  const myDifficulty = TRACK_DIFFICULTY[profile.ageTrack];
+  const recommendedDiff: Difficulty | null =
+    difficultyStatus[myDifficulty]?.count > 0 && !difficultyStatus[myDifficulty]?.completed
+      ? myDifficulty
+      : null;
 
   return (
     <div className="min-h-screen bg-gray-950 ankara-bg">
@@ -150,64 +159,95 @@ export default function CategoryPage() {
           {(Object.entries(DIFFICULTY_INFO) as [Difficulty, typeof DIFFICULTY_INFO['easy']][]).map(
             ([diff, info], i) => {
               const { count, completed } = difficultyStatus[diff];
-              const available = count > 0;
-              const isRecommended = diff === recommendedDiff;
+              // ── Age-track gate ──────────────────────────────────────────
+              // Each difficulty belongs to exactly one track. A user can only
+              // play the difficulty that matches their own ageTrack.
+              const myDiff    = TRACK_DIFFICULTY[profile.ageTrack];
+              const isMyTrack = diff === myDiff;
+              const available = isMyTrack && count > 0;
+              const isRecommended = diff === recommendedDiff && isMyTrack;
+
+              // Track label shown on locked cards
+              const trackLabels: Record<string, string> = {
+                kids:   '🌟 Kids only',
+                teens:  '🚀 Teens only',
+                adults: '💼 Adults only',
+              };
+              const lockLabel = trackLabels[info.track] ?? '';
 
               return (
                 <motion.button
                   key={diff}
                   className="w-full flex items-center gap-4 p-4 rounded-2xl border transition-all text-left"
                   style={{
-                    borderColor: completed
+                    borderColor: !isMyTrack
+                      ? 'rgba(255,255,255,0.05)'
+                      : completed
                       ? '#22c55e30'
                       : isRecommended
                       ? info.color + '60'
                       : available
                       ? info.color + '30'
                       : 'rgba(255,255,255,0.06)',
-                    background: completed
+                    background: !isMyTrack
+                      ? 'rgba(255,255,255,0.02)'
+                      : completed
                       ? '#22c55e08'
                       : isRecommended
                       ? info.color + '15'
                       : available
                       ? info.color + '08'
                       : 'rgba(255,255,255,0.02)',
-                    opacity: available ? 1 : 0.4,
+                    opacity: isMyTrack ? 1 : 0.35,
                     cursor: available ? 'pointer' : 'not-allowed',
                   }}
                   initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: available ? 1 : 0.4, x: 0 }}
+                  animate={{ opacity: isMyTrack ? 1 : 0.35, x: 0 }}
                   transition={{ delay: 0.1 + i * 0.08 }}
                   whileHover={available ? { scale: 1.02 } : {}}
                   whileTap={available ? { scale: 0.98 } : {}}
                   onClick={() => available && handleStart(diff)}
+                  disabled={!available}
+                  title={!isMyTrack ? `This difficulty is for ${info.track} players only` : undefined}
                 >
-                  <span className="text-3xl">{completed ? '✅' : info.emoji}</span>
+                  <span className="text-3xl">{!isMyTrack ? '🔒' : completed ? '✅' : info.emoji}</span>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 flex-wrap">
                       <span className="font-display text-white">{info.label}</span>
-                      <span
-                        className="text-xs px-2 py-0.5 rounded-full"
-                        style={{ background: info.color + '20', color: info.color }}
-                      >
-                        {count} Qs
-                      </span>
-                      {completed && (
-                        <span className="text-xs px-2 py-0.5 rounded-full bg-naira-green/20 text-naira-green">
-                          Completed
-                        </span>
-                      )}
-                      {isRecommended && !completed && (
-                        <span
-                          className="text-xs px-2 py-0.5 rounded-full font-medium"
-                          style={{ background: info.color + '30', color: info.color }}
-                        >
-                          Next up
+                      {isMyTrack ? (
+                        <>
+                          <span
+                            className="text-xs px-2 py-0.5 rounded-full"
+                            style={{ background: info.color + '20', color: info.color }}
+                          >
+                            {count} Qs
+                          </span>
+                          {completed && (
+                            <span className="text-xs px-2 py-0.5 rounded-full bg-naira-green/20 text-naira-green">
+                              Completed
+                            </span>
+                          )}
+                          {isRecommended && !completed && (
+                            <span
+                              className="text-xs px-2 py-0.5 rounded-full font-medium"
+                              style={{ background: info.color + '30', color: info.color }}
+                            >
+                              Next up
+                            </span>
+                          )}
+                        </>
+                      ) : (
+                        <span className="text-xs px-2 py-0.5 rounded-full bg-white/5 text-white/30 border border-white/10">
+                          {lockLabel}
                         </span>
                       )}
                     </div>
                     <p className="text-xs text-white/50 mt-0.5">
-                      {completed ? 'All questions answered — replay to boost mastery' : info.desc}
+                      {!isMyTrack
+                        ? `Switch to a ${info.track} account to play this zone`
+                        : completed
+                        ? 'All questions answered — replay to boost mastery'
+                        : info.desc}
                     </p>
                   </div>
                   {available && (
