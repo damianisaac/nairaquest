@@ -63,16 +63,16 @@ export default function CategoryPage() {
     {} as Record<Difficulty, { count: number; completed: boolean }>
   );
 
-  // Zone "cleared" means the user's own difficulty tier is done
-  const allCleared =
-    difficultyStatus[myDifficulty]?.count > 0 && difficultyStatus[myDifficulty]?.completed;
-
   // Only recommend the difficulty that belongs to the user's own track
   const myDifficulty = TRACK_DIFFICULTY[profile.ageTrack];
   const recommendedDiff: Difficulty | null =
     difficultyStatus[myDifficulty]?.count > 0 && !difficultyStatus[myDifficulty]?.completed
       ? myDifficulty
       : null;
+
+  // Zone "cleared" means the user's own difficulty tier is done
+  const allCleared =
+    difficultyStatus[myDifficulty]?.count > 0 && difficultyStatus[myDifficulty]?.completed;
 
   return (
     <div className="min-h-screen bg-gray-950 ankara-bg">
