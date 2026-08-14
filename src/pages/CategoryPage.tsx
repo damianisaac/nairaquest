@@ -38,7 +38,13 @@ export default function CategoryPage() {
   const unlocked = selectIsUnlocked(state, categoryId);
   const classContext = state.classContext;
   const isAssigned = classContext?.focusCategoryId === categoryId;
-  const availableQuestions = ALL_QUESTIONS[categoryId].filter((q) => q.ageTrack.includes(profile.ageTrack));
+  // Only count questions that belong BOTH to this age track AND its matching difficulty.
+  // This prevents easy|teens-tagged legacy questions from showing up in the teens
+  // question count, and medium|adults questions from appearing in the adults count.
+  const myDifficulty = TRACK_DIFFICULTY[profile.ageTrack];
+  const availableQuestions = ALL_QUESTIONS[categoryId].filter(
+    (q) => q.ageTrack.includes(profile.ageTrack) && q.difficulty === myDifficulty
+  );
 
   if (!unlocked) {
     navigate('/map');
@@ -64,7 +70,6 @@ export default function CategoryPage() {
   );
 
   // Only recommend the difficulty that belongs to the user's own track
-  const myDifficulty = TRACK_DIFFICULTY[profile.ageTrack];
   const recommendedDiff: Difficulty | null =
     difficultyStatus[myDifficulty]?.count > 0 && !difficultyStatus[myDifficulty]?.completed
       ? myDifficulty
@@ -159,11 +164,8 @@ export default function CategoryPage() {
           {(Object.entries(DIFFICULTY_INFO) as [Difficulty, typeof DIFFICULTY_INFO['easy']][]).map(
             ([diff, info], i) => {
               const { count, completed } = difficultyStatus[diff];
-              // ── Age-track gate ──────────────────────────────────────────
-              // Each difficulty belongs to exactly one track. A user can only
-              // play the difficulty that matches their own ageTrack.
-              const myDiff    = TRACK_DIFFICULTY[profile.ageTrack];
-              const isMyTrack = diff === myDiff;
+              // myDifficulty is computed above; each difficulty maps to one track only
+              const isMyTrack = diff === myDifficulty;
               const available = isMyTrack && count > 0;
               const isRecommended = diff === recommendedDiff && isMyTrack;
 

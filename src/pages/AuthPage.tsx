@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAuth } from '../hooks/useAuth';
 import { useGameStore } from '../store/gameStore';
@@ -16,9 +16,12 @@ const AGE_TRACKS: { id: AgeTrack; label: string; emoji: string }[] = [
 
 export default function AuthPage() {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const isTeacherFlow = searchParams.get('role') === 'teacher';
   const { signIn, signUp, isConfigured } = useAuth();
   const { profile } = useGameStore();
-  const [mode, setMode] = useState<Mode>('sign-in');
+  // Teachers land here in sign-up mode by default
+  const [mode, setMode] = useState<Mode>(isTeacherFlow ? 'sign-up' : 'sign-in');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [pendingConfirm, setPendingConfirm] = useState(false);

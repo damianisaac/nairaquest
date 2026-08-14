@@ -56,12 +56,16 @@ function OnboardingModal({
 
   const handleStart = () => {
     if (!name.trim()) return;
-    const ageTrack: AgeTrack = selectedTrack === 'teacher' ? 'adults' : selectedTrack;
-    const userRole: UserRole = selectedTrack === 'teacher' ? 'teacher' : 'general';
-    createProfile(name.trim(), ageTrack, userRole);
     sound.levelUp();
-    if (selectedTrack === 'teacher') navigate('/teacher');
-    else if (selectedTrack === 'kids') navigate('/kids');
+    // Teachers must create a cloud account — local guest profiles can't
+    // manage classes or share class codes with students.
+    if (selectedTrack === 'teacher') {
+      navigate('/auth?role=teacher');
+      return;
+    }
+    const ageTrack: AgeTrack = selectedTrack as AgeTrack;
+    createProfile(name.trim(), ageTrack, 'general');
+    if (selectedTrack === 'kids') navigate('/kids');
     else if (selectedTrack === 'teens') navigate('/teens');
     else navigate('/adults');
   };

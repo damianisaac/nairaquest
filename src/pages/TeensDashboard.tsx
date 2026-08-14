@@ -5,6 +5,7 @@ import { useGameStore, selectMasteryPercent, selectIsUnlocked } from '../store/g
 import { CATEGORIES } from '../data/categories';
 import { getMasteryCap, getUnlockThreshold, getMasteryPercent } from '../utils/scoring';
 import { ALL_QUESTIONS } from '../data/questions';
+import { useAuth } from '../hooks/useAuth';
 import TopNav from '../components/ui/TopNav';
 import { sound } from '../components/ui/SoundController';
 import type { CategoryId } from '../types';
@@ -27,6 +28,8 @@ export default function TeensDashboard() {
   const navigate = useNavigate();
   const state = useGameStore();
   const { profile, progress } = state;
+  const { user, isConfigured, loading: authLoading } = useAuth();
+  const isGuest = isConfigured && !authLoading && !user;
   const [lockedPop, setLockedPop] = useState<CategoryId | null>(null);
 
   if (!profile) { navigate('/'); return null; }
@@ -137,6 +140,36 @@ export default function TeensDashboard() {
             </button>
           ))}
         </motion.div>
+
+        {/* Guest sign-in banner */}
+        {isGuest && (
+          <motion.div
+            className="mb-5 flex items-center gap-3 px-4 py-3 rounded-2xl border"
+            style={{
+              background: 'rgba(139,92,246,0.08)',
+              borderColor: 'rgba(139,92,246,0.3)',
+            }}
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            <span className="text-2xl flex-shrink-0">☁️</span>
+            <div className="flex-1 min-w-0">
+              <p className="text-sm text-purple-300 font-semibold leading-tight">
+                Save your streak & XP!
+              </p>
+              <p className="text-xs text-white/45 mt-0.5 leading-snug">
+                Guest progress can be lost. Create an account to keep your level and badges.
+              </p>
+            </div>
+            <button
+              onClick={() => { sound.click(); navigate('/auth'); }}
+              className="flex-shrink-0 text-xs font-bold px-3 py-1.5 rounded-xl text-white"
+              style={{ background: 'rgba(139,92,246,0.25)', border: '1px solid rgba(139,92,246,0.4)' }}
+            >
+              Sign Up →
+            </button>
+          </motion.div>
+        )}
 
         {/* Zone grid — 2 columns on mobile, 3 on sm+ */}
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">

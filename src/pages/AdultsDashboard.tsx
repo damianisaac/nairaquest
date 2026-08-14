@@ -6,6 +6,7 @@ import { CATEGORIES } from '../data/categories';
 import { getMasteryCap, getUnlockThreshold, getMasteryPercent } from '../utils/scoring';
 import { ALL_QUESTIONS } from '../data/questions';
 import { WALLET_NAMES } from '../utils/wallet';
+import { useAuth } from '../hooks/useAuth';
 import TopNav from '../components/ui/TopNav';
 import { sound } from '../components/ui/SoundController';
 import type { CategoryId } from '../types';
@@ -37,6 +38,8 @@ export default function AdultsDashboard() {
   const navigate = useNavigate();
   const state = useGameStore();
   const { profile, progress } = state;
+  const { user, isConfigured, loading: authLoading } = useAuth();
+  const isGuest = isConfigured && !authLoading && !user;
   const [lockedPop, setLockedPop] = useState<CategoryId | null>(null);
 
   if (!profile) { navigate('/'); return null; }
@@ -169,6 +172,36 @@ export default function AdultsDashboard() {
             </div>
           </div>
         </motion.div>
+
+        {/* Guest sign-in banner */}
+        {isGuest && (
+          <motion.div
+            className="mb-6 flex items-center gap-3 px-4 py-3 rounded-2xl border"
+            style={{
+              background: 'rgba(212,175,55,0.06)',
+              borderColor: 'rgba(212,175,55,0.25)',
+            }}
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            <span className="text-2xl flex-shrink-0">☁️</span>
+            <div className="flex-1 min-w-0">
+              <p className="text-sm text-yellow-300 font-semibold leading-tight">
+                Secure your financial progress
+              </p>
+              <p className="text-xs text-white/45 mt-0.5 leading-snug">
+                Guest data lives only on this device. Create an account to sync everywhere.
+              </p>
+            </div>
+            <button
+              onClick={() => { sound.click(); navigate('/auth'); }}
+              className="flex-shrink-0 text-xs font-bold px-3 py-1.5 rounded-xl text-white"
+              style={{ background: 'rgba(212,175,55,0.2)', border: '1px solid rgba(212,175,55,0.35)' }}
+            >
+              Sign Up →
+            </button>
+          </motion.div>
+        )}
 
         {/* Quick nav */}
         <motion.div
