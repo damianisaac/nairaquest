@@ -1,7 +1,7 @@
 import { useEffect, useRef, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useGameStore } from '../store/gameStore';
+import { useGameStore, selectProgress } from '../store/gameStore';
 import { CATEGORY_MAP, CATEGORIES } from '../data/categories';
 import { BADGES } from '../data/badges';
 import TopNav from '../components/ui/TopNav';
@@ -17,7 +17,9 @@ import type { CategoryId } from '../types';
 
 export default function ResultsPage() {
   const navigate = useNavigate();
-  const { lastResult, profile, progress, resetSession, startSession } = useGameStore();
+  const state = useGameStore();
+  const { lastResult, profile, resetSession, startSession } = state;
+  const progress = selectProgress(state);
   const soundPlayed = useRef(false);
   const [celebrationDone, setCelebrationDone] = useState(false);
 

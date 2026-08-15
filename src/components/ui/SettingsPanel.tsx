@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import { useGameStore, selectIsUnlocked, TRACK_DEFAULT_TIMER } from '../../store/gameStore';
+import { useGameStore, selectIsUnlocked, selectProgress, TRACK_DEFAULT_TIMER } from '../../store/gameStore';
 import { CATEGORIES, CATEGORY_MAP } from '../../data/categories';
 import { getMasteryCap, getMasteryPercent, getUnlockThreshold } from '../../utils/scoring';
 import { sound } from './SoundController';
@@ -95,7 +95,6 @@ export default function SettingsPanel({ onClose }: { onClose: () => void }) {
   const state = useGameStore();
   const {
     profile,
-    progress,
     soundEnabled, toggleSound,
     musicEnabled, toggleMusic,
     notificationsEnabled, toggleNotifications,
@@ -106,6 +105,8 @@ export default function SettingsPanel({ onClose }: { onClose: () => void }) {
     updateAgeTrack,
     resetCategoryProgress, resetAllProgress,
   } = state;
+
+  const progress = selectProgress(state);
 
   const [expanded, setExpanded] = useState({ experience: true, sound: true, account: false, data: false });
   const [resetTarget, setResetTarget] = useState<'all' | CategoryId | null>(null);

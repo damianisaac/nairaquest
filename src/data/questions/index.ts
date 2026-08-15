@@ -63,27 +63,27 @@ export const ALL_QUESTIONS: Record<CategoryId, Question[]> = {
   mindset,
 };
 
+/** Difficulty that naturally belongs to each age-track. */
+const TRACK_DIFFICULTY: Record<string, 'easy' | 'medium' | 'hard'> = {
+  kids:   'easy',
+  teens:  'medium',
+  adults: 'hard',
+};
+
 export function getQuestionsForSession(
   categoryId: CategoryId,
   ageTrack: 'kids' | 'teens' | 'adults',
-  difficulty?: 'easy' | 'medium' | 'hard',
+  _difficulty?: 'easy' | 'medium' | 'hard', // reserved for Phase 2 intra-zone difficulty
   count = 10
 ): Question[] {
-  let pool = ALL_QUESTIONS[categoryId].filter((q) =>
-    q.ageTrack.includes(ageTrack)
+  // Phase 1: each zone has exactly one difficulty tier (its own).
+  // Filter by ageTrack first, then by that track's matching difficulty so that
+  // multi-track legacy questions (e.g. ageTrack: ['teens','adults']) don't bleed
+  // across zones.
+  const difficulty = TRACK_DIFFICULTY[ageTrack];
+  const pool = ALL_QUESTIONS[categoryId].filter(
+    (q) => q.ageTrack.includes(ageTrack) && q.difficulty === difficulty
   );
-
-  // Enforce track-appropriate difficulty caps regardless of what was passed
-  const safeDifficulty =
-    ageTrack === 'kids'
-      ? 'easy'
-      : ageTrack === 'teens' && difficulty === 'hard'
-      ? 'medium'
-      : difficulty;
-
-  if (safeDifficulty) {
-    pool = pool.filter((q) => q.difficulty === safeDifficulty);
-  }
 
   return [...pool]
     .sort(() => Math.random() - 0.5)

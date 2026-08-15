@@ -13,7 +13,7 @@ import {
   fetchAllProgress,
   upsertProgress,
 } from '../lib/supabase';
-import { useGameStore } from '../store/gameStore';
+import { useGameStore, selectProgress } from '../store/gameStore';
 import { CATEGORIES } from '../data/categories';
 import type { CategoryId, CategoryProgress } from '../types';
 
@@ -90,7 +90,16 @@ export function useAuth() {
           };
         }
       }
-      useGameStore.setState({ progress: progressMap });
+      // Store cloud progress under the user's current age-track partition
+      const ageTrack = useGameStore.getState().profile?.ageTrack;
+      if (ageTrack) {
+        useGameStore.setState((s) => ({
+          progressByTrack: {
+            ...s.progressByTrack,
+            [ageTrack]: progressMap,
+          },
+        }));
+      }
     }
 
     setAuthState((s) => ({ ...s, syncing: false }));
@@ -99,7 +108,9 @@ export function useAuth() {
   // Push local state up to cloud
   const pushToCloud = useCallback(async (userId: string) => {
     if (!isSupabaseConfigured) return;
-    const { profile, progress } = useGameStore.getState();
+    const storeState = useGameStore.getState();
+    const { profile } = storeState;
+    const progress = selectProgress(storeState);
     if (!profile) return;
 
     await upsertProfile({

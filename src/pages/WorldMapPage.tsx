@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { useGameStore, selectMasteryPercent, selectIsUnlocked } from '../store/gameStore';
+import { useGameStore, selectMasteryPercent, selectIsUnlocked, selectProgress } from '../store/gameStore';
 import { CATEGORIES } from '../data/categories';
 import { getMasteryCap, getUnlockThreshold } from '../utils/scoring';
 import { ALL_QUESTIONS } from '../data/questions';
@@ -33,7 +33,8 @@ const MASCOT_MESSAGES: Record<string, string> = {
 export default function WorldMapPage() {
   const navigate = useNavigate();
   const state = useGameStore();
-  const { profile, progress, classContext } = state;
+  const { profile, classContext } = state;
+  const progress = selectProgress(state);
   const [hoveredZone, setHoveredZone] = useState<CategoryId | null>(null);
   const [lockedAttempt, setLockedAttempt] = useState(false);
 

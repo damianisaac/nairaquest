@@ -9,7 +9,7 @@ import { getQuestionsForSession, ALL_QUESTIONS } from '../data/questions';
 
 const MAX_WALLET_TRANSACTIONS = 200;
 
-function makeDefaultProgress(): Record<CategoryId, CategoryProgress> {
+function makeDefaultTrackProgress(): Record<CategoryId, CategoryProgress> {
   return Object.fromEntries(
     CATEGORIES.map((c) => [
       c.id,
@@ -33,7 +33,8 @@ export const TRACK_DEFAULT_TIMER: Record<AgeTrack, number> = {
 
 interface GameState {
   profile: UserProfile | null;
-  progress: Record<CategoryId, CategoryProgress>;
+  /** Progress partitioned by age-track so switching zones gives a fresh slate */
+  progressByTrack: Partial<Record<AgeTrack, Record<CategoryId, CategoryProgress>>>;
   session: GameSession | null;
   lastResult: SessionResult | null;
   soundEnabled: boolean;        // sound effects
@@ -71,7 +72,7 @@ export const useGameStore = create<GameState>()(
   persist(
     (set, get) => ({
       profile: null,
-      progress: makeDefaultProgress(),
+      progressByTrack: {},
       session: null,
       lastResult: null,
       soundEnabled: true,
@@ -102,7 +103,7 @@ export const useGameStore = create<GameState>()(
           walletDisclaimerSeen: false,
           userRole,
         };
-        set({ profile, progress: makeDefaultProgress(), questionTimerSeconds: TRACK_DEFAULT_TIMER[ageTrack], timerManuallySet: false });
+        set({ profile, progressByTrack: {}, questionTimerSeconds: TRACK_DEFAULT_TIMER[ageTrack], timerManuallySet: false });
       },
 
       updateAgeTrack: (ageTrack) => {
@@ -154,11 +155,14 @@ export const useGameStore = create<GameState>()(
       },
 
       endSession: () => {
-        const { session, profile, progress } = get();
+        const { session, profile, progressByTrack } = get();
         if (!session || !profile || !session.completed) return null;
 
+        // Get the progress slice for the current age track
+        const trackProgress = progressByTrack[profile.ageTrack] ?? makeDefaultTrackProgress();
+
         // Fallback for categories added after the user's state was first persisted
-        const prevProgress: CategoryProgress = progress[session.categoryId] ?? {
+        const prevProgress: CategoryProgress = trackProgress[session.categoryId] ?? {
           categoryId: session.categoryId,
           masteryPoints: 0,
           peakMasteryPoints: 0,
@@ -198,8 +202,8 @@ export const useGameStore = create<GameState>()(
             ? session.difficulty
             : undefined;
 
-        const newProgress: Record<CategoryId, CategoryProgress> = {
-          ...progress,
+        const newTrackProgress: Record<CategoryId, CategoryProgress> = {
+          ...trackProgress,
           [session.categoryId]: {
             ...prevProgress,
             masteryPoints: newMasteryPoints,
@@ -263,7 +267,14 @@ export const useGameStore = create<GameState>()(
           walletTransactions: newTransactions,
         };
 
-        set({ progress: newProgress, profile: updatedProfile, lastResult: fullResult });
+        set({
+          progressByTrack: {
+            ...progressByTrack,
+            [profile.ageTrack]: newTrackProgress,
+          },
+          profile: updatedProfile,
+          lastResult: fullResult,
+        });
         return fullResult;
       },
 
@@ -283,42 +294,58 @@ export const useGameStore = create<GameState>()(
             : [...excluded, categoryId],
         };
       }),
-      resetCategoryProgress: (categoryId) => set((s) => ({
-        progress: {
-          ...s.progress,
-          [categoryId]: {
-            categoryId,
-            masteryPoints: 0,
-            peakMasteryPoints: 0,
-            questionsAnswered: 0,
-            lastPracticed: null,
-            answeredQuestionIds: [],
+      resetCategoryProgress: (categoryId) => set((s) => {
+        if (!s.profile) return {};
+        const track = s.profile.ageTrack;
+        const trackProgress = s.progressByTrack[track] ?? makeDefaultTrackProgress();
+        return {
+          progressByTrack: {
+            ...s.progressByTrack,
+            [track]: {
+              ...trackProgress,
+              [categoryId]: {
+                categoryId,
+                masteryPoints: 0,
+                peakMasteryPoints: 0,
+                questionsAnswered: 0,
+                lastPracticed: null,
+                answeredQuestionIds: [],
+              },
+            },
           },
-        },
-      })),
-      resetAllProgress: () => set({ progress: makeDefaultProgress(), lastResult: null, session: null, excludedCategoryIds: [] }),
-      clearProfile: () => set({ profile: null, progress: makeDefaultProgress(), session: null, lastResult: null, excludedCategoryIds: [] }),
+        };
+      }),
+      resetAllProgress: () => set({ progressByTrack: {}, lastResult: null, session: null, excludedCategoryIds: [] }),
+      clearProfile: () => set({ profile: null, progressByTrack: {}, session: null, lastResult: null, excludedCategoryIds: [] }),
     }),
-    { name: 'nairaquest-v2' } // bumped from v1 → clean state with new wallet fields
+    { name: 'nairaquest-v3' } // bumped from v2 → progress partitioned per age-track
   )
 );
 
 // ─── Selectors ────────────────────────────────────────────────────────────────
 
+/** Returns the progress record for the user's current age-track. */
+export const selectProgress = (state: GameState): Record<CategoryId, CategoryProgress> => {
+  const ageTrack = state.profile?.ageTrack;
+  if (!ageTrack) return makeDefaultTrackProgress();
+  return state.progressByTrack[ageTrack] ?? makeDefaultTrackProgress();
+};
+
 export const selectMasteryPercent = (
   state: GameState,
   categoryId: CategoryId
 ): number => {
-  const { progress, profile } = state;
+  const { profile } = state;
   if (!profile) return 0;
+  const progress = selectProgress(state);
   const cap = getMasteryCap(categoryId, profile.ageTrack);
   return getMasteryPercent(progress[categoryId]?.masteryPoints ?? 0, cap);
 };
 
 export const selectIsUnlocked = (state: GameState, categoryId: CategoryId): boolean => {
-  const { progress, profile } = state;
+  const { profile } = state;
   if (!profile) return CATEGORIES.find((c) => c.id === categoryId)?.tier === 0;
-  return isCategoryUnlocked(categoryId, progress, profile.ageTrack);
+  return isCategoryUnlocked(categoryId, selectProgress(state), profile.ageTrack);
 };
 
 export const selectEarnedBadges = (state: GameState) => {

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useGameStore, selectMasteryPercent, selectIsUnlocked } from '../store/gameStore';
+import { useGameStore, selectMasteryPercent, selectIsUnlocked, selectProgress } from '../store/gameStore';
 import { CATEGORIES } from '../data/categories';
 import { getMasteryCap, getUnlockThreshold, getMasteryPercent } from '../utils/scoring';
 import { ALL_QUESTIONS } from '../data/questions';
@@ -37,7 +37,8 @@ function MasteryBar({ mastery, color }: { mastery: number; color: string }) {
 export default function AdultsDashboard() {
   const navigate = useNavigate();
   const state = useGameStore();
-  const { profile, progress } = state;
+  const { profile } = state;
+  const progress = selectProgress(state);
   const { user, isConfigured, loading: authLoading } = useAuth();
   const isGuest = isConfigured && !authLoading && !user;
   const [lockedPop, setLockedPop] = useState<CategoryId | null>(null);

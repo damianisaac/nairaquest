@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useGameStore, selectMasteryPercent } from '../store/gameStore';
+import { useGameStore, selectMasteryPercent, selectProgress } from '../store/gameStore';
 import { useAuth } from '../hooks/useAuth';
 import { CATEGORIES } from '../data/categories';
 import { BADGES } from '../data/badges';
@@ -34,7 +34,8 @@ export default function ProfilePage() {
   }
 
   const earnedBadges = BADGES.filter((b) => profile.earnedBadgeIds.includes(b.id));
-  const totalQuestions = Object.values(state.progress).reduce((s, p) => s + p.questionsAnswered, 0);
+  const progress = selectProgress(state);
+  const totalQuestions = Object.values(progress).reduce((s, p) => s + p.questionsAnswered, 0);
 
   return (
     <div className="min-h-screen bg-gray-950 ankara-bg">
@@ -133,7 +134,7 @@ export default function ProfilePage() {
           <div className="space-y-4">
             {CATEGORIES.map((cat, i) => {
               const mastery = selectMasteryPercent(state, cat.id);
-              const prog = state.progress[cat.id] ?? { questionsAnswered: 0 };
+              const prog = progress[cat.id] ?? { questionsAnswered: 0 };
               return (
                 <motion.div
                   key={cat.id}
