@@ -63,8 +63,8 @@ export const ALL_QUESTIONS: Record<CategoryId, Question[]> = {
   mindset,
 };
 
-/** Difficulty that naturally belongs to each age-track. */
-const TRACK_DIFFICULTY: Record<string, 'easy' | 'medium' | 'hard'> = {
+/** Fallback difficulty for each zone (used when no explicit difficulty is chosen). */
+const TRACK_DEFAULT_DIFFICULTY: Record<string, 'easy' | 'medium' | 'hard'> = {
   kids:   'easy',
   teens:  'medium',
   adults: 'hard',
@@ -73,16 +73,18 @@ const TRACK_DIFFICULTY: Record<string, 'easy' | 'medium' | 'hard'> = {
 export function getQuestionsForSession(
   categoryId: CategoryId,
   ageTrack: 'kids' | 'teens' | 'adults',
-  _difficulty?: 'easy' | 'medium' | 'hard', // reserved for Phase 2 intra-zone difficulty
+  difficulty?: 'easy' | 'medium' | 'hard',
   count = 10
 ): Question[] {
-  // Phase 1: each zone has exactly one difficulty tier (its own).
-  // Filter by ageTrack first, then by that track's matching difficulty so that
-  // multi-track legacy questions (e.g. ageTrack: ['teens','adults']) don't bleed
-  // across zones.
-  const difficulty = TRACK_DIFFICULTY[ageTrack];
+  const effectiveDifficulty = difficulty ?? TRACK_DEFAULT_DIFFICULTY[ageTrack];
+
+  // Strict single-track matching: only questions exclusively tagged for this zone
+  // at this difficulty. Prevents multi-track legacy questions from bleeding across zones.
   const pool = ALL_QUESTIONS[categoryId].filter(
-    (q) => q.ageTrack.includes(ageTrack) && q.difficulty === difficulty
+    (q) =>
+      q.ageTrack.length === 1 &&
+      q.ageTrack[0] === ageTrack &&
+      q.difficulty === effectiveDifficulty
   );
 
   return [...pool]
