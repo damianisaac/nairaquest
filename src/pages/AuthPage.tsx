@@ -113,15 +113,16 @@ export default function AuthPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-950 ankara-bg flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gray-950 ankara-bg overflow-y-auto">
       {/* Back to local play */}
       <button
-        className="absolute top-4 left-4 text-sm text-white/40 hover:text-white/70 transition-colors flex items-center gap-1"
+        className="fixed top-4 left-4 z-10 text-sm text-white/40 hover:text-white/70 transition-colors flex items-center gap-1"
         onClick={() => { sound.click(); navigate('/'); }}
       >
         ← Back
       </button>
 
+      <div className="flex items-center justify-center min-h-screen p-4 pt-14">
       <motion.div
         className="w-full max-w-md"
         initial={{ opacity: 0, y: 24 }}
@@ -308,7 +309,7 @@ export default function AuthPage() {
         </AnimatePresence>
 
         {/* Skip to local play */}
-        <p className="text-center text-xs text-white/30 mt-4">
+        <p className="text-center text-xs text-white/30 mt-4 pb-6">
           Want to Play as Guest?{' '}
           <button
             className="text-white/50 hover:text-white/70 hover:underline transition-colors"
@@ -318,6 +319,7 @@ export default function AuthPage() {
           </button>
         </p>
       </motion.div>
+      </div>
     </div>
   );
 }
