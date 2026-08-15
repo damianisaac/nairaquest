@@ -30,9 +30,12 @@ export default function AuthPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
+  // Teachers are always on the adults track
   const [ageTrack, setAgeTrack] = useState<AgeTrack>('adults');
 
-  if (!isConfigured) {
+  // Show the Coming Soon wall ONLY for non-teacher visitors when Supabase isn't configured.
+  // Teachers who explicitly navigated here should always reach the sign-up form.
+  if (!isConfigured && !isTeacherFlow) {
     return (
       <div className="min-h-screen bg-gray-950 ankara-bg flex items-center justify-center p-4">
         <button
@@ -136,7 +139,11 @@ export default function AuthPage() {
           </motion.div>
           <h1 className="font-display text-3xl text-white">NairaQuest</h1>
           <p className="text-white/50 text-sm mt-1">
-            {mode === 'sign-in' ? 'Sign up to keep your streak and earnings' : 'Sign up to keep your streak and earnings'}
+            {isTeacherFlow
+              ? 'Create a teacher account to manage your class'
+              : mode === 'sign-in'
+              ? 'Welcome back — sign in to your account'
+              : 'Create an account to save your streak and progress'}
           </p>
         </div>
 
@@ -180,27 +187,40 @@ export default function AuthPage() {
                   />
                 </div>
 
-                {/* Age track */}
-                <div>
-                  <label className="block text-xs text-white/50 mb-1.5">Adventure track</label>
-                  <div className="grid grid-cols-3 gap-2">
-                    {AGE_TRACKS.map((t) => (
-                      <button
-                        key={t.id}
-                        type="button"
-                        onClick={() => { setAgeTrack(t.id); sound.click(); }}
-                        className={`flex flex-col items-center gap-1 py-2.5 rounded-xl border text-xs transition-all ${
-                          ageTrack === t.id
-                            ? 'border-naira-green bg-naira-green/15 text-naira-green'
-                            : 'border-white/10 text-white/50 hover:bg-white/5'
-                        }`}
-                      >
-                        <span className="text-xl">{t.emoji}</span>
-                        <span className="font-medium">{t.label.split(' ')[0]}</span>
-                      </button>
-                    ))}
+                {/* Age track — hidden for teacher flow (always adults) */}
+                {!isTeacherFlow && (
+                  <div>
+                    <label className="block text-xs text-white/50 mb-1.5">Adventure track</label>
+                    <div className="grid grid-cols-3 gap-2">
+                      {AGE_TRACKS.map((t) => (
+                        <button
+                          key={t.id}
+                          type="button"
+                          onClick={() => { setAgeTrack(t.id); sound.click(); }}
+                          className={`flex flex-col items-center gap-1 py-2.5 rounded-xl border text-xs transition-all ${
+                            ageTrack === t.id
+                              ? 'border-naira-green bg-naira-green/15 text-naira-green'
+                              : 'border-white/10 text-white/50 hover:bg-white/5'
+                          }`}
+                        >
+                          <span className="text-xl">{t.emoji}</span>
+                          <span className="font-medium">{t.label.split(' ')[0]}</span>
+                        </button>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
+
+                {/* Teacher badge */}
+                {isTeacherFlow && (
+                  <div className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl border border-naira-gold/30 bg-naira-gold/10">
+                    <span className="text-xl">🏫</span>
+                    <div>
+                      <p className="text-naira-gold text-xs font-semibold">Teacher Account</p>
+                      <p className="text-white/40 text-xs">You'll be able to create classes and assign zones to students.</p>
+                    </div>
+                  </div>
+                )}
               </motion.div>
             )}
           </AnimatePresence>
