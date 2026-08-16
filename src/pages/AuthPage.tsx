@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useAuth } from '../hooks/useAuth';
 import { useGameStore } from '../store/gameStore';
 import { sound } from '../components/ui/SoundController';
+import { friendlyAuthError } from '../lib/supabase';
 import type { AgeTrack } from '../types';
 
 type Mode = 'sign-in' | 'sign-up';
@@ -92,13 +93,13 @@ export default function AuthPage() {
     try {
       if (mode === 'sign-in') {
         const { error: err } = await signIn(email, password);
-        if (err) { setError(err.message); return; }
+        if (err) { setError(friendlyAuthError(err.message)); return; }
         sound.levelUp();
         navigate(profile ? '/map' : '/');
       } else {
         if (!name.trim()) { setError('Please enter your name.'); return; }
         const result = await signUp(email, password, name.trim(), ageTrack);
-        if (result.error) { setError(result.error.message); return; }
+        if (result.error) { setError(friendlyAuthError(result.error.message)); return; }
         sound.levelUp();
         if (result.needsConfirmation) {
           // Email confirmation required — stay on page, show message
@@ -107,6 +108,9 @@ export default function AuthPage() {
           navigate('/map');
         }
       }
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : 'Something went wrong. Please try again.';
+      setError(friendlyAuthError(msg));
     } finally {
       setLoading(false);
     }

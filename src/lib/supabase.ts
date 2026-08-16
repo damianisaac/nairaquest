@@ -62,17 +62,112 @@ export interface CategoryLeaderboardRow {
 
 // ─── Auth helpers ─────────────────────────────────────────────────────────────
 
+/**
+ * Maps raw Supabase / network error messages to user-readable strings.
+ * Call this before displaying any auth error in the UI.
+ */
+export function friendlyAuthError(rawMessage: string): string {
+  const msg = rawMessage.toLowerCase();
+
+  // Network / connectivity ───────────────────────────────────────────────────
+  if (
+    msg.includes('failed to fetch') ||
+    msg.includes('networkerror') ||
+    msg.includes('network request failed') ||
+    msg.includes('load failed')          // Safari's equivalent of "Failed to fetch"
+  ) {
+    return 'Unable to connect to the server. Please check your internet connection and try again.';
+  }
+
+  // Duplicate account ────────────────────────────────────────────────────────
+  if (
+    msg.includes('user already registered') ||
+    msg.includes('email already in use') ||
+    msg.includes('already been registered')
+  ) {
+    return 'An account with this email already exists. Try signing in instead.';
+  }
+
+  // Wrong credentials ────────────────────────────────────────────────────────
+  if (
+    msg.includes('invalid login credentials') ||
+    msg.includes('invalid credentials') ||
+    msg.includes('email not found') ||
+    msg.includes('wrong password')
+  ) {
+    return 'Incorrect email or password. Please double-check and try again.';
+  }
+
+  // Email not confirmed ──────────────────────────────────────────────────────
+  if (msg.includes('email not confirmed')) {
+    return 'Please confirm your email first. Check your inbox for a confirmation link.';
+  }
+
+  // Weak / short password ────────────────────────────────────────────────────
+  if (
+    msg.includes('password should be at least') ||
+    msg.includes('password is too short') ||
+    msg.includes('weak password')
+  ) {
+    return 'Password is too short. Please use at least 8 characters.';
+  }
+
+  // Rate limiting ────────────────────────────────────────────────────────────
+  if (
+    msg.includes('rate limit') ||
+    msg.includes('too many requests') ||
+    msg.includes('email rate limit')
+  ) {
+    return 'Too many attempts. Please wait a few minutes and try again.';
+  }
+
+  // Invalid email format ─────────────────────────────────────────────────────
+  if (
+    msg.includes('invalid email') ||
+    msg.includes('email is invalid') ||
+    msg.includes('provide your email')
+  ) {
+    return 'Please enter a valid email address.';
+  }
+
+  // Signups disabled ─────────────────────────────────────────────────────────
+  if (
+    msg.includes('signup is disabled') ||
+    msg.includes('signups not allowed')
+  ) {
+    return 'Account creation is temporarily unavailable. Please try again later.';
+  }
+
+  // Timeout ──────────────────────────────────────────────────────────────────
+  if (msg.includes('timeout') || msg.includes('timed out')) {
+    return 'The server took too long to respond. Please try again.';
+  }
+
+  // Fallback: capitalise the raw message so it at least looks intentional
+  return rawMessage.charAt(0).toUpperCase() + rawMessage.slice(1);
+}
+
 export async function signUp(email: string, password: string, _name: string, _ageTrack: AgeTrack) {
-  const { data, error } = await supabase.auth.signUp({ email, password });
-  if (error) return { error, user: null, needsConfirmation: false };
-  // If email confirmation is on, data.session is null even though data.user exists
-  const needsConfirmation = !!data.user && !data.session;
-  return { user: data.user ?? null, error: null, needsConfirmation };
+  try {
+    const { data, error } = await supabase.auth.signUp({ email, password });
+    if (error) return { error, user: null, needsConfirmation: false };
+    // If email confirmation is on, data.session is null even though data.user exists
+    const needsConfirmation = !!data.user && !data.session;
+    return { user: data.user ?? null, error: null, needsConfirmation };
+  } catch (err) {
+    const message = err instanceof Error ? err.message : 'Something went wrong. Please try again.';
+    return { error: { message } as unknown as Error, user: null, needsConfirmation: false };
+  }
 }
 
 export async function signIn(email: string, password: string) {
-  const { data, error } = await supabase.auth.signInWithPassword({ email, password });
-  return { session: data.session, error };
+  try {
+    const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+    return { session: data.session, error };
+  } catch (err) {
+    const message = err instanceof Error ? err.message : 'Something went wrong. Please try again.';
+    return { session: null, error: { message } as unknown as Error };
+  }
 }
 
 export async function signOut() {
