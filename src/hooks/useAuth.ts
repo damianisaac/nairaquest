@@ -15,7 +15,7 @@ import {
 } from '../lib/supabase';
 import { useGameStore, selectProgress } from '../store/gameStore';
 import { CATEGORIES } from '../data/categories';
-import type { CategoryId, CategoryProgress } from '../types';
+import type { CategoryId, CategoryProgress, UserRole } from '../types';
 
 export interface AuthState {
   user: User | null;
@@ -44,8 +44,8 @@ export function useAuth() {
 
     if (dbProfile) {
       // Merge cloud profile into local store — cloud wins for auth-managed fields
-      store.createProfile(dbProfile.name, dbProfile.age_track);
-      // Manually patch avatarItemIds and badges
+      store.createProfile(dbProfile.name, dbProfile.age_track, (dbProfile.user_role ?? 'general') as UserRole);
+      // Manually patch avatarItemIds, badges, and role
       useGameStore.setState((s) => ({
         profile: s.profile
           ? {
@@ -60,6 +60,7 @@ export function useAuth() {
               avatarItemIds: dbProfile.avatar_item_ids ?? [],
               walletBalance: dbProfile.wallet_balance ?? 0,
               walletDisclaimerSeen: dbProfile.wallet_disclaimer_seen ?? false,
+              userRole: (dbProfile.user_role ?? 'general') as UserRole,
             }
           : s.profile,
       }));
@@ -126,6 +127,7 @@ export function useAuth() {
       badge_ids: profile.earnedBadgeIds,
       wallet_balance: profile.walletBalance,
       wallet_disclaimer_seen: profile.walletDisclaimerSeen,
+      user_role: profile.userRole ?? 'general',
     });
 
     // Sync wallet transactions (only ones that haven't been synced yet)
@@ -179,11 +181,11 @@ export function useAuth() {
     return () => subscription.unsubscribe();
   }, [pullFromCloud]);
 
-  const handleSignUp = async (email: string, password: string, name: string, ageTrack: 'kids' | 'teens' | 'adults') => {
+  const handleSignUp = async (email: string, password: string, name: string, ageTrack: 'kids' | 'teens' | 'adults', userRole: UserRole = 'general') => {
     const { user, error, needsConfirmation } = await signUp(email, password, name, ageTrack);
     if (error) return { error };
     // Always create a local profile so the user can play immediately
-    store.createProfile(name, ageTrack);
+    store.createProfile(name, ageTrack, userRole);
     // If email confirmation is required, user doesn't have a session yet —
     // skip the cloud push until they verify and the onAuthStateChange fires
     if (user && !needsConfirmation) {

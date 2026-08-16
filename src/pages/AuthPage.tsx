@@ -98,14 +98,14 @@ export default function AuthPage() {
         navigate(profile ? '/map' : '/');
       } else {
         if (!name.trim()) { setError('Please enter your name.'); return; }
-        const result = await signUp(email, password, name.trim(), ageTrack);
+        const result = await signUp(email, password, name.trim(), ageTrack, isTeacherFlow ? 'teacher' : 'general');
         if (result.error) { setError(friendlyAuthError(result.error.message)); return; }
         sound.levelUp();
         if (result.needsConfirmation) {
           // Email confirmation required — stay on page, show message
           setPendingConfirm(true);
         } else {
-          navigate('/map');
+          navigate(isTeacherFlow ? '/teacher' : '/map');
         }
       }
     } catch (err) {

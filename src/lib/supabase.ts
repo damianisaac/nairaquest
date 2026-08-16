@@ -24,6 +24,7 @@ export interface DbProfile {
   badge_ids: string[];
   wallet_balance: number;
   wallet_disclaimer_seen: boolean;
+  user_role: 'general' | 'teacher';
   created_at: string;
   updated_at: string;
 }
