@@ -405,9 +405,9 @@ export default function LandingPage() {
         <footer className="relative z-10 pb-3 text-center">
           <p className="text-white/35 text-xs">
             © 2026 NairaQuest 🇳🇬 · Powered by{' '}
-            <a href="https://virtuallysafe.org/" target="_blank" rel="noopener noreferrer"
+            <a href="https://teenscancode.com.ng" target="_blank" rel="noopener noreferrer"
               className="text-naira-green/70 hover:text-naira-green transition-colors underline underline-offset-2">
-              VirtuallySafe
+              Teens Can Code
             </a>
             {' '}· Educational content only. Consult a licensed financial advisor for personal decisions.
           </p>
