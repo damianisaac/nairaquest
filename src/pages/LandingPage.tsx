@@ -395,11 +395,19 @@ export default function LandingPage() {
 
             {!profile && (
               <motion.button
-                className="text-xs text-white/40 hover:text-white/65 transition-colors"
                 onClick={() => { sound.click(); navigate('/auth'); }}
                 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.95 }}
+                className="flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold text-white/80 hover:text-white transition-colors"
+                style={{
+                  background: 'rgba(0,0,0,0.45)',
+                  border: '1px solid rgba(255,255,255,0.18)',
+                  backdropFilter: 'blur(8px)',
+                  textShadow: '0 1px 4px rgba(0,0,0,0.8)',
+                }}
+                whileHover={{ borderColor: 'rgba(255,255,255,0.4)', scale: 1.03 }}
               >
-                Already have an account? Sign in →
+                Already have an account?
+                <span className="text-naira-green font-bold">Sign in →</span>
               </motion.button>
             )}
           </motion.div>
