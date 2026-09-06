@@ -353,7 +353,7 @@ export default function LandingPage() {
                   <motion.button
                     key={t.id}
                     onClick={() => handleTrackPill(t.id)}
-                    className="relative flex flex-col items-center gap-1 py-3 px-2 rounded-2xl border overflow-hidden text-center"
+                    className="relative flex flex-col items-center gap-0.5 py-2 px-2 rounded-xl border overflow-hidden text-center"
                     style={{
                       background: `linear-gradient(145deg, ${t.dark}60, rgba(3,7,18,0.8))`,
                       border: `1px solid ${t.color}45`,
@@ -370,8 +370,8 @@ export default function LandingPage() {
                       style={{ background: `radial-gradient(circle at center, ${t.color}18, transparent 70%)` }}
                       whileHover={{ opacity: 1 }}
                     />
-                    <span className="text-2xl sm:text-3xl relative z-10">{t.emoji}</span>
-                    <span className="text-xs sm:text-sm font-black text-white relative z-10">{t.label}</span>
+                    <span className="text-xl sm:text-2xl relative z-10">{t.emoji}</span>
+                    <span className="text-xs font-black text-white relative z-10">{t.label}</span>
                     <span className="text-xs leading-tight relative z-10 hidden sm:block" style={{ color: t.color + 'bb' }}>{t.hook}</span>
                   </motion.button>
                 ))}
