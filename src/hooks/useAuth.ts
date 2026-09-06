@@ -32,8 +32,6 @@ export function useAuth() {
     syncing: false,
   });
 
-  const store = useGameStore();
-
   // Pull cloud progress into local store
   const pullFromCloud = useCallback(async (userId: string) => {
     if (!isSupabaseConfigured) return;
@@ -45,8 +43,9 @@ export function useAuth() {
     ]);
 
     if (dbProfile) {
-      // Merge cloud profile into local store — cloud wins for auth-managed fields
-      store.createProfile(dbProfile.name, dbProfile.age_track, (dbProfile.user_role ?? 'general') as UserRole);
+      // Use getState() so this callback has no store dependency and won't
+      // be recreated on every store update (prevents the render loop).
+      useGameStore.getState().createProfile(dbProfile.name, dbProfile.age_track, (dbProfile.user_role ?? 'general') as UserRole);
       // Manually patch avatarItemIds, badges, and role
       useGameStore.setState((s) => ({
         profile: s.profile
@@ -106,7 +105,7 @@ export function useAuth() {
     }
 
     setAuthState((s) => ({ ...s, syncing: false }));
-  }, [store]);
+  }, []); // no store dep — uses useGameStore.getState() internally
 
   // Push local state up to cloud
   const pushToCloud = useCallback(async (userId: string) => {
@@ -187,7 +186,7 @@ export function useAuth() {
     const { user, error, needsConfirmation } = await signUp(email, password, name, ageTrack);
     if (error) return { error };
     // Always create a local profile so the user can play immediately
-    store.createProfile(name, ageTrack, userRole);
+    useGameStore.getState().createProfile(name, ageTrack, userRole);
     // If email confirmation is required, user doesn't have a session yet —
     // skip the cloud push until they verify and the onAuthStateChange fires
     if (user && !needsConfirmation) {

@@ -35,7 +35,7 @@ interface CategoryStat {
 export default function TeacherDashboardPage() {
   const navigate = useNavigate();
   const { profile } = useGameStore();
-  const { user } = useAuth();
+  const { user, loading: authLoading } = useAuth();
 
   const [loading, setLoading] = useState(true);
   const [classInfo, setClassInfo] = useState<ClassInfo | null>(null);
@@ -53,9 +53,11 @@ export default function TeacherDashboardPage() {
   const isTeacher = (profile?.userRole ?? 'general') === 'teacher';
 
   useEffect(() => {
+    // Wait for auth to finish resolving before acting — prevents flicker
+    if (authLoading) return;
     if (!isCloud || !isTeacher) { setLoading(false); return; }
     loadClass();
-  }, [isCloud, isTeacher, user]);
+  }, [authLoading, isCloud, isTeacher, user?.id]);
 
   async function loadClass() {
     setLoading(true);
@@ -133,6 +135,13 @@ export default function TeacherDashboardPage() {
   const sortedWeak = useMemo(() =>
     [...categoryStats].filter((s) => s.playedCount > 0).sort((a, b) => a.avgMastery - b.avgMastery),
     [categoryStats]);
+
+  // Hold render until auth has settled — prevents flicker through wrong states
+  if (authLoading) return (
+    <div className="min-h-screen bg-gray-950 flex items-center justify-center">
+      <span className="w-6 h-6 border-2 border-white/20 border-t-naira-green rounded-full animate-spin" />
+    </div>
+  );
 
   if (!profile) { navigate('/'); return null; }
 
