@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import type { User } from '@supabase/supabase-js';
 import {
   supabase,
@@ -24,6 +25,7 @@ export interface AuthState {
 }
 
 export function useAuth() {
+  const navigate = useNavigate();
   const [authState, setAuthState] = useState<AuthState>({
     user: null,
     loading: true,
@@ -206,6 +208,7 @@ export function useAuth() {
     if (user) await pushToCloud(user.id);
     await signOut();
     setAuthState((s) => ({ ...s, user: null }));
+    navigate('/');
   };
 
   const syncNow = async () => {
