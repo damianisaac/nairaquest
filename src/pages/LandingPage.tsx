@@ -402,7 +402,7 @@ export default function LandingPage() {
               <motion.button
                 onClick={() => { sound.click(); navigate('/auth'); }}
                 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.95 }}
-                className="flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-semibold transition-colors"
+                className="flex items-center gap-1 px-4 py-1.5 rounded-full text-xs font-semibold transition-colors"
                 style={{
                   background: '#0f172a',
                   border: '1.5px solid rgba(255,255,255,0.25)',
