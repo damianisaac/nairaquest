@@ -175,6 +175,28 @@ export async function signOut() {
   return supabase.auth.signOut();
 }
 
+export async function resetPassword(email: string) {
+  try {
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: `${window.location.origin}/reset-password`,
+    });
+    return { error };
+  } catch (err) {
+    const message = err instanceof Error ? err.message : 'Something went wrong. Please try again.';
+    return { error: { message } as unknown as Error };
+  }
+}
+
+export async function updatePassword(newPassword: string) {
+  try {
+    const { error } = await supabase.auth.updateUser({ password: newPassword });
+    return { error };
+  } catch (err) {
+    const message = err instanceof Error ? err.message : 'Something went wrong. Please try again.';
+    return { error: { message } as unknown as Error };
+  }
+}
+
 export async function getSession() {
   const { data } = await supabase.auth.getSession();
   return data.session;

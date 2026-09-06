@@ -245,7 +245,18 @@ export default function AuthPage() {
 
           {/* Password */}
           <div>
-            <label className="block text-xs text-white/50 mb-1.5">Password</label>
+            <div className="flex items-center justify-between mb-1.5">
+              <label className="block text-xs text-white/50">Password</label>
+              {mode === 'sign-in' && (
+                <button
+                  type="button"
+                  className="text-xs text-white/40 hover:text-naira-green transition-colors"
+                  onClick={() => { sound.click(); navigate('/forgot-password'); }}
+                >
+                  Forgot password?
+                </button>
+              )}
+            </div>
             <input
               type="password"
               className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/15 text-white placeholder-white/25 focus:outline-none focus:border-naira-green transition-colors"

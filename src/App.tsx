@@ -22,6 +22,8 @@ import DuelResultsPage from './pages/DuelResultsPage';
 import TeacherDashboardPage from './pages/TeacherDashboardPage';
 import ClassJoinPage from './pages/ClassJoinPage';
 import ClassLeaderboardPage from './pages/ClassLeaderboardPage';
+import ForgotPasswordPage from './pages/ForgotPasswordPage';
+import ResetPasswordPage from './pages/ResetPasswordPage';
 import SoundController from './components/ui/SoundController';
 import WalletOnboardingModal from './components/ui/WalletOnboardingModal';
 
@@ -70,6 +72,8 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/auth" element={<AuthPage />} />
+        <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+        <Route path="/reset-password" element={<ResetPasswordPage />} />
         <Route path="/map" element={<MapRedirect />} />
         <Route path="/map/classic" element={<WorldMapPage />} />
         <Route path="/kids" element={<KidsDashboard />} />
