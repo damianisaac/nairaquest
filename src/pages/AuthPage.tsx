@@ -95,7 +95,10 @@ export default function AuthPage() {
         const { error: err } = await signIn(email, password);
         if (err) { setError(friendlyAuthError(err.message)); return; }
         sound.levelUp();
-        navigate(profile ? '/map' : '/');
+        // Read freshest profile from store after cloud pull
+        const freshProfile = (await import('../store/gameStore')).useGameStore.getState().profile;
+        if (freshProfile?.userRole === 'teacher') navigate('/teacher');
+        else navigate(freshProfile ? '/map' : '/');
       } else {
         if (!name.trim()) { setError('Please enter your name.'); return; }
         const result = await signUp(email, password, name.trim(), ageTrack, isTeacherFlow ? 'teacher' : 'general');

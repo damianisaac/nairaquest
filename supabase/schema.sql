@@ -19,6 +19,8 @@ create table if not exists public.profiles (
   -- Wallet fields (Learning Credits — not real money)
   wallet_balance           bigint not null default 0,
   wallet_disclaimer_seen   boolean not null default false,
+  -- Role: 'general' for students/adults, 'teacher' for classroom managers
+  user_role                text not null default 'general' check (user_role in ('general','teacher')),
   created_at               timestamptz not null default now(),
   updated_at               timestamptz not null default now()
 );
@@ -180,3 +182,140 @@ create trigger profiles_updated_at
 create trigger category_progress_updated_at
   before update on public.category_progress
   for each row execute function public.handle_updated_at();
+
+-- ─── classes ─────────────────────────────────────────────────────────────────
+-- Teacher-managed classrooms for school/group play
+create table if not exists public.classes (
+  id                uuid primary key default gen_random_uuid(),
+  name              text not null,
+  age_track         text not null,
+  class_code        text not null unique,
+  teacher_user_id   uuid references public.profiles(id) on delete set null,
+  teacher_name      text not null,
+  focus_category_id text,
+  created_at        timestamptz not null default now()
+);
+
+alter table public.classes enable row level security;
+
+create policy "Teachers can manage own classes"
+  on public.classes for all
+  using (auth.uid() = teacher_user_id);
+
+create policy "Anyone can read class by code"
+  on public.classes for select
+  using (true);
+
+-- ─── class_members ───────────────────────────────────────────────────────────
+create table if not exists public.class_members (
+  class_id     uuid not null references public.classes(id) on delete cascade,
+  user_id      uuid not null,
+  display_name text not null,
+  joined_at    timestamptz not null default now(),
+  primary key (class_id, user_id)
+);
+
+alter table public.class_members enable row level security;
+
+create policy "Members can read own membership"
+  on public.class_members for select
+  using (auth.uid() = user_id);
+
+create policy "Teachers can read class members"
+  on public.class_members for select
+  using (
+    exists (
+      select 1 from public.classes
+      where classes.id = class_id
+        and classes.teacher_user_id = auth.uid()
+    )
+  );
+
+create policy "Anyone can join a class"
+  on public.class_members for insert
+  with check (true);
+
+-- ─── families ────────────────────────────────────────────────────────────────
+create table if not exists public.families (
+  id          uuid primary key default gen_random_uuid(),
+  name        text not null,
+  invite_code text not null unique,
+  created_by  uuid references public.profiles(id) on delete set null,
+  created_at  timestamptz not null default now()
+);
+
+alter table public.families enable row level security;
+
+create policy "Family members can read their family"
+  on public.families for select
+  using (
+    exists (
+      select 1 from public.family_members
+      where family_members.family_id = families.id
+        and family_members.user_id = auth.uid()
+    )
+  );
+
+create policy "Authenticated users can create families"
+  on public.families for insert
+  with check (auth.uid() = created_by);
+
+-- ─── family_members ──────────────────────────────────────────────────────────
+create table if not exists public.family_members (
+  family_id uuid not null references public.families(id) on delete cascade,
+  user_id   uuid not null references public.profiles(id) on delete cascade,
+  joined_at timestamptz not null default now(),
+  primary key (family_id, user_id)
+);
+
+alter table public.family_members enable row level security;
+
+create policy "Family members can read members"
+  on public.family_members for select
+  using (auth.uid() = user_id);
+
+create policy "Users can join families"
+  on public.family_members for insert
+  with check (auth.uid() = user_id);
+
+create policy "Users can leave families"
+  on public.family_members for delete
+  using (auth.uid() = user_id);
+
+-- ─── family_duels ────────────────────────────────────────────────────────────
+create table if not exists public.family_duels (
+  id               uuid primary key default gen_random_uuid(),
+  family_id        uuid not null references public.families(id) on delete cascade,
+  category_id      text not null,
+  difficulty       text not null,
+  initiator_id     uuid references public.profiles(id) on delete set null,
+  initiator_name   text not null,
+  opponent_id      uuid references public.profiles(id) on delete set null,
+  opponent_name    text not null,
+  initiator_score  integer,
+  opponent_score   integer,
+  question_ids     text[] not null,
+  status           text not null default 'pending',
+  created_at       timestamptz not null default now(),
+  resolved_at      timestamptz
+);
+
+alter table public.family_duels enable row level security;
+
+create policy "Family members can read duels"
+  on public.family_duels for select
+  using (
+    exists (
+      select 1 from public.family_members
+      where family_members.family_id = family_duels.family_id
+        and family_members.user_id = auth.uid()
+    )
+  );
+
+create policy "Family members can create duels"
+  on public.family_duels for insert
+  with check (auth.uid() = initiator_id);
+
+create policy "Players can submit their score"
+  on public.family_duels for update
+  using (auth.uid() = initiator_id or auth.uid() = opponent_id);

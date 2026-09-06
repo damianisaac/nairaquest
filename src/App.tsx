@@ -33,6 +33,7 @@ function MapRedirect() {
   const navigate = useNavigate();
   useEffect(() => {
     if (!profile) { navigate('/', { replace: true }); return; }
+    if (profile.userRole === 'teacher') { navigate('/teacher', { replace: true }); return; }
     const dest = profile.ageTrack === 'kids' ? '/kids' : profile.ageTrack === 'teens' ? '/teens' : '/adults';
     navigate(dest, { replace: true });
   }, [profile, navigate]);
