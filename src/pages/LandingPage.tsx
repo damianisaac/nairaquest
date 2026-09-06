@@ -197,7 +197,7 @@ export default function LandingPage() {
           )}
           {/* Gradient overlay — richer than before for legibility */}
           <div className="absolute inset-0"
-            style={{ background: 'linear-gradient(to bottom, rgba(3,7,18,0.45) 0%, rgba(3,7,18,0.6) 60%, rgba(3,7,18,0.85) 100%)' }} />
+            style={{ background: 'linear-gradient(to bottom, rgba(3,7,18,0.2) 0%, rgba(3,7,18,0.38) 60%, rgba(3,7,18,0.7) 100%)' }} />
 
           {/* Coloured ambient orbs */}
           <motion.div className="absolute rounded-full pointer-events-none"
