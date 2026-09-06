@@ -248,13 +248,18 @@ export default function LandingPage() {
 
           {/* Eyebrow */}
           <motion.div
-            className="flex items-center gap-2.5 text-xs font-bold tracking-widest uppercase"
-            style={{ color: '#fbbf24', textShadow: '0 1px 6px rgba(0,0,0,0.9), 0 2px 16px rgba(0,0,0,0.8)' }}
+            className="flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase"
+            style={{
+              color: '#fbbf24',
+              background: 'rgba(0,0,0,0.55)',
+              border: '1px solid rgba(212,175,55,0.35)',
+              backdropFilter: 'blur(8px)',
+            }}
             initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
           >
-            <span className="w-8 h-px" style={{ background: '#fbbf24' }} />
+            <span>⚡</span>
             Master Money · Level Up Life
-            <span className="w-8 h-px" style={{ background: '#fbbf24' }} />
+            <span>⚡</span>
           </motion.div>
 
           {/* Title */}
