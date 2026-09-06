@@ -385,9 +385,14 @@ export default function LandingPage() {
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.75 }}
           >
             <motion.button
-              className="btn-gold text-base sm:text-lg px-7 py-3.5 sm:px-8 sm:py-4 shadow-xl shadow-naira-gold/20 animate-pulse-glow w-full sm:w-auto"
               onClick={handleCTA}
-              whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(212,175,55,0.5)' }}
+              className="text-base sm:text-lg px-7 py-3.5 sm:px-8 sm:py-4 rounded-2xl font-black w-full sm:w-auto transition-colors"
+              style={{
+                background: '#0f172a',
+                border: '1.5px solid rgba(255,255,255,0.2)',
+                color: '#f1f5f9',
+              }}
+              whileHover={{ scale: 1.05, borderColor: '#22c55e', boxShadow: '0 0 24px rgba(34,197,94,0.25)' }}
               whileTap={{ scale: 0.97 }}
             >
               {profile ? 'Continue Adventure →' : 'Start Your Adventure →'}
