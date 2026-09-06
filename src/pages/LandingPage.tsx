@@ -345,7 +345,7 @@ export default function LandingPage() {
               /* Track selection grid */
               <motion.div
                 key="tracks"
-                className="grid grid-cols-4 gap-2 max-w-xs sm:max-w-sm"
+                className="grid grid-cols-4 gap-2 max-w-sm sm:max-w-md"
                 initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.55 }}
               >
