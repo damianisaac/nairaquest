@@ -5,6 +5,7 @@ import { useGameStore } from '../store/gameStore';
 import TopNav from '../components/ui/TopNav';
 import { sound } from '../components/ui/SoundController';
 import QuickQuestion from '../components/landing/QuickQuestion';
+import SavingsCalculator from '../components/landing/SavingsCalculator';
 import type { AgeTrack } from '../types';
 
 const HeroScene = lazy(() => import('../components/3d/HeroScene'));
@@ -433,6 +434,9 @@ export default function LandingPage() {
 
       {/* ── Quick Question section ── */}
       <QuickQuestion />
+
+      {/* ── Savings Calculator section ── */}
+      <SavingsCalculator />
 
       {/* ── Footer ── */}
       <footer className="bg-gray-950 pb-6 pt-4 text-center border-t border-white/5">
