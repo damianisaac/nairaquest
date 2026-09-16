@@ -471,7 +471,7 @@ export default function SettingsPanel({ onClose }: { onClose: () => void }) {
                 className="underline hover:text-white/45 transition-colors"
                 onClick={() => { sound.click(); onClose(); navigate('/privacy'); }}
               >
-                Privacy policy →
+                Trust &amp; Safety →
               </button>
             </p>
           </Section>

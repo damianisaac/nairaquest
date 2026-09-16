@@ -25,6 +25,7 @@ import ClassJoinPage from './pages/ClassJoinPage';
 import ClassLeaderboardPage from './pages/ClassLeaderboardPage';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import ResetPasswordPage from './pages/ResetPasswordPage';
+import TrustSafetyPage from './pages/TrustSafetyPage';
 import SoundController from './components/ui/SoundController';
 import WalletOnboardingModal from './components/ui/WalletOnboardingModal';
 
@@ -84,6 +85,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/auth" element={<AuthPage />} />
+        <Route path="/privacy" element={<TrustSafetyPage />} />
         <Route path="/forgot-password" element={<ForgotPasswordPage />} />
         <Route path="/reset-password" element={<ResetPasswordPage />} />
         <Route path="/map" element={<MapRedirect />} />
