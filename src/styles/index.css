@@ -124,9 +124,9 @@
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: #d4af37;
-  border: 3px solid #030712;
-  box-shadow: 0 0 0 1.5px #d4af37;
+  background: #b8941f;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 1.5px #b8941f, 0 2px 8px rgba(0,0,0,0.15);
   margin-top: -9px;
   cursor: pointer;
   transition: transform 120ms ease;
@@ -142,9 +142,9 @@
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: #d4af37;
-  border: 3px solid #030712;
-  box-shadow: 0 0 0 1.5px #d4af37;
+  background: #b8941f;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 1.5px #b8941f, 0 2px 8px rgba(0,0,0,0.15);
   cursor: pointer;
 }
 .calc-bar {

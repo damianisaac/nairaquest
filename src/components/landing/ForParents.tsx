@@ -4,36 +4,44 @@ import { motion } from 'framer-motion';
 
 const CARD_THEMES = {
   'AGES 6–9': {
-    color:  '#00b86a',
-    bg:     'linear-gradient(160deg, rgba(0,183,107,0.13) 0%, rgba(0,183,107,0.04) 60%, rgba(255,255,255,0.02) 100%)',
-    border: 'rgba(0,183,107,0.35)',
-    shadow: '0 0 0 1px rgba(0,183,107,0.06), 0 20px 50px -20px rgba(0,183,107,0.25)',
-    badge:  { bg: 'rgba(0,183,107,0.12)', border: 'rgba(0,183,107,0.3)' },
-    icon:   '🍪',
+    color:   '#007a4a',
+    topBar:  'linear-gradient(to right, #008751, #00b86a)',
+    border:  'rgba(0,135,81,0.25)',
+    shadow:  '0 4px 24px rgba(0,135,81,0.12)',
+    badgeBg: 'rgba(0,135,81,0.1)',
+    badgeBorder: 'rgba(0,135,81,0.3)',
+    labelColor: '#005c38',
+    icon:    '🍪',
   },
   'AGES 9–12': {
-    color:  '#d4af37',
-    bg:     'linear-gradient(160deg, rgba(212,175,55,0.13) 0%, rgba(212,175,55,0.04) 60%, rgba(255,255,255,0.02) 100%)',
-    border: 'rgba(212,175,55,0.38)',
-    shadow: '0 0 0 1px rgba(212,175,55,0.08), 0 20px 50px -20px rgba(212,175,55,0.28)',
-    badge:  { bg: 'rgba(212,175,55,0.12)', border: 'rgba(212,175,55,0.3)' },
-    icon:   '🎲',
+    color:   '#8a6a00',
+    topBar:  'linear-gradient(to right, #b8941f, #d4af37)',
+    border:  'rgba(180,148,31,0.3)',
+    shadow:  '0 4px 24px rgba(180,148,31,0.12)',
+    badgeBg: 'rgba(180,148,31,0.1)',
+    badgeBorder: 'rgba(180,148,31,0.3)',
+    labelColor: '#6a4a00',
+    icon:    '🎲',
   },
   'AGES 12–15': {
-    color:  '#a78bfa',
-    bg:     'linear-gradient(160deg, rgba(139,92,246,0.13) 0%, rgba(139,92,246,0.04) 60%, rgba(255,255,255,0.02) 100%)',
-    border: 'rgba(139,92,246,0.35)',
-    shadow: '0 0 0 1px rgba(139,92,246,0.06), 0 20px 50px -20px rgba(139,92,246,0.22)',
-    badge:  { bg: 'rgba(139,92,246,0.12)', border: 'rgba(139,92,246,0.3)' },
-    icon:   '📊',
+    color:   '#6d28d9',
+    topBar:  'linear-gradient(to right, #7c3aed, #a78bfa)',
+    border:  'rgba(109,40,217,0.22)',
+    shadow:  '0 4px 24px rgba(109,40,217,0.1)',
+    badgeBg: 'rgba(109,40,217,0.08)',
+    badgeBorder: 'rgba(109,40,217,0.25)',
+    labelColor: '#5b21b6',
+    icon:    '📊',
   },
   'AGES 15–18': {
-    color:  '#38bdf8',
-    bg:     'linear-gradient(160deg, rgba(56,189,248,0.12) 0%, rgba(56,189,248,0.04) 60%, rgba(255,255,255,0.02) 100%)',
-    border: 'rgba(56,189,248,0.35)',
-    shadow: '0 0 0 1px rgba(56,189,248,0.06), 0 20px 50px -20px rgba(56,189,248,0.22)',
-    badge:  { bg: 'rgba(56,189,248,0.12)', border: 'rgba(56,189,248,0.3)' },
-    icon:   '🏦',
+    color:   '#0369a1',
+    topBar:  'linear-gradient(to right, #0284c7, #38bdf8)',
+    border:  'rgba(3,105,161,0.22)',
+    shadow:  '0 4px 24px rgba(3,105,161,0.1)',
+    badgeBg: 'rgba(3,105,161,0.08)',
+    badgeBorder: 'rgba(3,105,161,0.25)',
+    labelColor: '#075985',
+    icon:    '🏦',
   },
 } as const;
 
@@ -77,13 +85,13 @@ const CARDS: {
   },
 ];
 
-// ─── Floating decoration data ─────────────────────────────────────────────────
+// ─── Floating ₦ watermarks ────────────────────────────────────────────────────
 
 const FLOATERS = [
-  { size: 75,  top: '10%', left: '3%',        color: '#e2543f', opacity: 0.11, dur: 6,   delay: 0   },
-  { size: 45,  top: '62%', left: '5%',         color: '#d4af37', opacity: 0.09, dur: 7.5, delay: 1.3 },
-  { size: 95,  top: '12%', left: undefined, right: '4%',  color: '#e2543f', opacity: 0.10, dur: 5.5, delay: 0.8 },
-  { size: 36,  top: '68%', left: undefined, right: '5%',  color: '#00b86a', opacity: 0.09, dur: 8,   delay: 2   },
+  { size: 110, top: '6%',  left: '1%',        dur: 6,   delay: 0   },
+  { size: 60,  top: '64%', left: '3%',         dur: 8,   delay: 1.3 },
+  { size: 130, top: '7%',  left: undefined, right: '1%', dur: 7,   delay: 0.8 },
+  { size: 48,  top: '68%', left: undefined, right: '3%', dur: 5.5, delay: 2   },
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -92,37 +100,32 @@ export default function ForParents() {
   return (
     <section
       className="relative w-full py-20 sm:py-28 px-4 overflow-hidden"
-      style={{
-        background:
-          'radial-gradient(ellipse 1000px 700px at 50% -5%, rgba(226,84,63,0.16), rgba(150,40,20,0.04) 50%, transparent 70%), ' +
-          'radial-gradient(ellipse 600px 400px at 15% 85%, rgba(212,175,55,0.09), transparent 60%), ' +
-          '#08040a',
-      }}
+      style={{ background: '#FEF6F2' }}
     >
-      {/* Separator from Savings Calculator above */}
+      {/* Section separator */}
       <div
         aria-hidden
-        className="absolute top-0 left-1/2 -translate-x-1/2 h-px w-3/4 pointer-events-none"
+        className="absolute top-0 left-0 right-0 h-px pointer-events-none"
         style={{ background: 'linear-gradient(to right, transparent, rgba(226,84,63,0.2), transparent)' }}
       />
 
-      {/* Ledger-line texture */}
+      {/* Dot-grid texture */}
       <div
         aria-hidden
         className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage:
-            'repeating-linear-gradient(to bottom, transparent 0px, transparent 43px, rgba(226,84,63,0.04) 43px, rgba(226,84,63,0.04) 44px)',
+          backgroundImage: 'radial-gradient(circle, rgba(180,60,30,0.07) 1px, transparent 1px)',
+          backgroundSize: '28px 28px',
         }}
       />
 
-      {/* Floating ₦ decorations */}
+      {/* Floating ₦ watermarks */}
       {FLOATERS.map((p, i) => (
         <motion.div
           key={i}
           className="absolute font-black select-none pointer-events-none"
-          style={{ fontSize: p.size, top: p.top, left: p.left, right: p.right, color: p.color, opacity: p.opacity, zIndex: 0 }}
-          animate={{ y: [0, -16, 0], opacity: [p.opacity * 0.5, p.opacity, p.opacity * 0.5] }}
+          style={{ fontSize: p.size, top: p.top, left: p.left, right: p.right, color: 'rgba(180,60,30,0.06)', zIndex: 0 }}
+          animate={{ y: [0, -14, 0] }}
           transition={{ duration: p.dur, repeat: Infinity, ease: 'easeInOut', delay: p.delay }}
         >
           ₦
@@ -133,34 +136,26 @@ export default function ForParents() {
 
         {/* Header */}
         <div className="text-center max-w-xl mx-auto mb-12 sm:mb-16">
-          <motion.div
+          <div
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border text-xs font-bold mb-6"
             style={{
-              borderColor: 'rgba(226,84,63,0.5)',
-              background:  'rgba(226,84,63,0.1)',
-              color:       '#ff7a63',
+              borderColor: 'rgba(192,64,48,0.35)',
+              background:  'rgba(192,64,48,0.08)',
+              color:       '#a03020',
               letterSpacing: '0.06em',
             }}
-            animate={{ boxShadow: ['0 0 10px rgba(226,84,63,0.1)', '0 0 28px rgba(226,84,63,0.3)', '0 0 10px rgba(226,84,63,0.1)'] }}
-            transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut' }}
           >
-            <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: '#ff7a63' }} />
+            <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: '#e2543f' }} />
             For Parents
-          </motion.div>
+          </div>
 
           <h2
-            className="font-display font-black text-white mb-4"
-            style={{
-              fontSize: 'clamp(26px, 4.2vw, 40px)', lineHeight: 1.18, letterSpacing: '-0.01em',
-              background: 'linear-gradient(135deg, #ffffff 0%, #ffd4cc 60%, #ffb5a0 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-            }}
+            className="font-display font-black mb-4"
+            style={{ fontSize: 'clamp(26px, 4.2vw, 40px)', lineHeight: 1.18, letterSpacing: '-0.01em', color: '#1a0c08' }}
           >
             How to teach this to a child
           </h2>
-          <p className="text-sm sm:text-base leading-relaxed" style={{ color: '#b08070' }}>
+          <p className="text-sm sm:text-base leading-relaxed" style={{ color: '#6a3a2a' }}>
             Every age needs a different hook. These are the conversations that actually land.
           </p>
         </div>
@@ -172,56 +167,57 @@ export default function ForParents() {
             return (
               <motion.div
                 key={card.ages}
-                className="relative rounded-[18px] p-7 sm:p-8 text-left overflow-hidden"
-                style={{ background: theme.bg, border: `1px solid ${theme.border}`, boxShadow: theme.shadow }}
-                initial={{ opacity: 0, y: 20 }}
+                className="relative rounded-2xl overflow-hidden text-left"
+                style={{ background: '#ffffff', border: `1px solid ${theme.border}`, boxShadow: theme.shadow }}
+                whileHover={{ y: -4, boxShadow: `0 16px 48px ${theme.border}` }}
+                initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: cardIdx * 0.08 }}
-                whileHover={{ y: -4, boxShadow: `0 0 0 1px ${theme.border}, 0 28px 60px -16px ${theme.color}40` }}
+                transition={{ duration: 0.45, delay: cardIdx * 0.08 }}
               >
-                {/* Colored top border accent */}
-                <div
-                  aria-hidden
-                  className="absolute top-0 left-0 right-0 h-[3px]"
-                  style={{ background: `linear-gradient(to right, ${theme.color}, ${theme.color}80, transparent)`, borderRadius: '18px 18px 0 0' }}
-                />
+                {/* Colored top bar */}
+                <div style={{ height: 5, background: theme.topBar }} />
 
-                {/* Icon — top right */}
-                <div
-                  className="absolute top-5 right-6 text-3xl select-none pointer-events-none"
-                  style={{ opacity: 0.7 }}
-                  aria-hidden
-                >
-                  {theme.icon}
-                </div>
+                <div className="p-7 sm:p-8">
+                  {/* Icon — top right */}
+                  <div
+                    className="float-right text-4xl ml-4 mb-2 leading-none select-none pointer-events-none"
+                    aria-hidden
+                    style={{ opacity: 0.85 }}
+                  >
+                    {theme.icon}
+                  </div>
 
-                {/* Age badge */}
-                <span
-                  className="inline-block text-xs font-bold tracking-widest mb-4 px-3 py-1.5 rounded-full"
-                  style={{ color: theme.color, background: theme.badge.bg, border: `1px solid ${theme.badge.border}`, letterSpacing: '0.07em' }}
-                >
-                  {card.ages}
-                </span>
+                  {/* Age badge */}
+                  <span
+                    className="inline-block text-xs font-bold tracking-widest mb-4 px-3 py-1.5 rounded-full"
+                    style={{ color: theme.color, background: theme.badgeBg, border: `1px solid ${theme.badgeBorder}`, letterSpacing: '0.07em' }}
+                  >
+                    {card.ages}
+                  </span>
 
-                {/* Title */}
-                <h3
-                  className="font-display font-black mb-3"
-                  style={{ fontSize: 'clamp(17px, 2.2vw, 21px)', color: '#F6F1E4', lineHeight: 1.3 }}
-                >
-                  {card.title}
-                </h3>
+                  {/* Title */}
+                  <h3
+                    className="font-display font-black mb-3 clear-right"
+                    style={{ fontSize: 'clamp(17px, 2.2vw, 21px)', color: '#1a2e1a', lineHeight: 1.3 }}
+                  >
+                    {card.title}
+                  </h3>
 
-                {/* Body */}
-                <p className="text-sm leading-relaxed" style={{ color: '#8aab9c' }}>
-                  {card.body}
-                </p>
-
-                {/* Tie-in line (gold, italic) */}
-                {card.tieIn && (
-                  <p className="mt-3 text-xs leading-relaxed italic" style={{ color: '#d4af37' }}>
-                    {card.tieIn}
+                  {/* Body */}
+                  <p className="text-sm leading-relaxed" style={{ color: '#4a6a55' }}>
+                    {card.body}
                   </p>
-                )}
+
+                  {/* Tie-in line */}
+                  {card.tieIn && (
+                    <p
+                      className="mt-3 text-xs leading-relaxed italic font-medium"
+                      style={{ color: '#8a6a00' }}
+                    >
+                      ↑ {card.tieIn}
+                    </p>
+                  )}
+                </div>
               </motion.div>
             );
           })}
