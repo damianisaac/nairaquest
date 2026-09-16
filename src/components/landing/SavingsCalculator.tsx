@@ -163,9 +163,9 @@ function StatCard({ label, value, explainer, variant = 'default' }: StatCardProp
 export default function SavingsCalculator() {
   const navigate = useNavigate();
 
-  const [startBalance, setStartBalance] = useState(SLIDERS.start.default);
-  const [monthly,      setMonthly]      = useState(SLIDERS.monthly.default);
-  const [years,        setYears]        = useState(SLIDERS.years.default);
+  const [startBalance, setStartBalance] = useState<number>(SLIDERS.start.default);
+  const [monthly,      setMonthly]      = useState<number>(SLIDERS.monthly.default);
+  const [years,        setYears]        = useState<number>(SLIDERS.years.default);
 
   // Detect reduced-motion once at mount
   const reduceMotion = useRef(
