@@ -206,39 +206,55 @@ export default function LandingPage() {
           />
         )}
 
-        {/* Hero copy — sits in the clear sky at the top of the frame */}
-        <div className="relative z-10 flex-1 flex flex-col items-center justify-start text-center pt-20 sm:pt-24 px-6">
-          <div className="max-w-2xl mx-auto">
+        {/* Hero copy */}
+        <div className="relative z-10 flex-1 flex flex-col items-center text-center px-6">
 
-            <motion.h1
-              className="font-display font-bold leading-tight mb-4"
+          {/* Headline — pushed down into the sky */}
+          <motion.div
+            className="w-full max-w-2xl mx-auto pt-44 sm:pt-52"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+          >
+            <h1
+              className="font-display font-bold leading-tight"
               style={{
                 fontSize: 'clamp(26px, 4.4vw, 50px)',
                 letterSpacing: '-0.01em',
                 color: '#2A1D12',
-                textShadow: '0 2px 20px rgba(255,255,255,0.5)',
+                textShadow: '0 2px 20px rgba(255,255,255,0.6)',
               }}
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: 'easeOut' }}
             >
               MASTER THE GAME BEHIND THE MONEY
-            </motion.h1>
+            </h1>
+          </motion.div>
 
-            <motion.p
-              className="mb-8"
+          {/* Spacer — pushes bottom content past the midpoint */}
+          <div className="flex-1 min-h-[32px]" />
+
+          {/* Subtext + CTA — frosted card in the lower half of the hero */}
+          <motion.div
+            className="w-full max-w-md mx-auto mb-10 rounded-2xl px-7 py-8 text-center"
+            style={{
+              background: 'rgba(255,255,255,0.72)',
+              backdropFilter: 'blur(14px)',
+              WebkitBackdropFilter: 'blur(14px)',
+              boxShadow: '0 8px 40px rgba(42,29,18,0.14)',
+            }}
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            <p
+              className="mb-7"
               style={{
-                fontSize: 'clamp(14px, 1.5vw, 17px)',
-                lineHeight: 1.65,
-                color: '#4A3A28',
-                textShadow: '0 1px 14px rgba(255,255,255,0.4)',
+                fontSize: 'clamp(14px, 1.5vw, 16px)',
+                lineHeight: 1.7,
+                color: '#2A1D12',
               }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
             >
               Put your financial IQ to the test, unlock new topics, build streaks, and turn what you learn into smarter financial decisions.
-            </motion.p>
+            </p>
 
             {/* CTA */}
             <AnimatePresence mode="wait">
@@ -252,8 +268,8 @@ export default function LandingPage() {
                   <motion.button
                     onClick={handleCTA}
                     className="inline-flex items-center gap-2 px-7 py-4 rounded-full font-bold text-base"
-                    style={{ background: '#FBF6E9', color: '#2A1D12', boxShadow: '0 14px 30px -12px rgba(42,29,18,0.35)' }}
-                    whileHover={{ y: -2, boxShadow: '0 18px 34px -12px rgba(42,29,18,0.4)' }}
+                    style={{ background: '#2A1D12', color: '#FBF6E9', boxShadow: '0 14px 30px -12px rgba(42,29,18,0.45)' }}
+                    whileHover={{ y: -2, boxShadow: '0 18px 34px -12px rgba(42,29,18,0.5)' }}
                     whileTap={{ scale: 0.97 }}
                   >
                     Continue Quest →
@@ -272,8 +288,8 @@ export default function LandingPage() {
                   <motion.button
                     onClick={handleCTA}
                     className="inline-flex items-center gap-2 px-7 py-4 rounded-full font-bold text-base"
-                    style={{ background: '#FBF6E9', color: '#2A1D12', boxShadow: '0 14px 30px -12px rgba(42,29,18,0.35)' }}
-                    whileHover={{ y: -2, boxShadow: '0 18px 34px -12px rgba(42,29,18,0.4)' }}
+                    style={{ background: '#2A1D12', color: '#FBF6E9', boxShadow: '0 14px 30px -12px rgba(42,29,18,0.45)' }}
+                    whileHover={{ y: -2, boxShadow: '0 18px 34px -12px rgba(42,29,18,0.5)' }}
                     whileTap={{ scale: 0.97 }}
                   >
                     Start Your Quest
@@ -293,7 +309,7 @@ export default function LandingPage() {
               )}
             </AnimatePresence>
 
-          </div>
+          </motion.div>
         </div>
 
         {/* Scroll cue */}
