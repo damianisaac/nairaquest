@@ -207,13 +207,16 @@ export default function LandingPage() {
 
       {/* ── Footer ── */}
       <footer className="bg-gray-950 pb-6 pt-4 text-center border-t border-white/5">
-        <p className="text-white/30 text-xs px-4">
+        <p className="text-white/50 text-xs px-4 font-semibold">
           © 2026 NairaQuest 🇳🇬 · Powered by{' '}
           <a href="https://teenscancode.com.ng" target="_blank" rel="noopener noreferrer"
-            className="text-naira-green/60 hover:text-naira-green transition-colors underline underline-offset-2">
+            className="text-naira-green/70 hover:text-naira-green transition-colors underline underline-offset-2">
             Teens Can Code
           </a>
-          {' '}· Educational content only. Consult a licensed financial advisor for personal decisions.
+          {' '}· Educational content only. Consult a licensed financial advisor for personal decisions. ·{' '}
+          <a href="/privacy" className="text-naira-green/70 hover:text-naira-green transition-colors underline underline-offset-2">
+            Trust &amp; Safety
+          </a>
         </p>
       </footer>
 
