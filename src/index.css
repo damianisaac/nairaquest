@@ -66,69 +66,7 @@ body {
   margin: 0;
 }
 
-/* ── Savings Calculator — range slider cross-browser styling ────────────────
-   Applied via .calc-slider class so these rules are scoped and won't
-   collide with any future native range inputs elsewhere in the app.
-   ─────────────────────────────────────────────────────────────────────────── */
-.calc-slider {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 100%;
-  height: 4px;
-  border-radius: 999px;
-  outline: none;
-  cursor: pointer;
-  touch-action: none; /* prevent page scroll while dragging on mobile */
-}
-/* WebKit track (invisible; background set via inline style for fill) */
-.calc-slider::-webkit-slider-runnable-track {
-  height: 4px;
-  border-radius: 999px;
-  background: transparent;
-}
-/* WebKit thumb */
-.calc-slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: #d4af37;
-  border: 3px solid #030712;
-  box-shadow: 0 0 0 1.5px #d4af37;
-  margin-top: -9px;
-  cursor: pointer;
-  transition: transform 120ms ease;
-}
-.calc-slider::-webkit-slider-thumb:hover  { transform: scale(1.14); }
-.calc-slider::-webkit-slider-thumb:active { transform: scale(1.0); }
-/* Firefox track */
-.calc-slider::-moz-range-track {
-  height: 4px;
-  border-radius: 999px;
-  background: rgba(157, 184, 172, 0.22);
-}
-/* Firefox thumb */
-.calc-slider::-moz-range-thumb {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: #d4af37;
-  border: 3px solid #030712;
-  box-shadow: 0 0 0 1.5px #d4af37;
-  cursor: pointer;
-}
-/* Bar chart bars — transition is the only animation; no Framer Motion needed */
-.calc-bar {
-  flex: 1;
-  border-radius: 2px 2px 0 0;
-  min-height: 2px;
-  background: linear-gradient(180deg, #d4af37 0%, #a88424 100%);
-  transition: height 380ms cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-@media (prefers-reduced-motion: reduce) {
-  .calc-slider::-webkit-slider-thumb { transition: none; }
-  .calc-bar                          { transition: none; }
-}
+/* Styles moved to src/styles/index.css (the actual app stylesheet) */
 
 h1,
 h2 {
