@@ -151,8 +151,9 @@
   flex: 1;
   border-radius: 2px 2px 0 0;
   min-height: 2px;
-  background: linear-gradient(180deg, #d4af37 0%, #a88424 100%);
+  background: linear-gradient(180deg, #00e887 0%, #d4af37 55%, #a86020 100%);
   transition: height 380ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 0 4px rgba(212,175,55,0.18);
 }
 @media (prefers-reduced-motion: reduce) {
   .calc-slider::-webkit-slider-thumb { transition: none; }
