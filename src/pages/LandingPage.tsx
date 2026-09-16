@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useGameStore } from '../store/gameStore';
 import TopNav from '../components/ui/TopNav';
 import { sound } from '../components/ui/SoundController';
+import QuickQuestion from '../components/landing/QuickQuestion';
 import type { AgeTrack } from '../types';
 
 const HeroScene = lazy(() => import('../components/3d/HeroScene'));
@@ -155,15 +156,7 @@ export default function LandingPage() {
     }
   }, [searchParams, profile, setSearchParams]);
 
-  useEffect(() => {
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
-    document.documentElement.style.overflow = 'hidden';
-    return () => {
-      document.body.style.overflow = prev;
-      document.documentElement.style.overflow = '';
-    };
-  }, []);
+  // Scrolling is intentionally enabled — the Quick Question section lives below the hero.
 
   const trackRoute = (track: AgeTrack) =>
     track === 'kids' ? '/kids' : track === 'teens' ? '/teens' : '/adults';
@@ -181,7 +174,7 @@ export default function LandingPage() {
   };
 
   return (
-    <div className="h-screen bg-gray-950 ankara-bg overflow-hidden">
+    <div className="bg-gray-950 ankara-bg">
       <TopNav />
 
       <section className="relative h-screen flex flex-col items-center px-4 overflow-hidden">
@@ -418,18 +411,40 @@ export default function LandingPage() {
 
         </div>
 
-        {/* ── Footer ── */}
-        <footer className="relative z-10 pb-3 text-center">
-          <p className="text-white/35 text-xs">
-            © 2026 NairaQuest 🇳🇬 · Powered by{' '}
-            <a href="https://teenscancode.com.ng" target="_blank" rel="noopener noreferrer"
-              className="text-naira-green/70 hover:text-naira-green transition-colors underline underline-offset-2">
-              Teens Can Code
-            </a>
-            {' '}· Educational content only. Consult a licensed financial advisor for personal decisions.
-          </p>
-        </footer>
+        {/* ── Scroll cue ── */}
+        <motion.div
+          className="relative z-10 pb-5 flex flex-col items-center gap-1"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2, duration: 0.6 }}
+        >
+          <span className="text-white/30 text-xs tracking-widest uppercase">Scroll</span>
+          <motion.div
+            className="text-white/30"
+            animate={{ y: [0, 6, 0] }}
+            transition={{ duration: 1.4, repeat: Infinity, ease: 'easeInOut' }}
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </motion.div>
+        </motion.div>
       </section>
+
+      {/* ── Quick Question section ── */}
+      <QuickQuestion />
+
+      {/* ── Footer ── */}
+      <footer className="bg-gray-950 pb-6 pt-4 text-center border-t border-white/5">
+        <p className="text-white/30 text-xs px-4">
+          © 2026 NairaQuest 🇳🇬 · Powered by{' '}
+          <a href="https://teenscancode.com.ng" target="_blank" rel="noopener noreferrer"
+            className="text-naira-green/60 hover:text-naira-green transition-colors underline underline-offset-2">
+            Teens Can Code
+          </a>
+          {' '}· Educational content only. Consult a licensed financial advisor for personal decisions.
+        </p>
+      </footer>
 
       <AnimatePresence>
         {showOnboarding && (
