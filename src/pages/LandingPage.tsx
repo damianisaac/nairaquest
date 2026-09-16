@@ -191,6 +191,11 @@ export default function LandingPage() {
             className="absolute inset-0 w-full h-full object-cover"
             style={{ objectPosition: 'center top' }}
           >
+            {/* Mobile: 480p H.264 — 320 KB */}
+            <source src="/nairaquestbanner-mobile.mp4" type="video/mp4" media="(max-width: 768px)" />
+            {/* Desktop: VP9/WebM — 2.5 MB (Chrome/Firefox/Edge) */}
+            <source src="/nairaquestbanner.webm" type="video/webm" />
+            {/* Desktop: H.264 fallback — 3.5 MB (Safari) */}
             <source src="/nairaquestbanner.mp4" type="video/mp4" />
           </video>
         ) : (
