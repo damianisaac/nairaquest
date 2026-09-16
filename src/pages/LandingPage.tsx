@@ -230,11 +230,11 @@ export default function LandingPage() {
           </motion.div>
 
           {/* Spacer — pushes bottom content past the midpoint */}
-          <div className="flex-1 min-h-[32px]" />
+          <div className="flex-1 min-h-[72px]" />
 
           {/* Subtext + CTA — frosted card in the lower half of the hero */}
           <motion.div
-            className="w-full max-w-md mx-auto mb-10 rounded-2xl px-7 py-8 text-center"
+            className="w-full max-w-md mx-auto mb-8 rounded-2xl px-7 pt-5 pb-7 text-center"
             style={{
               background: 'rgba(255,255,255,0.72)',
               backdropFilter: 'blur(14px)',
