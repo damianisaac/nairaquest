@@ -285,7 +285,7 @@ export default function SavingsCalculator() {
             <SliderRow
               label="Annual return"
               value={annualReturnPct}
-              displayValue={`${annualReturnPct % 1 === 0 ? annualReturnPct : annualReturnPct.toFixed(1)}% p.a.`}
+              displayValue={`${annualReturnPct % 1 === 0 ? annualReturnPct : annualReturnPct.toFixed(1)}% Per Annum`}
               min={SLIDERS.rate.min}
               max={SLIDERS.rate.max}
               step={SLIDERS.rate.step}

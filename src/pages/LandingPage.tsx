@@ -6,6 +6,7 @@ import TopNav from '../components/ui/TopNav';
 import { sound } from '../components/ui/SoundController';
 import QuickQuestion from '../components/landing/QuickQuestion';
 import SavingsCalculator from '../components/landing/SavingsCalculator';
+import ForParents from '../components/landing/ForParents';
 import type { AgeTrack } from '../types';
 
 const HeroScene = lazy(() => import('../components/3d/HeroScene'));
@@ -437,6 +438,9 @@ export default function LandingPage() {
 
       {/* ── Savings Calculator section ── */}
       <SavingsCalculator />
+
+      {/* ── For Parents section ── */}
+      <ForParents />
 
       {/* ── Footer ── */}
       <footer className="bg-gray-950 pb-6 pt-4 text-center border-t border-white/5">
