@@ -216,13 +216,7 @@ export default function SavingsCalculator() {
       <div className="relative max-w-5xl mx-auto">
 
         {/* Header */}
-        <motion.div
-          className="text-center max-w-xl mx-auto mb-12 sm:mb-16"
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
+        <div className="text-center max-w-xl mx-auto mb-12 sm:mb-16">
           {/* Tag */}
           <div
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border text-xs font-semibold mb-6"
@@ -246,16 +240,12 @@ export default function SavingsCalculator() {
             Move the sliders. Watch what starting early actually does to your final balance.
             This is the calculator we wish every young Nigerian saw at 18.
           </p>
-        </motion.div>
+        </div>
 
         {/* Two-column grid: controls left, results right */}
-        <motion.div
+        <div
           className="grid gap-6"
           style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 420px), 1fr))' }}
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
         >
 
           {/* ── Controls column ── */}
@@ -381,7 +371,7 @@ export default function SavingsCalculator() {
             </button>
 
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -97,53 +97,37 @@ export default function QuickQuestion() {
       <div className="relative max-w-xl mx-auto text-center">
 
         {/* Tag */}
-        <motion.div
+        <div
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border text-xs font-semibold mb-7"
           style={{
             borderColor: 'rgba(212,175,55,0.35)',
             background:  'rgba(212,175,55,0.08)',
             color:       '#d4af37',
           }}
-          initial={{ opacity: 0, y: -8 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
         >
           <span className="w-1.5 h-1.5 rounded-full bg-naira-gold flex-shrink-0" />
           Quick Question
-        </motion.div>
+        </div>
 
         {/* Headline */}
-        <motion.h2
+        <h2
           className="font-display font-black leading-tight mb-4 text-white"
           style={{ fontSize: 'clamp(26px, 4.2vw, 40px)', letterSpacing: '-0.01em' }}
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.08 }}
         >
           Would you rather have ₦10,000,000 right now, or ₦1 doubled every day for 30 days?
-        </motion.h2>
+        </h2>
 
         {/* Sub */}
-        <motion.p
+        <p
           className="text-sm sm:text-base leading-relaxed mb-9"
           style={{ color: '#9db8ac' }}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.18 }}
         >
           Pick one. Most people get this wrong on purpose — that's the point.
-        </motion.p>
+        </p>
 
         {/* Choice buttons */}
-        <motion.div
+        <div
           className="flex flex-col sm:flex-row gap-3 justify-center mb-1"
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.45, delay: 0.25 }}
         >
           {([
             { id: 'lump',   label: 'OPTION A', value: '₦10,000,000 today' },
@@ -195,7 +179,7 @@ export default function QuickQuestion() {
               </motion.button>
             );
           })}
-        </motion.div>
+        </div>
 
         {/* Verdict */}
         <AnimatePresence>
