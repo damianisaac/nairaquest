@@ -222,7 +222,7 @@ export default function LandingPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: 'easeOut' }}
             >
-              From the market stall to the Stock Exchange, money is everywhere.
+              MASTER THE GAME BEHIND THE MONEY
             </motion.h1>
 
             <motion.p
@@ -237,7 +237,7 @@ export default function LandingPage() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
             >
-              NairaQuest turns how it all works into a game you'll actually want to play.
+              Put your financial IQ to the test, unlock new topics, build streaks, and turn what you learn into smarter financial decisions.
             </motion.p>
 
             {/* CTA */}
