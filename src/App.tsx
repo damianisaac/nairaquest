@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate, useNavigate } from 'react-route
 import { useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { useGameStore } from './store/gameStore';
+import { supabase, isSupabaseConfigured } from './lib/supabase';
 import LandingPage from './pages/LandingPage';
 import WorldMapPage from './pages/WorldMapPage';
 import KidsDashboard from './pages/KidsDashboard';
@@ -56,12 +57,16 @@ function WalletDisclaimerGate() {
 }
 
 function App() {
-  const { setLiteMode, profile, clearProfile } = useGameStore();
+  const { setLiteMode, clearProfile } = useGameStore();
 
   useEffect(() => {
-    // Guest profiles are session-only — clear them on every fresh page load
-    // so returning visitors always start from the landing page unauthenticated.
-    if (profile?.isGuest) clearProfile();
+    // On every page load: if there is no real Supabase session, wipe the store.
+    // This ensures anyone who isn't signed in with an actual account is always
+    // returned to the landing page unauthenticated — no persisted guest data.
+    if (!isSupabaseConfigured) return;
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (!session) clearProfile();
+    });
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {

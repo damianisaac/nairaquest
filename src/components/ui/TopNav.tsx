@@ -112,15 +112,6 @@ export default function TopNav() {
             </>
           )}
 
-          {!profile && (
-            <button
-              className="btn-primary py-1.5 px-4 text-sm"
-              onClick={() => { sound.click(); navigate('/?onboard=1'); }}
-            >
-              Play as Guest
-            </button>
-          )}
-
           {/* Login */}
           {isSupabaseConfigured && !user && (
             <button

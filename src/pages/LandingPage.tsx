@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef } from 'react';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useGameStore } from '../store/gameStore';
 import TopNav from '../components/ui/TopNav';
@@ -9,146 +9,10 @@ import SavingsCalculator from '../components/landing/SavingsCalculator';
 import ForParents from '../components/landing/ForParents';
 import type { AgeTrack } from '../types';
 
-type OnboardingTrack = AgeTrack | 'teacher';
-
-const AGE_TRACKS: {
-  id: OnboardingTrack; label: string; emoji: string;
-  hook: string; color: string; dark: string;
-}[] = [
-  { id: 'kids',    label: 'Kids',    emoji: '🌟', hook: 'Fun zones, earn stars',        color: '#22c55e', dark: '#14532d' },
-  { id: 'teens',   label: 'Teens',   emoji: '🚀', hook: 'Level up, beat the board',     color: '#a78bfa', dark: '#3b0764' },
-  { id: 'adults',  label: 'Adults',  emoji: '💼', hook: 'Investing, loans, tax & more', color: '#d4af37', dark: '#78350f' },
-  { id: 'teacher', label: 'Teacher', emoji: '🏫', hook: 'Manage class & track students',color: '#38bdf8', dark: '#0c4a6e' },
-];
-
-// ─── Onboarding modal ─────────────────────────────────────────────────────────
-function OnboardingModal({
-  onClose: _onClose,
-  defaultTrack = 'adults',
-}: {
-  onClose: () => void;
-  defaultTrack?: OnboardingTrack;
-}) {
-  const [name, setName] = useState('');
-  const [selectedTrack, setSelectedTrack] = useState<OnboardingTrack>(defaultTrack);
-  const { createProfile } = useGameStore();
-  const navigate = useNavigate();
-
-  const handleStart = () => {
-    if (!name.trim()) return;
-    sound.levelUp();
-    if (selectedTrack === 'teacher') { navigate('/auth?role=teacher'); return; }
-    const ageTrack = selectedTrack as AgeTrack;
-    createProfile(name.trim(), ageTrack, 'general', true);
-    if (selectedTrack === 'kids') navigate('/kids');
-    else if (selectedTrack === 'teens') navigate('/teens');
-    else navigate('/adults');
-  };
-
-  return (
-    <motion.div
-      className="fixed inset-0 z-[100] flex items-center justify-center p-4"
-      style={{ background: 'rgba(0,0,0,0.8)', backdropFilter: 'blur(10px)' }}
-      initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-    >
-      <motion.div
-        className="w-full max-w-md card-glass p-6 space-y-5"
-        initial={{ scale: 0.85, y: 24 }} animate={{ scale: 1, y: 0 }} exit={{ scale: 0.85, y: 24 }}
-        transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-      >
-        <div className="text-center">
-          <motion.div className="text-5xl mb-3"
-            animate={{ rotate: [0, -10, 10, -5, 0] }}
-            transition={{ duration: 1, repeat: Infinity, repeatDelay: 2 }}>
-            🐚
-          </motion.div>
-          <h2 className="font-display text-2xl text-white">Welcome, Explorer!</h2>
-          <p className="text-white/55 text-sm mt-1">Set up your adventure profile</p>
-        </div>
-
-        <div>
-          <label className="block text-xs text-white/55 mb-2 font-semibold">What should we call you?</label>
-          <input
-            className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/30 focus:outline-none focus:border-naira-green transition-colors"
-            placeholder="Your name or nickname"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            onKeyDown={(e) => e.key === 'Enter' && handleStart()}
-            maxLength={24}
-            autoFocus
-          />
-        </div>
-
-        <div>
-          <label className="block text-xs text-white/55 mb-2.5 font-semibold">Choose your adventure track:</label>
-          <div className="grid grid-cols-2 gap-2">
-            {AGE_TRACKS.map((track) => {
-              const active = selectedTrack === track.id;
-              return (
-                <motion.button
-                  key={track.id}
-                  onClick={() => { setSelectedTrack(track.id); sound.click(); }}
-                  className="relative flex flex-col items-start gap-1 p-3 rounded-xl border-2 transition-all text-left overflow-hidden"
-                  style={{
-                    borderColor: active ? track.color : 'rgba(255,255,255,0.1)',
-                    background: active
-                      ? `linear-gradient(135deg, ${track.dark}80, ${track.color}18)`
-                      : 'rgba(255,255,255,0.04)',
-                    boxShadow: active ? `0 0 16px ${track.color}30` : 'none',
-                  }}
-                  whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
-                >
-                  <span className="text-2xl">{track.emoji}</span>
-                  <div className="font-black text-sm text-white">{track.label}</div>
-                  <div className="text-xs leading-tight" style={{ color: active ? track.color + 'cc' : 'rgba(255,255,255,0.4)' }}>
-                    {track.hook}
-                  </div>
-                  {active && (
-                    <motion.div
-                      className="absolute top-2 right-2 w-4 h-4 rounded-full flex items-center justify-center text-xs font-black text-white"
-                      style={{ background: track.color }}
-                      initial={{ scale: 0 }} animate={{ scale: 1 }}
-                    >
-                      ✓
-                    </motion.div>
-                  )}
-                </motion.button>
-              );
-            })}
-          </div>
-        </div>
-
-        <motion.button
-          className="btn-gold w-full"
-          onClick={handleStart}
-          disabled={!name.trim()}
-          style={{ opacity: name.trim() ? 1 : 0.45, cursor: name.trim() ? 'pointer' : 'not-allowed' }}
-          whileHover={name.trim() ? { scale: 1.02 } : {}}
-          whileTap={name.trim() ? { scale: 0.98 } : {}}
-        >
-          Enter the Adventure →
-        </motion.button>
-      </motion.div>
-    </motion.div>
-  );
-}
-
 // ─── Landing page ─────────────────────────────────────────────────────────────
 export default function LandingPage() {
   const { profile } = useGameStore();
-  const [showOnboarding, setShowOnboarding] = useState(false);
-  const [defaultTrack, setDefaultTrack] = useState<OnboardingTrack>('adults');
   const navigate = useNavigate();
-  const [searchParams, setSearchParams] = useSearchParams();
-
-  useEffect(() => {
-    if (searchParams.get('onboard') === '1' && !profile) {
-      setShowOnboarding(true);
-      setSearchParams({}, { replace: true });
-    }
-  }, [searchParams, profile, setSearchParams]);
-
-  // Scrolling is intentionally enabled — the Quick Question section lives below the hero.
 
   const trackRoute = (track: AgeTrack) =>
     track === 'kids' ? '/kids' : track === 'teens' ? '/teens' : '/adults';
@@ -156,7 +20,7 @@ export default function LandingPage() {
   const handleCTA = () => {
     sound.click();
     if (profile) navigate(trackRoute(profile.ageTrack));
-    else setShowOnboarding(true);
+    else navigate('/auth');
   };
 
   const reduceMotion = useRef(
@@ -353,14 +217,6 @@ export default function LandingPage() {
         </p>
       </footer>
 
-      <AnimatePresence>
-        {showOnboarding && (
-          <OnboardingModal
-            onClose={() => setShowOnboarding(false)}
-            defaultTrack={defaultTrack}
-          />
-        )}
-      </AnimatePresence>
     </div>
   );
 }
