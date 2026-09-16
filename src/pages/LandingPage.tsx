@@ -1,4 +1,4 @@
-import { useState, useEffect, lazy, Suspense } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useGameStore } from '../store/gameStore';
@@ -8,8 +8,6 @@ import QuickQuestion from '../components/landing/QuickQuestion';
 import SavingsCalculator from '../components/landing/SavingsCalculator';
 import ForParents from '../components/landing/ForParents';
 import type { AgeTrack } from '../types';
-
-const HeroScene = lazy(() => import('../components/3d/HeroScene'));
 
 type OnboardingTrack = AgeTrack | 'teacher';
 
@@ -21,14 +19,6 @@ const AGE_TRACKS: {
   { id: 'teens',   label: 'Teens',   emoji: '🚀', hook: 'Level up, beat the board',     color: '#a78bfa', dark: '#3b0764' },
   { id: 'adults',  label: 'Adults',  emoji: '💼', hook: 'Investing, loans, tax & more', color: '#d4af37', dark: '#78350f' },
   { id: 'teacher', label: 'Teacher', emoji: '🏫', hook: 'Manage class & track students',color: '#38bdf8', dark: '#0c4a6e' },
-];
-
-const FEATURE_BADGES = [
-  { icon: '🗺️', label: '9 Financial Zones' },
-  { icon: '🏆', label: '18 Badges' },
-  { icon: '🆓', label: 'Free to Play' },
-  { icon: '🇳🇬', label: 'Made for Nigeria' },
-  { icon: '📱', label: 'Works Offline' },
 ];
 
 // ─── Onboarding modal ─────────────────────────────────────────────────────────
@@ -145,7 +135,7 @@ function OnboardingModal({
 
 // ─── Landing page ─────────────────────────────────────────────────────────────
 export default function LandingPage() {
-  const { profile, liteMode } = useGameStore();
+  const { profile } = useGameStore();
   const [showOnboarding, setShowOnboarding] = useState(false);
   const [defaultTrack, setDefaultTrack] = useState<OnboardingTrack>('adults');
   const navigate = useNavigate();
@@ -169,260 +159,148 @@ export default function LandingPage() {
     else setShowOnboarding(true);
   };
 
-  const handleTrackPill = (track: OnboardingTrack) => {
-    sound.click();
-    if (profile) navigate(trackRoute(profile.ageTrack));
-    else { setDefaultTrack(track); setShowOnboarding(true); }
-  };
+  const reduceMotion = useRef(
+    typeof window !== 'undefined' &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  ).current;
 
   return (
     <div className="bg-gray-950 ankara-bg">
       <TopNav />
 
-      <section className="relative h-screen flex flex-col items-center px-4 overflow-hidden">
-
-        {/* ── Video + 3D background ── */}
-        <div className="absolute inset-0 z-0">
-          <video autoPlay muted loop playsInline
-            className="absolute inset-0 w-full h-full object-cover object-center">
-            <source src="/banner.mp4" type="video/mp4" />
+      {/*
+        ── Hero: Lagos street video background ──────────────────────────────────
+        Performance note: /public/nairaquestbanner.mp4 should be compressed
+        before shipping (target ≤ 4 MB, H.264 + AAC, 1280×720 or lower).
+        A separate WebM/VP9 version improves load times on Chrome/Firefox.
+        Consider a 480p mobile version served via <source media="…">.
+      */}
+      <section
+        className="relative h-screen flex flex-col overflow-hidden"
+        style={{ background: '#BFE0F2' }}
+      >
+        {/* Video — hidden when prefers-reduced-motion is set */}
+        {!reduceMotion ? (
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/banner.jpeg"
+            preload="metadata"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ objectPosition: 'center top' }}
+          >
+            <source src="/nairaquestbanner.mp4" type="video/mp4" />
           </video>
-          {!liteMode && (
-            <Suspense fallback={null}><HeroScene /></Suspense>
-          )}
-          {/* Gradient overlay — richer than before for legibility */}
-          <div className="absolute inset-0"
-            style={{ background: 'linear-gradient(to bottom, rgba(3,7,18,0.2) 0%, rgba(3,7,18,0.38) 60%, rgba(3,7,18,0.7) 100%)' }} />
-
-          {/* Coloured ambient orbs */}
-          <motion.div className="absolute rounded-full pointer-events-none"
-            style={{ width: 500, height: 500, top: -180, right: -150, background: 'radial-gradient(circle, rgba(212,175,55,0.18) 0%, transparent 65%)', filter: 'blur(70px)' }}
-            animate={{ scale: [1, 1.15, 1], opacity: [0.6, 1, 0.6] }}
-            transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+        ) : (
+          /* Reduced-motion fallback: static sky gradient, no autoplay */
+          <div
+            className="absolute inset-0"
+            style={{ background: 'linear-gradient(180deg, #7FC4E8 0%, #CDEAF6 78%)' }}
           />
-          <motion.div className="absolute rounded-full pointer-events-none"
-            style={{ width: 400, height: 400, bottom: 0, left: -120, background: 'radial-gradient(circle, rgba(34,197,94,0.15) 0%, transparent 65%)', filter: 'blur(80px)' }}
-            animate={{ scale: [1, 1.22, 1], opacity: [0.5, 0.85, 0.5] }}
-            transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
-          />
-          <motion.div className="absolute rounded-full pointer-events-none"
-            style={{ width: 280, height: 280, top: '35%', left: '30%', background: 'radial-gradient(circle, rgba(167,139,250,0.1) 0%, transparent 65%)', filter: 'blur(60px)' }}
-            animate={{ scale: [1, 1.3, 1], opacity: [0.4, 0.7, 0.4] }}
-            transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut', delay: 6 }}
-          />
-        </div>
+        )}
 
-        {/* ── Floating ₦ symbols ── */}
-        {[
-          { size: 80, top: '15%', left: '8%', delay: 0 },
-          { size: 48, top: '55%', left: '4%', delay: 1.5 },
-          { size: 100, top: '20%', right: '6%', left: undefined, delay: 0.8 },
-          { size: 56, top: '65%', right: '5%', left: undefined, delay: 2.2 },
-          { size: 36, top: '40%', left: '92%', delay: 1 },
-        ].map((p, i) => (
-          <motion.div
-            key={i}
-            className="absolute font-black select-none pointer-events-none"
-            style={{
-              fontSize: p.size,
-              top: p.top,
-              left: p.left,
-              right: (p as { right?: string }).right,
-              color: i % 2 === 0 ? 'rgba(212,175,55,0.07)' : 'rgba(34,197,94,0.07)',
-              zIndex: 1,
-            }}
-            animate={{ y: [0, -18, 0], opacity: [0.5, 1, 0.5] }}
-            transition={{ duration: 5 + i * 1.2, repeat: Infinity, ease: 'easeInOut', delay: p.delay }}
-          >
-            ₦
-          </motion.div>
-        ))}
+        {/* Hero copy — sits in the clear sky at the top of the frame */}
+        <div className="relative z-10 flex-1 flex flex-col items-center justify-start text-center pt-20 sm:pt-24 px-6">
+          <div className="max-w-2xl mx-auto">
 
-        {/* ── Main content ── */}
-        <div className="relative z-10 flex-1 flex flex-col items-center justify-center w-full max-w-2xl mx-auto text-center gap-3 sm:gap-4 pt-16">
-
-          {/* Eyebrow */}
-          <motion.div
-            className="flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase"
-            style={{
-              color: '#fbbf24',
-              background: 'rgba(0,0,0,0.55)',
-              border: '1px solid rgba(212,175,55,0.35)',
-              backdropFilter: 'blur(8px)',
-            }}
-            initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
-          >
-            <span>⚡</span>
-            Master Money · Level Up Life
-            <span>⚡</span>
-          </motion.div>
-
-          {/* Title */}
-          <motion.h1
-            className="font-display font-black tracking-tight leading-none text-6xl sm:text-8xl pointer-events-none select-none"
-            style={{
-              background: 'linear-gradient(135deg, #d4af37 0%, #22c55e 45%, #00b86a 70%, #d4af37 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-              filter: 'drop-shadow(0 2px 12px rgba(0,0,0,0.8))',
-            }}
-            initial={{ opacity: 0, scale: 0.82 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, ease: 'easeOut' }}
-          >
-            NairaQuest
-          </motion.h1>
-
-          {/* Tagline */}
-          <motion.p
-            className="text-white/85 text-sm sm:text-base font-semibold"
-            style={{ textShadow: '0 2px 10px rgba(0,0,0,0.9)' }}
-            initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.35 }}
-          >
-            Nigeria's #1 Financial Literacy Adventure
-          </motion.p>
-
-          {/* Feature badges */}
-          <motion.div
-            className="flex gap-1.5 sm:gap-2 flex-wrap justify-center"
-            initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}
-          >
-            {FEATURE_BADGES.map((b, i) => (
-              <motion.span
-                key={b.label}
-                className="flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold text-white/75"
-                style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.16)', backdropFilter: 'blur(8px)' }}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.5 + i * 0.07 }}
-              >
-                {b.icon} {b.label}
-              </motion.span>
-            ))}
-          </motion.div>
-
-          {/* Returning user card */}
-          <AnimatePresence mode="wait">
-            {profile ? (
-              <motion.div
-                key="returning"
-                className="w-full max-w-sm"
-                initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}
-                transition={{ delay: 0.55 }}
-              >
-                <div
-                  className="flex items-center gap-4 px-5 py-4 rounded-2xl"
-                  style={{ background: 'rgba(3,7,18,0.65)', border: '1px solid rgba(255,255,255,0.12)', backdropFilter: 'blur(12px)' }}
-                >
-                  <div
-                    className="w-11 h-11 rounded-full flex items-center justify-center text-lg font-black flex-shrink-0"
-                    style={{ background: 'linear-gradient(135deg, rgba(212,175,55,0.3), rgba(34,197,94,0.2))', border: '1px solid rgba(212,175,55,0.4)' }}
-                  >
-                    {profile.name.charAt(0).toUpperCase()}
-                  </div>
-                  <div className="flex-1 min-w-0 text-left">
-                    <p className="text-white font-black text-sm leading-tight">Welcome back, {profile.name}!</p>
-                    <div className="flex items-center gap-2 mt-1">
-                      <span className="text-xs px-1.5 py-0.5 rounded-full font-bold"
-                        style={{ background: 'rgba(212,175,55,0.2)', color: '#fbbf24', border: '1px solid rgba(212,175,55,0.35)' }}>
-                        Lv {profile.level}
-                      </span>
-                      {profile.dailyStreak > 0 && (
-                        <span className="text-xs text-orange-400 font-semibold">{profile.dailyStreak}🔥 streak</span>
-                      )}
-                    </div>
-                  </div>
-                  <div className="text-white/30 text-lg flex-shrink-0">→</div>
-                </div>
-              </motion.div>
-            ) : (
-              /* Track selection grid */
-              <motion.div
-                key="tracks"
-                className="grid grid-cols-4 gap-2 max-w-sm sm:max-w-md"
-                initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.55 }}
-              >
-                {AGE_TRACKS.map((t, i) => (
-                  <motion.button
-                    key={t.id}
-                    onClick={() => handleTrackPill(t.id)}
-                    className="relative flex flex-col items-center gap-0.5 py-2 px-2 rounded-xl border overflow-hidden text-center"
-                    style={{
-                      background: `linear-gradient(145deg, ${t.dark}60, rgba(3,7,18,0.8))`,
-                      border: `1px solid ${t.color}45`,
-                      backdropFilter: 'blur(8px)',
-                    }}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.6 + i * 0.07, type: 'spring', stiffness: 280, damping: 22 }}
-                    whileHover={{ scale: 1.06, y: -3, boxShadow: `0 8px 28px ${t.color}35`, borderColor: t.color + '90' }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    {/* Glow bg on hover */}
-                    <motion.div className="absolute inset-0 opacity-0 rounded-2xl"
-                      style={{ background: `radial-gradient(circle at center, ${t.color}18, transparent 70%)` }}
-                      whileHover={{ opacity: 1 }}
-                    />
-                    <span className="text-xl sm:text-2xl relative z-10">{t.emoji}</span>
-                    <span className="text-xs font-black text-white relative z-10">{t.label}</span>
-                    <span className="text-xs leading-tight relative z-10 hidden sm:block" style={{ color: t.color + 'bb' }}>{t.hook}</span>
-                  </motion.button>
-                ))}
-              </motion.div>
-            )}
-          </AnimatePresence>
-
-          {/* CTA button */}
-          <motion.div
-            className="flex flex-col items-center gap-2 w-full sm:w-auto"
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.75 }}
-          >
-            <motion.button
-              onClick={handleCTA}
-              className="text-base sm:text-lg px-7 py-3.5 sm:px-8 sm:py-4 rounded-2xl font-black w-full sm:w-auto transition-colors"
+            <motion.h1
+              className="font-display font-bold leading-tight mb-4"
               style={{
-                background: '#0f172a',
-                border: '1.5px solid rgba(255,255,255,0.2)',
-                color: '#f1f5f9',
+                fontSize: 'clamp(26px, 4.4vw, 50px)',
+                letterSpacing: '-0.01em',
+                color: '#2A1D12',
+                textShadow: '0 2px 20px rgba(255,255,255,0.5)',
               }}
-              whileHover={{ scale: 1.05, borderColor: '#22c55e', boxShadow: '0 0 24px rgba(34,197,94,0.25)' }}
-              whileTap={{ scale: 0.97 }}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
             >
-              {profile ? 'Continue Adventure →' : 'Start Your Adventure →'}
-            </motion.button>
+              From the market stall to the Stock Exchange, money is everywhere.
+            </motion.h1>
 
-            {!profile && (
-              <motion.button
-                onClick={() => { sound.click(); navigate('/auth'); }}
-                initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.95 }}
-                className="flex items-center gap-1 px-4 py-1.5 rounded-full text-xs font-semibold transition-colors"
-                style={{
-                  background: '#0f172a',
-                  border: '1.5px solid rgba(255,255,255,0.25)',
-                  color: '#e2e8f0',
-                }}
-                whileHover={{ borderColor: '#22c55e', scale: 1.03 }}
-              >
-                Already have an account?&nbsp;
-                <span style={{ color: '#22c55e', fontWeight: 700 }}>Sign in →</span>
-              </motion.button>
-            )}
-          </motion.div>
+            <motion.p
+              className="mb-8"
+              style={{
+                fontSize: 'clamp(14px, 1.5vw, 17px)',
+                lineHeight: 1.65,
+                color: '#4A3A28',
+                textShadow: '0 1px 14px rgba(255,255,255,0.4)',
+              }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+            >
+              NairaQuest turns how it all works into a game you'll actually want to play.
+            </motion.p>
 
+            {/* CTA */}
+            <AnimatePresence mode="wait">
+              {profile ? (
+                <motion.div
+                  key="returning"
+                  initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}
+                  transition={{ delay: 0.3 }}
+                  className="flex flex-col items-center gap-3"
+                >
+                  <motion.button
+                    onClick={handleCTA}
+                    className="inline-flex items-center gap-2 px-7 py-4 rounded-full font-bold text-base"
+                    style={{ background: '#FBF6E9', color: '#2A1D12', boxShadow: '0 14px 30px -12px rgba(42,29,18,0.35)' }}
+                    whileHover={{ y: -2, boxShadow: '0 18px 34px -12px rgba(42,29,18,0.4)' }}
+                    whileTap={{ scale: 0.97 }}
+                  >
+                    Continue Quest →
+                  </motion.button>
+                  <span className="text-sm font-semibold" style={{ color: '#4A3A28' }}>
+                    Welcome back, {profile.name}!
+                  </span>
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="new"
+                  initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                  className="flex flex-col items-center gap-3"
+                >
+                  <motion.button
+                    onClick={handleCTA}
+                    className="inline-flex items-center gap-2 px-7 py-4 rounded-full font-bold text-base"
+                    style={{ background: '#FBF6E9', color: '#2A1D12', boxShadow: '0 14px 30px -12px rgba(42,29,18,0.35)' }}
+                    whileHover={{ y: -2, boxShadow: '0 18px 34px -12px rgba(42,29,18,0.4)' }}
+                    whileTap={{ scale: 0.97 }}
+                  >
+                    Start Your Quest
+                  </motion.button>
+                  <motion.button
+                    onClick={() => { sound.click(); navigate('/auth'); }}
+                    className="text-xs font-semibold"
+                    style={{ color: '#6A5A48', background: 'none', border: 'none', cursor: 'pointer' }}
+                    whileHover={{ color: '#2A1D12' } as Record<string, string>}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.5 }}
+                  >
+                    Already have an account? <span style={{ color: '#2A1D12', fontWeight: 700 }}>Sign in →</span>
+                  </motion.button>
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+          </div>
         </div>
 
-        {/* ── Scroll cue ── */}
+        {/* Scroll cue */}
         <motion.div
           className="relative z-10 pb-5 flex flex-col items-center gap-1"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.2, duration: 0.6 }}
+          transition={{ delay: 1.0, duration: 0.6 }}
         >
-          <span className="text-white/30 text-xs tracking-widest uppercase">Scroll</span>
+          <span className="text-xs tracking-widest uppercase font-semibold" style={{ color: 'rgba(42,29,18,0.4)' }}>Scroll</span>
           <motion.div
-            className="text-white/30"
+            style={{ color: 'rgba(42,29,18,0.35)' }}
             animate={{ y: [0, 6, 0] }}
             transition={{ duration: 1.4, repeat: Infinity, ease: 'easeInOut' }}
           >
