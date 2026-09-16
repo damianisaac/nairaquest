@@ -56,7 +56,13 @@ function WalletDisclaimerGate() {
 }
 
 function App() {
-  const { setLiteMode } = useGameStore();
+  const { setLiteMode, profile, clearProfile } = useGameStore();
+
+  useEffect(() => {
+    // Guest profiles are session-only — clear them on every fresh page load
+    // so returning visitors always start from the landing page unauthenticated.
+    if (profile?.isGuest) clearProfile();
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     const hardwareConcurrency = navigator.hardwareConcurrency ?? 2;

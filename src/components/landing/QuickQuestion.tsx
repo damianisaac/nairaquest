@@ -271,11 +271,11 @@ export default function QuickQuestion() {
                 <button
                   className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold transition-colors"
                   style={{ background: '#008751', color: '#ffffff' }}
-                  onClick={() => navigate('/category/savings')}
+                  onClick={() => navigate('/auth')}
                   onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.background = '#005c38'; }}
                   onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.background = '#008751'; }}
                 >
-                  See how compounding works in Savings &amp; Investing
+                  Learn More by Playing
                   <span aria-hidden>→</span>
                 </button>
               </div>

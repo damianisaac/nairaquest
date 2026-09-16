@@ -47,7 +47,7 @@ interface GameState {
   timerManuallySet: boolean;
   excludedCategoryIds: CategoryId[];
 
-  createProfile: (name: string, ageTrack: AgeTrack, userRole?: UserRole) => void;
+  createProfile: (name: string, ageTrack: AgeTrack, userRole?: UserRole, isGuest?: boolean) => void;
   updateAgeTrack: (ageTrack: AgeTrack) => void;
   equipAvatarItems: (itemIds: string[]) => void;
   markWalletDisclaimerSeen: () => void;
@@ -85,7 +85,7 @@ export const useGameStore = create<GameState>()(
       timerManuallySet: false,
       excludedCategoryIds: [],
 
-      createProfile: (name, ageTrack, userRole = 'general') => {
+      createProfile: (name, ageTrack, userRole = 'general', isGuest = false) => {
         const profile: UserProfile = {
           id: crypto.randomUUID(),
           name,
@@ -102,6 +102,7 @@ export const useGameStore = create<GameState>()(
           walletTransactions: [],
           walletDisclaimerSeen: false,
           userRole,
+          isGuest,
         };
         set({ profile, progressByTrack: {}, questionTimerSeconds: TRACK_DEFAULT_TIMER[ageTrack], timerManuallySet: false });
       },

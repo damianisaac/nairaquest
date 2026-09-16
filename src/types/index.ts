@@ -119,6 +119,7 @@ export interface UserProfile {
   walletDisclaimerSeen: boolean;
   // Social
   userRole?: UserRole;
+  isGuest?: boolean;
 }
 
 export interface AvatarItem {

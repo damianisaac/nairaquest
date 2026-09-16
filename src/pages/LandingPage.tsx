@@ -39,7 +39,7 @@ function OnboardingModal({
     sound.levelUp();
     if (selectedTrack === 'teacher') { navigate('/auth?role=teacher'); return; }
     const ageTrack = selectedTrack as AgeTrack;
-    createProfile(name.trim(), ageTrack, 'general');
+    createProfile(name.trim(), ageTrack, 'general', true);
     if (selectedTrack === 'kids') navigate('/kids');
     else if (selectedTrack === 'teens') navigate('/teens');
     else navigate('/adults');
