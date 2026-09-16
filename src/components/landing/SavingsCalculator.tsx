@@ -4,15 +4,15 @@ import { useNavigate } from 'react-router-dom';
 
 // ─── Finance constants ────────────────────────────────────────────────────────
 
-const ANNUAL_RATE    = 0.12; // fixed 12% pa, explained in caption
 const INFLATION_RATE = 0.15; // fixed 15% pa, explained in caption
 
 // ─── Slider config ────────────────────────────────────────────────────────────
 
 const SLIDERS = {
-  start:   { min: 0,  max: 500_000,   step: 5_000, default: 0     },
-  monthly: { min: 0,  max: 1_000_000, step: 5_000, default: 5_000 },
-  years:   { min: 1,  max: 40,        step: 1,     default: 20    },
+  start:   { min: 0,   max: 500_000,   step: 5_000, default: 0     },
+  monthly: { min: 0,   max: 1_000_000, step: 5_000, default: 5_000 },
+  years:   { min: 1,   max: 40,        step: 1,     default: 20    },
+  rate:    { min: 1,   max: 30,        step: 0.5,   default: 12    }, // % per year
 } as const;
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
@@ -166,6 +166,7 @@ export default function SavingsCalculator() {
   const [startBalance, setStartBalance] = useState<number>(SLIDERS.start.default);
   const [monthly,      setMonthly]      = useState<number>(SLIDERS.monthly.default);
   const [years,        setYears]        = useState<number>(SLIDERS.years.default);
+  const [annualReturnPct, setAnnualReturnPct] = useState<number>(SLIDERS.rate.default);
 
   // Detect reduced-motion once at mount
   const reduceMotion = useRef(
@@ -175,14 +176,15 @@ export default function SavingsCalculator() {
 
   // ── Derived calculations (synchronous — no debounce, instant feedback) ──
 
-  const finalBalance = futureValue(startBalance, monthly, years, ANNUAL_RATE);
+  const annualRate   = annualReturnPct / 100;
+  const finalBalance = futureValue(startBalance, monthly, years, annualRate);
   const contributed  = startBalance + monthly * years * 12;
   const growth       = Math.max(finalBalance - contributed, 0);
   const realValue    = finalBalance / Math.pow(1 + INFLATION_RATE, years);
 
   // Year-by-year values for bar chart (one bar per year, max 40)
   const yearlyValues = Array.from({ length: years }, (_, i) =>
-    futureValue(startBalance, monthly, i + 1, ANNUAL_RATE),
+    futureValue(startBalance, monthly, i + 1, annualRate),
   );
   const chartMax = Math.max(...yearlyValues, 1);
 
@@ -280,6 +282,15 @@ export default function SavingsCalculator() {
               step={SLIDERS.years.step}
               onChange={setYears}
             />
+            <SliderRow
+              label="Annual return"
+              value={annualReturnPct}
+              displayValue={`${annualReturnPct % 1 === 0 ? annualReturnPct : annualReturnPct.toFixed(1)}% p.a.`}
+              min={SLIDERS.rate.min}
+              max={SLIDERS.rate.max}
+              step={SLIDERS.rate.step}
+              onChange={setAnnualReturnPct}
+            />
 
             {/* Assumptions caption */}
             <div
@@ -289,7 +300,7 @@ export default function SavingsCalculator() {
                 borderTop: `1px solid ${PANEL.border}`,
               }}
             >
-              Assumes a fixed <strong className="not-italic font-semibold" style={{ color: SAGE }}>12% annual return</strong>, compounded monthly — a reasonable long-term estimate for a diversified Nigerian portfolio — and <strong className="not-italic font-semibold" style={{ color: CORAL }}>15% average annual inflation</strong>, a rough long-term estimate for Nigeria. Both numbers move around a lot in real life. This calculator is here to teach the idea of compounding, not to predict your exact future.
+              Using your chosen <strong className="not-italic font-semibold" style={{ color: SAGE }}>{annualReturnPct % 1 === 0 ? annualReturnPct : annualReturnPct.toFixed(1)}% annual return</strong>, compounded monthly. A diversified Nigerian portfolio might average around 12–18% long-term, but it moves around a lot. Also assumes <strong className="not-italic font-semibold" style={{ color: CORAL }}>15% average annual inflation</strong>, a rough long-term estimate for Nigeria. This calculator teaches the idea of compounding — not a guarantee of your exact future.
             </div>
           </div>
 
@@ -300,7 +311,7 @@ export default function SavingsCalculator() {
               variant="highlight"
               label="FINAL BALANCE"
               value={formatNaira(finalBalance)}
-              explainer="What your account grows to, in future naira — your contributions plus everything they earned along the way. This number isn't adjusted for rising prices yet."
+              explainer={`What your account grows to at ${annualReturnPct % 1 === 0 ? annualReturnPct : annualReturnPct.toFixed(1)}% p.a., compounded monthly — your contributions plus everything they earned. Not yet adjusted for rising prices.`}
             />
 
             <StatCard
