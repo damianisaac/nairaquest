@@ -64,7 +64,7 @@ const TIERS: Tier[] = [
     topBar: 'linear-gradient(to right, #f59e0b, #fbbf24)',
     borderColor: 'rgba(217,119,6,0.22)',
     decorIcon: '⭐',
-    xpLabel: '+10 XP',
+    xpLabel: 'N10',
     ctaTextColor: '#4a2500',
   },
   {
@@ -94,7 +94,7 @@ const TIERS: Tier[] = [
     topBar: 'linear-gradient(to right, #008751, #00b86a)',
     borderColor: 'rgba(0,135,81,0.2)',
     decorIcon: '🏆',
-    xpLabel: '+15 XP',
+    xpLabel: 'N15',
     ctaTextColor: '#ffffff',
   },
   {
@@ -124,7 +124,7 @@ const TIERS: Tier[] = [
     topBar: 'linear-gradient(to right, #2563eb, #60a5fa)',
     borderColor: 'rgba(37,99,235,0.18)',
     decorIcon: '💡',
-    xpLabel: '+20 XP',
+    xpLabel: 'N20',
     ctaTextColor: '#ffffff',
   },
 ];
@@ -244,7 +244,7 @@ function TriviaPreview({ tier, reduceMotion }: { tier: Tier; reduceMotion: boole
             transition={{ duration: 0.2 }}
           >
             {isCorrect
-              ? `✓ Correct! ${tier.xpLabel} earned.`
+              ? `✓ Correct! +${tier.xpLabel} earned.`
               : `✗ Not quite — the answer is ${correctOption?.text}.`}
           </motion.p>
         )}
