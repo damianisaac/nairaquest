@@ -120,6 +120,7 @@ export interface UserProfile {
   // Social
   userRole?: UserRole;
   isGuest?: boolean;
+  referralCode?: string;
 }
 
 export interface AvatarItem {

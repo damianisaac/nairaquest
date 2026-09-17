@@ -25,6 +25,7 @@ export interface DbProfile {
   wallet_balance: number;
   wallet_disclaimer_seen: boolean;
   user_role: 'general' | 'teacher';
+  referral_code: string | null;
   created_at: string;
   updated_at: string;
 }
@@ -205,6 +206,7 @@ export async function getSession() {
 // ─── Profile sync ─────────────────────────────────────────────────────────────
 
 export async function upsertProfile(profile: Omit<DbProfile, 'created_at' | 'updated_at'>) {
+  // referral_code must not be overwritten once set — use ignoreDuplicates for that column
   return supabase.from('profiles').upsert(profile, { onConflict: 'id' });
 }
 

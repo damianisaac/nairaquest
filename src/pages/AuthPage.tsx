@@ -19,6 +19,7 @@ export default function AuthPage() {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const isTeacherFlow = searchParams.get('role') === 'teacher';
+  const refFromUrl = searchParams.get('ref') ?? '';
   const { signIn, signUp, isConfigured } = useAuth();
   const { profile } = useGameStore();
   // Teachers land here in sign-up mode by default
@@ -31,6 +32,7 @@ export default function AuthPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
+  const [referralCode, setReferralCode] = useState(refFromUrl.toUpperCase());
   // Teachers are always on the adults track
   const [ageTrack, setAgeTrack] = useState<AgeTrack>('adults');
 
@@ -101,7 +103,7 @@ export default function AuthPage() {
         else navigate(freshProfile ? '/map' : '/');
       } else {
         if (!name.trim()) { setError('Please enter your name.'); return; }
-        const result = await signUp(email, password, name.trim(), ageTrack, isTeacherFlow ? 'teacher' : 'general');
+        const result = await signUp(email, password, name.trim(), ageTrack, isTeacherFlow ? 'teacher' : 'general', referralCode.trim() || undefined);
         if (result.error) { setError(friendlyAuthError(result.error.message)); return; }
         sound.levelUp();
         if (result.needsConfirmation) {
@@ -227,6 +229,24 @@ export default function AuthPage() {
                       <p className="text-naira-gold text-xs font-semibold">Teacher Account</p>
                       <p className="text-white/40 text-xs">You'll be able to create classes and assign zones to students.</p>
                     </div>
+                  </div>
+                )}
+
+                {/* Referral code — optional */}
+                {!isTeacherFlow && (
+                  <div>
+                    <label className="block text-xs text-white/50 mb-1.5">
+                      Referral code <span className="text-white/30">(optional)</span>
+                    </label>
+                    <input
+                      className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/15 text-white placeholder-white/25 focus:outline-none focus:border-naira-green transition-colors font-mono uppercase tracking-widest text-sm"
+                      placeholder="e.g. ABCD1234"
+                      value={referralCode}
+                      onChange={(e) => setReferralCode(e.target.value.toUpperCase())}
+                      maxLength={12}
+                      spellCheck={false}
+                    />
+                    <p className="text-xs text-white/30 mt-1">Got a code from a friend? Both of you earn wallet credits.</p>
                   </div>
                 )}
               </motion.div>

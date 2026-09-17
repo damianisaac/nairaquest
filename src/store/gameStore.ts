@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import type { AgeTrack, CategoryId, CategoryProgress, UserProfile, GameSession, SessionResult, Difficulty, UserRole, ClassContext } from '../types';
+import { generateReferralCode } from '../lib/referral';
 import { CATEGORIES } from '../data/categories';
 import { BADGES } from '../data/badges';
 import { computeSessionResult, calcNewStreak, isTodayStr, getMasteryCap, getMasteryPercent, isCategoryUnlocked } from '../utils/scoring';
@@ -103,6 +104,7 @@ export const useGameStore = create<GameState>()(
           walletDisclaimerSeen: false,
           userRole,
           isGuest,
+          referralCode: generateReferralCode(),
         };
         set({ profile, progressByTrack: {}, questionTimerSeconds: TRACK_DEFAULT_TIMER[ageTrack], timerManuallySet: false });
       },

@@ -13,6 +13,8 @@ import { isCategoryUnlocked } from '../utils/scoring';
 import { ALL_QUESTIONS } from '../data/questions';
 import CelebrationOverlay from '../components/celebration/CelebrationOverlay';
 import { buildCelebrationConfig } from '../utils/celebration';
+import { onSessionComplete } from '../lib/referral';
+import { supabase, isSupabaseConfigured } from '../lib/supabase';
 import type { CategoryId } from '../types';
 
 export default function ResultsPage() {
@@ -22,6 +24,36 @@ export default function ResultsPage() {
   const progress = selectProgress(state);
   const soundPlayed = useRef(false);
   const [celebrationDone, setCelebrationDone] = useState(false);
+  const [referralReward, setReferralReward] = useState<number | null>(null);
+  const referralChecked = useRef(false);
+
+  // Check referral reward once per results screen mount
+  useEffect(() => {
+    if (referralChecked.current || !isSupabaseConfigured) return;
+    referralChecked.current = true;
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (!session) return;
+      onSessionComplete(session.user.id).then((result) => {
+        if (result.rewarded && result.referredReward > 0) {
+          setReferralReward(result.referredReward);
+          // Sync the updated wallet balance from the DB into the local store
+          supabase
+            .from('profiles')
+            .select('wallet_balance')
+            .eq('id', session.user.id)
+            .single()
+            .then(({ data }) => {
+              if (data) {
+                useGameStore.setState((s) => ({
+                  profile: s.profile ? { ...s.profile, walletBalance: (data as { wallet_balance: number }).wallet_balance } : s.profile,
+                }));
+              }
+            });
+        }
+      });
+    });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // Build celebration config once (stable reference)
   const celebrationConfig = useMemo(() => {
@@ -262,6 +294,26 @@ export default function ResultsPage() {
               <p className="text-white/70 text-sm">
                 {lastResult.levelBefore} → <strong className="text-white">{lastResult.levelAfter}</strong>
               </p>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Referral reward banner */}
+        <AnimatePresence>
+          {referralReward !== null && (
+            <motion.div
+              className="mb-5 p-4 rounded-2xl border border-naira-green/40 bg-naira-green/10 flex items-center gap-3"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+            >
+              <span className="text-2xl flex-shrink-0">🎉</span>
+              <div>
+                <p className="font-bold text-naira-green-light text-sm">Referral reward unlocked!</p>
+                <p className="text-white/60 text-xs mt-0.5">
+                  You completed 3 sessions — <span className="text-white font-semibold">+N{referralReward}</span> added to your wallet.
+                </p>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>

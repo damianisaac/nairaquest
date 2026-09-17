@@ -14,6 +14,7 @@ import {
   fetchAllProgress,
   upsertProgress,
 } from '../lib/supabase';
+import { applyReferralCode, consumePendingReferralCode } from '../lib/referral';
 import { useGameStore, selectProgress } from '../store/gameStore';
 import { CATEGORIES } from '../data/categories';
 import type { CategoryId, CategoryProgress, UserRole } from '../types';
@@ -62,9 +63,14 @@ export function useAuth() {
               walletBalance: dbProfile.wallet_balance ?? 0,
               walletDisclaimerSeen: dbProfile.wallet_disclaimer_seen ?? false,
               userRole: (dbProfile.user_role ?? 'general') as UserRole,
+              referralCode: dbProfile.referral_code ?? undefined,
             }
           : s.profile,
       }));
+
+      // Apply any referral code that was stored before the profile was pushed
+      const pending = consumePendingReferralCode();
+      if (pending) await applyReferralCode(userId, pending);
     }
 
     if (dbProgress && dbProgress.length > 0) {
@@ -129,6 +135,7 @@ export function useAuth() {
       wallet_balance: profile.walletBalance,
       wallet_disclaimer_seen: profile.walletDisclaimerSeen,
       user_role: profile.userRole ?? 'general',
+      referral_code: profile.referralCode ?? null,
     });
 
     // Sync wallet transactions (only ones that haven't been synced yet)
@@ -182,15 +189,26 @@ export function useAuth() {
     return () => subscription.unsubscribe();
   }, [pullFromCloud]);
 
-  const handleSignUp = async (email: string, password: string, name: string, ageTrack: 'kids' | 'teens' | 'adults', userRole: UserRole = 'general') => {
+  const handleSignUp = async (
+    email: string,
+    password: string,
+    name: string,
+    ageTrack: 'kids' | 'teens' | 'adults',
+    userRole: UserRole = 'general',
+    referralCode?: string,
+  ) => {
     const { user, error, needsConfirmation } = await signUp(email, password, name, ageTrack);
     if (error) return { error };
     // Always create a local profile so the user can play immediately
     useGameStore.getState().createProfile(name, ageTrack, userRole);
-    // If email confirmation is required, user doesn't have a session yet —
-    // skip the cloud push until they verify and the onAuthStateChange fires
     if (user && !needsConfirmation) {
       await pushToCloud(user.id);
+      // Apply referral code now that the profile row exists in the DB
+      if (referralCode) await applyReferralCode(user.id, referralCode);
+    } else if (referralCode) {
+      // Email confirmation is pending — store the code to apply after verification
+      const { storePendingReferralCode } = await import('../lib/referral');
+      storePendingReferralCode(referralCode);
     }
     return { error: null, needsConfirmation };
   };

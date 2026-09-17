@@ -11,7 +11,10 @@ import {
   WALLET_DISCLAIMER,
 } from '../utils/wallet';
 import { CATEGORY_MAP } from '../data/categories';
+import { fetchReferralStats } from '../lib/referral';
+import { supabase, isSupabaseConfigured } from '../lib/supabase';
 import type { WalletTransaction } from '../types';
+import type { ReferralStats } from '../lib/referral';
 
 // ─── Kids redirect handled in App.tsx ────────────────────────────────────────
 
@@ -96,6 +99,99 @@ function TxRow({ tx }: { tx: WalletTransaction }) {
       </div>
       <span className="text-naira-gold font-bold text-sm shrink-0">+{formatPlayNaira(tx.amount)}</span>
     </div>
+  );
+}
+
+// ─── Invite / Referral section ───────────────────────────────────────────────
+
+function InviteSection({ referralCode }: { referralCode: string }) {
+  const [stats, setStats]       = useState<ReferralStats | null>(null);
+  const [copied, setCopied]     = useState(false);
+
+  useEffect(() => {
+    if (!isSupabaseConfigured || !referralCode) return;
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session) fetchReferralStats(session.user.id).then(setStats);
+    });
+  }, [referralCode]);
+
+  const shareLink = `${window.location.origin}/auth?ref=${referralCode}`;
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(shareLink).catch(() => {});
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <motion.div
+      className="mt-6 rounded-2xl overflow-hidden"
+      style={{ border: '1px solid rgba(0,135,81,0.3)', background: 'rgba(0,135,81,0.06)' }}
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.3 }}
+    >
+      {/* Header */}
+      <div className="px-4 py-3 border-b" style={{ borderColor: 'rgba(0,135,81,0.2)' }}>
+        <div className="flex items-center gap-2">
+          <span className="text-lg">🎁</span>
+          <span className="font-bold text-white text-sm">Invite Friends, Earn Together</span>
+        </div>
+        <p className="text-xs text-white/40 mt-0.5 pl-7">
+          They complete 3 sessions → you get <span className="text-naira-green-light">N500</span>, they get <span className="text-naira-green-light">N200</span>
+        </p>
+      </div>
+
+      <div className="p-4 space-y-4">
+        {/* Referral code display */}
+        <div>
+          <p className="text-xs text-white/40 mb-1.5 uppercase tracking-wide font-semibold">Your referral code</p>
+          <div className="flex items-center gap-2">
+            <span
+              className="flex-1 text-center py-2.5 rounded-xl font-mono font-bold text-naira-green-light tracking-[0.18em] text-lg"
+              style={{ background: 'rgba(0,135,81,0.12)', border: '1px solid rgba(0,135,81,0.3)' }}
+            >
+              {referralCode}
+            </span>
+            <motion.button
+              onClick={handleCopy}
+              className="px-4 py-2.5 rounded-xl text-sm font-bold transition-colors"
+              style={{
+                background: copied ? 'rgba(0,135,81,0.3)' : 'rgba(255,255,255,0.08)',
+                color: copied ? '#00b86a' : 'rgba(255,255,255,0.7)',
+                border: '1px solid rgba(255,255,255,0.1)',
+              }}
+              whileTap={{ scale: 0.96 }}
+            >
+              {copied ? '✓ Copied' : 'Copy link'}
+            </motion.button>
+          </div>
+        </div>
+
+        {/* Stats row */}
+        {stats && (
+          <div className="grid grid-cols-3 gap-2 text-center">
+            {[
+              { label: 'Invited', value: stats.totalReferrals },
+              { label: 'Rewarded', value: stats.rewardedReferrals },
+              { label: 'Pending', value: stats.pendingReferrals },
+            ].map(({ label, value }) => (
+              <div key={label} className="rounded-xl py-2" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.07)' }}>
+                <div className="font-bold text-white text-lg">{value}</div>
+                <div className="text-xs text-white/35">{label}</div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* How it works */}
+        <div className="text-xs text-white/35 space-y-1 pt-1 border-t" style={{ borderColor: 'rgba(255,255,255,0.06)' }}>
+          <p>① Share your link with a friend</p>
+          <p>② They sign up and complete 3 quiz sessions</p>
+          <p>③ Both wallets are credited automatically · one-time per friend</p>
+        </div>
+      </div>
+    </motion.div>
   );
 }
 
@@ -202,6 +298,11 @@ export default function WalletPage() {
             </motion.div>
           )}
         </AnimatePresence>
+
+        {/* Invite friends */}
+        {isSupabaseConfigured && profile.referralCode && (
+          <InviteSection referralCode={profile.referralCode} />
+        )}
 
         {/* Disclaimer */}
         <div className="mt-6 rounded-xl p-3 text-xs text-white/25 leading-relaxed"
