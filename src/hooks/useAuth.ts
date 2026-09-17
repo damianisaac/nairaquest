@@ -44,39 +44,36 @@ export function useAuth() {
     ]);
 
     if (dbProfile) {
-      // Capture local values BEFORE createProfile wipes the store.
-      // createProfile resets walletBalance/level/mastery to 0, so we must
-      // snapshot them here to use in the Math.max merge below.
-      const pre = useGameStore.getState().profile;
-      const localWallet  = pre?.walletBalance        ?? 0;
-      const localMastery = pre?.totalMasteryPoints   ?? 0;
-      const localLevel   = pre?.level                ?? 0;
-      const localBadges  = pre?.earnedBadgeIds       ?? [];
-      const localTxns    = pre?.walletTransactions    ?? [];
+      const existingProfile = useGameStore.getState().profile;
 
-      useGameStore.getState().createProfile(dbProfile.name, dbProfile.age_track, (dbProfile.user_role ?? 'general') as UserRole);
+      if (!existingProfile) {
+        // No local profile (fresh device/browser) — create one from DB data
+        useGameStore.getState().createProfile(dbProfile.name, dbProfile.age_track, (dbProfile.user_role ?? 'general') as UserRole);
+      }
 
+      // Merge DB fields into the store. For values that can be earned locally
+      // (wallet, mastery, level) take the higher value so a stale DB pull
+      // never erases credits from a session that hasn't synced yet.
+      // Reading s.profile inside setState is always the current value,
+      // so concurrent pullFromCloud calls compose safely (no snapshot race).
       useGameStore.setState((s) => ({
         profile: s.profile
           ? {
               ...s.profile,
               id: userId,
-              // Take the higher of local (just-played) vs DB (persisted).
-              // This prevents a stale DB pull from erasing credits/mastery
-              // earned in the current session before syncNow has pushed them.
-              level:               Math.max(localLevel,   dbProfile.level          ?? 0),
-              totalMasteryPoints:  Math.max(localMastery, dbProfile.total_mastery  ?? 0),
-              walletBalance:       Math.max(localWallet,  dbProfile.wallet_balance ?? 0),
-              // Merge badge lists so locally-earned badges are never dropped
-              earnedBadgeIds:      [...new Set([...localBadges, ...(dbProfile.badge_ids ?? [])])],
-              walletTransactions:  localTxns,
+              name: dbProfile.name,
+              ageTrack: dbProfile.age_track,
+              level:               Math.max(s.profile.level,               dbProfile.level          ?? 0),
+              totalMasteryPoints:  Math.max(s.profile.totalMasteryPoints,  dbProfile.total_mastery  ?? 0),
+              walletBalance:       Math.max(s.profile.walletBalance,       dbProfile.wallet_balance ?? 0),
+              earnedBadgeIds:      [...new Set([...s.profile.earnedBadgeIds, ...(dbProfile.badge_ids ?? [])])],
               dailyStreak:         dbProfile.daily_streak,
               lastPlayedDate:      dbProfile.last_played,
-              avatarSeed:          dbProfile.avatar_seed,
-              avatarItemIds:       dbProfile.avatar_item_ids ?? [],
-              walletDisclaimerSeen: dbProfile.wallet_disclaimer_seen ?? false,
+              avatarSeed:          dbProfile.avatar_seed ?? s.profile.avatarSeed,
+              avatarItemIds:       dbProfile.avatar_item_ids ?? s.profile.avatarItemIds ?? [],
+              walletDisclaimerSeen: dbProfile.wallet_disclaimer_seen ?? s.profile.walletDisclaimerSeen,
               userRole:            (dbProfile.user_role ?? 'general') as UserRole,
-              referralCode:        dbProfile.referral_code ?? undefined,
+              referralCode:        dbProfile.referral_code ?? s.profile.referralCode,
             }
           : s.profile,
       }));
