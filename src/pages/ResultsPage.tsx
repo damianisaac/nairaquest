@@ -15,15 +15,18 @@ import CelebrationOverlay from '../components/celebration/CelebrationOverlay';
 import { buildCelebrationConfig } from '../utils/celebration';
 import { onSessionComplete } from '../lib/referral';
 import { supabase, isSupabaseConfigured } from '../lib/supabase';
+import { useAuth } from '../hooks/useAuth';
 import type { CategoryId } from '../types';
 
 export default function ResultsPage() {
   const navigate = useNavigate();
   const state = useGameStore();
   const { lastResult, profile, resetSession, startSession } = state;
+  const { syncNow } = useAuth();
   const progress = selectProgress(state);
   const soundPlayed = useRef(false);
   const [celebrationDone, setCelebrationDone] = useState(false);
+  const synced = useRef(false);
   const [referralReward, setReferralReward] = useState<number | null>(null);
   const referralChecked = useRef(false);
 
@@ -61,6 +64,14 @@ export default function ResultsPage() {
     return buildCelebrationConfig(lastResult, progress, profile.ageTrack);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lastResult?.categoryId, lastResult?.newMastery]);
+
+  // Push updated score/mastery to Supabase so the leaderboard reflects this session
+  useEffect(() => {
+    if (synced.current) return;
+    synced.current = true;
+    syncNow();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // Level-up sound plays AFTER the celebration overlay dismisses
   useEffect(() => {
