@@ -262,11 +262,8 @@ export async function recordSession(userId: string, params: {
 // ─── Leaderboard ──────────────────────────────────────────────────────────────
 
 export async function fetchGlobalLeaderboard() {
-  return supabase
-    .from('leaderboard')
-    .select('*')
-    .limit(50)
-    .returns<LeaderboardRow[]>();
+  const { data, error } = await supabase.rpc('global_leaderboard', { lim: 100 });
+  return { data: (data ?? []) as LeaderboardRow[], error };
 }
 
 export async function fetchCategoryLeaderboard(categoryId: CategoryId) {
