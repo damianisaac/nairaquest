@@ -53,14 +53,17 @@ export function useAuth() {
           ? {
               ...s.profile,
               id: userId,
-              level: dbProfile.level,
-              totalMasteryPoints: dbProfile.total_mastery,
+              // For monotonically-increasing values, take the max of local and DB.
+              // This prevents pullFromCloud from overwriting credits/mastery that
+              // were earned in the current session but not yet pushed to Supabase.
+              level: Math.max(s.profile?.level ?? 0, dbProfile.level ?? 0),
+              totalMasteryPoints: Math.max(s.profile?.totalMasteryPoints ?? 0, dbProfile.total_mastery ?? 0),
               dailyStreak: dbProfile.daily_streak,
               lastPlayedDate: dbProfile.last_played,
               earnedBadgeIds: dbProfile.badge_ids,
               avatarSeed: dbProfile.avatar_seed,
               avatarItemIds: dbProfile.avatar_item_ids ?? [],
-              walletBalance: dbProfile.wallet_balance ?? 0,
+              walletBalance: Math.max(s.profile?.walletBalance ?? 0, dbProfile.wallet_balance ?? 0),
               walletDisclaimerSeen: dbProfile.wallet_disclaimer_seen ?? false,
               userRole: (dbProfile.user_role ?? 'general') as UserRole,
               referralCode: dbProfile.referral_code ?? undefined,
