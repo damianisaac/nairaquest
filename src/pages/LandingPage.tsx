@@ -99,19 +99,19 @@ export default function LandingPage() {
 
           {/* Subtext + CTA — frosted card in the lower half of the hero */}
           <motion.div
-            className="w-full max-w-lg mx-auto mb-8 rounded-2xl px-9 pt-5 pb-7 text-center"
+            className="w-full max-w-lg mx-auto mb-8 rounded-2xl px-9 pt-3 pb-7 text-center"
             style={{
-              background: 'rgba(255,255,255,0.72)',
+              background: 'rgba(255,255,255,0.52)',
               backdropFilter: 'blur(14px)',
               WebkitBackdropFilter: 'blur(14px)',
-              boxShadow: '0 8px 40px rgba(42,29,18,0.14)',
+              boxShadow: '0 8px 40px rgba(42,29,18,0.10)',
             }}
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
             <p
-              className="mb-7 font-semibold"
+              className="mb-7 font-bold"
               style={{
                 fontSize: 'clamp(14px, 1.5vw, 16px)',
                 lineHeight: 1.7,
