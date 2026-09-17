@@ -222,6 +222,7 @@ export default function TopNav() {
                 label={WALLET_NAMES[profile.ageTrack].title}
                 onClick={() => { setMenuOpen(false); navigate('/wallet'); }}
               />
+              <NavItem icon="🎁" label="Invite Friends" onClick={() => { setMenuOpen(false); navigate('/wallet'); }} />
               <NavItem icon="👨‍👩‍👧" label="Family Hub" onClick={() => { setMenuOpen(false); navigate('/family'); }} />
               {profile.ageTrack === 'kids' && (
                 <NavItem icon="👩‍👧" label="Parent View" onClick={() => { setMenuOpen(false); navigate('/parent'); }} />

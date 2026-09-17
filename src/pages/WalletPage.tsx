@@ -11,7 +11,7 @@ import {
   WALLET_DISCLAIMER,
 } from '../utils/wallet';
 import { CATEGORY_MAP } from '../data/categories';
-import { fetchReferralStats } from '../lib/referral';
+import { fetchReferralStats, generateReferralCode } from '../lib/referral';
 import { supabase, isSupabaseConfigured } from '../lib/supabase';
 import type { WalletTransaction } from '../types';
 import type { ReferralStats } from '../lib/referral';
@@ -105,11 +105,11 @@ function TxRow({ tx }: { tx: WalletTransaction }) {
 // ─── Invite / Referral section ───────────────────────────────────────────────
 
 function InviteSection({ referralCode }: { referralCode: string }) {
-  const [stats, setStats]       = useState<ReferralStats | null>(null);
-  const [copied, setCopied]     = useState(false);
+  const [stats, setStats]   = useState<ReferralStats | null>(null);
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
-    if (!isSupabaseConfigured || !referralCode) return;
+    if (!isSupabaseConfigured || !referralCode) return;  // wait until code is generated
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (session) fetchReferralStats(session.user.id).then(setStats);
     });
@@ -207,6 +207,26 @@ export default function WalletPage() {
     if (profile.ageTrack === 'kids') navigate('/piggybank');
   }, [profile, navigate]);
 
+  // Generate and save a referral code for existing accounts that predate the referral system
+  useEffect(() => {
+    if (!profile || profile.referralCode) return;
+    const code = generateReferralCode();
+    useGameStore.setState((s) => ({
+      profile: s.profile ? { ...s.profile, referralCode: code } : s.profile,
+    }));
+    if (isSupabaseConfigured) {
+      supabase.auth.getSession().then(({ data: { session } }) => {
+        if (session) {
+          supabase.from('profiles')
+            .update({ referral_code: code })
+            .eq('id', session.user.id)
+            .then(() => {});
+        }
+      });
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [profile?.referralCode]);
+
   if (!profile || profile.ageTrack === 'kids') return null;
 
   const walletName = WALLET_NAMES[profile.ageTrack];
@@ -249,8 +269,13 @@ export default function WalletPage() {
           </div>
         </motion.div>
 
+        {/* Invite friends — shown above history so it's immediately visible */}
+        {isSupabaseConfigured && (
+          <InviteSection referralCode={profile.referralCode ?? ''} />
+        )}
+
         {/* Tabs */}
-        <div className="flex gap-2 mb-4">
+        <div className="flex gap-2 mb-4 mt-6">
           {(['history', 'chart'] as const).map((t) => (
             <button
               key={t}
@@ -298,11 +323,6 @@ export default function WalletPage() {
             </motion.div>
           )}
         </AnimatePresence>
-
-        {/* Invite friends */}
-        {isSupabaseConfigured && profile.referralCode && (
-          <InviteSection referralCode={profile.referralCode} />
-        )}
 
         {/* Disclaimer */}
         <div className="mt-6 rounded-xl p-3 text-xs text-white/25 leading-relaxed"
