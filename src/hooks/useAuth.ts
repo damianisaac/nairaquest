@@ -44,29 +44,39 @@ export function useAuth() {
     ]);
 
     if (dbProfile) {
-      // Use getState() so this callback has no store dependency and won't
-      // be recreated on every store update (prevents the render loop).
+      // Capture local values BEFORE createProfile wipes the store.
+      // createProfile resets walletBalance/level/mastery to 0, so we must
+      // snapshot them here to use in the Math.max merge below.
+      const pre = useGameStore.getState().profile;
+      const localWallet  = pre?.walletBalance        ?? 0;
+      const localMastery = pre?.totalMasteryPoints   ?? 0;
+      const localLevel   = pre?.level                ?? 0;
+      const localBadges  = pre?.earnedBadgeIds       ?? [];
+      const localTxns    = pre?.walletTransactions    ?? [];
+
       useGameStore.getState().createProfile(dbProfile.name, dbProfile.age_track, (dbProfile.user_role ?? 'general') as UserRole);
-      // Manually patch avatarItemIds, badges, and role
+
       useGameStore.setState((s) => ({
         profile: s.profile
           ? {
               ...s.profile,
               id: userId,
-              // For monotonically-increasing values, take the max of local and DB.
-              // This prevents pullFromCloud from overwriting credits/mastery that
-              // were earned in the current session but not yet pushed to Supabase.
-              level: Math.max(s.profile?.level ?? 0, dbProfile.level ?? 0),
-              totalMasteryPoints: Math.max(s.profile?.totalMasteryPoints ?? 0, dbProfile.total_mastery ?? 0),
-              dailyStreak: dbProfile.daily_streak,
-              lastPlayedDate: dbProfile.last_played,
-              earnedBadgeIds: dbProfile.badge_ids,
-              avatarSeed: dbProfile.avatar_seed,
-              avatarItemIds: dbProfile.avatar_item_ids ?? [],
-              walletBalance: Math.max(s.profile?.walletBalance ?? 0, dbProfile.wallet_balance ?? 0),
+              // Take the higher of local (just-played) vs DB (persisted).
+              // This prevents a stale DB pull from erasing credits/mastery
+              // earned in the current session before syncNow has pushed them.
+              level:               Math.max(localLevel,   dbProfile.level          ?? 0),
+              totalMasteryPoints:  Math.max(localMastery, dbProfile.total_mastery  ?? 0),
+              walletBalance:       Math.max(localWallet,  dbProfile.wallet_balance ?? 0),
+              // Merge badge lists so locally-earned badges are never dropped
+              earnedBadgeIds:      [...new Set([...localBadges, ...(dbProfile.badge_ids ?? [])])],
+              walletTransactions:  localTxns,
+              dailyStreak:         dbProfile.daily_streak,
+              lastPlayedDate:      dbProfile.last_played,
+              avatarSeed:          dbProfile.avatar_seed,
+              avatarItemIds:       dbProfile.avatar_item_ids ?? [],
               walletDisclaimerSeen: dbProfile.wallet_disclaimer_seen ?? false,
-              userRole: (dbProfile.user_role ?? 'general') as UserRole,
-              referralCode: dbProfile.referral_code ?? undefined,
+              userRole:            (dbProfile.user_role ?? 'general') as UserRole,
+              referralCode:        dbProfile.referral_code ?? undefined,
             }
           : s.profile,
       }));
