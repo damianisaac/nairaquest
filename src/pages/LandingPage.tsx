@@ -5,6 +5,7 @@ import { useGameStore } from '../store/gameStore';
 import TopNav from '../components/ui/TopNav';
 import { sound } from '../components/ui/SoundController';
 import QuickQuestion from '../components/landing/QuickQuestion';
+import AudienceSection from '../components/landing/AudienceSection';
 import SavingsCalculator from '../components/landing/SavingsCalculator';
 import ForParents from '../components/landing/ForParents';
 import type { AgeTrack } from '../types';
@@ -195,6 +196,9 @@ export default function LandingPage() {
           </motion.div>
         </motion.div>
       </section>
+
+      {/* ── Audience / Tier section ── */}
+      <AudienceSection />
 
       {/* ── Quick Question section ── */}
       <QuickQuestion />

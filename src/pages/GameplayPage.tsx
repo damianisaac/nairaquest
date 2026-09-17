@@ -259,7 +259,7 @@ export default function GameplayPage() {
     setCombo(0);
     sound.wrong();
     setTimeout(() => setScreenFlash(null), 500);
-    setTimeout(() => commitAnswer(-1), 2000);
+    // Player clicks "Next Question →" to advance — no auto-advance
   }
 
   function handleAnswer(index: number) {
@@ -280,8 +280,7 @@ export default function GameplayPage() {
       setTimeout(() => setShowConfetti(false), 1600);
       setTimeout(() => setShowXPBurst(false), 1700);
       setTimeout(() => setScreenFlash(null), 500);
-      const captured = index;
-      setTimeout(() => commitAnswer(captured), 1800);
+      // Player clicks "Next Question →" to advance — no auto-advance
     } else {
       setFeedback('wrong');
       setScreenFlash('wrong');
@@ -290,10 +289,8 @@ export default function GameplayPage() {
       setTimeout(() => setScreenFlash(null), 500);
       if (question.consequenceReplay && profile?.ageTrack !== 'kids') {
         setTimeout(() => setShowConsequence(true), 800);
-      } else {
-        const captured = index;
-        setTimeout(() => commitAnswer(captured), 2000);
       }
+      // No consequenceReplay: player clicks "Next Question →" to advance
     }
   }
 
@@ -679,7 +676,7 @@ export default function GameplayPage() {
                     {question.explanation}
                   </div>
 
-                  {feedback === 'correct' && (
+                  {!showConsequence && (
                     <motion.button
                       className="mt-3 w-full btn-primary"
                       onClick={() => { sound.click(); advanceOrEnd(); }}
