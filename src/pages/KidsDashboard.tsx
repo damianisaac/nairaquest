@@ -243,8 +243,26 @@ export default function KidsDashboard() {
           })}
         </div>
 
+        {/* ── Quick links ── */}
+        <motion.div className="mt-6 flex gap-3 justify-center flex-wrap"
+          initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.55 }}>
+          {[
+            { label: '🐷 Piggy Bank', route: '/piggybank' },
+            { label: '🎮 Money Quest', route: '/money-quest' },
+          ].map(({ label, route }) => (
+            <button
+              key={route}
+              onClick={() => navigate(route)}
+              className="px-4 py-2 rounded-xl text-sm font-bold transition-all"
+              style={{ background: 'rgba(168,85,247,0.12)', border: '1px solid rgba(168,85,247,0.3)', color: '#d8b4fe' }}
+            >
+              {label}
+            </button>
+          ))}
+        </motion.div>
+
         {/* ── Progress footer ── */}
-        <motion.div className="mt-8 text-center"
+        <motion.div className="mt-5 text-center"
           initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }}>
           <p className="text-white/35 text-sm font-medium">
             {masteredCount} of {zones.length} zones mastered · Keep going {profile.name}! 💪

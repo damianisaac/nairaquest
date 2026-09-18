@@ -170,6 +170,7 @@ export default function TeensDashboard() {
             { label: '🏅 Badges', route: '/profile', bg: 'rgba(251,146,60,0.14)', border: 'rgba(251,146,60,0.35)', color: '#fdba74' },
             { label: '👥 Class', route: '/class/join', bg: 'rgba(96,165,250,0.13)', border: 'rgba(96,165,250,0.33)', color: '#93c5fd' },
             { label: '📊 Net Worth Sim', route: '/simulator', bg: 'rgba(236,72,153,0.12)', border: 'rgba(236,72,153,0.3)', color: '#f9a8d4' },
+            { label: '🎮 Money Quest', route: '/money-quest', bg: 'rgba(168,85,247,0.12)', border: 'rgba(168,85,247,0.3)', color: '#d8b4fe' },
           ].map((btn) => (
             <motion.button key={btn.label}
               onClick={() => { sound.click(); navigate(btn.route); }}

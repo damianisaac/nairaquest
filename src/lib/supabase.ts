@@ -212,7 +212,7 @@ export async function upsertProfile(profile: Omit<DbProfile, 'created_at' | 'upd
 
 export async function upsertWalletTransactions(
   userId: string,
-  transactions: { timestamp_ms: number; category_id: string; difficulty: string | null; amount: number; type: string; label: string }[]
+  transactions: { timestamp_ms: number; category_id: string | null; difficulty: string | null; amount: number; type: string; label: string }[]
 ) {
   if (transactions.length === 0) return;
   return supabase.from('wallet_transactions').insert(

@@ -159,3 +159,111 @@
   .calc-slider::-webkit-slider-thumb { transition: none; }
   .calc-bar                          { transition: none; }
 }
+
+/* ── Net Worth Simulator — range sliders ─────────────────────────────────────
+   Two variants: .sim-slider (gold, assets) and .sim-slider-debt (coral, debts)
+   The 3-D thumb makes it visually obvious the control is draggable.
+   ─────────────────────────────────────────────────────────────────────────── */
+.sim-slider,
+.sim-slider-debt {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 999px;
+  outline: none;
+  cursor: grab;
+  touch-action: none;
+}
+.sim-slider:active,
+.sim-slider-debt:active { cursor: grabbing; }
+
+/* ── Track — inset groove ── */
+.sim-slider::-webkit-slider-runnable-track,
+.sim-slider-debt::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(157,184,172,0.18);
+  box-shadow: inset 0 1px 4px rgba(0,0,0,0.45);
+}
+.sim-slider::-moz-range-track,
+.sim-slider-debt::-moz-range-track {
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(157,184,172,0.18);
+  box-shadow: inset 0 1px 4px rgba(0,0,0,0.45);
+}
+
+/* ── Gold thumb (assets) ── */
+.sim-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 36% 30%, #fff9e0 0%, #E8B84B 48%, #a87b1a 100%);
+  border: 2px solid rgba(255,255,255,0.22);
+  box-shadow:
+    0 2px 5px rgba(0,0,0,0.5),
+    0 5px 16px rgba(0,0,0,0.35),
+    inset 0 1px 2px rgba(255,255,255,0.65);
+  margin-top: -10px;
+  cursor: grab;
+  transition: transform 110ms ease, box-shadow 110ms ease;
+}
+.sim-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2) translateY(-1px);
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.55),
+    0 8px 24px rgba(232,184,75,0.5),
+    inset 0 1px 2px rgba(255,255,255,0.65);
+}
+.sim-slider::-webkit-slider-thumb:active {
+  transform: scale(1.07);
+  cursor: grabbing;
+}
+.sim-slider::-moz-range-thumb {
+  width: 24px; height: 24px; border-radius: 50%;
+  background: radial-gradient(circle at 36% 30%, #fff9e0 0%, #E8B84B 48%, #a87b1a 100%);
+  border: 2px solid rgba(255,255,255,0.22);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.45), inset 0 1px 2px rgba(255,255,255,0.55);
+  cursor: grab;
+}
+
+/* ── Coral thumb (debts) ── */
+.sim-slider-debt::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 36% 30%, #ffd8d0 0%, #E2543F 48%, #901e0e 100%);
+  border: 2px solid rgba(255,255,255,0.22);
+  box-shadow:
+    0 2px 5px rgba(0,0,0,0.5),
+    0 5px 16px rgba(0,0,0,0.35),
+    inset 0 1px 2px rgba(255,255,255,0.55);
+  margin-top: -10px;
+  cursor: grab;
+  transition: transform 110ms ease, box-shadow 110ms ease;
+}
+.sim-slider-debt::-webkit-slider-thumb:hover {
+  transform: scale(1.2) translateY(-1px);
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.55),
+    0 8px 24px rgba(226,84,63,0.5),
+    inset 0 1px 2px rgba(255,255,255,0.55);
+}
+.sim-slider-debt::-webkit-slider-thumb:active {
+  transform: scale(1.07);
+  cursor: grabbing;
+}
+.sim-slider-debt::-moz-range-thumb {
+  width: 24px; height: 24px; border-radius: 50%;
+  background: radial-gradient(circle at 36% 30%, #ffd8d0 0%, #E2543F 48%, #901e0e 100%);
+  border: 2px solid rgba(255,255,255,0.22);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.45), inset 0 1px 2px rgba(255,255,255,0.45);
+  cursor: grab;
+}
+@media (prefers-reduced-motion: reduce) {
+  .sim-slider::-webkit-slider-thumb,
+  .sim-slider-debt::-webkit-slider-thumb { transition: none; }
+}

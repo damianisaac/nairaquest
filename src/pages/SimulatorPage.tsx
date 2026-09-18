@@ -243,13 +243,13 @@ function SliderRow({ id, label, hint, value, isDebt = false, onChange }: SliderR
   const sliderStp = isScaled ? 1 : (linCfg?.step ?? 1);
 
   return (
-    <div className="mb-4">
-      <div className="flex justify-between items-start gap-2 mb-1.5">
+    <div className="mb-6">
+      <div className="flex justify-between items-start gap-2 mb-2">
         <div>
-          <span className="text-sm" style={{ color: 'rgba(246,241,228,0.85)' }}>{label}</span>
+          <span className="text-base font-medium" style={{ color: 'rgba(246,241,228,0.9)' }}>{label}</span>
           {hint && <span className="block text-xs mt-0.5" style={{ color: '#6C8A7E' }}>{hint}</span>}
         </div>
-        <span className="shrink-0 text-xs font-medium tabular-nums"
+        <span className="shrink-0 text-sm font-semibold tabular-nums"
           style={{ fontFamily: "'IBM Plex Mono', monospace", color }}>
           {fmtFull(value)}
         </span>
@@ -259,8 +259,7 @@ function SliderRow({ id, label, hint, value, isDebt = false, onChange }: SliderR
           const raw = parseInt(e.target.value);
           onChange(isScaled ? scale[raw] : raw);
         }}
-        style={{ width: '100%', accentColor: color }}
-        className="w-full cursor-pointer"
+          className={`w-full ${isDebt ? 'sim-slider-debt' : 'sim-slider'}`}
       />
     </div>
   );
@@ -320,7 +319,7 @@ const DEBT_META: Record<typeof DEBT_FIELDS[number], { label: string; hint?: stri
 
 function Panel({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return (
-    <div className={`rounded-2xl p-5 ${className}`}
+    <div className={`rounded-2xl p-6 ${className}`}
       style={{ background: '#16332C', border: '1px solid rgba(157,184,172,0.18)' }}>
       {children}
     </div>
@@ -437,22 +436,22 @@ export default function SimulatorPage() {
     <div className="min-h-screen" style={{ background: BG }}>
       <TopNav />
 
-      <main className="pt-20 pb-16 px-4 max-w-3xl mx-auto">
+      <main className="pt-20 pb-16 px-4 max-w-4xl mx-auto">
 
         {/* ── Header ── */}
-        <motion.div className="text-center max-w-xl mx-auto mb-5"
+        <motion.div className="text-center max-w-2xl mx-auto mb-6"
           initial={{ opacity: 0, y: -16 }} animate={{ opacity: 1, y: 0 }}>
           <span className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase mb-4"
             style={{ color: accentColor }}>
-            <span className="w-1.5 h-1.5 rounded-full bg-current inline-block" />
-            Net Worth Simulator
+            <span className="w-2 h-2 rounded-full bg-current inline-block" />
+            Build a financial story.
           </span>
-          <h1 className="font-display text-3xl md:text-4xl font-medium leading-snug mb-3"
+          <h1 className="font-display text-4xl md:text-5xl font-medium leading-snug mb-4"
             style={{ color: '#F6F1E4' }}>
-            Build a financial story.<br />See how it plays out.
+            Net Worth Simulator
           </h1>
-          <p className="text-sm leading-relaxed" style={{ color: '#9DB8AC' }}>
-            Pick a character, give them a financial life, then fast-forward through time.
+          <p className="text-base leading-relaxed" style={{ color: '#9DB8AC' }}>
+            Know your Networth. Pick a character from below give them a financial life, then see your worth.
           </p>
         </motion.div>
 
@@ -462,26 +461,24 @@ export default function SimulatorPage() {
           initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.1 }}>
           <span className="text-base mt-0.5 shrink-0">🎭</span>
           <p className="m-0">
-            This is a simulation. Every number here is made up — a fictional person, a fictional
-            salary, fictional debt. The goal is to see how net worth actually works, not to track
-            your real accounts. <strong>Please don't enter real financial information.</strong>
+            This is a simulation. The goal is to see how a net worth actually works.
           </p>
         </motion.div>
 
         {/* ── Step indicator ── */}
-        <div className="flex justify-center items-center gap-2 mb-8">
+        <div className="flex justify-center items-center gap-3 mb-10">
           {([1, 2, 3] as Step[]).map((n, idx) => {
-            const labels = ['Persona', 'Build', 'Simulate'];
+            const labels = ['Pick a persona', 'Build net worth', 'Simulate'];
             const done   = step > n;
             const active = step === n;
             return (
-              <div key={n} className="flex items-center gap-2">
+              <div key={n} className="flex items-center gap-3">
                 {idx > 0 && (
-                  <div className="w-8 h-px" style={{ background: 'rgba(157,184,172,0.22)' }} />
+                  <div className="w-10 h-px" style={{ background: 'rgba(157,184,172,0.22)' }} />
                 )}
-                <div className="flex items-center gap-2 text-xs font-semibold"
+                <div className="flex items-center gap-2 text-sm font-semibold"
                   style={{ color: active || done ? accentColor : '#6C8A7E' }}>
-                  <span className="w-5 h-5 rounded-full flex items-center justify-center text-xs border"
+                  <span className="w-7 h-7 rounded-full flex items-center justify-center text-sm border-2 font-bold"
                     style={{
                       borderColor: active || done ? accentColor : '#6C8A7E',
                       background:  done ? accentColor : active ? `${accentColor}20` : 'transparent',
@@ -489,7 +486,7 @@ export default function SimulatorPage() {
                     }}>
                     {done ? '✓' : n}
                   </span>
-                  {labels[idx]}
+                  <span className="hidden sm:inline">{labels[idx]}</span>
                 </div>
               </div>
             );
@@ -506,19 +503,19 @@ export default function SimulatorPage() {
               exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.2 }}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {personas.map(p => (
-                  <motion.button key={p.id} className="text-left p-5 rounded-2xl border transition-colors"
+                  <motion.button key={p.id} className="text-left p-6 rounded-2xl border transition-colors"
                     style={{ background: '#16332C', borderColor: 'rgba(157,184,172,0.18)' }}
-                    whileHover={{ scale: 1.02, y: -2 } as never}
+                    whileHover={{ scale: 1.02, y: -3 } as never}
                     whileTap={{ scale: 0.98 }}
                     onClick={() => pickPersona(p)}>
-                    <span className="text-2xl mb-2 block">{p.emoji}</span>
-                    <h3 className="font-display font-medium text-base mb-1.5" style={{ color: '#F6F1E4' }}>
+                    <span className="text-3xl mb-3 block">{p.emoji}</span>
+                    <h3 className="font-display font-medium text-lg mb-2" style={{ color: '#F6F1E4' }}>
                       {p.name}
                     </h3>
-                    <p className="text-xs leading-relaxed mb-3" style={{ color: '#9DB8AC' }}>
+                    <p className="text-sm leading-relaxed mb-4" style={{ color: '#9DB8AC' }}>
                       {p.blurb}
                     </p>
-                    <span className="text-xs font-medium"
+                    <span className="text-sm font-medium"
                       style={{ fontFamily: "'IBM Plex Mono', monospace", color: '#B98F35' }}>
                       {p.start}
                     </span>
@@ -547,7 +544,7 @@ export default function SimulatorPage() {
               {/* Asset + debt columns */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <Panel>
-                  <h4 className="text-xs font-bold tracking-widest uppercase mb-4"
+                  <h4 className="text-sm font-bold tracking-widest uppercase mb-5"
                     style={{ color: '#E8B84B' }}>Assets</h4>
                   {ASSET_FIELDS.map(f => (
                     <SliderRow key={f} id={f} label={ASSET_META[f].label} hint={ASSET_META[f].hint}
@@ -555,7 +552,7 @@ export default function SimulatorPage() {
                   ))}
                 </Panel>
                 <Panel>
-                  <h4 className="text-xs font-bold tracking-widest uppercase mb-4"
+                  <h4 className="text-sm font-bold tracking-widest uppercase mb-5"
                     style={{ color: '#E2543F' }}>Debts</h4>
                   {DEBT_FIELDS.map(f => (
                     <SliderRow key={f} id={f} label={DEBT_META[f].label} hint={DEBT_META[f].hint}
@@ -570,9 +567,9 @@ export default function SimulatorPage() {
                   background: 'linear-gradient(180deg, rgba(232,184,75,0.14), transparent 70%), #16332C',
                   border: '1px solid rgba(232,184,75,0.45)',
                 }}>
-                <p className="text-xs font-bold tracking-widest uppercase mb-2"
+                <p className="text-xs font-bold tracking-widest uppercase mb-3"
                   style={{ color: '#B98F35' }}>Starting Net Worth</p>
-                <p className="text-4xl font-semibold"
+                <p className="text-5xl font-semibold tabular-nums"
                   style={{ fontFamily: "'IBM Plex Mono', monospace", color: '#E8B84B' }}>
                   {fmtFull(netWorth)}
                 </p>
@@ -602,39 +599,37 @@ export default function SimulatorPage() {
               {/* Simulation controls */}
               <Panel className="mb-4">
                 <div className="mb-4">
-                  <div className="flex justify-between items-start gap-2 mb-1.5">
+                  <div className="flex justify-between items-start gap-2 mb-2">
                     <div>
-                      <span className="text-sm" style={{ color: 'rgba(246,241,228,0.85)' }}>
+                      <span className="text-base font-medium" style={{ color: 'rgba(246,241,228,0.9)' }}>
                         Years into the future
                       </span>
                       <span className="block text-xs mt-0.5" style={{ color: '#6C8A7E' }}>
                         Forward from today, not a historical replay
                       </span>
                     </div>
-                    <span className="text-xs font-medium shrink-0 tabular-nums"
+                    <span className="text-sm font-semibold shrink-0 tabular-nums"
                       style={{ fontFamily: "'IBM Plex Mono', monospace", color: '#E8B84B' }}>
                       {years} {years === 1 ? 'year' : 'years'}
                     </span>
                   </div>
                   <input type="range" min={1} max={30} step={1} value={years}
                     onChange={e => setYears(parseInt(e.target.value))}
-                    style={{ width: '100%', accentColor: '#E8B84B' }}
-                    className="w-full cursor-pointer" />
+                    className="w-full sim-slider" />
                 </div>
                 <div>
-                  <div className="flex justify-between items-start gap-2 mb-1.5">
-                    <span className="text-sm" style={{ color: 'rgba(246,241,228,0.85)' }}>
+                  <div className="flex justify-between items-start gap-2 mb-2">
+                    <span className="text-base font-medium" style={{ color: 'rgba(246,241,228,0.9)' }}>
                       Monthly savings / investment contribution
                     </span>
-                    <span className="text-xs font-medium shrink-0 tabular-nums"
+                    <span className="text-sm font-semibold shrink-0 tabular-nums"
                       style={{ fontFamily: "'IBM Plex Mono', monospace", color: '#E8B84B' }}>
                       {fmtFull(contrib)}
                     </span>
                   </div>
                   <input type="range" min={0} max={contribMax} step={contribStep} value={contrib}
                     onChange={e => setContrib(parseInt(e.target.value))}
-                    style={{ width: '100%', accentColor: '#E8B84B' }}
-                    className="w-full cursor-pointer" />
+                    className="w-full sim-slider" />
                 </div>
               </Panel>
 
@@ -681,18 +676,18 @@ export default function SimulatorPage() {
               <div className="grid grid-cols-2 gap-3 mb-4">
                 <div className="rounded-xl p-4"
                   style={{ background: '#1D3B32', border: '1px solid rgba(157,184,172,0.18)' }}>
-                  <p className="text-xs font-bold tracking-wide uppercase mb-1.5"
+                  <p className="text-xs font-bold tracking-wide uppercase mb-2"
                     style={{ color: '#6C8A7E' }}>Steady-path net worth</p>
-                  <p className="text-xl font-semibold tabular-nums"
+                  <p className="text-3xl font-semibold tabular-nums"
                     style={{ fontFamily: "'IBM Plex Mono', monospace", color: '#E8B84B' }}>
                     {fmt(finalBaseline)}
                   </p>
                 </div>
                 <div className="rounded-xl p-4"
                   style={{ background: '#1D3B32', border: '1px solid rgba(157,184,172,0.18)' }}>
-                  <p className="text-xs font-bold tracking-wide uppercase mb-1.5"
+                  <p className="text-xs font-bold tracking-wide uppercase mb-2"
                     style={{ color: '#6C8A7E' }}>Net worth with events</p>
-                  <p className="text-xl font-semibold tabular-nums"
+                  <p className="text-3xl font-semibold tabular-nums"
                     style={{ fontFamily: "'IBM Plex Mono', monospace", color: '#E2543F' }}>
                     {fmt(finalEvents)}
                   </p>

@@ -36,16 +36,17 @@ export type CategoryId =
 
 export type Tier = 0 | 1 | 2 | 3 | 4;
 
-export type WalletTransactionType = 'answer' | 'streak_bonus' | 'mastery_bonus';
+export type WalletTransactionType = 'answer' | 'streak_bonus' | 'mastery_bonus' | 'game';
 
 export interface WalletTransaction {
   id: string;
   timestamp: number;
-  category: CategoryId;
+  category: CategoryId | null;
   difficulty: Difficulty | null;
   amount: number;
   type: WalletTransactionType;
   label: string;
+  game?: string;
 }
 
 export interface ConsequenceReplay {

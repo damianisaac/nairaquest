@@ -169,7 +169,7 @@ export default function PiggyBankPage() {
 
         {/* Stats */}
         <motion.div
-          className="grid grid-cols-2 gap-3 mb-6"
+          className="grid grid-cols-2 gap-3 mb-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7 }}
@@ -183,6 +183,36 @@ export default function PiggyBankPage() {
             <div className="text-xs text-white/40 mt-0.5">Day streak</div>
           </div>
         </motion.div>
+
+        {/* Quiz vs Game Credits breakdown */}
+        {(() => {
+          const quizTotal = profile.walletTransactions
+            .filter((t) => t.type === 'answer' || t.type === 'streak_bonus' || t.type === 'mastery_bonus')
+            .reduce((s, t) => s + t.amount, 0);
+          const gameTotal = profile.walletTransactions
+            .filter((t) => t.type === 'game')
+            .reduce((s, t) => s + t.amount, 0);
+          if (quizTotal === 0 && gameTotal === 0) return null;
+          return (
+            <motion.div
+              className="grid grid-cols-2 gap-3 mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.75 }}
+            >
+              <div className="rounded-2xl p-3 text-center" style={{ background: 'rgba(249,115,22,0.08)', border: '1px solid rgba(249,115,22,0.22)' }}>
+                <div className="text-lg mb-0.5">📚</div>
+                <div className="font-bold text-orange-300 text-base">{formatFullNaira(quizTotal)}</div>
+                <div className="text-xs text-white/35 mt-0.5">Quiz Credits</div>
+              </div>
+              <div className="rounded-2xl p-3 text-center" style={{ background: 'rgba(168,85,247,0.08)', border: '1px solid rgba(168,85,247,0.22)' }}>
+                <div className="text-lg mb-0.5">🎮</div>
+                <div className="font-bold text-purple-300 text-base">{formatFullNaira(gameTotal)}</div>
+                <div className="text-xs text-white/35 mt-0.5">Game Credits</div>
+              </div>
+            </motion.div>
+          );
+        })()}
 
         <button
           className="btn-primary w-full"

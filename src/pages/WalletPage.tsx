@@ -84,9 +84,50 @@ function GrowthChart({ transactions }: { transactions: WalletTransaction[] }) {
 
 // ─── Transaction row ──────────────────────────────────────────────────────────
 
+function LedgerBreakdown({ transactions }: { transactions: WalletTransaction[] }) {
+  const quizTotal = transactions
+    .filter((t) => t.type === 'answer' || t.type === 'streak_bonus' || t.type === 'mastery_bonus')
+    .reduce((s, t) => s + t.amount, 0);
+  const gameTotal = transactions
+    .filter((t) => t.type === 'game')
+    .reduce((s, t) => s + t.amount, 0);
+
+  if (quizTotal === 0 && gameTotal === 0) return null;
+
+  return (
+    <div
+      className="grid grid-cols-2 gap-3 mt-4"
+    >
+      <div
+        className="rounded-2xl p-4 text-center"
+        style={{ background: 'rgba(0,135,81,0.08)', border: '1px solid rgba(0,135,81,0.22)' }}
+      >
+        <div className="text-xl mb-1">📚</div>
+        <div className="font-bold text-naira-green-light text-lg">{formatPlayNaira(quizTotal)}</div>
+        <div className="text-xs text-white/35 mt-0.5">Quiz Credits</div>
+      </div>
+      <div
+        className="rounded-2xl p-4 text-center"
+        style={{ background: 'rgba(168,85,247,0.08)', border: '1px solid rgba(168,85,247,0.22)' }}
+      >
+        <div className="text-xl mb-1">🎮</div>
+        <div className="font-bold text-purple-300 text-lg">{formatPlayNaira(gameTotal)}</div>
+        <div className="text-xs text-white/35 mt-0.5">Game Credits · Money Quest</div>
+      </div>
+    </div>
+  );
+}
+
 function TxRow({ tx }: { tx: WalletTransaction }) {
   const cat = tx.category && CATEGORY_MAP[tx.category];
-  const typeIcon = tx.type === 'mastery_bonus' ? '🏅' : tx.type === 'streak_bonus' ? '🔥' : cat?.emoji ?? '✅';
+  const typeIcon =
+    tx.type === 'game'
+      ? '🎮'
+      : tx.type === 'mastery_bonus'
+      ? '🏅'
+      : tx.type === 'streak_bonus'
+      ? '🔥'
+      : cat?.emoji ?? '✅';
 
   return (
     <div className="flex items-center gap-3 py-3 border-b border-white/5 last:border-0">
@@ -288,6 +329,7 @@ export default function WalletPage() {
             <span className="text-white/20">·</span>
             <span>🔥 {getStreakMultiplierDisplay(profile.dailyStreak)} streak bonus</span>
           </div>
+          <LedgerBreakdown transactions={profile.walletTransactions} />
         </motion.div>
 
         {/* Invite friends — shown above history so it's immediately visible */}

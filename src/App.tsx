@@ -27,6 +27,7 @@ import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import ResetPasswordPage from './pages/ResetPasswordPage';
 import TrustSafetyPage from './pages/TrustSafetyPage';
 import SimulatorPage from './pages/SimulatorPage';
+import MoneyQuestPage from './pages/MoneyQuestPage';
 import SoundController from './components/ui/SoundController';
 import WalletOnboardingModal from './components/ui/WalletOnboardingModal';
 
@@ -109,6 +110,7 @@ function App() {
         <Route path="/class/join" element={<ClassJoinPage />} />
         <Route path="/class/:classId/leaderboard" element={<ClassLeaderboardPage />} />
         <Route path="/simulator" element={<SimulatorPage />} />
+        <Route path="/money-quest" element={<MoneyQuestPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
