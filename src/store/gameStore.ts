@@ -224,7 +224,12 @@ export const useGameStore = create<GameState>()(
         const isPracticeMode = result.previousMastery >= 1.0;
 
         const correctDiffs = session.answers
-          .map((a, i) => (a === session.questions[i].correctIndex ? session.questions[i].difficulty : null))
+          .map((a, i) => {
+            const q = session.questions[i];
+            const isNew = !prevAnsweredIds.includes(q.id);
+            const isCorrect = a === q.correctIndex;
+            return isNew && isCorrect ? q.difficulty : null;
+          })
           .filter((d): d is typeof d & string => d !== null);
 
         const walletResult = isPracticeMode
