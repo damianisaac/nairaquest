@@ -13,35 +13,46 @@ type FeedbackState = 'none' | 'correct' | 'wrong';
 
 // ─── Ambient floating particles ───────────────────────────────────────────────
 function FloatingParticles({ color }: { color: string }) {
-  const particles = Array.from({ length: 14 }, (_, i) => i);
+  const particles = Array.from({ length: 28 }, (_, i) => i);
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden">
       {particles.map((i) => {
-        const size = 3 + (i % 4) * 3;
-        const left = 3 + (i * 7.1) % 93;
-        const startY = 10 + (i * 6.7) % 75;
-        const duration = 7 + (i % 5) * 2.2;
+        const isNaira = i % 5 === 0;
+        const isCoin  = i % 7 === 0;
+        const size = isNaira ? 18 + (i % 3) * 8 : 4 + (i % 4) * 4;
+        const left = 2 + (i * 3.6) % 96;
+        const startY = 5 + (i * 3.4) % 88;
+        const duration = 6 + (i % 6) * 2;
         return (
           <motion.div
             key={i}
-            className="absolute rounded-full"
-            style={{
+            className={isNaira || isCoin ? 'absolute select-none font-black' : 'absolute rounded-full'}
+            style={isNaira || isCoin ? {
+              left: `${left}%`, top: `${startY}%`,
+              fontSize: size,
+              color: isNaira ? '#d4af37' : color,
+              opacity: 0.22,
+              textShadow: `0 0 12px ${isNaira ? '#d4af37' : color}80`,
+            } : {
               width: size, height: size,
               left: `${left}%`, top: `${startY}%`,
               background:
-                i % 3 === 0 ? color + '55'
-                : i % 3 === 1 ? 'rgba(212,175,55,0.35)'
-                : 'rgba(255,255,255,0.1)',
-              filter: 'blur(1px)',
+                i % 3 === 0 ? color + '70'
+                : i % 3 === 1 ? 'rgba(212,175,55,0.5)'
+                : 'rgba(255,255,255,0.2)',
+              filter: 'blur(0.5px)',
             }}
             animate={{
-              y: [-10, -50, -10],
-              x: [0, (i % 2 === 0 ? 1 : -1) * 14, 0],
-              opacity: [0.25, 0.65, 0.25],
-              scale: [1, 1.5, 1],
+              y: [-15, -70, -15],
+              x: [0, (i % 2 === 0 ? 1 : -1) * 18, 0],
+              rotate: isNaira ? [0, (i % 2 === 0 ? 15 : -15), 0] : undefined,
+              opacity: isNaira || isCoin ? [0.15, 0.35, 0.15] : [0.35, 0.8, 0.35],
+              scale: [1, 1.6, 1],
             }}
-            transition={{ duration, repeat: Infinity, delay: i * 0.55, ease: 'easeInOut' }}
-          />
+            transition={{ duration, repeat: Infinity, delay: i * 0.38, ease: 'easeInOut' }}
+          >
+            {isNaira ? '₦' : isCoin ? '🪙' : null}
+          </motion.div>
         );
       })}
     </div>
@@ -338,30 +349,41 @@ export default function GameplayPage() {
   return (
     <div
       className="min-h-screen flex flex-col relative overflow-hidden"
-      style={{ background: `linear-gradient(155deg, ${cat.colorDark}25 0%, #030712 45%, ${cat.colorDark}12 100%)` }}
+      style={{ background: `linear-gradient(155deg, ${cat.colorDark}70 0%, #020d06 40%, ${cat.colorDark}55 100%)` }}
     >
-      {/* ── Ambient orb ── */}
+      {/* ── Ambient orbs ── */}
       <motion.div
         className="fixed rounded-full pointer-events-none"
         style={{
-          width: 600, height: 600,
-          top: -200, right: -200,
-          background: `radial-gradient(circle, ${cat.color}18 0%, transparent 70%)`,
-          filter: 'blur(60px)',
+          width: 700, height: 700,
+          top: -250, right: -220,
+          background: `radial-gradient(circle, ${cat.color}45 0%, transparent 65%)`,
+          filter: 'blur(55px)',
         }}
-        animate={{ scale: [1, 1.12, 1], opacity: [0.7, 1, 0.7] }}
-        transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+        animate={{ scale: [1, 1.18, 1], opacity: [0.8, 1, 0.8] }}
+        transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
       />
       <motion.div
         className="fixed rounded-full pointer-events-none"
         style={{
-          width: 350, height: 350,
-          bottom: 50, left: -100,
-          background: `radial-gradient(circle, ${cat.color}10 0%, transparent 70%)`,
-          filter: 'blur(70px)',
+          width: 500, height: 500,
+          bottom: -80, left: -150,
+          background: `radial-gradient(circle, ${cat.color}35 0%, transparent 65%)`,
+          filter: 'blur(65px)',
         }}
-        animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0.9, 0.5] }}
-        transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
+        animate={{ scale: [1, 1.25, 1], opacity: [0.6, 1, 0.6] }}
+        transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut', delay: 2.5 }}
+      />
+      <motion.div
+        className="fixed rounded-full pointer-events-none"
+        style={{
+          width: 320, height: 320,
+          top: '40%', left: '30%',
+          background: 'radial-gradient(circle, rgba(212,175,55,0.25) 0%, transparent 70%)',
+          filter: 'blur(50px)',
+        }}
+        animate={{ scale: [1, 1.3, 1], opacity: [0.5, 0.85, 0.5] }}
+        transition={{ duration: 11, repeat: Infinity, ease: 'easeInOut', delay: 4 }}
       />
 
       <FloatingParticles color={cat.color} />

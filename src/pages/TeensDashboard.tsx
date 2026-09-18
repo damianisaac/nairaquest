@@ -62,28 +62,39 @@ export default function TeensDashboard() {
 
   return (
     <div className="min-h-screen overflow-x-hidden relative"
-      style={{ background: 'linear-gradient(160deg, #080012 0%, #100220 45%, #030712 100%)' }}>
+      style={{ background: 'linear-gradient(160deg, #130028 0%, #220045 45%, #2d005c 75%, #160030 100%)' }}>
 
       {/* ── Animated background orbs ── */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         <motion.div className="absolute rounded-full"
-          style={{ width: 500, height: 500, top: -180, right: -130, background: 'radial-gradient(circle, rgba(139,92,246,0.22) 0%, transparent 70%)', filter: 'blur(70px)' }}
-          animate={{ scale: [1, 1.2, 1], opacity: [0.7, 1, 0.7] }}
+          style={{ width: 600, height: 600, top: -200, right: -150, background: 'radial-gradient(circle, rgba(139,92,246,0.50) 0%, transparent 65%)', filter: 'blur(65px)' }}
+          animate={{ scale: [1, 1.2, 1], opacity: [0.8, 1, 0.8] }}
           transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
         />
         <motion.div className="absolute rounded-full"
-          style={{ width: 400, height: 400, bottom: 80, left: -120, background: 'radial-gradient(circle, rgba(236,72,153,0.16) 0%, transparent 70%)', filter: 'blur(80px)' }}
-          animate={{ scale: [1, 1.3, 1], opacity: [0.5, 0.9, 0.5] }}
+          style={{ width: 480, height: 480, bottom: 60, left: -140, background: 'radial-gradient(circle, rgba(236,72,153,0.40) 0%, transparent 65%)', filter: 'blur(70px)' }}
+          animate={{ scale: [1, 1.3, 1], opacity: [0.65, 1, 0.65] }}
           transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
         />
         <motion.div className="absolute rounded-full"
-          style={{ width: 280, height: 280, top: '50%', left: '35%', background: 'radial-gradient(circle, rgba(96,165,250,0.1) 0%, transparent 70%)', filter: 'blur(60px)' }}
-          animate={{ scale: [1, 1.25, 1], opacity: [0.4, 0.75, 0.4] }}
+          style={{ width: 350, height: 350, top: '48%', left: '32%', background: 'radial-gradient(circle, rgba(96,165,250,0.28) 0%, transparent 70%)', filter: 'blur(55px)' }}
+          animate={{ scale: [1, 1.25, 1], opacity: [0.55, 0.9, 0.55] }}
           transition={{ duration: 11, repeat: Infinity, ease: 'easeInOut', delay: 4 }}
         />
+        {/* Floating stars + ₦ symbols */}
+        {[0,1,2,3,4,5,6,7].map((i) => (
+          <motion.div key={i} className="absolute font-black select-none"
+            style={{ left: `${6 + i * 12}%`, top: `${12 + (i * 13) % 68}%`, fontSize: 13 + (i % 3) * 9,
+              color: i % 3 === 0 ? '#c084fc' : i % 3 === 1 ? '#f472b6' : '#d4af37', opacity: 0.20,
+              textShadow: `0 0 12px currentColor` }}
+            animate={{ y: [-10, -60, -10], x: [0, (i%2===0?14:-14), 0], rotate: [0, (i%2===0?15:-15), 0], opacity: [0.12, 0.30, 0.12] }}
+            transition={{ duration: 7 + i * 1.4, repeat: Infinity, delay: i * 0.75, ease: 'easeInOut' }}>
+            {i % 3 === 2 ? '₦' : i % 3 === 1 ? '⭐' : '💜'}
+          </motion.div>
+        ))}
         {/* Neon grid lines (decorative) */}
-        <div className="absolute inset-0 opacity-5"
-          style={{ backgroundImage: 'linear-gradient(rgba(139,92,246,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(139,92,246,0.5) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
+        <div className="absolute inset-0 opacity-[0.07]"
+          style={{ backgroundImage: 'linear-gradient(rgba(139,92,246,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(139,92,246,0.6) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
       </div>
 
       <TopNav />
