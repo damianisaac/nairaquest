@@ -106,7 +106,8 @@ function TxRow({ tx }: { tx: WalletTransaction }) {
 
 function InviteSection({ referralCode }: { referralCode: string }) {
   const [stats, setStats]   = useState<ReferralStats | null>(null);
-  const [copied, setCopied] = useState(false);
+  const [copiedCode, setCopiedCode] = useState(false);
+  const [copiedLink, setCopiedLink] = useState(false);
 
   useEffect(() => {
     if (!isSupabaseConfigured || !referralCode) return;  // wait until code is generated
@@ -117,10 +118,16 @@ function InviteSection({ referralCode }: { referralCode: string }) {
 
   const shareLink = `${window.location.origin}/auth?ref=${referralCode}`;
 
-  const handleCopy = () => {
+  const handleCopyCode = () => {
+    navigator.clipboard.writeText(referralCode).catch(() => {});
+    setCopiedCode(true);
+    setTimeout(() => setCopiedCode(false), 2000);
+  };
+
+  const handleCopyLink = () => {
     navigator.clipboard.writeText(shareLink).catch(() => {});
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    setCopiedLink(true);
+    setTimeout(() => setCopiedLink(false), 2000);
   };
 
   return (
@@ -146,7 +153,7 @@ function InviteSection({ referralCode }: { referralCode: string }) {
         {/* Referral code display */}
         <div>
           <p className="text-xs text-white/40 mb-1.5 uppercase tracking-wide font-semibold">Your referral code</p>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 mb-2">
             <span
               className="flex-1 text-center py-2.5 rounded-xl font-mono font-bold text-naira-green-light tracking-[0.18em] text-lg"
               style={{ background: 'rgba(0,135,81,0.12)', border: '1px solid rgba(0,135,81,0.3)' }}
@@ -154,18 +161,32 @@ function InviteSection({ referralCode }: { referralCode: string }) {
               {referralCode}
             </span>
             <motion.button
-              onClick={handleCopy}
-              className="px-4 py-2.5 rounded-xl text-sm font-bold transition-colors"
+              onClick={handleCopyCode}
+              className="px-3 py-2.5 rounded-xl text-sm font-bold transition-colors whitespace-nowrap"
               style={{
-                background: copied ? 'rgba(0,135,81,0.3)' : 'rgba(255,255,255,0.08)',
-                color: copied ? '#00b86a' : 'rgba(255,255,255,0.7)',
+                background: copiedCode ? 'rgba(0,135,81,0.3)' : 'rgba(255,255,255,0.08)',
+                color: copiedCode ? '#00b86a' : 'rgba(255,255,255,0.7)',
                 border: '1px solid rgba(255,255,255,0.1)',
               }}
               whileTap={{ scale: 0.96 }}
             >
-              {copied ? '✓ Copied' : 'Copy link'}
+              {copiedCode ? '✓ Copied' : 'Copy code'}
             </motion.button>
           </div>
+          {/* Share link row */}
+          <motion.button
+            onClick={handleCopyLink}
+            className="w-full py-2.5 rounded-xl text-sm font-bold flex items-center justify-center gap-2"
+            style={{
+              background: copiedLink ? 'rgba(0,135,81,0.25)' : 'linear-gradient(135deg, rgba(0,135,81,0.18), rgba(0,135,81,0.08))',
+              color: copiedLink ? '#00b86a' : '#4ade80',
+              border: '1px solid rgba(0,135,81,0.35)',
+            }}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.97 }}
+          >
+            {copiedLink ? '✓ Link copied!' : '🔗 Copy invite link — new user just clicks it to sign up'}
+          </motion.button>
         </div>
 
         {/* Stats row */}
