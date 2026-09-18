@@ -71,7 +71,7 @@ export function useAuth() {
               lastPlayedDate:      dbProfile.last_played,
               avatarSeed:          dbProfile.avatar_seed ?? s.profile.avatarSeed,
               avatarItemIds:       dbProfile.avatar_item_ids ?? s.profile.avatarItemIds ?? [],
-              walletDisclaimerSeen: dbProfile.wallet_disclaimer_seen ?? s.profile.walletDisclaimerSeen,
+              walletDisclaimerSeen: dbProfile.wallet_disclaimer_seen || s.profile.walletDisclaimerSeen,
               userRole:            (dbProfile.user_role ?? 'general') as UserRole,
               referralCode:        dbProfile.referral_code ?? s.profile.referralCode,
             }
