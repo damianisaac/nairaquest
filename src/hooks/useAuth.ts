@@ -83,40 +83,39 @@ export function useAuth() {
       if (pending) await applyReferralCode(userId, pending);
     }
 
-    if (dbProgress && dbProgress.length > 0) {
-      const progressMap: Record<CategoryId, CategoryProgress> = {} as Record<CategoryId, CategoryProgress>;
-      for (const row of dbProgress) {
-        progressMap[row.category_id as CategoryId] = {
-          categoryId: row.category_id as CategoryId,
-          masteryPoints: row.mastery_points,
-          peakMasteryPoints: row.peak_mastery_points,
-          questionsAnswered: row.questions_answered,
-          lastPracticed: row.last_practiced,
-          answeredQuestionIds: row.answered_question_ids ?? [],
-        };
-      }
-      // Fill missing categories with defaults
-      for (const cat of CATEGORIES) {
-        if (!progressMap[cat.id]) {
-          progressMap[cat.id] = {
-            categoryId: cat.id,
-            masteryPoints: 0,
-            peakMasteryPoints: 0,
-            questionsAnswered: 0,
-            lastPracticed: null,
-            answeredQuestionIds: [],
-          };
-        }
-      }
-      // Store cloud progress under the user's current age-track partition
+    if (dbProgress) {
       const ageTrack = useGameStore.getState().profile?.ageTrack;
       if (ageTrack) {
-        useGameStore.setState((s) => ({
-          progressByTrack: {
-            ...s.progressByTrack,
-            [ageTrack]: progressMap,
-          },
-        }));
+        // Build a lookup from DB rows
+        const dbMap = new Map(dbProgress.map((r) => [r.category_id, r]));
+
+        // Merge DB into local — take the MAX of each metric so a stale DB pull
+        // (fetched before syncNow has pushed the just-played session) never
+        // wipes progress that was earned locally but not yet in the DB.
+        useGameStore.setState((s) => {
+          const local = (s.progressByTrack[ageTrack] ?? {}) as Partial<Record<CategoryId, CategoryProgress>>;
+          const merged: Record<CategoryId, CategoryProgress> = {} as Record<CategoryId, CategoryProgress>;
+
+          for (const cat of CATEGORIES) {
+            const l = local[cat.id];
+            const d = dbMap.get(cat.id);
+            merged[cat.id] = {
+              categoryId: cat.id,
+              masteryPoints:      Math.max(l?.masteryPoints      ?? 0, d?.mastery_points      ?? 0),
+              peakMasteryPoints:  Math.max(l?.peakMasteryPoints  ?? 0, d?.peak_mastery_points ?? 0),
+              questionsAnswered:  Math.max(l?.questionsAnswered   ?? 0, d?.questions_answered  ?? 0),
+              lastPracticed:      l?.lastPracticed ?? d?.last_practiced ?? null,
+              answeredQuestionIds: [...new Set([
+                ...(l?.answeredQuestionIds ?? []),
+                ...(d?.answered_question_ids ?? []),
+              ])],
+            };
+          }
+
+          return {
+            progressByTrack: { ...s.progressByTrack, [ageTrack]: merged },
+          };
+        });
       }
     }
 
