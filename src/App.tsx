@@ -26,6 +26,7 @@ import ClassLeaderboardPage from './pages/ClassLeaderboardPage';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import ResetPasswordPage from './pages/ResetPasswordPage';
 import TrustSafetyPage from './pages/TrustSafetyPage';
+import SimulatorPage from './pages/SimulatorPage';
 import SoundController from './components/ui/SoundController';
 import WalletOnboardingModal from './components/ui/WalletOnboardingModal';
 
@@ -107,6 +108,7 @@ function App() {
         <Route path="/teacher" element={<TeacherDashboardPage />} />
         <Route path="/class/join" element={<ClassJoinPage />} />
         <Route path="/class/:classId/leaderboard" element={<ClassLeaderboardPage />} />
+        <Route path="/simulator" element={<SimulatorPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>

@@ -169,6 +169,7 @@ export default function TeensDashboard() {
             { label: '👤 Profile', route: '/profile', bg: 'rgba(167,139,250,0.15)', border: 'rgba(167,139,250,0.38)', color: '#c4b5fd' },
             { label: '🏅 Badges', route: '/profile', bg: 'rgba(251,146,60,0.14)', border: 'rgba(251,146,60,0.35)', color: '#fdba74' },
             { label: '👥 Class', route: '/class/join', bg: 'rgba(96,165,250,0.13)', border: 'rgba(96,165,250,0.33)', color: '#93c5fd' },
+            { label: '📊 Net Worth Sim', route: '/simulator', bg: 'rgba(236,72,153,0.12)', border: 'rgba(236,72,153,0.3)', color: '#f9a8d4' },
           ].map((btn) => (
             <motion.button key={btn.label}
               onClick={() => { sound.click(); navigate(btn.route); }}

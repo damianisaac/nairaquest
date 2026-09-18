@@ -222,6 +222,7 @@ export default function AdultsDashboard() {
             { label: `${wallet.icon} Wallet`, route: '/wallet', bg: 'rgba(34,197,94,0.15)', border: 'rgba(34,197,94,0.38)', color: '#86efac' },
             { label: '👨‍👩‍👧 Family', route: '/family', bg: 'rgba(236,72,153,0.13)', border: 'rgba(236,72,153,0.32)', color: '#f9a8d4' },
             { label: '🏫 Class', route: '/class/join', bg: 'rgba(245,158,11,0.13)', border: 'rgba(245,158,11,0.32)', color: '#fcd34d' },
+            { label: '📊 Net Worth Sim', route: '/simulator', bg: 'rgba(226,84,63,0.12)', border: 'rgba(226,84,63,0.32)', color: '#fca5a5' },
           ].map((btn) => (
             <motion.button key={btn.label}
               onClick={() => { sound.click(); navigate(btn.route); }}
