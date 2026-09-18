@@ -79,32 +79,32 @@ export default function AdultsDashboard() {
   ];
 
   return (
-    <div className="min-h-screen overflow-x-hidden relative" style={{ background: 'linear-gradient(160deg, #002418 0%, #004828 45%, #005c38 75%, #002e1e 100%)' }}>
+    <div className="min-h-screen overflow-x-hidden relative" style={{ background: 'linear-gradient(160deg, #000e08 0%, #001c10 45%, #002818 75%, #001208 100%)' }}>
 
       {/* ── Animated background orbs ── */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         <motion.div className="absolute rounded-full"
-          style={{ width: 620, height: 620, top: -200, right: -140, background: 'radial-gradient(circle, rgba(212,175,55,0.45) 0%, transparent 65%)', filter: 'blur(65px)' }}
-          animate={{ scale: [1, 1.18, 1], opacity: [0.75, 1, 0.75] }}
+          style={{ width: 620, height: 620, top: -200, right: -140, background: 'radial-gradient(circle, rgba(212,175,55,0.28) 0%, transparent 65%)', filter: 'blur(70px)' }}
+          animate={{ scale: [1, 1.18, 1], opacity: [0.7, 1, 0.7] }}
           transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
         />
         <motion.div className="absolute rounded-full"
-          style={{ width: 480, height: 480, bottom: 80, left: -140, background: 'radial-gradient(circle, rgba(34,197,94,0.38) 0%, transparent 65%)', filter: 'blur(70px)' }}
-          animate={{ scale: [1, 1.28, 1], opacity: [0.6, 1, 0.6] }}
+          style={{ width: 480, height: 480, bottom: 80, left: -140, background: 'radial-gradient(circle, rgba(34,197,94,0.22) 0%, transparent 65%)', filter: 'blur(75px)' }}
+          animate={{ scale: [1, 1.28, 1], opacity: [0.6, 0.95, 0.6] }}
           transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 2.5 }}
         />
         <motion.div className="absolute rounded-full"
-          style={{ width: 360, height: 360, top: '42%', left: '35%', background: 'radial-gradient(circle, rgba(212,175,55,0.22) 0%, transparent 70%)', filter: 'blur(55px)' }}
-          animate={{ scale: [1, 1.22, 1], opacity: [0.5, 0.85, 0.5] }}
+          style={{ width: 360, height: 360, top: '42%', left: '35%', background: 'radial-gradient(circle, rgba(212,175,55,0.14) 0%, transparent 70%)', filter: 'blur(60px)' }}
+          animate={{ scale: [1, 1.22, 1], opacity: [0.5, 0.8, 0.5] }}
           transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut', delay: 5 }}
         />
         {/* Floating ₦ symbols */}
         {[0,1,2,3,4,5,6,7].map((i) => (
           <motion.div key={i} className="absolute font-black select-none"
             style={{ left: `${8 + i * 12}%`, top: `${15 + (i * 11) % 65}%`, fontSize: 14 + (i % 3) * 10,
-              color: i % 2 === 0 ? '#d4af37' : '#4ade80', opacity: 0.18,
-              textShadow: `0 0 14px ${i % 2 === 0 ? '#d4af37' : '#22c55e'}60` }}
-            animate={{ y: [-12, -55, -12], x: [0, (i % 2 === 0 ? 12 : -12), 0], rotate: [0, (i%2===0?10:-10), 0], opacity: [0.12, 0.28, 0.12] }}
+              color: i % 2 === 0 ? '#d4af37' : '#4ade80', opacity: 0.1,
+              textShadow: `0 0 14px ${i % 2 === 0 ? '#d4af37' : '#22c55e'}50` }}
+            animate={{ y: [-12, -55, -12], x: [0, (i % 2 === 0 ? 12 : -12), 0], rotate: [0, (i%2===0?10:-10), 0], opacity: [0.06, 0.15, 0.06] }}
             transition={{ duration: 8 + i * 1.5, repeat: Infinity, delay: i * 0.8, ease: 'easeInOut' }}>
             {i % 3 === 2 ? '🪙' : '₦'}
           </motion.div>

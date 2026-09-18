@@ -349,7 +349,7 @@ export default function GameplayPage() {
   return (
     <div
       className="min-h-screen flex flex-col relative overflow-hidden"
-      style={{ background: `linear-gradient(155deg, ${cat.colorDark}70 0%, #020d06 40%, ${cat.colorDark}55 100%)` }}
+      style={{ background: `linear-gradient(155deg, ${cat.colorDark}50 0%, #020d06 40%, ${cat.colorDark}40 100%)` }}
     >
       {/* ── Ambient orbs ── */}
       <motion.div

@@ -50,30 +50,30 @@ export default function KidsDashboard() {
 
   return (
     <div className="min-h-screen overflow-x-hidden relative"
-      style={{ background: 'linear-gradient(160deg, #0a3800 0%, #165200 40%, #1a6800 70%, #0d4200 100%)' }}>
+      style={{ background: 'linear-gradient(160deg, #041800 0%, #082800 40%, #0c3800 70%, #061e00 100%)' }}>
 
       {/* ── Animated background orbs ── */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         <motion.div className="absolute rounded-full"
-          style={{ width: 560, height: 560, top: -180, left: -120, background: 'radial-gradient(circle, rgba(74,222,128,0.50) 0%, transparent 65%)', filter: 'blur(65px)' }}
+          style={{ width: 560, height: 560, top: -180, left: -120, background: 'radial-gradient(circle, rgba(74,222,128,0.28) 0%, transparent 65%)', filter: 'blur(70px)' }}
           animate={{ scale: [1, 1.22, 1], opacity: [0.7, 1, 0.7] }}
           transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
         />
         <motion.div className="absolute rounded-full"
-          style={{ width: 450, height: 450, top: -120, right: -100, background: 'radial-gradient(circle, rgba(250,204,21,0.45) 0%, transparent 65%)', filter: 'blur(60px)' }}
+          style={{ width: 450, height: 450, top: -120, right: -100, background: 'radial-gradient(circle, rgba(250,204,21,0.25) 0%, transparent 65%)', filter: 'blur(65px)' }}
           animate={{ scale: [1, 1.3, 1], opacity: [0.65, 1, 0.65] }}
           transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
         />
         <motion.div className="absolute rounded-full"
-          style={{ width: 380, height: 380, bottom: 80, right: 30, background: 'radial-gradient(circle, rgba(251,146,60,0.38) 0%, transparent 65%)', filter: 'blur(65px)' }}
+          style={{ width: 380, height: 380, bottom: 80, right: 30, background: 'radial-gradient(circle, rgba(251,146,60,0.20) 0%, transparent 65%)', filter: 'blur(70px)' }}
           animate={{ scale: [1, 1.25, 1], opacity: [0.6, 0.95, 0.6] }}
           transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
         />
         {/* Floating fun icons + sparkles */}
         {['🌟','₦','🎯','💰','⭐','🪙','🌟','₦'].map((sym, i) => (
           <motion.div key={i} className="absolute font-black select-none"
-            style={{ left: `${4 + i * 12}%`, top: `${10 + (i * 12) % 72}%`, fontSize: 16 + (i % 3) * 10, opacity: 0.22 }}
-            animate={{ y: [-8, -65, -8], x: [0, (i%2===0?16:-16), 0], rotate: [0, (i%2===0?20:-20), 0], opacity: [0.14, 0.32, 0.14], scale: [1, 1.2, 1] }}
+            style={{ left: `${4 + i * 12}%`, top: `${10 + (i * 12) % 72}%`, fontSize: 16 + (i % 3) * 10, opacity: 0.10 }}
+            animate={{ y: [-8, -65, -8], x: [0, (i%2===0?16:-16), 0], rotate: [0, (i%2===0?20:-20), 0], opacity: [0.06, 0.16, 0.06], scale: [1, 1.2, 1] }}
             transition={{ duration: 6 + i * 1.2, repeat: Infinity, delay: i * 0.7, ease: 'easeInOut' }}>
             {sym}
           </motion.div>
@@ -82,9 +82,9 @@ export default function KidsDashboard() {
         {[...Array(12)].map((_, i) => (
           <motion.div key={i} className="absolute rounded-full"
             style={{ background: ['#fbbf24','#4ade80','#f472b6','#60a5fa','#fb923c','#a78bfa','#34d399','#fcd34d','#f9a8d4','#93c5fd','#fdba74','#c4b5fd'][i],
-              width: 8 + (i%3)*4, height: 8 + (i%3)*4,
-              top: `${10 + i * 7}%`, left: `${4 + i * 8}%`, filter: 'blur(1px)' }}
-            animate={{ y: [0, -30, 0], opacity: [0.5, 1, 0.5], scale: [1, 1.8, 1] }}
+              width: 6 + (i%3)*3, height: 6 + (i%3)*3,
+              top: `${10 + i * 7}%`, left: `${4 + i * 8}%`, filter: 'blur(1.5px)' }}
+            animate={{ y: [0, -25, 0], opacity: [0.25, 0.55, 0.25], scale: [1, 1.6, 1] }}
             transition={{ duration: 2.5 + i * 0.4, repeat: Infinity, ease: 'easeInOut', delay: i * 0.35 }}
           />
         ))}
