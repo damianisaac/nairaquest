@@ -1,5 +1,5 @@
 import { useEffect, useRef, useCallback } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { useGameStore } from '../store/gameStore';
 import TopNav from '../components/ui/TopNav';
 import type { WalletTransaction } from '../types';
@@ -10,7 +10,6 @@ type MqMessage =
   | { type: 'mq_partial'; netWorth: number };
 
 export default function MoneyQuestPage() {
-  const navigate   = useNavigate();
   const { profile } = useGameStore();
 
   const latestNetWorthRef  = useRef(0);
@@ -53,13 +52,6 @@ export default function MoneyQuestPage() {
   }, []);
 
   useEffect(() => {
-    if (!profile) { navigate('/'); return; }
-    if (profile.ageTrack === 'kids') {
-      // Kids can play but redirect if no profile
-    }
-  }, [profile, navigate]);
-
-  useEffect(() => {
     function handleMessage(event: MessageEvent) {
       const data = event.data as MqMessage;
       if (!data || typeof data.type !== 'string') return;
@@ -88,7 +80,7 @@ export default function MoneyQuestPage() {
     };
   }, [awardCredits]);
 
-  if (!profile) return null;
+  if (!profile) return <Navigate to="/" replace />;
 
   const track = profile.ageTrack;
   const name  = encodeURIComponent(profile.name ?? 'Player');
