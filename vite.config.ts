@@ -51,6 +51,9 @@ export default defineConfig({
         // Take control immediately on every new deploy — prevents stale bundle white screens
         skipWaiting: true,
         clientsClaim: true,
+        // Exclude /games/* from the SPA navigation fallback so the actual game HTML is served
+        navigateFallback: 'index.html',
+        navigateFallbackDenylist: [/^\/games\//],
         // Cache game assets aggressively for offline play
         runtimeCaching: [
           {
