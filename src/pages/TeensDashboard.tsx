@@ -49,9 +49,11 @@ export default function TeensDashboard() {
     (ALL_QUESTIONS[cat.id] ?? []).some((q) => q.ageTrack.includes('teens'))
   );
   const masteredCount = zones.filter((c) => selectMasteryPercent(state, c.id) >= 0.9).length;
-  const totalXP = zones.reduce((sum, c) => sum + (progress[c.id]?.masteryPoints ?? 0), 0);
+  const totalXP = profile.totalMasteryPoints;
   const totalCap = zones.reduce((sum, c) => sum + getMasteryCap(c.id, 'teens'), 0);
-  const overallMastery = totalCap > 0 ? totalXP / totalCap : 0;
+  const overallMastery = totalCap > 0
+    ? zones.reduce((sum, c) => sum + (progress[c.id]?.masteryPoints ?? 0), 0) / totalCap
+    : 0;
 
   const stats = [
     { label: 'Streak', value: `${profile.dailyStreak}🔥`, color: '#fb923c', bg: 'rgba(251,146,60,0.15)', border: 'rgba(251,146,60,0.35)' },

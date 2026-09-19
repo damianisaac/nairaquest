@@ -237,11 +237,12 @@ export function useAuth() {
     navigate('/');
   };
 
-  const syncNow = async () => {
-    const { user } = authState;
-    if (!user) return;
-    await pushToCloud(user.id);
-  };
+  const syncNow = useCallback(async () => {
+    if (!isSupabaseConfigured) return;
+    const { data: { session } } = await supabase.auth.getSession();
+    if (!session) return;
+    await pushToCloud(session.user.id);
+  }, [pushToCloud]);
 
   return {
     ...authState,

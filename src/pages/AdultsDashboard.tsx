@@ -65,15 +65,17 @@ export default function AdultsDashboard() {
     return acc;
   }, {});
   const tiers = Object.keys(byTier).map(Number).sort();
-  const totalXP = zones.reduce((sum, c) => sum + (progress[c.id]?.masteryPoints ?? 0), 0);
+  const totalXP = profile.totalMasteryPoints;
   const totalCap = zones.reduce((sum, c) => sum + getMasteryCap(c.id, 'adults'), 0);
-  const overallMastery = totalCap > 0 ? totalXP / totalCap : 0;
+  const overallMastery = totalCap > 0
+    ? zones.reduce((sum, c) => sum + (progress[c.id]?.masteryPoints ?? 0), 0) / totalCap
+    : 0;
   const masteredCount = zones.filter((c) => selectMasteryPercent(state, c.id) >= 0.9).length;
   const wallet = WALLET_NAMES[profile.ageTrack];
 
   const kpis = [
     { label: 'Overall Mastery', value: `${Math.round(overallMastery * 100)}%`, sub: `${masteredCount} categories complete`, color: '#d4af37', bg: 'rgba(212,175,55,0.18)', border: 'rgba(212,175,55,0.4)' },
-    { label: 'Total XP Earned', value: totalXP.toLocaleString(), sub: `of ${totalCap.toLocaleString()} possible`, color: '#4ade80', bg: 'rgba(74,222,128,0.12)', border: 'rgba(74,222,128,0.35)' },
+    { label: 'Total XP Earned', value: totalXP.toLocaleString(), sub: 'lifetime XP (matches leaderboard)', color: '#4ade80', bg: 'rgba(74,222,128,0.12)', border: 'rgba(74,222,128,0.35)' },
     { label: 'Zones Mastered', value: `${masteredCount}/${zones.length}`, sub: masteredCount > 0 ? 'Great progress!' : 'Keep going!', color: '#a78bfa', bg: 'rgba(167,139,250,0.12)', border: 'rgba(167,139,250,0.35)' },
     { label: 'Badges Earned', value: `${(profile.earnedBadgeIds ?? []).length}`, sub: 'View in profile', color: '#fbbf24', bg: 'rgba(251,191,36,0.12)', border: 'rgba(251,191,36,0.35)' },
   ];
