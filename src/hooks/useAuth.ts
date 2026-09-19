@@ -33,6 +33,61 @@ export function useAuth() {
     syncing: false,
   });
 
+  // Push local state up to cloud
+  const pushToCloud = useCallback(async (userId: string) => {
+    if (!isSupabaseConfigured) return;
+    const storeState = useGameStore.getState();
+    const { profile } = storeState;
+    const progress = selectProgress(storeState);
+    if (!profile) return;
+
+    await upsertProfile({
+      id: userId,
+      name: profile.name,
+      age_track: profile.ageTrack,
+      avatar_seed: profile.avatarSeed,
+      avatar_item_ids: (profile as typeof profile & { avatarItemIds?: string[] }).avatarItemIds ?? [],
+      level: profile.level,
+      total_mastery: profile.totalMasteryPoints,
+      daily_streak: profile.dailyStreak,
+      last_played: profile.lastPlayedDate,
+      badge_ids: profile.earnedBadgeIds,
+      wallet_balance: profile.walletBalance,
+      wallet_disclaimer_seen: profile.walletDisclaimerSeen,
+      user_role: profile.userRole ?? 'general',
+      referral_code: profile.referralCode ?? null,
+    });
+
+    // Sync wallet transactions (only ones that haven't been synced yet)
+    if (profile.walletTransactions.length > 0) {
+      await upsertWalletTransactions(
+        userId,
+        profile.walletTransactions.map((t) => ({
+          timestamp_ms: t.timestamp,
+          category_id: t.category,
+          difficulty: t.difficulty,
+          amount: t.amount,
+          type: t.type,
+          label: t.label,
+        }))
+      );
+    }
+
+    await Promise.all(
+      CATEGORIES.map((cat) => {
+        const p = progress[cat.id];
+        if (!p) return Promise.resolve();
+        return upsertProgress(userId, cat.id, {
+          mastery_points: p.masteryPoints,
+          peak_mastery_points: p.peakMasteryPoints,
+          questions_answered: p.questionsAnswered,
+          last_practiced: p.lastPracticed,
+          answered_question_ids: p.answeredQuestionIds ?? [],
+        });
+      })
+    );
+  }, []);
+
   // Pull cloud progress into local store
   const pullFromCloud = useCallback(async (userId: string) => {
     if (!isSupabaseConfigured) return;
@@ -119,63 +174,12 @@ export function useAuth() {
       }
     }
 
+    // Push the merged local state back so DB always reflects the true high-water mark.
+    // This catches users whose scores accumulated locally while the sync was broken.
+    await pushToCloud(userId);
+
     setAuthState((s) => ({ ...s, syncing: false }));
-  }, []); // no store dep — uses useGameStore.getState() internally
-
-  // Push local state up to cloud
-  const pushToCloud = useCallback(async (userId: string) => {
-    if (!isSupabaseConfigured) return;
-    const storeState = useGameStore.getState();
-    const { profile } = storeState;
-    const progress = selectProgress(storeState);
-    if (!profile) return;
-
-    await upsertProfile({
-      id: userId,
-      name: profile.name,
-      age_track: profile.ageTrack,
-      avatar_seed: profile.avatarSeed,
-      avatar_item_ids: (profile as typeof profile & { avatarItemIds?: string[] }).avatarItemIds ?? [],
-      level: profile.level,
-      total_mastery: profile.totalMasteryPoints,
-      daily_streak: profile.dailyStreak,
-      last_played: profile.lastPlayedDate,
-      badge_ids: profile.earnedBadgeIds,
-      wallet_balance: profile.walletBalance,
-      wallet_disclaimer_seen: profile.walletDisclaimerSeen,
-      user_role: profile.userRole ?? 'general',
-      referral_code: profile.referralCode ?? null,
-    });
-
-    // Sync wallet transactions (only ones that haven't been synced yet)
-    if (profile.walletTransactions.length > 0) {
-      await upsertWalletTransactions(
-        userId,
-        profile.walletTransactions.map((t) => ({
-          timestamp_ms: t.timestamp,
-          category_id: t.category,
-          difficulty: t.difficulty,
-          amount: t.amount,
-          type: t.type,
-          label: t.label,
-        }))
-      );
-    }
-
-    await Promise.all(
-      CATEGORIES.map((cat) => {
-        const p = progress[cat.id];
-        if (!p) return Promise.resolve();
-        return upsertProgress(userId, cat.id, {
-          mastery_points: p.masteryPoints,
-          peak_mastery_points: p.peakMasteryPoints,
-          questions_answered: p.questionsAnswered,
-          last_practiced: p.lastPracticed,
-          answered_question_ids: p.answeredQuestionIds ?? [],
-        });
-      })
-    );
-  }, []);
+  }, [pushToCloud]);
 
   useEffect(() => {
     if (!isSupabaseConfigured) {
