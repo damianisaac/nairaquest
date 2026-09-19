@@ -33,9 +33,8 @@ function buildLocalBoard(state: ReturnType<typeof useGameStore.getState>) {
 export default function LeaderboardPage() {
   const navigate = useNavigate();
   const state = useGameStore();
-  const { user } = useAuth();
+  const { user, syncNow } = useAuth();
   const { profile } = state;
-
   const [filter, setFilter] = useState<BoardFilter>('global');
   const [globalRows, setGlobalRows] = useState<LeaderboardRow[]>([]);
   const [catRows, setCatRows] = useState<CategoryLeaderboardRow[]>([]);
@@ -48,6 +47,8 @@ export default function LeaderboardPage() {
     setLoading(true);
 
     const load = async () => {
+      // Push local score first so leaderboard reflects the current session
+      await syncNow();
       if (filter === 'global') {
         const { data } = await fetchGlobalLeaderboard();
         setGlobalRows(data ?? []);
