@@ -449,7 +449,7 @@ const questions: Question[] = [
   {
     id: 'bk-031',
     text: 'What is a bank mainly used for?',
-    options: ['Keeping your money safe', 'Playing games', 'Buying sweets', 'Watching movies'],
+    options: ['Keeping your money safe', 'Playing video games', 'Buying sweets and snacks', 'Watching movies and TV'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],

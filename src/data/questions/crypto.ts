@@ -494,7 +494,7 @@ const questions: Question[] = [
   {
     id: 'cr-038',
     text: 'Why should you be cautious about sharing crypto wallet details or private keys with anyone?',
-    options: ['Sharing this information can lead to loss of funds through unauthorized access', 'Wallet details are meant to be shared publicly', 'Private keys have no real security implication', 'Only public information is stored in a crypto wallet'],
+    options: ['Sharing this information can lead to loss of funds through unauthorized access', 'Wallet details are meant to be shared publicly with anyone', 'Private keys have no real security implication whatsoever', 'Only public information is stored in a standard crypto wallet'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],

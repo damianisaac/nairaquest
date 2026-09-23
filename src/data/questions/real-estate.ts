@@ -724,7 +724,7 @@ const questions: Question[] = [
   {
     id: 're-051',
     text: 'What\'s a reasonable first step before signing any rental agreement?',
-    options: ['Sign immediately without reading the terms', 'Read the agreement carefully and understand what you\'re committing to', 'Rental agreements never need to be read', 'Terms and conditions are irrelevant to renting'],
+    options: ['Sign immediately without reading the terms at all', 'Read the agreement carefully and understand what you\'re committing to', 'Rental agreements never really need to be read beforehand', 'Terms and conditions are generally irrelevant to renting a property'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],

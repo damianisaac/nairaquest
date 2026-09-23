@@ -6,10 +6,10 @@ const questions: Question[] = [
     id: 'cd-001',
     text: 'What is a debit card?',
     options: [
-      'A card that lets you borrow money from a bank',
+      'A card that lets you borrow money from a bank or lender',
       'A card that lets you spend money directly from your own bank account',
-      'A card that gives you free money',
-      'A card only used for online shopping',
+      'A card that gives you free money whenever you need it',
+      'A card only used for online shopping and deliveries',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -316,7 +316,7 @@ const questions: Question[] = [
   {
     id: 'cd-022',
     text: 'What is a debit card generally used for?',
-    options: ['Spending money that\'s already in your account', 'Borrowing money you don\'t have', 'Printing money', 'Playing games only'],
+    options: ['Spending money that\'s already in your account', 'Borrowing money you don\'t yet have from a lender', 'Printing money at will', 'Playing games with virtual coins only'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -356,7 +356,7 @@ const questions: Question[] = [
   {
     id: 'cd-026',
     text: 'Why is a debit card connected directly to how much money is actually in an account?',
-    options: ['Because it spends real money that\'s already there, not borrowed money', 'It has no connection to any account', 'Debit cards create free money', 'Debit cards work exactly like credit cards'],
+    options: ['Because it spends real money that\'s already there, not borrowed money', 'It has no direct connection to any particular account balance', 'Debit cards create free money whenever the balance is low', 'Debit cards work in exactly the same way as credit cards do'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -366,7 +366,7 @@ const questions: Question[] = [
   {
     id: 'cd-027',
     text: 'What might happen if someone spends more than what\'s actually in their account using a debit card?',
-    options: ['The transaction may not go through, or there could be extra charges', 'Nothing happens, money appears automatically', 'It always works with no consequence', 'The bank gives free extra money'],
+    options: ['The transaction may not go through, or there could be extra charges', 'Nothing happens, money appears automatically anyway', 'It always works with absolutely no consequence', 'The bank provides free extra money to cover the gap'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -376,7 +376,7 @@ const questions: Question[] = [
   {
     id: 'cd-028',
     text: 'Why do many shops let people pay using cards instead of just cash?',
-    options: ['Cards can be a convenient way to pay without carrying cash', 'Cards have no real purpose in shops', 'Shops never accept card payments', 'Cards make items more expensive'],
+    options: ['Cards can be a convenient way to pay without carrying cash', 'Cards have no real practical purpose in shops at all', 'Shops never accept card payments of any kind', 'Cards always make items more expensive to buy'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -386,7 +386,7 @@ const questions: Question[] = [
   {
     id: 'cd-029',
     text: 'What\'s an important habit when a parent lets you help make a payment with their card?',
-    options: ['Being careful and only doing exactly what\'s agreed with them', 'Using the card for anything you want', 'Sharing the card details with friends', 'Cards require no careful handling'],
+    options: ['Being careful and only doing exactly what\'s agreed with them', 'Using the card for anything you personally want', 'Sharing the card details freely with your friends', 'Cards require no care or careful handling at all'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],

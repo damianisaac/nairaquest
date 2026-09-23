@@ -214,7 +214,7 @@ const questions: Question[] = [
     id: 'bs-015',
     text: 'What is the difference between "cash sales" and "credit sales" for a Nigerian trader?',
     options: [
-      'Cash sales require a CBN-registered POS terminal; credit sales are reserved for businesses holding a NIRSAL-backed payment guarantee',
+      'Cash sales require a CBN-registered POS terminal; credit sales are reserved only for businesses holding a NIRSAL-backed payment guarantee',
       'Cash sales: customer pays immediately on purchase. Credit sales: customer takes goods now and pays later. Credit sales create accounts receivable — money owed to you — which carries risk of non-payment',
       'Cash sales attract a 7.5% VAT remittance to FIRS immediately; credit sales remain VAT-exempt until the invoice is fully settled',
       'Cash and credit sales produce identical profit margins; the only legal difference is the wording on the formal invoice',
@@ -245,7 +245,7 @@ const questions: Question[] = [
     id: 'bs-017',
     text: 'What is "trade finance" and which instruments are commonly used for Nigerian import/export transactions?',
     options: [
-      'Interest-free export grants issued by the CBN\'s Export Stimulation Facility to cover raw material procurement costs for registered Nigerian exporters',
+      'Interest-free export grants issued by the CBN\'s Export Stimulation Facility to cover all raw material and logistics procurement costs for registered Nigerian exporters',
       'Financial products that facilitate international trade — including Letters of Credit (LC), documentary collections, trade credit insurance, and invoice discounting — mitigating non-payment risk between international buyers and sellers',
       'Mandatory marine insurance policies required by the Nigerian Ports Authority before any containerised cargo clears Apapa or Tin Can Island',
       'Short-term overdraft facilities banks extend exclusively to traders holding domiciliary accounts used for foreign currency settlements',
@@ -262,7 +262,7 @@ const questions: Question[] = [
     options: [
       'When import tariffs rise, traders should always pass the full increase to consumers regardless of how sensitive buyers are to higher prices',
       'If demand is elastic (price-sensitive), raising prices drives customers away significantly. If inelastic (necessity goods like medicine), prices can rise without large demand drops. Traders must know their product\'s elasticity to set optimal prices',
-      'Traders in informal Nigerian markets should apply a fixed 30% markup on all products, as variable markups are prohibited under FCCPC pricing rules',
+      'Traders in informal Nigerian markets should apply a fixed 30% markup on all products, as variable markups are prohibited and enforceable under FCCPC consumer pricing rules',
       'The CBN\'s monetary policy rate directly determines the maximum markup traders may apply, so pricing strategy is set by the central bank',
     ],
     correctIndex: 1,
@@ -526,7 +526,7 @@ const questions: Question[] = [
   {
     id: 'bs-040',
     text: 'What\'s a smart habit when receiving payment for something you\'ve sold online?',
-    options: ['Confirm payment has genuinely been received before releasing the item, especially with unfamiliar buyers', 'Release the item immediately based only on a buyer\'s claim of payment', 'Payment verification has no real importance in online transactions', 'Trust every buyer completely with no verification needed'],
+    options: ['Confirm payment has genuinely been received before releasing the item, especially with unfamiliar buyers', 'Release the item immediately based only on a buyer\'s unverified claim of payment', 'Payment verification has no real importance in online transactions', 'Trust every buyer completely with no verification needed'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],

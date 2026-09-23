@@ -46,10 +46,10 @@ const questions: Question[] = [
     id: 'ph-004',
     text: 'Which of these is an example of giving back to your community?',
     options: [
-      'Keeping all your toys to yourself',
+      'Keeping all your toys and belongings to yourself',
       'Donating old books you no longer need to your school library',
-      'Spending all your pocket money on snacks',
-      'Asking others to give you things',
+      'Spending all your pocket money on snacks and treats',
+      'Asking others to give you their things',
     ],
     correctIndex: 1,
     difficulty: 'easy',

@@ -36,7 +36,7 @@ const questions: Question[] = [
   {
     id: 'ec-003',
     text: 'Nigeria\'s inflation rate in 2024 was approximately:',
-    options: ['5%', '15%', '28–33%', '45%'],
+    options: ['5–10%', '10–20%', '28–33%', '40–50%'],
     correctIndex: 2,
     difficulty: 'hard',
     ageTrack: ['adults'],

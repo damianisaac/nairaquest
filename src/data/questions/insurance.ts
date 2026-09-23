@@ -637,7 +637,7 @@ const questions: Question[] = [
   {
     id: 'in-044',
     text: 'Why might a family without any health insurance face more financial strain during a medical emergency?',
-    options: ['They may need to cover the full cost out-of-pocket unexpectedly, which can be a significant burden', 'Insurance has no effect on medical costs', 'Medical emergencies are always affordable regardless of insurance', 'Families without insurance pay less overall'],
+    options: ['They may need to cover the full cost out-of-pocket unexpectedly, which can be a significant burden', 'Insurance has no measurable effect on total medical costs', 'Medical emergencies are generally always affordable regardless of insurance coverage', 'Families without any insurance consistently end up paying less overall'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -687,7 +687,7 @@ const questions: Question[] = [
   {
     id: 'in-048',
     text: 'Why might young people underestimate the value of starting some form of insurance coverage early?',
-    options: ['A sense that bad events \'won\'t happen to them\' can lead to underestimating real risk', 'Young people are statistically never at risk of anything', 'Insurance is only valuable for older adults', 'There\'s no real value to starting coverage early'],
+    options: ['A sense that bad events \'won\'t happen to them\' can lead to underestimating real risk', 'Young people are statistically almost never at risk of anything at all', 'Insurance is only ever valuable for older adults and retirees', 'There\'s no real value or benefit to starting coverage early'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],

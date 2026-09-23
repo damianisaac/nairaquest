@@ -615,7 +615,7 @@ const questions: Question[] = [
   {
     id: 'en-042',
     text: 'If your friend says your product is too expensive and doesn\'t buy it, what could you consider?',
-    options: ['Think about whether your price or product could be adjusted', 'Ignore all feedback completely', 'Get angry and stop selling forever', 'Raise the price even higher immediately'],
+    options: ['Think about whether your price or product could be adjusted', 'Ignore all customer feedback completely', 'Get angry and stop selling products forever', 'Raise the price even higher to compensate for the loss'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
