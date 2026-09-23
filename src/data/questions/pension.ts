@@ -86,10 +86,10 @@ const questions: Question[] = [
     id: 'pn-007',
     text: 'What is the NHF and how does it relate to pension savings?',
     options: [
-      'National Health Fund — covers medical expenses in retirement',
+      'National Health Fund — a 1.5% monthly deduction funding primary healthcare coverage for workers through federal government hospitals',
       'National Housing Fund — a 2.5% monthly deduction that helps workers access mortgage loans for affordable housing',
-      'National Heritage Fund — investment in government bonds',
-      'Nigeria Housing Finance — a PENCOM subsidiary',
+      'National Heritage Fund — a government-managed investment account that pays a lump sum to workers on reaching official retirement age',
+      'Nigeria Housing Finance — a PenCom subsidiary that provides emergency rent grants to low-income formal sector workers who lose their jobs',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -129,10 +129,10 @@ const questions: Question[] = [
     id: 'pn-010',
     text: 'What is the difference between an annuity and a programmed withdrawal in pension access?',
     options: [
-      'An annuity is a lump sum; programmed withdrawal is paid monthly',
+      'An annuity is a lump sum paid at retirement from your RSA; a programmed withdrawal is income arranged with a life insurer, continuing indefinitely regardless of your remaining balance',
       'An annuity is a guaranteed monthly income for life from a life insurance company; programmed withdrawal gives you periodic payments from your PFA until funds are exhausted',
-      'They are the same — both give you all your money at once',
-      'A programmed withdrawal is only for government employees',
+      'They are the same product — both pay a fixed monthly income and are both administered by your PFA under PenCom guidelines, with payments continuing until your account balance is zero',
+      'Programmed withdrawal is exclusively for public sector retirees; private sector workers must take an annuity arranged with a licensed life insurance company approved by PenCom',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -145,10 +145,10 @@ const questions: Question[] = [
     id: 'pn-011',
     text: 'Why should a 25-year-old care about pension savings?',
     options: [
-      'They should not — pension is only for people over 50',
+      'They should not — pension contributions under the CPS are fully automatic and require no personal involvement until the official retirement age is reached',
       'Starting early means compound growth works in their favour — small contributions grow massively over 35 years',
-      'Because the government will cut their salary if they don\'t',
-      'Only because it\'s mandatory, not because it helps them',
+      'Because the government will reduce their salary by a penalty percentage after age 40 if they have not registered an RSA with a licensed PFA',
+      'Only because it is a legal requirement under the Pension Reform Act — the actual financial benefit of starting early in one\'s career is minimal and rarely significant',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -178,10 +178,10 @@ const questions: Question[] = [
     id: 'pn-013',
     text: 'What is a pension?',
     options: [
-      'A monthly fine you pay the government',
+      'A mandatory monthly fine paid to the government throughout your career as a compulsory civic contribution under Nigerian law',
       'Money saved during your working life that you receive when you stop working in old age',
-      'A type of bank loan for the elderly',
-      'Free money the government gives to everyone',
+      'An interest-free loan issued by the government to elderly Nigerians who have no other source of income after retiring',
+      'Free money the government automatically gives to every Nigerian citizen on the day they reach the official retirement age',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -238,10 +238,10 @@ const questions: Question[] = [
     id: 'pn-017',
     text: 'What does "retirement" mean?',
     options: [
-      'Going to sleep early every night',
+      'Going to bed at a fixed early time every night as recommended for elderly persons to maintain their overall health and wellbeing',
       'Stopping work permanently, usually at an older age, and living on savings or pension',
-      'Taking a short holiday from work',
-      'Changing your job to something easier',
+      'Taking an extended break from work to recover from burnout, typically lasting between several weeks and three months',
+      'Switching from a demanding job to a much less stressful or part-time role in order to reduce workplace pressure and exhaustion',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -254,10 +254,10 @@ const questions: Question[] = [
     id: 'pn-018',
     text: 'What is a "pension"?',
     options: [
-      'A monthly fine paid to the government when you retire',
+      'A mandatory monthly fine deducted from workers\' salaries and paid to the government as compensation for using public infrastructure',
       'Money saved during your working years that you receive every month after you retire',
-      'A special savings account only for children',
-      'A loan you take when you are old',
+      'A special savings account designed exclusively for children to encourage them to develop financial discipline from a young age',
+      'An interest-bearing loan that older Nigerians take from their bank when they can no longer cover their monthly living expenses',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -269,10 +269,10 @@ const questions: Question[] = [
     id: 'pn-019',
     text: 'Why is it important to save money for when you are old and cannot work anymore?',
     options: [
-      'It is not important — your children will always take care of you',
+      'It is not that important — in most Nigerian families, adult children traditionally take full financial responsibility for their parents in old age with no exceptions',
       'Because without savings or a pension, you may have no income in retirement and depend entirely on others',
-      'Old people get free money from the government automatically',
-      'You can always get a job when you are very old',
+      'Old people automatically receive a monthly cash payment from the Nigerian government once they reach the official retirement age of sixty',
+      'You will always be able to find some form of employment or business in old age, so dedicated retirement savings are rarely needed',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -299,10 +299,10 @@ const questions: Question[] = [
     id: 'pn-021',
     text: 'If Amara starts saving ₦500/month for retirement at age 10 and her brother Emeka starts at age 30, who will have more money saved when they both retire at 65?',
     options: [
-      'Emeka — he earns more money as an adult',
+      'Emeka — because he earns a higher adult income, his larger monthly contributions will outweigh the impact of compound growth over Amara\'s longer savings period',
       'Amara — starting earlier gives her 55 years of saving and growth compared to Emeka\'s 35 years',
-      'They will have the same amount',
-      'It depends on which bank they use',
+      'They will have the same amount — because both save ₦500 per month, the total accumulated is identical regardless of when each of them began contributing',
+      'It depends entirely on which bank or financial institution each of them uses, since interest rates differ and can outweigh the effect of starting time',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -314,10 +314,10 @@ const questions: Question[] = [
     id: 'pn-022',
     text: 'When a worker\'s employer also contributes to their pension fund alongside the worker, this is called a:',
     options: [
-      'Double salary',
+      'Double salary — the employer pays the worker twice their monthly wage in recognition of long and dedicated service to the organisation',
       'Employer contribution — the employer adds to your pension alongside your own contribution',
-      'Tax payment',
-      'Bonus',
+      'Tax payment — the employer remits a percentage of the worker\'s salary to FIRS as part of the employee\'s total income tax liability',
+      'Performance bonus — the employer adds extra money to the worker\'s pay as a reward for achieving set productivity targets during the appraisal period',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -359,7 +359,7 @@ const questions: Question[] = [
   {
     id: 'pn-026',
     text: 'What is a simple way to describe a pension?',
-    options: ['Money set aside over many working years to support someone after they retire', 'A type of loan', 'A tax on toys', 'A one-time gift with no connection to work'],
+    options: ['Money set aside over many working years to support someone after they retire', 'A short-term credit facility taken from a commercial bank to cover urgent personal expenses during a period of temporary cash shortage', 'A compulsory tax on income that the government collects from workers and redistributes to public services and infrastructure', 'A one-time cash gift given by an employer at the end of each calendar year as recognition for completing the annual performance cycle'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -389,7 +389,7 @@ const questions: Question[] = [
   {
     id: 'pn-029',
     text: 'Why is patience important when saving for something that\'s very far away, like retirement?',
-    options: ['Because it takes a long time and steady effort to build up over the years', 'Patience has no connection to saving money', 'Long-term goals require no real patience', 'Saving for far-away goals happens instantly'],
+    options: ['Because it takes a long time and steady effort to build up over the years', 'Patience has no real connection to how much you save — only the size of each contribution, not the time between them, determines the final outcome', 'Long-term retirement goals do not require patience since modern investment products compound money automatically with no ongoing effort from the saver', 'Saving for goals that are many years away happens quickly once you use the right financial products, so patience is not a meaningful factor in retirement planning'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -429,7 +429,7 @@ const questions: Question[] = [
   {
     id: 'pn-033',
     text: 'What is the general idea behind Nigeria\'s Contributory Pension Scheme?',
-    options: ['Employees and employers contribute regularly toward a retirement savings account over a working career', 'It\'s a one-time government gift with no ongoing contribution', 'Only employers contribute, employees are not involved at all', 'It has no connection to a person\'s salary or employment'],
+    options: ['Employees and employers contribute regularly toward a retirement savings account over a working career', 'It is a once-off government endowment paid into a trust fund on behalf of every Nigerian worker at the start of their first formal employment', 'Only employers are required to make contributions — employees benefit passively from their employer\'s mandatory deposits without any personal deduction', 'The scheme has no direct link to salary or employment — it is a voluntary savings club run by community banks and registered cooperatives across Nigeria'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -449,7 +449,7 @@ const questions: Question[] = [
   {
     id: 'pn-035',
     text: 'What\'s a reasonable way to think about a Retirement Savings Account (RSA)?',
-    options: ['A dedicated account where retirement contributions accumulate over a working career', 'A type of everyday spending account', 'A short-term savings goal for a small purchase', 'An account used only for emergency expenses'],
+    options: ['A dedicated account where retirement contributions accumulate over a working career', 'A flexible everyday transaction account used for daily purchases, which also earns a small interest rate on any positive end-of-month balance', 'A short-term savings plan used to accumulate funds for an immediate purchase such as a phone, appliance, or school fee payment', 'An emergency account set up by an employer to hold funds reserved for compensating workers in the event of sudden retrenchment or closure'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -469,7 +469,7 @@ const questions: Question[] = [
   {
     id: 'pn-037',
     text: 'What\'s a key reason compounding matters specifically for long-term retirement savings?',
-    options: ['Compounding allows growth to build on previous growth over a long period, significantly increasing the total over time', 'Compounding has no meaningful effect over long time periods', 'Retirement savings never benefit from any form of growth', 'Compounding only matters for very large sums of money'],
+    options: ['Compounding allows growth to build on previous growth over a long period, significantly increasing the total over time', 'Compounding has no meaningful effect on long-term savings because the annual percentage rates applied by Nigerian PFAs are too small to produce noticeable differences', 'Retirement savings in Nigeria never benefit from compound growth since all funds are held in fixed-rate government bonds that pay a flat unchanging annual return', 'Compounding only matters when the principal sum is very large — for ordinary workers making small monthly contributions, the effect is negligible and essentially zero'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -479,7 +479,7 @@ const questions: Question[] = [
   {
     id: 'pn-038',
     text: 'Why might someone in their first job want to understand their pension contribution details, even if retirement feels far away?',
-    options: ['Understanding contribution details helps you track your long-term savings progress from the start of your career', 'Pension details are irrelevant until close to retirement', 'First jobs never involve any pension considerations', 'Only employers need to understand pension contribution details'],
+    options: ['Understanding contribution details helps you track your long-term savings progress from the start of your career', 'Pension contribution details are entirely irrelevant in the early years of a career — only workers within ten years of retirement need to pay attention to these figures', 'First jobs in Nigeria never involve any pension-related considerations since most entry-level positions are exempt from the Contributory Pension Scheme requirements', 'Only your employer\'s HR department needs to understand pension contribution breakdowns — individual employees have no responsibility to monitor or verify these figures'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -489,7 +489,7 @@ const questions: Question[] = [
   {
     id: 'pn-039',
     text: 'What\'s a sound perspective on treating retirement savings as a priority rather than an afterthought?',
-    options: ['Treating it as a priority from early in a career can lead to significantly better long-term financial security', 'Retirement savings should always be the last financial priority considered', 'Prioritizing retirement savings has no real long-term benefit', 'Retirement planning is only relevant in someone\'s final working years'],
+    options: ['Treating it as a priority from early in a career can lead to significantly better long-term financial security', 'Retirement savings should always be approached as a low-priority financial consideration since day-to-day expenses and short-term goals are far more important to address first', 'Prioritising retirement contributions from early in a career has no meaningful impact since the mandatory CPS already handles everything automatically', 'Serious retirement planning is only relevant in the final decade of a working career — earlier planning creates unnecessary worry and offers no measurable financial advantage'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -499,7 +499,7 @@ const questions: Question[] = [
   {
     id: 'pn-040',
     text: 'Why might a teen exploring a first side income also think ahead about long-term saving habits, even informally?',
-    options: ['Building saving habits early, even informally, can support stronger long-term financial habits generally', 'Side income has no connection to long-term saving habits', 'Only formal employment income is worth thinking about long-term', 'There\'s no benefit to building saving habits before adulthood'],
+    options: ['Building saving habits early, even informally, can support stronger long-term financial habits generally', 'Side income from informal activities has no meaningful connection to long-term financial habits since it is not subject to the same regulations as formal employment income', 'Only income from formally registered employment is worth considering for long-term financial planning — informal earnings are too unpredictable to save from consistently', 'There is no real benefit to developing saving habits before entering formal employment — good financial behaviour can be learned quickly once a regular salary begins'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -509,7 +509,7 @@ const questions: Question[] = [
   {
     id: 'pn-041',
     text: 'What\'s a balanced way to think about retirement planning at a young age?',
-    options: ['It\'s too early to think about at all until much later in life', 'Even basic awareness now can support better decisions and habits as real income and contributions begin', 'Retirement planning should only start right before retiring', 'Young people have no meaningful role in retirement planning'],
+    options: ['It is far too early for young people to engage with pension concepts — this material is only useful and actionable once a person has begun formal employment', 'Even basic awareness now can support better decisions and habits as real income and contributions begin', 'Retirement planning should only begin in the year directly before leaving the workforce — any earlier engagement with the topic is a waste of time and creates anxiety', 'Young people have no meaningful role in retirement planning since all pension decisions and contributions are handled entirely by employers and regulated by PenCom'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -529,7 +529,7 @@ const questions: Question[] = [
   {
     id: 'pn-043',
     text: 'What\'s a sound reason to periodically review your Retirement Savings Account performance and contributions?',
-    options: ['Reviewing has no real value once contributions begin', 'It helps ensure your retirement savings trajectory still aligns with your long-term goals and circumstances', 'RSAs never require any ongoing attention', 'Only pension administrators should ever review this information'],
+    options: ['Reviewing your RSA has no practical value once regular contributions are set up since the account is managed automatically by your licensed Pension Fund Administrator', 'It helps ensure your retirement savings trajectory still aligns with your long-term goals and circumstances', 'Retirement Savings Accounts never require any ongoing attention from the account holder — all monitoring and rebalancing is done entirely by PenCom without any input needed', 'Only your Pension Fund Administrator is authorised to review RSA performance data — individual account holders are not permitted to access or query detailed fund information'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -539,7 +539,7 @@ const questions: Question[] = [
   {
     id: 'pn-044',
     text: 'Why might relying entirely on a single retirement income source (like only a pension) be riskier than diversifying retirement income planning?',
-    options: ['A single source concentrates risk, while diversified planning can offer more resilience against unexpected changes', 'There\'s no risk to relying on a single retirement income source', 'Diversifying retirement income has no practical benefit', 'Pensions alone always guarantee sufficient retirement income'],
+    options: ['A single source concentrates risk, while diversified planning can offer more resilience against unexpected changes', 'There is no meaningful risk to relying on a single pension source — Nigerian PFAs are licensed and regulated by PenCom and are therefore entirely safe to depend on', 'Diversifying retirement income simply adds complexity and administrative burden without improving overall financial security in old age', 'A mandatory pension scheme alone always guarantees sufficient retirement income since the minimum contribution rates are calibrated to cover full living costs'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -559,7 +559,7 @@ const questions: Question[] = [
   {
     id: 'pn-046',
     text: 'Why might a self-employed individual need to be more deliberate about retirement planning than a salaried employee under an employer-linked pension scheme?',
-    options: ['Self-employed individuals may not have automatic employer contributions, requiring more proactive personal planning', 'Self-employed individuals have no need for retirement planning at all', 'Employer-linked schemes require no employee involvement whatsoever', 'There\'s no meaningful difference in retirement planning needs between the two'],
+    options: ['Self-employed individuals may not have automatic employer contributions, requiring more proactive personal planning', 'Self-employed individuals in Nigeria have no need for retirement planning since informal sector workers are fully covered by the National Social Insurance Trust Fund', 'Employer-linked pension schemes handle all retirement planning automatically on behalf of the employee, requiring absolutely no personal involvement or independent financial decision-making', 'There is no meaningful difference in retirement planning needs between salaried workers and the self-employed since both groups benefit equally from Nigeria\'s Micro Pension Plan'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -569,7 +569,7 @@ const questions: Question[] = [
   {
     id: 'pn-047',
     text: 'What\'s a sound reason to understand the fees or charges associated with a Pension Fund Administrator (PFA)?',
-    options: ['Fees can affect the net growth of retirement savings over a long period, making them worth understanding', 'Fees have no bearing on long-term retirement outcomes', 'PFAs never charge any fees under any circumstances', 'Fee structures are irrelevant to individual retirement planning'],
+    options: ['Fees can affect the net growth of retirement savings over a long period, making them worth understanding', 'PFA management fees have no bearing on long-term fund performance since all fees are capped at a negligible rate regulated by PenCom under the Pension Reform Act 2014', 'All Pension Fund Administrators operating in Nigeria are prohibited from charging any form of management fee on individual Retirement Savings Accounts under current regulations', 'Fee structures associated with PFAs are entirely irrelevant to individual retirement planning since all charges are absorbed by employer contributions and never affect RSA balances'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -579,7 +579,7 @@ const questions: Question[] = [
   {
     id: 'pn-048',
     text: 'Why might someone consider supplementing a mandatory pension scheme with additional personal retirement savings?',
-    options: ['A mandatory scheme alone may not fully cover desired retirement living standards, making supplementary savings a reasonable consideration', 'Mandatory pension contributions are always sufficient for every individual\'s needs', 'Supplementary savings have no real value alongside a mandatory scheme', 'Only wealthy individuals should consider supplementary retirement savings'],
+    options: ['A mandatory scheme alone may not fully cover desired retirement living standards, making supplementary savings a reasonable consideration', 'Mandatory pension contributions under the Contributory Pension Scheme are always sufficient to fully support any individual\'s retirement needs, regardless of income level or spending habits', 'Supplementary retirement savings have no real benefit when a mandatory scheme is in place since double contributions are counted as taxable income and reduce take-home pay significantly', 'Only high-net-worth individuals with substantial investment portfolios should ever consider supplementary retirement savings — for ordinary workers the mandatory CPS is entirely adequate'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -589,7 +589,7 @@ const questions: Question[] = [
   {
     id: 'pn-049',
     text: 'What\'s a balanced view on switching Pension Fund Administrators or investment strategies within a retirement account?',
-    options: ['Switching should be considered carefully, weighing potential benefits against costs, fees, and long-term implications', 'Switching should be done frequently with no evaluation required', 'Pension accounts never allow any changes once established', 'Switching decisions have no real financial impact'],
+    options: ['Switching should be considered carefully, weighing potential benefits against costs, fees, and long-term implications', 'Switching your Pension Fund Administrator should be done as frequently as possible — changing PFAs every one to two years maximises returns by always selecting the top performer', 'Once established, pension accounts in Nigeria cannot be transferred or modified under any circumstances — PenCom regulations permanently bind each worker to their original PFA choice', 'Decisions about switching PFAs or investment strategies have no real financial impact since all licensed Nigerian PFAs are required to deliver identical investment returns by law'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -599,7 +599,7 @@ const questions: Question[] = [
   {
     id: 'pn-050',
     text: 'Why is understanding the withdrawal rules and conditions of a retirement savings account important well before retirement age?',
-    options: ['Understanding withdrawal conditions in advance helps with realistic planning and avoids surprises when the time comes', 'Withdrawal rules are irrelevant until the exact day of retirement', 'All retirement accounts have identical withdrawal conditions everywhere', 'There\'s no benefit to understanding these rules early'],
+    options: ['Understanding withdrawal conditions in advance helps with realistic planning and avoids surprises when the time comes', 'Withdrawal rules for Retirement Savings Accounts are entirely irrelevant until the exact day you plan to retire — there is no practical reason to study them any earlier in a career', 'All Retirement Savings Accounts across every licensed PFA in Nigeria operate under identical withdrawal conditions, so there is nothing specific to learn or compare in advance', 'There is no meaningful benefit to understanding RSA withdrawal rules early since your Pension Fund Administrator will brief you fully on all relevant options right at retirement'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -619,7 +619,7 @@ const questions: Question[] = [
   {
     id: 'pn-052',
     text: "What is a \"pension\"?",
-    options: ["Money borrowed from a friend when old", "Money saved throughout your working life to support you when you retire", "A gift from the government to everyone", "A loan that is forgiven when you turn 60"],
+    options: ["Money borrowed from a trusted friend or family member to help cover daily living costs once you are too old to earn a regular income", "Money saved throughout your working life to support you when you retire", "An automatic cash gift from the Nigerian federal government given equally to every citizen who reaches the official statutory retirement age", "A bank loan with a low interest rate that is automatically forgiven and cancelled on the day you turn sixty years of age in Nigeria"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -629,7 +629,7 @@ const questions: Question[] = [
   {
     id: 'pn-053',
     text: "Why do people save for retirement?",
-    options: ["Because the government forces everyone to save", "Because one day they will be too old or unable to work and will still need money to live", "To impress their neighbours", "To avoid paying taxes"],
+    options: ["Because the Nigerian government legally requires all citizens to maintain a minimum savings balance and imposes fines on those who fail to comply with this obligation", "Because one day they will be too old or unable to work and will still need money to live", "To show their neighbours and community members that they are financially responsible and disciplined enough to plan beyond their immediate day-to-day needs", "In order to qualify for annual federal tax rebates that are only available to individuals who contribute a set minimum amount to a registered retirement savings plan"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -639,7 +639,7 @@ const questions: Question[] = [
   {
     id: 'pn-054',
     text: "Who pays into a pension fund when you are employed?",
-    options: ["Only the employee", "Only the employer", "Both the employee and the employer", "Only the government"],
+    options: ["Only the employee, from a deduction taken from their monthly take-home pay with no matching employer input", "Only the employer, since workers are not required to contribute any part of their own salary to the fund", "Both the employee and the employer", "Only the government, from taxes collected through the Federal Inland Revenue Service on behalf of all workers"],
     correctIndex: 2,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -659,7 +659,7 @@ const questions: Question[] = [
   {
     id: 'pn-056',
     text: "What is the main advantage of starting to save for retirement early?",
-    options: ["You get a larger government grant", "Your savings have more time to grow through compound interest", "You pay fewer taxes", "Early savers never lose their money"],
+    options: ["You receive a larger upfront cash grant from the federal government as a reward for registering your RSA before the age of thirty", "Your savings have more time to grow through compound interest", "Early starters qualify for a special tax exemption that eliminates income tax obligations for the first ten years of their formal employment", "Workers who open their RSA before age thirty are guaranteed by PenCom never to lose any portion of their pension balance regardless of market conditions"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -679,7 +679,7 @@ const questions: Question[] = [
   {
     id: 'pn-058',
     text: "Your pension fund earns 8% per year. Why is it better to start contributing at 25 than at 40?",
-    options: ["It is not better — both earn the same", "Starting at 25 gives 15 more years of compound growth — significantly more retirement savings", "Starting later gives a higher contribution rate", "The government rewards late starters"],
+    options: ["It is not actually better — both starting ages earn the same final balance since the fund applies a flat annual return rate regardless of when contributions began", "Starting at 25 gives 15 more years of compound growth — significantly more retirement savings", "Starting later typically results in higher contribution rates because older workers are placed in higher-return investment tiers by their Pension Fund Administrator", "The government introduces late-starter incentives that boost monthly returns for workers who begin contributing after the age of forty to compensate for the lost years"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['kids'],
@@ -689,7 +689,7 @@ const questions: Question[] = [
   {
     id: 'pn-059',
     text: "What is the Nigerian Contributory Pension Scheme?",
-    options: ["A voluntary savings plan run by banks", "A mandatory pension system where both employee and employer contribute a percentage of salary", "A government grant for retired civil servants only", "An optional insurance policy for workers"],
+    options: ["A voluntary savings scheme run by commercial banks where individuals choose whether to contribute and select their preferred contribution rate each month", "A mandatory pension system where both employee and employer contribute a percentage of salary", "An annual cash grant paid by the federal government directly to retired civil servants in recognition of their years of public sector service and loyalty", "An optional group insurance policy that workers in large companies may sign up for to receive supplementary income benefits during illness or after retirement"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['kids'],
@@ -719,7 +719,7 @@ const questions: Question[] = [
   {
     id: 'pn-062',
     text: "What does \"PFA\" stand for in Nigeria's pension system?",
-    options: ["Public Finance Authority", "Pension Fund Administrator — a licensed company that manages your pension contributions", "Personal Finance Account", "Pension Fund Allocation"],
+    options: ["Public Finance Authority — the federal body responsible for overseeing government spending and auditing pension-related expenditure across all ministries", "Pension Fund Administrator — a licensed company that manages your pension contributions", "Personal Finance Account — a savings product offered by commercial banks designed specifically for formal sector employees planning long-term retirement income", "Pension Fund Allocation — the annual budget line item set aside by the federal government to fund pension obligations for retired civil servants and military personnel"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -729,7 +729,7 @@ const questions: Question[] = [
   {
     id: 'pn-063',
     text: "What is a \"Retirement Savings Account\" (RSA)?",
-    options: ["A regular savings account for retirement", "The individual account opened with a PFA where your pension contributions are held", "A government savings bond", "A fixed deposit account with a bank"],
+    options: ["A standard savings account at any commercial bank that earns interest and is earmarked by the account holder for use during the post-retirement years of their life", "The individual account opened with a PFA where your pension contributions are held", "A federal government savings instrument sold through commercial banks that locks in funds for a minimum of ten years before they can be redeemed with accrued interest", "A fixed deposit account opened with a microfinance bank that specifically targets low-income workers and pays a higher-than-average interest rate on retirement savings"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -739,7 +739,7 @@ const questions: Question[] = [
   {
     id: 'pn-064',
     text: "What body regulates pension fund administrators in Nigeria?",
-    options: ["The CBN", "The National Pension Commission (PenCom)", "FIRS", "The Stock Exchange"],
+    options: ["The CBN (Central Bank of Nigeria), which oversees all financial institutions and monetary policy", "The National Pension Commission (PenCom)", "FIRS (Federal Inland Revenue Service), which is responsible for tax collection and administration", "The NSE (Nigerian Stock Exchange), which monitors investment compliance for listed companies"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -789,7 +789,7 @@ const questions: Question[] = [
   {
     id: 'pn-069',
     text: "Why is Nigeria's CPS considered an improvement over the old defined benefit scheme for government workers?",
-    options: ["It pays higher pensions", "Each worker owns their RSA — contributions are portable, transparent, and protected even if government changes", "The government has no role in it", "It requires no employer contribution"],
+    options: ["It pays significantly higher monthly pensions because PFAs invest funds in higher-yield assets not available to the government under the old defined benefit arrangement", "Each worker owns their RSA — contributions are portable, transparent, and protected even if government changes", "The federal government plays no role in the scheme, meaning workers are entirely free from any regulatory oversight or intervention in their retirement funds", "It removes the employer's obligation to contribute to workers' pension funds, which reduces business costs and allows companies to offer higher take-home salaries"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['teens'],
@@ -799,7 +799,7 @@ const questions: Question[] = [
   {
     id: 'pn-070',
     text: "What does \"annuity\" mean in retirement planning?",
-    options: ["A lump-sum withdrawal at retirement", "A financial product that pays regular income over a period or for life in exchange for a lump-sum amount", "A type of life insurance", "A penalty for early pension withdrawal"],
+    options: ["A single lump-sum payment made on your retirement date by withdrawing the entire accumulated balance from your Retirement Savings Account held with your PFA", "A financial product that pays regular income over a period or for life in exchange for a lump-sum amount", "A type of life insurance product that pays a death benefit to your next-of-kin in the event that you pass away before reaching the official retirement age", "A financial penalty imposed by PenCom on retirees who attempt to access their RSA funds before the prescribed minimum retirement age set under the Pension Reform Act"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['teens'],
@@ -809,7 +809,7 @@ const questions: Question[] = [
   {
     id: 'pn-071',
     text: "What is the minimum active service period before an employee can access their pension under Nigeria's CPS?",
-    options: ["5 years", "10 years", "Upon retirement or reaching age 50", "At any time"],
+    options: ["After five continuous years of active service with a single employer enrolled in the Contributory Pension Scheme", "After completing ten years of formal employment, regardless of current employment status or age at the time of the withdrawal request", "Upon retirement or reaching age 50", "At any time the account holder chooses, provided a formal written application is submitted to the PFA along with supporting identification documents"],
     correctIndex: 2,
     difficulty: 'hard',
     ageTrack: ['teens'],
@@ -829,7 +829,7 @@ const questions: Question[] = [
   {
     id: 'pn-073',
     text: "What is a \"lump-sum\" pension withdrawal?",
-    options: ["Monthly pension payments", "A one-time payment of a large portion of your retirement savings at the point of retirement", "A penalty for retiring early", "A loan taken against your pension"],
+    options: ["A small fixed monthly payment made to retirees by their former employer as a token of appreciation for long service, separate from the formal pension arrangement", "A one-time payment of a large portion of your retirement savings at the point of retirement", "A financial penalty deducted from your RSA balance by PenCom when you choose to retire before reaching the standard mandatory retirement age of sixty years old", "A short-term loan advanced against your future RSA balance by a licensed financial institution, to be repaid from monthly pension income after official retirement"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -839,7 +839,7 @@ const questions: Question[] = [
   {
     id: 'pn-074',
     text: "What is \"programmed withdrawal\" as a retirement option?",
-    options: ["Withdrawing all funds in one payment", "A scheduled monthly/quarterly drawdown from your RSA balance over a planned period", "An automatic pension deduction from salary", "A monthly annuity payment from an insurance company"],
+    options: ["A single transaction in which the entire RSA balance is transferred to the retiree's personal bank account in one complete payment on the day retirement is formalised", "A scheduled monthly/quarterly drawdown from your RSA balance over a planned period", "An automatic monthly deduction from the salary of an active employee, made by the employer and remitted directly to the nominated Pension Fund Administrator", "A guaranteed monthly income payment made by a licensed life insurance company to a retiree in exchange for a lump-sum transfer from their Retirement Savings Account"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -849,7 +849,7 @@ const questions: Question[] = [
   {
     id: 'pn-075',
     text: "What risk does longevity pose to a retiree who uses programmed withdrawals?",
-    options: ["No risk — the PFA guarantees payments forever", "If you live longer than projected, you may outlive your retirement savings", "Your pension is automatically increased by PenCom", "The CBN top up your account when it runs low"],
+    options: ["There is no longevity risk since every PFA in Nigeria is legally required to guarantee ongoing payments to retirees regardless of the remaining RSA balance or fund performance", "If you live longer than projected, you may outlive your retirement savings", "Your pension income is automatically reviewed and increased every year by PenCom in line with national inflation figures to preserve your purchasing power throughout retirement", "The Central Bank of Nigeria is required by law to top up individual RSA accounts whenever the balance falls below the minimum monthly pension threshold set by PenCom"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -859,7 +859,7 @@ const questions: Question[] = [
   {
     id: 'pn-076',
     text: "What is the Micro Pension Plan (MPP)?",
-    options: ["A government scheme for civil servants only", "A scheme allowing informal sector workers to make flexible pension contributions", "A voluntary scheme for high-net-worth individuals", "A bank savings account for retirement"],
+    options: ["A mandatory government-funded pension programme exclusively for federal civil servants providing a fixed monthly payment based on final salary and years of service", "A scheme allowing informal sector workers to make flexible pension contributions", "A high-yield investment vehicle operated by PenCom for wealthy Nigerians who wish to supplement their RSA with additional tax-advantaged voluntary retirement contributions", "A bank-operated savings account that replaces the formal Contributory Pension Scheme for workers employed in small businesses with fewer than ten registered employees"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -899,7 +899,7 @@ const questions: Question[] = [
   {
     id: 'pn-080',
     text: "What is the investment mandate restriction for Pension Fund Administrators in Nigeria?",
-    options: ["PFAs can invest in any asset including speculative ones", "PenCom sets investment guidelines limiting exposure to risky assets and requiring minimum allocations to government securities", "PFAs must invest all funds in government bonds", "There are no investment restrictions"],
+    options: ["PFAs have complete freedom to invest pension funds in any asset class including high-risk speculative investments, provided total annual returns exceed the PenCom benchmark rate", "PenCom sets investment guidelines limiting exposure to risky assets and requiring minimum allocations to government securities", "All pension funds in Nigeria are required by law to be invested exclusively in federal government bonds and treasury bills, with no exposure to equities or private sector instruments", "There are currently no investment restrictions on Pension Fund Administrators in Nigeria — the free market approach allows PFAs to maximise returns through any legal investment strategy"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['adults'],
@@ -909,7 +909,7 @@ const questions: Question[] = [
   {
     id: 'pn-081',
     text: "How does inflation risk affect a retiree on a fixed pension income?",
-    options: ["It does not affect them at all", "Fixed income loses purchasing power over time as prices rise — the same payment buys fewer goods and services", "Their pension automatically adjusts for inflation", "Inflation helps retirees"],
+    options: ["Inflation has absolutely no effect on retirees receiving fixed pension income since all Nigerian pension schemes include a mandatory cost-of-living adjustment tied to the official CPI", "Fixed income loses purchasing power over time as prices rise — the same payment buys fewer goods and services", "All pension income in Nigeria is automatically adjusted for inflation every year because PenCom regulations require PFAs and life insurers to index annuity payments to the annual CPI", "Inflation actually benefits retirees who receive fixed pension income, since rising prices increase the market value of the assets held in their RSA investment portfolio"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['adults'],

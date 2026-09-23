@@ -59,10 +59,10 @@ const questions: Question[] = [
     id: 'mb-005',
     text: 'Which statement best describes a "need" versus a "want"?',
     options: [
-      'A need is something fun; a want is something boring',
+      'A need is something you purchase regularly; a want is any item you buy only occasionally',
       'A need is essential for survival; a want is something you would like but can live without',
-      'A need costs more money than a want',
-      'Needs and wants are the same thing',
+      'A need always costs more since essential goods are priced higher than wants in every market',
+      'Needs and wants are treated equally; both must be fully funded before you can start saving',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -205,10 +205,10 @@ const questions: Question[] = [
     id: 'mb-016',
     text: 'Which of these is the BEST description of "financial freedom"?',
     options: [
-      'Having unlimited money to spend on anything',
-      'Being free from any financial responsibilities',
+      'Having unlimited access to credit so you can purchase anything you need at any given time',
+      'Being completely free from debt while still maintaining a comfortable standard of living',
       'Having enough passive income to cover your living expenses without needing to work',
-      'Owning a business that earns millions',
+      'Owning multiple businesses that collectively earn millions of naira in annual revenue',
     ],
     correctIndex: 2,
     difficulty: 'hard',
@@ -289,10 +289,10 @@ const questions: Question[] = [
     id: 'mb-022',
     text: 'Tunde spends ALL his pocket money the same day he gets it. What problem might this cause?',
     options: [
-      'No problem — spending is fun',
+      'No problem at all, since spending quickly protects money from losing value to inflation',
       'He will have nothing left for things he needs later in the week',
-      'He gets more money the next day',
-      'Spending everything makes you richer',
+      'He will simply receive extra pocket money the very next day to cover whatever he needs',
+      'Spending all pocket money at once is a perfectly healthy approach to managing daily finances',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -334,7 +334,7 @@ const questions: Question[] = [
   {
     id: 'mb-026',
     text: 'Which of these is money you can hold in your hand?',
-    options: ['Coins and notes', 'A password', 'A wish', 'A dream'],
+    options: ['Coins and notes', 'A debit card', 'A bank draft', 'A cheque leaf'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -404,7 +404,7 @@ const questions: Question[] = [
   {
     id: 'mb-033',
     text: 'Why do people use money instead of just trading things directly?',
-    options: ['It makes buying and selling easier', 'It has no real use', 'It\'s only for grown-ups', 'It can\'t be saved'],
+    options: ['It makes buying and selling easier', 'It guarantees fair prices for all goods in every market', 'It forces all traders to register with the same bank', 'It removes all financial risk from every market trade'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -414,7 +414,7 @@ const questions: Question[] = [
   {
     id: 'mb-034',
     text: 'You get ₦5,000 allowance for the month. What\'s the smartest first move?',
-    options: ['Spend it all in the first week', 'Plan how you\'ll split it between spending, saving, and needs', 'Lend all of it to a friend', 'Hide it and forget where'],
+    options: ['Spend it all within the first week on items you have been wanting to buy', 'Plan how you\'ll split it between spending, saving, and needs', 'Lend the full amount to a trusted friend who will return it with interest', 'Invest it all immediately in whatever business your peers are currently running'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -434,7 +434,7 @@ const questions: Question[] = [
   {
     id: 'mb-036',
     text: 'You keep buying small snacks daily without tracking it. What\'s this a sign of?',
-    options: ['Good budgeting', 'Untracked spending that can add up fast', 'Investing', 'Saving discipline'],
+    options: ['A healthy budgeting habit that keeps your daily spending in check', 'Untracked spending that can add up fast', 'A smart micro-investing strategy that turns daily spending into returns', 'A disciplined saving method that frees up larger amounts for investments'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -454,7 +454,7 @@ const questions: Question[] = [
   {
     id: 'mb-038',
     text: 'You have ₦20,000 saved. A friend wants to borrow all of it with no clear repayment plan. What\'s the wiser move?',
-    options: ['Give it all immediately', 'Discuss a clear repayment plan first, or lend only what you can afford to lose', 'Refuse to ever help anyone', 'Give it and forget about repayment'],
+    options: ['Give your friend the full amount since helping others builds strong long-term trust', 'Discuss a clear repayment plan first, or lend only what you can afford to lose', 'Refuse all lending requests completely since protecting your savings always comes first', 'Hand over everything freely and trust your friend to repay whenever their finances improve'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -464,7 +464,7 @@ const questions: Question[] = [
   {
     id: 'mb-039',
     text: 'Why does tracking your spending for a month actually help?',
-    options: ['It shows exactly where your money goes so you can adjust', 'It has no real benefit', 'It only matters for adults', 'It guarantees you\'ll get richer'],
+    options: ['It shows exactly where your money goes so you can adjust', 'It has no real benefit unless your income exceeds the national average wage', 'It only matters for adults managing portfolios with multiple income streams', 'It guarantees you will grow richer as long as you review the records consistently'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -484,7 +484,7 @@ const questions: Question[] = [
   {
     id: 'mb-041',
     text: 'What does \'living within your means\' actually mean?',
-    options: ['Spending more than you earn', 'Spending less than or equal to what you earn', 'Never spending anything', 'Only earning through loans'],
+    options: ['Spending your entire income every single month without leaving any balance', 'Spending less than or equal to what you earn', 'Never making any purchases until you have saved up a full year of income', 'Earning money only through passive sources without ever taking active employment'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -504,7 +504,7 @@ const questions: Question[] = [
   {
     id: 'mb-043',
     text: 'Which best explains \'opportunity cost\' in money terms?',
-    options: ['The cost of opportunities you never had', 'What you give up when you choose to spend money one way instead of another', 'A type of bank fee', 'A government tax'],
+    options: ['The total loss you suffer when a stock trade goes badly on the Nigerian exchange', 'What you give up when you choose to spend money one way instead of another', 'A fee banks charge whenever you withdraw from a different institution\'s ATM machine', 'A government levy applied to all investment gains that exceed the tax-free threshold'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -514,7 +514,7 @@ const questions: Question[] = [
   {
     id: 'mb-044',
     text: 'You receive a ₦300,000 bonus. Financially, what\'s the strongest first move before spending any of it?',
-    options: ['Spend it immediately on a want', 'Take a moment to allocate it across savings, debt, and goals before spending', 'Give it all away without a plan', 'Convert it all to cash and hide it'],
+    options: ['Spend it all on purchases you have been wanting to make over the past few months', 'Take a moment to allocate it across savings, debt, and goals before spending', 'Give it to friends and family since sharing wealth reflects important Nigerian values', 'Convert it to foreign currency immediately to protect against ongoing naira depreciation'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -524,7 +524,7 @@ const questions: Question[] = [
   {
     id: 'mb-045',
     text: 'What\'s the practical difference between net worth and income?',
-    options: ['They\'re the same thing', 'Income is what you earn, net worth is what you own minus what you owe', 'Net worth only applies to businesses', 'Income always determines net worth directly'],
+    options: ['They measure the same thing since what you earn always equals what you own over time', 'Income is what you earn, net worth is what you own minus what you owe', 'Net worth only applies to registered businesses and corporations, not individual people', 'Income always sets your net worth directly since higher earnings create proportional wealth'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -534,7 +534,7 @@ const questions: Question[] = [
   {
     id: 'mb-046',
     text: 'Why might two people earning the same salary end up in very different financial positions after 10 years?',
-    options: ['Salary is the only thing that matters', 'Differences in spending habits, saving rate, and financial decisions compound over time', 'It\'s always just luck', 'Bank choice alone determines this'],
+    options: ['Salary is the only factor that matters; higher earners always end up wealthier long-term', 'Differences in spending habits, saving rate, and financial decisions compound over time', 'It always comes down to luck since financial success cannot be planned or predicted reliably', 'The bank each person chooses is the key factor since some institutions offer far better returns'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -544,7 +544,7 @@ const questions: Question[] = [
   {
     id: 'mb-047',
     text: 'You consistently spend slightly more than you earn using credit. What\'s the long-term risk?',
-    options: ['No risk, credit is free money', 'Growing debt that becomes harder to repay over time', 'Automatic wealth growth', 'Guaranteed higher credit score'],
+    options: ['No real risk since most Nigerian banks cap the total you can owe on any credit line', 'Growing debt that becomes harder to repay over time', 'Automatic wealth growth as credit spending builds your purchasing record and asset profile', 'A guaranteed improvement in your credit rating that unlocks access to better loan terms'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -554,7 +554,7 @@ const questions: Question[] = [
   {
     id: 'mb-048',
     text: 'What does \'paying yourself first\' mean in personal finance?',
-    options: ['Spending on yourself before any bills', 'Setting aside savings/investment funds before spending on discretionary items', 'Taking a salary from your own business only', 'Ignoring your expenses entirely'],
+    options: ['Spending money on personal wants before settling any outstanding monthly bills', 'Setting aside savings/investment funds before spending on discretionary items', 'Withdrawing a regular salary from your own business before paying suppliers or any staff', 'Ignoring all expense categories until your monthly income grows large enough to budget'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -564,7 +564,7 @@ const questions: Question[] = [
   {
     id: 'mb-049',
     text: 'A friend claims money management is just about earning more. What\'s the more complete view?',
-    options: ['They\'re completely right, earning is all that matters', 'Earning matters, but so do spending discipline, saving rate, and decision-making', 'Spending less always beats earning more in every case', 'Only investing matters'],
+    options: ['They are correct; income level alone fully determines all long-term financial outcomes', 'Earning matters, but so do spending discipline, saving rate, and decision-making', 'Spending less always matters more than earning more in every possible financial situation', 'Only investment returns matter for wealth; income and spending habits are entirely secondary'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -574,7 +574,7 @@ const questions: Question[] = [
   {
     id: 'mb-050',
     text: 'You\'re deciding between two job offers, one with higher pay but longer unpaid commute, one with slightly less pay but shorter commute. What should factor into the real comparison?',
-    options: ['Only the salary number', 'Salary alongside time cost, transport cost, and quality of life', 'Only the job title', 'Neither, jobs shouldn\'t be compared'],
+    options: ['Only the monthly gross salary, since all other factors can easily be adjusted later', 'Salary alongside time cost, transport cost, and quality of life', 'Only the job title and seniority, since prestige determines your long-term income growth', 'Neither offer should be accepted before first negotiating a significantly higher salary'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -584,7 +584,7 @@ const questions: Question[] = [
   {
     id: 'mb-051',
     text: 'Why is having zero savings risky even with a stable income?',
-    options: ['It isn\'t risky at all', 'Any unexpected expense or income disruption can create a financial crisis', 'Savings only matter for the wealthy', 'Stable income guarantees no need for savings'],
+    options: ['It carries no risk since a stable salary will always cover any unexpected expense', 'Any unexpected expense or income disruption can create a financial crisis', 'Savings are only relevant for wealthy individuals who have substantial assets to protect', 'Stable employment fully protects against every financial risk without requiring any savings'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -594,7 +594,7 @@ const questions: Question[] = [
   {
     id: 'mb-052',
     text: 'What\'s a realistic first step toward financial independence?',
-    options: ['Winning a lottery', 'Consistently spending less than you earn and directing the difference toward savings/investments', 'Avoiding all financial planning', 'Relying entirely on inheritance'],
+    options: ['Winning a large prize or receiving a substantial inheritance from a wealthy family member', 'Consistently spending less than you earn and directing the difference toward savings/investments', 'Avoiding all financial planning and trusting that your circumstances will naturally improve', 'Relying entirely on family support and government welfare programmes to secure your future'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -734,7 +734,7 @@ const questions: Question[] = [
   {
     id: 'mb-066',
     text: "What does \"legal tender\" mean?",
-    options: ["Counterfeit money", "Currency that must legally be accepted for payment", "Digital payment only", "Foreign currency in Nigeria"],
+    options: ["Counterfeit notes printed to look identical to genuine currency from the central bank", "Currency that must legally be accepted for payment", "Digital payment platforms approved by the CBN for mobile and online transactions", "Foreign currencies officially approved for general use in Nigerian shops and markets"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -894,7 +894,7 @@ const questions: Question[] = [
   {
     id: 'mb-082',
     text: "What is \"dollar-cost averaging\"?",
-    options: ["Converting naira to USD monthly", "Investing a fixed amount at regular intervals regardless of price", "Buying only at the lowest market price", "Averaging savings across multiple banks"],
+    options: ["Converting your naira savings to dollars each month to hedge against currency depreciation", "Investing a fixed amount at regular intervals regardless of price", "Timing each purchase so you only buy assets when prices fall to their lowest monthly point", "Spreading your savings across multiple bank accounts to reduce concentration risk evenly"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['adults'],

@@ -47,10 +47,10 @@ const questions: Question[] = [
     id: 'sc-003',
     text: 'What is a "Ponzi scheme"?',
     options: [
-      'A legitimate long-term investment strategy',
+      'A regulated savings scheme where pooled contributions earn interest through verified market instruments',
       'A fraud where returns to existing investors come from new investors, not real profits',
-      'A government pension plan named after a person',
-      'A cooperative savings group like ajo',
+      'A CBN-licensed cooperative model where members share dividends from verified quarterly business profits',
+      'A licensed investment vehicle that pools capital and distributes returns based on real portfolio performance',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -116,10 +116,10 @@ const questions: Question[] = [
     id: 'sc-007',
     text: 'Red flags that an investment is likely a scam include: (select the MOST complete answer)',
     options: [
-      'Registered with SEC Nigeria and has audited accounts',
+      'Has verifiable SEC Nigeria registration, publishes annual audited accounts, and accepts electronic payments',
       'Promises guaranteed returns, has no registered address, pressures quick decisions, and pays in cash only',
-      'Has a physical office and charges management fees',
-      'Listed on the Nigerian Stock Exchange',
+      'Maintains a registered office, provides signed contracts, and charges industry-standard management fees',
+      'Offers a published portfolio prospectus, files quarterly returns with the SEC, and keeps traceable bank records',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -132,10 +132,10 @@ const questions: Question[] = [
     id: 'sc-008',
     text: 'A POS operator gives you ₦500 extra change "by mistake." What\'s the safest response?',
     options: [
-      'Keep it — their mistake, your gain',
+      'Keep it and walk away — the operator likely made an honest counting error at a busy terminal',
       'Return it immediately — it might be a distraction tactic to snatch your money',
-      'Ask them to debit your card for the extra amount',
-      'Walk away quickly before they notice',
+      'Pocket the change — extra money handed over is typically a goodwill gesture or routine rounding error',
+      'Leave quietly before drawing attention — pointing out minor counting errors creates delays for others waiting',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -148,10 +148,10 @@ const questions: Question[] = [
     id: 'sc-009',
     text: 'What is "SIM swap fraud" and how does it work?',
     options: [
-      'Swapping your SIM card for a better network',
+      'A legitimate upgrade service where your telecom provider migrates your number to a newer, higher-quality SIM',
       'A fraudster convinces your telecom provider to transfer your number to their SIM, gaining access to your OTPs',
-      'Using two SIM cards in one phone simultaneously',
-      'A type of mobile phone insurance fraud',
+      'A carrier feature that lets you split your number across two active SIM cards in the same device for backup',
+      'A technical glitch that causes two customers on the same network to share overlapping or identical phone numbers',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -185,10 +185,10 @@ const questions: Question[] = [
     id: 'sc-011',
     text: 'A WhatsApp group promises ₦50,000 returns if you recruit 3 friends who each pay ₦10,000. This is a:',
     options: [
-      'Legitimate referral marketing program',
+      'A LAPO-affiliated community savings programme with referral incentives for active members',
       'Pyramid/multi-level scheme — mathematically guaranteed to collapse',
-      'Government empowerment program',
-      'Legitimate cooperative savings group',
+      'A Federal Government digital wallet scheme with funded monthly cash transfers to verified participants',
+      'A CBN-licensed thrift cooperative with weekly contributions and transparent quarterly dividend payouts',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -222,10 +222,10 @@ const questions: Question[] = [
     id: 'sc-013',
     text: 'Someone claiming to be from FIRS (tax authority) threatens arrest unless you pay a "tax debt" immediately via transfer. You should:',
     options: [
-      'Pay immediately to avoid arrest',
+      'Transfer the stated tax amount at once by bank transfer, then request an official receipt to dispute it later',
       'Confirm by calling FIRS official helpline — real tax authorities send official notices, not threats via phone',
-      'Pay half now and dispute the rest later',
-      'Transfer to their account but record the transaction number',
+      'Pay the minimum amount demanded to pause the process, then contact your tax consultant about a refund',
+      'Transfer the funds to the account they provide but file a complaint with the EFCC fraud desk afterward',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -238,10 +238,10 @@ const questions: Question[] = [
     id: 'sc-014',
     text: 'What does "phishing" mean in cybersecurity?',
     options: [
-      'Hacking a bank\'s computer systems directly',
+      'Directly breaching a financial institution\'s internal servers to extract customer account details, credentials, and transaction records',
       'Tricking people into revealing sensitive information via fake emails, SMS, or websites that impersonate legitimate organizations',
-      'A type of fishing game scammers play on social media',
-      'Installing viruses on phones via Bluetooth',
+      'Using automated bots to flood users with fake social media ads that redirect to counterfeit banking portals designed to harvest credentials',
+      'Transmitting hidden malware through Bluetooth signals to silently harvest banking passwords, card PINs, and stored login details',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -254,10 +254,10 @@ const questions: Question[] = [
     id: 'sc-015',
     text: 'A friend sends you a link saying "I got free ₦5,000 airtime from this site — click to claim yours." What should you do?',
     options: [
-      'Click and claim — if your friend got it, it\'s real',
+      'Click and register immediately since telecom operators regularly run surprise airtime promotions shared through existing customers',
       'Verify independently with the telecom company before clicking — your friend may have been scammed and not know it',
-      'Ask your friend for their PIN to access it',
-      'Forward the link to 10 more friends first',
+      'Ask your friend to forward you the confirmation code so you can authenticate through the same referral channel',
+      'Share the link with your full contact list so everyone benefits before the limited airtime pool runs out',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -271,10 +271,10 @@ const questions: Question[] = [
     id: 'sc-016',
     text: 'A stranger online says you won a prize and needs your home address to deliver it. What should you do?',
     options: [
-      'Give your address so you get the prize',
+      'Share your street name only since house numbers are all that is needed to confirm your exact location',
       'Tell a parent or trusted adult immediately and do not share your address',
-      'Share the address but not your phone number',
-      'Ask the stranger to meet you at school',
+      'Provide your full address since prizes cannot be physically delivered without your complete location details',
+      'Arrange a collection point at a nearby market or bus stop to pick up the prize safely in public',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -346,7 +346,7 @@ const questions: Question[] = [
   {
     id: 'sc-021',
     text: 'A stranger online says \'send your parent\'s bank details and get a free gift.\' What should you do?',
-    options: ['Never share bank details, tell a trusted adult', 'Send it quickly to get the gift', 'Ignore it, it\'s not important', 'Share it with friends first'],
+    options: ['Never share bank details, tell a trusted adult', 'Share only the account number since that is what enables deposits, not the full card details', 'Ask your parent to review the message and decide whether it is safe before you respond', 'Check if the offer looks genuinely official before sharing any information at all'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -366,7 +366,7 @@ const questions: Question[] = [
   {
     id: 'sc-023',
     text: 'Why should you always tell a parent if something online asks for money or personal information?',
-    options: ['Because it could be a trick to take money or information unsafely', 'It\'s not important', 'Parents don\'t need to know', 'It\'s always completely safe'],
+    options: ['Because it could be a trick to take money or information unsafely', 'Because most online platforms are regulated and rarely request anything harmful from young users', 'Because you can verify the legitimacy of any online request by reading the website terms yourself', 'Because modern phones have built-in security that automatically blocks any suspicious online requests'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -376,7 +376,7 @@ const questions: Question[] = [
   {
     id: 'sc-024',
     text: 'What\'s a sign that a message might be a scam?',
-    options: ['It promises something amazing for little or no effort', 'It comes from a known family member', 'It asks nothing of you', 'It\'s written politely'],
+    options: ['It promises something amazing for little or no effort', 'It arrives from an account with a verified badge and many followers on social media', 'It uses formal language and includes an official-looking government seal or logo', 'It comes from a contact you recognise and contains a professional email signature'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -396,7 +396,7 @@ const questions: Question[] = [
   {
     id: 'sc-026',
     text: 'Why is it risky to click links from people you don\'t know?',
-    options: ['They could lead to tricks that steal money or information', 'Links are always safe', 'It has no risk at all', 'It guarantees a prize'],
+    options: ['They could lead to tricks that steal money or information', 'Trusted contacts only share links they have personally verified as completely safe to click', 'Most popular platforms automatically screen all links before letting users share them with others', 'A link shared by someone you know has already been checked by your device security software'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -416,7 +416,7 @@ const questions: Question[] = [
   {
     id: 'sc-028',
     text: 'A scam often tries to make you feel what?',
-    options: ['Excited or scared so you act without thinking', 'Calm and unhurried', 'Bored and uninterested', 'Confident and well-informed'],
+    options: ['Excited or scared so you act without thinking', 'Calm and confident so you evaluate the deal with full awareness and control', 'Secure and reassured since genuine offers always produce clearly positive feelings', 'Certain and informed due to clear evidence of legality from a trusted official source'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -436,7 +436,7 @@ const questions: Question[] = [
   {
     id: 'sc-030',
     text: 'What\'s the safest response to any message that seems suspicious about money?',
-    options: ['Pause, don\'t respond, and check with a trusted adult', 'Respond immediately', 'Forward it to friends', 'Delete it without telling anyone'],
+    options: ['Pause, don\'t respond, and check with a trusted adult', 'Reply quickly asking for more details so you can gather enough proof to report it later', 'Forward it to two or three trusted people to get their collective opinion before responding', 'Delete it immediately since you cannot be scammed once you have already seen and dismissed it'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -456,7 +456,7 @@ const questions: Question[] = [
   {
     id: 'sc-032',
     text: 'What\'s a red flag in an investment opportunity shared through a group chat?',
-    options: ['It explains risks clearly', 'It promises guaranteed, unusually high returns quickly', 'It\'s from a registered company', 'It has clear terms and conditions'],
+    options: ['It clearly discloses investment risks in a signed contract registered with the SEC Nigeria', 'It promises guaranteed, unusually high returns quickly', 'It originates from a registered business with an active CAC certificate and audited financial records', 'It specifies all fees, maturity dates, and exit penalties in a government-compliant prospectus'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -466,7 +466,7 @@ const questions: Question[] = [
   {
     id: 'sc-033',
     text: 'Why do scammers often create urgency (\'act now or miss out\')?',
-    options: ['To give you time to think it through', 'To pressure you into acting before you can think carefully', 'Urgency has no effect on decisions', 'It\'s a sign of a trustworthy offer'],
+    options: ['To allow you to evaluate the opportunity at your own pace without any pressure or deadline', 'To pressure you into acting before you can think carefully', 'Because urgency is a neutral feature present in both legitimate and fraudulent financial offers', 'Because genuine time-limited deals arise naturally from regulatory approval windows and are always real'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -486,7 +486,7 @@ const questions: Question[] = [
   {
     id: 'sc-035',
     text: 'What\'s the safest response to an unfamiliar link promising a giveaway?',
-    options: ['Click immediately to claim it', 'Avoid clicking and verify through official channels first', 'Share it with everyone you know', 'Enter your bank details to confirm'],
+    options: ['Click the link now and enter your phone number before the limited giveaway pool closes', 'Avoid clicking and verify through official channels first', 'Forward it to your contacts so everyone can benefit while the promotion is still active', 'Enter your phone number and email to confirm your eligibility before the offer expires today'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -496,7 +496,7 @@ const questions: Question[] = [
   {
     id: 'sc-036',
     text: 'Why is a Ponzi scheme unsustainable over time?',
-    options: ['It pays early investors using new investors\' money rather than real profit, and eventually collapses', 'It always generates real business profit', 'It\'s a legitimate long-term investment model', 'It has no relationship to how it pays returns'],
+    options: ['It pays early investors using new investors\' money rather than real profit, and eventually collapses', 'It grows through diversified asset portfolios and pays verified returns from legitimate quarterly business activities', 'It is a properly structured fund where all returns are generated entirely by real operational business revenue', 'It is a co-investment model where participants share proportionally in profits verified by an independent auditor'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -516,7 +516,7 @@ const questions: Question[] = [
   {
     id: 'sc-038',
     text: 'Why should you be cautious about MLM-style opportunities promising income mainly from recruiting others?',
-    options: ['Income based mainly on recruitment rather than real product value is a common warning sign', 'All recruitment-based businesses are automatically legitimate', 'There\'s no reason for caution here', 'Recruitment always guarantees income'],
+    options: ['Income based mainly on recruitment rather than real product value is a common warning sign', 'Any business model built around recruiting new members is legally registered and regulated by SEC Nigeria', 'Recruitment-based income is a recognised and fully legitimate practice protected under Nigerian business law', 'Every participant who joins an MLM network is guaranteed steady income regardless of how many people they recruit'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -536,7 +536,7 @@ const questions: Question[] = [
   {
     id: 'sc-040',
     text: 'Why might scammers specifically target teens on social media?',
-    options: ['Teens are never targeted by scams', 'Teens can be less experienced in spotting manipulation tactics, making awareness especially valuable', 'Social media has no connection to scams', 'Only adults are ever targeted'],
+    options: ['Teens are rarely targeted because scammers typically prefer older adults with larger available savings to steal', 'Teens can be less experienced in spotting manipulation tactics, making awareness especially valuable', 'Social media platforms have advanced fraud detection that automatically removes all financial scams before teens see them', 'Only adults with verified bank accounts are targeted since scammers need real financial access to succeed'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -546,7 +546,7 @@ const questions: Question[] = [
   {
     id: 'sc-041',
     text: 'You\'re offered an investment guaranteeing 50 percent monthly returns. What does this most likely indicate?',
-    options: ['A rare, legitimate high-yield opportunity', 'A strong likelihood of a Ponzi or fraudulent scheme, since such returns aren\'t sustainable through real investment', 'A standard bank product', 'A government-endorsed investment'],
+    options: ['A genuine but unusually profitable forex strategy that only a small number of licensed brokers are authorised to offer', 'A strong likelihood of a Ponzi or fraudulent scheme, since such returns aren\'t sustainable through real investment', 'A standard fixed-deposit product that major commercial banks occasionally promote to attract high-net-worth clients', 'A government-backed agricultural bond programme that generates unusually high seasonal returns during harvest periods'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -566,7 +566,7 @@ const questions: Question[] = [
   {
     id: 'sc-043',
     text: 'A \'loan app\' approves you instantly with minimal checks but has extremely high hidden fees. What should this signal?',
-    options: ['An excellent, low-risk loan option', 'A potentially predatory lending arrangement worth scrutinizing carefully', 'A standard, safe lending practice', 'Nothing of concern'],
+    options: ['A reliable digital loan from a fully licensed microfinance bank with active CBN registration and oversight', 'A potentially predatory lending arrangement worth scrutinizing carefully', 'A legitimate emergency credit product with fast approval designed for urgent small-business needs', 'A low-risk personal loan typically offered by regulated fintech platforms to verified Nigerian customers'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -586,7 +586,7 @@ const questions: Question[] = [
   {
     id: 'sc-045',
     text: 'You\'re asked to move funds through several accounts quickly for a \'business opportunity.\' What should concern you?',
-    options: ['Nothing, this is a normal business practice', 'This pattern resembles money laundering or fraud schemes and warrants serious caution', 'It guarantees a profitable outcome', 'Quick movement of funds always indicates legitimacy'],
+    options: ['Nothing unusual — multi-account fund movement is standard treasury management for registered Nigerian businesses', 'This pattern resembles money laundering or fraud schemes and warrants serious caution', 'It is a legitimate arbitrage strategy professional traders use to exploit timing differences across accounts', 'The transaction speed confirms a professional setup since fraudulent schemes typically operate through slower channels'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -596,7 +596,7 @@ const questions: Question[] = [
   {
     id: 'sc-046',
     text: 'Why is due diligence especially important with unregulated crypto investment platforms?',
-    options: ['Unregulated platforms carry no additional risk', 'Lack of regulation can mean less recourse if something goes wrong, increasing the importance of careful research', 'Regulation status is irrelevant to crypto', 'All crypto platforms are equally regulated'],
+    options: ['Unregulated platforms often outperform regulated ones because they operate without bureaucratic compliance overhead costs', 'Lack of regulation can mean less recourse if something goes wrong, increasing the importance of careful research', 'The decentralised nature of crypto means all platforms carry equal risk regardless of whether they hold a licence', 'CBN oversight applies equally to all cryptocurrency exchanges operating in Nigeria, whether formally licensed or not'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -626,7 +626,7 @@ const questions: Question[] = [
   {
     id: 'sc-049',
     text: 'What\'s a sound practice when someone you trust recommends an investment they heard about secondhand?',
-    options: ['Invest immediately based on their trust in the source', 'Independently verify the opportunity yourself rather than relying solely on secondhand trust', 'Secondhand recommendations are always reliable', 'No verification is needed if a friend suggests it'],
+    options: ['Proceed immediately since a personal recommendation from someone you trust is the most reliable form of due diligence', 'Independently verify the opportunity yourself rather than relying solely on secondhand trust', 'Secondhand investment advice from a trusted friend is statistically more accurate than any formal research process', 'Peer-verified opportunities consistently outperform independently researched ones in Nigerian informal investment markets'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -636,7 +636,7 @@ const questions: Question[] = [
   {
     id: 'sc-050',
     text: 'Why do many fraud schemes rely on victims feeling embarrassed to report what happened?',
-    options: ['Embarrassment has no impact on reporting behavior', 'It can delay or prevent reporting, letting the scheme continue affecting others', 'Victims are never embarrassed about fraud', 'Reporting is always immediate regardless of emotion'],
+    options: ['Embarrassment is irrelevant since fraud victims always contact law enforcement quickly once they understand the process', 'It can delay or prevent reporting, letting the scheme continue affecting others', 'Nigerian fraud victims typically report incidents immediately due to strong cultural norms around financial honesty', 'The EFCC actively encourages victims by publishing scammer details before formal complaint reports are even submitted'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -656,7 +656,7 @@ const questions: Question[] = [
   {
     id: 'sc-052',
     text: "What makes a phone call suspicious?",
-    options: ["The caller knows your name", "The caller pressures you to share your PIN or OTP immediately", "The caller speaks Yoruba", "The caller is from a bank you use"],
+    options: ["The caller introduces themselves using the name of your actual bank account officer or branch manager", "The caller pressures you to share your PIN or OTP immediately", "The caller uses your preferred language to make the interaction feel familiar and locally authentic", "The caller's number matches the official contact listed on your bank statement or debit card"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -666,7 +666,7 @@ const questions: Question[] = [
   {
     id: 'sc-053',
     text: "What does \"phishing\" mean?",
-    options: ["A fun game at the river", "A trick to steal your personal information online", "A type of bank account", "A way to send money safely"],
+    options: ["A legitimate security feature banks use to verify your identity before approving a transfer", "A trick to steal your personal information online", "A standard digital onboarding process where new customers submit details to open an online account", "An encrypted messaging service Nigerian banks use to securely send account updates to customers"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -716,7 +716,7 @@ const questions: Question[] = [
   {
     id: 'sc-058',
     text: "What is \"social engineering\" in scams?",
-    options: ["Building roads and infrastructure", "Manipulating people psychologically to reveal private information or send money", "A legitimate bank service", "Creating social media accounts"],
+    options: ["Hacking into secure financial networks by exploiting software vulnerabilities in banking system infrastructure", "Manipulating people psychologically to reveal private information or send money", "A licensed communication service that banks use to verify customers through behavioural assessment tools", "Designing and deploying targeted malware against specific financial institutions and their customer database systems"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['kids'],
@@ -736,7 +736,7 @@ const questions: Question[] = [
   {
     id: 'sc-060',
     text: "How can you verify that a website is legitimate before entering payment details?",
-    options: ["Check that it has bright colours", "Check for https://, a padlock icon, and the correct domain name", "See if it has many pop-up ads", "Check that it has social media links"],
+    options: ["Check that the homepage design matches what you have seen in previous visits or television advertisements", "Check for https://, a padlock icon, and the correct domain name", "Count the number of customer reviews since more verified reviews consistently indicate a trustworthy website", "Search the website name on Google and always click the top result, which is always the legitimate official page"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['kids'],
@@ -746,7 +746,7 @@ const questions: Question[] = [
   {
     id: 'sc-061',
     text: "What is a \"Ponzi scheme\"?",
-    options: ["A legitimate investment fund", "A fraud where early investors are paid using money from newer investors", "A government savings programme", "A type of insurance product"],
+    options: ["A licensed collective investment scheme generating returns from pooled capital in verified financial markets", "A fraud where early investors are paid using money from newer investors", "A Federal Government retirement savings plan where contributions earn fixed annual interest rates", "A unit trust product where premiums are invested in diversified assets and paid out at policy maturity"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -756,7 +756,7 @@ const questions: Question[] = [
   {
     id: 'sc-062',
     text: "What does \"419 scam\" refer to in Nigeria?",
-    options: ["A legitimate business opportunity", "Advance-fee fraud named after Section 419 of Nigeria's criminal code", "A type of bank loan", "A government tax regulation"],
+    options: ["A high-yield trading opportunity authorised by the CBN and listed on the Nigerian Investment Promotion portal", "Advance-fee fraud named after Section 419 of Nigeria's criminal code", "A consumer credit facility from a licensed microfinance institution for verified small-scale entrepreneurs", "A Federal Government policy specifying how investment income must be declared for capital gains tax assessment"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -776,7 +776,7 @@ const questions: Question[] = [
   {
     id: 'sc-064',
     text: "What should you do if you receive a suspicious \"Your BVN has been blocked\" SMS?",
-    options: ["Call the number in the SMS", "Ignore it and log in to your bank app directly to verify", "Reply with your BVN to confirm", "Forward it to your contacts"],
+    options: ["Call the number in the text since banks always include verified support contacts in their security alerts", "Ignore it and log in to your bank app directly to verify", "Reply with your full name and BVN so the bank can confirm your identity and lift the security hold", "Forward the message to your account officer who can escalate it through their internal security team"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -786,7 +786,7 @@ const questions: Question[] = [
   {
     id: 'sc-065',
     text: "What is \"identity theft\"?",
-    options: ["When someone steals your bag", "When someone uses your personal information to commit fraud or open accounts in your name", "When someone logs into your social media", "When a company shares your email address"],
+    options: ["When an unauthorised person accesses your social media and reads all your private direct messages", "When someone uses your personal information to commit fraud or open accounts in your name", "When a hacker guesses your email password and reads your inbox without conducting any financial transactions", "When a data broker sells your contact details to advertising companies without obtaining your written consent"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -806,7 +806,7 @@ const questions: Question[] = [
   {
     id: 'sc-067',
     text: "How do criminals typically use stolen debit card data in a \"card-not-present\" fraud?",
-    options: ["They physically use the card at a POS", "They use the card number, expiry, and CVV to make online purchases without the physical card", "They report the card stolen first", "They access your bank app using the card number"],
+    options: ["They clone the card's magnetic strip onto a blank card and use it at partner POS terminals across multiple states", "They use the card number, expiry, and CVV to make online purchases without the physical card", "They call the bank pretending to be you, cancel the card, and request a replacement be sent to a new address", "They combine your card number with a social engineering call to reset your mobile banking PIN and access your account"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['teens'],
@@ -816,7 +816,7 @@ const questions: Question[] = [
   {
     id: 'sc-068',
     text: "Which technology is most effective at preventing unauthorised SIM swaps, a common bank fraud vector?",
-    options: ["Having a strong social media presence", "Requiring in-person identity verification and biometrics at the telecom provider", "Using the same phone for 10+ years", "Changing your number frequently"],
+    options: ["Using a SIM card purchased under your full legal name and linked to your National Identity Number", "Requiring in-person identity verification and biometrics at the telecom provider", "Keeping your phone number private and not sharing it with any online service or marketplace platform", "Regularly switching between different telecom providers to reduce exposure to number-specific fraud attacks"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['teens'],
@@ -826,7 +826,7 @@ const questions: Question[] = [
   {
     id: 'sc-069',
     text: "A scammer calls posing as a FIRS officer demanding immediate tax payment via wire transfer or face arrest. What type of scam is this?",
-    options: ["Phishing", "Impersonation/authority scam", "Pyramid scheme", "Investment fraud"],
+    options: ["Email phishing attempt", "Impersonation/authority scam", "Pyramid network scheme", "Advance-fee fraud case"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['teens'],
@@ -836,7 +836,7 @@ const questions: Question[] = [
   {
     id: 'sc-070',
     text: "What is \"smishing\"?",
-    options: ["Spreading scam messages via email", "Sending fraudulent text messages (SMS) to trick recipients into revealing personal data or clicking malicious links", "A type of malware spread via USB drives", "Phishing via social media ads"],
+    options: ["Sending bulk fraudulent emails designed to trick recipients into clicking malicious links or sharing banking credentials", "Sending fraudulent text messages (SMS) to trick recipients into revealing personal data or clicking malicious links", "Installing malicious software via USB drives specifically engineered to harvest saved banking login credentials", "Placing deceptive sponsored ads on social media platforms that redirect users to fake banking login pages to harvest details"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['teens'],
@@ -846,7 +846,7 @@ const questions: Question[] = [
   {
     id: 'sc-071',
     text: "What is \"advance-fee fraud\"?",
-    options: ["A legitimate early-payment discount", "A scam where victims pay fees upfront for a promised reward that never materialises", "A government grant application", "A type of microfinance loan"],
+    options: ["A formal banking arrangement where customers receive better interest rates for settling payments ahead of schedule", "A scam where victims pay fees upfront for a promised reward that never materialises", "A Federal Government small-business support scheme that requires applicants to pay a processing fee upfront", "A CBN-licensed micro-credit product that charges upfront fees to cover administrative and documentation costs"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -856,7 +856,7 @@ const questions: Question[] = [
   {
     id: 'sc-072',
     text: "What is a \"romance scam\"?",
-    options: ["A legitimate matchmaking service", "Fraudsters using fake romantic relationships online to extract money from victims", "A type of social media advertising", "A bank promotion for couples"],
+    options: ["A government-registered online dating service connecting verified singles through paid membership fees", "Fraudsters using fake romantic relationships online to extract money from victims", "A digital marketing campaign using emotional storytelling to build brand loyalty and increase customer spending", "A commercial bank joint-account promotion offering special rates to couples with shared financial goals"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -866,7 +866,7 @@ const questions: Question[] = [
   {
     id: 'sc-073',
     text: "Which agency in Nigeria investigates cybercrime and online fraud?",
-    options: ["FIRS", "EFCC and the Nigeria Police Force Cybercrime Unit", "CBN only", "NCC only"],
+    options: ["CBN Payments and Infrastructure Division", "EFCC and the Nigeria Police Force Cybercrime Unit", "NCC Consumer Complaints and Enforcement Unit", "NDIC Depositor Claims and Resolution Office"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -876,7 +876,7 @@ const questions: Question[] = [
   {
     id: 'sc-074',
     text: "What does \"two-factor authentication\" (2FA) do?",
-    options: ["Replaces your password entirely", "Adds a second verification step (e.g. OTP) beyond your password to access accounts", "Doubles your login speed", "Reduces the need for a strong password"],
+    options: ["Allows you to log in using biometric data alone, removing any need to set or remember a separate password", "Adds a second verification step (e.g. OTP) beyond your password to access accounts", "Syncs your credentials automatically across all devices so you never need to retype your password again", "Generates and saves a new password for you automatically every 30 days without requiring any action from you"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -886,7 +886,7 @@ const questions: Question[] = [
   {
     id: 'sc-075',
     text: "What is a \"business email compromise\" (BEC) scam?",
-    options: ["A spam email about business services", "Criminals hacking or spoofing company emails to trick employees into fraudulent payments", "A phishing attack on social media", "A malware programme installed via USB"],
+    options: ["A legitimate bulk email service businesses use to promote products to their registered customer database", "Criminals hacking or spoofing company emails to trick employees into fraudulent payments", "A social engineering attack targeting employees through fake LinkedIn messages instead of email communications", "A keylogger installed via USB drive that records every password typed on a corporate computer keyboard"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -896,7 +896,7 @@ const questions: Question[] = [
   {
     id: 'sc-076',
     text: "A company promises ₦1 million in 30 days if you invest ₦100,000 and recruit three others. What scheme is this most likely?",
-    options: ["A legitimate multi-level marketing company", "A pyramid/Ponzi scheme — structurally dependent on unsustainable recruitment", "A government grant", "A licensed investment fund"],
+    options: ["A registered SEC Nigeria cooperative investment fund with a three-year capital lock-in and fixed annual returns", "A pyramid/Ponzi scheme — structurally dependent on unsustainable recruitment", "A government StartUp Nigeria fund disbursing interest-free loans to verified youth entrepreneurs nationwide", "An SEC-regulated mutual fund that pools contributions and distributes verified quarterly dividend payments"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['adults'],
@@ -916,7 +916,7 @@ const questions: Question[] = [
   {
     id: 'sc-078',
     text: "What is a \"pig-butchering\" scam?",
-    options: ["A livestock investment fraud", "A long-con where scammers build trust over weeks before directing victims into fake investment platforms and stealing their funds", "A crypto exchange hack", "A ponzi scheme targeting only farmers"],
+    options: ["An agricultural investment fraud where victims pay upfront for promised livestock or farm shares that are never delivered", "A long-con where scammers build trust over weeks before directing victims into fake investment platforms and stealing their funds", "A direct cyber intrusion into a licensed cryptocurrency exchange that drains funds from verified user wallets", "A targeted Ponzi scheme using agricultural fronts to recruit farming communities and rural investment groups"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['adults'],
@@ -926,7 +926,7 @@ const questions: Question[] = [
   {
     id: 'sc-079',
     text: "How does a SIM swap scam allow criminals to access your bank account?",
-    options: ["They physically break into the bank", "They transfer your phone number to a SIM they control, intercepting all OTPs for your account", "They hack the bank's servers directly", "They clone your ATM card"],
+    options: ["They present forged identification at a commercial bank branch and impersonate you to withdraw funds from the teller", "They transfer your phone number to a SIM they control, intercepting all OTPs for your account", "They breach the bank's core banking system remotely by exploiting an unpatched vulnerability in the mobile app", "They install a card skimmer on an ATM to copy your magnetic strip data and create a functional duplicate card"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['adults'],
@@ -936,7 +936,7 @@ const questions: Question[] = [
   {
     id: 'sc-080',
     text: "Which is the strongest financial self-protection strategy against scams?",
-    options: ["Using the same password for all accounts for simplicity", "Enabling 2FA, using unique strong passwords, and verifying unexpected requests through official channels", "Keeping all money in cash", "Never using online banking"],
+    options: ["Using one memorable master password across all your financial accounts so you never forget your login credentials", "Enabling 2FA, using unique strong passwords, and verifying unexpected requests through official channels", "Withdrawing all savings as cash and storing it at home so no digital fraud attack can affect your net worth", "Avoiding all digital financial platforms and relying entirely on physical bank visits and cash transactions"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['adults'],

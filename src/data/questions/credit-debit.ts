@@ -36,10 +36,10 @@ const questions: Question[] = [
     id: 'cd-003',
     text: 'Should you share your debit card PIN with anyone?',
     options: [
-      'Yes, with your best friend',
-      'Yes, with any adult you trust',
+      'Yes, with your best friend since they can use it to help you in emergencies',
+      'Yes, with any trusted adult who needs to make a payment on your behalf',
       'No — your PIN is private and should never be shared',
-      'Yes, with bank staff if they ask',
+      'Yes, with bank staff when they call to verify your account details over the phone',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -66,10 +66,10 @@ const questions: Question[] = [
     id: 'cd-005',
     text: 'What is a credit card?',
     options: [
-      'A card that only works at ATMs',
+      'A card that only works at ATMs and cannot be used at any physical shop or online platform',
       'A card that lets you borrow money from the bank now and pay it back later',
-      'A card given to you for free by schools',
-      'A card that stores foreign currency',
+      'A card given free to all students by their schools to help manage lunch and transport expenses',
+      'A card that converts your balance into foreign currency automatically when you cross a border',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -81,10 +81,10 @@ const questions: Question[] = [
     id: 'cd-006',
     text: 'What is the main difference between a debit card and a credit card?',
     options: [
-      'Debit cards are blue; credit cards are red',
+      'Debit cards are always blue or green in colour; credit cards are always red or gold in colour',
       'A debit card uses your own money; a credit card uses money borrowed from the bank',
-      'Debit cards are for adults only',
-      'Credit cards cannot be used at ATMs',
+      'Debit cards can only be obtained by adults aged 18 and above; minors cannot hold them at all',
+      'Credit cards can never be used at ATMs for cash withdrawals; only debit cards allow that service',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -127,10 +127,10 @@ const questions: Question[] = [
     id: 'cd-009',
     text: 'What is a credit score?',
     options: [
-      'Your bank account balance',
+      'The total outstanding balance across all your active bank accounts and loan products combined',
       'A number that measures how reliably you repay borrowed money',
-      'The credit limit on your card',
-      'Your income divided by your expenses',
+      'The maximum amount of credit available on your combined cards and overdraft facilities',
+      'The ratio of your gross annual income to your total recurring monthly financial obligations',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -142,10 +142,10 @@ const questions: Question[] = [
     id: 'cd-010',
     text: 'What is a "credit bureau" in Nigeria?',
     options: [
-      'The department inside your bank that handles cards',
+      'A dedicated department inside your bank responsible for reviewing and issuing payment cards to customers',
       'A licensed company that collects and tracks borrowing and repayment histories of Nigerians',
-      'A government office for card complaints',
-      'A bureau de change for credit cards',
+      'A federal government agency that handles complaints from customers about unfair card charges and fees',
+      'A licensed bureau de change that specialises in converting naira to foreign currency for credit card users',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -168,10 +168,10 @@ const questions: Question[] = [
     id: 'cd-012',
     text: 'What is the "minimum payment" trap on a credit card?',
     options: [
-      'Paying only the minimum due each month clears your debt quickly',
+      'Paying only the minimum amount each month clears your credit card balance within a predictable timeframe',
       'Paying only the minimum means interest accumulates on the remaining balance — debt can grow even as you pay',
-      'Minimum payments are not charged interest',
-      'The minimum payment is always 50% of the balance',
+      'Minimum payments made on time are not subject to any interest charges because they fulfil the repayment obligation',
+      'The minimum payment on any Nigerian credit card is always exactly fifty per cent of the outstanding balance',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -255,10 +255,10 @@ const questions: Question[] = [
     id: 'cd-018',
     text: 'What is "debt cycling" on credit cards and why is it financially destructive?',
     options: [
-      'Using multiple credit cards in rotation to earn more rewards',
+      'Using multiple credit cards in rotation each month to earn additional reward points and cashback on all of them',
       'Paying off one credit card with another repeatedly, spreading debt while interest accumulates on all of them',
-      'Closing old cards and opening new ones for lower interest rates',
-      'Cycling between debit and credit payment methods',
+      'Closing older credit card accounts and opening new ones with lower headline interest rates to reduce obligations',
+      'Switching between using debit and credit payment methods month by month to avoid building up too large a balance',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -270,10 +270,10 @@ const questions: Question[] = [
     id: 'cd-019',
     text: 'What is a "secured credit card" and when is it useful in Nigeria?',
     options: [
-      'A credit card with a physical lock; used only in person',
+      'A premium credit card that has a physical metal key attached and can only be used in person at bank branches',
       'A credit card backed by a cash deposit you make upfront — the limit equals your deposit; used to build credit with no prior history',
-      'A card that requires biometric verification for every transaction',
-      'A credit card with government-backed insurance',
+      'A high-security card that requires biometric verification such as a fingerprint or facial scan for every transaction',
+      'A credit card product fully backed by the CBN and insured by NDIC against fraud or unauthorised usage',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -301,10 +301,10 @@ const questions: Question[] = [
     id: 'cd-021',
     text: 'What is the safest thing to do if you lose your debit card?',
     options: [
-      'Wait and hope nobody finds it',
+      'Wait a few days to see if someone who finds your card returns it to you or to the bank',
       'Call your bank immediately to block (freeze) the card so nobody else can use it',
-      'Ask a friend to find it for you',
-      'Try using your card number from memory online',
+      'Ask a trusted friend or family member to physically search the location where you think you lost it',
+      'Try to recall your card number from memory and attempt a small online purchase to verify it still works',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -416,7 +416,7 @@ const questions: Question[] = [
   {
     id: 'cd-032',
     text: 'Why might using a credit card responsibly help build a useful credit history over time?',
-    options: ['Consistent, timely repayment can demonstrate reliability to future lenders', 'Credit cards have no connection to credit history', 'Credit history is unrelated to card usage habits', 'Only debit cards affect credit history'],
+    options: ['Consistent, timely repayment can demonstrate reliability to future lenders', 'Using a credit card has no direct connection to building or maintaining any credit history at all', 'Credit history is built exclusively through mortgage and business loan activity, not through card usage habits', 'Only debit card usage is tracked by Nigerian credit bureaus and can therefore build credit history'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -426,7 +426,7 @@ const questions: Question[] = [
   {
     id: 'cd-033',
     text: 'What\'s a risk of not fully understanding a credit card\'s interest terms before using it?',
-    options: ['Unpaid balances can accumulate interest, increasing what\'s ultimately owed beyond the original amount spent', 'Credit cards never involve any interest', 'Interest terms have no real financial impact', 'Understanding terms is unnecessary since all cards work identically'],
+    options: ['Unpaid balances can accumulate interest, increasing what\'s ultimately owed beyond the original amount spent', 'Credit cards never involve any form of interest regardless of how much of the balance remains unpaid at billing', 'Understanding interest terms has no real financial impact since Nigerian banks are not permitted to vary their rates', 'Understanding terms is entirely unnecessary since all credit cards in Nigeria are required by law to work identically'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -436,7 +436,7 @@ const questions: Question[] = [
   {
     id: 'cd-034',
     text: 'Why might it be wise to treat a debit card\'s spending limit as a hard boundary?',
-    options: ['It reflects money you actually have, so spending within it avoids overdraft issues or fees', 'Debit card limits have no real financial meaning', 'Overspending on a debit card has no consequences', 'Debit limits should always be ignored'],
+    options: ['It reflects money you actually have, so spending within it avoids overdraft issues or fees', 'Debit card spending limits are set by government and have no direct connection to your actual account balance', 'Exceeding your debit card spending limit has no real consequence since banks always correct the shortfall automatically', 'Debit card spending limits should always be ignored since they can always be raised by calling your bank'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -446,7 +446,7 @@ const questions: Question[] = [
   {
     id: 'cd-035',
     text: 'What\'s a sound habit when using cards for online purchases?',
-    options: ['Only use trusted, secure websites and avoid entering card details on unfamiliar sites', 'Enter card details on any website that asks', 'Card security has no relevance to online shopping', 'Online purchases never carry any card-related risk'],
+    options: ['Only use trusted, secure websites and avoid entering card details on unfamiliar sites', 'Enter your card details freely on any website that requests them since all legitimate Nigerian online shops are verified', 'Card security is irrelevant to online shopping since all Nigerian e-commerce platforms are protected by mandatory CBN encryption', 'Online purchases never carry any card-related risk since transactions are always fully insured against fraud by NDIC guarantees'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -456,7 +456,7 @@ const questions: Question[] = [
   {
     id: 'cd-036',
     text: 'Why might relying heavily on borrowed funds (like a credit card) for everyday spending be a risky habit to develop?',
-    options: ['It can lead to accumulating debt that\'s harder to manage if spending isn\'t matched by repayment ability', 'Borrowed funds always cost the same as using your own money', 'Credit card spending has no connection to potential debt accumulation', 'Using credit for everyday spending carries no real risk'],
+    options: ['It can lead to accumulating debt that\'s harder to manage if spending isn\'t matched by repayment ability', 'Borrowed funds from a credit card always cost the same as spending your own money since banks absorb all interest costs', 'Credit card spending for day-to-day purchases has no connection to potential debt accumulation as long as any payment is made', 'Using a credit card to cover everyday living expenses carries no real financial risk if the card was issued by a regulated bank'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -486,7 +486,7 @@ const questions: Question[] = [
   {
     id: 'cd-039',
     text: 'What\'s a sound approach to understanding fees associated with card usage (like ATM or maintenance fees)?',
-    options: ['Fees are unimportant and can be ignored entirely', 'Understanding fee structures helps avoid unnecessary costs and informs smarter card usage habits', 'All cards have identical, fixed fees with no variation', 'Fee awareness only matters for adults with credit cards'],
+    options: ['Card fees are an irrelevant detail that consumers should never consider when choosing which payment card to use', 'Understanding fee structures helps avoid unnecessary costs and informs smarter card usage habits', 'Every Nigerian bank card charges identical fixed fees with absolutely no variation between different banks or account types', 'Fee awareness is only relevant for adults holding credit cards since debit cards issued to teenagers carry no charges at all'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -496,7 +496,7 @@ const questions: Question[] = [
   {
     id: 'cd-040',
     text: 'Why might building good card-usage habits as a teen matter for financial life later?',
-    options: ['Habits formed early, like careful spending and monitoring, can carry forward into more complex financial tools like credit cards later', 'Card habits formed as a teen have no bearing on future financial behavior', 'Only adults need to think carefully about card usage habits', 'There\'s no connection between early habits and later financial behavior'],
+    options: ['Habits formed early, like careful spending and monitoring, can carry forward into more complex financial tools like credit cards later', 'Habits formed around card usage as a teenager have no measurable bearing on how responsibly you manage financial tools as an adult', 'Only adults who hold a formal salaried job need to think carefully about responsible card usage and spending discipline habits', 'There is no demonstrated connection between the card habits you form as a teenager and the financial decisions you make later in life'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -506,7 +506,7 @@ const questions: Question[] = [
   {
     id: 'cd-041',
     text: 'Why might carrying a revolving credit card balance month to month be financially costly over time?',
-    options: ['Interest typically accrues on unpaid balances, compounding the cost of the original spending over time', 'Revolving balances never accrue any additional cost', 'Credit cards charge no interest on unpaid balances', 'Carrying a balance always improves your financial position'],
+    options: ['Interest typically accrues on unpaid balances, compounding the cost of the original spending over time', 'Revolving credit card balances never accumulate any additional cost beyond the original amount of each individual purchase', 'Credit cards in Nigeria do not charge any interest on unpaid balances as long as at least one payment is made per billing cycle', 'Carrying an ongoing credit card balance from month to month always improves your credit profile by demonstrating sustained usage'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -516,7 +516,7 @@ const questions: Question[] = [
   {
     id: 'cd-042',
     text: 'What\'s a sound reason to understand your credit utilization ratio (how much of your credit limit you\'re using)?',
-    options: ['Utilization has no bearing on credit health', 'High utilization relative to your limit can affect perceptions of creditworthiness and potentially your credit score', 'Only the total limit matters, not how much is actually used', 'Utilization ratio is a concept unrelated to responsible credit use'],
+    options: ['Credit card utilization has no bearing whatsoever on how lenders or credit bureaus assess your creditworthiness', 'High utilization relative to your limit can affect perceptions of creditworthiness and potentially your credit score', 'Only the total credit limit you hold across all cards matters to lenders — the amount you actually use at any time is irrelevant', 'Utilization ratio is used exclusively by financial analysts and has no practical relevance to responsible individual credit use'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -526,7 +526,7 @@ const questions: Question[] = [
   {
     id: 'cd-043',
     text: 'Why might paying only the minimum payment on a credit card balance be a costly long-term habit?',
-    options: ['Minimum payments primarily cover interest, meaning the principal balance can take a very long time to pay down while accruing significant interest', 'Minimum payments always fully clear the balance quickly', 'Interest doesn\'t accrue on balances paid via minimum payment', 'There\'s no real cost difference between minimum and full payments'],
+    options: ['Minimum payments primarily cover interest, meaning the principal balance can take a very long time to pay down while accruing significant interest', 'Making the minimum payment on a credit card statement always clears the entire outstanding balance quickly and completely', 'Nigerian credit card agreements do not permit any interest to accrue on balances whenever a customer pays the minimum required amount', 'There is no meaningful difference in total cost between paying only the minimum amount and paying the full balance each month'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -536,7 +536,7 @@ const questions: Question[] = [
   {
     id: 'cd-044',
     text: 'What\'s a reasonable approach to using a credit card as a financial tool rather than a spending expansion?',
-    options: ['Treating available credit as a convenience to be repaid promptly, rather than as additional spending power, supports healthier financial habits', 'Credit limits should always be treated as extra income to spend freely', 'Credit cards should never be used under any circumstances', 'There\'s no meaningful distinction between these two approaches'],
+    options: ['Treating available credit as a convenience to be repaid promptly, rather than as additional spending power, supports healthier financial habits', 'The available credit limit on any card should always be treated as additional disposable income that you are encouraged to spend monthly', 'Credit cards are an inherently problematic product that should never be used under any circumstances by any individual consumer', 'There is no meaningful distinction between treating credit as convenience versus treating it as spending power in terms of outcomes'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -546,7 +546,7 @@ const questions: Question[] = [
   {
     id: 'cd-045',
     text: 'Why might understanding the difference between a hard and soft credit inquiry matter when managing your credit profile?',
-    options: ['Different types of inquiries can have different potential effects on your credit profile, making awareness useful before applying for multiple credit products', 'There\'s no meaningful difference between the two types of inquiries', 'Credit inquiries never have any effect on a credit profile', 'Only lenders need to understand this distinction, not consumers'],
+    options: ['Different types of inquiries can have different potential effects on your credit profile, making awareness useful before applying for multiple credit products', 'There is no meaningful difference between hard and soft credit inquiries and both types affect your profile in exactly the same way', 'Credit inquiries of any type never have any measurable effect on your credit profile regardless of how many occur in one period', 'Only lenders and financial institutions ever need to understand the distinction between hard and soft inquiries — not consumers'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -556,7 +556,7 @@ const questions: Question[] = [
   {
     id: 'cd-046',
     text: 'What\'s a sound reason to periodically review all recurring charges on your debit or credit card statements?',
-    options: ['Reviewing recurring charges has no practical value', 'It helps catch forgotten subscriptions, unauthorized charges, or unnecessary recurring costs', 'Recurring charges never require any review once set up', 'Only large transactions are worth reviewing on statements'],
+    options: ['Reviewing recurring charges has no practical value since banks automatically flag and refund unauthorised subscription charges', 'It helps catch forgotten subscriptions, unauthorized charges, or unnecessary recurring costs', 'Recurring charges never require any review once set up since all legitimate services provide email reminders before billing', 'Only large individual transactions above ₦50,000 are worth reviewing since smaller recurring charges never meaningfully accumulate'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -566,7 +566,7 @@ const questions: Question[] = [
   {
     id: 'cd-047',
     text: 'Why might a strong credit history built through responsible card use benefit someone applying for a future loan, like for a car or home?',
-    options: ['A strong credit history has no bearing on future loan applications', 'Lenders often use credit history to assess risk, which can affect loan approval odds and terms offered', 'Loan approval is always identical regardless of credit history', 'Only income matters for loan approval, not credit history'],
+    options: ['A strong credit history built through responsible card use has no bearing on any future loan applications made to Nigerian banks', 'Lenders often use credit history to assess risk, which can affect loan approval odds and terms offered', 'Loan approval decisions by Nigerian banks are always identical for every applicant regardless of their individual credit history', 'Only your current income and employment status matters to lenders — your credit history plays no role in any loan approval decision'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -576,7 +576,7 @@ const questions: Question[] = [
   {
     id: 'cd-048',
     text: 'What\'s a reasonable perspective on the trade-off between the convenience of credit cards and the discipline required to use them well?',
-    options: ['Credit cards offer real convenience and potential benefits, but require deliberate discipline to avoid the costs of accumulating debt', 'Credit cards offer only benefits with no discipline required', 'Credit cards should always be avoided due to convenience alone', 'There\'s no meaningful trade-off to consider with credit card use'],
+    options: ['Credit cards offer real convenience and potential benefits, but require deliberate discipline to avoid the costs of accumulating debt', 'Credit cards offer convenience and occasional rewards with absolutely no discipline required to avoid the risks of debt accumulation', 'Credit cards are such a financially dangerous product that they should always be completely avoided by every individual regardless of income', 'There is no meaningful trade-off to consider when deciding whether to use a credit card since all usage eventually results in the same outcome'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -586,7 +586,7 @@ const questions: Question[] = [
   {
     id: 'cd-049',
     text: 'Why might it be financially sound to pay off a credit card balance in full each cycle whenever possible?',
-    options: ['Paying in full avoids interest charges on the balance entirely, maximizing the card\'s convenience without its cost', 'Paying in full has no real financial benefit over partial payment', 'Interest is charged regardless of whether the balance is paid in full', 'Partial payments are always the financially smarter choice'],
+    options: ['Paying in full avoids interest charges on the balance entirely, maximizing the card\'s convenience without its cost', 'Paying a credit card balance in full each month has no real financial benefit compared to making any partial payment above minimum', 'Interest charges are applied to credit card balances regardless of whether the full balance is paid by the due date each month', 'Making only a partial payment each month is always the more financially strategic choice than clearing the full balance at once'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -596,7 +596,7 @@ const questions: Question[] = [
   {
     id: 'cd-050',
     text: 'What\'s a balanced way to think about using multiple credit products (several cards, lines of credit) simultaneously?',
-    options: ['Multiple credit products can be managed responsibly, but require careful tracking to avoid overextension across several obligations at once', 'Multiple credit products should always be avoided entirely', 'There\'s no additional complexity in managing several credit products at once', 'Using many credit products always improves financial health automatically'],
+    options: ['Multiple credit products can be managed responsibly, but require careful tracking to avoid overextension across several obligations at once', 'Multiple credit products including several cards and lines of credit should always be completely avoided since the complexity is never worth it', 'There is no additional complexity involved in managing several credit cards and lines of credit simultaneously compared to managing just one', 'Using as many credit products as possible simultaneously always improves your financial health by demonstrating broad creditworthiness'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -616,7 +616,7 @@ const questions: Question[] = [
   {
     id: 'cd-052',
     text: "What is the key danger of using a credit card carelessly?",
-    options: ["Credit cards are free to use", "You can end up spending more than you can repay, leading to debt and interest charges", "Credit cards have no interest", "Credit cards only work online"],
+    options: ["Credit cards issued by Nigerian banks are entirely free to use with no fees, charges, or interest obligations whatsoever", "You can end up spending more than you can repay, leading to debt and interest charges", "Credit cards do not involve any form of interest since the card issuer absorbs all borrowing costs internally", "Credit card spending is restricted to online transactions only and cannot be used in physical shops or at ATMs"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -636,7 +636,7 @@ const questions: Question[] = [
   {
     id: 'cd-054',
     text: "What is a \"credit score\"?",
-    options: ["Your bank account balance", "A numerical measure of your creditworthiness based on your borrowing and repayment history", "The limit on your credit card", "Your annual income"],
+    options: ["The total naira balance held across all your active savings, current, and salary bank accounts combined", "A numerical measure of your creditworthiness based on your borrowing and repayment history", "The official borrowing limit your bank has assigned to your credit card or overdraft facility in naira", "The gross annual income figure that your employer or tax authority has registered in FIRS records on your behalf"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -686,7 +686,7 @@ const questions: Question[] = [
   {
     id: 'cd-059',
     text: "You have ₦30,000 credit card debt at 4% monthly interest. If you only pay ₦1,000 per month, what happens?",
-    options: ["You pay it off in 30 months", "The debt grows because monthly interest (₦1,200) exceeds your payment", "The bank waives the interest", "You are given a credit limit increase"],
+    options: ["You will repay the debt entirely within 30 months since ₦1,000 per month will eventually clear both principal and interest", "The debt grows because monthly interest (₦1,200) exceeds your payment", "The bank agrees to waive all accrued interest charges once they see you are making consistent monthly payments however small", "You become eligible for an automatic credit limit increase after 12 consistent monthly payments regardless of the balance"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['kids'],
@@ -696,7 +696,7 @@ const questions: Question[] = [
   {
     id: 'cd-060',
     text: "What is \"credit utilisation\"?",
-    options: ["How often you use your credit card", "The percentage of your credit limit you are currently using", "Your monthly credit card payment", "Your credit card's interest rate"],
+    options: ["A measure of how frequently you tap your credit card compared to the number of times you use cash or debit instead", "The percentage of your credit limit you are currently using", "The fixed monthly payment amount shown on your most recent credit card statement that you are required to pay", "The annual interest rate your bank charges on your credit card balance expressed as a percentage of your total limit"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['kids'],
@@ -706,7 +706,7 @@ const questions: Question[] = [
   {
     id: 'cd-061',
     text: "What is the difference between \"credit\" and \"debt\"?",
-    options: ["They are the same", "Credit is the ability to borrow money; debt is the money you owe after using credit", "Credit is always free; debt always has interest", "Debt is government money; credit is bank money"],
+    options: ["They mean the same thing and can be used interchangeably in all Nigerian financial and legal contexts", "Credit is the ability to borrow money; debt is the money you owe after using credit", "Credit is always a cost-free facility that never results in any obligation; debt is what happens when interest compounds wrongly", "Debt is money issued by the CBN to support government spending; credit is the banking facility private individuals access"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -716,7 +716,7 @@ const questions: Question[] = [
   {
     id: 'cd-062',
     text: "What is a \"credit bureau\"?",
-    options: ["A government tax office", "An organisation that collects credit history information and provides credit reports to lenders", "A bank that only provides loans", "A government body that sets interest rates"],
+    options: ["A federal government tax office that processes declarations and collects duties on imported and domestically sold financial products", "An organisation that collects credit history information and provides credit reports to lenders", "A type of financial institution that provides exclusively lending services and does not accept deposits from the general public", "A government body that determines the official interest rates that all commercial banks must apply to savings accounts"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -726,7 +726,7 @@ const questions: Question[] = [
   {
     id: 'cd-063',
     text: "What is a \"minimum payment\" on a credit card?",
-    options: ["The full balance owed", "The smallest amount you must pay each month to keep the account in good standing", "A daily maintenance fee", "The government-mandated minimum credit card payment"],
+    options: ["The complete total of all outstanding balances across every credit product you currently hold including cards and loans", "The smallest amount you must pay each month to keep the account in good standing", "A daily account maintenance fee automatically deducted from your credit card balance regardless of whether any purchase was made", "A statutory minimum payment amount set by the Central Bank of Nigeria that applies uniformly to all cardholders in Nigeria"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -746,7 +746,7 @@ const questions: Question[] = [
   {
     id: 'cd-065',
     text: "What is \"over-indebtedness\"?",
-    options: ["Having one loan in addition to a mortgage", "When the level of debt exceeds your ability to repay from regular income", "Having a credit card", "Borrowing to invest in assets"],
+    options: ["Having at least one personal loan in addition to an existing home mortgage with a regulated Nigerian lender", "When the level of debt exceeds your ability to repay from regular income", "Holding any credit card product regardless of the balance owed or whether regular payments are being made on time", "Taking out a loan or drawing on a credit facility in order to invest the funds in income-generating assets or a business"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -776,7 +776,7 @@ const questions: Question[] = [
   {
     id: 'cd-068',
     text: "What is \"debt consolidation\"?",
-    options: ["Taking out multiple loans to pay more debt", "Combining several debts into one loan, typically at a lower interest rate, to simplify repayment", "Cancelling all debts through bankruptcy", "Transferring debts to another person"],
+    options: ["Taking out multiple separate loans simultaneously in order to pay down existing debts faster by spreading the repayments", "Combining several debts into one loan, typically at a lower interest rate, to simplify repayment", "Formally cancelling all outstanding debts through a voluntary bankruptcy filing submitted to the Federal High Court in Nigeria", "Legally transferring all of your outstanding debts to another willing individual who agrees to take full responsibility"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['teens'],
@@ -786,7 +786,7 @@ const questions: Question[] = [
   {
     id: 'cd-069',
     text: "What is the \"snowball method\" for debt repayment?",
-    options: ["Paying the highest-interest debt first", "Paying the smallest debt first (regardless of interest) to build momentum and motivation", "Ignoring small debts and focusing on large ones", "Making minimum payments on all debts"],
+    options: ["Always paying the highest-interest debt first regardless of balance size in order to minimise total interest paid over time", "Paying the smallest debt first (regardless of interest) to build momentum and motivation", "Completely ignoring all smaller debts and directing every available naira exclusively toward paying down your largest debt first", "Making only the minimum required payment on every individual debt simultaneously while waiting for interest rates to fall"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['teens'],
@@ -796,7 +796,7 @@ const questions: Question[] = [
   {
     id: 'cd-070',
     text: "What is \"negative amortisation\"?",
-    options: ["Paying more than required on a loan", "When minimum payments do not cover interest, causing the outstanding balance to grow over time", "When loan interest is negative (zero-cost loan)", "A loan with a decreasing interest rate"],
+    options: ["A situation where you consistently pay more than required each month, causing the outstanding balance to decrease faster", "When minimum payments do not cover interest, causing the outstanding balance to grow over time", "A loan arrangement where the interest rate applied to the outstanding balance becomes negative resulting in zero net cost", "A loan product structured with a declining interest rate that reduces by a fixed percentage each year until repaid"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['teens'],
@@ -806,7 +806,7 @@ const questions: Question[] = [
   {
     id: 'cd-071',
     text: "What is a \"credit facility\"?",
-    options: ["A physical building where credit is assessed", "An arrangement with a financial institution allowing you to borrow up to a specified limit as needed", "A credit card with no limit", "A government grant for creditworthy individuals"],
+    options: ["A purpose-built physical office where lenders formally assess and approve credit applications from business and individual borrowers", "An arrangement with a financial institution allowing you to borrow up to a specified limit as needed", "A credit card product that has no predetermined spending limit and allows you to borrow any amount at any time without restriction", "A government grant programme available to creditworthy small businesses and individual entrepreneurs to fund capital investments"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -816,7 +816,7 @@ const questions: Question[] = [
   {
     id: 'cd-072',
     text: "What is the \"debt avalanche\" method?",
-    options: ["Pay the smallest debt first", "Pay the highest-interest debt first to minimise total interest paid over time", "Pay all debts equally", "Pay no debt and save instead"],
+    options: ["Begin by paying off your smallest outstanding debt first so you can build psychological momentum for tackling larger ones", "Pay the highest-interest debt first to minimise total interest paid over time", "Distribute repayment efforts equally across all outstanding debts by paying the same fixed amount toward each one every month", "Stop making debt repayments entirely and redirect all available funds into a high-yield savings account until rates improve"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -826,7 +826,7 @@ const questions: Question[] = [
   {
     id: 'cd-073',
     text: "What does a \"credit freeze\" do?",
-    options: ["Cancels all your credit cards", "Restricts access to your credit report, preventing new credit from being opened in your name", "Freezes your bank account", "Reduces your credit limit temporarily"],
+    options: ["Permanently closes and cancels every credit card and credit facility linked to your financial profile with immediate effect", "Restricts access to your credit report, preventing new credit from being opened in your name", "Automatically suspends all transactions on your linked bank account until you personally visit a branch to confirm your identity", "Temporarily reduces your credit limit to zero for a defined period while a dispute or fraud investigation is being conducted"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -836,7 +836,7 @@ const questions: Question[] = [
   {
     id: 'cd-074',
     text: "What is \"revolving credit\"?",
-    options: ["A one-time loan with fixed monthly payments", "A flexible credit line that can be drawn down, repaid, and drawn again repeatedly (e.g. credit card)", "A long-term mortgage loan", "A government credit scheme"],
+    options: ["A fixed-term instalment loan product with a predetermined repayment schedule that ends on a specific agreed date", "A flexible credit line that can be drawn down, repaid, and drawn again repeatedly (e.g. credit card)", "A long-term amortising mortgage loan used to purchase residential or commercial property over a period of up to 30 years", "A subsidised government credit scheme offered to low-income earners and first-time borrowers through designated microfinance banks"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -846,7 +846,7 @@ const questions: Question[] = [
   {
     id: 'cd-075',
     text: "Why does carrying high credit card utilisation lower your credit score?",
-    options: ["Banks dislike frequent card users", "High utilisation signals you may be over-reliant on credit and at greater risk of default — lenders view this as risky", "It has no effect on credit score", "Low utilisation lowers your score"],
+    options: ["Nigerian banks penalise customers who use their credit cards too frequently by flagging the account for excessive transaction activity", "High utilisation signals you may be over-reliant on credit and at greater risk of default — lenders view this as risky", "Credit utilization has no effect whatsoever on a consumer\'s credit score in Nigeria regardless of how high the ratio becomes", "Customers with low credit utilization actually receive lower credit scores because it suggests they are not making full use of facilities"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -866,7 +866,7 @@ const questions: Question[] = [
   {
     id: 'cd-077',
     text: "What is the difference between \"secured\" and \"unsecured\" credit and how does it affect interest rates?",
-    options: ["No difference", "Secured credit (backed by collateral) typically has lower rates; unsecured credit (no collateral) carries higher rates reflecting greater lender risk", "Secured credit always has higher rates", "Unsecured credit is unavailable to individuals"],
+    options: ["There is no meaningful difference between secured and unsecured credit products and both types carry identical interest rates", "Secured credit (backed by collateral) typically has lower rates; unsecured credit (no collateral) carries higher rates reflecting greater lender risk", "Secured credit products always carry substantially higher interest rates than unsecured ones because collateral creates additional administrative costs", "Unsecured credit facilities are not available to any individual borrowers in Nigeria and are exclusively reserved for registered corporate entities"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['adults'],
@@ -886,7 +886,7 @@ const questions: Question[] = [
   {
     id: 'cd-079',
     text: "What is \"interest rate risk\" on a variable-rate loan?",
-    options: ["The risk the bank increases your fees", "If interest rates rise, your monthly repayments increase — potentially making the loan unaffordable", "The risk of loan fraud", "The risk the lender cancels your loan"],
+    options: ["The risk that your bank will unilaterally increase the maintenance fees on your credit facility without prior notification", "If interest rates rise, your monthly repayments increase — potentially making the loan unaffordable", "The risk that an unauthorised third party obtains access to your credit facility and uses it to make fraudulent purchases", "The risk that your lender decides to cancel and close your credit facility before the agreed end date of the loan contract"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['adults'],
@@ -896,7 +896,7 @@ const questions: Question[] = [
   {
     id: 'cd-080',
     text: "What effect does multiple loan applications in a short period have on your credit score?",
-    options: ["It improves your score by showing demand", "Multiple hard credit enquiries in a short period can lower your score, signalling financial distress to lenders", "No effect whatsoever", "It freezes your credit score temporarily"],
+    options: ["Each additional credit application you submit actually improves your credit score by demonstrating to bureaus that you are seeking credit", "Multiple hard credit enquiries in a short period can lower your score, signalling financial distress to lenders", "Multiple credit applications submitted over a short period have absolutely no effect on your credit score or risk profile in Nigeria", "Your credit score is automatically frozen and set to zero every time a new application is submitted until the lender completes their check"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['adults'],

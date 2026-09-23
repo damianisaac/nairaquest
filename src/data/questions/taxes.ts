@@ -21,10 +21,10 @@ const questions: Question[] = [
     id: 'tx-002',
     text: 'What is VAT and who ultimately pays it in Nigeria?',
     options: [
-      'A tax paid only by businesses to the government',
+      'A consumption tax charged once at the final point of sale, collected only by large retailers',
       'A Value Added Tax charged at each stage of production, ultimately borne by the end consumer',
-      'A voluntary additional tax on luxury goods only',
-      'A tax on foreign companies importing goods into Nigeria',
+      'A voluntary surcharge on premium goods, paid at the discretion of the business owner or buyer',
+      'A one-off levy on companies importing goods into Nigeria, collected at the port of entry',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -96,10 +96,10 @@ const questions: Question[] = [
     id: 'tx-007',
     text: 'What is Withholding Tax (WHT)?',
     options: [
-      'A fine for paying taxes late',
-      'A tax paid on goods brought into Nigeria from abroad',
+      'A penalty imposed by FIRS for submitting annual returns after the official filing deadline',
+      'A levy on imported goods collected by customs before items enter the Nigerian market',
       'An advance tax deducted at source when making certain payments, to be credited against final tax liability',
-      'A one-time tax paid when you start a business',
+      'A registration tax paid once to FIRS when formally incorporating a new business with the CAC',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -128,10 +128,10 @@ const questions: Question[] = [
     id: 'tx-009',
     text: 'Chidi runs a small business and earns ₦500,000 profit in a year. What should he do regarding tax?',
     options: [
-      'Nothing — only large companies pay tax',
+      'Nothing — only companies with more than five employees are required to register for taxes',
       'Register for a TIN, file annual tax returns, and pay the appropriate Personal Income Tax',
-      'Pay VAT only — self-employed people don\'t file returns',
-      'Wait for the government to send him a tax bill',
+      'Pay only VAT on each sale and ignore income tax since small traders are exempt under PITA',
+      'Wait until FIRS contacts him, as the government automatically tracks all business earnings',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -144,10 +144,10 @@ const questions: Question[] = [
     id: 'tx-010',
     text: 'What is the difference between tax avoidance and tax evasion?',
     options: [
-      'They are the same — both mean not paying taxes',
+      'They are the same offence — both involve deliberately reducing the amount of tax paid to the government',
       'Tax avoidance is legal (using lawful means to reduce tax); tax evasion is illegal (hiding income or falsifying records)',
-      'Tax avoidance is illegal; tax evasion is a minor administrative error',
-      'Tax evasion is only an offence for companies, not individuals',
+      'Tax avoidance is an illegal act prosecuted by FIRS; tax evasion is merely a minor reporting error with a small fine',
+      'Tax evasion is a criminal offence only for registered companies; private individuals face only administrative warnings',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -187,10 +187,10 @@ const questions: Question[] = [
     id: 'tx-013',
     text: 'Why is paying tax important for Nigeria\'s development?',
     options: [
-      'It isn\'t — the government earns enough from oil',
+      'Nigeria\'s oil revenue is more than enough to fund all public services without needing any taxes',
       'Tax revenue funds schools, hospitals, roads, and security that every citizen benefits from',
-      'Tax is mainly used to pay government officials\' salaries',
-      'Tax money goes to international aid organisations',
+      'Tax collections mainly cover salaries and benefits for civil servants and elected officials',
+      'Most Nigerian tax revenue is sent directly to international organisations and donor agencies',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -199,15 +199,14 @@ const questions: Question[] = [
     explanation:
       'Tax revenue is how governments fund public services. Nigeria\'s over-reliance on oil revenue makes tax collection critical — the more citizens and businesses pay tax, the more the government can invest in infrastructure, healthcare, and education.',
   },
-  // --- Kids easy questions ---
   {
     id: 'tx-014',
     text: 'What is a tax?',
     options: [
-      'A fine you pay for breaking the law',
+      'A penalty the government charges people who break financial laws and regulations',
       'Money the government collects from people and businesses to pay for public services',
-      'A type of loan from the bank',
-      'Extra money added to your savings',
+      'A type of loan from the government that citizens must repay after a fixed period',
+      'Extra interest your bank adds to your savings account as a reward for keeping money in',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -279,10 +278,10 @@ const questions: Question[] = [
     id: 'tx-019',
     text: 'Amaka\'s mum earns a salary from her job. The tax taken directly from her salary before she receives it is called:',
     options: [
-      'VAT',
-      'Company tax',
+      'Withholding Tax (WHT)',
+      'Capital Gains Tax (CGT)',
       'PAYE (Pay As You Earn)',
-      'Customs duty',
+      'Stamp Duty charge',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -294,10 +293,10 @@ const questions: Question[] = [
     id: 'tx-020',
     text: 'Is it wrong NOT to pay taxes when you are supposed to?',
     options: [
-      'No — taxes are optional',
+      'No — tax laws only apply to large businesses and high-income earners in Nigeria',
       'Yes — avoiding taxes is illegal and reduces money available for public services',
-      'No — only rich people need to pay taxes',
-      'It depends on which state you live in',
+      'No — taxes are entirely voluntary with no legal penalty for not paying them',
+      'It depends on the state you live in since each state sets its own tax rules',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -305,15 +304,14 @@ const questions: Question[] = [
     category: 'taxes',
     explanation: 'Tax evasion (not paying taxes you owe) is illegal in Nigeria and everywhere. It reduces the government\'s ability to fund schools, hospitals, and infrastructure for everyone.',
   },
-  // ── Kids Easy top-up ────────────────────────────────────────────────────────
   {
     id: 'tx-021',
     text: 'When Tunde buys a new phone at a shop in Lagos, the price includes something called VAT. What is VAT?',
     options: [
-      'Value Added Toys — a children\'s tax',
+      'Vendor Allocation Tax — a levy collected only from market traders and roadside sellers',
       'Value Added Tax — a percentage added to the price of many goods and services that goes to the government',
-      'Vehicle Access Tax — a fee for transportation',
-      'A special discount for regular customers',
+      'Vehicle Access Tax — a fee charged on all road transport services and fuel purchased in Nigeria',
+      'A government discount scheme that reduces the price for low-income shoppers buying essential goods',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -321,11 +319,15 @@ const questions: Question[] = [
     category: 'taxes',
     explanation: 'VAT (Value Added Tax) is 7.5% added to the price of many goods and services in Nigeria. When you pay ₦350 for a product whose base price is ₦326, the extra ₦24 is VAT. Businesses collect this on behalf of the government to fund public services.',
   },
-
   {
     id: 'tx-022',
     text: 'Why does the government collect money called \'tax\' from people?',
-    options: ['To help pay for things like roads, schools, and hospitals', 'To keep it hidden away forever', 'Taxes have no real purpose', 'To make people poorer for no reason'],
+    options: [
+      'To help pay for things like roads, schools, and hospitals',
+      'To give it to the president as a personal salary fund',
+      'To fund only military activities and defence spending',
+      'To save it in a foreign bank account for later use',
+    ],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -345,7 +347,12 @@ const questions: Question[] = [
   {
     id: 'tx-024',
     text: 'Why might roads, streetlights, and public schools need money to exist?',
-    options: ['Because building and maintaining them costs money, often from taxes', 'They appear for free with no cost', 'Only rich people need roads', 'Public things never need funding'],
+    options: [
+      'Because building and maintaining them costs money, often from taxes',
+      'They are built for free by private companies under charity schemes',
+      'They cost nothing since the government has unlimited money available',
+      'Public infrastructure is funded entirely by foreign donations with zero cost',
+    ],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -405,7 +412,12 @@ const questions: Question[] = [
   {
     id: 'tx-030',
     text: 'Why might businesses also pay taxes, not just individuals?',
-    options: ['Because businesses also benefit from shared public infrastructure and services', 'Businesses never pay any taxes', 'Only individuals are ever taxed', 'Taxes only apply to government workers'],
+    options: [
+      'Because businesses also benefit from shared public infrastructure and services',
+      'Businesses are always fully exempt from tax obligations in Nigeria',
+      'Only individuals and private citizens are ever required to pay tax',
+      'Tax laws in Nigeria apply exclusively to public sector workers',
+    ],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -425,7 +437,12 @@ const questions: Question[] = [
   {
     id: 'tx-032',
     text: 'What does VAT generally apply to?',
-    options: ['A tax added to the price of many goods and services', 'Only income earned from a job', 'Only savings account interest', 'Only imported cars'],
+    options: [
+      'A tax added to the price of many goods and services',
+      'Only income earned from a salaried employment',
+      'Only interest earned on savings and deposit accounts',
+      'Only luxury cars and electronics brought from abroad',
+    ],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -435,7 +452,12 @@ const questions: Question[] = [
   {
     id: 'tx-033',
     text: 'What does PAYE generally refer to for salary earners?',
-    options: ['A system where income tax is deducted directly from salary before payment', 'A type of savings bonus', 'A loan repayment method', 'A government subsidy program'],
+    options: [
+      'A system where income tax is deducted directly from salary before payment',
+      'A voluntary scheme where salary earners save a portion of their pay each month',
+      'A monthly deduction from salary that goes toward repaying a personal bank loan',
+      'A government welfare scheme that tops up the income of low-paid workers',
+    ],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -445,7 +467,12 @@ const questions: Question[] = [
   {
     id: 'tx-034',
     text: 'Why might understanding basic tax concepts matter even before your first full-time job?',
-    options: ['It helps you understand how your future income will actually be affected once you start earning', 'Tax knowledge has no relevance until retirement', 'Taxes only affect business owners', 'Understanding taxes is entirely unnecessary for individuals'],
+    options: [
+      'It helps you understand how your future income will actually be affected once you start earning',
+      'Tax knowledge is only useful once you reach retirement age and start drawing your pension',
+      'Tax rules apply exclusively to business owners and do not affect ordinary salaried workers',
+      'Tax knowledge is completely unnecessary for private individuals since employers handle it all',
+    ],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -455,7 +482,12 @@ const questions: Question[] = [
   {
     id: 'tx-035',
     text: 'Why might a young entrepreneur consider registering their growing side hustle as a formal business over time?',
-    options: ['Formal registration can bring legitimacy and access to services, along with tax obligations that come with formal operation', 'Registration has no real implications for a business', 'Informal businesses face identical requirements as formal ones', 'Registration is only relevant to large companies'],
+    options: [
+      'Formal registration can bring legitimacy and access to services, along with tax obligations that come with formal operation',
+      'Business registration with CAC has no practical effect on how a small side hustle operates or grows over time',
+      'Informal and formally registered businesses face exactly the same tax and regulatory requirements in every state',
+      'CAC registration only becomes relevant once a business earns over ₦10 million and never applies to small ventures',
+    ],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -465,7 +497,12 @@ const questions: Question[] = [
   {
     id: 'tx-036',
     text: 'What\'s the general purpose of taxes collected by government agencies like FIRS?',
-    options: ['Funding public services and infrastructure that benefit the wider population', 'Taxes serve no real public purpose', 'Only to enrich government officials personally', 'To discourage people from earning any income'],
+    options: [
+      'Funding public services and infrastructure that benefit the wider population',
+      'Tax collections serve no documented purpose in the Nigerian national budget',
+      'Exclusively covering the salaries and pensions of senior government officials',
+      'Reducing private income so that citizens become more dependent on government support',
+    ],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -475,7 +512,12 @@ const questions: Question[] = [
   {
     id: 'tx-037',
     text: 'Why might failing to understand tax obligations create problems for someone running a side business?',
-    options: ['Unexpected tax liabilities or penalties could arise from not understanding relevant obligations', 'Tax obligations never apply to small side businesses', 'There\'s no real risk to ignoring tax obligations', 'Side businesses are automatically exempt from all taxes'],
+    options: [
+      'Unexpected tax liabilities or penalties could arise from not understanding relevant obligations',
+      'Tax obligations are completely waived for all informal side businesses operating in Nigeria',
+      'Ignoring tax obligations as a side business owner carries absolutely no meaningful risks',
+      'Nigerians running side businesses are automatically exempt from all income tax filings',
+    ],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -485,7 +527,12 @@ const questions: Question[] = [
   {
     id: 'tx-038',
     text: 'What\'s a reasonable way to think about VAT when budgeting for a purchase?',
-    options: ['The final price you pay may already include VAT, which is worth factoring into what you can actually afford', 'VAT is always separate and never included in listed prices', 'VAT has no effect on the price you actually pay', 'VAT only applies to luxury items'],
+    options: [
+      'The final price you pay may already include VAT, which is worth factoring into what you can actually afford',
+      'VAT is always charged separately after you agree on a price, so the listed price is always the final one',
+      'VAT is a tax paid only by the business, so it has no bearing on the price a customer actually pays',
+      'VAT in Nigeria applies only to luxury goods above ₦100,000 and never affects everyday purchases',
+    ],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -495,7 +542,12 @@ const questions: Question[] = [
   {
     id: 'tx-039',
     text: 'Why might keeping receipts and records be useful, even for a teen\'s small side income?',
-    options: ['Records have no future usefulness for a small side income', 'Good records can help later, whether for understanding profitability or for future formal tax/loan needs', 'Only businesses with staff need to keep any records', 'Receipts serve no practical purpose'],
+    options: [
+      'Financial records have no future value for small side income earners since amounts are too minor',
+      'Good records can help later, whether for understanding profitability or for future formal tax/loan needs',
+      'Recordkeeping is only necessary for businesses that formally employ staff on a payroll system',
+      'Receipts and transaction records serve no useful purpose for a teenager running a small side hustle',
+    ],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -505,7 +557,12 @@ const questions: Question[] = [
   {
     id: 'tx-040',
     text: 'What\'s a fair general understanding of why tax rates can differ for different income levels or activities?',
-    options: ['Different tax structures exist for different circumstances as part of how tax systems are generally designed', 'All income and activities are always taxed identically everywhere', 'Tax rates are always randomly assigned', 'Tax structure has no logic behind it whatsoever'],
+    options: [
+      'Different tax structures exist for different circumstances as part of how tax systems are generally designed',
+      'All income types and business activities are always taxed at a single identical flat rate everywhere',
+      'Tax rates across all activities are assigned entirely at random without any underlying policy logic',
+      'There is no systematic logic to how tax structures are designed; it changes arbitrarily each year',
+    ],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -515,7 +572,12 @@ const questions: Question[] = [
   {
     id: 'tx-041',
     text: 'Why is developing basic tax literacy valuable, even if taxes feel like an \'adult\' topic?',
-    options: ['Understanding taxes early helps you make more informed decisions as you start earning and managing money', 'Tax literacy has no practical benefit for young people', 'This knowledge becomes relevant only after retirement', 'Taxes are entirely irrelevant to personal financial planning'],
+    options: [
+      'Understanding taxes early helps you make more informed decisions as you start earning and managing money',
+      'Tax literacy provides no practical advantage for young Nigerians who are not yet formally employed',
+      'Understanding taxes only becomes useful once you reach retirement age and begin managing a pension',
+      'Tax knowledge is entirely irrelevant to personal financial planning until you earn above ₦5 million',
+    ],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -525,7 +587,12 @@ const questions: Question[] = [
   {
     id: 'tx-042',
     text: 'Why might a self-employed individual need to be more proactive about tax obligations than a salaried employee under PAYE?',
-    options: ['Self-employed income tax isn\'t automatically deducted the way PAYE deducts it from salary, requiring more active management', 'Self-employed individuals have no tax obligations at all', 'PAYE and self-employment tax obligations are identical in every way', 'Only salaried employees are ever required to pay tax'],
+    options: [
+      'Self-employed income tax isn\'t automatically deducted the way PAYE deducts it from salary, requiring more active management',
+      'Self-employed workers in Nigeria are fully exempt from income tax regardless of how much they earn annually',
+      'PAYE regulations and self-employment tax rules are completely identical in both structure and filing requirements',
+      'Only formally employed workers receiving a payslip are ever legally required to submit tax returns in Nigeria',
+    ],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -535,7 +602,12 @@ const questions: Question[] = [
   {
     id: 'tx-043',
     text: 'What\'s a sound reason for a small business owner to maintain organized financial records year-round rather than only before tax season?',
-    options: ['Organized records have no real bearing on tax compliance', 'It supports accurate tax filing and reduces the risk of errors or penalties from disorganized last-minute preparation', 'Records are only useful for very large corporations', 'Tax filing requires no supporting documentation'],
+    options: [
+      'Well-organised financial records have no meaningful connection to the accuracy of annual tax compliance filings',
+      'It supports accurate tax filing and reduces the risk of errors or penalties from disorganized last-minute preparation',
+      'Detailed business records are only ever required for corporations with annual turnover above ₦100 million',
+      'Nigerian tax authorities accept all returns without requiring any supporting financial documentation whatsoever',
+    ],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -545,7 +617,12 @@ const questions: Question[] = [
   {
     id: 'tx-044',
     text: 'Why might understanding which expenses are legitimately deductible matter for a business owner\'s tax planning?',
-    options: ['Deductible expenses have no impact on a business\'s overall tax picture', 'Properly accounting for legitimate deductible expenses can affect the accurate calculation of taxable income', 'All business expenses are automatically deductible regardless of nature', 'Deductions are irrelevant to any tax calculation'],
+    options: [
+      'Business expenses have absolutely no effect on a company\'s tax liability regardless of their nature',
+      'Properly accounting for legitimate deductible expenses can affect the accurate calculation of taxable income',
+      'Every business expenditure is automatically deductible in full without any assessment of its legitimacy',
+      'Tax deductions are completely irrelevant to Nigerian tax calculations since FIRS disallows all of them',
+    ],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -555,7 +632,12 @@ const questions: Question[] = [
   {
     id: 'tx-045',
     text: 'What\'s a reasonable perspective on the consequences of consistently failing to meet tax obligations?',
-    options: ['There are generally no consequences for failing to meet tax obligations', 'It can lead to penalties, interest, or legal consequences depending on the circumstances and applicable regulations', 'Tax obligations are entirely optional for everyone', 'Consequences only apply to very large corporations'],
+    options: [
+      'There are no meaningful consequences whatsoever for individuals or businesses that miss their tax obligations',
+      'It can lead to penalties, interest, or legal consequences depending on the circumstances and applicable regulations',
+      'Tax obligations across all categories are fully optional and can be waived by the taxpayer at any time',
+      'Legal and financial consequences for missing tax deadlines apply only to large corporations, never individuals',
+    ],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -565,7 +647,12 @@ const questions: Question[] = [
   {
     id: 'tx-046',
     text: 'Why might a growing business benefit from professional guidance on tax matters as complexity increases?',
-    options: ['Professional guidance has no real value regardless of business complexity', 'More complex operations can involve tax considerations that benefit from informed, accurate handling', 'Only extremely large corporations ever need any tax guidance', 'Tax matters simplify automatically as a business grows'],
+    options: [
+      'Professional guidance has no real value regardless of business complexity',
+      'More complex operations can involve tax considerations that benefit from informed, accurate handling',
+      'Only extremely large corporations ever need any tax guidance',
+      'Tax matters simplify automatically as a business grows',
+    ],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -575,7 +662,12 @@ const questions: Question[] = [
   {
     id: 'tx-047',
     text: 'What\'s a fair understanding of how VAT collected by a business is generally meant to be handled?',
-    options: ['It\'s generally meant to be remitted appropriately rather than treated as the business\'s own retained revenue', 'VAT collected always belongs entirely to the business owner personally', 'VAT has no distinct handling requirements from other revenue', 'Businesses are never involved in VAT collection processes'],
+    options: [
+      'It\'s generally meant to be remitted appropriately rather than treated as the business\'s own retained revenue',
+      'VAT collected by a business from customers belongs entirely to the owner as additional business revenue',
+      'VAT has no special handling rules and can be freely recorded alongside other business income indefinitely',
+      'Businesses in Nigeria are never directly involved in VAT collection, remittance, or any related processes',
+    ],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -585,7 +677,12 @@ const questions: Question[] = [
   {
     id: 'tx-048',
     text: 'Why might understanding your tax obligations be considered part of responsible financial citizenship, not just a legal requirement?',
-    options: ['Tax contributions generally support public services and infrastructure that benefit the wider community', 'Tax obligations have no connection to public services', 'Responsible financial citizenship has nothing to do with taxes', 'Taxes serve no purpose beyond individual legal compliance'],
+    options: [
+      'Tax contributions generally support public services and infrastructure that benefit the wider community',
+      'Tax obligations are purely a legal requirement with no connection to any public services whatsoever',
+      'Responsible financial citizenship relates entirely to personal savings and investments, never taxes',
+      'Paying taxes serves no civic purpose beyond satisfying legal requirements with no community benefit',
+    ],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -595,7 +692,12 @@ const questions: Question[] = [
   {
     id: 'tx-049',
     text: 'What\'s a sound reason to keep personal and business finances separate partly for tax clarity?',
-    options: ['Mixed finances can make it harder to accurately determine business income and obligations distinct from personal finances', 'Separation has no bearing on tax clarity', 'Personal and business finances are always treated identically for tax purposes', 'Tax obligations only apply to personal finances, never business ones'],
+    options: [
+      'Mixed finances can make it harder to accurately determine business income and obligations distinct from personal finances',
+      'Separating personal and business finances has absolutely no bearing on tax clarity or financial record accuracy',
+      'Personal and business finances are always treated as identical and interchangeable for all Nigerian tax purposes',
+      'Tax obligations apply exclusively to personal income and are never associated with business financial accounts',
+    ],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -605,7 +707,12 @@ const questions: Question[] = [
   {
     id: 'tx-050',
     text: 'Why might staying informed about changes to tax regulations matter for individuals and business owners over time?',
-    options: ['Tax regulations can change, and staying informed helps ensure ongoing compliance and informed planning', 'Tax regulations never change once established', 'Only accountants need to be aware of any regulatory changes', 'Awareness of regulations has no practical value'],
+    options: [
+      'Tax regulations can change, and staying informed helps ensure ongoing compliance and informed planning',
+      'Tax regulations in Nigeria are fixed permanently and have not changed at any point since independence',
+      'Only professional accountants need to monitor tax regulatory changes, not individual business owners',
+      'Regulatory awareness has zero practical value since Nigerian tax laws never affect individual taxpayers',
+    ],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -615,7 +722,12 @@ const questions: Question[] = [
   {
     id: 'tx-051',
     text: 'What\'s a balanced view on the relationship between formal business registration and tax responsibility?',
-    options: ['Formal registration generally comes with associated tax responsibilities as part of operating within the formal economy', 'Registration and tax responsibility are entirely unrelated', 'Only unregistered businesses have any tax responsibilities', 'Formal registration eliminates all tax obligations'],
+    options: [
+      'Formal registration generally comes with associated tax responsibilities as part of operating within the formal economy',
+      'Business registration with CAC and tax responsibility are entirely unrelated matters with no connection',
+      'Only informally operating businesses carry any tax responsibilities; formal registration removes all such obligations',
+      'Completing formal CAC registration permanently eliminates all current and future tax obligations for a business',
+    ],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -645,7 +757,12 @@ const questions: Question[] = [
   {
     id: 'tx-054',
     text: "Who is responsible for collecting taxes in Nigeria?",
-    options: ["Local shop owners", "The Federal Inland Revenue Service (FIRS)", "The Central Bank of Nigeria", "The Nigerian Army"],
+    options: [
+      "Local market unions and trade associations",
+      "The Federal Inland Revenue Service (FIRS)",
+      "The National Revenue Collection Board",
+      "The Nigerian Police Force and customs",
+    ],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -695,7 +812,12 @@ const questions: Question[] = [
   {
     id: 'tx-059',
     text: "Why should citizens care about how the government spends their taxes?",
-    options: ["Taxes are private money so only the government decides", "Citizens fund the government through taxes and have the right to demand accountability", "Only the president should know where taxes go", "Tax money disappears automatically"],
+    options: [
+      "Only the president decides how tax revenue is spent, with no citizen input needed",
+      "Citizens fund the government through taxes and have the right to demand accountability",
+      "Only elected officials should know where taxes go; public oversight is not required",
+      "Tax money vanishes into government accounts and nobody has the right to ask questions",
+    ],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['kids'],
@@ -725,7 +847,12 @@ const questions: Question[] = [
   {
     id: 'tx-062',
     text: "What is PAYE?",
-    options: ["Pay As You Earn — income tax deducted from salary before it reaches you", "Pay After You Earn — tax paid at year end", "A special benefit from the government", "A penalty for self-employed workers"],
+    options: [
+      "Pay As You Earn — income tax deducted from salary before it reaches you",
+      "Pay After You Earn — income tax settled as a lump sum at the end of each year",
+      "Pre-Assessed Year-End payments — a quarterly tax declaration filed by all workers",
+      "A staff pension benefit paid by employers to workers upon reaching retirement age",
+    ],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -735,7 +862,12 @@ const questions: Question[] = [
   {
     id: 'tx-063',
     text: "Which government body collects state income taxes in Nigeria?",
-    options: ["FIRS", "State Board of Internal Revenue (SBIR)", "CBN", "EFCC"],
+    options: [
+      "Federal Inland Revenue Service",
+      "State Board of Internal Revenue (SBIR)",
+      "Central Bank of Nigeria (CBN)",
+      "Economic and Financial Crimes Commission",
+    ],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -755,7 +887,12 @@ const questions: Question[] = [
   {
     id: 'tx-065',
     text: "What is a \"Tax Identification Number\" (TIN)?",
-    options: ["Your BVN number", "A unique number assigned to individuals or businesses for tax purposes", "Your national identity number", "A bank account number for tax payments"],
+    options: [
+      "The BVN number issued by your bank when you first open an account",
+      "A unique number assigned to individuals or businesses for tax purposes",
+      "Your national identity number assigned by NIMC for all government use",
+      "A special bank account opened to receive tax refunds from the government",
+    ],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -765,7 +902,12 @@ const questions: Question[] = [
   {
     id: 'tx-066',
     text: "What is \"tax avoidance\"?",
-    options: ["The same as tax evasion", "Legally minimising your tax bill using allowances and deductions within the law", "Refusing to file a tax return", "Paying taxes late without penalty"],
+    options: [
+      "Deliberately hiding income to reduce what you owe, which is a criminal offence in Nigeria",
+      "Legally minimising your tax bill using allowances and deductions within the law",
+      "Refusing to file your annual tax returns with FIRS or the state revenue service",
+      "Submitting a return with falsified records to reduce your total tax liability",
+    ],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -785,7 +927,12 @@ const questions: Question[] = [
   {
     id: 'tx-068',
     text: "What is \"withholding tax\" (WHT)?",
-    options: ["Tax withheld from salaries only", "A deduction at source on specific payments (rent, dividends, contracts) remitted to the tax authority", "A voluntary tax for charitable giving", "Tax paid by foreign companies only"],
+    options: [
+      "A percentage deducted from salaries each month to cover pension and health insurance contributions",
+      "A deduction at source on specific payments (rent, dividends, contracts) remitted to the tax authority",
+      "A voluntary donation scheme for businesses that choose to fund registered charity organisations",
+      "A special tax imposed only on foreign companies operating in Nigeria, collected at entry borders",
+    ],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['teens'],
@@ -835,7 +982,12 @@ const questions: Question[] = [
   {
     id: 'tx-073',
     text: "What is \"capital gains tax\" (CGT)?",
-    options: ["Tax on regular employment income", "Tax on profit from selling assets like property or shares", "Tax on imported goods", "Tax on company dividends"],
+    options: [
+      "Tax on monthly salary and employment income only",
+      "Tax on profit from selling assets like property or shares",
+      "Tax collected on all goods crossing into Nigeria at the border",
+      "Tax deducted on dividend payments declared by a company",
+    ],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -865,7 +1017,12 @@ const questions: Question[] = [
   {
     id: 'tx-076',
     text: "What is the \"Finance Act\" in Nigeria?",
-    options: ["A law governing bank operations", "An annual law that amends various tax laws and introduces new fiscal measures", "A regulation on money laundering", "A policy for budget allocation"],
+    options: [
+      "A law regulating how commercial banks operate and set their interest rates",
+      "An annual law that amends various tax laws and introduces new fiscal measures",
+      "A policy framework controlling all anti-money laundering efforts in Nigeria",
+      "An annual budget document setting the government\'s public spending priorities",
+    ],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -885,7 +1042,12 @@ const questions: Question[] = [
   {
     id: 'tx-078',
     text: "What is \"transfer pricing\" and why is it a tax concern?",
-    options: ["Pricing of wire transfers between accounts", "How related companies in different tax jurisdictions set prices for intra-group transactions to potentially shift profits", "The fee charged for international transfers", "A method for calculating import duties"],
+    options: [
+      "The standard fees that Nigerian banks charge customers for sending money across international borders",
+      "How related companies in different tax jurisdictions set prices for intra-group transactions to potentially shift profits",
+      "A government regulation setting the official price for wire transfers made between Nigerian accounts",
+      "The method used by Nigerian customs to calculate the declared value of imported goods for duty purposes",
+    ],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['adults'],
@@ -915,7 +1077,12 @@ const questions: Question[] = [
   {
     id: 'tx-081',
     text: "What is \"thin capitalisation\" and how does it relate to tax?",
-    options: ["When a company has too little equity relative to debt, allowing excessive interest deductions to reduce taxable profit", "When a company has too much cash", "When government reduces tax rates for small companies", "A strategy for startups to avoid taxes in the first year"],
+    options: [
+      "When a company has too little equity relative to debt, allowing excessive interest deductions to reduce taxable profit",
+      "When a company holds too much undistributed cash, triggering an automatic surplus tax on idle reserves",
+      "A policy where the government temporarily reduces corporate tax rates for small businesses in their first year",
+      "A legal strategy used by early-stage startups to defer all tax obligations until their third year of operation",
+    ],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['adults'],
