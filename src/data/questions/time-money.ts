@@ -6,7 +6,7 @@ const questions: Question[] = [
     id: 'tm-001',
     text: 'Amaka saves ₦1,000 today. Her friend Bisi waits 5 years before saving. Who will have more time for their money to grow?',
     options: [
-      'Bisi — she saves in the future when she is older',
+      'Bisi — she saves later but can catch up quickly by depositing larger amounts once her income is higher',
       'Amaka — she starts saving earlier, giving her money more time to grow',
       'They will both have the same amount at the end',
       'It doesn\'t matter when you start saving',
@@ -46,7 +46,7 @@ const questions: Question[] = [
     id: 'tm-004',
     text: 'Eze saves ₦500 per month starting at age 10. Chidi starts saving the same amount at age 20. Who will likely have more money at age 30?',
     options: [
-      'Chidi — he saves more efficiently because he is older',
+      'Chidi — he saves more efficiently because adults have greater experience managing and growing their money',
       'Eze — he has 10 more years of saving and interest growth',
       'They will both have the same',
       'It depends on which bank they use',
@@ -75,7 +75,7 @@ const questions: Question[] = [
   {
     id: 'tm-006',
     text: 'If your savings earn interest, and then your interest ALSO earns interest, what is this called?',
-    options: ['Simple interest', 'Double interest', 'Compound interest', 'Extra interest'],
+    options: ['Simple interest', 'Double interest', 'Compound interest', 'Accumulated interest'],
     correctIndex: 2,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -129,7 +129,7 @@ const questions: Question[] = [
     options: [
       'Compound interest pays a higher fixed rate on every deposit you make, while simple interest only applies to investments held for less than one full calendar year in any Nigerian bank',
       'Simple interest is calculated on the original principal only. Compound interest earns interest on the principal AND on previously earned interest — creating exponential growth over time',
-      'Compound interest is credited annually to Nigerian savings accounts, whereas simple interest is credited monthly, making it better suited to short-term savings goals in any local bank',
+      'Compound interest is credited annually to Nigerian savings accounts, whereas simple interest is credited monthly, making it better suited to short-term personal savings goals in any local bank',
       'Simple interest is exclusively for personal savings accounts in Nigeria, while compound interest is a feature reserved strictly for corporate investment portfolios and pension funds',
     ],
     correctIndex: 1,
@@ -153,7 +153,7 @@ const questions: Question[] = [
     id: 'tm-012',
     text: 'What is "opportunity cost" in financial decision-making?',
     options: [
-      'A hidden banking charge that Nigerian commercial banks deduct whenever a customer transfers funds between accounts, covering the administrative cost of processing each individual request',
+      'A hidden banking charge that Nigerian commercial banks deduct whenever a customer transfers funds between accounts, covering all the administrative costs of processing each individual transfer request',
       'The value of the next best alternative you give up when making a financial choice — spending ₦50,000 on a new phone "costs" you whatever that ₦50,000 could have earned if invested instead',
       'A penalty fee that the Securities and Exchange Commission charges Nigerian investors who enter an investment opportunity after the initial subscription window has officially closed',
       'A special levy imposed by the Federal Inland Revenue Service on investors who switch their funds between different asset classes within the same financial quarter in Nigeria',
@@ -225,7 +225,7 @@ const questions: Question[] = [
     id: 'tm-017',
     text: 'What is "Net Present Value" (NPV) and how does a Nigerian entrepreneur use it to evaluate a business investment?',
     options: [
-      'NPV is the total revenue a business project generates over its operational life minus all recurring costs, used by Nigerian banks to assess profitability before approving commercial loan applications',
+      'NPV is the total revenue a business project generates over its entire operational lifetime minus all recurring costs, used by Nigerian commercial banks to assess profitability before approving all commercial loan applications',
       'NPV is the sum of all future cash flows from a project, each discounted to present value, minus the initial investment. Positive NPV = the project creates value; negative NPV = it destroys value at that discount rate',
       'NPV measures the gross income a Nigerian entrepreneur expects in the first twelve months of operation, after subtracting startup costs but before accounting for working capital requirements',
       'NPV is a mandatory disclosure that the Securities and Exchange Commission requires all Nigerian businesses to file when they seek equity funding or list on the Nigerian Exchange Group',
@@ -286,7 +286,7 @@ const questions: Question[] = [
   {
     id: 'tm-021',
     text: 'If you wait to spend your money instead of spending it right away, what are you practicing?',
-    options: ['Patience and delayed gratification', 'Wasting time for no reason', 'Losing your money', 'Nothing meaningful at all'],
+    options: ['Patience and delayed gratification', 'Wasting both your time and money for no good reason at all', 'Losing your money', 'Nothing meaningful at all'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -316,7 +316,7 @@ const questions: Question[] = [
   {
     id: 'tm-024',
     text: 'Why is being patient about money often a helpful skill?',
-    options: ['It helps you reach bigger goals that take time to achieve', 'Patience has no connection to money at all', 'Big goals never actually require any patience', 'Being patient makes goals harder to reach'],
+    options: ['It helps you reach bigger goals that take time to achieve', 'Patience has no real connection to money or financial planning decisions at all', 'Big goals never actually require any patience', 'Being patient makes goals harder to reach'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -326,7 +326,7 @@ const questions: Question[] = [
   {
     id: 'tm-025',
     text: 'What might happen if you spend your allowance the moment you get it, every single time?',
-    options: ['You might struggle to save for bigger things later', 'Nothing would ever change', 'You\'d automatically have more money later', 'Spending immediately always leads to more savings'],
+    options: ['You might struggle to save for bigger things later', 'Nothing would ever change', 'You\'d automatically have more money later', 'Spending your money immediately every time actually leads to greater overall savings in the long run'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -356,7 +356,7 @@ const questions: Question[] = [
   {
     id: 'tm-028',
     text: 'Why might starting to save today, instead of waiting, help you reach a goal sooner?',
-    options: ['The earlier you start, the more time you have to reach your goal', 'Starting today has no real advantage over waiting', 'Waiting to start saving is always the smarter choice', 'Time has no connection to how quickly you reach a goal'],
+    options: ['The earlier you start, the more time you have to reach your goal', 'Starting today has no real advantage over waiting', 'Waiting to start saving is always the smarter choice', 'Time has no real connection to how quickly or efficiently you are able to reach a savings goal'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -366,7 +366,7 @@ const questions: Question[] = [
   {
     id: 'tm-029',
     text: 'What\'s the connection between patience and reaching a savings goal?',
-    options: ['Patience helps you stick with a plan long enough to actually reach the goal', 'Patience has no connection to reaching any goal', 'Goals are always reached instantly with no patience needed', 'Patience makes reaching a goal harder, not easier'],
+    options: ['Patience helps you stick with a plan long enough to actually reach the goal', 'Patience has no connection to reaching any goal', 'Financial goals can always be reached instantly without any patience or sustained planning effort', 'Patience makes reaching a goal harder, not easier'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -376,7 +376,7 @@ const questions: Question[] = [
   {
     id: 'tm-030',
     text: 'Why might it be smart to think about how long something will take to save for, before you start?',
-    options: ['It helps you set a realistic plan and stay motivated along the way', 'Thinking ahead about time has no real value', 'Savings goals never actually take any time to reach', 'Planning around time makes saving harder'],
+    options: ['It helps you set a realistic plan and stay motivated along the way', 'Thinking ahead about time has no real practical value or financial benefit when saving', 'Savings goals never actually take any time to reach', 'Planning around time makes saving harder'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -386,7 +386,7 @@ const questions: Question[] = [
   {
     id: 'tm-031',
     text: 'Why might starting to save at 15 instead of 25 make a meaningful difference by the time you\'re 40?',
-    options: ['More time allows savings and any growth to compound over a longer period', 'Starting age has no real effect on long-term savings outcomes', 'Saving later always results in a larger total than saving earlier', 'Compounding has no connection to how early you start saving'],
+    options: ['More time allows savings and any growth to compound over a longer period', 'Starting age has no real effect on long-term savings outcomes', 'Starting to save later in life always results in a larger final balance than beginning to save earlier', 'Compounding has no connection to how early you start saving'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -426,7 +426,7 @@ const questions: Question[] = [
   {
     id: 'tm-035',
     text: 'Why might delaying a purchase by even a short period sometimes lead to a better financial decision?',
-    options: ['A brief delay can allow for more thoughtful evaluation rather than an impulsive decision', 'Delaying a purchase always leads to a worse outcome', 'Immediate purchases are always the financially smarter choice', 'Time has no connection to the quality of a purchase decision'],
+    options: ['A brief delay can allow for more thoughtful evaluation rather than an impulsive decision', 'Delaying any purchase always leads to a worse financial outcome since prices tend to rise over time', 'Making an immediate purchasing decision is always the financially smarter and more efficient choice', 'Time has no connection to the quality of a purchase decision'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -466,7 +466,7 @@ const questions: Question[] = [
   {
     id: 'tm-039',
     text: 'Why might the habit of consistently saving even small amounts, practiced early, matter more than the specific amount saved at any one time?',
-    options: ['The habit itself, sustained consistently, tends to compound in value more than any single deposit amount', 'Only the size of individual deposits matters, not the habit of saving consistently', 'Consistent habits have no real advantage over occasional large efforts', 'Building a saving habit early has no bearing on later financial behavior'],
+    options: ['The habit itself, sustained consistently, tends to compound in value more than any single deposit amount', 'Only the total size of your individual deposit amounts matters for long-term growth, not whether you maintain the habit of saving consistently over time', 'Consistent habits have no real advantage over occasional large efforts', 'Building a saving habit early has no bearing on later financial behavior'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -506,7 +506,7 @@ const questions: Question[] = [
   {
     id: 'tm-043',
     text: 'Why might understanding the time value of money inform a decision between taking a lump sum payment now versus structured payments over time?',
-    options: ['This concept has no real relevance to evaluating payment structures', 'It helps clarify which option may represent greater real value once growth potential and timing are properly considered', 'A lump sum is always the objectively worse choice regardless of circumstances', 'Structured payments over time are always worth more than an equivalent lump sum today'],
+    options: ['This concept has no real relevance to evaluating payment structures', 'It helps clarify which option may represent greater real value once growth potential and timing are properly considered', 'A lump sum is always the objectively worse choice regardless of circumstances', 'Structured payments spread across future periods are always worth more in total real value than receiving an equivalent lump sum today'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -516,7 +516,7 @@ const questions: Question[] = [
   {
     id: 'tm-044',
     text: 'What\'s a reasonable perspective on the cost of delaying important financial decisions, like starting to save or invest?',
-    options: ['Delaying such decisions has no real cost, since starting later works identically to starting earlier', 'Delays can represent a real opportunity cost, since lost time reduces the potential for compounding growth', 'Delaying financial decisions always leads to better outcomes than acting immediately', 'There\'s no meaningful relationship between timing and long-term financial outcomes'],
+    options: ['Delaying such decisions carries absolutely no financial cost whatsoever, since starting savings or investments later works identically to starting them earlier in your career', 'Delays can represent a real opportunity cost, since lost time reduces the potential for compounding growth', 'Delaying financial decisions always leads to better outcomes than acting immediately', 'There\'s no meaningful relationship between timing and long-term financial outcomes'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -526,7 +526,7 @@ const questions: Question[] = [
   {
     id: 'tm-045',
     text: 'Why might evaluating the \'time cost\' of a task (like extensive DIY home repair) against its potential savings be a relevant adult financial consideration?',
-    options: ['Weighing time invested against realistic monetary savings helps determine whether an activity is genuinely a good use of your time', 'Time invested in any task should never factor into evaluating its financial worthwhileness', 'Only monetary costs matter in this kind of evaluation, time is irrelevant', 'DIY approaches are always financially superior regardless of time invested'],
+    options: ['Weighing time invested against realistic monetary savings helps determine whether an activity is genuinely a good use of your time', 'Time invested in any task or activity should never be included as a variable when evaluating its overall financial worthwhileness or economic value', 'Only monetary costs matter in this kind of evaluation, time is irrelevant', 'DIY approaches are always financially superior regardless of time invested'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -606,7 +606,7 @@ const questions: Question[] = [
   {
     id: 'tm-053',
     text: "What is the main benefit of saving early versus saving late in life?",
-    options: ["There is no difference — saving is always equal", "Saving early gives your money more time to grow through compound interest", "Late savers earn more because they save larger amounts", "Early saving earns less interest overall"],
+    options: ["There is essentially no meaningful difference between saving early and saving late since investment returns depend only on the total amount deposited", "Saving early gives your money more time to grow through compound interest", "Late savers earn more because they save larger amounts", "Early saving earns less interest overall"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -626,7 +626,7 @@ const questions: Question[] = [
   {
     id: 'tm-055',
     text: "How many years does it take to double ₦100,000 at 10% annual interest using the Rule of 72?",
-    options: ["5 years", "7 years", "7.2 years", "10 years"],
+    options: ["5.0 years", "7.0 years", "7.2 years", "14.4 years"],
     correctIndex: 2,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -806,7 +806,7 @@ const questions: Question[] = [
   {
     id: 'tm-073',
     text: "Why is the \"time value of money\" the most fundamental concept in finance?",
-    options: ["Because international time zones create fluctuating exchange rates that cause the naira to gain or lose value throughout every trading day in global currency markets", "Because it underlies all financial decision-making — investment, lending, saving, insurance pricing — by recognising that money has different values at different points in time", "Because Nigerian stock markets and bond markets operate on fixed daily trading schedules that determine when investors can buy or sell their financial assets", "Because the Central Bank of Nigeria has demonstrated that inflation rates are always mathematically equal to prevailing savings interest rates across all commercial banks"],
+    options: ["Because international time zones create fluctuating exchange rates that cause the naira to gain or lose value throughout every trading day in global currency markets", "Because it underlies all financial decision-making — investment, lending, saving, insurance pricing — by recognising that money has different values at different points in time", "Because Nigerian stock markets and bond markets operate on fixed daily trading schedules that determine when investors can buy or sell their financial assets", "Because the Central Bank of Nigeria has consistently demonstrated that inflation rates are always mathematically equal to prevailing savings interest rates across all Nigerian commercial banks"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -876,7 +876,7 @@ const questions: Question[] = [
   {
     id: 'tm-080',
     text: "Why is it said that \"starting 10 years earlier is worth more than investing twice as much\"?",
-    options: ["The statement is false because the total amount of money you invest always has a larger impact on final wealth than the number of years you remain invested", "Because compounding over a longer period exponentially increases returns — time in the market dramatically amplifies growth more than increasing the principal alone", "Starting later allows investors to benefit from higher rates offered on large lump-sum deposits rather than spreading smaller contributions over more years", "Compounding benefits from longer investment horizons only apply to stock markets and do not carry over to other savings or investment products available in Nigeria"],
+    options: ["The statement is false because the total amount of money you invest always has a larger impact on final wealth than the number of years you remain invested", "Because compounding over a longer period exponentially increases returns — time in the market dramatically amplifies growth more than increasing the principal alone", "Starting later allows investors to benefit from higher rates offered on large lump-sum deposits rather than spreading smaller contributions over more years", "Compounding benefits from longer investment horizons only apply to stock markets and do not carry over to any other savings or investment products that are available in Nigeria"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['adults'],

@@ -25,7 +25,7 @@ const questions: Question[] = [
   {
     id: 'ab-003',
     text: 'What does "PIN" mean when you use your bank card?',
-    options: ['Personal Investment Number', 'Personal Identification Number', 'Public Identity Note', 'Private Income Number'],
+    options: ['Personal Investment Number', 'Personal Identification Number', 'Public Interest Number for Naira accounts', 'Private Income Number'],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -104,7 +104,7 @@ const questions: Question[] = [
     options: [
       'Nigerian Drug Investigation Committee — investigates pharmaceutical fraud',
       'Nigeria Deposit Insurance Corporation — insures bank deposits up to ₦5 million per depositor per bank if a bank fails',
-      'National Development and Investment Council — approves foreign investment in Nigeria',
+      'National Development and Investment Council — the government body that evaluates and approves proposals for foreign direct investment across all sectors of the Nigerian economy',
       'Nigerian Digital Infrastructure Company — builds internet infrastructure',
     ],
     correctIndex: 1,
@@ -194,7 +194,7 @@ const questions: Question[] = [
     id: 'ab-016',
     text: 'What does "GDP" stand for and why should ordinary Nigerians care about it?',
     options: [
-      'Government Debt Position — the cumulative value of all outstanding federal and state government obligations including Eurobonds, domestic treasury bills, and multilateral development-bank loans',
+      'Government Debt Position — the cumulative value of all outstanding federal and state government obligations including Eurobonds, domestic treasury bills, multilateral development-bank loans, and promissory notes issued by the DMO',
       'Gross Domestic Product — the total monetary value of all goods and services produced in Nigeria in a year. It measures the size and health of the economy, affecting employment, salaries, and government spending capacity',
       'General Development Plan — the National Planning Commission five-year blueprint that sets sectoral investment targets for agriculture, infrastructure, education, healthcare, and energy',
       'Global Dollar Price — the daily interbank rate at which the Central Bank of Nigeria offers United States dollars to authorised dealers through the official foreign exchange window',
@@ -311,7 +311,7 @@ const questions: Question[] = [
   {
     id: 'ab-025',
     text: 'What does \'PIN\' being \'private\' mean?',
-    options: ['You should keep it a secret and not share it', 'It should be told to everyone', 'It\'s not important to keep secret', 'It\'s shared publicly on purpose'],
+    options: ['You should keep it a secret and not share it', 'It should be shared with your bank teller whenever they ask for it in person', 'It\'s not important to keep secret', 'It\'s shared publicly on purpose'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -321,7 +321,7 @@ const questions: Question[] = [
   {
     id: 'ab-026',
     text: 'Why is knowing that \'ATM\' means a machine for getting cash useful?',
-    options: ['It helps you understand what the machine at the bank does', 'This knowledge has no real value', 'ATMs have nothing to do with money', 'Only adults need to know what ATM means'],
+    options: ['It helps you understand what the machine at the bank does', 'This knowledge has no real value', 'ATMs have nothing to do with money', 'Only adults who work in banking need to understand what ATM stands for'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -351,7 +351,7 @@ const questions: Question[] = [
   {
     id: 'ab-029',
     text: 'Why is it helpful to learn simple money-related words and their meanings?',
-    options: ['It helps you understand conversations about money better', 'This has no real benefit at all', 'Money words are never useful to know', 'Only adults ever need to know these words'],
+    options: ['It helps you understand conversations about money better', 'This has no real benefit at all', 'Money words are never useful to know', 'Only adults ever need to know these words, and children should not worry about money terms'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -421,7 +421,7 @@ const questions: Question[] = [
   {
     id: 'ab-036',
     text: 'What does \'NIN\' stand for?',
-    options: ['National Identification Number', 'New Investment Naira', 'National Income Notice', 'Nigerian Insurance Number'],
+    options: ['National Identification Number', 'New Investment Naira', 'National Income Notice', 'Nigerian Insurance Network for State Employees'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -481,7 +481,7 @@ const questions: Question[] = [
   {
     id: 'ab-042',
     text: 'What does \'PAYE\' refer to, and why does it matter for salaried professionals?',
-    options: ['Pay As You Earn, a system where income tax is deducted directly from salary', 'A type of retirement savings account with no tax connection', 'A government subsidy program unrelated to income tax', 'A form of business registration unrelated to payroll'],
+    options: ['Pay As You Earn, a system where income tax is deducted directly from salary', 'A type of employer-funded retirement savings account that has no direct connection to income tax payments or payroll deductions', 'A government subsidy program unrelated to income tax', 'A form of business registration unrelated to payroll'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -491,7 +491,7 @@ const questions: Question[] = [
   {
     id: 'ab-043',
     text: 'What does \'RSA\' generally stand for in the Nigerian pension system?',
-    options: ['Retirement Savings Account, where pension contributions accumulate over a working career', 'Regional Savings Agreement, unrelated to individual pensions', 'Registered Salary Adjustment, a payroll term unrelated to pensions', 'Retail Sales Account, unrelated to pension savings'],
+    options: ['Retirement Savings Account, where pension contributions accumulate over a working career', 'Regional Savings Agreement, unrelated to individual pensions', 'Registered Salary Adjustment Plan, a payroll terminology used by Nigerian HR departments that has no connection to the pension system', 'Retail Sales Account, unrelated to pension savings'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -501,7 +501,7 @@ const questions: Question[] = [
   {
     id: 'ab-044',
     text: 'What does \'CAC\' stand for, and why is it relevant to entrepreneurs?',
-    options: ['Corporate Affairs Commission, the body responsible for business registration in Nigeria', 'Central Accounting Commission, unrelated to business registration', 'Consumer Advocacy Council, unrelated to formal business registration', 'Credit Assessment Center, a private credit-scoring body'],
+    options: ['Corporate Affairs Commission, the body responsible for business registration in Nigeria', 'Central Accounting Commission, unrelated to business registration', 'Consumer Advocacy Council, the government body responsible for protecting buyer rights but unrelated to formal business registration requirements', 'Credit Assessment Center, a private credit-scoring body'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -521,7 +521,7 @@ const questions: Question[] = [
   {
     id: 'ab-046',
     text: 'What does \'NHIS\' stand for and what is its general relevance to financial planning?',
-    options: ['National Health Insurance Scheme, related to structuring health-related financial protection', 'National Housing Investment Scheme, unrelated to health coverage', 'New Homeowner Insurance System, unrelated to national health coverage', 'National Highway Infrastructure Service, unrelated to insurance'],
+    options: ['National Health Insurance Scheme, related to structuring health-related financial protection', 'National Housing Investment Scheme, a federal mortgage support program that is entirely unrelated to health insurance coverage or medical benefit contributions', 'New Homeowner Insurance System, unrelated to national health coverage', 'National Highway Infrastructure Service, unrelated to insurance'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -561,7 +561,7 @@ const questions: Question[] = [
   {
     id: 'ab-050',
     text: "What does \"PIN\" stand for in banking?",
-    options: ["Personal Identification Number", "Payment Initiation Number", "Private Information Note", "Primary Input Number"],
+    options: ["Personal Identification Number", "Payment Initiation Network Code", "Private Information Note", "Primary Input Number"],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -571,7 +571,7 @@ const questions: Question[] = [
   {
     id: 'ab-051',
     text: "What does \"SMS\" stand for?",
-    options: ["Short Message System", "Short Mobile Service", "Short Messaging Service", "Simple Mobile System"],
+    options: ["Short Multipurpose Service", "Short Mobile Service", "Short Messaging Service", "Simple Mobile System"],
     correctIndex: 2,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -771,7 +771,7 @@ const questions: Question[] = [
   {
     id: 'ab-071',
     text: "What does \"P/E\" stand for in stock analysis?",
-    options: ["Profit/Earnings", "Price-to-Earnings ratio — a measure of how much investors pay per naira of a company's earnings", "Pay/Expenditure", "Principal/Equity"],
+    options: ["Profit-to-Equity ratio — a metric comparing net profit to shareholder equity used in Nigerian corporate valuations and annual report analysis", "Price-to-Earnings ratio — a measure of how much investors pay per naira of a company's earnings", "Pay/Expenditure", "Principal/Equity"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -781,7 +781,7 @@ const questions: Question[] = [
   {
     id: 'ab-072',
     text: "What does \"GDP\" stand for?",
-    options: ["Government Debt Provision", "Gross Domestic Product — the total value of all goods and services produced in a country in a year", "General Dividend Payment", "Government Development Plan"],
+    options: ["Government Debt Provision — the total amount of outstanding federal obligations as tracked by the Debt Management Office each quarter", "Gross Domestic Product — the total value of all goods and services produced in a country in a year", "General Dividend Payment", "Government Development Plan"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -791,7 +791,7 @@ const questions: Question[] = [
   {
     id: 'ab-073',
     text: "What does \"ESG\" stand for in modern investing?",
-    options: ["Equity, Savings, and Growth", "Environmental, Social, and Governance — factors used to evaluate a company's sustainability and ethical impact", "Earnings, Surplus, and Gains", "Economic Stability Grade"],
+    options: ["Equity, Savings, and Growth", "Environmental, Social, and Governance — factors used to evaluate a company's sustainability and ethical impact", "Earnings, Surplus, and Growth — a financial framework used to assess whether a Nigerian company is generating sufficient returns for its shareholders over a given period", "Economic Stability Grade"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -801,7 +801,7 @@ const questions: Question[] = [
   {
     id: 'ab-074',
     text: "What does \"EBITDA\" stand for and what does it measure?",
-    options: ["Earnings Before Income Tax, Dividends, and Amortisation", "Earnings Before Interest, Tax, Depreciation, and Amortisation — a proxy for operating cash profitability", "Estimated Business Income Tax Dividends Amount", "Equity-Based Income Tax Deduction Amount"],
+    options: ["Earnings Before Income Tax, Dividends, and Amortisation — a metric that strips out dividend distributions and taxes to show core earnings power before financing decisions", "Earnings Before Interest, Tax, Depreciation, and Amortisation — a proxy for operating cash profitability", "Estimated Business Income Tax Dividends Amount", "Equity-Based Income Tax Deduction Amount"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['adults'],
@@ -811,7 +811,7 @@ const questions: Question[] = [
   {
     id: 'ab-075',
     text: "What does \"SOFR\" stand for and what replaced it?",
-    options: ["Standard Overnight Financial Rate, replaced LIBOR", "Secured Overnight Financing Rate — the US replacement for LIBOR as the benchmark rate for USD-denominated financial contracts", "Short-term Overnight Fund Rate, replaced SIBOR", "Structured Official Fixed Rate, replaced NIBOR"],
+    options: ["Standard Overnight Financial Rate — the former benchmark used for interbank dollar lending before it was replaced by SOFR for all new USD-denominated financial contracts globally", "Secured Overnight Financing Rate — the US replacement for LIBOR as the benchmark rate for USD-denominated financial contracts", "Short-term Overnight Fund Rate, replaced SIBOR", "Structured Official Fixed Rate, replaced NIBOR"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['adults'],
@@ -821,7 +821,7 @@ const questions: Question[] = [
   {
     id: 'ab-076',
     text: "What does \"AML\" stand for in financial compliance?",
-    options: ["Asset Management Licence", "Anti-Money Laundering — regulatory frameworks requiring banks to detect and prevent money laundering and terrorist financing", "Annual Monitoring Limit", "Asset Markup Level"],
+    options: ["Asset Management Licence — the regulatory permit issued by the SEC to Nigerian investment firms authorising them to manage third-party portfolios on a discretionary basis", "Anti-Money Laundering — regulatory frameworks requiring banks to detect and prevent money laundering and terrorist financing", "Annual Monitoring Limit", "Asset Markup Level"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['adults'],
@@ -831,7 +831,7 @@ const questions: Question[] = [
   {
     id: 'ab-077',
     text: "What does \"LTV\" stand for in mortgage lending?",
-    options: ["Loan-to-Value ratio — the loan amount expressed as a percentage of the property's value", "Long-Term Value of an investment", "Lending-to-Value assessment", "Liability-to-Value calculation"],
+    options: ["Loan-to-Value ratio — the loan amount expressed as a percentage of the property's value", "Long-Term Value — the estimated worth of an investment or asset over an extended holding period, used in Nigerian real estate appraisals and infrastructure project financing", "Lending-to-Value assessment", "Liability-to-Value calculation"],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['adults'],
@@ -841,7 +841,7 @@ const questions: Question[] = [
   {
     id: 'ab-078',
     text: "What does \"NIRSAL\" stand for?",
-    options: ["Nigerian Investment and Regulatory System for Agricultural Loans", "Nigeria Incentive-Based Risk Sharing System for Agricultural Lending — a CBN initiative to de-risk agricultural finance", "National Insurance and Risk Sharing Agency for Loans", "Nigerian Interest Rate and Security Lending"],
+    options: ["Nigerian Investment and Regulatory System for Agricultural Loans — a federal framework designed to channel bank credit into the farming sector through guaranteed lending", "Nigeria Incentive-Based Risk Sharing System for Agricultural Lending — a CBN initiative to de-risk agricultural finance", "National Insurance and Risk Sharing Agency for Loans", "Nigerian Interest Rate and Security Lending"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['adults'],

@@ -46,9 +46,9 @@ const questions: Question[] = [
     id: 'ph-004',
     text: 'Which of these is an example of giving back to your community?',
     options: [
-      'Keeping all your toys and belongings to yourself',
+      'Keeping all your toys, books, and belongings entirely to yourself without ever sharing anything',
       'Donating old books you no longer need to your school library',
-      'Spending all your pocket money on snacks and treats',
+      'Spending all your pocket money on snacks and treats for personal enjoyment only',
       'Asking others to give you their things',
     ],
     correctIndex: 1,
@@ -135,7 +135,7 @@ const questions: Question[] = [
       'A mandatory annual levy imposed by government on all registered companies to fund federal social infrastructure and public services',
       'Businesses voluntarily contributing to society — funding schools, hospitals, scholarships, or environmental projects — beyond their legal obligations',
       'A federal regulation compelling companies to match employee salaries with an equal contribution to a government-managed poverty reduction fund',
-      'An internationally recognised certification awarded to Nigerian companies by ISO for demonstrating consistent ethical conduct toward employees',
+      'An internationally recognised certification awarded to Nigerian companies by ISO for demonstrating consistent ethical conduct toward both employees and external clients',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -151,7 +151,7 @@ const questions: Question[] = [
       'A foundation is a type of limited liability company registered with CAC that can distribute surplus revenue to shareholders as dividends, just like any for-profit corporation',
       'A charitable foundation is a non-profit entity established to pursue social or philanthropic goals — any funds raised must be used for its charitable mission, not distributed as profit to owners',
       'Foundations in Nigeria are supervised directly by a federal ministry and must report monthly to FIRS, whereas private companies report only annually through their auditors',
-      'Foundations attract higher corporate tax rates than regular companies because the government taxes charitable income to discourage businesses from misusing the foundation structure',
+      'Foundations attract higher corporate tax rates than regular companies because the government taxes charitable income to discourage businesses from misusing the foundation structure for private profit extraction',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -181,7 +181,7 @@ const questions: Question[] = [
       'They are the same concept: both involve directing funds toward social causes, with the only difference being that impact investing is regulated by the SEC while charity is overseen by the CAC',
       'Impact investing deploys capital into businesses or funds that generate measurable social/environmental benefits alongside financial returns — unlike traditional charity which gives without expecting financial returns',
       'Impact investing is only viable for multinationals and foreign institutions, while Nigerian individuals must donate through registered charities under CITA and cannot access impact investment vehicles',
-      'Traditional philanthropy generates higher financial returns than impact investing because foundations reinvest endowment earnings at above-market rates whereas impact investors accept below-market yields',
+      'Traditional philanthropy generates higher financial returns than impact investing because foundations reinvest endowment earnings at above-market rates whereas impact investors accept below-market yields, making pure charity the superior long-term financial strategy',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -224,7 +224,7 @@ const questions: Question[] = [
     id: 'ph-016',
     text: 'What is an "endowment fund" and how do Nigerian universities and charities use them?',
     options: [
-      'A time-limited government grant allocated every four years that must be fully disbursed within the fiscal year, after which the institution must reapply through a competitive tender',
+      'A time-limited government grant allocated every four years that must be fully disbursed within the fiscal year, after which the institution must reapply through a new competitive public tender process',
       'A permanent fund where only the investment returns are spent, preserving the principal indefinitely — enabling sustained giving or institutional funding without depleting the original gift',
       'A restricted reserve account at a commercial bank where both principal and accrued interest can be withdrawn at any time to cover annual staff salaries and overhead obligations',
       'A dedicated construction escrow account set up by donors specifically to finance the physical expansion or renovation of university campuses, hospitals, and public libraries',
@@ -242,7 +242,7 @@ const questions: Question[] = [
     options: [
       'A government-managed trust where the CBN holds donated capital on behalf of individuals, who may direct disbursements only to NGOs pre-approved on the FIRS philanthropic registry',
       'A charitable giving vehicle where donors make an irrevocable contribution, receive an immediate tax deduction, and then recommend grants to charities over time — allowing strategic giving planning',
-      'A restricted escrow product at commercial banks where donors retain full withdrawal rights for ten years, after which unclaimed balances automatically revert to the originating bank',
+      'A restricted escrow product at commercial banks where donors retain full withdrawal rights for ten years, after which any unclaimed balances automatically revert in full to the originating Nigerian bank',
       'A money market instrument sold by licensed investment managers where interest accrued on the principal is automatically remitted to the donor\'s charity at each annual maturity date',
     ],
     correctIndex: 1,
@@ -255,7 +255,7 @@ const questions: Question[] = [
     id: 'ph-018',
     text: 'How does "zakat" function as a financial and philanthropic instrument in Nigerian Muslim communities?',
     options: [
-      'Zakat is a discretionary annual donation that pious Muslims are encouraged but not obligated to give whenever their wealth exceeds personal needs, with scholars recommending between one and ten percent of disposable income as a suitable voluntary contribution',
+      'Zakat is a discretionary annual donation that pious Muslims are encouraged but not obligated to give whenever their wealth exceeds personal needs, with scholars recommending between one and ten percent of disposable income as a suitable voluntary contribution, varying by personal piety and local scholarly interpretation',
       'Zakat is an obligatory annual charitable payment (2.5% of qualifying net wealth above nisab threshold) that redistributes wealth from the affluent to specific categories of recipients, functioning as both a spiritual obligation and a financial redistribution mechanism',
       'Zakat applies exclusively to physical goods including livestock, stored grains, harvested crops, and mineral deposits, and was never extended by early Islamic jurisprudence to cover liquid savings held in modern banks or investment portfolios',
       'Zakat must be paid to a federal government agency under Nigerian law; private individuals distributing it independently to the needy without official registration face penalties under CBN guidelines on charitable financial transfers',
@@ -301,7 +301,7 @@ const questions: Question[] = [
   {
     id: 'ph-021',
     text: 'What does it mean to \'give\' to someone in need?',
-    options: ['Sharing something you have to help another person', 'Taking something from someone else', 'Ignoring people who need help', 'Giving has no real meaning'],
+    options: ['Sharing something you have to help another person', 'Taking money or possessions away from another person without offering anything in return', 'Ignoring people who need help', 'Giving has no real meaning'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -311,7 +311,7 @@ const questions: Question[] = [
   {
     id: 'ph-022',
     text: 'Why might sharing a small part of your savings with someone in need feel good?',
-    options: ['Helping others can bring a sense of kindness and connection', 'Sharing money never feels meaningful', 'Giving always makes you poorer with no benefit', 'Only adults are able to give to others'],
+    options: ['Helping others can bring a sense of kindness and connection', 'Sharing money or resources with others never creates any meaningful sense of connection', 'Giving always makes you poorer with no benefit', 'Only adults are able to give to others'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -381,7 +381,7 @@ const questions: Question[] = [
   {
     id: 'ph-027',
     text: 'What\'s a simple example of generosity with money?',
-    options: ['Sharing part of your allowance with someone who needs it', 'Keeping every bit of money only for yourself always', 'Generosity has nothing to do with money', 'Only wealthy people can be generous'],
+    options: ['Sharing part of your allowance with someone who needs it', 'Keeping every single naira of your allowance entirely for your own use without ever sharing', 'Generosity has nothing to do with money', 'Only wealthy people can be generous'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -391,7 +391,7 @@ const questions: Question[] = [
   {
     id: 'ph-028',
     text: 'Why might balancing saving for yourself and giving to others both matter?',
-    options: ['It helps build both personal responsibility and care for others', 'Only saving for yourself matters, never giving', 'Only giving to others matters, never saving', 'Balancing these two ideas has no real value'],
+    options: ['It helps build both personal responsibility and care for others', 'Only saving money for yourself ever truly matters, since giving to others creates no lasting personal value', 'Only giving to others matters, never saving', 'Balancing these two ideas has no real value'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -401,7 +401,7 @@ const questions: Question[] = [
   {
     id: 'ph-029',
     text: 'What\'s a good habit to build around giving, even with small amounts?',
-    options: ['Giving a little regularly, if it feels right for you', 'Giving should never happen at any age', 'Only give when you have a huge amount of money', 'Giving is only something adults should think about'],
+    options: ['Giving a little regularly, if it feels right for you', 'Giving any money to others is something that should never happen, no matter your age or circumstances', 'Only give when you have a huge amount of money', 'Giving is only something adults should think about'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -411,7 +411,7 @@ const questions: Question[] = [
   {
     id: 'ph-030',
     text: 'Why might helping others sometimes matter as much as helping yourself?',
-    options: ['Both your own wellbeing and caring for others can be part of a balanced life', 'Helping others has no real value compared to helping yourself', 'Only helping yourself ever truly matters', 'Helping others always means neglecting yourself completely'],
+    options: ['Both your own wellbeing and caring for others can be part of a balanced life', 'Helping others financially has no real value when measured against investing in your own personal development', 'Only helping yourself ever truly matters', 'Helping others always means neglecting yourself completely'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -451,7 +451,7 @@ const questions: Question[] = [
   {
     id: 'ph-033',
     text: 'Why might understanding a cause or organization before donating to it matter?',
-    options: ['Understanding helps ensure your contribution genuinely supports something meaningful and legitimate', 'Research has no real value before making a donation', 'All causes and organizations are automatically legitimate and effective', 'Donating without any research is always the better approach'],
+    options: ['Understanding helps ensure your contribution genuinely supports something meaningful and legitimate', 'Conducting research before donating adds no real benefit, since all registered Nigerian charities operate with equal effectiveness', 'All causes and organizations are automatically legitimate and effective', 'Donating without any research is always the better approach'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -506,7 +506,7 @@ const questions: Question[] = [
   {
     id: 'ph-037',
     text: 'Why might cultural or family expectations around giving (like supporting extended family) sometimes require careful financial navigation?',
-    options: ['Balancing genuine generosity with your own financial sustainability can require thoughtful, sometimes difficult decisions', 'Family or cultural giving expectations never require any careful consideration', 'You should always give whatever is asked regardless of your own financial situation', 'These expectations have no real connection to personal financial planning'],
+    options: ['Balancing genuine generosity with your own financial sustainability can require thoughtful, sometimes difficult decisions', 'Family or cultural expectations around financial giving in Nigeria never require any careful consideration or deliberate financial planning', 'You should always give whatever is asked regardless of your own financial situation', 'These expectations have no real connection to personal financial planning'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -546,7 +546,7 @@ const questions: Question[] = [
   {
     id: 'ph-040',
     text: 'What\'s a reasonable way to respond if a friend pressures you to contribute more than you\'re comfortable with to a shared cause?',
-    options: ['Politely explain your comfortable limit rather than giving beyond what feels sustainable', 'Always match whatever amount your friend suggests without question', 'Refuse to discuss the topic at all if pressured', 'End the friendship immediately over any disagreement about giving'],
+    options: ['Politely explain your comfortable limit rather than giving beyond what feels sustainable', 'Always match whatever amount your friend or peer group suggests, regardless of your personal financial situation', 'Refuse to discuss the topic at all if pressured', 'End the friendship immediately over any disagreement about giving'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -556,7 +556,7 @@ const questions: Question[] = [
   {
     id: 'ph-041',
     text: 'You\'re feeling pressured to contribute a large amount to a family member\'s owambe (celebration) beyond what your budget allows. What\'s the healthiest approach?',
-    options: ['Contribute the full amount anyway to avoid conflict', 'Politely offer what fits your budget and explain your limit', 'Avoid the event entirely without explanation', 'Borrow money you can\'t repay to contribute'],
+    options: ['Contribute the full requested amount anyway, even if it means exceeding your available budget', 'Politely offer what fits your budget and explain your limit', 'Avoid the event entirely without explanation', 'Borrow money you can\'t repay to contribute'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -672,7 +672,7 @@ const questions: Question[] = [
     id: 'ph-049',
     text: 'What\'s a reasonable way to think about the relationship between generosity and personal financial security, rather than treating them as opposites?',
     options: [
-      'Authentic generosity requires a measurable personal financial sacrifice; giving that leaves the donor financially comfortable is not truly philanthropic',
+      'Authentic generosity requires a measurable personal financial sacrifice; giving that leaves the donor financially comfortable is not truly philanthropic by any widely accepted standard',
       'Thoughtful, sustainable generosity can coexist with maintained personal financial security, rather than requiring one to be sacrificed entirely for the other',
       'Personal financial security must be entirely abandoned before any giving can be considered genuine, since giving from abundance lacks real moral weight',
       'Generosity and personal financial planning are entirely separate domains of life that should never be integrated into a single decision-making framework',

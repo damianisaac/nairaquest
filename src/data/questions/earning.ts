@@ -9,7 +9,7 @@ const questions: Question[] = [
       'Money you spend at the market',
       'Money you receive from working or selling something',
       'Money you borrow from a friend',
-      'Money the government takes from you',
+      'Money that the government takes away from workers as a deduction from their earnings',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -34,7 +34,7 @@ const questions: Question[] = [
       'Sleeping all day',
       'Washing neighbours\' cars for a fee',
       'Spending money at the shop',
-      'Borrowing from a parent',
+      'Borrowing money from a parent and agreeing to pay it back later',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -115,7 +115,7 @@ const questions: Question[] = [
       'They are the same thing',
       'A salary is a fixed monthly payment; wages are typically paid hourly or daily based on hours worked',
       'A salary is paid weekly; wages are paid monthly',
-      'Wages are only for government workers; salaries are for private sector',
+      'Wages are paid exclusively to government workers while salaries are reserved for employees in the private sector of the economy',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -142,7 +142,7 @@ const questions: Question[] = [
     id: 'ea-011',
     text: 'What is "passive income"?',
     options: [
-      'Money received without doing anything at all — no initial effort, skill, or upfront investment required',
+      'Money that flows in automatically without any initial effort, skill, or upfront capital of any kind having been deployed at any point',
       'Income that requires little ongoing effort after initial setup — like rent, dividends, or digital product sales',
       'Regular monthly payments made by the government to citizens who are unemployed or below the poverty line',
       'Money accumulated in a traditional piggy bank or savings container over a very long period of time',
@@ -196,7 +196,7 @@ const questions: Question[] = [
       'Monthly salary from a full-time job',
       'Dividends received from shares in Dangote Cement',
       'Rent from a tenant in your apartment',
-      'Money earned from washing cars on weekends',
+      'Money earned by washing and detailing neighbours\' cars every weekend and public holiday',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -224,7 +224,7 @@ const questions: Question[] = [
     id: 'ea-017',
     text: 'How is freelance/self-employment income taxed differently from salaried income in Nigeria?',
     options: [
-      'Freelancers are completely exempt from income tax in Nigeria since they have no formal employer deducting PAYE on their behalf',
+      'Freelancers are completely exempt from personal income tax in Nigeria since there is no formal employer responsible for deducting PAYE on their behalf',
       'Freelancers must file their own annual self-assessment tax return and pay tax directly to FIRS/SIRS — no automatic PAYE deduction',
       'Freelance income is charged at a uniform flat rate of 50% under a special self-employment surcharge introduced by the FIRS',
       'Self-employed Nigerians are fully exempt from all personal income tax obligations for the first five calendar years of operation',
@@ -242,7 +242,7 @@ const questions: Question[] = [
     options: [
       'Taxable: ₦5M; taxed at flat 24%',
       'Taxable: ₦4.2M; the portion above ₦3.2M is taxed at 24% under the progressive PITA scale',
-      'Freelancers are not subject to PITA — only company income tax',
+      'Freelancers operating in Nigeria are not subject to PITA requirements — only company income tax rules apply to their earnings',
       'Taxable: ₦4.2M; flat rate of 15%',
     ],
     correctIndex: 1,
@@ -376,7 +376,7 @@ const questions: Question[] = [
   {
     id: 'ea-028',
     text: 'If you help with a task and get ₦200, what is that ₦200 an example of?',
-    options: ['Income you earned', 'Money you lost', 'A type of debt', 'A tax you paid'],
+    options: ['Income you earned', 'Money you spent on something you did not really need', 'A type of debt', 'A form of government tax deducted from your wages'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -401,7 +401,7 @@ const questions: Question[] = [
   {
     id: 'ea-030',
     text: 'What\'s an example of a way a child might earn a little money?',
-    options: ['Helping with chores for a small reward', 'Taking money without asking', 'Ignoring all responsibilities', 'Refusing to help with anything'],
+    options: ['Helping with chores for a small reward', 'Taking money from someone else\'s wallet or purse without asking', 'Ignoring all household responsibilities and letting others handle everything', 'Refusing to help with any tasks even when politely asked'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -411,7 +411,7 @@ const questions: Question[] = [
   {
     id: 'ea-031',
     text: 'Why is doing a good job on a task connected to earning money fairly?',
-    options: ['Doing the work well is usually part of earning the reward', 'Quality of work never matters for earning money', 'You always get paid regardless of effort', 'Earning money has nothing to do with effort'],
+    options: ['Doing the work well is usually part of earning the reward', 'The overall quality of work you do has no bearing whatsoever on whether you get paid', 'You always get paid regardless of effort', 'Earning money has nothing to do with effort'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -441,7 +441,7 @@ const questions: Question[] = [
   {
     id: 'ea-034',
     text: 'What\'s a responsible thing to do once you\'ve earned some money?',
-    options: ['Think about saving some and spending some wisely', 'Spend it all immediately without thinking', 'Lose it right away', 'Give it all away without any thought'],
+    options: ['Think about saving some and spending some wisely', 'Spend every single naira of it all at once right away without any thought', 'Lose it right away', 'Give it all away to friends without any thought about your own needs'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -451,7 +451,7 @@ const questions: Question[] = [
   {
     id: 'ea-035',
     text: 'Why might different tasks earn different amounts of money?',
-    options: ['The value or effort of a task can affect how much it might earn', 'All tasks always earn exactly the same amount', 'Earnings have no connection to tasks', 'Money is given randomly with no reason'],
+    options: ['The value or effort of a task can affect how much it might earn', 'All tasks and jobs always pay exactly the same fixed amount regardless of difficulty or skill', 'Earnings have no connection to tasks', 'Money is given randomly with no connection to any specific task or effort'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -461,7 +461,7 @@ const questions: Question[] = [
   {
     id: 'ea-036',
     text: 'What\'s a simple example of the connection between work and income?',
-    options: ['Doing a task and receiving money in return for it', 'Income appears with no connection to any effort', 'Work and money are completely unrelated', 'Only adults can connect work to income'],
+    options: ['Doing a task and receiving money in return for it', 'Income simply appears automatically with no connection to any effort or task completed', 'Work and money are completely unrelated', 'Only adults can connect work to income'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -501,7 +501,7 @@ const questions: Question[] = [
   {
     id: 'ea-039',
     text: 'What\'s a reasonable way to think about the value of your time when considering a paid opportunity?',
-    options: ['Time has no real connection to evaluating income opportunities', 'Comparing the pay against the time and effort required helps assess whether an opportunity is genuinely worthwhile', 'Any paid opportunity is automatically worth pursuing regardless of time required', 'Only the total pay amount matters, regardless of time invested'],
+    options: ['Time has no real connection to evaluating income opportunities', 'Comparing the pay against the time and effort required helps assess whether an opportunity is genuinely worthwhile', 'Any paid opportunity is always worth taking on immediately, regardless of how much time or personal effort it will require', 'Only the total pay amount matters, regardless of time invested'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -511,7 +511,7 @@ const questions: Question[] = [
   {
     id: 'ea-040',
     text: 'Why might understanding gig or freelance income differ from a fixed weekly allowance in terms of planning?',
-    options: ['Gig income can be irregular, requiring more careful planning than a predictable fixed amount', 'Gig income is always more predictable than a fixed allowance', 'There\'s no difference in how to plan around either type of income', 'Irregular income requires no special planning considerations'],
+    options: ['Gig income can be irregular, requiring more careful planning than a predictable fixed amount', 'Gig income is always far more predictable and reliable than a fixed allowance, making it much simpler to budget around', 'There\'s no difference in how to plan around either type of income', 'Irregular income requires no special planning considerations'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -596,7 +596,7 @@ const questions: Question[] = [
   {
     id: 'ea-046',
     text: 'Why might it be worth setting a small savings goal tied specifically to any extra income you earn, beyond your regular allowance?',
-    options: ['Extra income has no special relationship to savings goals', 'It builds the habit of saving windfalls rather than only spending them immediately', 'Extra income should always be spent immediately without exception', 'Savings goals are unrelated to how income is earned'],
+    options: ['Extra income has no meaningful special relationship to savings goals — all income should simply be managed the same way', 'It builds the habit of saving windfalls rather than only spending them immediately', 'Extra income should always be spent immediately without exception', 'Savings goals are unrelated to how income is earned'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -606,7 +606,7 @@ const questions: Question[] = [
   {
     id: 'ea-047',
     text: 'Why might relying on a single income source carry more financial risk than having diversified income streams?',
-    options: ['A single source concentrates risk, if that source is disrupted, your entire income is affected', 'Diversifying income streams has no real risk-reduction benefit', 'Single income sources are always more stable than multiple sources', 'There\'s no meaningful difference in risk between the two approaches'],
+    options: ['A single source concentrates risk, if that source is disrupted, your entire income is affected', 'Diversifying income streams across multiple sources provides absolutely no meaningful risk-reduction benefit over a single well-paid job', 'Single income sources are always more stable than multiple sources', 'There is no meaningful or measurable difference in financial risk between relying on one source versus having several'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -721,7 +721,7 @@ const questions: Question[] = [
   {
     id: 'ea-055',
     text: 'Why might understanding industry salary benchmarks be useful before accepting or negotiating a job offer?',
-    options: ['Benchmarks provide context for whether an offer is reasonably competitive relative to the broader market', 'Salary benchmarks have no practical relevance to individual negotiations', 'All job offers within an industry are automatically identical', 'Understanding benchmarks is only relevant for employers, not employees'],
+    options: ['Benchmarks provide context for whether an offer is reasonably competitive relative to the broader market', 'Salary benchmarks from industry surveys have no practical relevance to any individual job offer negotiation you might undertake', 'All job offers within an industry are automatically identical', 'Understanding industry salary benchmarks is strictly a tool for employers and hiring managers — job seekers have no use for this data'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -733,7 +733,7 @@ const questions: Question[] = [
     text: 'What\'s a sound long-term view on reinvesting a portion of increased income (like a raise) rather than fully increasing spending to match it?',
     options: [
       'Directing some of an income increase toward savings or investment can meaningfully support long-term financial goals rather than fully expanding lifestyle spending',
-      'Every naira of any income increase you receive should always be directed immediately toward expanding your current lifestyle spending without exception',
+      'Every single naira of any income increase you receive should always be directed immediately toward expanding and upgrading your current lifestyle spending without exception',
       'Redirecting any portion of an income increase toward savings or investment provides absolutely no measurable long-term financial benefit',
       'The most financially sound approach is to ensure that your monthly lifestyle spending always increases in exact proportion to any rise in your income',
     ],
@@ -907,7 +907,7 @@ const questions: Question[] = [
     id: 'ea-070',
     text: "What is the difference between \"gross salary\" and \"net salary\"?",
     options: [
-      "There is no meaningful difference between gross and net salary figures in formal Nigerian employment",
+      "There is no meaningful difference whatsoever between gross and net salary figures for any employee in formal Nigerian employment",
       "Gross salary is total earnings before deductions; net salary is take-home pay after tax and other deductions",
       "Net salary is always higher than gross salary once all allowances and bonuses have been factored in",
       "Gross salary is a term used only for senior management and executive staff within large organisations",
@@ -977,7 +977,7 @@ const questions: Question[] = [
     id: 'ea-075',
     text: "Why is \"human capital\" a major determinant of earning potential?",
     options: [
-      "A person's physical characteristics, such as height and body size, are the main factors that determine how much they will earn",
+      "A person's physical characteristics, such as height and overall body size, are the primary factors that determine how much income they will earn throughout their career",
       "Education, skills, experience, and health are investments in yourself that directly increase your productive capacity and income",
       "The government centrally controls and sets the salary of every working Nigerian, making individual skills largely irrelevant",
       "The geographic region of Nigeria you were born in is the single most decisive factor in determining your lifetime income",

@@ -56,7 +56,7 @@ const questions: Question[] = [
     id: 'pl-005',
     text: 'What does "breaking even" mean in business?',
     options: [
-      'When your business breaks down and stops working',
+      'When your business completely stops generating revenue and all remaining stock must be liquidated to pay debts',
       'When your selling price equals your cost price — no profit, no loss',
       'When two businesses share the same profits equally',
       'When you break a product and must replace it',
@@ -109,7 +109,7 @@ const questions: Question[] = [
     options: [
       'Both measure identical things — gross profit equals net profit because all operational expenses are already included in the cost of goods sold figure',
       'Gross profit = Revenue − Cost of goods sold. Net profit = Gross profit − ALL other expenses (rent, salaries, transport, taxes). Net profit is the true "take home" figure',
-      'Gross profit applies only to large companies with formal accounts, while net profit is the simpler version used by small Nigerian market traders and hawkers',
+      'Gross profit applies only to large companies with formal accounts, while net profit is the simpler version used by small Nigerian market traders, roadside hawkers, and sole traders',
       'Gross profit is calculated every month to track short-term cash flow, while net profit is only calculated once per year during annual FIRS tax filing',
     ],
     correctIndex: 1,
@@ -122,7 +122,7 @@ const questions: Question[] = [
     id: 'pl-010',
     text: 'What is "profit margin" and why does it matter for a business?',
     options: [
-      'The total floor space allocated to product displays in a retail store, since more display area means higher potential profit from increased customer foot traffic',
+      'The total floor space allocated to product displays in a retail store, since greater display area typically means higher potential profit from increased customer foot traffic and impulse buying',
       'Profit ÷ Revenue × 100 — the percentage of revenue kept as profit. A 20% margin means ₦20 of every ₦100 earned is profit. Higher margins mean a more efficient, sustainable business',
       'The maximum profit percentage a business is permitted to earn before the FIRS begins auditing its transactions, typically capped at 30% for most Nigerian SMEs',
       'The fixed naira difference between the wholesale price at which a trader buys goods and the retail price at which those same goods are sold to the final consumer',
@@ -155,7 +155,7 @@ const questions: Question[] = [
     options: [
       'The exact moment when the last item of inventory is sold and shelves are fully empty, signalling to the trader that it is time to restock all their goods',
       'The number of units (or revenue level) at which total revenue equals total costs — no profit, no loss. Break-even units = Fixed Costs ÷ (Selling Price − Variable Cost per unit)',
-      'The minimum revenue level at which a business switches from buying goods at wholesale prices to selling directly to consumers at much higher retail prices',
+      'The minimum revenue level at which a business transitions from buying goods at wholesale prices to selling directly to consumers at substantially higher retail prices, bypassing middlemen entirely',
       'The exact date on which a business finishes repaying its initial startup loan to a Nigerian bank or microfinance institution and becomes fully debt-free',
     ],
     correctIndex: 1,
@@ -168,7 +168,7 @@ const questions: Question[] = [
     id: 'pl-013',
     text: 'What are "fixed costs" vs "variable costs" and why does the distinction matter for profit?',
     options: [
-      'Fixed costs are only found in large registered companies — small Nigerian market traders and artisans deal exclusively with variable costs that change with each sale they make',
+      'Fixed costs are only found in formally registered companies — small Nigerian market traders and artisans deal exclusively with variable costs that shift with every transaction, since they cannot sustain high fixed monthly overheads like rent or staff salaries',
       'Fixed costs stay the same regardless of sales volume (rent, equipment). Variable costs change with production/sales (raw materials, packaging). Understanding both is essential for break-even analysis and pricing',
       'Fixed costs such as rent and salaries are paid annually at the start of each year, while variable costs like raw materials are settled daily as goods are produced and sold',
       'Fixed and variable costs are treated identically in profit calculations — both are simply added together and subtracted from total revenue to arrive at the net profit figure',
@@ -185,7 +185,7 @@ const questions: Question[] = [
     text: 'What does "EBITDA" stand for and why do business analysts use it?',
     options: [
       'Earnings Before Interest, Tax, Depreciation and Amortisation — a proxy for operating cash flow that removes financing and accounting decisions to compare core business profitability across companies',
-      'Estimated Business Income Tax and Deduction Analysis — a mandatory quarterly FIRS calculation tool that all Nigerian companies with revenue above ₦25M must submit to the tax authority',
+      'Estimated Business Income Tax and Deduction Analysis — a mandatory quarterly FIRS calculation tool that all Nigerian registered companies with annual revenue above ₦25M are required to submit electronically to the tax authority',
       'Economic Balance Index for Trading and Distribution Activities — a CBN metric used to assess wholesale market stability across key Nigerian commodity sectors nationwide',
       'Earnings from Business Income Tax Deductions and Adjustments — a post-tax reconciliation statement prepared by auditors for FIRS corporate compliance and annual returns review',
     ],
@@ -201,7 +201,7 @@ const questions: Question[] = [
     options: [
       'Their selling prices are set far too low relative to what competitors charge, so total revenue falls short of covering even the direct cost of the products being sold',
       'Their operating expenses (overheads: rent, salaries, interest on loans, utilities) are too high relative to gross profit, consuming all the margin before reaching the bottom line',
-      'They are paying excessive VAT charges because their products are misclassified under a higher-rate category — a common and costly error for new Nigerian SME businesses',
+      'They are paying excessive VAT charges because their products are incorrectly classified under a higher-rate tax category — a common and very costly compliance error for new Nigerian SME businesses',
       'Their upstream suppliers are charging above-market rates for raw materials, inflating the cost of goods sold and compressing gross profit on every single item sold',
     ],
     correctIndex: 1,
@@ -217,7 +217,7 @@ const questions: Question[] = [
       'Gross margin is calculated by dividing total revenue by cost of goods sold; net margin divides total costs by revenue — investors prefer gross margin because it reflects raw product profitability alone',
       'Gross margin = (Revenue − COGS) ÷ Revenue × 100; Net margin = Net Profit ÷ Revenue × 100. Investors monitor both: gross margin shows product economics; net margin shows overall business efficiency after all costs',
       'Gross margin and net margin measure the exact same profitability metric — investors simply choose whichever figure makes the business appear more attractive to potential buyers',
-      'Investors and analysts focus exclusively on absolute naira profit figures when comparing Nigerian companies and never rely on percentage margins, which can be misleading across businesses of different sizes',
+      'Investors and analysts focus exclusively on absolute naira profit figures when comparing Nigerian companies and never rely on percentage margins, which can be misleading across businesses of very different sizes and revenue scales',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -247,7 +247,7 @@ const questions: Question[] = [
     options: [
       'The cumulative total profit generated by combining all product lines — used by the board to assess whether overall company health is strong enough to pay dividends or seek additional investor funding',
       'Selling Price − Variable Cost per unit. It shows how much each unit "contributes" toward covering fixed costs and generating profit. Products with higher contribution margins per unit (or per constrained resource) should be prioritised',
-      'The percentage share of total company revenue that each individual product or service line contributes — a high-percentage product that also has low costs is considered a star performer worth prioritising',
+      'The percentage share of total company revenue contributed by each individual product or service line — a high-contribution product with low variable costs is considered a strong performer worth prioritising, actively scaling, and further investing in',
       'The minimum profit margin threshold that venture capital investors and angel investors require a Nigerian startup to demonstrate before they are willing to commit any capital funding to the business',
     ],
     correctIndex: 1,
@@ -321,7 +321,7 @@ const questions: Question[] = [
   {
     id: 'pl-024',
     text: 'Why is it important to know your costs before selling something?',
-    options: ['So you can tell if you\'re making a profit or a loss', 'Costs have no connection to profit or loss', 'You never need to know your costs', 'Profit and loss are unrelated to cost'],
+    options: ['So you can tell if you\'re making a profit or a loss', 'Knowing your costs before selling is irrelevant — prices and profit are completely unrelated to production costs', 'You never need to know your costs', 'Profit and loss are unrelated to cost'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -351,7 +351,7 @@ const questions: Question[] = [
   {
     id: 'pl-027',
     text: 'What\'s a smart thing to check after selling several items?',
-    options: ['Whether your total sales were more than your total costs', 'Nothing, sales results don\'t need checking', 'Only how many items you sold, nothing else', 'Selling results are never worth reviewing'],
+    options: ['Whether your total sales were more than your total costs', 'Nothing at all — once items are sold, there is no useful reason to review your results', 'Only how many items you sold, nothing else', 'Selling results are never worth reviewing'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -361,7 +361,7 @@ const questions: Question[] = [
   {
     id: 'pl-028',
     text: 'If you want to avoid a loss, what should you make sure of?',
-    options: ['That your selling price is higher than what it cost you', 'That your selling price is always very low', 'Losses can never actually be avoided', 'Price has no connection to avoiding a loss'],
+    options: ['That your selling price is higher than what it cost you', 'That your selling price is always kept very low to attract more customers and boost total sales volume', 'Losses can never actually be avoided', 'Price has no connection to avoiding a loss'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -371,7 +371,7 @@ const questions: Question[] = [
   {
     id: 'pl-029',
     text: 'Why might tracking profit and loss help you get better at selling things over time?',
-    options: ['It shows you what\'s working and what needs to change', 'Tracking has no real benefit for improving over time', 'Profit and loss never change no matter what you do', 'Only large businesses need to track this information'],
+    options: ['It shows you what\'s working and what needs to change', 'Tracking has no real benefit for improving your selling approach or results over time', 'Profit and loss never change no matter what you do', 'Only large businesses need to track this information'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -381,7 +381,7 @@ const questions: Question[] = [
   {
     id: 'pl-030',
     text: 'What\'s the simplest way to think about profit?',
-    options: ['Money earned minus money spent to get that result', 'Money spent with no return at all', 'A type of tax you must pay', 'A random number with no real meaning'],
+    options: ['Money earned minus money spent to get that result', 'Total money spent on producing or buying goods with absolutely no financial return whatsoever', 'A type of tax you must pay', 'A random number with no real meaning'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -441,7 +441,7 @@ const questions: Question[] = [
   {
     id: 'pl-035',
     text: 'Why is understanding your break-even point (how much you need to sell to cover costs) useful?',
-    options: ['It clarifies the minimum performance needed before you start genuinely profiting', 'Break-even points have no practical relevance for small sellers', 'Break-even is the same thing as maximum possible profit', 'Understanding this concept only matters for large companies'],
+    options: ['It clarifies the minimum performance needed before you start genuinely profiting', 'Break-even points have no practical relevance for small sellers, hawkers, or informal Nigerian traders operating daily', 'Break-even is the same thing as maximum possible profit', 'Understanding this concept only matters for large companies'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -451,7 +451,7 @@ const questions: Question[] = [
   {
     id: 'pl-036',
     text: 'What\'s a sound reason to track profit and loss regularly rather than only occasionally?',
-    options: ['Regular tracking helps you catch problems early and make timely adjustments', 'Regular tracking has no real advantage over occasional checks', 'Profit and loss patterns never change meaningfully over time', 'Only large, formal businesses benefit from regular tracking'],
+    options: ['Regular tracking helps you catch problems early and make timely adjustments', 'Regular profit and loss tracking offers no real advantage over doing an occasional review once or twice a year', 'Profit and loss patterns never change meaningfully over time', 'Only large, formal businesses benefit from regular tracking'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -476,7 +476,7 @@ const questions: Question[] = [
   {
     id: 'pl-038',
     text: 'What\'s a reasonable first step if you\'re unsure whether a small side venture is actually profitable?',
-    options: ['Ignore the question entirely and continue operating with no analysis', 'Calculate total revenue against total costs, including time and materials, over a specific period', 'Assume it\'s profitable if it feels successful, with no calculation needed', 'Profitability can never really be determined for a small venture'],
+    options: ['Ignore the question entirely and continue operating with no analysis', 'Calculate total revenue against total costs, including time and materials, over a specific period', 'Assume the venture is profitable as long as it feels busy and successful, without doing any formal revenue or cost calculation', 'Profitability can never really be determined for a small venture'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -486,7 +486,7 @@ const questions: Question[] = [
   {
     id: 'pl-039',
     text: 'Why might understanding profit margin (profit as a percentage of sales) be more useful than looking at total profit alone?',
-    options: ['Margin percentage has no real usefulness compared to total profit figures', 'Margin gives a clearer sense of efficiency and can help compare different products or ventures fairly', 'Total profit is always a more meaningful number than margin', 'Margin only matters for very large, established businesses'],
+    options: ['Profit margin percentage calculations have no real usefulness or analytical value when compared directly to examining total naira profit figures alone', 'Margin gives a clearer sense of efficiency and can help compare different products or ventures fairly', 'Total profit is always a more meaningful number than margin', 'Margin only matters for very large, established businesses'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -511,7 +511,7 @@ const questions: Question[] = [
   {
     id: 'pl-041',
     text: 'What\'s a sound reason to analyze profit margins by individual product or service line, rather than only at the overall business level?',
-    options: ['Line-level analysis has no practical value for a business owner', 'It can reveal which offerings are genuinely profitable versus which may be underperforming or even losing money', 'All products or services within a business always have identical margins', 'Overall business-level figures always tell the complete profitability story'],
+    options: ['Line-level analysis has no practical value for a business owner', 'It can reveal which offerings are genuinely profitable versus which may be underperforming or even losing money', 'All products or services within a business always have identical margins', 'Overall business-level profit and loss figures always tell the complete and accurate profitability story without any need for product-line breakdowns'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -536,7 +536,7 @@ const questions: Question[] = [
   {
     id: 'pl-043',
     text: 'What\'s a reasonable approach to setting prices in a way that protects profit margins amid rising input costs?',
-    options: ['Ignore rising costs entirely and keep prices completely static regardless of circumstances', 'Periodically reassess pricing relative to current costs to maintain a sustainable margin over time', 'Prices should only ever be lowered, regardless of rising costs', 'Rising input costs never have any real effect on appropriate pricing'],
+    options: ['Ignore all rising input costs and maintain prices completely fixed and static regardless of any changes in market or supply chain conditions', 'Periodically reassess pricing relative to current costs to maintain a sustainable margin over time', 'Prices should only ever be lowered, regardless of rising costs', 'Rising input costs never have any real effect on appropriate pricing'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -546,7 +546,7 @@ const questions: Question[] = [
   {
     id: 'pl-044',
     text: 'Why might understanding the difference between cash flow and profit matter for a business owner, even when the business is technically profitable on paper?',
-    options: ['A profitable business can still face cash flow problems if the timing of payments and expenses doesn\'t align well', 'Cash flow and profit are always identical concepts with no meaningful distinction', 'Cash flow has no real relevance if a business shows a profit', 'Businesses never experience cash flow issues if they\'re profitable'],
+    options: ['A profitable business can still face cash flow problems if the timing of payments and expenses doesn\'t align well', 'Cash flow and profit are always identical financial concepts that measure the same underlying business reality, with no meaningful or practical distinction between them', 'Cash flow has no real relevance if a business shows a profit', 'Businesses never experience cash flow issues if they\'re profitable'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],

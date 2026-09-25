@@ -26,9 +26,9 @@ const questions: Question[] = [
     id: 'sc-002',
     text: 'You get a text saying "Your account has been compromised. Reply with your PIN to secure it." What do you do?',
     options: [
-      'Reply with your PIN to protect your account',
+      'Reply with your PIN immediately — banks always verify identity this way to secure compromised accounts',
       'Delete the message and call your bank directly',
-      'Forward it to friends so they can help',
+      'Forward it to friends so they can help investigate whether the alert is genuine',
       'Reply asking for more information first',
     ],
     correctIndex: 1,
@@ -86,7 +86,7 @@ const questions: Question[] = [
     options: [
       'CBN (Central Bank of Nigeria)',
       'EFCC (Economic and Financial Crimes Commission)',
-      'NDIC (Nigeria Deposit Insurance Corporation)',
+      'NDIC (Nigeria Deposit Insurance Corporation) — protects deposits at licensed banks',
       'NCC (Nigerian Communications Commission)',
     ],
     correctIndex: 1,
@@ -170,7 +170,7 @@ const questions: Question[] = [
     text: 'You win a "lottery" you never entered. They ask for your account details to credit your prize. You should:',
     options: [
       'Provide your account number only — it\'s safe to share',
-      'Provide all details including BVN to speed up the transfer',
+      'Provide all account details including your BVN, which is required to release lottery winnings to your bank',
       'Refuse — this is a scam; you cannot win a lottery you never entered',
       'Ask a friend to give their account details instead',
     ],
@@ -206,7 +206,7 @@ const questions: Question[] = [
     id: 'sc-012',
     text: 'A financial advisor with a nice office promises 200% returns on a "forex investment." What should you do first?',
     options: [
-      'Invest immediately — the office looks legitimate',
+      'Invest immediately — an impressive office and professional staff are reliable signs of a credible investment firm',
       'Verify their SEC Nigeria registration number before investing anything',
       'Ask for a referral from a friend before investing',
       'Invest a small amount first to test it',
@@ -289,7 +289,7 @@ const questions: Question[] = [
       'Give it to them if they sound friendly',
       'Give only part of the password',
       'Never share your password — hang up and tell an adult',
-      'Change your password and then give them the old one',
+      'Change your password to something simple and give them the new one so they can access your account',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -316,7 +316,7 @@ const questions: Question[] = [
     id: 'sc-019',
     text: 'Which of these is a warning sign that someone might be trying to scam you?',
     options: [
-      'They ask you to meet at the bank in person',
+      'They insist on meeting you at a licensed bank branch to complete a verified in-person transaction',
       'They promise you free money or prizes you did not win',
       'They give you a receipt for every transaction',
       'They are registered with the government',
@@ -331,7 +331,7 @@ const questions: Question[] = [
     id: 'sc-020',
     text: 'Your friend sends you a link: "Click here to get free ₦2,000 airtime!" What should you do?',
     options: [
-      'Click immediately — free is always good',
+      'Click immediately — telecom companies run surprise airtime giveaways regularly shared through loyal customer networks',
       'Forward it to all your friends first',
       'Ask a parent or trusted adult before clicking any link',
       'Click it but do not enter any details',
@@ -406,7 +406,7 @@ const questions: Question[] = [
   {
     id: 'sc-027',
     text: 'What should you do if someone pressures you to decide about money very quickly?',
-    options: ['Slow down and ask a trusted adult first', 'Decide immediately without thinking', 'Ignore the pressure and do it anyway', 'Agree right away to make them stop'],
+    options: ['Slow down and ask a trusted adult first', 'Decide immediately without thinking', 'Ignore the pressure entirely and commit right away without discussing it with anyone else first', 'Agree right away to make them stop'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -426,7 +426,7 @@ const questions: Question[] = [
   {
     id: 'sc-029',
     text: 'If someone you don\'t know asks for your home address and money details, what should you do?',
-    options: ['Never share it, tell a trusted adult', 'Share it if they seem nice', 'Share only the address', 'Share only the money details'],
+    options: ['Never share it, tell a trusted adult', 'Share it if they sound trustworthy — legitimate organisations often verify your identity by phone first', 'Share only the address', 'Share only the money details'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -476,7 +476,7 @@ const questions: Question[] = [
   {
     id: 'sc-034',
     text: 'A \'romance\' contact you\'ve never met in person starts asking for money. What should raise concern?',
-    options: ['Nothing, this is normal for online relationships', 'Requesting money from someone you\'ve never met is a common scam pattern', 'It\'s always genuine if they seem nice', 'You should send money immediately to help'],
+    options: ['Nothing — online romantic relationships build deep trust over time and financial support is a natural milestone', 'Requesting money from someone you\'ve never met is a common scam pattern', 'It\'s always genuine if they seem nice', 'You should send money immediately to help'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -506,7 +506,7 @@ const questions: Question[] = [
   {
     id: 'sc-037',
     text: 'What\'s a smart response if a \'bank representative\' calls asking for your PIN or OTP?',
-    options: ['Share it since they claim to be from the bank', 'Refuse, legitimate banks never ask for this information this way', 'Share it only if they sound official', 'Give partial information as a compromise'],
+    options: ['Share it since they claim to be from the bank and have confirmed your account details already on file', 'Refuse, legitimate banks never ask for this information this way', 'Share it only if they sound official', 'Give partial information as a compromise'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -526,7 +526,7 @@ const questions: Question[] = [
   {
     id: 'sc-039',
     text: 'What\'s a reasonable step before trusting an unfamiliar online seller with a payment?',
-    options: ['Pay immediately without checking anything', 'Research reviews and verify legitimacy before paying', 'Assume all sellers are trustworthy', 'Send payment via untraceable methods only'],
+    options: ['Pay immediately since any delay risks losing the item to another buyer who is ready to complete the transaction', 'Research reviews and verify legitimacy before paying', 'Assume all sellers are trustworthy', 'Send payment via untraceable methods only'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -556,7 +556,7 @@ const questions: Question[] = [
   {
     id: 'sc-042',
     text: 'Why is verifying a company\'s registration and regulatory status important before investing significant funds?',
-    options: ['Verification has no bearing on investment safety', 'It helps confirm legitimacy and reduces risk of fraud', 'Only foreign investments require this', 'Registration guarantees profit'],
+    options: ['Verification only matters for foreign investments and adds no meaningful protection for locally domiciled Nigerian funds', 'It helps confirm legitimacy and reduces risk of fraud', 'Only foreign investments require this', 'Registration guarantees profit'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -576,7 +576,7 @@ const questions: Question[] = [
   {
     id: 'sc-044',
     text: 'Why do sophisticated scams often impersonate trusted institutions like banks or government agencies?',
-    options: ['It builds false credibility to lower victims\' guard', 'Impersonation has no effect on scam success', 'Trusted institutions endorse this practice', 'It\'s a coincidence with no strategic purpose'],
+    options: ['It builds false credibility to lower victims\' guard', 'Impersonation has no measurable effect on victim behaviour or the overall success rate of scam attempts', 'Trusted institutions actively endorse this impersonation practice as a secure customer verification method', 'It\'s a coincidence with no strategic purpose'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -606,7 +606,7 @@ const questions: Question[] = [
   {
     id: 'sc-047',
     text: 'An \'investment manager\' avoids providing clear documentation or a verifiable track record. What should this suggest?',
-    options: ['This is standard and shouldn\'t raise concern', 'A significant red flag worth investigating further before committing funds', 'Documentation is unnecessary for legitimate managers', 'It indicates strong professionalism'],
+    options: ['This is standard and shouldn\'t raise concern', 'A significant red flag worth investigating further before committing funds', 'Documentation requirements are optional for experienced informal investment managers with proven long-term client relationships', 'It indicates strong professionalism'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -616,7 +616,7 @@ const questions: Question[] = [
   {
     id: 'sc-048',
     text: 'Why might someone experiencing financial pressure be more vulnerable to scams promising quick solutions?',
-    options: ['Financial pressure has no relationship to scam vulnerability', 'Urgency and hope for quick relief can override normal caution and scrutiny', 'Pressure always makes people more cautious', 'Scammers avoid targeting people under financial pressure'],
+    options: ['Financial pressure has no established relationship to scam vulnerability according to any credible behavioural research', 'Urgency and hope for quick relief can override normal caution and scrutiny', 'Pressure always makes people more cautious', 'Scammers avoid targeting people under financial pressure'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -676,7 +676,7 @@ const questions: Question[] = [
   {
     id: 'sc-054',
     text: "If your friend says you can double your money in 2 days with no risk, what should you think?",
-    options: ["It is a great investment opportunity", "It sounds like a scam — no investment is risk-free", "Ask to invest all your savings", "Share the offer with family"],
+    options: ["It is a genuine high-yield strategy that some licensed Nigerian investment firms legally offer to retail clients", "It sounds like a scam — no investment is risk-free", "Ask to invest all your savings", "Share the offer with family"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -696,7 +696,7 @@ const questions: Question[] = [
   {
     id: 'sc-056',
     text: "You receive an email saying your bank account will be closed unless you click a link and enter your details. What should you do?",
-    options: ["Click the link and enter your details", "Call your bank directly using the official number to verify", "Ignore it — your account is fine no matter what", "Forward it to friends to warn them"],
+    options: ["Click the link and enter your details immediately — bank security notices always include a direct verified action button", "Call your bank directly using the official number to verify", "Ignore it — your account is fine no matter what", "Forward it to friends to warn them"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['kids'],
@@ -706,7 +706,7 @@ const questions: Question[] = [
   {
     id: 'sc-057',
     text: "Which of these is the strongest sign of an online scam?",
-    options: ["A website that ends in .com", "An offer that seems too good to be true", "A website with a logo you recognise", "Messages written in English"],
+    options: ["A website that ends in .com", "An offer that seems too good to be true", "A website with a company logo you recognise from television or official banking materials and campaigns", "Messages written in English"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['kids'],
@@ -726,7 +726,7 @@ const questions: Question[] = [
   {
     id: 'sc-059',
     text: "A stranger offers to give you ₦10,000 if you give them your bank card and PIN \"just for 5 minutes.\" What is happening?",
-    options: ["A generous gift", "A common card fraud scheme", "A bank reward programme", "A school project"],
+    options: ["A generous goodwill gesture from a friendly stranger wanting to share unexpected good fortune", "A common card fraud scheme", "A bank reward programme", "A school project"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['kids'],
@@ -826,7 +826,7 @@ const questions: Question[] = [
   {
     id: 'sc-069',
     text: "A scammer calls posing as a FIRS officer demanding immediate tax payment via wire transfer or face arrest. What type of scam is this?",
-    options: ["Email phishing attempt", "Impersonation/authority scam", "Pyramid network scheme", "Advance-fee fraud case"],
+    options: ["An email phishing attempt targeting corporate executives", "Impersonation/authority scam", "Pyramid network scheme", "Advance-fee fraud case"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['teens'],
@@ -866,7 +866,7 @@ const questions: Question[] = [
   {
     id: 'sc-073',
     text: "Which agency in Nigeria investigates cybercrime and online fraud?",
-    options: ["CBN Payments and Infrastructure Division", "EFCC and the Nigeria Police Force Cybercrime Unit", "NCC Consumer Complaints and Enforcement Unit", "NDIC Depositor Claims and Resolution Office"],
+    options: ["CBN Payments and Infrastructure Division — oversees electronic payment system regulation", "EFCC and the Nigeria Police Force Cybercrime Unit", "NCC Consumer Complaints and Enforcement Unit — handles telecom service disputes", "NDIC Depositor Claims and Resolution Office — compensates depositors at failed banks"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -906,7 +906,7 @@ const questions: Question[] = [
   {
     id: 'sc-077',
     text: "You receive a WhatsApp message from \"your CEO's new number\" asking for an urgent fund transfer. Best response?",
-    options: ["Transfer immediately to avoid delaying the CEO", "Call the CEO on their verified number to confirm before any transfer", "Forward it to HR first", "Transfer half the amount now and the rest later"],
+    options: ["Transfer immediately so you do not delay a time-sensitive business operation the CEO personally authorised", "Call the CEO on their verified number to confirm before any transfer", "Forward it to HR first", "Transfer half the amount now and the rest later"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['adults'],
@@ -916,7 +916,7 @@ const questions: Question[] = [
   {
     id: 'sc-078',
     text: "What is a \"pig-butchering\" scam?",
-    options: ["An agricultural investment fraud where victims pay upfront for promised livestock or farm shares that are never delivered", "A long-con where scammers build trust over weeks before directing victims into fake investment platforms and stealing their funds", "A direct cyber intrusion into a licensed cryptocurrency exchange that drains funds from verified user wallets", "A targeted Ponzi scheme using agricultural fronts to recruit farming communities and rural investment groups"],
+    options: ["An agricultural investment fraud targeting rural communities where victims pay upfront for promised livestock or farm produce that is never actually delivered to them", "A long-con where scammers build trust over weeks before directing victims into fake investment platforms and stealing their funds", "A direct cyber intrusion into a licensed cryptocurrency exchange that drains funds from verified user wallets", "A targeted Ponzi scheme using agricultural fronts to recruit farming communities and rural investment groups"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['adults'],

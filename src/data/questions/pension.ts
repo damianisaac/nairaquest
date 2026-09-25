@@ -59,7 +59,7 @@ const questions: Question[] = [
     id: 'pn-005',
     text: 'What is a PFA?',
     options: [
-      'Personal Finance Adviser',
+      'Personal Finance Advisory Service',
       'Pension Fund Administrator',
       'Public Finance Authority',
       'Pension Fund Association',
@@ -113,9 +113,9 @@ const questions: Question[] = [
     id: 'pn-009',
     text: 'What happens to your RSA when you change jobs in Nigeria?',
     options: [
-      'You lose all contributions made by your previous employer',
+      'You lose all pension contributions accumulated under your previous employer once you formally resign or are let go',
       'Your RSA stays with you — it\'s personal; your new employer contributes to the same account',
-      'You must open a new RSA with your new employer\'s preferred PFA',
+      'You must open a new RSA with your new employer\'s chosen PFA, and your previous balance is transferred to the new account within 90 days',
       'Your contributions are frozen until you retire',
     ],
     correctIndex: 1,
@@ -163,7 +163,7 @@ const questions: Question[] = [
     options: [
       'No — you can never touch your RSA until you retire',
       'Yes — you can withdraw 25% if you lose your job and have been unemployed for at least 4 months',
-      'Yes — you can withdraw any amount at any time with your PFA\'s approval',
+      'Yes — you can withdraw any amount from your RSA at any time provided you obtain written approval from your PFA and formally notify PenCom',
       'Yes — but only for medical emergencies with proof of diagnosis',
     ],
     correctIndex: 1,
@@ -193,7 +193,7 @@ const questions: Question[] = [
     id: 'pn-014',
     text: 'Why is it important to save money for when you are old and retired?',
     options: [
-      'Because banks force you to',
+      'Because commercial banks and FIRS legally require all formal sector workers to maintain a minimum retirement fund',
       'So you have money to live on when you can no longer earn a salary',
       'Because prices go down as you age',
       'So you can give all your money to the government',
@@ -329,7 +329,7 @@ const questions: Question[] = [
   {
     id: 'pn-023',
     text: 'Why might people save money for many years before they retire?',
-    options: ['So they\'ll have money to live on when they\'re not working anymore', 'Saving for retirement has no real purpose', 'People never need money after they stop working', 'Retirement savings are only for very rich people'],
+    options: ['So they\'ll have money to live on when they\'re not working anymore', 'Saving for retirement serves no real purpose since family members will always provide financial support in old age', 'People never need money after they stop working', 'Retirement savings are only for very rich people'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -349,7 +349,7 @@ const questions: Question[] = [
   {
     id: 'pn-025',
     text: 'Why might starting to save early in life be helpful for the future?',
-    options: ['The earlier you start, the more time your savings have to grow', 'Starting early has no benefit at all', 'It\'s always better to start saving very late', 'Saving early makes no difference to the outcome'],
+    options: ['The earlier you start, the more time your savings have to grow', 'Starting early provides no real benefit since pension returns are the same regardless of when you begin', 'It\'s always better to start saving very late', 'Saving early makes no difference to the outcome'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -369,7 +369,7 @@ const questions: Question[] = [
   {
     id: 'pn-027',
     text: 'Why might grown-ups think about saving for many years in the future, not just for today?',
-    options: ['Because planning ahead helps prepare for needs later in life', 'Thinking about the future has no value', 'Only today\'s needs matter, never the future', 'Planning ahead is unnecessary for anyone'],
+    options: ['Because planning ahead helps prepare for needs later in life', 'Thinking about the distant future has no real financial value since circumstances always change unpredictably', 'Only today\'s needs matter, never the future', 'Planning ahead is unnecessary for anyone'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -399,7 +399,7 @@ const questions: Question[] = [
   {
     id: 'pn-030',
     text: 'What might happen if someone never saves any money throughout their whole working life?',
-    options: ['They may struggle financially once they\'re no longer working', 'Nothing would be different at all', 'They would automatically have plenty of money later', 'Not saving has no consequences ever'],
+    options: ['They may struggle financially once they\'re no longer working', 'Nothing would be different since family, community, and government support systems will always provide sufficient assistance', 'They would automatically have plenty of money later', 'Not saving has no consequences ever'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -409,7 +409,7 @@ const questions: Question[] = [
   {
     id: 'pn-031',
     text: 'Why is it a good habit to think about saving even a small amount regularly, starting young?',
-    options: ['Small regular savings can add up significantly over a long period of time', 'Small amounts never add up to anything meaningful', 'Only large amounts of savings matter at all', 'Regular saving habits have no long-term benefit'],
+    options: ['Small regular savings can add up significantly over a long period of time', 'Small amounts never accumulate into anything financially meaningful regardless of how long or consistently you save', 'Only large amounts of savings matter at all', 'Regular saving habits have no long-term benefit'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -419,7 +419,7 @@ const questions: Question[] = [
   {
     id: 'pn-032',
     text: 'Why does starting pension or retirement-related savings early in a career matter, even if the amount seems small?',
-    options: ['It doesn\'t matter, only large contributions count', 'Compounding growth over a longer time period makes early small contributions more valuable', 'Pensions are identical regardless of when you start contributing', 'Only self-employed people need to think about pensions'],
+    options: ['It doesn\'t matter when you start — only the total lifetime amount contributed determines the final pension balance regardless of timing', 'Compounding growth over a longer time period makes early small contributions more valuable', 'Pensions are identical regardless of when you start contributing', 'Only self-employed people need to think about pensions'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -439,7 +439,7 @@ const questions: Question[] = [
   {
     id: 'pn-034',
     text: 'Why might understanding retirement savings matter to a teen who hasn\'t started working yet?',
-    options: ['Retirement planning has no relevance until someone is already working', 'Understanding it early builds awareness that can shape better habits once earning begins', 'Only people close to retirement age need to understand this', 'Retirement savings only concern employers, not individuals'],
+    options: ['Retirement planning has no real relevance for teenagers since mandatory CPS contributions only begin once formal salaried employment starts', 'Understanding it early builds awareness that can shape better habits once earning begins', 'Only people close to retirement age need to understand this', 'Retirement savings only concern employers, not individuals'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -459,7 +459,7 @@ const questions: Question[] = [
   {
     id: 'pn-036',
     text: 'Why might relying solely on family support in old age be riskier than also having personal retirement savings?',
-    options: ['Family circumstances and ability to support someone can change unpredictably over time', 'Family support is always guaranteed and unaffected by circumstances', 'Personal retirement savings have no real benefit over family support', 'There\'s no meaningful difference between the two approaches'],
+    options: ['Family circumstances and ability to support someone can change unpredictably over time', 'Family support in Nigeria is always fully guaranteed and entirely unaffected by any personal or economic circumstances', 'Personal retirement savings have no real benefit over family support', 'There\'s no meaningful difference between the two approaches'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -519,7 +519,7 @@ const questions: Question[] = [
   {
     id: 'pn-042',
     text: 'Why does starting pension contributions early in your career matter, even if the amount seems small?',
-    options: ['It doesn\'t matter, only large contributions count', 'Compounding growth over time makes early small contributions valuable', 'Pensions are the same regardless of when you start', 'Only self-employed people need pensions'],
+    options: ['It doesn\'t matter when you start — only the size of each monthly contribution, not the starting date, determines your final pension balance', 'Compounding growth over time makes early small contributions valuable', 'Pensions are the same regardless of when you start', 'Only self-employed people need pensions'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -549,7 +549,7 @@ const questions: Question[] = [
   {
     id: 'pn-045',
     text: 'What\'s a realistic understanding of inflation\'s effect on retirement savings accumulated over decades?',
-    options: ['Inflation has no effect on the real value of long-term retirement savings', 'Inflation can erode the real purchasing power of savings over time if growth doesn\'t keep pace', 'Retirement savings are always fully protected from inflation automatically', 'Inflation only affects short-term savings, not long-term ones'],
+    options: ['Inflation has no meaningful effect on long-term retirement savings since all licensed PFAs are required by PenCom to maintain inflation-adjusted net returns', 'Inflation can erode the real purchasing power of savings over time if growth doesn\'t keep pace', 'Retirement savings are always fully protected from inflation automatically', 'Inflation only affects short-term savings, not long-term ones'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -609,7 +609,7 @@ const questions: Question[] = [
   {
     id: 'pn-051',
     text: 'What\'s a sound long-term perspective on balancing current lifestyle spending against consistent retirement contributions?',
-    options: ['Balancing the two thoughtfully supports both present wellbeing and long-term financial security, rather than neglecting either entirely', 'Current lifestyle spending should always take complete priority with no retirement contributions', 'Retirement contributions should always take complete priority with zero current spending', 'There\'s no meaningful trade-off to consider between the two'],
+    options: ['Balancing the two thoughtfully supports both present wellbeing and long-term financial security, rather than neglecting either entirely', 'Current lifestyle spending should always take complete priority over retirement contributions since you can always begin saving for old age once your income reaches a comfortable and stable level', 'Retirement contributions should always take complete priority with zero current spending', 'There\'s no meaningful trade-off to consider between the two'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -699,7 +699,7 @@ const questions: Question[] = [
   {
     id: 'pn-060',
     text: "Why should you keep track of your pension contributions?",
-    options: ["To brag to friends", "To ensure you receive the correct amount at retirement and spot any errors", "Because the government asks you to report it monthly", "It is required by your employer"],
+    options: ["To show colleagues that you are more financially disciplined and better prepared for retirement than your peers", "To ensure you receive the correct amount at retirement and spot any errors", "Because the government asks you to report it monthly", "It is required by your employer"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['kids'],
@@ -869,7 +869,7 @@ const questions: Question[] = [
   {
     id: 'pn-077',
     text: "A retiree has ₦15 million in their RSA. They plan programmed withdrawals of ₦120,000/month. How many years does the fund last (ignoring returns)?",
-    options: ["8 years", "10 years", "10.4 years", "12 years"],
+    options: ["8.3 years", "10 years", "10.4 years", "12.5 years"],
     correctIndex: 2,
     difficulty: 'medium',
     ageTrack: ['adults'],

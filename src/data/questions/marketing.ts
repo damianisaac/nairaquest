@@ -21,7 +21,7 @@ const questions: Question[] = [
     id: 'mk-002',
     text: 'Why do companies advertise their products?',
     options: [
-      'Because the government forces them to',
+      'Because Nigerian consumer protection laws require every registered business to run a minimum number of promotional campaigns annually',
       'To make people aware of their products and encourage them to buy',
       'To confuse customers so they spend more money',
       'Only to make their packaging look nice',
@@ -36,7 +36,7 @@ const questions: Question[] = [
     id: 'mk-003',
     text: 'Which of these is an example of advertising?',
     options: [
-      'Paying taxes to the government',
+      'A business owner filing and paying corporate income tax returns to the Federal Inland Revenue Service',
       'A Dangote Cement billboard on the Lagos expressway',
       'Hiring a worker to sweep the shop floor',
       'Buying raw materials from a supplier',
@@ -113,7 +113,7 @@ const questions: Question[] = [
     options: [
       'The total number of people who viewed or clicked on an advertisement during a specific campaign period',
       'The specific group of people a business wants to reach with its marketing — those most likely to buy the product',
-      'The government agency responsible for reviewing and approving marketing content before it is published',
+      'The government agency that reviews, approves, and enforces compliance of all marketing content published by Nigerian businesses across every media platform',
       'The team of employees within a company who are responsible for developing and producing the products being sold',
     ],
     correctIndex: 1,
@@ -160,7 +160,7 @@ const questions: Question[] = [
     options: [
       'A government-issued licence that permits a business to operate exclusively in a specific sector or geographic area, preventing competitors from legally entering the same market',
       'The single most compelling reason why a customer should choose your product over competitors — what makes you distinctly different and better in a way that matters to your target audience',
-      'A premium pricing strategy that positions a product at a high price level to signal quality and attract status-conscious consumers who associate high cost with superior value',
+      'A premium pricing strategy that deliberately positions a product at a high price level to signal superior quality and attract status-conscious consumers who strongly associate high cost with exceptional value and exclusive prestige',
       'A legal notice filed with the CAC stating that a business has exclusive rights to a product name, preventing other Nigerian companies from using the same trading name',
     ],
     correctIndex: 1,
@@ -173,7 +173,7 @@ const questions: Question[] = [
     id: 'mk-012',
     text: 'What is "brand loyalty" and why do Nigerian companies invest so heavily in building it?',
     options: [
-      'When a bank or financial institution restricts a customer\'s account so purchases can only be made from approved partner merchants listed in their official retail network',
+      'When a Nigerian bank or financial institution restricts a customer\'s account so that all purchases can only be made from a carefully approved list of partner merchants and vendors listed in their official retail network directory',
       'When customers consistently choose the same brand over competitors because they trust it and identify with it. Loyal customers buy more, cost less to retain, and actively recommend the brand',
       'When a company\'s own staff are contractually required to use only the employer\'s products and are prohibited from publicly endorsing any rival brand',
       'A formal points-based reward programme where customers accumulate credits with each purchase that can later be redeemed for discounts, free products, or vouchers',
@@ -204,7 +204,7 @@ const questions: Question[] = [
     id: 'mk-014',
     text: 'What is "customer acquisition cost" (CAC) and why must Nigerian startups track it obsessively?',
     options: [
-      'The average monthly salary paid to the entire sales and marketing team divided by total revenue, used to determine whether headcount is financially justified relative to business growth targets',
+      'The average monthly salary paid to the entire sales and marketing team divided by total revenue, used to determine whether marketing headcount is financially justified relative to the company\'s annual business growth targets and overall budget constraints',
       'The total cost of marketing and sales efforts divided by the number of new customers acquired. If CAC exceeds the lifetime value (LTV) of a customer, the business is destroying value with every sale',
       'The legal fee charged by a commercial lawyer to draft and formalise an acquisition contract, covering due diligence, regulatory filings, and the full transfer of business ownership documentation',
       'The administrative and compliance cost of onboarding each new corporate customer, including documentation, KYC verification, regulatory checks, and mandatory staff training sessions',
@@ -222,7 +222,7 @@ const questions: Question[] = [
       'A cone-shaped manufacturing tool used to channel liquids or powders from large batches into individual product packaging during the production line process',
       'The journey from awareness → interest → decision → purchase. At each stage, potential customers drop off, so optimising conversion at each step is critical to profitability',
       'A supply-chain framework used by FMCG companies to route products efficiently from factories in Lagos and Kano to retailers across all 36 Nigerian states',
-      'An organisational chart showing the reporting lines and authority levels of marketing staff, from junior interns up to the Chief Marketing Officer of a large corporation',
+      'An organisational chart showing the reporting lines and authority levels of marketing staff, from junior brand interns all the way up to the Chief Marketing Officer and board-level executives of a large Nigerian corporation',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -250,7 +250,7 @@ const questions: Question[] = [
     id: 'mk-017',
     text: 'What is "market segmentation" and how should a Nigerian FMCG brand approach it?',
     options: [
-      'Splitting a country\'s market into the four main geographic zones and assigning separate sales teams to each region with identical pricing and product offerings, regardless of local income levels or cultural preferences',
+      'Splitting a country\'s entire market into the four main geographic zones — North, South, East, and West — and assigning separate sales teams to each zone with completely identical pricing, packaging, and product offerings, regardless of the significant differences in local income levels, cultural preferences, dietary habits, purchasing power, or consumer demand patterns that exist across rural and urban areas within each zone',
       'Dividing a broad market into distinct subgroups (demographic, psychographic, behavioural, geographic) and targeting each with tailored marketing mix. E.g., a beverage brand targeting: premium urban professionals vs mass-market rural consumers vs health-conscious millennials — different products, prices, channels, and messages',
       'A requirement from the Federal Competition and Consumer Protection Commission forcing companies with more than 20% national market share to ensure their products are available and affordably priced in all 36 states, regardless of regional demand or distribution costs',
       'A strategy in which a company sets different retail prices for the same product in different Nigerian cities, charging more in Abuja and Lagos where incomes are higher and less in rural areas of Kebbi, Yobe, and Ebonyi to maintain penetration',
@@ -311,7 +311,7 @@ const questions: Question[] = [
   {
     id: 'mk-021',
     text: 'What is an advertisement (ad) mainly trying to do?',
-    options: ['Convince you to buy or want something', 'Teach you a school subject', 'Give away free money always', 'Nothing important at all'],
+    options: ['Convince you to buy or want something', 'Teach you a school subject like mathematics, English, or business studies', 'Give away free money always', 'Nothing important at all'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -366,7 +366,7 @@ const questions: Question[] = [
   {
     id: 'mk-025',
     text: 'Why might a product be shown with exciting music and colors in an ad?',
-    options: ['To make the product feel more appealing and memorable', 'Music and color have no real effect on how ads work', 'Ads never use music or color for any reason', 'This has nothing to do with marketing'],
+    options: ['To make the product feel more appealing and memorable', 'Music and color have absolutely no real effect on the way advertising campaigns attract or persuade viewers', 'Ads never use music or color for any reason', 'This has nothing to do with marketing'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -376,7 +376,7 @@ const questions: Question[] = [
   {
     id: 'mk-026',
     text: 'If a commercial says a toy is the \'best ever,\' should you believe it completely?',
-    options: ['Not necessarily, ads often exaggerate to get you interested', 'Yes, ads are always completely truthful', 'Commercials never make any exaggerated claims', 'You should always trust every claim in an ad fully'],
+    options: ['Not necessarily, ads often exaggerate to get you interested', 'Yes, because every advertisement broadcast in Nigeria is fully reviewed and verified for accuracy by the APCON before it airs', 'Commercials never make any exaggerated claims', 'You should always trust every claim in an ad fully'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -386,7 +386,7 @@ const questions: Question[] = [
   {
     id: 'mk-027',
     text: 'Why might it help to ask \'do I really need this?\' after seeing an ad?',
-    options: ['It helps you think clearly instead of just reacting to the ad', 'This question has no real value after seeing an ad', 'Ads never influence how much you want something', 'You should never question anything shown in an ad'],
+    options: ['It helps you think clearly instead of just reacting to the ad', 'This question has no real value after seeing an ad because advertising only ever shows products that people already genuinely need', 'Ads never influence how much you want something', 'You should never question anything shown in an ad'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -396,7 +396,7 @@ const questions: Question[] = [
   {
     id: 'mk-028',
     text: 'What\'s a smart response to seeing lots of ads for the same toy everywhere?',
-    options: ['Recognize it\'s a marketing strategy, and think it over before wanting it', 'Automatically believe you truly need that toy', 'Repetition in ads has no real effect on people', 'You should always want anything advertised repeatedly'],
+    options: ['Recognize it\'s a marketing strategy, and think it over before wanting it', 'Automatically believe you truly need that toy because television and social media advertisements are completely reliable sources of product information', 'Repetition in ads has no real effect on people', 'You should always want anything advertised repeatedly'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -406,7 +406,7 @@ const questions: Question[] = [
   {
     id: 'mk-029',
     text: 'Why do companies spend money making ads in the first place?',
-    options: ['To encourage more people to notice and buy their products', 'Companies never spend money making ads', 'Ads are made for no particular reason', 'Making ads has no connection to selling products'],
+    options: ['To encourage more people to notice and buy their products', 'Companies in Nigeria are prohibited by consumer protection laws from spending money on any form of advertising or promotional campaigns', 'Ads are made for no particular reason', 'Making ads has no connection to selling products'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -416,7 +416,7 @@ const questions: Question[] = [
   {
     id: 'mk-030',
     text: 'What\'s a helpful habit when you see an exciting ad for something you want?',
-    options: ['Pause and think about whether it\'s really something you need or just want', 'Buy it immediately without any thought', 'Ads should always be ignored completely with no thought', 'Excitement from ads should always lead to immediate buying'],
+    options: ['Pause and think about whether it\'s really something you need or just want', 'Buy it immediately without any thought because promotional prices and limited offers expire quickly and you may never see the same deal again', 'Ads should always be ignored completely with no thought', 'Excitement from ads should always lead to immediate buying'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -456,7 +456,7 @@ const questions: Question[] = [
   {
     id: 'mk-033',
     text: 'What\'s a reasonable response to a paid influencer promotion that doesn\'t clearly disclose it\'s sponsored content?',
-    options: ['Trust it completely as an unbiased personal recommendation', 'Approach it with some healthy skepticism, since undisclosed sponsorships can bias the presentation', 'Undisclosed sponsorships have no real effect on content credibility', 'All influencer content is always fully unbiased regardless of sponsorship'],
+    options: ['Trust it completely as an entirely unbiased personal recommendation because Nigerian social media creators are legally required to be honest and transparent with their audiences', 'Approach it with some healthy skepticism, since undisclosed sponsorships can bias the presentation', 'Undisclosed sponsorships have no real effect on content credibility', 'All influencer content is always fully unbiased regardless of sponsorship'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -466,7 +466,7 @@ const questions: Question[] = [
   {
     id: 'mk-034',
     text: 'Why might understanding basic marketing psychology (like social proof, FOMO) help you make more intentional spending choices?',
-    options: ['Marketing psychology has no real influence on spending choices', 'Recognizing these tactics can help you distinguish genuine interest from manufactured pressure to buy', 'Marketing psychology only affects people who are easily influenced', 'Intentional spending has no connection to understanding marketing tactics'],
+    options: ['Marketing psychology research has consistently shown it has no meaningful real-world influence on the everyday spending choices of educated and financially aware Nigerian consumers', 'Recognizing these tactics can help you distinguish genuine interest from manufactured pressure to buy', 'Marketing psychology only affects people who are easily influenced', 'Intentional spending has no connection to understanding marketing tactics'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -491,7 +491,7 @@ const questions: Question[] = [
   {
     id: 'mk-036',
     text: 'Why might a company use limited-time offers as a marketing strategy?',
-    options: ['To create urgency that encourages faster purchase decisions with less deliberation', 'Limited-time offers have no strategic marketing purpose', 'Companies use these offers randomly with no underlying intent', 'Urgency tactics never actually affect consumer behavior'],
+    options: ['To create urgency that encourages faster purchase decisions with less deliberation', 'Limited-time offers have absolutely no underlying strategic marketing purpose and are simply a random pricing decision made by individual retailers without any commercial intent', 'Companies use these offers randomly with no underlying intent', 'Urgency tactics never actually affect consumer behavior'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -516,7 +516,7 @@ const questions: Question[] = [
   {
     id: 'mk-038',
     text: 'Why might targeted ads (based on your browsing history) feel especially persuasive?',
-    options: ['Targeted ads have no real difference in persuasive effect compared to generic ads', 'They\'re tailored to your specific interests and behavior, which can make them feel more relevant and appealing', 'Targeted advertising is banned everywhere and doesn\'t actually exist', 'Personalization in ads has no connection to their persuasive power'],
+    options: ['Targeted ads have been shown by Nigerian marketing researchers to have no real meaningful difference in persuasive effect when compared to completely generic advertising across all audience types', 'They\'re tailored to your specific interests and behavior, which can make them feel more relevant and appealing', 'Targeted advertising is banned everywhere and doesn\'t actually exist', 'Personalization in ads has no connection to their persuasive power'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -542,7 +542,7 @@ const questions: Question[] = [
     id: 'mk-040',
     text: 'Why might developing a critical eye toward marketing be a valuable long-term financial skill, not just a teen-specific concern?',
     options: [
-      'This critical awareness only matters during the teenage years because adults naturally become immune to marketing influence',
+      'This critical media awareness only matters during the teenage years because all Nigerian adults naturally become fully immune to the influence of marketing and advertising as they grow older and gain more life experience',
       'Marketing influences spending decisions throughout life, so this awareness supports better financial decision-making long-term',
       'Critical evaluation of marketing has no long-term financial value since adults automatically learn to ignore advertising',
       'Only marketing professionals and economists ever need to think critically about these commercial persuasion techniques',
@@ -571,7 +571,7 @@ const questions: Question[] = [
   {
     id: 'mk-042',
     text: 'What\'s a sound approach to evaluating \'price anchoring\' (showing a high original price next to a discounted price) in promotional offers?',
-    options: ['Always trust the displayed discount percentage as an accurate reflection of savings', 'Independently verify typical market pricing rather than relying solely on the anchor price presented in the promotion', 'Price anchoring has no real influence on how discounts are perceived', 'Discounted prices are always genuinely the best available deal'],
+    options: ['Always trust the displayed discount percentage as a completely accurate reflection of savings because FCCPC regulations require Nigerian retailers to be truthful about original prices and promotional discounts', 'Independently verify typical market pricing rather than relying solely on the anchor price presented in the promotion', 'Price anchoring has no real influence on how discounts are perceived', 'Discounted prices are always genuinely the best available deal'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -611,7 +611,7 @@ const questions: Question[] = [
   {
     id: 'mk-045',
     text: 'Why might a business owner need to balance persuasive marketing with honest representation of their product or service?',
-    options: ['Honest representation has no real bearing on long-term business success', 'Overstated or misleading marketing can damage trust and reputation over time, even if it drives short-term sales', 'Persuasive marketing should always prioritize sales over honesty with no real consequences', 'Marketing honesty is only relevant for very large corporations'],
+    options: ['Honest product representation has absolutely no real bearing on long-term business success, customer retention, or repeat purchases in the Nigerian market', 'Overstated or misleading marketing can damage trust and reputation over time, even if it drives short-term sales', 'Persuasive marketing should always prioritize sales over honesty with no real consequences', 'Marketing honesty is only relevant for very large corporations'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -621,7 +621,7 @@ const questions: Question[] = [
   {
     id: 'mk-046',
     text: 'What\'s a sound reason to be cautious of marketing that heavily emphasizes emotional appeals over factual product information?',
-    options: ['Emotional appeals never actually affect purchase decisions in any meaningful way', 'Strong emotional framing can sometimes obscure a clear-eyed evaluation of actual value or suitability', 'Marketing should always rely primarily on emotional appeals with no factual grounding', 'Emotional marketing appeals are always a sign of a trustworthy product'],
+    options: ['Emotional advertising appeals have been shown by research to never actually affect purchase decisions or consumer behaviour in any meaningful and measurable way', 'Strong emotional framing can sometimes obscure a clear-eyed evaluation of actual value or suitability', 'Marketing should always rely primarily on emotional appeals with no factual grounding', 'Emotional marketing appeals are always a sign of a trustworthy product'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -817,7 +817,7 @@ const questions: Question[] = [
     id: 'mk-060',
     text: "What does \"customer loyalty\" mean in marketing?",
     options: [
-      "A customer who has never missed a monthly payment on their credit account over the past two years",
+      "A customer who has never missed a single monthly payment on their credit account or store card over the previous two full years of continuous account activity",
       "A customer who repeatedly chooses the same brand over competitors because of positive experience and trust",
       "A rating issued by the FCCPC to businesses that consistently resolve customer complaints within 24 hours",
       "A points-based reward programme where purchases earn credits redeemable for discounts on future orders",
@@ -877,7 +877,7 @@ const questions: Question[] = [
     id: 'mk-064',
     text: "What is \"content marketing\"?",
     options: [
-      "Traditional advertising through television commercials where a company pays for scheduled broadcast slots",
+      "Traditional outbound advertising conducted exclusively through television commercials where a company negotiates and pays for scheduled broadcast slots during peak viewing hours on major Nigerian channels",
       "Creating and sharing valuable, relevant content (articles, videos, podcasts) to attract and engage a target audience",
       "Paying well-known Nigerian celebrities or public figures a fee to appear in and endorse product advertisements",
       "Distributing free product samples in markets and shopping malls so potential customers can try before they buy",
@@ -977,7 +977,7 @@ const questions: Question[] = [
     id: 'mk-071',
     text: "What is \"brand equity\"?",
     options: [
-      "The current market valuation of a company\'s logo and visual design assets as assessed by an independent IP lawyer",
+      "The current total market valuation of a company\'s logo, visual identity, and associated intellectual property assets as formally assessed by a certified independent IP lawyer or brand valuation firm",
       "The added value a brand name brings to a product — customers pay more for a branded product than an unbranded equivalent",
       "The total annual budget a company allocates to marketing, advertising, and brand-building activities combined",
       "The gross revenue earned by a company directly from its advertising campaigns over a given financial year",
@@ -1077,7 +1077,7 @@ const questions: Question[] = [
     id: 'mk-078',
     text: "What is \"cohort analysis\" in marketing?",
     options: [
-      "A deep-dive analysis of one individual customer\'s complete purchase history and support interactions over their entire lifetime with the business",
+      "A comprehensive deep-dive analysis of one individual customer\'s complete purchase history and all recorded support interactions over their entire lifetime relationship with the business",
       "Grouping customers by shared characteristics (e.g. acquisition month) and tracking their behaviour over time to measure retention and lifetime value",
       "A technique used to benchmark a company\'s marketing performance against rival brands by comparing campaign metrics and media spend",
       "A type of market segmentation that divides consumers into groups based on the geographic region of Nigeria where they currently reside",
@@ -1107,7 +1107,7 @@ const questions: Question[] = [
     id: 'mk-080',
     text: "What is \"marketing attribution\" and why is it challenging?",
     options: [
-      "A simplified model that assigns 100% of the credit for any sale to the very last marketing touchpoint the customer encountered before converting",
+      "A simplified last-touch model that assigns 100% of the credit for any sale to the very last marketing touchpoint the customer encountered immediately before converting, disregarding all prior channel interactions",
       "Determining which marketing activities contributed to a conversion — challenging because customers interact with multiple touchpoints across a journey",
       "A financial analysis method used exclusively to calculate the return on investment from paid search and display advertising campaigns",
       "A strategic planning process focused solely on measuring how many people recall a brand after exposure to an awareness-level advertising campaign",

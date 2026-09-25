@@ -16,7 +16,7 @@ const questions: Question[] = [
     id: 'ln-002',
     text: 'What is a "credit score" and who maintains credit history in Nigeria?',
     options: [
-      'A numerical score of annual income and tax compliance; reported to FIRS and shared with lenders across Nigeria',
+      'A numerical score of annual income and tax compliance maintained by FIRS and automatically shared with all licensed lenders operating across Nigeria',
       'A measure of your creditworthiness based on borrowing history; tracked by credit bureaus like CRC, CreditRegistry, and FirstCentral',
       'A CBN-issued grade for all account holders based on monthly transaction volume and number of active banking products',
       'A rating based on your SSCE and university results used by banks to determine your loan repayment likelihood',
@@ -43,7 +43,7 @@ const questions: Question[] = [
     id: 'ln-004',
     text: 'What is the MOST dangerous type of informal loan in Nigeria?',
     options: [
-      'Bank personal loan with 25% annual interest',
+      'Commercial bank personal loan with 25% annual interest, fully regulated by the CBN and requiring documented proof of income',
       "Ajo contributions (rotating savings)",
       'Loan shark (shylock) charging 50–100% interest per month',
       'Microfinance loan at 40% annual interest',
@@ -107,7 +107,7 @@ const questions: Question[] = [
     id: 'ln-008',
     text: 'Which action HURTS your credit score the most?',
     options: [
-      'Paying your loan a few days late occasionally',
+      'Paying your loan instalments a few days late on multiple occasions without formally notifying your lender in advance',
       'Defaulting completely on a loan (missing all repayments)',
       'Applying for too many loans at once',
       'Closing an old credit card account',
@@ -124,7 +124,7 @@ const questions: Question[] = [
     id: 'ln-009',
     text: 'What does it mean to "borrow" money?',
     options: [
-      'To earn money by working',
+      'To earn money by working hard at a job or completing assigned tasks in exchange for payment',
       'To receive money you must pay back later',
       'To save money in a piggy bank',
       'To give money away as a gift',
@@ -139,7 +139,7 @@ const questions: Question[] = [
     id: 'ln-010',
     text: 'Tunde borrowed ₦200 from his sister to buy a book. He now has ₦200 saved. What should he do?',
     options: [
-      'Spend the ₦200 on something fun',
+      'Spend the ₦200 on something fun since his sister has not yet asked him to return it',
       'Pay his sister back — he owes her the money',
       'Save it and pay later when he has more',
       'Ask his sister to forget about the debt',
@@ -154,7 +154,7 @@ const questions: Question[] = [
     id: 'ln-011',
     text: 'When you borrow money from a bank, you usually have to pay back:',
     options: [
-      'Exactly the same amount you borrowed — nothing more',
+      'Exactly the same amount you borrowed — Nigerian banks are prohibited from adding any fees or interest charges',
       'The amount you borrowed plus extra money called interest',
       'Half the amount you borrowed',
       'Twice the amount immediately',
@@ -183,7 +183,7 @@ const questions: Question[] = [
   {
     id: 'ln-013',
     text: 'Nkechi borrowed ₦500 and agreed to pay back ₦550. The extra ₦50 she pays back is called:',
-    options: ['A tip', 'Interest', 'Tax', 'A deposit'],
+    options: ['A service charge', 'Interest', 'Tax', 'A processing fee'],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -197,7 +197,7 @@ const questions: Question[] = [
       'To buy sweets and snacks you cannot afford',
       'To pay for school fees that will help you earn more in the future',
       'To bet on a football match',
-      'To buy the latest phone because everyone has one',
+      'To buy the latest phone model because all your classmates already own one and you want to fit in socially',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -241,7 +241,7 @@ const questions: Question[] = [
   {
     id: 'ln-017',
     text: 'Chioma borrows ₦5,000 from her classmate. Her classmate asks for ₦5,500 back. What is the ₦500 called?',
-    options: ['A gift', 'Interest', 'Tax', 'A fine'],
+    options: ['A donation', 'Interest', 'Tax', 'A fine'],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -269,7 +269,7 @@ const questions: Question[] = [
     id: 'ln-019',
     text: 'Which of these is the BEST reason for a teenager to borrow money?',
     options: [
-      'To buy a new gaming console everyone at school has',
+      'To buy a brand-new gaming console that every student in your school currently owns and uses on a daily basis',
       'To invest in a skill course that will help earn income later',
       'To bet on a football match',
       'To pay for clothes for a party',
@@ -285,7 +285,7 @@ const questions: Question[] = [
     id: 'ln-020',
     text: 'A loan app sends Kelechi a message: "₦50,000 approved! No documents needed. Just download and collect." What should Kelechi do?',
     options: [
-      'Download and collect the money immediately',
+      'Download and collect the money immediately — apps listed on official app stores are always safe and CBN-approved',
       'Read the terms carefully — high-interest or predatory loan apps can charge 30–100% monthly',
       'Share the link with friends',
       'Download because no-document loans are always government-approved',
@@ -322,7 +322,7 @@ const questions: Question[] = [
     id: 'ln-022',
     text: 'What does it mean to "repay a loan in instalments"?',
     options: [
-      'Paying back all the money at once on one day',
+      'Paying back the entire amount you borrowed in a single lump-sum payment on the agreed final due date',
       'Paying back the loan in smaller amounts spread over several weeks or months',
       'Getting an extension to avoid paying at all',
       'Paying only the interest and never the original amount',
@@ -338,7 +338,7 @@ const questions: Question[] = [
     id: 'ln-023',
     text: 'Tobi sees an ad: "Borrow ₦100,000 — pay back only ₦105,000 after 2 months!" He thinks this sounds great. What should he check first?',
     options: [
-      'Whether the app was endorsed by a popular public figure or featured in a recent newspaper consumer story',
+      'Whether the app was endorsed by a popular public figure or featured in a recent newspaper consumer finance story as a safe option',
       'The actual monthly interest rate — ₦5,000 on ₦100,000 over 2 months = 2.5% per month = 30% per year, which is high',
       'Whether the lender has at least one registered physical branch and is listed on the Nigerian Stock Exchange',
       'Whether the CBN has issued any formal consumer advisory or public warning circular about this specific app',
@@ -356,7 +356,7 @@ const questions: Question[] = [
     options: [
       'No — Nigerian stock market returns average 20% per year, comfortably covering a 15% annual loan rate',
       'Yes — investing borrowed money is very risky because if the investment falls, you still owe the full loan plus interest',
-      'No — the Securities and Exchange Commission prohibits Nigerians from using borrowed money to invest in equities',
+      'No — the Securities and Exchange Commission of Nigeria formally prohibits all citizens from using borrowed funds to purchase any quoted equities on the NSE',
       'No — dividend income from NSE-listed stocks is fully tax-exempt, making borrowed capital investment always profitable',
     ],
     correctIndex: 1,
@@ -411,7 +411,7 @@ const questions: Question[] = [
     options: [
       'Option A is cheaper — 2% sounds small',
       'Option B is cheaper — Option A costs ₦3,600 vs Option B\'s ₦3,750',
-      'Option B is significantly cheaper — it costs ₦3,750 vs ₦3,600',
+      'Option B is significantly cheaper because it costs only ₦3,750 in total interest compared to Option A\'s ₦3,600',
       'Option B is cheaper — it costs only ₦3,750 interest vs ₦3,600',
     ],
     correctIndex: 1,
@@ -441,7 +441,7 @@ const questions: Question[] = [
     id: 'ln-030',
     text: 'What is "loan sharks" and how are they different from microfinance banks?',
     options: [
-      'Loan sharks are informal cooperatives licensed by state governments but legally exempt from CBN interest-rate caps and oversight',
+      'Loan sharks are informal money-lending cooperatives licensed by state governments but fully exempt from all CBN interest-rate caps and consumer protection oversight rules',
       'Loan sharks operate illegally with extreme rates (50–200% monthly) and use threats/harassment; microfinance banks are regulated by the CBN',
       'Microfinance banks and loan sharks charge identical interest rates; the only practical difference is the repayment schedule they offer',
       'Loan sharks operate under a special CBN waiver that permits higher rates in financially underserved Nigerian communities',
@@ -515,7 +515,7 @@ const questions: Question[] = [
     id: 'ln-035',
     text: 'Which is the BETTER choice for Amara who needs ₦2,000 for school supplies?',
     options: [
-      'Borrow ₦2,000 from a money lender who charges ₦500 interest per week',
+      'Borrow ₦2,000 from a street money lender who charges ₦500 interest per week and does not accept late or partial payments',
       'Save ₦500 per week from her pocket money for 4 weeks and buy it without borrowing',
       'Steal the supplies from the school store',
       'Give up on getting the supplies',
@@ -530,7 +530,7 @@ const questions: Question[] = [
     id: 'ln-036',
     text: 'What does it mean to "repay a loan"?',
     options: [
-      'To borrow more money from a different person',
+      'To borrow more money from a second lender so you can use those new funds to pay off what you owe the first lender',
       'To pay back the money you borrowed, plus any interest agreed upon',
       'To forget about the money you owe',
       'To give the lender a gift instead of cash',
@@ -570,7 +570,7 @@ const questions: Question[] = [
   {
     id: 'ln-039',
     text: 'Why is it important to only borrow what you can pay back?',
-    options: ['So you don\'t end up owing more than you can handle', 'Borrowing amounts never matter', 'It\'s better to borrow as much as possible', 'Paying back isn\'t necessary'],
+    options: ['So you don\'t end up owing more than you can handle', 'Borrowing amounts never matter because Nigerian lenders are required by the CBN to forgive any balance you genuinely cannot repay', 'It\'s better to borrow as much as possible', 'Paying back isn\'t necessary'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -580,7 +580,7 @@ const questions: Question[] = [
   {
     id: 'ln-040',
     text: 'What might happen if you keep borrowing and never pay anyone back?',
-    options: ['People may stop trusting you to lend to you again', 'Nothing changes at all', 'You\'ll automatically get more money', 'Everyone will lend you more'],
+    options: ['People may stop trusting you to lend to you again', 'Nothing changes at all because most lenders in Nigeria do not track or record informal borrowing history', 'You\'ll automatically get more money', 'Everyone will lend you more'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -590,7 +590,7 @@ const questions: Question[] = [
   {
     id: 'ln-041',
     text: 'If a friend can\'t pay you back on time but explains why, what\'s a kind response?',
-    options: ['Understand and agree on a new time together', 'Get very angry immediately', 'Never speak to them again', 'Take something of theirs without asking'],
+    options: ['Understand and agree on a new time together', 'Get very angry immediately', 'Never speak to them again', 'Take something of theirs without asking since late repayment is essentially the same as breaking a promise entirely'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -600,7 +600,7 @@ const questions: Question[] = [
   {
     id: 'ln-042',
     text: 'Why might it be better to save for something instead of borrowing for it?',
-    options: ['You avoid owing money to someone else', 'Saving is always impossible', 'Borrowing is always free', 'There\'s no difference at all'],
+    options: ['You avoid owing money to someone else', 'Saving is always impossible since it takes far too long and costs the same as borrowing once inflation is accounted for', 'Borrowing is always free', 'There\'s no difference at all'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -635,7 +635,7 @@ const questions: Question[] = [
   {
     id: 'ln-045',
     text: 'Why should you think carefully before borrowing money?',
-    options: ['Because you\'ll need to pay it back later', 'Borrowing has no consequences', 'It\'s the same as receiving a gift', 'You never need to think about it'],
+    options: ['Because you\'ll need to pay it back later', 'Borrowing has no real consequences because most Nigerian lenders automatically forgive small unpaid balances after 90 days', 'It\'s the same as receiving a gift', 'You never need to think about it'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -730,7 +730,7 @@ const questions: Question[] = [
   {
     id: 'ln-052',
     text: 'You need ₦10,000 quickly. Which is a wiser first question to ask?',
-    options: ['Which lender offers instant approval regardless of terms', 'What will this actually cost me in total, including interest and fees', 'How fast can I get the largest amount possible', 'Which option requires the least paperwork only'],
+    options: ['Which lender offers the fastest instant approval regardless of interest rate, fees, or repayment terms', 'What will this actually cost me in total, including interest and fees', 'How fast can I get the largest amount possible', 'Which option requires the least paperwork only'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -740,7 +740,7 @@ const questions: Question[] = [
   {
     id: 'ln-053',
     text: 'Why do some loan apps aggressively push notifications encouraging you to borrow more?',
-    options: ['They genuinely have your best financial interest as their only goal', 'It can be designed to encourage borrowing that benefits the lender through fees and interest', 'Notifications have no relation to lender profit', 'They only notify you for safety reasons'],
+    options: ['They genuinely act in your best financial interest and send notifications only to help you access funds exactly when you need them most', 'It can be designed to encourage borrowing that benefits the lender through fees and interest', 'Notifications have no relation to lender profit', 'They only notify you for safety reasons'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -750,7 +750,7 @@ const questions: Question[] = [
   {
     id: 'ln-054',
     text: 'What\'s a responsible approach before taking any loan?',
-    options: ['Confirm you have a realistic plan to repay it on the agreed terms', 'Borrow first and figure out repayment later', 'Only consider the amount you\'ll receive, not repayment', 'Assume repayment will work itself out'],
+    options: ['Confirm you have a realistic plan to repay it on the agreed terms', 'Borrow first and figure out how you will handle the repayment obligation later once the funds are already in your account', 'Only consider the amount you\'ll receive, not repayment', 'Assume repayment will work itself out'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -866,7 +866,7 @@ const questions: Question[] = [
     id: 'ln-062',
     text: 'You\'re juggling multiple debts with different interest rates. What\'s a commonly sound prioritization strategy?',
     options: [
-      'Pay off the loan with the longest remaining term first to reduce the number of active obligations as quickly as possible',
+      'Pay off the loan with the longest remaining repayment term first in order to reduce the total number of active debt obligations as quickly as possible',
       'Consider prioritizing higher-interest debt to reduce total interest paid over time, while maintaining minimum payments elsewhere',
       'Make equal minimum payments across all debts simultaneously to demonstrate consistent repayment discipline to bureaus',
       'Negotiate with each lender to reduce all balances to zero before resuming regular repayments on any account',
@@ -895,7 +895,7 @@ const questions: Question[] = [
   {
     id: 'ln-064',
     text: 'What\'s a reasonable response if a lender pressures you into borrowing more than you originally intended?',
-    options: ['Accept the increased amount since the lender knows best', 'Reassess your actual need and stick to what fits your realistic repayment ability', 'Pressure from lenders should always be followed', 'More borrowed money is always beneficial'],
+    options: ['Accept the larger amount without question since the lender has professionally assessed your full repayment capacity already', 'Reassess your actual need and stick to what fits your realistic repayment ability', 'Pressure from lenders should always be followed', 'More borrowed money is always beneficial'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -945,7 +945,7 @@ const questions: Question[] = [
   {
     id: 'ln-068',
     text: "Why do banks charge interest on loans?",
-    options: ["As a punishment for borrowing", "As the bank's fee for lending and taking on risk", "Because the government requires it", "To make loans unattractive"],
+    options: ["As a government-mandated penalty applied to every loan regardless of the borrower's repayment history or credit score", "As the bank's fee for lending and taking on risk", "Because the government requires it", "To make loans unattractive"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -955,7 +955,7 @@ const questions: Question[] = [
   {
     id: 'ln-069',
     text: "Which is the MOST important thing to consider before borrowing money?",
-    options: ["Whether your friend borrowed money too", "Whether you can afford to repay it on time", "Whether the bank has a nice app", "How long you have banked with them"],
+    options: ["Whether your classmates or close friends have also recently borrowed from the same lender", "Whether you can afford to repay it on time", "Whether the bank has a nice app", "How long you have banked with them"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -1035,7 +1035,7 @@ const questions: Question[] = [
   {
     id: 'ln-076',
     text: "What is \"principal\" in a loan?",
-    options: ["The interest charged on the loan", "The original amount borrowed before interest", "The monthly repayment amount", "The penalty for late payment"],
+    options: ["The total interest and all fees charged by the lender across the full duration of the loan repayment period", "The original amount borrowed before interest", "The monthly repayment amount", "The penalty for late payment"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -1070,7 +1070,7 @@ const questions: Question[] = [
   {
     id: 'ln-079',
     text: "What is a \"microfinance loan\"?",
-    options: ["A very large loan for corporations", "A small loan for low-income individuals or small businesses", "A government grant that does not need repayment", "A loan only for students"],
+    options: ["A very large loan for corporations", "A small loan for low-income individuals or small businesses", "A government education grant provided to qualifying citizens that requires absolutely no form of repayment", "A loan only for students"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -1180,7 +1180,7 @@ const questions: Question[] = [
   {
     id: 'ln-088',
     text: "What is the purpose of a \"guarantor\" on a loan?",
-    options: ["A third party who guarantees to repay the loan if the borrower defaults", "A bank official who approves the loan", "A co-investor in the loan purpose", "A government representative who witnesses the signing"],
+    options: ["A third party who guarantees to repay the loan if the borrower defaults", "A bank official who formally reviews and approves the loan application on behalf of the lending institution's credit committee", "A co-investor in the loan purpose", "A government representative who witnesses the signing"],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -1205,7 +1205,7 @@ const questions: Question[] = [
   {
     id: 'ln-090',
     text: "What does \"refinancing\" a loan mean?",
-    options: ["Taking a second loan in addition to the first", "Replacing an existing loan with a new one, usually at better terms", "Extending the loan repayment date without new terms", "Paying off a loan early"],
+    options: ["Taking a second loan from a different lender in addition to your existing one to increase your total available funds", "Replacing an existing loan with a new one, usually at better terms", "Extending the loan repayment date without new terms", "Paying off a loan early"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -1245,7 +1245,7 @@ const questions: Question[] = [
   {
     id: 'ln-094',
     text: "What does \"balloon payment\" mean in loan structuring?",
-    options: ["Multiple small payments spread evenly", "A large lump-sum payment due at the end of a loan term", "An early repayment penalty", "Automatic loan renewal at maturity"],
+    options: ["Multiple small equal payments spread evenly across the entire duration of the loan repayment period", "A large lump-sum payment due at the end of a loan term", "An early repayment penalty", "Automatic loan renewal at maturity"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['adults'],
@@ -1280,7 +1280,7 @@ const questions: Question[] = [
   {
     id: 'ln-097',
     text: "What is the 'term' (or 'life') of a loan?",
-    options: ["The interest rate applied over the loan period", "The total cost of the loan including all fees", "The length of time you are given to repay the loan in full", "The number of payments you have already missed"],
+    options: ["The annual interest rate applied and compounded over the entire duration of the loan repayment period", "The total cost of the loan including all fees", "The length of time you are given to repay the loan in full", "The number of payments you have already missed"],
     correctIndex: 2,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -1321,7 +1321,7 @@ const questions: Question[] = [
     id: 'ln-100',
     text: "Which is a key risk of an adjustable-rate (variable-rate) loan?",
     options: [
-      "The lender can raise your rate only once in the full loan term as permitted by CBN consumer guidelines",
+      "The lender can raise your variable interest rate only once during the entire loan term as currently permitted under CBN consumer lending guidelines",
       "CBN regulations require variable-rate lenders to notify borrowers three months before any rate increase",
       "If market interest rates rise, your monthly repayments can increase — potentially making the loan unaffordable",
       "The lender must absorb all rate increases above the MPR under the terms of the Consumer Protection Act",
@@ -1366,7 +1366,7 @@ const questions: Question[] = [
     id: 'ln-103',
     text: "What is 'compound interest' on a loan or debt?",
     options: [
-      "Interest charged each month as a fixed percentage of the original amount disbursed, staying constant throughout the entire loan term",
+      "Interest charged each month as a fixed percentage of the original amount disbursed, staying entirely constant and never changing at any point throughout the full repayment term",
       "Interest recalculated annually on the outstanding balance, with any overpayment returned to the borrower at the close of each year",
       "A blended interest method that averages the rates on all your active loans into one combined monthly percentage charge",
       "Interest calculated on both the original principal and any previously accumulated unpaid interest — causing debt to grow faster over time",
@@ -1396,7 +1396,7 @@ const questions: Question[] = [
     id: 'ln-105',
     text: "What does it mean to 'refinance' a loan?",
     options: [
-      "Transfer your outstanding loan balance to a new lender who offers a CBN-regulated grace period with no penalties on the existing debt",
+      "Transfer your entire outstanding loan balance to a new CBN-licensed lender who offers a regulated grace period with absolutely zero penalties or fees applied to any remaining amount on the original debt",
       "Apply for a loan top-up from your existing lender to cover both the full outstanding principal and all accrued fees at once",
       "Replace your current loan with a new loan — usually at better terms (lower rate, lower payment, or different term) — paying off the original in the process",
       "Arrange for your employer to settle the entire outstanding loan balance and deduct repayments directly from your monthly salary",
@@ -1426,7 +1426,7 @@ const questions: Question[] = [
     id: 'ln-107',
     text: "Which of the following is a potential downside of refinancing a loan?",
     options: [
-      "Your original lender must legally waive any remaining balance once a formal refinancing agreement has been signed",
+      "Your original lender is legally required to waive the entire remaining balance and all accumulated interest once a formal refinancing agreement with a new institution has been duly signed",
       "Banks are required by CBN to offer every customer one free refinancing arrangement every five calendar years",
       "The new lender assumes full liability for the original loan, meaning there is absolutely no cost to the borrower",
       "Upfront fees and closing costs may outweigh the interest savings, and extending the loan term means paying more total interest even at a lower rate",

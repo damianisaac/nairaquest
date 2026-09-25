@@ -8,7 +8,7 @@ const questions: Question[] = [
     id: 'os-001',
     text: 'You are playing a game on your phone and a message pops up saying "Buy 500 coins for ₦1,000!" What should you do first?',
     options: [
-      'Buy the coins right away so you can keep playing',
+      'Buy the coins right away without asking anyone at home first',
       'Ask a parent or guardian before spending any real money',
       'Enter any card number you can find at home',
       'Ignore all messages in games forever',
@@ -64,7 +64,7 @@ const questions: Question[] = [
     id: 'os-004',
     text: 'You want to buy a toy you saw advertised on a website. The price is incredibly cheap — much lower than any shop. What should you do?',
     options: [
-      'Order it immediately before the price goes up',
+      'Order it immediately before the low price disappears and the offer closes',
       'Tell a parent and ask them to check if the website is real',
       'Pay with your dad\'s card without telling him',
       'Share the link with all your friends so they can buy too',
@@ -84,7 +84,7 @@ const questions: Question[] = [
       'The game company is giving you free money',
       'The game company earns real money when you watch the ad',
       'The advert is secretly stealing your data',
-      'It is always a trap and you should never do it',
+      'It is always a dangerous trap and you should report the game and never watch ads in it',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -98,7 +98,7 @@ const questions: Question[] = [
     id: 'os-006',
     text: 'What does "in-app purchase" mean?',
     options: [
-      'A free bonus inside the game',
+      'A free bonus reward the game company gives you as a gift for playing well',
       'Buying something inside an app using real money',
       'A secret cheat code',
       'An update that makes the game better for free',
@@ -132,7 +132,7 @@ const questions: Question[] = [
     id: 'os-008',
     text: 'A "loot box" in a game means you pay real money but don\'t know exactly what you will get. This is similar to:',
     options: [
-      'Saving money in a piggy bank',
+      'Saving money in a piggy bank where you always know exactly what you will get back',
       'Gambling, because the outcome is random',
       'A gift from the game makers',
       'A guaranteed rare item',
@@ -151,7 +151,7 @@ const questions: Question[] = [
     options: [
       'Try it — free Robux is always worth it',
       'Refuse, because sharing your password lets strangers take your account',
-      'Share your password but change it right after',
+      'Share your password just this once, but note the site down and change your password right after',
       'Tell all your friends so they can get free Robux too',
     ],
     correctIndex: 1,
@@ -188,7 +188,7 @@ const questions: Question[] = [
       'Reply with the OTP immediately to save your account',
       'Delete the message — banks never ask for your OTP by text',
       'Forward it to your parents so they can handle it',
-      'Reply asking the sender to prove they are from GTBank',
+      'Reply asking the sender to prove their GTBank identity before you share any account details',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -209,7 +209,7 @@ const questions: Question[] = [
     options: [
       'Follow all their tips — guaranteed wins are real',
       'Be very skeptical. No one can guarantee betting outcomes, this is a trap',
-      'Share it with friends so everyone can win together',
+      'Share it with close friends and family so everyone you know can benefit from the guaranteed wins',
       'Bet your full allowance this weekend to test it',
     ],
     correctIndex: 1,
@@ -232,7 +232,7 @@ const questions: Question[] = [
       'Because only adults are allowed to bet',
       'Because the odds are set so the company profits over time, not the bettor',
       'Because the government takes all the winnings',
-      'Because you need a special licence to collect winnings',
+      'Because you need a special government-issued licence and tax clearance before winnings can be paid',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -246,7 +246,7 @@ const questions: Question[] = [
     id: 'os-014',
     text: 'You see a social media post: "Follow and repost this page — we are giving away ₦50,000 to 10 lucky winners!" Which is true?',
     options: [
-      'Legitimate brands run giveaways this way all the time',
+      'Legitimate brands occasionally run real giveaways this way, and you should always participate to win',
       'It is likely a follower-farming tactic or a scam to collect your details',
       'You should follow and repost to improve your chances',
       'You should DM them your account number to get the prize',
@@ -263,7 +263,7 @@ const questions: Question[] = [
     id: 'os-015',
     text: 'A stranger you met online says they are a rich oil worker. After chatting for two weeks they say they need you to send ₦5,000 for an emergency — they will pay you back ₦50,000. This is most likely:',
     options: [
-      'A genuine emergency from a trusted contact',
+      'A genuine emergency from a person you have built a real and trusting relationship with over time',
       'A romance/relationship scam designed to trick you into sending money',
       'A legitimate loan arrangement',
       'A misunderstanding — just send the money to help',
@@ -299,7 +299,7 @@ const questions: Question[] = [
     options: [
       'Buy immediately before stocks run out',
       'Verify the website, check reviews, and use a payment method with buyer protection',
-      'Pay by direct bank transfer since it feels more personal',
+      'Pay by direct bank transfer to the seller\'s personal account since that feels more secure and direct',
       'Order it and dispute later if something is wrong',
     ],
     correctIndex: 1,
@@ -334,7 +334,7 @@ const questions: Question[] = [
       'An automated method for filtering spam by analysing a sender\'s reputation score',
       'A fraud where criminals impersonate trusted organisations to steal your login details or money',
       'A denial-of-service attack that overwhelms bank servers with fake web traffic',
-      'A firewall technique that banks use to block unauthorised access to their account systems',
+      'A firewall technique banks use to block all unauthorised remote access attempts to their protected customer account systems',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -348,7 +348,7 @@ const questions: Question[] = [
     id: 'os-020',
     text: 'Your BVN (Bank Verification Number) is requested by an unknown app. Should you share it?',
     options: [
-      'Yes — sharing your BVN with any registered Nigerian app speeds up identity verification safely',
+      'Yes — sharing your BVN with any officially registered Nigerian fintech app is required by CBN rules to speed up digital identity verification safely',
       'No — your BVN is linked to all your bank accounts and must be shared only with verified banks or regulators',
       'Yes — the CBN has authorised all app developers to collect BVN data to prevent fraud',
       'Yes — as long as the app has a valid Play Store listing, sharing your BVN is completely safe',
@@ -368,7 +368,7 @@ const questions: Question[] = [
       'The influencer has done their research and this is safe',
       'It is almost certainly a scam — guaranteed crypto returns do not exist',
       'You should invest a small amount to test it first',
-      'Crypto is always risky but this could be a rare exception',
+      'Crypto is always risky but with expert guidance this influencer-backed platform could be a rare legitimate exception',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -385,7 +385,7 @@ const questions: Question[] = [
       'your date of birth (e.g. 15042007)',
       'your phone number',
       'A random mix of letters, numbers and symbols (e.g. Tr@58!nG2)',
-      '"password123" because it is easy to remember',
+      '"password123" combined with your initials, since a personalised common phrase is still easy to type and remember',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -401,7 +401,7 @@ const questions: Question[] = [
     id: 'os-023',
     text: 'A loan app approved you instantly for ₦50,000 with no paperwork. Two weeks later you are struggling to repay — the app now threatens to message everyone in your phone contacts. What is the correct response?',
     options: [
-      'Repay the full amount as quickly as possible, even if it means borrowing from family or friends',
+      'Repay the full outstanding amount as quickly as possible, even if it means urgently borrowing cash from family members or close friends',
       'Report the app to CBN, FCCPC, and the App Store/Play Store — contact shaming is illegal in Nigeria',
       'Delete the app immediately and change all your phone contacts to prevent them being messaged',
       'Consult a lawyer and threaten legal action before the company can reach your contact list',
@@ -423,7 +423,7 @@ const questions: Question[] = [
     id: 'os-024',
     text: 'An investment group on Telegram promises "300% ROI in 3 weeks, backed by our proprietary crypto trading algorithm." What does this most likely describe?',
     options: [
-      'A sophisticated but legitimate algorithmic trading fund',
+      'A sophisticated but legitimate high-frequency algorithmic trading fund using proprietary AI models to generate consistent returns',
       'A pump-and-dump or Ponzi scheme — no algorithm can guarantee such returns',
       'A high-risk but potentially rewarding DeFi protocol',
       'A forex arbitrage opportunity available only to insiders',
@@ -445,7 +445,7 @@ const questions: Question[] = [
     id: 'os-025',
     text: 'You receive a realistic-looking email from "firs.gov.ng-taxrefund.com" saying you are owed a tax refund and should click a link to claim it. What should concern you first?',
     options: [
-      'That the refund amount is far too high and does not match any payment you have actually made',
+      'That the refund amount stated in the email is far too high and does not match any tax payment you have actually made',
       'The domain name — the real FIRS website is firs.gov.ng, not a subdomain of an unrelated site',
       'That the email asks for your bank account number in order to deposit the refund directly',
       'That FIRS would typically notify you about a refund through your registered postal address',
@@ -462,7 +462,7 @@ const questions: Question[] = [
     id: 'os-026',
     text: 'A BNPL (Buy Now Pay Later) service offers "zero interest" for 6 months. After the 6 months, what is the most important thing to understand?',
     options: [
-      'The provider will notify you by email before converting any balance into a paid plan at month end',
+      'The BNPL provider will send you a timely email notification well before converting any remaining balance into a paid instalment plan at month end',
       'High deferred interest may apply to the full original purchase amount if not fully paid within the promotional period',
       'The BNPL provider is legally required to write off any unpaid balance once the zero-interest window expires',
       'Your remaining balance transfers automatically to an interest-free instalment wallet and clears gradually',
@@ -496,7 +496,7 @@ const questions: Question[] = [
     id: 'os-028',
     text: 'A forex trading "mentor" on Instagram shows screenshots of massive profits and charges ₦150,000 for his "funded account" course. What is the most likely reality?',
     options: [
-      'Successful forex traders frequently mentor beginners online as a way to build credibility and give back to the community',
+      'Successful forex traders frequently mentor complete beginners online as a legitimate way to build personal credibility and give back to the wider trading community',
       'The screenshots may be fabricated, and funded account schemes often require you to lose money on a demo test to keep you paying',
       'Instagram mentors registered with the CBN are required to verify their trading results before charging any course fees',
       'A premium course fee is a reliable indicator that the mentor has genuine market experience and delivers verified returns',
@@ -513,7 +513,7 @@ const questions: Question[] = [
     id: 'os-029',
     text: 'You receive a WhatsApp voice note from your "CEO" saying to urgently transfer ₦500,000 to a vendor account for a contract. You do not recognise the vendor. What is this?',
     options: [
-      'A genuine business instruction — voice notes from a CEO\'s number always confirm authenticity of a payment request',
+      'A fully genuine business instruction — a voice note from the CEO\'s verified number always definitively confirms the authenticity of any urgent payment request',
       'A likely Business Email/Impersonation Compromise (BEC) scam — verify through a separate channel before any transfer',
       'A routine vendor payment — unfamiliar account details are commonly used to protect the vendor\'s banking privacy',
       'An urgent but legitimate instruction — slow responses to vendor payments can trigger contract penalties in Nigeria',
@@ -564,7 +564,7 @@ const questions: Question[] = [
     id: 'os-032',
     text: 'Which of these behaviours most reduces your digital financial risk?',
     options: [
-      'Using the same strong password across all financial apps for consistency',
+      'Using the same single very strong password across all your financial apps and accounts so it is easier to remember consistently',
       'Enabling two-factor authentication (2FA) on all financial accounts and using unique passwords per app',
       'Only using mobile banking apps on public Wi-Fi where speed is fast',
       'Storing all your PINs and passwords in your phone\'s notes app for easy access',
@@ -581,7 +581,7 @@ const questions: Question[] = [
     id: 'os-033',
     text: 'A "pump-and-dump" crypto scheme works by:',
     options: [
-      'Governments coordinating with crypto exchanges to raise token values temporarily and attract foreign investment into local bonds',
+      'Governments and central banks coordinating with major crypto exchanges to temporarily raise specific token values and attract increased foreign portfolio investment into domestic bonds',
       'Organisers buying a low-value coin, hyping it publicly to drive up the price, then selling their holdings — crashing the price and leaving others with losses',
       'Mining pools combining their computing power to validate more blocks and collect higher transaction fees at peak network congestion',
       'Major crypto exchanges removing low-volume tokens from their listings after those coins fail to meet minimum daily trading thresholds',
@@ -631,7 +631,7 @@ const questions: Question[] = [
   {
     id: 'os-036',
     text: 'You\'re playing a game and it asks you to buy coins with real money. What should you do first?',
-    options: ['Buy immediately', 'Ask a parent or guardian first', 'Enter a card number you found', 'Ignore and keep playing'],
+    options: ['Buy the coins right away without asking anyone at home', 'Ask a parent or guardian first', 'Enter a card number you found', 'Ignore and keep playing'],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -641,7 +641,7 @@ const questions: Question[] = [
   {
     id: 'os-037',
     text: 'Why might in-game coins or gems actually cost real money, even though they look like game items?',
-    options: ['Because buying them often uses real money linked to an account', 'In-game currency is always completely free', 'In-game currency has no connection to real money at all', 'Only adults can ever buy in-game currency'],
+    options: ['Because buying them often uses real money linked to an account', 'In-game currency is always completely free', 'In-game currency is a purely digital reward system with no connection to real money or bank accounts at all', 'Only adults can ever buy in-game currency'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -651,7 +651,7 @@ const questions: Question[] = [
   {
     id: 'os-038',
     text: 'If a pop-up says you\'ve \'won a free prize\' and asks for personal details, what should you do?',
-    options: ['Tell a trusted adult and don\'t share any details', 'Fill in all the details right away', 'Share only some of the details', 'Ignore your parents and continue'],
+    options: ['Tell a trusted adult and don\'t share any details', 'Fill in all the details right away because official prize notifications only go to genuinely selected winners', 'Share only some of the details', 'Ignore your parents and continue'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -661,7 +661,7 @@ const questions: Question[] = [
   {
     id: 'os-039',
     text: 'Why should you never share a parent\'s card details, even if a game or app asks for them?',
-    options: ['Because it could lead to spending real money without permission', 'Card details have no real connection to spending money', 'Sharing card details is always completely safe', 'Only parents are ever able to see card details'],
+    options: ['Because it could lead to spending real money without permission', 'Card details are just account reference numbers that have no direct connection to spending or accessing any real money', 'Sharing card details is always completely safe', 'Only parents are ever able to see card details'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -671,7 +671,7 @@ const questions: Question[] = [
   {
     id: 'os-040',
     text: 'What\'s a smart rule about clicking buttons in games or apps that promise free rewards?',
-    options: ['Be careful, and check with a trusted adult if you\'re unsure', 'Click every button that promises a free reward', 'Free reward buttons are always completely safe', 'There\'s no need to be careful about any buttons'],
+    options: ['Be careful, and check with a trusted adult if you\'re unsure', 'Click every button that promises a free reward because game developers never include deceptive buttons in their apps', 'Free reward buttons are always completely safe', 'There\'s no need to be careful about any buttons'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -681,7 +681,7 @@ const questions: Question[] = [
   {
     id: 'os-041',
     text: 'Why might it be important to tell a parent if a game keeps asking you to spend more and more money?',
-    options: ['Because repeated spending requests could add up to a lot of real money', 'This pattern is completely normal and needs no attention', 'Games never ask for repeated purchases', 'Only very expensive games have this kind of pattern'],
+    options: ['Because repeated spending requests could add up to a lot of real money', 'This spending pattern is completely normal game design and needs absolutely no attention from any parent or guardian', 'Games never ask for repeated purchases', 'Only very expensive games have this kind of pattern'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -691,7 +691,7 @@ const questions: Question[] = [
   {
     id: 'os-042',
     text: 'What\'s a safe habit when using an app or website you\'ve never used before?',
-    options: ['Ask a trusted adult before entering any personal information', 'Enter your name and details right away without asking', 'New apps and websites are always automatically safe', 'There\'s no need to be cautious with new apps'],
+    options: ['Ask a trusted adult before entering any personal information', 'Enter your full name, number, and account details right away since new apps always need this information to work', 'New apps and websites are always automatically safe', 'There\'s no need to be cautious with new apps'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -701,7 +701,7 @@ const questions: Question[] = [
   {
     id: 'os-043',
     text: 'Why might strangers online sometimes try to trick children into sharing information about money?',
-    options: ['Because some people try to take advantage of others online for money', 'Strangers online are always trustworthy with money topics', 'This never actually happens online', 'Only adults are ever targeted by online tricks'],
+    options: ['Because some people try to take advantage of others online for money', 'Strangers online are always completely trustworthy when conversations involve money topics and personal financial information', 'This never actually happens online', 'Only adults are ever targeted by online tricks'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -711,7 +711,7 @@ const questions: Question[] = [
   {
     id: 'os-044',
     text: 'What\'s the safest response if an app or game makes you feel like you must buy something \'right now\'?',
-    options: ['Pause and check with a trusted adult before doing anything', 'Buy it immediately because of the urgency', 'Urgency in an app always means it\'s a genuine, safe deal', 'Ignore your own hesitation and proceed quickly'],
+    options: ['Pause and check with a trusted adult before doing anything', 'Buy it immediately because of the urgency', 'Urgency in an app always means it\'s a completely genuine, time-sensitive deal that you should act on without hesitation', 'Ignore your own hesitation and proceed quickly'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -756,7 +756,7 @@ const questions: Question[] = [
   {
     id: 'os-048',
     text: 'Why should you never share a one-time password (OTP) with anyone, even someone claiming to be from your bank?',
-    options: ['Legitimate banks never ask you to share your OTP with them', 'Sharing an OTP with your bank is always required and safe', 'OTPs have no real connection to account security', 'Only strangers ever ask for OTPs, never anyone else'],
+    options: ['Legitimate banks never ask you to share your OTP with them', 'Sharing your OTP with your bank\'s authorised security team is always fully required and completely safe whenever they request it', 'OTPs have no real connection to account security', 'Only strangers ever ask for OTPs, never anyone else'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -766,7 +766,7 @@ const questions: Question[] = [
   {
     id: 'os-049',
     text: 'What\'s a red flag when an online seller offers a popular item at a price far below what it\'s normally sold for?',
-    options: ['It\'s likely a scam or a fake listing designed to trick buyers', 'Extremely low prices are always a completely genuine bargain', 'Price has no connection to whether a listing might be a scam', 'This is a normal and safe pricing pattern'],
+    options: ['It\'s likely a scam or a fake listing designed to trick buyers', 'Extremely low prices compared to the market rate are always a completely genuine bargain from a legitimate seller', 'Price has no connection to whether a listing might be a scam', 'This is a normal and safe pricing pattern'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -776,7 +776,7 @@ const questions: Question[] = [
   {
     id: 'os-050',
     text: 'Why might an online \'relationship\' that quickly starts asking for money be considered a warning sign?',
-    options: ['Requests for money from someone you haven\'t met in person are a common scam pattern', 'This is a completely normal part of online relationships', 'Money requests in this context are always genuine and should be honored', 'There\'s no reason to be cautious in this kind of situation'],
+    options: ['Requests for money from someone you haven\'t met in person are a common scam pattern', 'This is a completely normal part of online relationships', 'Money requests from an online romantic interest are always genuine and should be honored as a sign of mutual trust in the relationship', 'There\'s no reason to be cautious in this kind of situation'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -786,7 +786,7 @@ const questions: Question[] = [
   {
     id: 'os-051',
     text: 'What\'s a smart response to a social media post promising \'send ₦1,000, receive ₦10,000 back\'?',
-    options: ['Send the money quickly before the offer ends', 'Recognize this as a common scam pattern and avoid participating', 'This is a normal and safe way that legitimate giveaways work', 'Encourage friends to participate immediately'],
+    options: ['Send the money quickly before the offer ends', 'Recognize this as a common scam pattern and avoid participating', 'This is a completely normal and safe way that verified brands and companies run their official giveaway promotions', 'Encourage friends to participate immediately'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -796,7 +796,7 @@ const questions: Question[] = [
   {
     id: 'os-052',
     text: 'Why might a loan app that approves you instantly with very little information be something to approach cautiously?',
-    options: ['Instant approval with minimal checks can sometimes be paired with predatory terms or hidden fees', 'Instant approval always means the loan app is completely trustworthy', 'Loan apps never involve any hidden fees or high interest', 'There\'s no reason to be cautious with instant loan approval'],
+    options: ['Instant approval with minimal checks can sometimes be paired with predatory terms or hidden fees', 'Instant loan approval with no documentation always means the app is completely trustworthy and regulated by the CBN', 'Loan apps never involve any hidden fees or high interest', 'There\'s no reason to be cautious with instant loan approval'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -806,7 +806,7 @@ const questions: Question[] = [
   {
     id: 'os-053',
     text: 'What\'s a reasonable habit before entering payment details on an unfamiliar shopping website?',
-    options: ['Enter your details immediately without any checks', 'Verify the site\'s legitimacy and look for signs of a secure, trustworthy website first', 'Unfamiliar websites are always automatically safe', 'There\'s no need to verify unfamiliar websites before paying'],
+    options: ['Enter all your card and personal details immediately without any checks, since shopping websites are always designed to be completely safe', 'Verify the site\'s legitimacy and look for signs of a secure, trustworthy website first', 'Unfamiliar websites are always automatically safe', 'There\'s no need to verify unfamiliar websites before paying'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -816,7 +816,7 @@ const questions: Question[] = [
   {
     id: 'os-054',
     text: 'Why might a \'free trial\' that requires your card details be something to read carefully before accepting?',
-    options: ['It could silently convert into a paid subscription if not cancelled in time', 'Free trials never require any card details at all', 'Free trials always remain completely free with no risk of charges', 'There\'s no need to read the terms of a free trial'],
+    options: ['It could silently convert into a paid subscription if not cancelled in time', 'Free trials never require any card details at all', 'Free trials always remain completely free forever with absolutely no risk of any automatic charges, regardless of whether you cancel', 'There\'s no need to read the terms of a free trial'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -851,7 +851,7 @@ const questions: Question[] = [
   {
     id: 'os-057',
     text: 'You see a crypto investment group online promising guaranteed 300 percent returns in a week. What is this most likely?',
-    options: ['A legitimate high-growth opportunity', 'A pump-and-dump or Ponzi-style scheme', 'A government-backed investment', 'A savings account'],
+    options: ['A legitimate and verified high-growth investment opportunity approved by Nigerian financial regulators', 'A pump-and-dump or Ponzi-style scheme', 'A government-backed investment', 'A savings account'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -861,7 +861,7 @@ const questions: Question[] = [
   {
     id: 'os-058',
     text: 'Why might verifying a company\'s registration and regulatory status before investing through an online platform be especially important?',
-    options: ['Verification has no real bearing on the safety of an online investment platform', 'Unregulated or unverified platforms carry higher risk of fraud with limited recourse if something goes wrong', 'All online investment platforms are automatically legitimate and safe', 'Regulatory status is only relevant for very large investment amounts'],
+    options: ['Verification and regulatory status have no real practical bearing on the overall safety or trustworthiness of any online investment platform', 'Unregulated or unverified platforms carry higher risk of fraud with limited recourse if something goes wrong', 'All online investment platforms are automatically legitimate and safe', 'Regulatory status is only relevant for very large investment amounts'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -871,7 +871,7 @@ const questions: Question[] = [
   {
     id: 'os-059',
     text: 'What\'s a sound response to an urgent message claiming to be from your bank, asking you to click a link and \'verify your account\' immediately?',
-    options: ['Click the link and follow the instructions immediately given the urgency', 'Avoid clicking the link, and instead contact your bank directly through a verified channel to confirm', 'Urgent bank messages should always be trusted without any verification', 'There\'s no reason to be cautious about this kind of message'],
+    options: ['Click the link and follow the instructions immediately given the urgency, since your bank would only ever contact you through official verified channels', 'Avoid clicking the link, and instead contact your bank directly through a verified channel to confirm', 'Urgent bank messages should always be trusted without any verification', 'There\'s no reason to be cautious about this kind of message'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -881,7 +881,7 @@ const questions: Question[] = [
   {
     id: 'os-060',
     text: 'Why might aggressive, harassing collection tactics from a digital loan app be a serious concern, not just an inconvenience?',
-    options: ['Such tactics can cause real financial and emotional harm and may violate consumer protection norms', 'Harassment tactics from loan apps are a standard and acceptable industry practice', 'Borrowers have no recourse in these situations regardless of the tactics used', 'This kind of concern has no real practical or legal significance'],
+    options: ['Such tactics can cause real financial and emotional harm and may violate consumer protection norms', 'Aggressive harassment and contact-shaming tactics from loan apps are a completely standard, legal, and widely accepted collection practice in Nigeria', 'Borrowers have no recourse in these situations regardless of the tactics used', 'This kind of concern has no real practical or legal significance'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -892,7 +892,7 @@ const questions: Question[] = [
     id: 'os-061',
     text: 'What\'s a reasonable approach to evaluating an online investment opportunity that pressures you to decide quickly with limited information?',
     options: [
-      'Invest the minimum required amount immediately to secure your position before the round closes',
+      'Invest the minimum required starter amount immediately to secure your allocated position in the investment round before it closes to new participants',
       'Treat the urgency itself as a warning sign, and take time to independently research before committing any funds',
       'Request more documentation from the promoter and proceed once they confirm the platform details',
       'Send a small test transfer first and invest the full amount once you confirm the test arrives safely',
@@ -906,7 +906,7 @@ const questions: Question[] = [
   {
     id: 'os-062',
     text: 'Why might it be important to review the permissions and data access requested by a financial app before installing it?',
-    options: ['Reviewing permissions has no real bearing on financial or data safety', 'Excessive or unrelated permission requests can be a red flag regarding an app\'s legitimacy or intent', 'All financial apps request identical, appropriate permissions with no variation', 'App permissions are entirely unrelated to online financial safety'],
+    options: ['Reviewing app permissions before installation has absolutely no real-world bearing on your personal financial security or data safety', 'Excessive or unrelated permission requests can be a red flag regarding an app\'s legitimacy or intent', 'All financial apps request identical, appropriate permissions with no variation', 'App permissions are entirely unrelated to online financial safety'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -931,7 +931,7 @@ const questions: Question[] = [
   {
     id: 'os-064',
     text: 'Why might a message from an unfamiliar contact promising to double your money if you \'invest\' through them be treated with strong skepticism?',
-    options: ['Promises of doubling money quickly from unfamiliar sources are a very common scam pattern', 'Such offers should always be trusted, especially when they come through direct messages', 'This kind of promise from an unfamiliar contact is generally safe and legitimate', 'There\'s no reason to apply extra skepticism to unfamiliar investment offers'],
+    options: ['Promises of doubling money quickly from unfamiliar sources are a very common scam pattern', 'Such lucrative doubling offers should always be trusted and acted on quickly, especially when they arrive as personal direct messages from unknown contacts', 'This kind of promise from an unfamiliar contact is generally safe and legitimate', 'There\'s no reason to apply extra skepticism to unfamiliar investment offers'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -944,7 +944,7 @@ const questions: Question[] = [
     options: [
       'Avoiding all online financial transactions entirely is the only reliable way to protect yourself from digital fraud',
       'Maintaining consistent caution, verification habits, and awareness of common scam patterns supports safer digital financial engagement over time',
-      'Your bank\'s fraud protection team monitors your accounts automatically and responds to every threat without requiring any action from you',
+      'Your bank\'s dedicated fraud protection team continuously monitors your accounts in real time and automatically responds to every detected threat without ever requiring any action from you',
       'Installing one highly rated antivirus app provides complete protection from all digital financial risks with no further action needed',
     ],
     correctIndex: 1,
@@ -971,7 +971,7 @@ const questions: Question[] = [
   {
     id: 'os-067',
     text: "What should you do if a stranger online asks for your home address?",
-    options: ["Share it — they may send a gift", "Refuse to share it and tell a trusted adult", "Share it only if they share theirs first", "Share it after checking their profile"],
+    options: ["Share your full home address because the person seems very friendly and may want to send you a surprise gift in the post", "Refuse to share it and tell a trusted adult", "Share it only if they share theirs first", "Share it after checking their profile"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -982,7 +982,7 @@ const questions: Question[] = [
     id: 'os-068',
     text: "What does \"phishing\" mean online?",
     options: [
-      "A safe activity where specialised apps let you catch virtual fish and win in-game prizes",
+      "A safe and popular recreational activity where specialised mobile apps let you catch virtual fish and win genuine in-game prizes",
       "A trick where criminals pretend to be trusted organisations to steal your passwords or financial details",
       "A secure method for uploading and sharing personal photos between verified contacts online",
       "An interactive game format that banks use to teach customers about safe account practices",
@@ -997,7 +997,7 @@ const questions: Question[] = [
     id: 'os-069',
     text: "What does it mean if a website URL starts with \"https://\"?",
     options: [
-      "The website has been fully verified as legitimate by the Nigerian Communications Commission",
+      "The website has been fully reviewed, independently audited, and officially verified as legitimate by the Nigerian Communications Commission",
       "The site uses an encrypted (secure) connection — safer for entering personal or payment information",
       "The domain was registered in Nigeria and is subject to local consumer protection regulations",
       "The \"s\" confirms the site has passed a scam-detection review and is guaranteed trustworthy",
@@ -1011,7 +1011,7 @@ const questions: Question[] = [
   {
     id: 'os-070',
     text: "Which of these is the SAFEST password?",
-    options: ["Password123", "123456", "Z!x7@Kp#2Lq9", "Myname2010"],
+    options: ["Password123nigeria", "123456", "Z!x7@Kp#2Lq9", "Myname2010"],
     correctIndex: 2,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -1021,7 +1021,7 @@ const questions: Question[] = [
   {
     id: 'os-071',
     text: "Your friend sends you a link online saying \"click this for free money.\" What should you do?",
-    options: ["Click it immediately", "Ignore it — free money offers online are almost always scams", "Ask your friend to verify first, then click", "Share it with all your contacts"],
+    options: ["Click it immediately since it came from a friend's account and free money links from people you know are always safe", "Ignore it — free money offers online are almost always scams", "Ask your friend to verify first, then click", "Share it with all your contacts"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['kids'],
@@ -1032,7 +1032,7 @@ const questions: Question[] = [
     id: 'os-072',
     text: "What is \"two-factor authentication\" (2FA)?",
     options: [
-      "A login approach that uses two separate devices at the same time so each device confirms the session",
+      "A login approach that requires using two completely separate physical devices simultaneously so that each device independently confirms the session before access is granted",
       "A security method requiring two forms of verification (e.g. password + OTP sent to your phone) before accessing an account",
       "A practice of creating two different passwords for the same account and switching between them at each login",
       "A banking security feature that shares your login credentials with a trusted backup contact for emergencies",
@@ -1050,7 +1050,7 @@ const questions: Question[] = [
       "Continue browsing normally on the same tab and watch for any unusual changes on screen",
       "Close the browser, disconnect from the internet, and tell a trusted adult or report to authorities",
       "Open a new social media account and move all your contacts across before deleting the old one",
-      "Wait 24 hours to see whether your antivirus software detects and removes any threat automatically",
+      "Wait a full 24 hours to see whether your installed antivirus software automatically detects, neutralises, and removes any potential threat completely on its own",
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -1087,7 +1087,7 @@ const questions: Question[] = [
     id: 'os-076',
     text: "What is a \"VPN\"?",
     options: [
-      "Very Personal Network — a government-issued digital identity system linking all Nigerian ministry staff",
+      "Very Personal Network — a government-issued secure digital identity verification system linking all registered Nigerian civil service ministry staff to their official records",
       "Virtual Private Network — software that encrypts your internet connection and masks your IP address for privacy",
       "A social media dashboard application that aggregates content from multiple platforms in one interface",
       "A government internet monitoring system that logs and stores citizen browsing activity for security purposes",
@@ -1102,7 +1102,7 @@ const questions: Question[] = [
     id: 'os-077',
     text: "What is \"identity theft\" and how does it relate to online safety?",
     options: [
-      "When a thief physically steals your bag and uses the identity documents inside to impersonate you and withdraw money at a branch",
+      "When a thief physically steals your bag and then uses the identity documents found inside to impersonate you in person and withdraw money at a bank branch counter",
       "When criminals steal your personal information online to impersonate you for financial fraud — opening accounts, making purchases, or taking loans in your name",
       "When someone hacks into only your email account and reads your private messages without making any financial transactions",
       "When a cybercriminal creates a duplicate social media profile using your photos to deceive and defraud your existing contacts",
@@ -1132,7 +1132,7 @@ const questions: Question[] = [
     id: 'os-079',
     text: "What is \"social engineering\" in cybersecurity?",
     options: [
-      "The specialised engineering discipline focused on designing road, bridge, and urban infrastructure systems",
+      "The highly specialised engineering discipline focused exclusively on designing road networks, bridge structures, and urban infrastructure systems for city planners",
       "Psychologically manipulating people into revealing confidential information or taking actions that compromise security",
       "A type of malware that uses automated code to silently penetrate firewall defences and access internal networks",
       "A government-issued regulatory framework that governs how digital platforms may collect and process citizen data",
@@ -1147,7 +1147,7 @@ const questions: Question[] = [
     id: 'os-080',
     text: "What should you do before connecting to a public Wi-Fi network?",
     options: [
-      "Connect immediately and log into all your accounts since most Nigerian public hotspots use encrypted infrastructure",
+      "Connect immediately and log into all your financial accounts without hesitation, since most Nigerian public hotspots operate on fully encrypted and secure infrastructure",
       "Avoid accessing sensitive accounts (banking, email) unless using a VPN — public Wi-Fi is insecure and can be monitored",
       "Enter your bank password first to verify the connection is secure before accessing other personal accounts",
       "Share the network name with your contacts so they can independently verify the same connection is safe",
@@ -1162,7 +1162,7 @@ const questions: Question[] = [
     id: 'os-081',
     text: "What is a \"man-in-the-middle\" (MITM) attack?",
     options: [
-      "A physical robbery method where an armed criminal intercepts cash transfers between bank couriers at a handover point",
+      "A physical robbery method where armed criminals ambush and steal cash transfers being moved between bank couriers at a scheduled handover point",
       "An attack where a third party secretly intercepts and possibly alters communications between two parties who believe they are communicating directly",
       "A type of phishing email that embeds invisible tracking pixels in images to record when and where the target opens it",
       "A cyberattack where a criminal remotely hacks a company's server and downloads sensitive employee financial records",
@@ -1192,7 +1192,7 @@ const questions: Question[] = [
     id: 'os-083',
     text: "What is \"social media scraping\" and why is it a privacy risk?",
     options: [
-      "A legitimate research technique where students manually extract text from public social media posts for academic coursework",
+      "A fully legitimate academic research technique where university students manually extract published text from public social media posts for assigned coursework and dissertation research",
       "Automated collection of publicly available data from social media profiles — used to build profiles for fraud, phishing, or manipulation",
       "A form of banking malware that spreads through social media links and captures login credentials from victims silently",
       "A supervised government programme that monitors public social media accounts to identify potential criminal activity",
@@ -1209,7 +1209,7 @@ const questions: Question[] = [
     options: [
       "A security best practice where IT teams generate a unique strong password for every individual account in an organisation",
       "Using stolen username/password combinations from one breach to attempt access to multiple other services (exploiting password reuse)",
-      "A brute-force cyberattack that systematically tries every possible character combination until it guesses your account password",
+      "A brute-force cyberattack where an automated programme exhaustively tries every single possible character combination in sequence until it successfully guesses your account password",
       "A category of malware that silently installs on your device and records every keystroke to harvest account credentials",
     ],
     correctIndex: 1,
@@ -1237,7 +1237,7 @@ const questions: Question[] = [
     id: 'os-086',
     text: "What is a \"data breach\" and why does it matter for financial safety?",
     options: [
-      "When a regulated financial institution publicly discloses that it has violated internal compliance rules under CBN oversight",
+      "When a regulated Nigerian financial institution is required to publicly disclose that it has violated specific internal compliance rules and procedures under direct CBN regulatory oversight",
       "Unauthorised access to and exposure of sensitive personal or financial data — increasing your risk of identity theft and fraud",
       "When a bank loses a customer's money through poor investment decisions and fails to notify the account holder promptly",
       "A government data sharing policy that requires institutions to disclose customer records for national development planning",
@@ -1284,7 +1284,7 @@ const questions: Question[] = [
     options: [
       "A privacy-focused browser extension that encrypts your online activity and prevents advertisers from tracking your searches",
       "A part of the internet not indexed by standard search engines, where stolen financial data (card numbers, BVNs, login credentials) is traded",
-      "A classified government intelligence network connecting African security agencies for cross-border information and threat sharing",
+      "A classified government intelligence network connecting all African national security agencies for real-time cross-border intelligence information and coordinated threat response sharing",
       "A regulated online banking platform used by major Nigerian financial institutions to process inter-bank settlement transactions",
     ],
     correctIndex: 1,
@@ -1297,7 +1297,7 @@ const questions: Question[] = [
     id: 'os-090',
     text: "What is \"secure socket layer\" (SSL) and why does it matter for online banking?",
     options: [
-      "A physical combination-lock mechanism used on bank vault doors that uses steel bolts and biometric readers to prevent entry",
+      "A high-security physical combination-lock mechanism installed on bank vault doors that uses multiple reinforced steel bolts combined with advanced biometric readers to prevent unauthorised entry",
       "A cryptographic protocol (now TLS) that encrypts data transmitted between your browser and a web server, protecting sensitive information in transit",
       "A proprietary banking software system used by CBN-licensed commercial banks to manage customer transactions and account data",
       "A mandatory government cybersecurity standard that all regulated financial institutions in Nigeria are legally required to implement",
@@ -1314,7 +1314,7 @@ const questions: Question[] = [
     options: [
       "Unsolicited bulk promotional emails that flood a company's inbox with advertising content and consume employee time filtering them",
       "Fraudsters spoofing or hacking company email to trick employees into fraudulent payments — the primary defence is out-of-band verification for payment requests",
-      "A government-operated filtering system that blocks harmful email content from reaching Nigerian businesses and civil service employees",
+      "A government-operated and centrally managed email filtering system that automatically blocks all harmful email content from ever reaching Nigerian businesses and civil service employees",
       "A malware category delivered through infected email attachments that silently installs on employee devices when the file is opened",
     ],
     correctIndex: 1,
@@ -1329,7 +1329,7 @@ const questions: Question[] = [
     options: [
       "Outdated operating systems and unpatched applications that leave known vulnerabilities open for attackers to exploit remotely",
       "Human error — employees falling for phishing, using weak passwords, or mishandling data — the largest single source of security breaches",
-      "Firewall misconfigurations that create gaps in network perimeter defences, allowing external attackers to enter internal systems",
+      "Firewall and network perimeter misconfigurations by IT teams that inadvertently create exploitable security gaps, allowing well-resourced external attackers to penetrate and move through internal systems",
       "Hardware failures in critical server infrastructure that cause unexpected data loss and extended downtime for financial systems",
     ],
     correctIndex: 1,
@@ -1357,7 +1357,7 @@ const questions: Question[] = [
     id: 'os-094',
     text: "What is \"zero-day vulnerability\"?",
     options: [
-      "A publicly disclosed software flaw assigned a severity rating of zero, indicating it poses minimal risk and requires no urgent patching",
+      "A publicly disclosed software flaw formally assigned a severity rating of exactly zero, definitively indicating it poses no meaningful risk and requires absolutely no urgent patching or remediation action",
       "A previously unknown software vulnerability that is exploited before the developer releases a patch — extremely dangerous as no defence exists at the time of discovery",
       "A software bug that only affects newly released applications in the first 24 hours after launch before automated quality testing completes",
       "A minor software configuration error that developers detect and resolve within zero working days via automated continuous integration",
@@ -1386,7 +1386,7 @@ const questions: Question[] = [
   {
     id: 'os-096',
     text: "Which of these is a secure password?",
-    options: ["password", "John1990", "123456", "Tr@7!kLm9#"],
+    options: ["password_nigeria123", "John1990", "123456", "Tr@7!kLm9#"],
     correctIndex: 3,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -1458,7 +1458,7 @@ const questions: Question[] = [
     text: "What is 'phishing'?",
     options: [
       "A type of competitive online gaming tournament where players race to catch virtual fish within a countdown timer",
-      "A two-step method of securing your email account by linking it to a backup phone number for identity verification",
+      "A highly secure two-step identity verification method for protecting your email account by permanently linking it to a trusted backup phone number for emergency identity verification",
       "A browser-based price comparison technique that finds discounted products across multiple online shops at once",
       "A scam where criminals impersonate trusted organisations via email, text, or fake websites to steal your personal information",
     ],
@@ -1517,7 +1517,7 @@ const questions: Question[] = [
     id: 'os-105',
     text: "You receive an email from an unknown sender with a document file attached. What should you do?",
     options: [
-      "Open it immediately in case it contains important information you have been waiting to receive",
+      "Open it immediately in case it contains urgent or critically important information you have been waiting to receive from a known contact",
       "Forward it to all your contacts to find out whether anyone can identify who the sender is",
       "Reply asking the sender to identify themselves, then open the file once they respond to confirm",
       "Delete it without opening — attachments from unknown senders frequently contain malware or ransomware",

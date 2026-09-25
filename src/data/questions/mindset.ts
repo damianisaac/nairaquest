@@ -32,7 +32,7 @@ const questions: Question[] = [
     id: 'fw-002',
     text: 'You have been saving your allowance for three weeks for a book you love. Today your friend wants to sell you his sticker collection for ₦200. What should you do?',
     options: [
-      'Buy the stickers — ₦200 is not much money',
+      'Buy the stickers without hesitation since the amount is small and you can always restart your savings tomorrow',
       'Think about whether stickers matter more to you than your book goal',
       'Stop saving — it is too hard with so many temptations',
       'Ask your teacher to decide for you',
@@ -52,7 +52,7 @@ const questions: Question[] = [
       'Because saving is impossible for children',
       'Because our brains find it easier to enjoy something right now than to wait for later',
       'Because parents never let you have real fun',
-      'Because shops put the most tempting things near the entrance on purpose',
+      'Because shops deliberately place the most tempting and attractively priced items near the entrance and checkout to trigger impulse spending',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -69,7 +69,7 @@ const questions: Question[] = [
       'Exactly the same as buying something on impulse',
       'Usually better — you worked towards it and chose it on purpose',
       'Worse — waiting was a waste of your time',
-      'You probably forgot what you were saving for anyway',
+      'You probably lost interest in the goal by the time you saved up, so it no longer feels worth buying',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -83,7 +83,7 @@ const questions: Question[] = [
     id: 'fw-005',
     text: 'Your friend spent all her pocket money on snacks in one day and now has nothing left for the week. What is the lesson?',
     options: [
-      'Snacks are too expensive and she should not buy them',
+      'Snacks are overpriced in Nigeria and children should avoid buying them during school hours altogether',
       'Spending everything at once leaves nothing for later in the week',
       'She should have asked for more pocket money',
       'Her parents should manage all her money for her',
@@ -100,7 +100,7 @@ const questions: Question[] = [
     id: 'fw-006',
     text: 'The best way to save for something you really want is:',
     options: [
-      'Wait until you have a lot of money before you start saving',
+      'Wait until you have a large sum of money accumulated before you bother starting to save anything at all',
       'Put aside a small amount regularly, even if it is very little',
       'Ask someone else to buy it for you',
       'Only save when you feel motivated',
@@ -134,7 +134,7 @@ const questions: Question[] = [
     id: 'fw-008',
     text: 'Kemi has ₦1,000 and wants to buy a snack today (₦400) and save for a game (₦800). She cannot afford both right now. What is the wisest thing to do?',
     options: [
-      'Buy the snack and forget about the game',
+      'Buy the snack right away since it is available today and the game can always wait for another time',
       'Decide which one matters more and save towards that goal',
       'Feel upset and spend all the money to feel better',
       'Borrow ₦200 from her sister to cover the gap',
@@ -153,7 +153,7 @@ const questions: Question[] = [
     options: [
       'Buy it straight away before the feeling fades',
       'Pause, take a breath, and ask yourself: do I really need this?',
-      'Walk out of the shop immediately and never come back',
+      'Walk out of the shop immediately and avoid returning until your savings goal has been fully reached',
       'Promise yourself you will never buy anything fun again',
     ],
     correctIndex: 1,
@@ -168,7 +168,7 @@ const questions: Question[] = [
     id: 'fw-010',
     text: 'Feeling proud of yourself for saving money is:',
     options: [
-      'Silly — money is not something to feel proud about',
+      'Silly — money is not something children should feel proud or excited about at any age',
       'A great feeling that can actually help you save even more',
       'Only for grown-ups who save big amounts',
       'Only appropriate if you saved a very large amount',
@@ -189,7 +189,7 @@ const questions: Question[] = [
     id: 'fw-011',
     text: 'Your friends are all buying the newest phone case and you feel left out with your old one. What is the healthiest response?',
     options: [
-      'Buy it immediately, even if it stretches your budget this week',
+      'Buy it immediately so you feel included, even if that means going over your budget for this week',
       'Remind yourself that your worth is not tied to matching their spending',
       'Ask your parents to buy it straight away',
       'Avoid your friends until you can afford the same things they have',
@@ -265,7 +265,7 @@ const questions: Question[] = [
       'You only have 24 hours to return a purchase after buying',
       'Waiting 24 hours before buying something unplanned, to see if you still want it',
       'You must decide within 24 hours or the price will increase',
-      'Shops give you 24 hours of interest-free credit automatically',
+      'Shops in Nigeria are legally required to offer all customers a 24-hour interest-free credit window on any purchase',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -282,7 +282,7 @@ const questions: Question[] = [
       'Go anyway and worry about the money situation later',
       'Be honest — suggest a cheaper alternative or say you will join them next time',
       'Stop spending time with friends who have more money than you',
-      'Make an excuse and pretend to be ill to avoid the awkwardness',
+      'Make up a convincing excuse and pretend to be unwell so your friends do not find out about your financial situation',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -313,7 +313,7 @@ const questions: Question[] = [
     id: 'fw-018',
     text: 'You notice you tend to spend more money whenever you are bored or stressed. This pattern is worth noticing because:',
     options: [
-      'Spending when stressed is a completely healthy coping mechanism with no downsides',
+      'Spending when stressed is a perfectly healthy and recommended coping mechanism that carries no meaningful financial downsides when done regularly',
       'It means spending is managing your emotions rather than a genuine choice, which can lead to consistent overspending',
       'It proves you are a generous person who rewards yourself appropriately',
       'Everyone does this, so it does not need any reflection',
@@ -332,7 +332,7 @@ const questions: Question[] = [
     options: [
       'Give up on the goal — it is ruined now',
       'Acknowledge the setback, adjust the timeline, and restart saving from ₦3,000',
-      'Spend the remaining ₦3,000 too, since the goal is already derailed',
+      'Spend the remaining ₦3,000 on something enjoyable too, since the savings goal is already completely derailed anyway',
       'Keep it private and pretend the setback never happened',
     ],
     correctIndex: 1,
@@ -349,7 +349,7 @@ const questions: Question[] = [
     options: [
       'Influencers always show their real financial lives honestly',
       'Much of what you see is curated, sponsored, or funded by brand deals — or debt',
-      'You should aspire to live exactly like them as a long-term goal',
+      'You should absolutely aspire to live exactly like them and treat their lifestyle as a realistic and motivating long-term financial goal',
       'Social media platforms verify that influencers can afford their lifestyle',
     ],
     correctIndex: 1,
@@ -367,7 +367,7 @@ const questions: Question[] = [
       'Sometimes status purchases do work — people do notice for a while',
       'Spending to impress others usually creates short-lived approval at a lasting financial cost',
       'The classmate should have bought something even more impressive',
-      'Keeping up appearances at school is a genuine investment in future relationships',
+      'Keeping up appearances at school through visible spending is a genuine long-term investment in building the social relationships that matter most',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -402,7 +402,7 @@ const questions: Question[] = [
     id: 'fw-023',
     text: 'You feel pressured to contribute a large amount to a family member\'s owambe celebration that is beyond what your budget honestly allows. What is the healthiest approach?',
     options: [
-      'Contribute the full expected amount to avoid family conflict',
+      'Contribute the full amount expected by the family regardless of your financial situation, since keeping the peace always comes first',
       'Offer what your budget genuinely allows and explain your limits calmly and with care',
       'Skip the event entirely without any explanation',
       'Borrow money you cannot repay to meet the expected contribution',
@@ -426,7 +426,7 @@ const questions: Question[] = [
     options: [
       'Keep avoiding it — the stress means you are not ready to face it yet',
       'Set a specific, low-pressure time to look at it — perhaps with a cup of tea and fifteen minutes of calm',
-      'Spend on something enjoyable to distract yourself from the anxiety first',
+      'Spend on something enjoyable first to give yourself a temporary mood lift before you feel ready to face the financial situation',
       'Ask someone else to manage your finances so you never have to look',
     ],
     correctIndex: 1,
@@ -463,7 +463,7 @@ const questions: Question[] = [
     id: 'fw-026',
     text: 'A sibling calls regularly asking for financial support that you genuinely cannot give without going into debt yourself. What is the healthiest long-term approach?',
     options: [
-      'Send money every time to avoid conflict and preserve the relationship at all costs',
+      'Send money every single time they ask in order to avoid any conflict and fully preserve the family relationship at all costs',
       'Have an honest, caring conversation about what you can realistically sustain long-term',
       'Cut off contact entirely to protect your own finances',
       'Borrow from others indefinitely to keep sending the money',
@@ -480,7 +480,7 @@ const questions: Question[] = [
     id: 'fw-027',
     text: 'You are under significant financial stress — bills are piling up, you are not sleeping well, and you feel ashamed to tell anyone. What is the most important thing to do?',
     options: [
-      'Maintain appearances — nobody else needs to know about your financial situation',
+      'Maintain appearances at all costs — nobody around you needs to know the truth about your current financial difficulties',
       'Talk to at least one person you trust, whether a friend, family member, or financial counsellor',
       'Spend on something enjoyable to give yourself a temporary lift',
       'Wait for the situation to resolve itself before taking any action',
@@ -514,7 +514,7 @@ const questions: Question[] = [
     id: 'fw-029',
     text: 'You made a serious financial mistake — a bad investment that cost you significantly. What is the most productive mindset going forward?',
     options: [
-      '"I am financially foolish — I should stop making any financial decisions."',
+      '"I am clearly financially foolish and completely unreliable — I should hand all decisions over to someone else immediately."',
       '"This was a costly mistake. What did I learn, and what is one step I can take now?"',
       '"I need to take a bigger risk quickly to win the money back."',
       '"Money causes too much stress — I will stop paying close attention to it."',
@@ -534,7 +534,7 @@ const questions: Question[] = [
       'Take out a loan immediately to fund a lifestyle that matches theirs outwardly',
       'Acknowledge the feeling, then focus on what you can influence — your skills, earning potential, and spending plan',
       'Avoid all future conversations involving money with colleagues',
-      'Accept that you are underperforming financially and lower your own expectations',
+      'Accept that you are financially underperforming compared to your colleagues and permanently lower all your personal financial expectations',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -551,7 +551,7 @@ const questions: Question[] = [
       '"Two months of good work is now completely ruined. I have failed."',
       '"Consistency over time matters more than any single week — I will reset and continue."',
       '"I need an even stricter budget next month to punish myself for this."',
-      '"Budgeting clearly does not work for me, so I should abandon it entirely."',
+      '"Budgeting clearly does not work for me as a person, so I should abandon the practice entirely and stop trying."',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -582,7 +582,7 @@ const questions: Question[] = [
     id: 'fw-033',
     text: 'Replacing "I am bad with money" with "I am still building better money habits" is an example of:',
     options: [
-      'Unhelpful positive thinking that ignores real financial problems',
+      'Unhelpful positive thinking that simply ignores the real financial problems you are facing without addressing them',
       'A more accurate and constructive framing that keeps the door to change open',
       'Self-deception that prevents honest self-assessment',
       'A phrase that only makes sense if you have already improved significantly',
@@ -601,7 +601,7 @@ const questions: Question[] = [
     options: [
       'Checking your finances only when absolutely necessary to avoid triggering stress',
       'A regular, calm money review — weekly or monthly — that becomes a normal part of your routine rather than a crisis response',
-      'Delegating all financial decisions to a partner or family member so you do not have to engage with it',
+      'Delegating all personal financial decisions entirely to a trusted partner or family member so you never have to personally engage with your money at all',
       'Only thinking about money when you have a comfortable surplus to review',
     ],
     correctIndex: 1,
@@ -646,7 +646,7 @@ const questions: Question[] = [
     id: 'fw-037',
     text: 'Emeka made a bad investment — he spent his savings on something that turned out to be worthless. What is the BEST response to this mistake?',
     options: [
-      'Give up on managing money — it is too hard',
+      'Give up on managing money entirely since clearly some people are just not built for it',
       'Learn from what went wrong and make better decisions next time',
       'Never tell anyone about the mistake',
       'Blame everyone else for the bad decision',
@@ -691,7 +691,7 @@ const questions: Question[] = [
   {
     id: 'fw-040',
     text: 'If you don\'t get something you want right away, how can you feel about it?',
-    options: ['Okay, because waiting can help you reach a bigger goal', 'Always terrible with no way to feel better', 'Angry at everyone around you', 'It\'s impossible to feel okay about waiting'],
+    options: ['Okay, because waiting can help you reach a bigger goal', 'Always completely terrible and there is absolutely nothing you can do to feel better about it', 'Angry at everyone around you', 'It\'s impossible to feel okay about waiting'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -701,7 +701,7 @@ const questions: Question[] = [
   {
     id: 'fw-041',
     text: 'Why might it help to take a breath before buying something you suddenly want?',
-    options: ['It gives you a moment to think if you really want it', 'Breathing has no connection to buying decisions', 'You should never think before buying anything', 'Sudden wants are always worth buying immediately'],
+    options: ['It gives you a moment to think if you really want it', 'Breathing has no connection to buying decisions', 'You should never think before buying anything', 'Sudden wants and impulses are always completely valid reasons to buy something straight away without thinking'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -711,7 +711,7 @@ const questions: Question[] = [
   {
     id: 'fw-042',
     text: 'If a friend has a toy you don\'t have, how can you feel good about your own things?',
-    options: ['Remember and appreciate what you already have', 'Feel bad about yourself constantly', 'Demand your friend gives you their toy', 'Ignore your own feelings completely'],
+    options: ['Remember and appreciate what you already have', 'Feel bad about yourself and keep wishing you had more things than your friends', 'Demand your friend gives you their toy', 'Ignore your own feelings completely'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -731,7 +731,7 @@ const questions: Question[] = [
   {
     id: 'fw-044',
     text: 'What\'s a kind thing to say to yourself if you make a spending mistake, like spending your savings too fast?',
-    options: ['It\'s okay, I can learn from this and do better next time', 'I\'m terrible with money and always will be', 'I should never be trusted with money again', 'There\'s no way to feel okay about a mistake'],
+    options: ['It\'s okay, I can learn from this and do better next time', 'I\'m completely terrible with money and there is simply no way I will ever improve at managing it', 'I should never be trusted with money again', 'There\'s no way to feel okay about a mistake'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -741,7 +741,7 @@ const questions: Question[] = [
   {
     id: 'fw-045',
     text: 'Why might comparing what you have to what your friends have sometimes make you feel unhappy?',
-    options: ['Comparison can create feelings of not having enough, even when you actually do', 'Comparing yourself to friends always makes you feel great', 'Comparison has no connection to feelings at all', 'You should always compare yourself to others constantly'],
+    options: ['Comparison can create feelings of not having enough, even when you actually do', 'Comparing yourself to your friends about possessions and spending always makes you feel positive and motivated', 'Comparison has no connection to feelings at all', 'You should always compare yourself to others constantly'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -751,7 +751,7 @@ const questions: Question[] = [
   {
     id: 'fw-046',
     text: 'What\'s a healthy way to feel proud about your savings progress?',
-    options: ['Celebrating your progress, even if it\'s small steps', 'Only feeling proud if you have a huge amount saved', 'Never feeling proud about your savings at all', 'Proud feelings have no connection to saving money'],
+    options: ['Celebrating your progress, even if it\'s small steps', 'Only allowing yourself to feel proud about saving once you have reached a very large financial milestone', 'Never feeling proud about your savings at all', 'Proud feelings have no connection to saving money'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -761,7 +761,7 @@ const questions: Question[] = [
   {
     id: 'fw-047',
     text: 'Why might it help to talk to a trusted adult if you feel confused or worried about money?',
-    options: ['Trusted adults can help explain things and ease your worries', 'Talking about money worries never actually helps', 'You should never discuss money feelings with anyone', 'Worries about money should always be kept completely secret'],
+    options: ['Trusted adults can help explain things and ease your worries', 'Talking about money worries never actually helps', 'You should never discuss money feelings with anyone', 'Worries about money should always be kept completely private and never discussed with anyone at all'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -781,7 +781,7 @@ const questions: Question[] = [
   {
     id: 'fw-049',
     text: 'Why might impulse spending sometimes be connected to how you\'re feeling emotionally, not just what you actually need?',
-    options: ['Emotions have no real connection to spending behavior', 'Stress, boredom, or excitement can sometimes drive spending decisions that aren\'t purely about genuine need', 'Impulse spending is always a purely logical decision with no emotional factor', 'Feelings never play any role in how people spend money'],
+    options: ['Emotions have no real connection to spending behavior', 'Stress, boredom, or excitement can sometimes drive spending decisions that aren\'t purely about genuine need', 'Impulse spending is always a completely logical and rational decision that has absolutely no emotional component or psychological trigger', 'Feelings never play any role in how people spend money'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -791,7 +791,7 @@ const questions: Question[] = [
   {
     id: 'fw-050',
     text: 'What\'s a healthier way to respond to feeling anxious about money than avoiding thinking about it entirely?',
-    options: ['Take small, manageable steps to understand and address the situation calmly', 'Avoidance is always the best way to handle money anxiety', 'Anxiety about money should always be ignored completely', 'There\'s no healthy way to respond to money-related stress'],
+    options: ['Take small, manageable steps to understand and address the situation calmly', 'Avoidance is always the best way to handle money anxiety', 'Anxiety about money should always be ignored completely', 'There is genuinely no healthy, practical, or constructive way to respond to money-related financial stress at all'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -831,7 +831,7 @@ const questions: Question[] = [
   {
     id: 'fw-054',
     text: 'What\'s a healthy way to celebrate reaching a savings goal without immediately spending it all on something unplanned?',
-    options: ['Acknowledge the achievement meaningfully while still keeping your broader financial goals in mind', 'Celebrating a goal always requires spending the entire amount immediately', 'There\'s no healthy way to celebrate a financial achievement', 'Achievements should never be acknowledged in any way'],
+    options: ['Acknowledge the achievement meaningfully while still keeping your broader financial goals in mind', 'Celebrating a savings goal always means rewarding yourself by spending the entire saved amount immediately on something enjoyable', 'There\'s no healthy way to celebrate a financial achievement', 'Achievements should never be acknowledged in any way'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -841,7 +841,7 @@ const questions: Question[] = [
   {
     id: 'fw-055',
     text: 'Why might comparing your finances to heavily curated social media posts from peers create an unrealistic picture?',
-    options: ['Social media often shows a selective, idealized version of someone\'s life, not the full financial reality', 'Social media always accurately reflects someone\'s true financial situation', 'Comparison to social media has no real effect on how people feel about money', 'Curated posts never influence anyone\'s feelings about their own finances'],
+    options: ['Social media often shows a selective, idealized version of someone\'s life, not the full financial reality', 'Social media platforms are required to be transparent, so posts always accurately reflect someone\'s genuine financial situation and lifestyle', 'Comparison to social media has no real effect on how people feel about money', 'Curated posts never influence anyone\'s feelings about their own finances'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -861,7 +861,7 @@ const questions: Question[] = [
   {
     id: 'fw-057',
     text: 'Why might building an awareness of your own emotional triggers around spending be a valuable long-term skill?',
-    options: ['Emotional triggers and personal feeling states have absolutely no measurable connection to any spending decisions or behaviour', 'Recognizing what emotions or situations lead you to spend impulsively can help you develop healthier, more intentional habits over time', 'This self-awareness about emotional spending patterns only matters for people already experiencing very serious financial difficulties', 'Emotional self-awareness about money is an interesting concept but has no practical application to managing personal finances'],
+    options: ['Emotional triggers and personal feeling states have absolutely no measurable connection to any spending decisions or behaviour', 'Recognizing what emotions or situations lead you to spend impulsively can help you develop healthier, more intentional habits over time', 'This kind of self-awareness about emotional spending patterns only really matters for those who are already experiencing quite serious financial difficulties', 'Emotional self-awareness about money is an interesting concept but has no practical application to managing personal finances'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -871,7 +871,7 @@ const questions: Question[] = [
   {
     id: 'fw-058',
     text: 'You notice you\'ve been avoiding checking your bank balance because it stresses you out. What\'s the healthiest first step?',
-    options: ['Keep avoiding it until the stress goes away', 'Set a specific, low-pressure time to review it calmly', 'Spend more to distract yourself', 'Ask someone else to never mention money again'],
+    options: ['Keep avoiding checking your balance until the financial stress naturally goes away on its own', 'Set a specific, low-pressure time to review it calmly', 'Spend more to distract yourself', 'Ask someone else to never mention money again'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -881,7 +881,7 @@ const questions: Question[] = [
   {
     id: 'fw-059',
     text: 'Why might replacing shame-based self-talk about money (\'I\'m terrible with money\') with constructive framing support better long-term financial behavior?',
-    options: ['Internal self-talk and personal financial narratives have no genuine bearing on actual financial habits or any behaviour outcomes', 'Shame can discourage engagement with finances altogether, while constructive framing can support consistent, motivated effort toward improvement', 'Shame-based self-criticism about money is consistently the most effective long-term motivator for producing lasting financial behaviour change', 'Constructive self-talk about financial progress is simply positive thinking and has no practical benefit for building real money habits'],
+    options: ['Internal self-talk and personal financial narratives have no genuine bearing on actual financial habits or any behaviour outcomes', 'Shame can discourage engagement with finances altogether, while constructive framing can support consistent, motivated effort toward improvement', 'Shame-based self-criticism about money has been shown to be the most effective long-term motivator for producing genuine and lasting financial behaviour change', 'Constructive self-talk about financial progress is simply positive thinking and has no practical benefit for building real money habits'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -891,7 +891,7 @@ const questions: Question[] = [
   {
     id: 'fw-060',
     text: 'What\'s a healthy response to persistent pressure to financially support extended family beyond what feels sustainable?',
-    options: ['Always comply fully regardless of your own financial sustainability, with no boundary-setting', 'Communicate a clear, respectful boundary based on what you can genuinely sustain, while still honoring your values around support', 'Refuse all family financial requests entirely with no discussion', 'There\'s no way to navigate this kind of pressure in a healthy way'],
+    options: ['Always comply fully with every request regardless of your personal financial sustainability, because maintaining family harmony must always come first above everything', 'Communicate a clear, respectful boundary based on what you can genuinely sustain, while still honoring your values around support', 'Refuse all family financial requests entirely with no discussion', 'There\'s no way to navigate this kind of pressure in a healthy way'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -901,7 +901,7 @@ const questions: Question[] = [
   {
     id: 'fw-061',
     text: 'Why might recognizing \'owambe pressure\' (spending to keep up appearances at social events) as a specific pattern help someone respond to it more intentionally?',
-    options: ['Naming the pattern has no real value in addressing it', 'Recognizing the pattern helps separate genuine values from social pressure, supporting more intentional financial decisions', 'Owambe-related spending pressure doesn\'t actually exist as a real pattern', 'This kind of social pressure should always be fully accommodated regardless of personal financial impact'],
+    options: ['Naming the pattern has no real value in addressing it', 'Recognizing the pattern helps separate genuine values from social pressure, supporting more intentional financial decisions', 'Owambe-related spending pressure doesn\'t actually exist as a real pattern', 'This kind of social and family pressure at owambe events should always be fully accommodated regardless of the personal financial impact it creates'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -921,7 +921,7 @@ const questions: Question[] = [
   {
     id: 'fw-063',
     text: 'Why might building small, consistent money habits tend to be more sustainable than pursuing financial \'perfection\'?',
-    options: ['Perfectionism can lead to discouragement or abandonment when inevitable setbacks occur, while small consistent habits tend to be more sustainable over time', 'Complete financial perfection is genuinely achievable with enough effort and discipline, and should always remain your primary financial goal', 'Consistency in building small habits has absolutely no measurable advantage over simply pursuing a flawless and idealized financial approach', 'Small individual financial habits have no meaningful long-term impact when compared to making large and dramatic changes in financial behaviour'],
+    options: ['Perfectionism can lead to discouragement or abandonment when inevitable setbacks occur, while small consistent habits tend to be more sustainable over time', 'Complete financial perfection is genuinely achievable with enough effort and discipline, and should always remain your primary financial goal', 'Consistency in building small habits has absolutely no measurable advantage over simply pursuing a flawless and idealized financial approach', 'Small individual financial habits have no meaningful long-term cumulative impact when compared to making large, bold, and dramatic one-time changes in financial behaviour'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -931,7 +931,7 @@ const questions: Question[] = [
   {
     id: 'fw-064',
     text: 'What\'s a healthy way to process regret after a financial decision that didn\'t work out as hoped?',
-    options: ['Reflect on it constructively to inform better future decisions, rather than dwelling in prolonged self-blame', 'Regret should always lead to giving up on financial planning entirely', 'Prolonged self-blame is the most effective way to process a financial setback', 'There\'s no constructive way to process financial regret'],
+    options: ['Reflect on it constructively to inform better future decisions, rather than dwelling in prolonged self-blame', 'Regret after any financial mistake should always lead you to give up on financial planning and stop trying to improve entirely', 'Prolonged self-blame is the most effective way to process a financial setback', 'There\'s no constructive way to process financial regret'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -941,7 +941,7 @@ const questions: Question[] = [
   {
     id: 'fw-065',
     text: 'Why might comparing your financial situation to others\' visible spending or lifestyle create a distorted sense of your own progress?',
-    options: ['Visible spending or lifestyle often doesn\'t reflect someone\'s full financial picture, including any debt or strain behind it', 'Visible spending always accurately reflects someone\'s complete financial health', 'Comparison to others has no real effect on how people perceive their own financial progress', 'This kind of comparison always leads to more accurate self-assessment'],
+    options: ['Visible spending or lifestyle often doesn\'t reflect someone\'s full financial picture, including any debt or strain behind it', 'Visible spending always accurately reflects someone\'s complete financial health', 'Comparing your own finances to other people around you has absolutely no real or measurable effect on how you perceive your own personal financial progress', 'This kind of comparison always leads to more accurate self-assessment'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -951,7 +951,7 @@ const questions: Question[] = [
   {
     id: 'fw-066',
     text: 'What\'s a reasonable way to approach a difficult conversation about finances with a partner or family member?',
-    options: ['Avoiding the conversation entirely is always the healthiest approach', 'Approaching it with openness and a focus on shared understanding, rather than blame, tends to support more constructive outcomes', 'Difficult financial conversations should always be approached with blame and confrontation', 'There\'s no constructive way to have financial conversations with loved ones'],
+    options: ['Avoiding the conversation entirely is always the healthiest approach', 'Approaching it with openness and a focus on shared understanding, rather than blame, tends to support more constructive outcomes', 'Difficult financial conversations between partners or family members should always be approached with direct blame and open confrontation to establish accountability', 'There\'s no constructive way to have financial conversations with loved ones'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -961,7 +961,7 @@ const questions: Question[] = [
   {
     id: 'fw-067',
     text: 'Why might building genuine financial confidence over time involve both practical knowledge and a healthier emotional relationship with money?',
-    options: ['Emotional wellbeing has no real connection to practical financial competence', 'Financial wellbeing tends to involve both the practical skills and a healthier mindset around money, rather than either alone', 'Practical financial knowledge alone is always sufficient for genuine financial confidence', 'Emotional relationship with money has no bearing on financial outcomes'],
+    options: ['Emotional wellbeing has no real connection to practical financial competence', 'Financial wellbeing tends to involve both the practical skills and a healthier mindset around money, rather than either alone', 'Practical financial knowledge and technical skills alone are always fully sufficient for building genuine long-term financial confidence and security', 'Emotional relationship with money has no bearing on financial outcomes'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -991,7 +991,7 @@ const questions: Question[] = [
   {
     id: 'fw-070',
     text: "Which money habit shows good financial discipline?",
-    options: ["Spending all your allowance immediately", "Saving a fixed amount before spending on anything else", "Borrowing from friends regularly", "Never thinking about money"],
+    options: ["Spending your entire allowance as soon as you receive it so you can enjoy it right away", "Saving a fixed amount before spending on anything else", "Borrowing from friends regularly", "Never thinking about money"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -1031,7 +1031,7 @@ const questions: Question[] = [
   {
     id: 'fw-074',
     text: "What is the difference between a \"fixed mindset\" and \"growth mindset\" about money?",
-    options: ["Fixed mindset: believes total money in the world is fixed; growth mindset: believes personal wealth always increases automatically over time", "Fixed mindset: believes financial ability is innate and cannot change; growth mindset: believes anyone can learn to manage money well with effort", "There is no meaningful or practical difference between these two mindset types when applied to financial decision-making", "These mindset distinctions only apply in academic and school settings and carry no relevance to real money management"],
+    options: ["Fixed mindset: believes the total amount of money in the world is fixed and finite; growth mindset: believes your personal wealth will always increase automatically over time", "Fixed mindset: believes financial ability is innate and cannot change; growth mindset: believes anyone can learn to manage money well with effort", "There is no meaningful or practical difference between these two mindset types when applied to financial decision-making", "These mindset distinctions only apply in academic and school settings and carry no relevance to real money management"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['kids'],
@@ -1071,7 +1071,7 @@ const questions: Question[] = [
   {
     id: 'fw-078',
     text: "What is \"financial discipline\"?",
-    options: ["Being extremely strict and controlling about how other people around you choose to spend their own personal money", "Consistently following sound financial habits — saving regularly, spending within budget, and avoiding unnecessary debt", "Earning the highest possible income level regardless of the spending habits and financial choices you personally make", "Memorising the exact current maximum interest rates offered at every major bank operating across Nigeria"],
+    options: ["Being extremely strict and controlling about how all other people around you choose to spend and manage their own personal money and finances", "Consistently following sound financial habits — saving regularly, spending within budget, and avoiding unnecessary debt", "Earning the highest possible income level regardless of the spending habits and financial choices you personally make", "Memorising the exact current maximum interest rates offered at every major bank operating across Nigeria"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -1091,7 +1091,7 @@ const questions: Question[] = [
   {
     id: 'fw-080',
     text: "What is the relationship between mindset and wealth?",
-    options: ["Mindset and personal beliefs have absolutely no measurable or meaningful impact on the level of wealth someone can accumulate", "A money mindset — beliefs, attitudes, and habits around money — significantly influences financial decisions and outcomes over time", "Only the level of income someone earns determines their financial outcomes — mindset and habits play no meaningful role", "Wealthy people were all born into wealthy families and already carried the right financial mindset from childhood"],
+    options: ["Mindset and personal beliefs about money have absolutely no measurable or meaningful impact on the actual level of wealth that any individual person can accumulate", "A money mindset — beliefs, attitudes, and habits around money — significantly influences financial decisions and outcomes over time", "Only the level of income someone earns determines their financial outcomes — mindset and habits play no meaningful role", "Wealthy people were all born into wealthy families and already carried the right financial mindset from childhood"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -1101,7 +1101,7 @@ const questions: Question[] = [
   {
     id: 'fw-081',
     text: "What is \"financial FOMO\" (Fear of Missing Out)?",
-    options: ["The persistent fear of losing a significant amount of money in any investment product or financial vehicle available", "The urge to spend money on trends, social events, or investments just because peers are doing it — driven by anxiety about being left out", "A deep-seated anxiety about opening any kind of formal bank account or engaging with established financial institutions", "Intense worry about accumulating too much personal wealth and the social obligations that come with financial success"],
+    options: ["The persistent fear of losing a significant amount of money in any investment product or financial vehicle available", "The urge to spend money on trends, social events, or investments just because peers are doing it — driven by anxiety about being left out", "A deep-seated and persistent anxiety about opening any kind of formal bank account or engaging in any way with established financial institutions or products", "Intense worry about accumulating too much personal wealth and the social obligations that come with financial success"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -1111,7 +1111,7 @@ const questions: Question[] = [
   {
     id: 'fw-082',
     text: "What does it mean to \"take financial responsibility\"?",
-    options: ["Consistently blaming external circumstances or other people whenever your personal money runs out or plans fail", "Owning your financial decisions, their consequences, and actively working to improve your financial situation regardless of external circumstances", "Only fully independent adults with their own earned income are genuinely capable of taking real financial responsibility", "Relying entirely on your parents or guardians to make every financial decision and manage all aspects of your money"],
+    options: ["Consistently blaming external circumstances or other people whenever your personal money runs out or plans fail", "Owning your financial decisions, their consequences, and actively working to improve your financial situation regardless of external circumstances", "Only fully independent adults who have their own regular earned income are genuinely capable of taking any meaningful form of real financial responsibility", "Relying entirely on your parents or guardians to make every financial decision and manage all aspects of your money"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -1121,7 +1121,7 @@ const questions: Question[] = [
   {
     id: 'fw-083',
     text: "What is the \"scarcity mindset\" vs \"abundance mindset\" in financial thinking?",
-    options: ["Scarcity mindset means you should always save every single naira you earn without exception; abundance mindset means you should spend freely on everything without any restraint or thought for future financial security", "Scarcity mindset fears there is never enough and leads to either extreme hoarding or desperation spending; abundance mindset believes there are always opportunities to create more value — leading to balanced, confident financial decisions", "There is absolutely no meaningful practical difference between the scarcity mindset and the abundance mindset when applied to everyday Nigerian financial decision-making and planning", "The abundance mindset is unconditionally superior to the scarcity mindset in every single financial situation without exception, regardless of your current income level or present financial circumstances"],
+    options: ["Scarcity mindset means you should always save every single naira you earn without any exception whatsoever; abundance mindset means you should spend freely on absolutely everything without any restraint or thought for your long-term future financial security", "Scarcity mindset fears there is never enough and leads to either extreme hoarding or desperation spending; abundance mindset believes there are always opportunities to create more value — leading to balanced, confident financial decisions", "There is absolutely no meaningful practical difference between the scarcity mindset and the abundance mindset when applied to everyday Nigerian financial decision-making and planning", "The abundance mindset is unconditionally superior to the scarcity mindset in every single financial situation without exception, regardless of your current income level or present financial circumstances"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['teens'],
@@ -1131,7 +1131,7 @@ const questions: Question[] = [
   {
     id: 'fw-084',
     text: "What is \"cognitive bias\" in financial decision-making?",
-    options: ["The natural ability to count, calculate, and handle money accurately without making arithmetic errors in financial transactions or everyday commercial dealings", "Systematic patterns of thinking that deviate from rationality — like anchoring bias, loss aversion, or confirmation bias — affecting financial decisions in predictable, often harmful ways", "A government-sponsored financial education programme designed to teach Nigerian citizens about saving, budgeting, and making responsible spending choices", "The specific skill of systematically comparing different financial products such as savings accounts, loans, and insurance to find the best available terms"],
+    options: ["The natural human ability to count, calculate, and handle money accurately without making any arithmetic errors during financial transactions, everyday commercial dealings, or formal business activities", "Systematic patterns of thinking that deviate from rationality — like anchoring bias, loss aversion, or confirmation bias — affecting financial decisions in predictable, often harmful ways", "A government-sponsored financial education programme designed to teach Nigerian citizens about saving, budgeting, and making responsible spending choices", "The specific skill of systematically comparing different financial products such as savings accounts, loans, and insurance to find the best available terms"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['teens'],
@@ -1141,7 +1141,7 @@ const questions: Question[] = [
   {
     id: 'fw-085',
     text: "What is \"loss aversion\" and how does it affect investing?",
-    options: ["A deliberate financial preference for actively seeking out situations where you are more likely to incur losses rather than achieve profitable gains", "The tendency to feel the pain of losses more intensely than the pleasure of equivalent gains — causing investors to hold losing investments too long and sell winners too early", "A carefully planned investment strategy specifically designed to completely eliminate all forms of financial risk from every decision made", "A government regulatory policy that limits and controls the maximum level of losses that individual investors are permitted to experience in financial markets"],
+    options: ["A deliberate and intentional financial preference for actively seeking out investment situations where you are statistically more likely to incur losses rather than achieve any profitable gains at all", "The tendency to feel the pain of losses more intensely than the pleasure of equivalent gains — causing investors to hold losing investments too long and sell winners too early", "A carefully planned investment strategy specifically designed to completely eliminate all forms of financial risk from every decision made", "A government regulatory policy that limits and controls the maximum level of losses that individual investors are permitted to experience in financial markets"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['teens'],
@@ -1151,7 +1151,7 @@ const questions: Question[] = [
   {
     id: 'fw-086',
     text: "What is \"lifestyle inflation\" and how can a growth mindset combat it?",
-    options: ["The general rise in the overall cost of living that affects everyone in the economy equally, driven by monetary policy and supply chain pressures", "When spending rises proportionally with income, preventing wealth accumulation — a growth mindset focuses on growing assets rather than upgrading lifestyle with every raise", "An official government economic measure used to track and report on changes in the standard of living across different household income levels", "A specific type of consumer price inflation that exclusively affects high-income earners and does not meaningfully impact people in lower income brackets"],
+    options: ["The general rise in the overall cost of living that affects everyone in the economy equally, driven by monetary policy and supply chain pressures", "When spending rises proportionally with income, preventing wealth accumulation — a growth mindset focuses on growing assets rather than upgrading lifestyle with every raise", "An official government economic measure used to track and report on changes in the standard of living across different household income levels", "A specific type of consumer price inflation that exclusively and disproportionately affects very high-income earners and does not meaningfully impact or concern people who fall into lower income brackets"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['teens'],
@@ -1161,7 +1161,7 @@ const questions: Question[] = [
   {
     id: 'fw-087',
     text: "How does \"financial anxiety\" affect decision-making?",
-    options: ["It consistently helps people make better and more cautious financial choices by encouraging them to think very carefully before spending", "It can trigger avoidance (ignoring bills), impulsive decisions, risk aversion that prevents necessary investment, and stress that impairs judgment", "Financial anxiety has absolutely no measurable or meaningful effect on the quality of financial decisions that people make in practice", "Financial anxiety exclusively affects people with very low incomes and carries no relevance to those earning at moderate or higher levels"],
+    options: ["It consistently helps people make significantly better and more cautious financial choices by actively encouraging them to think very carefully and deliberately before spending any money", "It can trigger avoidance (ignoring bills), impulsive decisions, risk aversion that prevents necessary investment, and stress that impairs judgment", "Financial anxiety has absolutely no measurable or meaningful effect on the quality of financial decisions that people make in practice", "Financial anxiety exclusively affects people with very low incomes and carries no relevance to those earning at moderate or higher levels"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['teens'],
@@ -1181,7 +1181,7 @@ const questions: Question[] = [
   {
     id: 'fw-089',
     text: "What is the relationship between \"financial wellbeing\" and mental health?",
-    options: ["Money and personal finances exclusively affect physical health outcomes such as diet and nutrition, with absolutely no connection to mental health", "Financial stress is a major driver of mental health issues — conversely, good financial health reduces anxiety and provides security that supports mental wellbeing", "Financial wellbeing and mental health are completely separate and unrelated domains that have no meaningful influence on each other at all", "Financial stress is a problem that only affects people living in extreme poverty and carries no relevance to those with moderate or stable incomes"],
+    options: ["Money and personal finances exclusively affect physical health outcomes such as diet, nutrition, and exercise levels, and have absolutely no meaningful connection whatsoever to mental health or emotional wellbeing", "Financial stress is a major driver of mental health issues — conversely, good financial health reduces anxiety and provides security that supports mental wellbeing", "Financial wellbeing and mental health are completely separate and unrelated domains that have no meaningful influence on each other at all", "Financial stress is a problem that only affects people living in extreme poverty and carries no relevance to those with moderate or stable incomes"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -1201,7 +1201,7 @@ const questions: Question[] = [
   {
     id: 'fw-091',
     text: "What is \"financial congruence\"?",
-    options: ["The straightforward financial condition of earning more money each month than you spend across all categories and obligations", "When your spending habits genuinely reflect your values and goals — eliminating spending on things that don't align with what truly matters to you", "The administrative convenience of consolidating all your bank accounts and financial products into one single institution or platform", "The fortunate situation of generating income through professional activities that you also personally find fulfilling and deeply enjoyable"],
+    options: ["The straightforward financial condition of earning more money each month than you spend across all categories and obligations", "When your spending habits genuinely reflect your values and goals — eliminating spending on things that don't align with what truly matters to you", "The administrative convenience of consolidating all your personal bank accounts and various financial products into one single banking institution or financial platform", "The fortunate situation of generating income through professional activities that you also personally find fulfilling and deeply enjoyable"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -1211,7 +1211,7 @@ const questions: Question[] = [
   {
     id: 'fw-092',
     text: "What is the \"locus of control\" concept and how does it apply to personal finance?",
-    options: ["The extent to which government policies, tax laws, and official financial regulations directly control and determine your personal financial outcomes", "The degree to which you believe you control your own outcomes — internal locus (believing your actions shape your finances) leads to more proactive, disciplined financial behaviour", "The specific degree to which your credit score and credit history restricts or expands the financial options and products that are available to you", "The level of authority and control that your bank exercises over how you use and access the money held in your various savings accounts"],
+    options: ["The precise extent to which government economic policies, tax laws, and official financial regulations in Nigeria directly control, restrict, and ultimately determine all of your personal financial outcomes and options", "The degree to which you believe you control your own outcomes — internal locus (believing your actions shape your finances) leads to more proactive, disciplined financial behaviour", "The specific degree to which your credit score and credit history restricts or expands the financial options and products that are available to you", "The level of authority and control that your bank exercises over how you use and access the money held in your various savings accounts"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -1221,7 +1221,7 @@ const questions: Question[] = [
   {
     id: 'fw-093',
     text: "What is \"behavioural finance\" and what does it challenge?",
-    options: ["A government-administered financial education programme that teaches citizens practical skills for managing money, debt, and savings effectively", "The field studying how psychological biases and emotions affect financial decisions — challenging the assumption that people always act rationally in their financial interest", "A systematic methodology for tracking and recording all personal spending behaviour in detail to build a clear picture of financial habits", "The applied study of psychological and marketing techniques that businesses use to influence and shape consumer purchasing decisions and behaviour"],
+    options: ["A government-administered national financial education programme that teaches all Nigerian citizens the practical skills required for managing personal money, handling debt responsibly, and building savings effectively", "The field studying how psychological biases and emotions affect financial decisions — challenging the assumption that people always act rationally in their financial interest", "A systematic methodology for tracking and recording all personal spending behaviour in detail to build a clear picture of financial habits", "The applied study of psychological and marketing techniques that businesses use to influence and shape consumer purchasing decisions and behaviour"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['adults'],
@@ -1231,7 +1231,7 @@ const questions: Question[] = [
   {
     id: 'fw-094',
     text: "What is \"mental accounting\" and how can it lead to poor financial decisions?",
-    options: ["The cognitive skill of using mental arithmetic to quickly calculate approximate costs and sums without writing anything down in any record", "The tendency to treat money differently based on its source or intended use — e.g. spending a \"windfall\" more freely than earned income, even though both are equally valuable", "A practical method for managing a personal budget entirely from memory without using any written records, spreadsheets, or budgeting applications", "The organisational practice of mentally tracking multiple separate bank accounts without ever confusing their individual balances or intended purposes"],
+    options: ["The cognitive skill of using mental arithmetic to quickly calculate approximate costs and sums without writing anything down in any record", "The tendency to treat money differently based on its source or intended use — e.g. spending a \"windfall\" more freely than earned income, even though both are equally valuable", "A practical method for managing a personal budget entirely from memory without using any written records, spreadsheets, or budgeting applications", "The careful and highly disciplined organisational practice of mentally tracking multiple separate bank accounts simultaneously without ever confusing their individual balances, purposes, or intended uses at all"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['adults'],
@@ -1251,7 +1251,7 @@ const questions: Question[] = [
   {
     id: 'fw-096',
     text: "What does \"financial self-efficacy\" mean?",
-    options: ["The technical mathematical ability to perform complex financial calculations, interpret data, and produce accurate accounting records and reports", "Confidence in your ability to manage money successfully — people with high financial self-efficacy take more positive financial actions and achieve better outcomes", "The formal support and financial education resources provided by government institutions to help citizens improve their overall money management skills", "The arrangement where a professional financial advisor takes over all decision-making and management responsibilities for your personal financial affairs"],
+    options: ["The technical mathematical ability to perform complex financial calculations, interpret data, and produce accurate accounting records and reports", "Confidence in your ability to manage money successfully — people with high financial self-efficacy take more positive financial actions and achieve better outcomes", "The formal support and financial education resources provided by government institutions to help citizens improve their overall money management skills", "The arrangement where a professional financial advisor takes complete control over all decision-making and full management responsibilities for all aspects of your personal financial affairs and assets"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['adults'],
@@ -1261,7 +1261,7 @@ const questions: Question[] = [
   {
     id: 'fw-097',
     text: "What is the \"hedonic adaptation\" effect and its relevance to wealth and happiness?",
-    options: ["The measurable physical and psychological benefits that people gain from regularly participating in structured financial planning and money management activities", "People rapidly return to their baseline happiness level after positive financial changes — meaning more money often does not provide lasting happiness unless directed at experiences and meaning", "The classical economic theory stating that personal happiness and subjective wellbeing increase in a direct and consistent linear relationship as personal wealth grows", "An official Nigerian government wellbeing initiative designed to measure and improve citizen happiness, life satisfaction, and overall quality of life"],
+    options: ["The measurable physical and psychological benefits that people gain from regularly participating in structured financial planning and money management activities", "People rapidly return to their baseline happiness level after positive financial changes — meaning more money often does not provide lasting happiness unless directed at experiences and meaning", "The classical and widely accepted economic theory stating that personal happiness and subjective wellbeing consistently increase in a direct and perfectly linear relationship as individual personal wealth continues to grow", "An official Nigerian government wellbeing initiative designed to measure and improve citizen happiness, life satisfaction, and overall quality of life"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['adults'],

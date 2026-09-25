@@ -37,7 +37,7 @@ const questions: Question[] = [
     id: 're-003',
     text: 'What is a Survey Plan in Nigerian real estate?',
     options: [
-      'A government-maintained register of all properties actively listed for sale or lease in a designated district',
+      'A government-maintained online register of all residential and commercial properties actively listed for sale or lease in a designated local government district',
       'A technical drawing prepared by a licensed surveyor that defines the exact boundaries, dimensions, and coordinates of a piece of land',
       'An official inspection certificate produced by the state ministry confirming a completed building meets safety codes',
       'A formal written assessment issued by a registered estate agent stating the likely current resale price of land',
@@ -53,7 +53,7 @@ const questions: Question[] = [
     id: 're-004',
     text: 'What does it mean to "perfect" a land title in Nigeria?',
     options: [
-      'Clear all vegetation, level the topsoil, and obtain a registered contractor\'s site readiness certificate before beginning construction',
+      'Clear all vegetation, level the topsoil, and obtain a registered contractor\'s official site readiness certificate before commencing any construction works on the plot',
       'Complete all legal registration steps — including governor\'s consent, stamping, and registration — to make your ownership legally watertight',
       'Pay the agreed full purchase price to the seller in a single lump sum before any legal documentation can be prepared or signed',
       'Obtain written endorsement from community leaders and family heads of the area, recorded before a notary public',
@@ -103,7 +103,7 @@ const questions: Question[] = [
     options: [
       'Freehold purchases are substantially cheaper upfront while leasehold arrangements typically carry higher initial acquisition and legal fees',
       'Freehold ownership is permanent; leasehold means you own the property for a fixed term (e.g., 99 years) after which rights revert to the landowner',
-      'Leasehold tenure is reserved exclusively for commercial and industrial land while freehold status applies only to purely residential properties',
+      'Leasehold tenure is reserved exclusively for commercial and industrial land uses, while freehold status under Nigerian law applies only to purely residential properties and plots throughout the country',
       'Both terms describe equivalent ownership rights under Nigerian land law but are applied in different geopolitical zones of the country',
     ],
     correctIndex: 1,
@@ -208,10 +208,10 @@ const questions: Question[] = [
     id: 're-014',
     text: 'What is "rent"?',
     options: [
-      'Money you earn from working',
+      'Money you earn from working each month as part of your regular employment',
       'Money you pay to use someone else\'s house or land',
       'Money the government collects',
-      'Interest paid on a savings account',
+      'A monthly contribution paid into a cooperative housing savings fund by registered members',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -222,7 +222,7 @@ const questions: Question[] = [
   {
     id: 're-015',
     text: 'If you own a house and other people pay to live in it every year, what is the money they pay called?',
-    options: ['Salary', 'Rent income', 'Interest', 'Tax'],
+    options: ['Monthly wages', 'Rent income', 'Interest', 'Tax'],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -233,7 +233,7 @@ const questions: Question[] = [
     id: 're-016',
     text: 'What is the most important document proving that you legally own land in Nigeria?',
     options: [
-      'A market receipt',
+      'A stamped property purchase agreement signed by both buyer and seller',
       'A Certificate of Occupancy (C of O)',
       'A school leaving certificate',
       'An ID card',
@@ -311,7 +311,7 @@ const questions: Question[] = [
   {
     id: 're-021',
     text: 'Kunle\'s family buys a house in an up-and-coming Lagos neighbourhood for ₦25 million. Five years later it is worth ₦40 million. What is this increase called?',
-    options: ['Inflation', 'Capital appreciation', 'Rental income', 'Compound interest'],
+    options: ['General price inflation', 'Capital appreciation', 'Rental income', 'Compound interest'],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -339,7 +339,7 @@ const questions: Question[] = [
     id: 're-023',
     text: 'What is a landlord?',
     options: [
-      'A person who cleans houses for others',
+      'A government planning officer who reviews and approves building permit applications',
       'A person who owns property and rents it out to tenants',
       'A government official who manages public land',
       'A builder who constructs houses',
@@ -387,7 +387,7 @@ const questions: Question[] = [
     id: 're-026',
     text: 'Why do properties in Lagos Island typically cost more than in remote rural areas of Nigeria?',
     options: [
-      'Because reclaimed island soil is significantly more expensive to prepare for development than mainland clay, raising base construction costs',
+      'Because reclaimed island soil is significantly more expensive to prepare for development than mainland clay, substantially raising base construction and foundation costs for all new builds',
       'Because Lagos Island has greater access to jobs, business opportunities, infrastructure, and amenities — making it more desirable and driving up demand',
       'Because the Lagos State government sets mandatory minimum selling prices for island properties to prevent underselling of premium land',
       'Because island properties are consistently built to larger floor-plan specifications than equivalent mainland residential developments',
@@ -438,7 +438,7 @@ const questions: Question[] = [
     options: [
       'Consistently acquiring land in the most expensive districts in Lagos and Abuja as the core strategy for building a portfolio',
       'Buying properties to generate income (rent) or capital gains (selling higher), using real estate as a wealth-building asset rather than just shelter',
-      'Focusing exclusively on commercial office and retail properties while deliberately avoiding all forms of residential real estate exposure',
+      'Focusing exclusively on high-value commercial office and retail properties in Lagos and Abuja while deliberately avoiding all forms of residential real estate exposure throughout your portfolio',
       'Purchasing raw undeveloped land and holding it without generating any rental income for up to five decades before eventually selling',
     ],
     correctIndex: 1,
@@ -535,7 +535,7 @@ const questions: Question[] = [
       'Any property that lacks a valid building approval certificate from the state planning authority, making it technically illegal to purchase',
       'Property you buy before construction is complete, based on architectural plans — the main risk is developers abandoning or delaying projects, leaving you with nothing',
       'A property being transferred without valid title documents that is therefore legally impossible to register with the Land Registry',
-      'A property being sold at a price deliberately set below its certified market valuation, usually to attract buyers and bypass auction procedures',
+      'A property being sold at a price deliberately set below its certified market valuation, usually to attract a wider pool of buyers and bypass standard competitive auction and tender procedures entirely',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -551,7 +551,7 @@ const questions: Question[] = [
     options: [
       'Nothing — rent is optional',
       'The landlord can legally ask the tenant to leave the property',
-      'The government pays the rent for the tenant',
+      'The government housing authority covers all overdue rent payments directly to the landlord on behalf of the tenant',
       'The landlord must give the property for free',
     ],
     correctIndex: 1,
@@ -654,7 +654,7 @@ const questions: Question[] = [
   {
     id: 're-044',
     text: 'Why is having a safe place to live important for a family?',
-    options: ['It provides shelter and stability for everyday life', 'Housing has no real importance', 'Families don\'t need a place to live', 'Shelter is only important for pets'],
+    options: ['It provides shelter and stability for everyday life', 'Food and clothing are the only real needs; stable housing plays no practical role in everyday family wellbeing', 'Families don\'t need a place to live', 'Shelter is only important for pets'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -684,7 +684,7 @@ const questions: Question[] = [
   {
     id: 're-047',
     text: 'What\'s an example of a housing cost a family might plan for?',
-    options: ['Monthly rent or a house payment', 'Toy purchases only', 'School supplies only', 'Nothing related to housing'],
+    options: ['Monthly rent or a house payment', 'Entertainment and leisure spending only', 'School supplies only', 'Nothing related to housing'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -704,7 +704,7 @@ const questions: Question[] = [
   {
     id: 're-049',
     text: 'What\'s the basic difference between renting and owning a home?',
-    options: ['Renting involves regular payments for temporary use, owning involves purchasing the property outright, usually with significant upfront cost', 'Both renting and owning a home produce identical financial outcomes over any time period greater than five years in the Nigerian market', 'Owning a home never requires any form of ongoing payment after the initial purchase price has been settled in full', 'Renting a property consistently costs more in total than buying the same property outright across all Nigerian urban markets'],
+    options: ['Renting involves regular payments for temporary use, owning involves purchasing the property outright, usually with significant upfront cost', 'Both renting and owning a home always produce completely identical long-term financial outcomes for every household over any time period in the Nigerian residential property market', 'Owning a home never requires any form of ongoing payment after the initial purchase price has been settled in full', 'Renting a property consistently costs more in total than buying the same property outright across all Nigerian urban markets'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -724,7 +724,7 @@ const questions: Question[] = [
   {
     id: 're-051',
     text: 'What\'s a reasonable first step before signing any rental agreement?',
-    options: ['Sign immediately without reading the terms at all', 'Read the agreement carefully and understand what you\'re committing to', 'Rental agreements never really need to be read beforehand', 'Terms and conditions are generally irrelevant to renting a property'],
+    options: ['Sign immediately without reading the terms at all', 'Read the agreement carefully and understand what you\'re committing to', 'Rental agreements never really need to be read beforehand', 'Terms and conditions in Nigerian rental agreements are entirely standardised and always irrelevant to the specific tenancy'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -734,7 +734,7 @@ const questions: Question[] = [
   {
     id: 're-052',
     text: 'Why is verifying property or land ownership important before any transaction involving real estate?',
-    options: ['Verification has no real importance in property transactions', 'Fraudulent claims or disputed ownership can lead to significant financial and legal problems', 'Ownership is always automatically clear with no verification needed', 'Only large properties require ownership verification'],
+    options: ['Verification of ownership documents is entirely unnecessary since legitimate Nigerian property sellers always provide complete and accurate title information', 'Fraudulent claims or disputed ownership can lead to significant financial and legal problems', 'Ownership is always automatically clear with no verification needed', 'Only large properties require ownership verification'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -754,7 +754,7 @@ const questions: Question[] = [
   {
     id: 're-054',
     text: 'Why might rent typically require paying a large sum upfront (like a year in advance) in some Nigerian rental markets?',
-    options: ['This is a common market practice, which is worth understanding and planning for financially', 'Rent is always paid in small amounts monthly everywhere', 'Upfront rental practices have no financial planning implications', 'This practice doesn\'t exist in any rental market'],
+    options: ['This is a common market practice, which is worth understanding and planning for financially', 'Rent in Nigeria is always paid in small monthly amounts and no landlord anywhere in the country ever requires more than a single month upfront', 'Upfront rental practices have no financial planning implications', 'This practice doesn\'t exist in any rental market'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -854,7 +854,7 @@ const questions: Question[] = [
   {
     id: 're-064',
     text: 'What\'s a sound reason to use a qualified professional (like a lawyer or licensed agent) in a significant property transaction?',
-    options: ['Professional guidance has no real value in property transactions', 'Professional expertise can help identify risks, verify documentation, and navigate the transaction more safely', 'Only wealthy individuals need professional guidance for property transactions', 'Property transactions require no specialized knowledge at all'],
+    options: ['Licensed estate surveyors and legal solicitors have absolutely no measurable practical value in any standard Nigerian property transaction whatsoever', 'Professional expertise can help identify risks, verify documentation, and navigate the transaction more safely', 'Only wealthy individuals need professional guidance for property transactions', 'Property transactions require no specialized knowledge at all'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -874,7 +874,7 @@ const questions: Question[] = [
   {
     id: 're-066',
     text: 'What\'s a reasonable consideration around the liquidity trade-off of investing heavily in real estate?',
-    options: ['Real estate is typically less liquid than options like savings or some investments, meaning it may be harder to access funds quickly if needed', 'Nigerian real estate is the most liquid investment available, equivalent to a standard bank savings account in terms of cash access speed', 'Liquidity considerations are completely irrelevant when evaluating real estate as a component of a personal investment portfolio', 'Any Nigerian property can be converted to full cash value within 24 hours through the CBN emergency asset liquidation programme'],
+    options: ['Real estate is typically less liquid than options like savings or some investments, meaning it may be harder to access funds quickly if needed', 'Nigerian real estate is the most highly liquid investment class available, making it functionally equivalent to a standard bank savings account in terms of instant daily cash access speed and flexibility', 'Liquidity considerations are completely irrelevant when evaluating real estate as a component of a personal investment portfolio', 'Any Nigerian property can be converted to full cash value within 24 hours through the CBN emergency asset liquidation programme'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -914,7 +914,7 @@ const questions: Question[] = [
   {
     id: 're-070',
     text: "Who is a \"landlord\"?",
-    options: ["Someone who rents from another person", "The owner of a property who rents it to tenants", "A government official in charge of land", "A person who buys land from the government"],
+    options: ["Someone who borrows a property from a bank under a formal leasing arrangement", "The owner of a property who rents it to tenants", "A government official in charge of land", "A person who buys land from the government"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -934,7 +934,7 @@ const questions: Question[] = [
   {
     id: 're-072',
     text: "What is a \"deed\"?",
-    options: ["A lease agreement between landlord and tenant", "A legal document that proves ownership of a property", "A mortgage application form", "A receipt for paying rent"],
+    options: ["A formal tenancy contract that establishes monthly rent obligations and move-out conditions", "A legal document that proves ownership of a property", "A mortgage application form", "A receipt for paying rent"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -1004,7 +1004,7 @@ const questions: Question[] = [
   {
     id: 're-079',
     text: "What is a \"mortgage\"?",
-    options: ["A type of rental agreement", "A loan used to purchase property, secured against that property", "A government grant for first-time homebuyers", "A tax charged on property sales"],
+    options: ["A formal tenancy contract that specifies monthly payment amounts and the occupancy rights of a residential tenant", "A loan used to purchase property, secured against that property", "A government grant for first-time homebuyers", "A tax charged on property sales"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -1014,7 +1014,7 @@ const questions: Question[] = [
   {
     id: 're-080',
     text: "What does \"Certificate of Occupancy (C of O)\" mean in Nigeria?",
-    options: ["A certificate proving a building meets safety standards", "A government document confirming the right to occupy and use a piece of land", "A rental contract between tenant and landlord", "A receipt for paying land tax"],
+    options: ["A safety compliance certificate issued by the state building authority confirming that a structure meets all required structural standards", "A government document confirming the right to occupy and use a piece of land", "A rental contract between tenant and landlord", "A receipt for paying land tax"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -1104,7 +1104,7 @@ const questions: Question[] = [
   {
     id: 're-089',
     text: "What is \"capital appreciation\" in real estate?",
-    options: ["The rental income earned from a property", "The increase in a property's market value over time", "A government tax on property value gains", "The depreciation of a building's structure"],
+    options: ["The monthly rental income collected from all tenants currently occupying a residential or commercial property", "The increase in a property's market value over time", "A government tax on property value gains", "The depreciation of a building's structure"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -1114,7 +1114,7 @@ const questions: Question[] = [
   {
     id: 're-090',
     text: "What is a \"deed of assignment\"?",
-    options: ["A rental agreement between landlord and tenant", "A legal document transferring ownership of property from seller to buyer", "A building permit issued by the local government", "A property valuation report"],
+    options: ["A tenancy agreement that establishes the occupancy rights and rental obligations between a landlord and an incoming tenant", "A legal document transferring ownership of property from seller to buyer", "A building permit issued by the local government", "A property valuation report"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -1134,7 +1134,7 @@ const questions: Question[] = [
   {
     id: 're-092',
     text: "What is a \"property valuation\"?",
-    options: ["The price at which a property is listed for sale", "A professional assessment of a property's current market value", "The cost of construction materials", "The annual rent collected from a property"],
+    options: ["The asking price set by a property seller when first advertising their home for sale to attract prospective buyers", "A professional assessment of a property's current market value", "The cost of construction materials", "The annual rent collected from a property"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],

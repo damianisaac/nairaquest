@@ -53,7 +53,7 @@ const questions: Question[] = [
     id: 'in-004',
     text: 'What is a "premium" in insurance?',
     options: [
-      'The bonus paid when you file a successful claim',
+      'The penalty charged by the insurer when you cancel your policy before the agreed contract end date',
       'The regular payment you make to maintain your insurance coverage',
       'The maximum amount your insurance will pay out',
       'The excess you pay before insurance kicks in',
@@ -144,7 +144,7 @@ const questions: Question[] = [
     id: 'in-010',
     text: 'If Ola pays for health insurance and gets sick, who helps pay for his hospital treatment?',
     options: [
-      'Nobody — he pays everything himself',
+      'Nobody — Ola must settle the entire hospital bill himself from his personal savings or emergency funds',
       'The insurance company covers the medical bills',
       'The government pays all costs',
       'His employer covers all costs',
@@ -162,7 +162,7 @@ const questions: Question[] = [
       'To make their car go faster',
       'So they do not have to pay for fuel',
       'To protect against costly repairs or accidents',
-      'Because cars come with free insurance',
+      'Because every new car purchased from a dealership automatically comes with a full insurance policy',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -202,7 +202,7 @@ const questions: Question[] = [
     options: [
       'Agree — since no claims were made, every premium paid was an unnecessary expense that should have been saved in a bank account instead',
       'Disagree — insurance is for unpredictable events; the fact that you\'ve never claimed means you\'ve been lucky, not that the cover was pointless',
-      'Agree — insurance should only be purchased when a specific risk is already imminent, such as before a planned surgery or a long car trip',
+      'Agree — insurance only makes financial sense when a specific risk is already imminent and clearly identified, such as immediately before a confirmed major surgical procedure or a long road journey',
       'Agree — most Nigerian insurance companies routinely reject valid claims, so premiums paid provide no meaningful financial protection',
     ],
     correctIndex: 1,
@@ -219,7 +219,7 @@ const questions: Question[] = [
       'Loss of school books or uniform',
       'Medical costs and compensation if a student is injured during the trip',
       'Travel delays or flight cancellations',
-      'The full cost of the trip if parents cannot pay',
+      'The entire cost of the school trip, including transport and accommodation fees, if parents are unable to make payment in time',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -268,7 +268,7 @@ const questions: Question[] = [
       'When an insurer deliberately rejects valid policyholder claims to protect profit margins — NAICOM intervenes by fining non-compliant insurers and ordering them to pay outstanding claims',
       'When high-risk individuals are more likely to seek insurance (making the insured pool riskier than the general population) — combated through underwriting, exclusions, and risk-based pricing',
       'When insurers cherry-pick only low-risk applicants and refuse coverage to anyone above a threshold — combated through NAICOM mandatory acceptance rules for standard products',
-      'When policyholders systematically choose the lowest-priced insurer regardless of quality, creating a race to the bottom — combated by NAICOM minimum solvency requirements and price floors',
+      'When policyholders systematically choose the lowest-priced insurer regardless of quality or financial soundness, creating a race to the bottom — combated by NAICOM minimum solvency requirements and price floors',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -300,7 +300,7 @@ const questions: Question[] = [
       'It means the insurer must always pay the full market replacement cost of any insured item regardless of depreciation — life insurance follows this principle most strictly, since it pays a predetermined sum',
       'It means insurance should restore you to the same financial position before the loss (not profit from it). Life insurance doesn\'t follow it strictly because you cannot objectively quantify the financial value of a life',
       'It means Nigerian law requires you to insure all assets above a certain value, and insurers must accept all valid applications — life insurance remains entirely optional under current Nigerian regulations',
-      'It means the total premiums collected over a policy\'s lifetime must mathematically equal the total claims paid out — life insurance deviates from this because it uses actuarially adjusted long-term pricing models',
+      'It means the total premiums collected over a policy\'s entire lifetime must mathematically equal the total claims paid out — life insurance deviates from this principle because it uses actuarially adjusted long-term pricing models',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -332,7 +332,7 @@ const questions: Question[] = [
       'When an insurance company intentionally uses policy ambiguity to deny valid claims or delays payouts to improve its short-term cash position at the expense of policyholders',
       'When having insurance causes people to take more risks than they would without it — e.g., a car owner with comprehensive insurance driving more recklessly because "the insurance will cover it"',
       'When insurance premiums are set at unaffordably high levels for most Nigerians, causing widespread underinsurance and leaving households exposed to financial shocks',
-      'When policyholders deliberately submit false or exaggerated claims for events that never occurred or were intentionally caused, in order to profit from their insurance coverage',
+      'When policyholders deliberately submit false or exaggerated claims for losses that never actually occurred or were intentionally self-inflicted, in order to fraudulently profit from their insurance policy',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -345,7 +345,7 @@ const questions: Question[] = [
     id: 'in-023',
     text: 'Under Nigeria\'s Insurance Act, what is "subrogation" and why does it matter after a claims payout?',
     options: [
-      'The insurer\'s contractual right to immediately terminate a policyholder\'s coverage after a claim has been paid, and to reclaim any premiums paid for the remaining unexpired portion of the policy term',
+      'The insurer\'s contractual right to immediately cancel a policyholder\'s active coverage after a claim has been paid, and to recover any unused premiums from the remaining unexpired portion of the policy term',
       'After paying a claim, the insurer acquires the legal right to pursue the responsible third party for recovery — preventing the insured from "double recovering" from both the insurer and the liable party',
       'The process by which a policyholder formally requests to renew their insurance contract for another term, involving a review of the claims history and potential adjustment of the premium rate',
       'The legal right of a policyholder to transfer their insurance policy to a competing insurer at any time during the coverage period, retaining their accumulated no-claims discount and claims records',
@@ -377,7 +377,7 @@ const questions: Question[] = [
     id: 'in-025',
     text: 'Why do more people buy insurance when something risky is about to happen (like travelling in bad weather)?',
     options: [
-      'Because insurance companies offer discounts before storms',
+      'Because insurers are required by law to reduce premium rates whenever a named storm or natural disaster is officially declared by the relevant authorities',
       'Because people think about risk more when danger feels real — they want protection',
       'Insurance is only bought before risky events',
       'Because the government forces people to buy it then',
@@ -392,7 +392,7 @@ const questions: Question[] = [
     id: 'in-026',
     text: 'Ngozi\'s family has fire insurance on their house. A fire damages the kitchen. What should they do first?',
     options: [
-      'Fix the kitchen themselves without telling the insurance company',
+      'Repair the kitchen damage themselves immediately without notifying the insurer, since starting repairs quickly prevents further deterioration',
       'Contact the insurance company to file a claim and report the damage',
       'Move out of the house immediately',
       'Buy new insurance from a different company',
@@ -409,7 +409,7 @@ const questions: Question[] = [
     options: [
       'Damage to another person\'s car if you crash into them',
       'Servicing and maintenance of your car (oil change, tyres)',
-      'Theft of your car (with comprehensive insurance)',
+      'Theft of your vehicle, which is fully covered under a comprehensive insurance policy in Nigeria',
       'Damage to your car from an accident',
     ],
     correctIndex: 1,
@@ -467,7 +467,7 @@ const questions: Question[] = [
   {
     id: 'in-031',
     text: 'What does it mean to \'protect\' something valuable, like your bike?',
-    options: ['Taking care of it so it doesn\'t get damaged or lost', 'Ignoring it completely', 'Giving it away to strangers', 'Leaving it outside unattended always'],
+    options: ['Taking care of it so it doesn\'t get damaged or lost', 'Ignoring it completely', 'Giving it away to strangers', 'Leaving it in an unsecured public place where it can easily be damaged, stolen, or tampered with'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -477,7 +477,7 @@ const questions: Question[] = [
   {
     id: 'in-032',
     text: 'Why might wearing a helmet while riding a bike be similar to the idea behind insurance?',
-    options: ['Both help protect you from unexpected harm or cost', 'They have nothing in common', 'Helmets have no protective purpose', 'Insurance and safety gear are unrelated ideas'],
+    options: ['Both help protect you from unexpected harm or cost', 'They have nothing in common', 'Helmets have no protective purpose', 'Insurance and physical safety equipment serve completely unrelated purposes with no meaningful parallels'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -487,7 +487,7 @@ const questions: Question[] = [
   {
     id: 'in-033',
     text: 'If something unexpected happens, like breaking a toy, what\'s a smart lesson about being prepared?',
-    options: ['Having a small saved amount for surprises can help', 'Being prepared never matters', 'Surprises never require any preparation', 'Only adults need to prepare for surprises'],
+    options: ['Having a small saved amount for surprises can help', 'Being prepared never matters', 'Surprises never require any preparation', 'Only employed adults with dependants need to set aside money for financial surprises and emergencies'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -512,7 +512,7 @@ const questions: Question[] = [
   {
     id: 'in-035',
     text: 'Why might families want to plan for unexpected doctor visits?',
-    options: ['Because health problems can happen without warning', 'Doctor visits are never unexpected', 'Planning for health has no value', 'Health problems only happen to adults'],
+    options: ['Because health problems can happen without warning', 'Doctor visits are never unexpected', 'Planning for health has no value', 'Health problems and serious medical conditions only affect adults and rarely impact children or young people'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -612,7 +612,7 @@ const questions: Question[] = [
   {
     id: 'in-042',
     text: 'Why might paying a small regular insurance premium make sense compared to risking a large unexpected cost?',
-    options: ['Small regular payments can protect against a much larger, unpredictable financial burden', 'Premiums are always wasted money with no benefit', 'Large unexpected costs never actually happen', 'Insurance guarantees you\'ll never spend money on anything else'],
+    options: ['Small regular payments can protect against a much larger, unpredictable financial burden', 'Premiums are always wasted money with no benefit', 'Large unexpected costs never actually happen', 'Purchasing insurance eliminates all future personal expenses and guarantees that no other financial obligations will ever arise'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -637,7 +637,7 @@ const questions: Question[] = [
   {
     id: 'in-044',
     text: 'Why might a family without any health insurance face more financial strain during a medical emergency?',
-    options: ['They may need to cover the full cost out-of-pocket unexpectedly, which can be a significant burden', 'Insurance has no measurable effect on total medical costs', 'Medical emergencies are generally always affordable regardless of insurance coverage', 'Families without any insurance consistently end up paying less overall'],
+    options: ['They may need to cover the full cost out-of-pocket unexpectedly, which can be a significant burden', 'Insurance has no measurable effect on total medical costs', 'Medical emergencies in Nigeria are generally affordable since most hospitals offer flexible payment plans that make insurance unnecessary', 'Families without any insurance consistently end up paying less overall'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -677,7 +677,7 @@ const questions: Question[] = [
   {
     id: 'in-047',
     text: 'What\'s a sound reason to consider insurance as part of broader financial planning, not just an afterthought?',
-    options: ['It helps protect savings and goals from being wiped out by unexpected large expenses', 'Insurance has no connection to broader financial planning', 'Financial planning should ignore risk entirely', 'Insurance replaces the need for any savings'],
+    options: ['It helps protect savings and goals from being wiped out by unexpected large expenses', 'Insurance products operate in a completely separate domain with no meaningful connection to personal budgeting, savings targets, or long-term financial planning', 'Financial planning should ignore risk entirely', 'Insurance replaces the need for any savings'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -687,7 +687,7 @@ const questions: Question[] = [
   {
     id: 'in-048',
     text: 'Why might young people underestimate the value of starting some form of insurance coverage early?',
-    options: ['A sense that bad events \'won\'t happen to them\' can lead to underestimating real risk', 'Young people are statistically almost never at risk of anything at all', 'Insurance is only ever valuable for older adults and retirees', 'There\'s no real value or benefit to starting coverage early'],
+    options: ['A sense that bad events \'won\'t happen to them\' can lead to underestimating real risk', 'Young people face statistically minimal health and accident risks, making insurance coverage financially unnecessary and wasteful for this age group', 'Insurance is only ever valuable for older adults and retirees', 'There\'s no real value or benefit to starting coverage early'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -802,7 +802,7 @@ const questions: Question[] = [
   {
     id: 'in-056',
     text: 'What\'s a reasonable approach to insuring valuable assets (like a vehicle or property) against major risks?',
-    options: ['Ignore insuring valuable assets entirely regardless of their worth', 'Weigh the asset\'s value and replacement cost against the cost of appropriate coverage', 'Only insure assets that are already damaged', 'Insurance for assets provides no meaningful protection'],
+    options: ['Decline to insure valuable assets entirely, since the cumulative premiums paid over time will always exceed the asset\'s eventual replacement cost', 'Weigh the asset\'s value and replacement cost against the cost of appropriate coverage', 'Only insure assets that are already damaged', 'Insurance for assets provides no meaningful protection'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -842,7 +842,7 @@ const questions: Question[] = [
   {
     id: 'in-059',
     text: "What is the main purpose of insurance?",
-    options: ["To make you rich quickly", "To protect you from unexpected financial loss", "To save money at a bank", "To pay taxes to the government"],
+    options: ["To make you rich quickly", "To protect you from unexpected financial loss", "To save money at a bank", "To pay mandatory government taxes and regulatory levies to federal and state tax authorities"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -877,7 +877,7 @@ const questions: Question[] = [
   {
     id: 'in-062',
     text: "Why would a person buy health insurance?",
-    options: ["To receive free food from the hospital", "To help cover the cost of medical treatment if they fall ill", "Because the government requires everyone to have it", "To earn interest on payments made"],
+    options: ["To receive free food from the hospital", "To help cover the cost of medical treatment if they fall ill", "Because Nigerian law makes health insurance compulsory for every citizen regardless of age or health status", "To earn interest on payments made"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -887,7 +887,7 @@ const questions: Question[] = [
   {
     id: 'in-063',
     text: "Which of these is NOT typically covered by basic car insurance?",
-    options: ["Damage to your car from an accident", "Your car being stolen", "Regular car servicing and maintenance", "Fire damage to your car"],
+    options: ["Damage caused to your own vehicle when another driver collides with you", "Your car being stolen", "Regular car servicing and maintenance", "Fire damage to your car"],
     correctIndex: 2,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -1007,7 +1007,7 @@ const questions: Question[] = [
   {
     id: 'in-072',
     text: "What is a \"beneficiary\" in insurance?",
-    options: ["The insurance company that receives premiums", "The person or entity designated to receive the insurance payout", "The agent who sold the policy", "The government's insurance fund"],
+    options: ["The insurance company that receives premiums", "The person or entity designated to receive the insurance payout", "The licensed insurance agent or broker responsible for advising on and selling the policy", "The government's insurance fund"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],

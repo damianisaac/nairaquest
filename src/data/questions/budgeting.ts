@@ -6,9 +6,9 @@ const questions: Question[] = [
     text: 'What is a budget?',
     options: [
       'A plan for how to spend and save your money',
-      'A type of bank account with limits',
-      'A fine paid to the government',
-      'A list of expensive things you want',
+      'A type of bank account with monthly deposit and spending limits',
+      'A government fine collected from citizens who fail to pay taxes on time',
+      'A list of expensive things you want to buy when you have more money',
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -107,7 +107,7 @@ const questions: Question[] = [
     id: 'bg-008',
     text: 'What is the "envelope method" of budgeting?',
     options: [
-      'Sending money to family in envelopes instead of transfer',
+      'Sending cash to distant family members in sealed envelopes as a method of transfer',
       'Allocating physical cash into labeled envelopes for each spending category',
       'A digital app that automatically budgets for you',
       'A savings plan that matures after a fixed number of months',
@@ -161,10 +161,10 @@ const questions: Question[] = [
     id: 'bg-012',
     text: 'You have ₦800, but a school bag you need costs ₦1,200. What should you do?',
     options: [
-      'Buy it anyway and worry later',
+      'Buy it anyway using borrowed money and figure out repayment later',
       'Save more money until you can afford it',
-      'Borrow money from a stranger',
-      'Buy a different expensive item instead',
+      'Borrow money from a stranger and promise to pay back whenever possible',
+      'Buy a different expensive item instead since prices may rise later',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -292,10 +292,10 @@ const questions: Question[] = [
     id: 'bg-022',
     text: 'Funke earns ₦1,000 per week doing chores. She plans: ₦400 on food, ₦200 on transport, ₦200 savings, ₦200 fun. Is this a good budget?',
     options: [
-      'No — she should spend everything on food',
+      'No — she should spend all ₦1,000 on essential food and household needs instead',
       'Yes — she covers needs, saves, and still has money for fun',
-      'No — she should not save anything',
-      'No — she should spend nothing on fun',
+      'No — she should not save anything at all since she is still young and has time',
+      'No — she should spend nothing on fun and redirect that money to needs',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -338,10 +338,10 @@ const questions: Question[] = [
     id: 'bg-025',
     text: 'Tunde tracks his spending for a month and discovers he spends ₦12,000 on data but only ₦4,000 on textbooks. What should his budget analysis reveal?',
     options: [
-      'Data spending is beneficial because internet access supports both learning and social development',
+      'Data spending is fully justified because reliable internet access supports both academic learning and broader social development equally',
       'He is over-spending on a "want" (data) while under-investing in a "need" (education) — he should rebalance',
-      'His spending is balanced because data subscriptions typically cost more than textbooks in Nigeria',
-      'He should cut textbook spending entirely and shift to free online educational resources instead',
+      'His spending is perfectly balanced because data subscriptions in Nigeria typically cost significantly more than physical textbooks',
+      'He should cut textbook spending entirely and rely only on free online educational resources and videos instead',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -353,7 +353,7 @@ const questions: Question[] = [
     id: 'bg-026',
     text: 'What is the difference between a "fixed expense" and a "variable expense"? Give a Nigerian teen example of each.',
     options: [
-      'Fixed = changes monthly; Variable = stays the same. Fixed: data bundle. Variable: school fees',
+      'Fixed expenses change every month based on usage; variable expenses stay constant. Fixed example: airtime bundle. Variable example: school fees paid each term',
       'Fixed = same every month; Variable = changes. Fixed: school fees each term. Variable: transport cost depending on outings',
       'Both mean the same thing — how much you spend',
       'Fixed expenses are paid yearly; variable are paid daily',
@@ -383,10 +383,10 @@ const questions: Question[] = [
     id: 'bg-028',
     text: 'What is "zero-based budgeting" and why might a teenager use it?',
     options: [
-      'A strict approach that allows zero spending on leisure, directing all income only to essential costs and savings',
+      'A strict financial approach that completely eliminates all leisure spending, directing every naira exclusively toward essential living costs and mandatory savings goals',
       'A budgeting method where every naira of income is assigned a purpose so income minus all allocations equals zero — useful for tight budgets',
-      'A budgeting style where you begin each month with zero savings and gradually build up your allocation over time',
-      'An emergency budgeting technique applied only after you have spent all your money and need to restart from nothing',
+      'A budgeting style where you begin each month with zero savings and gradually build up your allocation categories over time as income grows',
+      'An emergency budgeting technique applied only after you have spent all your money and need to completely restart your financial plan from nothing',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -398,7 +398,7 @@ const questions: Question[] = [
     id: 'bg-029',
     text: 'Rasheed plans ₦30,000/month for food but consistently spends ₦42,000. What should he do?',
     options: [
-      'Continue spending ₦42,000 monthly since Nigerian food prices fluctuate too much for any budget to accurately predict',
+      'Continue spending ₦42,000 monthly without any adjustment, because Nigerian food prices are far too volatile and unpredictable for any household budget figure to reliably forecast',
       'Either adjust the budget to reflect reality (₦42,000) and cut elsewhere, or find ways to reduce food spending (meal prep, cooking at home)',
       'Cancel all discretionary categories entirely so the food overrun is absorbed without revising any existing budget figures',
       'Apply to your cooperative society for an emergency soft loan each month until income grows enough to cover the food gap',
@@ -443,7 +443,7 @@ const questions: Question[] = [
   {
     id: 'bg-033',
     text: 'What does it mean to \'spend wisely\'?',
-    options: ['Thinking before you buy something', 'Buying everything you see', 'Never buying anything ever', 'Spending as fast as possible'],
+    options: ['Thinking before you buy something', 'Buying every item you see in the market without checking your balance first', 'Never making any purchase under any circumstances whatsoever', 'Spending all your money as fast as you possibly can each time you get it'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -463,7 +463,7 @@ const questions: Question[] = [
   {
     id: 'bg-035',
     text: 'Which is an example of planning ahead with money?',
-    options: ['Saving small amounts for something you want next month', 'Spending everything the moment you get it', 'Ignoring how much you have', 'Borrowing from everyone you know'],
+    options: ['Saving small amounts for something you want next month', 'Spending all your money the very moment you receive it without any delay or forward plan', 'Ignoring how much money you currently have and hoping it covers your needs', 'Borrowing money from every friend and family member you can reach'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -473,7 +473,7 @@ const questions: Question[] = [
   {
     id: 'bg-036',
     text: 'Why might writing down what you spend help you?',
-    options: ['It helps you see where your money actually goes', 'Writing has nothing to do with money', 'It makes you spend more', 'It\'s only useful for adults'],
+    options: ['It helps you see where your money actually goes', 'Writing things down is completely unrelated to money management and serves no real financial purpose', 'Tracking expenses on paper actually causes you to spend more in the long run', 'Expense tracking is only a useful practice for working adults with large incomes'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -493,7 +493,7 @@ const questions: Question[] = [
   {
     id: 'bg-038',
     text: 'What\'s a good reason to make a simple money plan before a trip to the shop?',
-    options: ['So you know what you can actually afford to buy', 'Plans make shopping slower for no reason', 'It\'s not necessary at all', 'Only shopkeepers need plans'],
+    options: ['So you know what you can actually afford to buy', 'Making a shopping plan just slows you down and offers no real financial benefit at all', 'Planning before shopping is completely unnecessary for anyone regardless of income', 'Only market traders and shopkeepers ever need to think about spending plans'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -513,7 +513,7 @@ const questions: Question[] = [
   {
     id: 'bg-040',
     text: 'Why does tracking recurring small expenses (like daily transport or snacks) matter for a budget?',
-    options: ['Small regular expenses can add up to a large amount over time', 'They never add up to anything meaningful', 'Only big expenses matter in a budget', 'Tracking small expenses is a waste of time'],
+    options: ['Small regular expenses can add up to a large amount over time', 'Tiny daily expenses are far too minor to ever accumulate into any meaningful budget total', 'Only large one-time expenses have any real impact on your overall monthly budget', 'Tracking small recurring expenses is a pointless waste of time and mental energy'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -563,7 +563,7 @@ const questions: Question[] = [
   {
     id: 'bg-045',
     text: 'What\'s a practical reason to review your budget monthly rather than never?',
-    options: ['Spending patterns and needs can change over time', 'Budgets never need review once made', 'Monthly review has no benefit', 'It\'s only useful for large businesses'],
+    options: ['Spending patterns and needs can change over time', 'A budget created once is completely accurate and never requires any future review or adjustment', 'Reviewing your monthly budget provides no measurable benefit to your financial position', 'Budget reviews are only necessary for large businesses with multiple expense departments'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -603,7 +603,7 @@ const questions: Question[] = [
   {
     id: 'bg-049',
     text: 'You\'re budgeting with irregular freelance income. What\'s the soundest approach?',
-    options: ['Budget based on your highest-earning month every time', 'Budget based on a conservative average and adjust as actual income comes in', 'Avoid budgeting since income is irregular', 'Spend freely and budget only in low months'],
+    options: ['Always budget based on your single highest-earning month regardless of how rarely that income level occurs', 'Budget based on a conservative average and adjust as actual income comes in', 'Avoid budgeting entirely since irregular income makes any plan impossible to stick to', 'Spend freely throughout the month and only create a budget during your lowest-income periods'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -623,7 +623,7 @@ const questions: Question[] = [
   {
     id: 'bg-051',
     text: 'You\'ve budgeted carefully but a major unplanned expense arises. What does this reveal about the budget?',
-    options: ['The budget was useless from the start', 'The value of having an emergency fund or buffer built into planning', 'Budgeting failed permanently', 'Nothing, unplanned expenses can\'t be prepared for'],
+    options: ['The budget was fundamentally flawed and completely useless from its very first day of use', 'The value of having an emergency fund or buffer built into planning', 'Budgeting as a practice has permanently failed and should be abandoned going forward', 'Nothing at all — unplanned expenses are completely random and impossible to ever prepare for'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -663,7 +663,7 @@ const questions: Question[] = [
   {
     id: 'bg-055',
     text: 'You want to fund a big goal (business capital, home) while covering daily life. What\'s the disciplined approach?',
-    options: ['Wait for a windfall to fund it entirely', 'Build a specific savings line into your regular budget toward that goal', 'Ignore the goal until income increases dramatically', 'Fund it entirely through debt'],
+    options: ['Wait passively for a financial windfall or unexpected income surge to fund the goal in full', 'Build a specific savings line into your regular budget toward that goal', 'Completely ignore the goal and wait until your income increases very dramatically first', 'Fund the entire goal amount immediately through debt and repay it gradually over time'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -683,7 +683,7 @@ const questions: Question[] = [
   {
     id: 'bg-057',
     text: 'Why might reviewing and adjusting a household budget with a partner/family matter?',
-    options: ['Shared financial goals and habits benefit from shared visibility and agreement', 'Budgets should always be kept completely private within a household', 'Partners never need to align on finances', 'It has no impact on financial outcomes'],
+    options: ['Shared financial goals and habits benefit from shared visibility and agreement', 'Household budgets should always remain completely private and never be shared with any family member', 'Partners and spouses have no need to align or agree on any financial matter or budget plan', 'Reviewing budgets together has absolutely no measurable impact on household financial outcomes'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -773,7 +773,7 @@ const questions: Question[] = [
   {
     id: 'bg-066',
     text: "Which is the best budgeting habit?",
-    options: ["Spend first, save what is left", "Save first, then budget the rest for spending", "Borrow money before you run out", "Never track your spending"],
+    options: ["Spend on all your needs and wants first, then save whatever money happens to remain", "Save first, then budget the rest for spending", "Borrow money from family or friends before you completely run out each month", "Never bother tracking your spending since it takes too much time and effort"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['kids'],
@@ -933,7 +933,7 @@ const questions: Question[] = [
   {
     id: 'bg-082',
     text: "What is \"lifestyle inflation\"?",
-    options: ["When the cost of living increases nationally", "When personal spending rises proportionally with income growth", "A government policy to increase wages", "Inflation that specifically affects luxury goods"],
+    options: ["When the national cost of living increases and consumer prices rise across the whole economy", "When personal spending rises proportionally with income growth", "A government economic policy specifically designed to increase minimum wages nationwide", "A type of inflation that exclusively and disproportionately affects luxury and premium goods"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -983,7 +983,7 @@ const questions: Question[] = [
   {
     id: 'bg-087',
     text: "What is the biggest risk of using credit to fund a lifestyle beyond your income?",
-    options: ["Building a strong credit history", "Earning reward points", "Accumulating high-interest debt that outgrows income", "Improving your credit score quickly"],
+    options: ["Building a stronger personal credit profile and expanding your credit history over time", "Earning valuable cashback rewards and loyalty points on every purchase made", "Accumulating high-interest debt that outgrows income", "Rapidly improving your credit score by demonstrating consistent and regular card usage"],
     correctIndex: 2,
     difficulty: 'medium',
     ageTrack: ['adults'],

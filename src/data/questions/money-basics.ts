@@ -121,7 +121,7 @@ const questions: Question[] = [
     options: [
       'Interest only on the original amount you saved',
       'Earning interest on both your savings AND on interest already earned',
-      'A type of fine you pay for spending too much',
+      'A bank fee charged whenever your savings fall below the required minimum balance',
       'Interest that reduces every year',
     ],
     correctIndex: 1,
@@ -135,7 +135,7 @@ const questions: Question[] = [
     id: 'mb-011',
     text: 'Which of these is an example of "passive income"?',
     options: [
-      'Salary from your 9-to-5 job',
+      'Monthly salary paid by an employer in exchange for your active daily work',
       'Rent income from a property you own',
       'Money borrowed from a friend',
       'A cash gift from your parents',
@@ -162,7 +162,7 @@ const questions: Question[] = [
     id: 'mb-013',
     text: 'Which of these costs is a one-time expense vs. a recurring expense?',
     options: [
-      'Monthly data subscription — one-time',
+      'Monthly data subscription — one-time expense that you renew each month',
       'Buying a new school uniform — one-time',
       'Weekly transport fare — one-time',
       'Electricity bill — one-time',
@@ -178,7 +178,7 @@ const questions: Question[] = [
     id: 'mb-014',
     text: 'What does "net income" mean?',
     options: [
-      'Your gross salary before any deductions',
+      'Your total gross salary received from your employer before any taxes or deductions are taken',
       'Your take-home pay after taxes and deductions',
       'The income you earn from investments only',
       'Your total income from all jobs combined',
@@ -234,7 +234,7 @@ const questions: Question[] = [
     options: [
       'An asset costs you money; a liability earns you money',
       'An asset puts money in your pocket; a liability takes money out',
-      'Assets are things you buy; liabilities are things you sell',
+      'Assets are only the things you purchase while liabilities are only the things you choose to sell',
       'They are two words for the same thing',
     ],
     correctIndex: 1,
@@ -276,7 +276,7 @@ const questions: Question[] = [
     options: [
       'Under her pillow',
       'In a piggy bank or savings account',
-      'In her school bag',
+      'Inside her school bag where classmates could easily find and take it',
       'In her pocket at all times',
     ],
     correctIndex: 1,
@@ -334,7 +334,7 @@ const questions: Question[] = [
   {
     id: 'mb-026',
     text: 'Which of these is money you can hold in your hand?',
-    options: ['Coins and notes', 'A debit card', 'A bank draft', 'A cheque leaf'],
+    options: ['Coins and notes', 'A debit card linked to your bank account', 'A bank draft', 'A cheque leaf'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -344,7 +344,7 @@ const questions: Question[] = [
   {
     id: 'mb-027',
     text: 'You get ₦200 for helping at home. What\'s a smart first step?',
-    options: ['Spend it all on sweets immediately', 'Decide how much to save and how much to spend', 'Lose it on purpose', 'Give it all away'],
+    options: ['Spend everything immediately on sweets, snacks, or anything that looks appealing to you', 'Decide how much to save and how much to spend', 'Lose it on purpose', 'Give it all away'],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -354,7 +354,7 @@ const questions: Question[] = [
   {
     id: 'mb-028',
     text: 'What is saving money?',
-    options: ['Spending it fast', 'Keeping some money instead of spending it all', 'Losing your money', 'Giving your money to a stranger'],
+    options: ['Spending it fast', 'Keeping some money instead of spending it all', 'Losing your money', 'Handing all your money to someone else without any expectation of getting it back'],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -394,7 +394,7 @@ const questions: Question[] = [
   {
     id: 'mb-032',
     text: 'You want to buy a ₦2,000 toy. Which plan works best?',
-    options: ['Save a little each week until you reach ₦2,000', 'Wait for someone to just give it to you', 'Take money from your sibling', 'Forget about the toy immediately'],
+    options: ['Save a little each week until you reach ₦2,000', 'Sit and wait patiently in hopes that someone will generously give it to you for free', 'Take money from your sibling', 'Forget about the toy immediately'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -424,7 +424,7 @@ const questions: Question[] = [
   {
     id: 'mb-035',
     text: 'What\'s the real difference between price and value?',
-    options: ['They always mean the same thing', 'Price is what you pay, value is what it\'s worth to you', 'Value is always higher than price', 'Price only applies to expensive things'],
+    options: ['They always mean the same thing', 'Price is what you pay, value is what it\'s worth to you', 'Value is always higher than price', 'Price is a concept that only applies to very expensive or luxury goods and services'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -444,7 +444,7 @@ const questions: Question[] = [
   {
     id: 'mb-037',
     text: 'Which habit builds long-term financial discipline?',
-    options: ['Spending as soon as money arrives', 'Consistently saving a portion of every income', 'Avoiding all financial decisions', 'Borrowing whenever possible'],
+    options: ['Spending all your money immediately as soon as it arrives in your account or wallet', 'Consistently saving a portion of every income', 'Avoiding all financial decisions', 'Borrowing whenever possible'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -474,7 +474,7 @@ const questions: Question[] = [
   {
     id: 'mb-040',
     text: 'You earn ₦8,000 from a small task. Which plan reflects balanced money habits?',
-    options: ['Spend it all on entertainment', 'Split it into spend, save, and a small give/share portion', 'Hide it under your mattress permanently', 'Buy something you\'ll regret tomorrow'],
+    options: ['Spend every single naira on entertainment and fun activities without saving anything at all', 'Split it into spend, save, and a small give/share portion', 'Hide it under your mattress permanently', 'Buy something you\'ll regret tomorrow'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -494,7 +494,7 @@ const questions: Question[] = [
   {
     id: 'mb-042',
     text: 'You want a ₦30,000 item in 3 months. What\'s a realistic plan?',
-    options: ['Wait and hope you find the money', 'Save about ₦10,000 a month toward it', 'Borrow the full amount immediately', 'Give up on the goal'],
+    options: ['Wait for an unexpected windfall or hope the money materialises on its own somehow', 'Save about ₦10,000 a month toward it', 'Borrow the full amount immediately', 'Give up on the goal'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -594,7 +594,7 @@ const questions: Question[] = [
   {
     id: 'mb-052',
     text: 'What\'s a realistic first step toward financial independence?',
-    options: ['Winning a large prize or receiving a substantial inheritance from a wealthy family member', 'Consistently spending less than you earn and directing the difference toward savings/investments', 'Avoiding all financial planning and trusting that your circumstances will naturally improve', 'Relying entirely on family support and government welfare programmes to secure your future'],
+    options: ['Winning a large prize or receiving a substantial inheritance from a wealthy family member or close relative', 'Consistently spending less than you earn and directing the difference toward savings/investments', 'Avoiding all financial planning and trusting that your circumstances will naturally improve', 'Relying entirely on family support and government welfare programmes to secure your future'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -604,7 +604,7 @@ const questions: Question[] = [
   {
     id: 'mb-053',
     text: 'Two adults, same income, one tracks expenses monthly, one doesn\'t. What\'s the likely long-term difference?',
-    options: ['No difference at all', 'The one who tracks tends to catch overspending and adjust earlier', 'Tracking expenses guarantees wealth', 'Tracking has no relationship to financial outcomes'],
+    options: ['No difference at all', 'The one who tracks tends to catch overspending and adjust earlier', 'Tracking your monthly expenses and spending habits is a guaranteed path to building personal wealth', 'Tracking has no relationship to financial outcomes'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -714,7 +714,7 @@ const questions: Question[] = [
   {
     id: 'mb-064',
     text: "What does \"gross income\" mean?",
-    options: ["Income after tax", "Total income before deductions", "Money saved in the bank", "Income from investments only"],
+    options: ["Income that has already been reduced after all applicable taxes are removed", "Total income before deductions", "Money saved in the bank", "Income from investments only"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -754,7 +754,7 @@ const questions: Question[] = [
   {
     id: 'mb-068',
     text: "What is \"money supply\"?",
-    options: ["The amount of goods money can buy", "Total amount of money circulating in an economy", "How much banks have in their vaults", "The number of ATMs in a country"],
+    options: ["The total quantity of physical and digital goods that money can purchase in a given year", "Total amount of money circulating in an economy", "How much banks have in their vaults", "The number of ATMs in a country"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -814,7 +814,7 @@ const questions: Question[] = [
   {
     id: 'mb-074',
     text: "What is \"compound interest\"?",
-    options: ["Interest on the original principal only", "Interest earned on both principal and accumulated interest", "A penalty for late loan repayment", "A fixed monthly bank charge"],
+    options: ["Interest calculated only on the fixed original principal amount and never on any accumulated gains", "Interest earned on both principal and accumulated interest", "A penalty for late loan repayment", "A fixed monthly bank charge"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -824,7 +824,7 @@ const questions: Question[] = [
   {
     id: 'mb-075',
     text: "What does \"net worth\" mean?",
-    options: ["Your annual salary", "Total assets minus total liabilities", "Money in your bank account only", "Your credit card limit"],
+    options: ["The gross salary you take home from your employer before any taxes are removed", "Total assets minus total liabilities", "Money in your bank account only", "Your credit card limit"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -834,7 +834,7 @@ const questions: Question[] = [
   {
     id: 'mb-076',
     text: "What is \"liquidity\"?",
-    options: ["How profitable an investment is", "How easily an asset converts to cash", "The interest rate on savings", "The amount of money in circulation"],
+    options: ["The total profit or return that an investment generates over a twelve-month period", "How easily an asset converts to cash", "The interest rate on savings", "The amount of money in circulation"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -844,7 +844,7 @@ const questions: Question[] = [
   {
     id: 'mb-077',
     text: "What is a \"dividend\"?",
-    options: ["A penalty for late payment", "Profit distributed to shareholders by a company", "A government tax on investments", "Interest paid on a savings account"],
+    options: ["A late payment penalty charged by lenders whenever a borrower misses a scheduled repayment date", "Profit distributed to shareholders by a company", "A government tax on investments", "Interest paid on a savings account"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -854,7 +854,7 @@ const questions: Question[] = [
   {
     id: 'mb-078',
     text: "What is \"fiat currency\"?",
-    options: ["Currency backed by gold reserves", "Currency backed only by government authority and trust", "Digital cryptocurrency", "Foreign currency accepted in Nigeria"],
+    options: ["Currency that is guaranteed and backed by physical gold reserves held in a secure central vault", "Currency backed only by government authority and trust", "Digital cryptocurrency", "Foreign currency accepted in Nigeria"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],

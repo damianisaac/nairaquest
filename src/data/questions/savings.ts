@@ -64,7 +64,7 @@ const questions: Question[] = [
     id: 'sv-005',
     text: 'What is the Nigerian Stock Exchange now called?',
     options: [
-      'Lagos Stock Exchange',
+      'Lagos Capital Markets and Securities Exchange',
       'NGX (Nigerian Exchange Group)',
       'CBN Securities Market',
       'Abuja Stock Market',
@@ -177,7 +177,7 @@ const questions: Question[] = [
     id: 'sv-013',
     text: 'Why is diversification important when building an investment portfolio?',
     options: [
-      'It guarantees higher returns than putting all money in one investment',
+      'It guarantees the highest possible returns regardless of how the broader Nigerian market is performing',
       'It reduces risk by spreading money across different asset classes that don\'t all move together',
       'It is required by law for Nigerian investors',
       'Diversification is only important for very large portfolios (₦10M+)',
@@ -207,7 +207,7 @@ const questions: Question[] = [
       'How profitable the investment is',
       'How risky the investment is',
       'How quickly and easily you can convert the investment to cash without significant loss',
-      'Whether the investment involves physical cash or digital money',
+      'Whether the investment is held in physical naira notes or stored in a digital Nigerian bank account',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -332,7 +332,7 @@ const questions: Question[] = [
     id: 'sv-025',
     text: 'What is the difference between a savings account (4% p.a.) and a fixed deposit (15% p.a.)? Why would you choose one over the other?',
     options: [
-      'No real difference exists between the two — all Nigerian banks set identical interest rates for both products, so the choice comes down entirely to how long you want the account to stay open',
+      'No real difference exists between the two — all Nigerian banks set identical interest rates for both products, so the choice comes down entirely to how long you want the account to stay open with them',
       'A savings account is flexible (withdraw anytime) but pays less. A fixed deposit locks your money for a set period but pays more. Choose based on whether you might need the money before the term ends',
       'Fixed deposits carry much higher risk than savings accounts and should only be used by experienced investors who can afford to lose their capital in the event of a bank failure in Nigeria',
       'Savings accounts always pay more interest than fixed deposits across all Nigerian banks because the CBN mandates higher rates on products that give customers the freedom to withdraw at any time',
@@ -412,7 +412,7 @@ const questions: Question[] = [
   {
     id: 'sv-031',
     text: 'Why do people save money instead of spending it all right away?',
-    options: ['To have money ready for something bigger later', 'Saving has no purpose', 'To lose track of it', 'Because spending is not allowed ever'],
+    options: ['To have money ready for something bigger later', 'Saving has no purpose', 'To lose track of it', 'Because your teachers and parents have always said spending is irresponsible'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -442,7 +442,7 @@ const questions: Question[] = [
   {
     id: 'sv-034',
     text: 'Which is a good savings goal for a child?',
-    options: ['Saving for a toy you really want', 'Saving nothing, ever', 'Spending everything right away', 'Losing your savings on purpose'],
+    options: ['Saving for a toy you really want', 'Saving money without any clear goal or spending plan in mind', 'Spending everything right away', 'Losing your savings on purpose'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -462,7 +462,7 @@ const questions: Question[] = [
   {
     id: 'sv-036',
     text: 'Why might a savings account be better than keeping all cash at home?',
-    options: ['It\'s kept safer and can be tracked', 'It has no benefit', 'Cash at home is always safer', 'Accounts make money disappear'],
+    options: ['It\'s kept safer and can be tracked', 'It has no benefit', 'Keeping all your cash at home is always the safest and most convenient option', 'Accounts make money disappear'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -482,7 +482,7 @@ const questions: Question[] = [
   {
     id: 'sv-038',
     text: 'What is \'delayed gratification\'?',
-    options: ['Waiting for something you want instead of getting it immediately', 'Getting everything you want at the earliest possible moment', 'Deciding permanently never to buy anything you want again', 'Writing down the names of things you used to want but forgot'],
+    options: ['Waiting for something you want instead of getting it immediately', 'Buying everything you want the moment the desire arises, regardless of your current budget', 'Deciding permanently never to buy anything you want again', 'Writing down the names of things you used to want but forgot'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -522,7 +522,7 @@ const questions: Question[] = [
   {
     id: 'sv-042',
     text: 'You\'re saving toward a goal 6 months away. What\'s a reasonable savings vehicle to consider?',
-    options: ['A short-term savings option that keeps money accessible around that timeframe', 'Locking the money in a ten-year bond where it cannot be accessed early', 'Spending the entire amount immediately to take advantage of current prices', 'Ignoring the goal and waiting for an unexpected windfall to cover it later'],
+    options: ['A short-term savings option that keeps money accessible around that timeframe', 'Locking all the money into a long-term government bond that cannot be accessed before full maturity', 'Spending the entire amount immediately to take advantage of current prices', 'Ignoring the goal and waiting for an unexpected windfall to cover it later'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -532,7 +532,7 @@ const questions: Question[] = [
   {
     id: 'sv-043',
     text: 'Why is starting to save early, even in small amounts, generally advantageous?',
-    options: ['It gives more time for savings and interest to build up', 'Starting early has no real advantage', 'Only large initial amounts matter', 'Saving early guarantees a specific outcome'],
+    options: ['It gives more time for savings and interest to build up', 'Starting to save early makes no meaningful difference to your final balance compared with starting later', 'Only large initial amounts matter', 'Saving early guarantees a specific outcome'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -652,7 +652,7 @@ const questions: Question[] = [
   {
     id: 'sv-055',
     text: 'What does it generally mean when an investment promises unusually high returns with \'zero risk\'?',
-    options: ['It is a legitimate and rare opportunity worth acting on immediately before spaces fill up', 'This combination is a common warning sign of a scam, since genuine higher returns typically carry real risk', 'Zero-risk high-return investments are readily available and perfectly safe when offered by a bank', 'It means the investment is automatically government-backed and guaranteed under Nigerian law'],
+    options: ['It is a legitimate and genuinely rare opportunity that deserves immediate action before all available slots are taken by other investors', 'This combination is a common warning sign of a scam, since genuine higher returns typically carry real risk', 'Zero-risk high-return investments are readily available and perfectly safe when offered by a bank', 'It means the investment is automatically government-backed and guaranteed under Nigerian law'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -662,7 +662,7 @@ const questions: Question[] = [
   {
     id: 'sv-056',
     text: 'Why might someone balance both traditional savings tools and modern investment options rather than relying on just one?',
-    options: ['Combining approaches can balance safety, accessibility, and growth potential based on individual goals', 'Only a single savings or investment approach should ever be used to avoid confusion or overlap', 'Traditional savings tools and modern investment products serve completely identical purposes', 'Balancing different approaches has no real benefit and simply dilutes the return on each one'],
+    options: ['Combining approaches can balance safety, accessibility, and growth potential based on individual goals', 'Only a single savings or investment approach should be chosen to avoid any confusion, overlap, or unnecessary administrative burden between products', 'Traditional savings tools and modern investment products serve completely identical purposes', 'Balancing different approaches has no real benefit and simply dilutes the return on each one'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -672,7 +672,7 @@ const questions: Question[] = [
   {
     id: 'sv-057',
     text: 'What\'s a realistic view of investment risk versus reward over time?',
-    options: ['Higher potential returns generally come with higher risk, and this should inform how funds are allocated by goal and timeline', 'Risk and reward are completely unrelated — the safest assets always pay the highest returns in the long run', 'All investment vehicles carry identical risk regardless of their type, time horizon, or the market they are exposed to', 'Higher risk always guarantees a higher reward over time, so you should always choose the most volatile available option'],
+    options: ['Higher potential returns generally come with higher risk, and this should inform how funds are allocated by goal and timeline', 'Risk and reward are completely unrelated — the most conservative and safest assets always deliver the highest long-term returns without exception', 'All investment vehicles carry identical risk regardless of their type, time horizon, or the market they are exposed to', 'Higher risk always guarantees a higher reward over time, so you should always choose the most volatile available option'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -692,7 +692,7 @@ const questions: Question[] = [
   {
     id: 'sv-059',
     text: "Which is the BEST reason to save money?",
-    options: ["To impress your friends", "To be ready for future needs and goals", "To avoid sharing with others", "Because the government requires it"],
+    options: ["To impress your friends", "To be ready for future needs and goals", "To avoid sharing with others", "Because your bank requires you to maintain a minimum savings balance at all times"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -812,7 +812,7 @@ const questions: Question[] = [
   {
     id: 'sv-071',
     text: "What is \"compound interest\" in simple terms?",
-    options: ["Interest earned only on your original deposit", "Interest earned on both your deposit and previously earned interest", "A penalty for withdrawing early", "The fee charged on a fixed deposit"],
+    options: ["Interest calculated only on the original principal amount you first deposited, ignoring any earnings", "Interest earned on both your deposit and previously earned interest", "A penalty for withdrawing early", "The fee charged on a fixed deposit"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -852,7 +852,7 @@ const questions: Question[] = [
   {
     id: 'sv-075',
     text: "If inflation is 22% and your savings account offers 8%, what is your real rate of return?",
-    options: ["30%", "-14%", "14%", "-6%"],
+    options: ["-30%", "-14%", "14%", "-6%"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['teens'],
@@ -912,7 +912,7 @@ const questions: Question[] = [
   {
     id: 'sv-081',
     text: "What is the key advantage of saving in a bank over keeping cash at home?",
-    options: ["Banks charge less tax", "Your savings earn interest and are insured by NDIC", "Banks provide cash on demand for free", "You can see your money at all times"],
+    options: ["Banks automatically deduct a lower rate of withholding tax from savings compared with other income", "Your savings earn interest and are insured by NDIC", "Banks provide cash on demand for free", "You can see your money at all times"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],
@@ -942,7 +942,7 @@ const questions: Question[] = [
   {
     id: 'sv-084',
     text: "What is the difference between a \"savings account\" and a \"money market account\"?",
-    options: ["No meaningful difference exists between the two products in the Nigerian banking system", "Money market accounts typically offer higher rates but may require higher minimums and limited withdrawals", "Savings accounts consistently earn higher returns than money market accounts at all major Nigerian banks", "Money market accounts are not covered by NDIC deposit insurance and carry higher default risk"],
+    options: ["No meaningful difference exists between the two products in the Nigerian banking system", "Money market accounts typically offer higher rates but may require higher minimums and limited withdrawals", "Savings accounts consistently earn higher returns than money market accounts at every major Nigerian bank because the CBN mandates it by regulation", "Money market accounts are not covered by NDIC deposit insurance and carry higher default risk"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['adults'],
@@ -972,7 +972,7 @@ const questions: Question[] = [
   {
     id: 'sv-087',
     text: "What is \"laddering\" in fixed-deposit savings?",
-    options: ["Placing all available funds into the single longest-term deposit for the maximum return", "Spreading savings across deposits with staggered maturity dates to balance liquidity and returns", "A formal government savings programme where contributions are deducted from your salary", "A special savings account structure where the interest rate increases at each renewal date"],
+    options: ["Placing all available funds into the single longest-term fixed deposit available to maximise the interest rate earned", "Spreading savings across deposits with staggered maturity dates to balance liquidity and returns", "A formal government savings programme where contributions are deducted from your salary", "A special savings account structure where the interest rate increases at each renewal date"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['adults'],
@@ -982,7 +982,7 @@ const questions: Question[] = [
   {
     id: 'sv-088',
     text: "Which everyday product is often sold at a price 30 times or more above its production cost — making it one of the biggest daily overspends?",
-    options: ["Bread", "Cooking oil", "Bottled water", "Rice"],
+    options: ["Packaged sliced bread", "Cooking oil", "Bottled water", "Rice"],
     correctIndex: 2,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -992,7 +992,7 @@ const questions: Question[] = [
   {
     id: 'sv-089',
     text: "When driving at slow city speeds, does turning off the AC and opening the windows save fuel?",
-    options: ["False — open windows create enough aerodynamic drag to use more fuel than the AC at every speed", "True — at low speeds, the fuel saved by switching off the AC outweighs any drag from open windows", "The fuel consumption is exactly identical whether the AC is on or the windows are open", "This only applies on motorways — in city traffic the AC and open windows use the same fuel"],
+    options: ["False — open windows create enough aerodynamic drag at any speed to significantly outweigh any fuel saved by switching off the AC", "True — at low speeds, the fuel saved by switching off the AC outweighs any drag from open windows", "The fuel consumption is exactly identical whether the AC is on or the windows are open", "This only applies on motorways — in city traffic the AC and open windows use the same fuel"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -1002,7 +1002,7 @@ const questions: Question[] = [
   {
     id: 'sv-090',
     text: "Studies show you are less likely to make impulse purchases if you:",
-    options: ["Shop as quickly as possible to avoid temptation", "Shop when you are hungry — it makes you more decisive", "Use a credit card — it feels less like real money", "Shop with a written list and stick only to what is on it"],
+    options: ["Shop as quickly as possible to avoid temptation", "Go shopping when you are hungry since hunger sharpens your focus and helps you decide faster in the store", "Use a credit card — it feels less like real money", "Shop with a written list and stick only to what is on it"],
     correctIndex: 3,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -1012,7 +1012,7 @@ const questions: Question[] = [
   {
     id: 'sv-091',
     text: "Because of what happens when heated, cooking with _____ is generally considered a waste of money for high-heat cooking.",
-    options: ["Regular vegetable oil", "Locally made palm oil", "Refined sunflower oil", "Extra virgin olive oil"],
+    options: ["Plain refined vegetable cooking oil", "Locally made palm oil", "Refined sunflower oil", "Extra virgin olive oil"],
     correctIndex: 3,
     difficulty: 'easy',
     ageTrack: ['teens'],

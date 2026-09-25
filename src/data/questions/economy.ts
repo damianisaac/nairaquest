@@ -24,7 +24,7 @@ const questions: Question[] = [
       'Federal Ministry of Finance',
       'Central Bank of Nigeria (CBN)',
       'National Assembly',
-      'Nigerian Stock Exchange',
+      'Securities and Exchange Commission of Nigeria (SEC)',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -48,7 +48,7 @@ const questions: Question[] = [
     id: 'ec-004',
     text: 'If Nigeria\'s exchange rate moves from ₦800/$ to ₦1,600/$, what has happened to the naira?',
     options: [
-      'The naira has strengthened (appreciated)',
+      'The naira has strengthened and appreciated significantly against the dollar',
       'The naira has weakened (depreciated) by 50%',
       'The dollar has lost value',
       'Nothing significant has changed',
@@ -286,7 +286,7 @@ const questions: Question[] = [
     id: 'ec-020',
     text: 'Your data plan used to cost ₦1,000 for 5GB. Now the same plan costs ₦1,500. Meanwhile, your dad\'s salary has not changed. What does this mean for your family\'s real income?',
     options: [
-      'Real income increased — you are earning the same amount',
+      'Real income rose because the salary figure in naira has not been reduced or cut',
       'Real income fell — the same salary now buys less than before',
       'Real income is unaffected by data prices',
       'Real income only changes when the salary amount changes',
@@ -357,7 +357,7 @@ const questions: Question[] = [
     id: 'ec-025',
     text: 'What does "diversifying Nigeria\'s economy beyond oil" mean, and why does it matter to teenagers?',
     options: [
-      'Developing new crude oil blends and export partnerships so Nigeria can expand its petroleum production capacity and earn more from international oil buyers',
+      'Developing new crude oil blends and expanded export partnerships so Nigeria can grow its petroleum production capacity and earn significantly more from a wider range of international oil buyers',
       'Growing other sectors (agriculture, tech, manufacturing) so Nigeria has multiple income sources instead of depending on one commodity whose price it cannot control',
       'Selling crude oil to additional African and Asian markets so that Nigeria spreads its oil revenue across a wider range of international trading partners',
       'Reinvesting all petroleum revenues into overseas sovereign wealth funds so Nigeria accumulates foreign reserves as a buffer against domestic economic shocks',
@@ -389,7 +389,7 @@ const questions: Question[] = [
     id: 'ec-027',
     text: 'Jide\'s dad is a petrol trader. He hears Nigeria will fully remove fuel subsidy. Why does he expect that to affect the prices of almost everything — not just fuel?',
     options: [
-      'Because the government levies new tariffs on all consumer goods categories simultaneously when removing petroleum subsidies',
+      'Because the government levies comprehensive new import tariffs on all consumer goods categories simultaneously when removing petroleum subsidies from the national budget',
       'Because fuel is an input cost for transportation, electricity generation, and production — higher fuel costs ripple through every industry',
       'Because petrol stations begin selling fuel at black market rates once official government price controls are fully removed',
       'Because only luxury vehicle owners and private generator users are directly impacted, with no effect on mass consumer goods',
@@ -408,7 +408,7 @@ const questions: Question[] = [
       'They are essentially the same condition — the only difference being the speed at which the general price level rises over time',
       'Inflation = rising prices with economic growth; stagflation = rising prices AND economic stagnation (no growth, high unemployment at the same time)',
       'Stagflation means annual inflation above 50%; regular inflation refers to any sustained price rise below that defined threshold',
-      'Stagflation only occurs in high-income developed economies with strong labour unions and cannot happen in frontier markets like Nigeria',
+      'Stagflation only occurs in high-income developed economies with strong and well-organised labour unions, and therefore cannot realistically happen in frontier markets like Nigeria',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -513,7 +513,7 @@ const questions: Question[] = [
   {
     id: 'ec-035',
     text: 'Why might a toy cost more this year than it did a few years ago?',
-    options: ['Prices can rise over time, this is called inflation', 'Toys always get cheaper every year', 'Prices never change', 'Toys are given away for free eventually'],
+    options: ['Prices can rise over time, this is called inflation', 'Toys always become cheaper as manufacturers find more efficient ways to reduce production costs each year', 'Prices never change', 'Toys are given away for free eventually'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -553,7 +553,7 @@ const questions: Question[] = [
   {
     id: 'ec-039',
     text: 'If everything around you becomes more expensive over time, what should your saved money try to do?',
-    options: ['Try to grow too, so it can still buy things later', 'Stay exactly the same forever with no concern', 'Shrink automatically', 'Disappear'],
+    options: ['Try to grow too, so it can still buy things later', 'Stay exactly the same because the government protects savings from losing value', 'Shrink automatically', 'Disappear'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -573,7 +573,7 @@ const questions: Question[] = [
   {
     id: 'ec-041',
     text: 'What does it mean when something becomes \'more expensive\'?',
-    options: ['You need more money to buy the same thing', 'You need less money to buy it', 'It becomes free', 'Nothing changes'],
+    options: ['You need more money to buy the same thing', 'You need less money because the seller has reduced the price to attract buyers', 'It becomes free', 'Nothing changes'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -583,7 +583,7 @@ const questions: Question[] = [
   {
     id: 'ec-042',
     text: 'Why might saving old money not buy as much in the future?',
-    options: ['Because prices of things can rise over time', 'Saved money always buys more later', 'Prices never rise', 'Saving has no connection to prices'],
+    options: ['Because prices of things can rise over time', 'Saved money always retains its value and buys more goods as the Nigerian economy grows', 'Prices never rise', 'Saving has no connection to prices'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -623,7 +623,7 @@ const questions: Question[] = [
   {
     id: 'ec-046',
     text: 'Why might your ₦5,000 buy less in a year if inflation is high?',
-    options: ['Because rising prices mean the same money buys fewer goods and services', 'Money automatically increases in value during inflation', 'Inflation has no effect on purchasing power', '₦5,000 always buys the same amount regardless of inflation'],
+    options: ['Because rising prices mean the same money buys fewer goods and services', 'Money automatically grows in real value during inflation as the CBN adjusts bank interest rates upward', 'Inflation has no effect on purchasing power', '₦5,000 always buys the same amount regardless of inflation'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -653,7 +653,7 @@ const questions: Question[] = [
   {
     id: 'ec-049',
     text: 'What\'s the relationship between supply, demand, and price in a basic sense?',
-    options: ['When demand rises relative to supply, prices tend to rise, and vice versa', 'Supply and demand have no effect on prices', 'Prices are set randomly regardless of supply or demand', 'Demand has no relationship to price at all'],
+    options: ['When demand rises relative to supply, prices tend to rise, and vice versa', 'Supply and demand have no effect on prices', 'Prices are determined by traders randomly and are completely unrelated to supply and demand conditions', 'Demand has no relationship to price at all'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -753,7 +753,7 @@ const questions: Question[] = [
   {
     id: 'ec-059',
     text: 'Why might a business owner need to periodically review pricing in an inflationary environment?',
-    options: ['Static pricing amid rising costs can erode profit margins over time', 'Prices should never be adjusted regardless of rising costs', 'Inflation has no effect on business costs', 'Reviewing pricing is unnecessary for small businesses'],
+    options: ['Static pricing amid rising costs can erode profit margins over time', 'Prices should never be changed regardless of input cost increases since customers always prefer price stability', 'Inflation has no effect on business costs', 'Reviewing pricing is unnecessary for small businesses'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -773,7 +773,7 @@ const questions: Question[] = [
   {
     id: 'ec-061',
     text: 'Why might holding purely cash savings be a weaker long-term strategy during sustained inflation?',
-    options: ['Cash\'s real value can erode as prices rise faster than it grows in a bank account with low interest', 'Cash savings are always the strongest strategy regardless of inflation', 'Inflation has no impact on cash holdings', 'Cash automatically appreciates during inflationary periods'],
+    options: ['Cash\'s real value can erode as prices rise faster than it grows in a bank account with low interest', 'Cash savings are always the safest and most reliable long-term wealth strategy for Nigerians regardless of any inflation conditions', 'Inflation has no impact on cash holdings', 'Cash automatically appreciates during inflationary periods'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -823,7 +823,7 @@ const questions: Question[] = [
   {
     id: 'ec-066',
     text: "What does it mean when prices in a country keep going up over time?",
-    options: ["The country is getting poorer", "There is inflation in the economy", "Goods are becoming cheaper", "Taxes have been removed"],
+    options: ["The country is experiencing a sharp economic recession with falling output and rising unemployment", "There is inflation in the economy", "Goods are becoming cheaper", "Taxes have been removed"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -933,7 +933,7 @@ const questions: Question[] = [
   {
     id: 'ec-077',
     text: "What does \"GDP per capita\" measure?",
-    options: ["The total wealth of the richest citizens", "Average economic output per person in a country", "Total government spending per citizen", "The cost of living for the average person"],
+    options: ["The total accumulated wealth held by the richest segment of the population", "Average economic output per person in a country", "Total government spending per citizen", "The cost of living for the average person"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -983,7 +983,7 @@ const questions: Question[] = [
   {
     id: 'ec-082',
     text: "If Nigeria's MPR rises from 15% to 18%, what is the MOST LIKELY immediate effect on economic growth?",
-    options: ["Growth accelerates sharply", "Growth slows as borrowing becomes more expensive", "Inflation automatically falls to zero", "The naira immediately strengthens"],
+    options: ["Growth accelerates sharply as higher rates attract more foreign capital investment into Nigerian markets", "Growth slows as borrowing becomes more expensive", "Inflation automatically falls to zero", "The naira immediately strengthens"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['teens'],
@@ -993,7 +993,7 @@ const questions: Question[] = [
   {
     id: 'ec-083',
     text: "What is the \"multiplier effect\" in economics?",
-    options: ["How many times a tax is charged on the same product", "An initial change in spending leads to a larger change in national income", "How compound interest multiplies savings", "The number of banks that can lend against one deposit"],
+    options: ["The number of times the same naira is taxed as it passes through different economic sectors of the country", "An initial change in spending leads to a larger change in national income", "How compound interest multiplies savings", "The number of banks that can lend against one deposit"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['teens'],
@@ -1003,7 +1003,7 @@ const questions: Question[] = [
   {
     id: 'ec-084',
     text: "Purchasing Power Parity (PPP) suggests that over the long run, exchange rates should adjust so that?",
-    options: ["Countries with higher inflation have stronger currencies", "The price of a basket of goods is equal across countries", "Interest rates determine exchange rates", "Oil prices set all exchange rates"],
+    options: ["Countries that have higher inflation always maintain stronger and more stable currencies than their lower-inflation trading partners", "The price of a basket of goods is equal across countries", "Interest rates determine exchange rates", "Oil prices set all exchange rates"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['teens'],

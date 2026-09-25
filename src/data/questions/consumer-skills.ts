@@ -9,7 +9,7 @@ const questions: Question[] = [
       'Buy it immediately before someone else does',
       'Think about whether you truly need it and if you can afford it',
       'Ask your friend to buy it for you',
-      'Buy the most expensive version to get the best quality',
+      'Buy the most expensive version available since higher-priced products always provide superior quality and longer-lasting durability',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -36,7 +36,7 @@ const questions: Question[] = [
     id: 'cs-003',
     text: 'A shopkeeper charges you ₦700 for an item labelled ₦500. What should you do?',
     options: [
-      'Pay ₦700 — the shopkeeper always knows the right price',
+      'Pay ₦700 — shopkeepers always know the current price and routinely update tags to reflect daily changes in wholesale market costs',
       'Politely point out the price tag and ask to pay the correct price',
       'Leave without paying',
       'Pay ₦700 and never return to that shop',
@@ -66,7 +66,7 @@ const questions: Question[] = [
     id: 'cs-005',
     text: 'You buy a toy and it breaks on the first day without being mishandled. What can you do?',
     options: [
-      'Nothing — once you buy something it is yours',
+      'Nothing — once you pay for any item, the transaction is fully complete and no further claims or complaints can be made to the seller',
       'Return it to the shop and ask for a replacement or refund',
       'Throw it away and buy another one',
       'Fix it yourself',
@@ -82,7 +82,7 @@ const questions: Question[] = [
     text: 'What does "expired" mean on a food product?',
     options: [
       'The food is very expensive',
-      'The food is imported from another country',
+      'The food has been imported from another country and may not meet Nigerian NAFDAC certification or safety standards',
       'The food is no longer safe to eat after the date shown',
       'The food must be stored in the freezer',
     ],
@@ -158,7 +158,7 @@ const questions: Question[] = [
     id: 'cs-011',
     text: 'Chioma buys a new phone for ₦120,000. It stops working after 4 days despite careful use. What are her consumer rights?',
     options: [
-      'She has no rights — electronics are non-refundable once opened',
+      'She has absolutely no legal rights — electronics and gadgets are strictly non-refundable once the box is opened and the device activated',
       'She is entitled to a repair, replacement, or refund — the product is clearly defective',
       'She must pay to repair it herself',
       'She can only complain on social media',
@@ -237,7 +237,7 @@ const questions: Question[] = [
       'No remedy exists because Nigerian commercial banks are protected by sovereign immunity from individual consumer claims',
       'File a complaint with the bank, escalate to the CBN Consumer Protection Department if unresolved, and pursue a claim through the courts',
       'Post evidence on Twitter and Instagram tagging the bank and hope viral public pressure forces a reversal',
-      'Report the suspected wrongful debit to the EFCC and request a criminal investigation against the responsible bank official',
+      'Report the suspected wrongful debit to the EFCC and request a full criminal investigation into the specific bank official who processed or approved the transaction',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -252,7 +252,7 @@ const questions: Question[] = [
     options: [
       'A CBN directive that caps all commercial bank transaction charges at one per cent regardless of account type or payment channel',
       'A framework guaranteeing rights including transparent pricing, fair treatment, complaint resolution within specified timelines, and data protection',
-      'A voluntary code of conduct that commercial banks may choose to adopt or decline based on their own internal governance policies',
+      'A voluntary code of conduct that Nigerian commercial banks may freely choose to adopt or decline based entirely on their own internal corporate governance and board-approved risk management policies',
       'A framework that applies solely to internet and mobile banking and does not cover ATM, POS, or branch transactions',
     ],
     correctIndex: 1,
@@ -267,7 +267,7 @@ const questions: Question[] = [
     options: [
       'They mean the same thing — both confirm that buyers bear full responsibility for inspecting all goods thoroughly before completing any purchase',
       'Caveat emptor placed full responsibility on buyers; modern law shifts significant duty onto sellers to ensure products are safe, accurately described, and fit for purpose',
-      'Modern Nigerian consumer law continues to apply the full caveat emptor doctrine without imposing any additional duties on sellers regarding product safety',
+      'Modern Nigerian consumer law continues to apply the full traditional caveat emptor doctrine without any revision or imposing additional obligations on sellers to guarantee product safety, description accuracy, or fitness for purpose',
       'The caveat emptor doctrine applies exclusively to goods imported from outside ECOWAS member states under international trade rules at Nigerian borders',
     ],
     correctIndex: 1,
@@ -299,7 +299,7 @@ const questions: Question[] = [
       'Yes — ₦150 is correct',
       'No — ₦500 − ₦350 = ₦150, so yes the change is actually correct',
       'No — the correct change should be ₦250',
-      'It does not matter — change is a gift from the seller',
+      'It does not matter — shopkeepers may give any amount as change and there is no consumer obligation to verify the arithmetic accuracy of what you receive',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -331,7 +331,7 @@ const questions: Question[] = [
   {
     id: 'cs-023',
     text: 'What does it mean to be a \'smart shopper\'?',
-    options: ['Thinking carefully about what you buy and why', 'Buying the first thing you see always', 'Never thinking about purchases at all', 'Buying only the most expensive items'],
+    options: ['Thinking carefully about what you buy and why', 'Buying the first item you see without comparing, since most first-listed options are already competitively priced', 'Never thinking about purchases at all', 'Buying only the most expensive items'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -341,7 +341,7 @@ const questions: Question[] = [
   {
     id: 'cs-024',
     text: 'If a shopkeeper gives you the wrong change, what should you do?',
-    options: ['Politely point it out and ask them to correct it', 'Say nothing and walk away', 'Take the extra money and leave quickly', 'Argue loudly instead of explaining calmly'],
+    options: ['Politely point it out and ask them to correct it', 'Say nothing and walk away', 'Take the extra money and leave quickly', 'Argue loudly and demand to speak with the shop manager rather than calmly explaining the discrepancy'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -351,7 +351,7 @@ const questions: Question[] = [
   {
     id: 'cs-025',
     text: 'Why might checking an item carefully before buying it be a good habit?',
-    options: ['To make sure it\'s in good condition and worth the price', 'Checking items has no real value', 'Items are always perfect with no need to check', 'Only expensive items need to be checked'],
+    options: ['To make sure it\'s in good condition and worth the price', 'Checking items has no real value', 'Items sold in Nigerian markets are always in perfect condition since consumer law holds sellers responsible for pre-sale quality', 'Only expensive items need to be checked'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -361,7 +361,7 @@ const questions: Question[] = [
   {
     id: 'cs-026',
     text: 'What\'s a good reason to ask questions before buying something you\'re unsure about?',
-    options: ['To understand exactly what you\'re getting for your money', 'Asking questions is unnecessary and rude', 'You should never ask questions when shopping', 'Questions have no connection to smart shopping'],
+    options: ['To understand exactly what you\'re getting for your money', 'Asking questions is unnecessary and rude', 'You should never ask questions when shopping', 'Questions have no meaningful connection to smart shopping since product labels already contain all necessary purchase information'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -371,7 +371,7 @@ const questions: Question[] = [
   {
     id: 'cs-027',
     text: 'Why might comparing two similar toys with different prices help you decide?',
-    options: ['It helps you understand what value you\'re getting for the price', 'Comparison has no real use when shopping', 'The more expensive option is always automatically better', 'Price comparisons only matter for adults'],
+    options: ['It helps you understand what value you\'re getting for the price', 'Comparison has no real use when shopping', 'The more expensive option is always automatically better and worth the premium since higher prices consistently reflect superior craftsmanship', 'Price comparisons only matter for adults'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -381,7 +381,7 @@ const questions: Question[] = [
   {
     id: 'cs-028',
     text: 'If you\'re not sure whether you really need something, what\'s a smart step?',
-    options: ['Take a moment to think it over before buying', 'Buy it immediately without thinking', 'Ignore the question entirely', 'Ask a stranger to decide for you'],
+    options: ['Take a moment to think it over before buying', 'Buy it immediately without thinking since available stock may sell out before you return to the shop', 'Ignore the question entirely', 'Ask a stranger to decide for you'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -401,7 +401,7 @@ const questions: Question[] = [
   {
     id: 'cs-030',
     text: 'What\'s a responsible thing to do if you buy something and realize it wasn\'t a good choice?',
-    options: ['Learn from it and think more carefully next time', 'Ignore the mistake and repeat it constantly', 'Blame the shop and never shop again', 'Pretend it never happened with no reflection'],
+    options: ['Learn from it and think more carefully next time', 'Ignore the purchase mistake and continue the same spending pattern since most consumers self-correct naturally over time', 'Blame the shop and never shop again', 'Pretend it never happened with no reflection'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -411,7 +411,7 @@ const questions: Question[] = [
   {
     id: 'cs-031',
     text: 'You bought a phone and it stopped working after a week. What should you check first?',
-    options: ['Whether it has a warranty or return policy', 'Nothing, broken phones can\'t be returned', 'Buy a new one immediately', 'Post about it on social media first'],
+    options: ['Whether it has a warranty or return policy', 'Nothing, broken phones can\'t be returned', 'Buy a new one immediately', 'Post about it on social media and tag the brand since public complaints get faster responses than official support channels'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -431,7 +431,7 @@ const questions: Question[] = [
   {
     id: 'cs-033',
     text: 'What\'s a reasonable habit before making a larger purchase, like a phone or laptop?',
-    options: ['Comparing options, prices, and reviews across a few sources before deciding', 'Buying from the very first option you come across', 'Skipping comparison entirely for larger purchases', 'Larger purchases require no additional research compared to small ones'],
+    options: ['Comparing options, prices, and reviews across a few sources before deciding', 'Buying from the very first option you come across', 'Skipping comparison entirely for larger purchases', 'Larger purchases require no additional research since premium products are already vetted by competitive market forces and consumer demand'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -441,7 +441,7 @@ const questions: Question[] = [
   {
     id: 'cs-034',
     text: 'Why might understanding a store\'s return or refund policy before buying matter?',
-    options: ['It clarifies your options if the product turns out to be defective or unsuitable', 'Return policies have no practical relevance to a purchase decision', 'All stores always offer identical return policies', 'Understanding return policies is only relevant for very expensive items'],
+    options: ['It clarifies your options if the product turns out to be defective or unsuitable', 'Return policies have no practical relevance to a purchase decision', 'All stores always offer identical return policies', 'Understanding return policies is only relevant for very expensive items since low-value purchases are too minor to dispute and sellers rarely accommodate such complaints'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -461,7 +461,7 @@ const questions: Question[] = [
   {
     id: 'cs-036',
     text: 'Why is understanding the total cost of a purchase (including any extra fees) important before committing?',
-    options: ['Extra fees can significantly change the actual cost compared to the advertised price alone', 'Advertised prices always reflect the complete final cost with no exceptions', 'Extra fees have no real bearing on total purchase cost', 'Only very large purchases can have additional fees attached'],
+    options: ['Extra fees can significantly change the actual cost compared to the advertised price alone', 'Advertised prices always reflect the complete and final cost with no additional charges, since Nigerian consumer law mandates full upfront price disclosure', 'Extra fees have no real bearing on total purchase cost', 'Only very large purchases can have additional fees attached'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -501,7 +501,7 @@ const questions: Question[] = [
   {
     id: 'cs-040',
     text: 'Why might developing strong consumer skills as a teen matter for larger financial decisions later in life?',
-    options: ['Habits around comparing, evaluating, and questioning purchases can carry forward into more significant financial decisions as an adult', 'Consumer skills learned as a teen have no bearing on adult financial decisions', 'Only adults need to develop any consumer evaluation skills', 'Larger financial decisions require entirely different skills unrelated to everyday consumer habits'],
+    options: ['Habits around comparing, evaluating, and questioning purchases can carry forward into more significant financial decisions as an adult', 'Consumer skills learned as a teen have no bearing on adult financial decisions', 'Only adults need to develop any consumer evaluation skills', 'Larger financial decisions like property purchases or business investment require entirely different analytical skills completely unrelated to the everyday consumer habits developed during teenage years'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -511,7 +511,7 @@ const questions: Question[] = [
   {
     id: 'cs-041',
     text: 'Why might reading the fine print of a service agreement or subscription before signing up matter significantly?',
-    options: ['Fine print can reveal important terms like auto-renewal, cancellation policies, or hidden fees that affect the true cost and commitment', 'Fine print in agreements never contains any meaningful information beyond what the main headline already states clearly', 'Terms and conditions carry no legal or practical relevance for consumers once the initial subscription payment has been made', 'Only agreements valued above ₦500,000 include fine print that could meaningfully alter the cost or scope of any commitment'],
+    options: ['Fine print can reveal important terms like auto-renewal, cancellation policies, or hidden fees that affect the true cost and commitment', 'Fine print in agreements never contains any meaningful information beyond what the main headline already states clearly', 'Terms and conditions in any service agreement carry no legal or practical relevance for consumers once the initial subscription or activation payment has already been made and the service confirmed', 'Only agreements valued above ₦500,000 include fine print that could meaningfully alter the cost or scope of any commitment'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -551,7 +551,7 @@ const questions: Question[] = [
   {
     id: 'cs-045',
     text: 'Why might comparing multiple service providers (insurance, utilities, subscriptions) periodically be a worthwhile consumer habit?',
-    options: ['Periodic comparison has no real financial benefit for consumers', 'Providers and pricing can change over time, and periodic comparison can reveal better value elsewhere', 'Switching providers is always disadvantageous regardless of comparison', 'Service pricing is always identical across providers'],
+    options: ['Periodic comparison of service providers has no real financial benefit since Nigerian utility and insurance markets are tightly regulated and pricing rarely varies meaningfully between providers', 'Providers and pricing can change over time, and periodic comparison can reveal better value elsewhere', 'Switching providers is always disadvantageous regardless of comparison', 'Service pricing is always identical across providers'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -571,7 +571,7 @@ const questions: Question[] = [
   {
     id: 'cs-047',
     text: 'Why might understanding warranty terms and exclusions matter before relying on a warranty for a major purchase?',
-    options: ['Warranty terms and exclusions define what is and isn\'t actually covered, which affects your real protection', 'All warranties automatically cover every possible issue with no exclusions', 'Warranty terms have no practical bearing on consumer protection', 'Only extended warranties include any meaningful exclusions'],
+    options: ['Warranty terms and exclusions define what is and isn\'t actually covered, which affects your real protection', 'All product warranties in Nigeria automatically cover every possible manufacturing defect and usage issue with absolutely no exclusions permitted under consumer protection law', 'Warranty terms have no practical bearing on consumer protection', 'Only extended warranties include any meaningful exclusions'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -581,7 +581,7 @@ const questions: Question[] = [
   {
     id: 'cs-048',
     text: 'What\'s a reasonable framework for deciding whether to escalate a consumer complaint (like to a regulatory body) versus resolving it directly with a seller?',
-    options: ['Consider the seller\'s responsiveness and the significance of the issue to determine whether direct resolution is sufficient or escalation is warranted', 'Every consumer complaint must be escalated immediately to the FCCPC without any prior attempt at direct resolution with the seller', 'Regulatory agencies like the FCCPC have no legitimate role in resolving disputes between individual consumers and private Nigerian businesses', 'Consumers must never attempt direct resolution and must always engage a qualified legal professional before pursuing any course of action'],
+    options: ['Consider the seller\'s responsiveness and the significance of the issue to determine whether direct resolution is sufficient or escalation is warranted', 'Every consumer complaint must be escalated immediately to the FCCPC without any prior attempt at direct resolution with the seller', 'Regulatory agencies like the FCCPC have absolutely no legitimate authority or legal standing to mediate or resolve disputes arising between individual Nigerian consumers and privately owned businesses or service providers', 'Consumers must never attempt direct resolution and must always engage a qualified legal professional before pursuing any course of action'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -591,7 +591,7 @@ const questions: Question[] = [
   {
     id: 'cs-049',
     text: 'Why might understanding the difference between a genuine sale and manufactured urgency/scarcity marketing matter for adult consumers?',
-    options: ['Distinguishing genuine value from manufactured pressure supports more rational, less impulsive purchase decisions', 'There\'s no meaningful difference between genuine sales and manufactured urgency tactics', 'Manufactured urgency always indicates a legitimately better deal', 'This distinction is only relevant for very large purchases'],
+    options: ['Distinguishing genuine value from manufactured pressure supports more rational, less impulsive purchase decisions', 'There is no meaningful practical difference between genuine promotional sales and manufactured urgency tactics, since all limited-time offers reflect real supply constraints', 'Manufactured urgency always indicates a legitimately better deal', 'This distinction is only relevant for very large purchases'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -601,7 +601,7 @@ const questions: Question[] = [
   {
     id: 'cs-050',
     text: 'What\'s a balanced view on the value of loyalty programs and reward points as part of consumer decision-making?',
-    options: ['Rewards can offer genuine value but shouldn\'t be the primary driver of purchases that wouldn\'t otherwise make financial sense', 'Loyalty programs should always be the primary factor guiding every purchase decision', 'Reward points have no real value under any circumstances', 'Loyalty programs never influence rational consumer behavior'],
+    options: ['Rewards can offer genuine value but shouldn\'t be the primary driver of purchases that wouldn\'t otherwise make financial sense', 'Loyalty programs and reward points should always be the most important factor guiding every consumer purchase decision since accumulated points represent substantial long-term monetary savings', 'Reward points have no real value under any circumstances', 'Loyalty programs never influence rational consumer behavior'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -691,7 +691,7 @@ const questions: Question[] = [
   {
     id: 'cs-059',
     text: "Why should you read a product's ingredients or specifications before buying?",
-    options: ["It is not necessary if the brand is well known", "To ensure it meets your needs, is safe, and contains nothing you want to avoid", "Specifications are only important for electronics", "Ingredients lists are government regulations, not useful to buyers"],
+    options: ["It is not necessary to read labels or ingredient lists if the brand is already widely recognised and trusted among Nigerian consumers", "To ensure it meets your needs, is safe, and contains nothing you want to avoid", "Specifications are only important for electronics", "Ingredients lists are government regulations, not useful to buyers"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['kids'],
@@ -761,7 +761,7 @@ const questions: Question[] = [
   {
     id: 'cs-066',
     text: "Which of these best illustrates \"anchoring bias\" in consumer behaviour?",
-    options: ["Always purchasing the cheapest item in any price range without considering what higher price points offer", "Judging a product's value based on the first price seen — e.g. a \"₦50,000 shoe marked down to ₦30,000 seems like a deal\"", "Refusing to buy any item on sale regardless of how genuine and well-documented the price reduction appears", "Comparing every available option carefully against each other before committing to any purchase decision"],
+    options: ["Always purchasing the cheapest item in any price range without considering what higher price points offer", "Judging a product's value based on the first price seen — e.g. a \"₦50,000 shoe marked down to ₦30,000 seems like a deal\"", "Refusing to buy any item on sale regardless of how genuine, transparent, and thoroughly documented the stated price reduction appears at the time of purchase", "Comparing every available option carefully against each other before committing to any purchase decision"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['teens'],
@@ -861,7 +861,7 @@ const questions: Question[] = [
   {
     id: 'cs-076',
     text: "What is \"total cost of ownership\" (TCO) for a consumer purchase?",
-    options: ["Only the upfront sticker price at the point of sale since future costs are too uncertain to factor into any calculation", "All costs associated with owning a product over its lifetime — including purchase price, maintenance, running costs, and disposal", "Only the monthly instalment payment amount agreed with the seller as the sole ongoing financial commitment you make", "The current market resale value subtracted from the purchase price to arrive at a net cost figure for the transaction"],
+    options: ["Only the upfront sticker price at the point of sale, since all future running costs, repair expenses, and disposal fees are far too uncertain and variable to factor meaningfully into any purchase calculation", "All costs associated with owning a product over its lifetime — including purchase price, maintenance, running costs, and disposal", "Only the monthly instalment payment amount agreed with the seller as the sole ongoing financial commitment you make", "The current market resale value subtracted from the purchase price to arrive at a net cost figure for the transaction"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['adults'],
@@ -891,7 +891,7 @@ const questions: Question[] = [
   {
     id: 'cs-079',
     text: "What is \"planned obsolescence\" and how does it affect consumers?",
-    options: ["A product category intentionally engineered to remain fully functional and compatible with all accessories for 100 years", "When products are designed with a limited lifespan or made incompatible with upgrades, deliberately driving replacement purchases", "A mandatory Nigerian government safety policy requiring all manufacturers to disclose the minimum intended lifespan of products", "A corporate initiative by ethical manufacturers aimed at reducing e-waste by designing products to last as long as possible"],
+    options: ["A product category intentionally engineered to remain fully functional and compatible with all accessories for 100 years", "When products are designed with a limited lifespan or made incompatible with upgrades, deliberately driving replacement purchases", "A mandatory Nigerian government safety regulation requiring all manufacturers to clearly disclose the minimum intended functional lifespan and recommended maintenance schedule for every product sold in Nigeria", "A corporate initiative by ethical manufacturers aimed at reducing e-waste by designing products to last as long as possible"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['adults'],

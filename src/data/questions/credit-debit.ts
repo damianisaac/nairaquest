@@ -6,7 +6,7 @@ const questions: Question[] = [
     id: 'cd-001',
     text: 'What is a debit card?',
     options: [
-      'A card that lets you borrow money from a bank or lender',
+      'A card that lets you borrow money from a bank and repay it with interest later on',
       'A card that lets you spend money directly from your own bank account',
       'A card that gives you free money whenever you need it',
       'A card only used for online shopping and deliveries',
@@ -21,7 +21,7 @@ const questions: Question[] = [
     id: 'cd-002',
     text: 'When Ngozi pays for her book using her debit card, where does the money come from?',
     options: [
-      'From the bank as a loan',
+      'From the bank as a short-term loan she did not request or agree to',
       'From her own savings account at the bank',
       'From the government',
       'From her parents\' account automatically',
@@ -96,10 +96,10 @@ const questions: Question[] = [
     id: 'cd-007',
     text: 'What should you do if your debit card is lost or stolen?',
     options: [
-      'Wait and see if someone returns it',
+      'Wait and see if someone who finds it will return it to you or the bank',
       'Call your bank immediately to block the card',
-      'Use a friend\'s card instead',
-      'Change your PIN to something simpler',
+      'Use a friend\'s card instead until yours turns up',
+      'Change your PIN to something simpler so it is easier to remember',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -111,7 +111,7 @@ const questions: Question[] = [
     id: 'cd-008',
     text: 'Can someone use your ATM card without knowing your PIN?',
     options: [
-      'Yes — any card works at any ATM without a PIN',
+      'Yes — any card inserted into an ATM will work without needing a PIN at all',
       'No — the PIN protects your card from being used by others at ATMs',
       'Yes — they just need to tap the card',
       'It depends on the bank',
@@ -198,7 +198,7 @@ const questions: Question[] = [
     id: 'cd-014',
     text: 'How can a young Nigerian with no credit history start building a good credit score?',
     options: [
-      'Borrow as much as possible to show lenders you use credit',
+      'Borrow as much credit as possible across multiple lenders to prove you are an active and engaged borrower',
       'Take a small loan or credit card, use it responsibly, and repay on time every month',
       'Avoid all credit products — a zero score is best',
       'Ask a rich relative to transfer their credit score to you',
@@ -214,7 +214,7 @@ const questions: Question[] = [
     id: 'cd-015',
     text: 'Which three credit bureaus are licensed by the CBN to operate in Nigeria?',
     options: [
-      'Experian, Equifax, TransUnion',
+      'NIBSS, the CBN Credit Division, and the National Deposit Insurance Corporation',
       'CRC Credit Bureau, CreditRegistry, FirstCentral Credit Bureau',
       'NIBSS, NDIC, and CBN Credit Division',
       'Stanbic, GTBank, and Access Bank credit arms',
@@ -270,7 +270,7 @@ const questions: Question[] = [
     id: 'cd-019',
     text: 'What is a "secured credit card" and when is it useful in Nigeria?',
     options: [
-      'A premium credit card that has a physical metal key attached and can only be used in person at bank branches',
+      'A premium card issued only to high-net-worth customers that has a metal finish and can only be activated in person at your home bank branch',
       'A credit card backed by a cash deposit you make upfront — the limit equals your deposit; used to build credit with no prior history',
       'A high-security card that requires biometric verification such as a fingerprint or facial scan for every transaction',
       'A credit card product fully backed by the CBN and insured by NDIC against fraud or unauthorised usage',
@@ -336,7 +336,7 @@ const questions: Question[] = [
   {
     id: 'cd-024',
     text: 'Why should a card\'s PIN always be kept secret?',
-    options: ['To keep the money linked to the card safe', 'PINs don\'t need to be kept secret', 'Sharing PINs is always safe', 'PINs have no real purpose'],
+    options: ['To keep the money linked to the card safe', 'PINs do not need to be kept secret and can be shared with trusted family members', 'Sharing PINs is always safe', 'PINs have no real purpose'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -346,7 +346,7 @@ const questions: Question[] = [
   {
     id: 'cd-025',
     text: 'What\'s a smart rule about using any type of payment card?',
-    options: ['Only use it carefully with a trusted adult\'s guidance', 'Use it however you want with no guidance', 'Share it with anyone who asks', 'Cards never need careful handling'],
+    options: ['Only use it carefully with a trusted adult\'s guidance', 'Use it freely for whatever purchases seem worthwhile without needing any guidance at all', 'Share it with anyone who asks', 'Cards never need careful handling'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -356,7 +356,7 @@ const questions: Question[] = [
   {
     id: 'cd-026',
     text: 'Why is a debit card connected directly to how much money is actually in an account?',
-    options: ['Because it spends real money that\'s already there, not borrowed money', 'It has no direct connection to any particular account balance', 'Debit cards create free money whenever the balance is low', 'Debit cards work in exactly the same way as credit cards do'],
+    options: ['Because it spends real money that\'s already there, not borrowed money', 'It has no direct connection to your bank account balance and can be used freely regardless of how much is there', 'Debit cards create free money whenever the balance is low', 'Debit cards work in exactly the same way as credit cards do'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -366,7 +366,7 @@ const questions: Question[] = [
   {
     id: 'cd-027',
     text: 'What might happen if someone spends more than what\'s actually in their account using a debit card?',
-    options: ['The transaction may not go through, or there could be extra charges', 'Nothing happens, money appears automatically anyway', 'It always works with absolutely no consequence', 'The bank provides free extra money to cover the gap'],
+    options: ['The transaction may not go through, or there could be extra charges', 'Nothing happens at all, and the bank automatically supplements any shortfall without any extra charges', 'It always works with absolutely no consequence', 'The bank provides free extra money to cover the gap'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -376,7 +376,7 @@ const questions: Question[] = [
   {
     id: 'cd-028',
     text: 'Why do many shops let people pay using cards instead of just cash?',
-    options: ['Cards can be a convenient way to pay without carrying cash', 'Cards have no real practical purpose in shops at all', 'Shops never accept card payments of any kind', 'Cards always make items more expensive to buy'],
+    options: ['Cards can be a convenient way to pay without carrying cash', 'Cards have no real practical advantage over cash for in-store shopping at Nigerian markets and stores', 'Shops never accept card payments of any kind', 'Cards always make items more expensive to buy'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -386,7 +386,7 @@ const questions: Question[] = [
   {
     id: 'cd-029',
     text: 'What\'s an important habit when a parent lets you help make a payment with their card?',
-    options: ['Being careful and only doing exactly what\'s agreed with them', 'Using the card for anything you personally want', 'Sharing the card details freely with your friends', 'Cards require no care or careful handling at all'],
+    options: ['Being careful and only doing exactly what\'s agreed with them', 'Using the card for any purchases you personally want without needing to consult the card owner first', 'Sharing the card details freely with your friends', 'Cards require no care or careful handling at all'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -406,7 +406,7 @@ const questions: Question[] = [
   {
     id: 'cd-031',
     text: 'What\'s the safest thing to do if a card is lost?',
-    options: ['Tell a trusted adult right away so they can report it', 'Ignore it, it doesn\'t matter', 'Wait a long time before telling anyone', 'Try to find it alone without telling anyone'],
+    options: ['Tell a trusted adult right away so they can report it', 'Ignore it because debit cards automatically freeze themselves when they detect they are lost', 'Wait a long time before telling anyone', 'Try to find it alone without telling anyone'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -466,7 +466,7 @@ const questions: Question[] = [
   {
     id: 'cd-037',
     text: 'What\'s a reasonable understanding of a \'credit limit\'?',
-    options: ['The maximum amount you\'re allowed to borrow on a credit card', 'The exact amount you must spend every month', 'A savings target for a debit card', 'A type of bank fee unrelated to borrowing'],
+    options: ['The maximum amount you\'re allowed to borrow on a credit card', 'The minimum amount you are required to spend on your credit card every single month', 'A savings target for a debit card', 'A type of bank fee unrelated to borrowing'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -476,7 +476,7 @@ const questions: Question[] = [
   {
     id: 'cd-038',
     text: 'Why might checking transaction alerts or statements regularly matter, even for a teen-level debit card?',
-    options: ['It helps catch mistakes or unauthorized transactions early', 'Checking transactions has no practical benefit', 'Only credit cards require transaction monitoring', 'Statements never contain useful information'],
+    options: ['It helps catch mistakes or unauthorized transactions early', 'Checking transactions has no practical benefit at all since banks always resolve any errors on your behalf', 'Only credit cards require regular statement monitoring — debit cards never have errors or fraud', 'Statements never contain useful information'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -496,7 +496,7 @@ const questions: Question[] = [
   {
     id: 'cd-040',
     text: 'Why might building good card-usage habits as a teen matter for financial life later?',
-    options: ['Habits formed early, like careful spending and monitoring, can carry forward into more complex financial tools like credit cards later', 'Habits formed around card usage as a teenager have no measurable bearing on how responsibly you manage financial tools as an adult', 'Only adults who hold a formal salaried job need to think carefully about responsible card usage and spending discipline habits', 'There is no demonstrated connection between the card habits you form as a teenager and the financial decisions you make later in life'],
+    options: ['Habits formed early, like careful spending and monitoring, can carry forward into more complex financial tools like credit cards later', 'Habits formed around card usage as a teenager have no measurable bearing on how responsibly you manage financial tools as an adult', 'Only adults who hold a formal salaried job need to think carefully about responsible card usage and spending discipline habits', 'There is no demonstrated connection between the card habits you form as a teenager and the financial decisions you make as a responsible adult in life'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -526,7 +526,7 @@ const questions: Question[] = [
   {
     id: 'cd-043',
     text: 'Why might paying only the minimum payment on a credit card balance be a costly long-term habit?',
-    options: ['Minimum payments primarily cover interest, meaning the principal balance can take a very long time to pay down while accruing significant interest', 'Making the minimum payment on a credit card statement always clears the entire outstanding balance quickly and completely', 'Nigerian credit card agreements do not permit any interest to accrue on balances whenever a customer pays the minimum required amount', 'There is no meaningful difference in total cost between paying only the minimum amount and paying the full balance each month'],
+    options: ['Minimum payments primarily cover interest, meaning the principal balance can take a very long time to pay down while accruing significant interest', 'Making the minimum payment on a credit card statement is sufficient to fully clear the entire outstanding balance and all accrued interest within one billing cycle', 'Nigerian credit card agreements do not permit any interest to accrue on balances whenever a customer pays the minimum required amount', 'There is no meaningful difference in total cost between paying only the minimum amount and paying the full balance each month'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -536,7 +536,7 @@ const questions: Question[] = [
   {
     id: 'cd-044',
     text: 'What\'s a reasonable approach to using a credit card as a financial tool rather than a spending expansion?',
-    options: ['Treating available credit as a convenience to be repaid promptly, rather than as additional spending power, supports healthier financial habits', 'The available credit limit on any card should always be treated as additional disposable income that you are encouraged to spend monthly', 'Credit cards are an inherently problematic product that should never be used under any circumstances by any individual consumer', 'There is no meaningful distinction between treating credit as convenience versus treating it as spending power in terms of outcomes'],
+    options: ['Treating available credit as a convenience to be repaid promptly, rather than as additional spending power, supports healthier financial habits', 'The available credit limit on any card should always be treated as additional disposable income that you are actively encouraged to spend down each month', 'Credit cards are an inherently problematic product that should never be used under any circumstances by any individual consumer', 'There is no meaningful distinction between treating credit as convenience versus treating it as spending power in terms of outcomes'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -546,7 +546,7 @@ const questions: Question[] = [
   {
     id: 'cd-045',
     text: 'Why might understanding the difference between a hard and soft credit inquiry matter when managing your credit profile?',
-    options: ['Different types of inquiries can have different potential effects on your credit profile, making awareness useful before applying for multiple credit products', 'There is no meaningful difference between hard and soft credit inquiries and both types affect your profile in exactly the same way', 'Credit inquiries of any type never have any measurable effect on your credit profile regardless of how many occur in one period', 'Only lenders and financial institutions ever need to understand the distinction between hard and soft inquiries — not consumers'],
+    options: ['Different types of inquiries can have different potential effects on your credit profile, making awareness useful before applying for multiple credit products', 'There is no meaningful practical difference between a hard and a soft credit inquiry and both types affect your credit profile in exactly the same way regardless of frequency', 'Credit inquiries of any type never have any measurable effect on your credit profile regardless of how many occur in one period', 'Only lenders and financial institutions ever need to understand the distinction between hard and soft inquiries — not consumers'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -606,7 +606,7 @@ const questions: Question[] = [
   {
     id: 'cd-051',
     text: "What is a \"debit card\"?",
-    options: ["A card that lets you borrow money from the bank", "A card that takes money directly from your bank account when you pay", "A card that earns rewards only", "A government-issued cash card"],
+    options: ["A card that lets you borrow money from the bank and repay it at the end of each monthly billing cycle", "A card that takes money directly from your bank account when you pay", "A card that earns rewards only", "A government-issued cash card"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -626,7 +626,7 @@ const questions: Question[] = [
   {
     id: 'cd-053',
     text: "What happens if you do not pay your full credit card balance by the due date?",
-    options: ["Nothing — the bank is very patient", "You will be charged interest on the unpaid amount", "The bank cancels your card immediately", "The government pays the balance for you"],
+    options: ["Nothing happens immediately — the bank sends a friendly reminder after 90 days with no penalty", "You will be charged interest on the unpaid amount", "The bank cancels your card immediately", "The government pays the balance for you"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -646,7 +646,7 @@ const questions: Question[] = [
   {
     id: 'cd-055',
     text: "Which action HELPS build a good credit history?",
-    options: ["Missing loan payments", "Paying bills and loans on time every month", "Having many credit cards", "Borrowing more than you can repay"],
+    options: ["Missing loan payments occasionally while maintaining a high savings account balance", "Paying bills and loans on time every month", "Having many credit cards", "Borrowing more than you can repay"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -676,7 +676,7 @@ const questions: Question[] = [
   {
     id: 'cd-058',
     text: "What is the smartest way to use a credit card?",
-    options: ["Spend up to the maximum limit every month", "Pay only the minimum amount due each month", "Pay the full balance every month before the due date", "Never use a credit card — only use cash"],
+    options: ["Spend up to the maximum credit limit every single month to demonstrate maximum usage to your bank", "Pay only the minimum amount due each month to preserve your cash flow", "Pay the full balance every month before the due date", "Never use a credit card — only use cash"],
     correctIndex: 2,
     difficulty: 'hard',
     ageTrack: ['kids'],
@@ -736,7 +736,7 @@ const questions: Question[] = [
   {
     id: 'cd-064',
     text: "Which type of credit typically has the lowest interest rate?",
-    options: ["Credit cards", "Microfinance loans", "Secured mortgage loans", "Payday loans"],
+    options: ["Unsecured personal credit lines issued by microfinance banks", "Microfinance institution loans with no collateral requirement", "Secured mortgage loans", "Payday loans"],
     correctIndex: 2,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -866,7 +866,7 @@ const questions: Question[] = [
   {
     id: 'cd-077',
     text: "What is the difference between \"secured\" and \"unsecured\" credit and how does it affect interest rates?",
-    options: ["There is no meaningful difference between secured and unsecured credit products and both types carry identical interest rates", "Secured credit (backed by collateral) typically has lower rates; unsecured credit (no collateral) carries higher rates reflecting greater lender risk", "Secured credit products always carry substantially higher interest rates than unsecured ones because collateral creates additional administrative costs", "Unsecured credit facilities are not available to any individual borrowers in Nigeria and are exclusively reserved for registered corporate entities"],
+    options: ["There is no meaningful difference between secured and unsecured credit products since Nigerian banks are required to charge all customers identical interest rates", "Secured credit (backed by collateral) typically has lower rates; unsecured credit (no collateral) carries higher rates reflecting greater lender risk", "Secured credit products always carry substantially higher interest rates than unsecured ones because collateral creates additional administrative costs", "Unsecured credit facilities are not available to any individual borrowers in Nigeria and are exclusively reserved for registered corporate entities"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['adults'],

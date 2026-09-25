@@ -9,7 +9,7 @@ const questions: Question[] = [
       'To make rich people richer',
       'To fund public services like schools, hospitals, roads, and security',
       'Because the government takes money by force',
-      'Only businesses pay taxes, not ordinary people',
+      'Only registered businesses and corporations pay any taxes in Nigeria, not ordinary individual people',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -39,7 +39,7 @@ const questions: Question[] = [
       'The CBN Governor alone',
       'The National Assembly approves the annual budget proposed by the President',
       'Bank CEOs decide where government money goes',
-      'Each state decides independently with no federal input',
+      'Each state governor independently decides how both state and federal allocations are distributed with no oversight',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -68,7 +68,7 @@ const questions: Question[] = [
     options: [
       'The government building schools for children to attend',
       'The government taking all money from citizens',
-      'Government ministers buying expensive cars',
+      'Government ministers purchasing expensive luxury vehicles and retaining them as personal assets after leaving office',
       'The government owning all shops',
     ],
     correctIndex: 0,
@@ -81,7 +81,7 @@ const questions: Question[] = [
     id: 'gf-006',
     text: 'What is NDIC and what does it do for ordinary Nigerians?',
     options: [
-      'National Drug Investigation Commission — investigates financial crimes and prosecutes bank fraud cases across Nigeria',
+      'National Drug Investigation Commission — investigates all financial crimes and prosecutes bank fraud cases throughout Nigeria',
       'Nigeria Deposit Insurance Corporation — insures bank deposits so Nigerians don\'t lose all their savings if a bank fails',
       'National Development Investment Corporation — provides long-term concessional loans to small businesses across Nigeria',
       'Nigeria Digital Infrastructure Commission — manages broadband expansion and digital payment licensing for fintechs',
@@ -96,7 +96,7 @@ const questions: Question[] = [
     id: 'gf-007',
     text: 'What is "inflation" and can the government do anything about it?',
     options: [
-      'When prices fall suddenly and the economy shrinks; yes, the CBN prints money and government raises salaries to reverse it',
+      'When prices fall suddenly and the economy contracts; yes, the CBN prints new money and the government raises civil servant salaries and allowances to reverse it',
       'When the cost of goods rises over time; yes, the CBN uses interest rates and the government adjusts spending to help control it',
       'A government surcharge added to all imported goods; only the National Assembly can approve removing it by an act of law',
       'When foreign exchange rates rise rapidly; only the IMF can intervene to stabilise prices in developing countries',
@@ -127,7 +127,7 @@ const questions: Question[] = [
     id: 'gf-009',
     text: 'What is "monetary policy" and who sets it in Nigeria?',
     options: [
-      'Government policy about politicians\' salaries; set by the National Assembly',
+      'Government policy covering all public sector salaries, allowances, and entitlements for elected officials; reviewed and approved by the National Assembly',
       'The CBN\'s use of interest rates and money supply to control inflation and support economic growth',
       'The annual national budget; set by the Finance Minister',
       'State governments\' control of local tax rates',
@@ -142,7 +142,7 @@ const questions: Question[] = [
     id: 'gf-010',
     text: 'What is a "government bond" (FGN Bond)?',
     options: [
-      'A government promise to accelerate criminal prosecution and asset recovery from convicted public officials',
+      'A government commitment to accelerate criminal prosecution and comprehensive asset recovery from all convicted public officials and their associates',
       'A debt instrument where the Federal Government borrows money from investors and promises to repay with interest',
       'A digital platform linking all federal ministries to a single electronic payment and reporting system',
       'A state-backed insurance product sold by NDIC to protect bank customers against ATM fraud losses',
@@ -161,7 +161,7 @@ const questions: Question[] = [
       'They are the same: both have the National Assembly setting revenue targets and the CBN implementing the spending plan',
       'Fiscal policy is the government\'s spending and taxation decisions (budget). Monetary policy is the CBN\'s control of money supply and interest rates',
       'Fiscal policy applies only to state budgets; monetary policy is used exclusively for foreign exchange management',
-      'Fiscal policy covers import and export restrictions set by the presidency; monetary policy regulates the naira rate only',
+      'Fiscal policy covers all import and export trade restrictions formally set by the presidency; monetary policy regulates only the official naira exchange rate and money supply',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -173,7 +173,7 @@ const questions: Question[] = [
     id: 'gf-012',
     text: 'Nigeria\'s government earns revenue from multiple sources. Which historically has been the LARGEST?',
     options: [
-      'Company income tax collected by FIRS each quarter',
+      'Company income tax collected quarterly by FIRS from all registered businesses and corporate entities operating in Nigeria',
       'Oil and gas revenues (from NNPCL and crude oil exports)',
       'VAT remittances from manufacturers and retailers',
       'Customs and excise duties on all imported goods',
@@ -188,7 +188,7 @@ const questions: Question[] = [
     id: 'gf-013',
     text: 'What is a "budget deficit" and what are its consequences?',
     options: [
-      'When the government collects more in taxes than it spends — the surplus is saved or used to reduce existing national debt',
+      'When the government collects more revenue in taxes and fees than it spends — the surplus is saved or used to reduce existing national debt and obligations',
       'When government spending exceeds revenue — the gap must be filled by borrowing, which adds to national debt and can fuel inflation',
       'A deliberate annual reduction in the size of the national budget to eliminate waste and improve discipline',
       'When certain ministries overspend their allocation while others return unspent funds to the consolidated revenue fund',
@@ -206,7 +206,7 @@ const questions: Question[] = [
     options: [
       'The official naira exchange rate set monthly; a hike directly strengthens the naira and lowers the cost of imported goods for Nigerians',
       'The benchmark interest rate; a hike makes loans costlier for businesses and consumers, reducing borrowing and spending — which slows inflation but can also slow growth',
-      'The interest rate commercial banks pay customers on savings; a policy hike automatically raises every savings account return across all banks',
+      'The rate commercial banks pay customers on their savings deposits; a CBN policy hike automatically and immediately raises every savings account return across all licensed commercial banks in Nigeria',
       'The rate used by FIRS to calculate late tax payment penalties; an increase means businesses face higher fines for delayed remittances',
     ],
     correctIndex: 1,
@@ -219,7 +219,7 @@ const questions: Question[] = [
     id: 'gf-015',
     text: 'What is "quantitative easing" and did the CBN use a version of it during COVID-19?',
     options: [
-      'Reducing total government expenditure by cutting salaries and freezing capital projects to repay debt; no, Nigeria increased spending during COVID-19',
+      'Reducing total government expenditure by cutting civil servant salaries and freezing all capital projects in order to accelerate debt repayment; no, Nigeria actually increased spending during COVID-19',
       'Injecting money into the economy by buying assets or directing banks to lend more; yes, the CBN released trillions in targeted credit facilities during COVID-19',
       'Raising income and company taxes to fund emergency healthcare equipment procurement; yes, a special COVID-19 emergency levy was introduced in 2020',
       'Borrowing emergency funds from the IMF and World Bank under structural adjustment conditions; yes, Nigeria drew down a large IMF emergency facility',
@@ -234,7 +234,7 @@ const questions: Question[] = [
     id: 'gf-016',
     text: 'How does the Nigeria Sovereign Investment Authority (NSIA) work and why does it matter?',
     options: [
-      'It is the government arm responsible for collecting taxes from multinational oil companies and remitting them to the federation account',
+      'It is the federal government arm responsible for collecting all taxes and royalties from multinational oil companies and remitting every kobo to the federation account for distribution',
       'It manages Nigeria\'s sovereign wealth fund — saving excess oil revenues and investing them for intergenerational benefit and economic stabilisation',
       'It regulates all forms of investment by private Nigerian citizens and diaspora in domestic capital markets and real estate',
       'It is a department within the CBN that manages Nigeria\'s external reserves and foreign currency-denominated bond issuances',
@@ -250,7 +250,7 @@ const questions: Question[] = [
     id: 'gf-017',
     text: 'What is "Ways and Means Advances" and why did the CBN\'s ₦22.7 trillion in advances to the FGN become controversial?',
     options: [
-      'A foreign aid arrangement where multilateral lenders finance government salaries; the ₦22.7T was controversial because donors objected to its use for recurrent spending',
+      'A foreign aid arrangement where multilateral development bank lenders directly finance government salary and overhead obligations; the ₦22.7T was controversial because international donors strongly objected to its use for recurrent spending items',
       'A CBN facility allowing the FGN to borrow directly from the apex bank; the ₦22.7T was controversial because it was seen as printing money to fund government spending, fuelling inflation',
       'A treasury bond issuance programme managed jointly by the DMO and CBN; the ₦22.7T became controversial after retail investors were excluded from the primary auction',
       'An IMF standby credit facility drawn down by the FGN to cover emergency expenditures; the ₦22.7T raised concerns that Nigeria was breaching its programme conditions',
@@ -267,7 +267,7 @@ const questions: Question[] = [
     options: [
       'A health and safety epidemic spreading through oil facility workers that raises operational costs across Nigeria\'s petroleum sector',
       'When oil revenue boosts the naira, making non-oil exports uncompetitive and hollowing out manufacturing and agriculture — leaving the economy dangerously oil-dependent',
-      'A bilateral regulation where Dutch multinational companies hold exclusive concession rights over Nigeria\'s upstream oil and gas exploration blocks',
+      'A bilateral trade regulation under which Dutch and European multinational companies hold exclusive long-term concession rights over Nigeria\'s upstream oil and gas exploration and production blocks',
       'A fiscal condition where fuel subsidy costs grow so large that they make the annual government budget structurally impossible to balance',
     ],
     correctIndex: 1,
@@ -356,7 +356,7 @@ const questions: Question[] = [
   {
     id: 'gf-024',
     text: 'Why might it matter that a country has an organized way of managing its money?',
-    options: ['It helps keep the country\'s economy stable and functioning well', 'Organized money management has no real benefit', 'Countries function fine with no financial organization', 'Only businesses need organized money management'],
+    options: ['It helps keep the country\'s economy stable and functioning well', 'Organized money management has no real benefit', 'Countries can function perfectly well with absolutely no formal financial organization at all', 'Only businesses need organized money management'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -366,7 +366,7 @@ const questions: Question[] = [
   {
     id: 'gf-025',
     text: 'What\'s an example of something a government might spend money on?',
-    options: ['Public schools and hospitals', 'Personal toys for one child', 'Nothing at all, ever', 'Only private businesses'],
+    options: ['Public schools and hospitals', 'Personal toys for one single child', 'Nothing at all, ever', 'Only private businesses'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -376,7 +376,7 @@ const questions: Question[] = [
   {
     id: 'gf-026',
     text: 'Why is it helpful to understand that public services, like roads, cost money to build and maintain?',
-    options: ['It helps explain why taxes and government spending matter', 'Public services are always free with no cost', 'This understanding has no real value', 'Only adults need to understand this'],
+    options: ['It helps explain why taxes and government spending matter', 'Public services are always completely free for everyone with no associated cost at all', 'This understanding has no real value', 'Only adults need to understand this'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -386,7 +386,7 @@ const questions: Question[] = [
   {
     id: 'gf-027',
     text: 'What\'s the connection between the money people pay in taxes and the services a community enjoys?',
-    options: ['Taxes often help fund the public services a community uses', 'There\'s no connection between taxes and public services', 'Taxes and public services are completely unrelated', 'Public services appear with no funding needed'],
+    options: ['Taxes often help fund the public services a community uses', 'There\'s absolutely no meaningful connection whatsoever between taxes and public services', 'Taxes and public services are completely unrelated', 'Public services appear with no funding needed'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -396,7 +396,7 @@ const questions: Question[] = [
   {
     id: 'gf-028',
     text: 'Why might currency, like the naira, be managed carefully by a country\'s institutions?',
-    options: ['To help keep the value and use of money stable for everyone', 'Currency management has no real purpose', 'Money manages itself with no oversight needed', 'Only individuals manage currency, not institutions'],
+    options: ['To help keep the value and use of money stable for everyone', 'Currency management has no real purpose', 'Money manages itself with no oversight needed', 'Only individual citizens manage the value of currency, not government institutions'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -406,7 +406,7 @@ const questions: Question[] = [
   {
     id: 'gf-029',
     text: 'What\'s a simple way to describe why government financial planning matters to regular people?',
-    options: ['It affects the public services and infrastructure people rely on daily', 'Government financial planning has no effect on regular people', 'Only government workers are affected by this planning', 'Regular people are never affected by these decisions'],
+    options: ['It affects the public services and infrastructure people rely on daily', 'Government financial planning has no measurable effect on the everyday lives of regular people', 'Only government workers are affected by this planning', 'Regular people are never affected by these decisions'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -416,7 +416,7 @@ const questions: Question[] = [
   {
     id: 'gf-030',
     text: 'Why might learning a little about how government and money connect be useful, even for a child?',
-    options: ['It builds a basic understanding of how public life and money are connected', 'This knowledge has no value for children', 'Government and money have no real connection worth learning about', 'Only adults benefit from understanding this connection'],
+    options: ['It builds a basic understanding of how public life and money are connected', 'This knowledge has no value for children', 'Government policy and money management have no real connection worth learning about at all', 'Only adults benefit from understanding this connection'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -561,7 +561,7 @@ const questions: Question[] = [
   {
     id: 'gf-040',
     text: 'Why might understanding that government financial decisions involve trade-offs (limited resources, competing needs) be a useful concept?',
-    options: ['It reflects a realistic understanding of how public financial decision-making generally works', 'Government resources are always unlimited with no real trade-offs', 'Trade-offs are a concept that only applies to personal finance', 'Public financial decisions never involve any competing priorities'],
+    options: ['It reflects a realistic understanding of how public financial decision-making generally works', 'Government resources are always unlimited with no real trade-offs', 'Trade-offs are a concept that only applies to personal finance', 'Public financial decisions and government budgets never actually involve any real competing priorities or difficult resource allocation choices'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -589,7 +589,7 @@ const questions: Question[] = [
     options: [
       'Persistent large fiscal deficits can have various economic implications, including potential effects on inflation, borrowing costs, or currency stability, depending on how they\'re financed',
       'Fiscal deficits have no meaningful or measurable connection to broader economic conditions like inflation, debt costs, or currency performance',
-      'Persistent budget deficits are universally beneficial because they signal that a government is investing heavily in infrastructure and citizens',
+      'Persistent and growing budget deficits are universally beneficial because they consistently signal that a government is investing heavily in long-term infrastructure projects and actively improving citizens\' living standards and welfare',
       'Only countries with fully balanced budgets can experience significant economic growth, rising debt pressures, or currency instability',
     ],
     correctIndex: 0,
@@ -601,7 +601,7 @@ const questions: Question[] = [
   {
     id: 'gf-043',
     text: 'Why might understanding public debt levels be relevant context for evaluating a country\'s broader financial and economic outlook?',
-    options: ['Public debt has no bearing on evaluating a country\'s economic outlook', 'High debt levels relative to economic output can affect a country\'s fiscal flexibility and risk profile', 'Public debt is entirely disconnected from a country\'s future financial options', 'Only credit rating agencies need to understand public debt levels'],
+    options: ['Public debt has no bearing on evaluating a country\'s economic outlook', 'High debt levels relative to economic output can affect a country\'s fiscal flexibility and risk profile', 'Public debt is entirely disconnected from a country\'s future borrowing costs, credit ratings, and available fiscal policy options', 'Only credit rating agencies need to understand public debt levels'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -626,7 +626,7 @@ const questions: Question[] = [
   {
     id: 'gf-045',
     text: 'Why might government subsidy policy changes (like on fuel) have ripple effects across household budgets?',
-    options: ['Subsidy changes can affect prices of goods and transport broadly, influencing overall household cost of living', 'Subsidy policy has no real effect on household budgets', 'Subsidies are unrelated to consumer prices in any way', 'Only fuel purchases are affected by subsidy changes, with no wider ripple effect'],
+    options: ['Subsidy changes can affect prices of goods and transport broadly, influencing overall household cost of living', 'Subsidy policy has no real effect on household budgets', 'Subsidies are unrelated to consumer prices in any way', 'Only direct fuel purchases are affected by any subsidy changes, with absolutely no wider ripple effect on food prices, transport, or other household costs'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -640,7 +640,7 @@ const questions: Question[] = [
       'Broader economic and policy conditions can shape the environment individuals plan within, even though individual planning remains distinct and important',
       'Government financial decisions and individual personal financial planning are entirely separate domains with no meaningful intersection',
       'Individual financial planning has absolutely no need to consider broader economic conditions or government policy changes at all',
-      'Government macroeconomic policy fully determines every individual financial outcome, leaving no real scope for personal financial planning',
+      'Government macroeconomic policy fully and automatically determines every individual financial outcome in the economy, leaving absolutely no meaningful scope whatsoever for personal financial planning',
     ],
     correctIndex: 0,
     difficulty: 'hard',
@@ -651,7 +651,7 @@ const questions: Question[] = [
   {
     id: 'gf-047',
     text: 'Why might staying informed about central bank policy announcements be relevant for someone managing savings or loans?',
-    options: ['Policy announcements have no bearing on personal financial products', 'Rate changes signaled by policy decisions can affect the cost of loans and returns on savings products over time', 'Only professional traders need to follow these announcements', 'Central bank decisions are entirely disconnected from consumer financial products'],
+    options: ['Policy announcements have no bearing on personal financial products', 'Rate changes signaled by policy decisions can affect the cost of loans and returns on savings products over time', 'Only professional traders need to follow these announcements', 'Central bank policy decisions are entirely disconnected from the interest rates charged on consumer loans or earned on personal savings deposits'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -665,7 +665,7 @@ const questions: Question[] = [
       'Revenue diversification has no bearing on long-term economic stability and is irrelevant to how governments manage fiscal positions',
       'Over-reliance on a single revenue source can create vulnerability if that source is disrupted, similar to individual income diversification principles',
       'Dependence on a single government revenue source is actually the most stable approach because it simplifies budget planning and forecasting',
-      'Revenue diversification is a principle that applies only to individual personal finance and has no relevance to how national governments operate',
+      'Revenue diversification is a financial principle that applies only to individual personal finance and investment portfolios, and has no practical relevance to how national governments manage fiscal positions',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -693,7 +693,7 @@ const questions: Question[] = [
     text: 'What\'s a sound takeaway about the practical relevance of government and macroeconomic literacy for personal financial decision-making?',
     options: [
       'Broader economic literacy can support more informed context for personal financial decisions, even though personal circumstances remain central',
-      'Macroeconomic literacy and an understanding of government finance have absolutely no practical relevance to personal financial decision-making',
+      'Macroeconomic literacy and a deep understanding of government finance have absolutely no practical relevance to personal financial decision-making',
       'All personal financial decisions should be made entirely on the basis of individual circumstances, with no regard for broader economic context',
       'Only people who work professionally in banking, investment, or government finance need to develop any macroeconomic literacy',
     ],
@@ -757,7 +757,7 @@ const questions: Question[] = [
     id: 'gf-055',
     text: "What is a \"government bond\"?",
     options: [
-      "A federally insured savings product managed by NDIC and offered through commercial banks and post offices",
+      "A federally insured retail savings product created and managed by the NDIC, offered exclusively through licensed commercial banks and approved post offices across Nigeria",
       "A debt instrument issued by the government to raise money from investors, with a promise to repay with interest",
       "A short-term CBN liability used to manage daily liquidity in the overnight interbank lending market",
       "A tax rebate certificate issued by FIRS to businesses that file their company income tax returns on time",
@@ -875,7 +875,7 @@ const questions: Question[] = [
       "A policy requiring the government to maintain a zero debt balance and fund all spending from current revenue",
       "Whether a government can continue to service its debt without requiring exceptional measures like default or currency collapse",
       "The speed at which the DMO can refinance existing government bonds before they reach their scheduled maturity dates",
-      "Whether the public has been adequately consulted and given approval before the government issues new sovereign bonds",
+      "Whether Nigerian citizens have been adequately consulted and given formal approval before the federal government issues any new sovereign bonds or takes on additional debt",
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -902,7 +902,7 @@ const questions: Question[] = [
     id: 'gf-065',
     text: "What is \"sovereign debt\"?",
     options: [
-      "Debt incurred by a state-owned enterprise to fund infrastructure projects and operational working capital",
+      "Debt incurred by a state-owned enterprise or government parastatal to fund infrastructure projects and operational working capital needs",
       "Debt issued by a national government — bonds or loans the government owes to domestic or foreign creditors",
       "Debt accumulated exclusively by the 36 state governments and the FCT on their own individual accounts",
       "Money owed by individual taxpayers and businesses in unpaid and overdue tax liabilities to FIRS",
@@ -920,7 +920,7 @@ const questions: Question[] = [
       "A sustainable and manageable level of debt relative to Nigeria's GDP, revenue base, and debt obligations",
       "80% of government income goes to repaying debt — leaving very little for education, health, and infrastructure",
       "Federal revenues comfortably exceed all expenditure commitments and debt service by a healthy margin",
-      "Bond maturities are being rolled over efficiently at lower interest rates than the original terms forecast",
+      "Government bond maturities are being rolled over efficiently and consistently at significantly lower interest rates than what the original bond issuance terms had projected or forecast",
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -934,7 +934,7 @@ const questions: Question[] = [
     options: [
       "The government deliberately restricting private sector competition by reducing licensing requirements and regulations",
       "When heavy government borrowing pushes interest rates up, making it more expensive for businesses and individuals to borrow — reducing private investment",
-      "When government spending grows so large that it completely replaces private sector activity across every sector of the economy",
+      "When government spending grows so dominant and pervasive that it completely replaces all meaningful private sector economic activity across every sector and industry of the entire national economy",
       "A deliberate CBN policy package designed to attract foreign direct investment into the Nigerian manufacturing sector",
     ],
     correctIndex: 1,
@@ -964,7 +964,7 @@ const questions: Question[] = [
     options: [
       "Both terms describe the same government expenditure items, categorised differently only for external reporting purposes",
       "Recurrent expenditure covers ongoing government operations (salaries, overheads); capital expenditure funds long-term investments (roads, hospitals, power plants)",
-      "Capital spending has consistently exceeded recurrent spending in every single Nigerian federal budget since the year 2010",
+      "Capital expenditure has consistently and significantly exceeded recurrent spending in every single Nigerian federal budget presented to and approved by the National Assembly since the major budget reform year of 2010",
       "Recurrent spending is reserved exclusively for defence, security agencies, and national intelligence services",
     ],
     correctIndex: 1,
@@ -994,7 +994,7 @@ const questions: Question[] = [
     options: [
       "A government-administered retail savings account offered through commercial banks by arrangement with the CBN",
       "A fixed-income security issued by the Federal Government of Nigeria, paying periodic interest and returning principal at maturity",
-      "A 91-day money market instrument issued at par value and redeemed at full face value immediately upon maturity",
+      "A 91-day money market instrument issued at its par value and subsequently redeemed at full face value with all accrued returns paid directly to the holder immediately upon the scheduled maturity date",
       "A concessional loan extended to Nigeria by the World Bank or the African Development Bank Group",
     ],
     correctIndex: 1,
@@ -1025,7 +1025,7 @@ const questions: Question[] = [
       "No difference — all government debt is treated identically under Nigerian fiscal law and DMO reporting standards",
       "Domestic debt is owed to Nigerian creditors (denominated in naira); external debt is owed to foreign creditors (denominated in foreign currency)",
       "Domestic borrowing always carries lower interest rates than external loans from any multilateral or bilateral institution",
-      "External debt can only be issued by the 36 state governments, not by the federal government directly on international markets",
+      "External borrowing instruments can only be issued by the 36 individual state governments and the FCT, and never by the federal government directly on international capital markets",
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -1054,7 +1054,7 @@ const questions: Question[] = [
     options: [
       "Adopting a basket of foreign currencies alongside the naira for conducting all government financial transactions",
       "Reducing dependence on a single revenue source (oil) by growing non-oil revenues like taxes, fees, and domestic resource mobilisation",
-      "Accessing concessional loans from multiple bilateral partner countries rather than relying on a single foreign lender",
+      "Accessing concessional development loans from multiple bilateral partner countries and multilateral institutions rather than depending entirely on any single foreign lender",
       "Appointing multiple finance ministers each responsible for overseeing a different revenue stream or economic sector",
     ],
     correctIndex: 1,
@@ -1079,7 +1079,7 @@ const questions: Question[] = [
     options: [
       "A healthy and low ratio of public debt to GDP that signals strong, well-managed government finances",
       "Very high debt service-to-revenue ratio — a large share of government revenue is consumed by interest payments, leaving little for development spending",
-      "A consistent budget surplus driven by rising oil revenues and improved tax administration by FIRS and customs",
+      "A consistent and growing annual budget surplus driven by steadily rising oil revenues and significantly improved tax administration performance by both FIRS and the Nigeria Customs Service nationwide",
       "Foreign exchange reserves that have grown excessively large relative to Nigeria's monthly import cover needs",
     ],
     correctIndex: 1,
@@ -1094,7 +1094,7 @@ const questions: Question[] = [
     options: [
       "A 20-year national development strategy reviewed and approved by the National Assembly every two decades",
       "A 3-year rolling government fiscal plan projecting revenue, expenditure, and deficit targets to guide annual budget preparation",
-      "A five-year procurement schedule listing all capital contracts awarded to private contractors by federal MDAs",
+      "A five-year capital procurement schedule that systematically lists and tracks all contracts awarded to approved private sector contractors by federal ministries, departments, and agencies",
       "A quarterly revenue and expenditure performance report that state governments submit to the RMAFC",
     ],
     correctIndex: 1,
@@ -1110,7 +1110,7 @@ const questions: Question[] = [
       "It sets and collects all federal taxes directly through its finance committee and subcommittee structures",
       "It appropriates (approves) the federal budget and oversees government spending — no expenditure is legal without National Assembly appropriation",
       "It approves and issues all FGN Bonds and treasury bills on behalf of the Debt Management Office each quarter",
-      "It supervises all deposit money banks and enforces compliance with CBN prudential guidelines and capital ratios",
+      "It supervises all deposit money banks and microfinance institutions while enforcing strict compliance with CBN prudential guidelines, capital adequacy ratios, and risk management standards",
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -1122,7 +1122,7 @@ const questions: Question[] = [
     id: 'gf-080',
     text: "What is \"sovereign wealth fund\" (SWF) and what is Nigeria's example?",
     options: [
-      "A CBN emergency liquidity facility used to support distressed commercial banks and stabilise the financial system during crises",
+      "A dedicated CBN emergency liquidity support facility specifically designed and deployed to rescue and stabilise distressed commercial banks while preventing systemic contagion from spreading across the broader Nigerian financial system during acute banking crises",
       "A government-owned investment fund, typically from resource revenues, to save for future generations or stabilise the economy. Nigeria's is the NSIA (Nigeria Sovereign Investment Authority)",
       "A dedicated contributory pension reserve fund managed jointly by PenCom and the Federal Ministry of Finance",
       "A foreign aid disbursement vehicle managed by the Ministry of Humanitarian Affairs for poverty alleviation programmes",

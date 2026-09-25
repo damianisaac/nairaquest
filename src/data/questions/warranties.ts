@@ -96,7 +96,7 @@ const questions: Question[] = [
     id: 'wt-007',
     text: 'What does "warranty period" mean?',
     options: [
-      'The time between when a product is made and when it arrives in the shop',
+      'The period between when a product is manufactured and when it is shipped to the distributor or retailer for onward sale to consumers',
       'The length of time the warranty is valid — the window during which you can make a warranty claim',
       'The number of days you have to return a product for a refund',
       'How long it takes to repair a product under warranty',
@@ -127,7 +127,7 @@ const questions: Question[] = [
     id: 'wt-009',
     text: 'What is the difference between a "manufacturer\'s warranty" and an "extended warranty"?',
     options: [
-      'They are identical products offered by different parties — both come bundled free with the product, both cover the same defects, and both last the same duration, making the distinction purely cosmetic',
+      'They are identical products offered by different parties — both come bundled free with the product at no additional cost, both cover exactly the same list of manufacturing defects, and both last for exactly the same duration from the original purchase date',
       'A manufacturer\'s warranty comes free with the product and covers defects for a set period. An extended warranty is an optional extra you buy separately to cover the product after the manufacturer\'s warranty expires',
       'An extended warranty is provided by NAFDAC under its consumer electronics regulation programme, while a manufacturer\'s warranty is a voluntary commitment the company makes directly to buyers',
       'A manufacturer\'s warranty is always fixed at exactly one year in Nigeria regardless of product type, while an extended warranty always adds a further ten years of protection for a standardised additional fee',
@@ -265,7 +265,7 @@ const questions: Question[] = [
     id: 'wt-018',
     text: 'Under the FCCPA 2018 (Federal Competition and Consumer Protection Act), what are a supplier\'s obligations regarding product warranties in Nigeria?',
     options: [
-      'Suppliers in Nigeria face no legal obligation to provide warranties under the FCCPA 2018 — the Act only regulates advertising and pricing transparency, leaving warranty provision entirely at each supplier\'s discretion with no enforcement mechanism or consumer remedy',
+      'Suppliers in Nigeria face no legal obligation to provide warranties under the FCCPA 2018 — the Act regulates only advertising and pricing transparency, leaving warranty provision entirely at each supplier\'s discretion with no enforcement mechanism, prescribed coverage terms, or statutory consumer remedy of any kind',
       'Suppliers must ensure goods are of acceptable quality, durable, and fit for purpose. The Act provides consumers with remedies (repair, replacement, or refund) for goods that fail to meet quality standards, effectively creating statutory warranty rights even without an express warranty',
       'The FCCPA 2018 exclusively regulates warranty obligations for consumer goods with a sale price above ₦500,000 — products below this threshold are governed by the buyer-beware principle, and consumers have no statutory quality remedy for lower-value items',
       'Under the FCCPA 2018, warranty obligations are restricted to multinational corporations with annual turnover exceeding ₦5 billion operating in Nigeria — local businesses and SMEs are fully exempt from any product quality standard or consumer remedy requirement',
@@ -331,7 +331,7 @@ const questions: Question[] = [
   {
     id: 'wt-023',
     text: 'Why might keeping the receipt for something you bought be helpful later?',
-    options: ['It can help prove you bought it if you ever need a warranty or return', 'Receipts have no real purpose after a purchase', 'You should always throw receipts away immediately', 'Receipts only matter for very expensive items'],
+    options: ['It can help prove you bought it if you ever need a warranty or return', 'Receipts have no lasting value once you leave the shop, since all purchase transactions are stored digitally by the retailer and can be retrieved at any time', 'You should always throw receipts away immediately after any purchase since they serve no further purpose', 'Receipts only matter for very expensive items and have no relevance to everyday purchases'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -341,7 +341,7 @@ const questions: Question[] = [
   {
     id: 'wt-024',
     text: 'What does it mean if something is \'still under warranty\'?',
-    options: ['The time period during which a warranty promise still applies', 'The item is completely broken with no help available', 'The item was given away for free', 'Warranty has already expired completely'],
+    options: ['The time period during which a warranty promise still applies', 'The item has a permanent fault that no service centre can address, meaning the buyer must purchase a complete replacement at full cost', 'The item was given away for free by the original buyer', 'The warranty has already expired and no coverage remains'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -351,7 +351,7 @@ const questions: Question[] = [
   {
     id: 'wt-025',
     text: 'Why might a shopkeeper offer a warranty on the things they sell?',
-    options: ['To reassure customers that the product is trustworthy and supported', 'Warranties have no real purpose for shopkeepers', 'Shopkeepers never offer any warranties', 'Warranties are only for very cheap items'],
+    options: ['To reassure customers that the product is trustworthy and supported', 'Warranties serve no commercial purpose for sellers and have no measurable effect on a customer\'s decision to buy from any particular shop', 'Shopkeepers are never permitted under Nigerian consumer law to offer any warranties on goods', 'Warranties are exclusively used for very cheap items that would otherwise be hard to sell'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -381,7 +381,7 @@ const questions: Question[] = [
   {
     id: 'wt-028',
     text: 'Why might it be a good habit to keep the box or receipt of something important you bought?',
-    options: ['It can help if you ever need to return, exchange, or use a warranty', 'Keeping the box or receipt has no real value', 'You should always discard boxes and receipts immediately', 'Only expensive electronics ever need their receipts kept'],
+    options: ['It can help if you ever need to return, exchange, or use a warranty', 'Keeping packaging and receipts serves no practical purpose once a product is confirmed working, so discarding them immediately is the sensible course of action', 'You should always discard boxes and receipts immediately since retailers keep all records digitally', 'Only items costing above ₦50,000 require receipts to be kept, since lower-value purchases are automatically covered by an implied warranty'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -391,7 +391,7 @@ const questions: Question[] = [
   {
     id: 'wt-029',
     text: 'What\'s an example of when a warranty might be useful?',
-    options: ['When something you bought stops working properly on its own', 'When you accidentally break something yourself carelessly', 'Warranties are never actually useful', 'Only adults can ever use a warranty'],
+    options: ['When something you bought stops working properly on its own', 'When you deliberately misuse a product or cause physical damage through careless handling and then want to avoid paying for the repair yourself', 'Warranties are never actually useful under any circumstances for any buyer', 'Only adults aged 18 and over are legally entitled to make use of a warranty under Nigerian law'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -401,7 +401,7 @@ const questions: Question[] = [
   {
     id: 'wt-030',
     text: 'Why is understanding what a warranty covers helpful before you need to use it?',
-    options: ['It helps you know what kind of help you can actually expect', 'Understanding a warranty has no real value', 'Warranties always cover every possible situation', 'Only adults need to understand warranty coverage'],
+    options: ['It helps you know what kind of help you can actually expect', 'Reading warranty terms before a problem occurs has no practical benefit and is simply not worth the time it takes to review the document carefully', 'All valid warranties in Nigeria automatically cover every possible situation without any exclusions whatsoever', 'Only adults are required to understand warranty coverage; children are fully exempt from any such responsibility'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -431,7 +431,7 @@ const questions: Question[] = [
   {
     id: 'wt-033',
     text: 'Why is understanding a warranty\'s specific time period important?',
-    options: ['Warranty periods have no real relevance to using the protection they offer', 'Coverage typically only applies within a defined timeframe, after which the warranty may no longer apply', 'All warranties last indefinitely with no time limit', 'Warranty periods are always identical for every product'],
+    options: ['Warranty periods have no practical relevance in Nigeria because the FCCPC grants all consumers the same repair and replacement rights regardless of how much time has passed since the original purchase', 'Coverage typically only applies within a defined timeframe, after which the warranty may no longer apply', 'All warranties last indefinitely with no time limit under Nigerian consumer law', 'Warranty periods are always identical for every product category and brand sold in Nigeria'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -441,7 +441,7 @@ const questions: Question[] = [
   {
     id: 'wt-034',
     text: 'What\'s a smart habit when purchasing electronics or valuable items, related to warranties?',
-    options: ['Keep receipts, warranty documents, and original packaging in case they\'re needed later', 'Discard all documentation immediately after purchase', 'Warranty documentation is never actually needed for anything', 'Only very expensive items ever require any documentation to be kept'],
+    options: ['Keep receipts, warranty documents, and original packaging in case they\'re needed later', 'Discard all receipts and warranty documents immediately after every purchase, since modern retailers maintain full digital records and no physical paperwork is ever needed to support a warranty claim', 'Warranty documentation is never actually required for any type of claim under Nigerian consumer law', 'Only items priced above ₦200,000 ever require any documentation to be retained after the point of sale'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -451,7 +451,7 @@ const questions: Question[] = [
   {
     id: 'wt-035',
     text: 'Why might attempting unauthorized repairs on a product potentially void its warranty?',
-    options: ['Unauthorized repairs have no effect on warranty validity', 'Many warranties specify that repairs must go through authorized channels to remain valid', 'All repairs, regardless of who performs them, are always covered', 'Warranties are never affected by how repairs are handled'],
+    options: ['Repairs performed by any technician, whether authorised or independent, have no effect on warranty validity under Nigerian consumer law, which only considers when the defect originally appeared', 'Many warranties specify that repairs must go through authorized channels to remain valid', 'All repairs, regardless of who performs them, are always covered under Nigerian warranty law', 'Warranties in Nigeria are never affected by how or where repairs were carried out on the product'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -491,7 +491,7 @@ const questions: Question[] = [
   {
     id: 'wt-039',
     text: 'Why might registering a product with the manufacturer sometimes matter for warranty purposes?',
-    options: ['Registration has no real bearing on warranty validity in any case', 'In some cases, registration can help confirm ownership and coverage details when a warranty claim is needed', 'All products always require registration regardless of the manufacturer\'s policy', 'Registration always voids a warranty rather than supporting it'],
+    options: ['Registering a product online after purchase has no bearing on warranty validity, since manufacturers are legally obligated to honour all valid claims whether or not the product was ever registered', 'In some cases, registration can help confirm ownership and coverage details when a warranty claim is needed', 'All products in Nigeria always require online registration regardless of the manufacturer\'s individual policy', 'Registration always voids a warranty immediately rather than supporting or extending its coverage in any way'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -551,7 +551,7 @@ const questions: Question[] = [
   {
     id: 'wt-045',
     text: 'Why might a business owner need to understand warranty obligations they extend to their own customers, not just warranties they receive as a consumer?',
-    options: ['Warranty obligations only ever apply to consumers, never to businesses offering products', 'Businesses offering warranties take on obligations that carry real cost and legal implications worth understanding clearly', 'Business-extended warranties have no real cost implications', 'Understanding warranty obligations is irrelevant to running a business'],
+    options: ['Warranty obligations under Nigerian law apply exclusively to the relationship between manufacturers and individual end consumers, creating no legal or financial exposure for any business that sells or distributes products', 'Businesses offering warranties take on obligations that carry real cost and legal implications worth understanding clearly', 'Business-extended warranties have no real cost implications and are purely a marketing gesture with no financial consequence', 'Understanding warranty obligations offered to customers is entirely irrelevant to running any type of business in Nigeria'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -651,7 +651,7 @@ const questions: Question[] = [
   {
     id: 'wt-055',
     text: "Which of these voids (cancels) a warranty?",
-    options: ["Using the product for its intended purpose", "Dropping the product and cracking the screen", "Operating it in a dry environment", "Charging it with the provided charger"],
+    options: ["Using the product exactly as directed in the manufacturer's official instruction manual under all normal recommended operating conditions", "Dropping the product and cracking the screen", "Operating it in a clean, dry environment away from moisture and excessive heat", "Charging it only with the original charger provided in the product's box by the manufacturer"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -661,7 +661,7 @@ const questions: Question[] = [
   {
     id: 'wt-056',
     text: "A blender has a 2-year warranty and stops working after 18 months. The seller wants to charge for repairs. What should you tell them?",
-    options: ["OK, I will pay", "The product is still within warranty — repairs should be done at no charge", "Warranties are not legally binding", "A 2-year warranty starts from the manufacture date, not purchase date"],
+    options: ["I will pay the repair fee as requested, since the product is nearly two years old and the seller's request to charge for the service seems entirely reasonable given the time that has passed", "The product is still within warranty — repairs should be done at no charge", "Warranties are not legally binding and the seller has no obligation to honour them under any Nigerian law", "A 2-year warranty always starts from the manufacture date rather than the purchase date, so 18 months may already be outside coverage"],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['kids'],

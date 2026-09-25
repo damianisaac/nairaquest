@@ -7,7 +7,7 @@ const questions: Question[] = [
     text: 'What happens when you BUY something?',
     options: [
       'You give money and receive a good or service in return',
-      'You receive money for giving away something you own',
+      'You receive money from someone who wants what you already own and is willing to pay for it',
       'You borrow something from a friend',
       'You swap two identical items with someone',
     ],
@@ -21,7 +21,7 @@ const questions: Question[] = [
     id: 'bs-002',
     text: 'What happens when you SELL something?',
     options: [
-      'You pay money to take an item from a shop',
+      'You hand over money to take possession of a specific item that the shop or trader is offering for sale',
       'You give a product or service to someone in exchange for money',
       'You borrow money from the bank',
       'You swap one item for another without using money',
@@ -53,7 +53,7 @@ const questions: Question[] = [
     options: [
       'Because they want to collect as many items as possible',
       'To get items at a lower price and sell at a higher price to earn income',
-      'Because customers are not allowed to buy from suppliers directly',
+      'Because customers are not allowed to purchase directly from suppliers due to trade licensing rules that govern wholesale activity in Nigeria',
       'So they can give items away for free later',
     ],
     correctIndex: 1,
@@ -93,7 +93,7 @@ const questions: Question[] = [
     options: [
       'No — ₦500 is not enough',
       'Yes — ₦300 + ₦50 = ₦350, which is less than ₦500',
-      'Yes — but only if he buys both at the same shop',
+      'Yes — but only if he brings both items to the counter together so the combined cost can be confirmed in one transaction',
       'No — he must save first before buying anything',
     ],
     correctIndex: 1,
@@ -122,7 +122,7 @@ const questions: Question[] = [
     id: 'bs-009',
     text: 'What is the difference between "wholesale" and "retail" prices?',
     options: [
-      'Wholesale is the discounted price on clearance rails; retail is the full price on regular shelves',
+      'Wholesale is the standard discounted price offered during seasonal clearance events; retail is the full manufacturer-recommended price shown on regular shelves for everyday consumer purchases throughout the year',
       'Wholesale is the bulk price paid by traders buying large quantities from manufacturers; retail is the higher price individual consumers pay in shops',
       'Wholesale applies only to imported goods passing through customs; retail applies to domestically manufactured products',
       'Wholesale price is regulated by the CBN through a price-control framework; retail price is set freely by individual shop owners',
@@ -137,7 +137,7 @@ const questions: Question[] = [
     id: 'bs-010',
     text: 'What does "supply and demand" mean in a market?',
     options: [
-      'Supply refers to the naira the CBN prints each quarter; demand is the number of active bank accounts registered at Nigerian banks',
+      'Supply refers to the total naira printed and released by the CBN into the economy each quarter; demand is the total number of active bank accounts currently registered with all licensed commercial banks and microfinance institutions operating across Nigeria',
       'Supply is the quantity of a good sellers offer; demand is the quantity buyers want. When demand exceeds supply, prices rise. When supply exceeds demand, prices fall',
       'Supply and demand only apply to manufactured goods; agricultural commodities like yam and cassava follow separate government pricing rules',
       'Supply is the capital traders invest to stock a market; demand is the total spending power that buyers carry into the market on any given day',
@@ -171,7 +171,7 @@ const questions: Question[] = [
       'A government surcharge applied to goods in controlled sectors, collected by FIRS at the point of retail sale',
       'The amount added to the cost price to arrive at the selling price. A 40% markup on a ₦1,000 item means the selling price is ₦1,400',
       'The percentage gap between the import duty paid at customs and the consumer price index published by the NBS',
-      'An extra charge retailers add only for non-regular customers to compensate for the credit risk of an unknown buyer',
+      'An extra surcharge that retail outlets add only for first-time customers to compensate the business for the elevated credit risk and uncertainty associated with buyers whose payment history is entirely unknown to the seller',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -183,7 +183,7 @@ const questions: Question[] = [
     id: 'bs-013',
     text: 'Why might a seller choose to reduce prices temporarily (run a sale) even at lower profit per item?',
     options: [
-      'To comply with CAC regulations requiring all goods be offered below the manufacturer\'s suggested retail price once per quarter',
+      'To comply with trade regulations requiring all retail goods be offered below the manufacturer\'s suggested retail price at least once per quarter to protect consumer interests and promote market competition',
       'To sell large volumes quickly, move slow-moving stock, attract new customers, or generate cash flow needed to buy new inventory',
       'To signal to customers that product quality has declined and a reformulated replacement will soon be launched',
       'Because banks require evidence of reduced margins before approving a working capital loan for restocking',
@@ -199,7 +199,7 @@ const questions: Question[] = [
     id: 'bs-014',
     text: 'What is "working capital" in a trading business and why does it matter?',
     options: [
-      'The fixed assets a business owns — including land, vehicles, and warehouses — recorded on the long-term side of the balance sheet',
+      'The fixed assets a business owns — including all land, vehicles, machinery, and warehouse facilities — recorded on the long-term non-current side of the company balance sheet for statutory financial reporting purposes',
       'Current assets minus current liabilities — the funds available to cover day-to-day trading operations like buying stock, paying suppliers, and covering expenses before customers pay',
       'The net profit retained after paying all taxes and dividends, available for reinvestment into the following year\'s trading operations',
       'The overdraft limit a bank assigns to cover overnight stock purchases, repaid from daily sales deposited the next morning',
@@ -214,7 +214,7 @@ const questions: Question[] = [
     id: 'bs-015',
     text: 'What is the difference between "cash sales" and "credit sales" for a Nigerian trader?',
     options: [
-      'Cash sales require a CBN-registered POS terminal; credit sales are reserved only for businesses holding a NIRSAL-backed payment guarantee',
+      'Cash sales require a fully CBN-registered POS terminal capable of instant settlement; credit sales are reserved exclusively for businesses that hold a valid and current NIRSAL-backed payment guarantee issued by an approved Nigerian financial institution',
       'Cash sales: customer pays immediately on purchase. Credit sales: customer takes goods now and pays later. Credit sales create accounts receivable — money owed to you — which carries risk of non-payment',
       'Cash sales attract a 7.5% VAT remittance to FIRS immediately; credit sales remain VAT-exempt until the invoice is fully settled',
       'Cash and credit sales produce identical profit margins; the only legal difference is the wording on the formal invoice',
@@ -232,7 +232,7 @@ const questions: Question[] = [
       'A CBN directive granting licensed wholesalers a mandatory 5% discount on all goods purchased directly from Nigerian manufacturers',
       'The cost advantage of producing or buying in large quantities — unit cost falls as quantity increases, improving margins or enabling lower competitive prices',
       'A FIRS tax incentive allowing large Nigerian exporters to deduct input VAT against their annual corporate income tax liability',
-      'A price-floor mechanism set by the Nigerian Competition Commission to prevent bulk buyers from undercutting small independent retailers',
+      'A formal price-floor mechanism established by the Nigerian Competition and Consumer Protection Commission to prevent large-volume bulk buyers from consistently undercutting small independent retailers and market traders who cannot match their volumes',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -245,7 +245,7 @@ const questions: Question[] = [
     id: 'bs-017',
     text: 'What is "trade finance" and which instruments are commonly used for Nigerian import/export transactions?',
     options: [
-      'Interest-free export grants issued by the CBN\'s Export Stimulation Facility to cover all raw material and logistics procurement costs for registered Nigerian exporters',
+      'Interest-free export grants issued directly by the CBN\'s Export Stimulation Facility to cover the full costs of raw material procurement, logistics, insurance, and port clearance fees for all duly registered and eligible Nigerian exporters who meet the facility\'s published criteria',
       'Financial products that facilitate international trade — including Letters of Credit (LC), documentary collections, trade credit insurance, and invoice discounting — mitigating non-payment risk between international buyers and sellers',
       'Mandatory marine insurance policies required by the Nigerian Ports Authority before any containerised cargo clears Apapa or Tin Can Island',
       'Short-term overdraft facilities banks extend exclusively to traders holding domiciliary accounts used for foreign currency settlements',
@@ -262,7 +262,7 @@ const questions: Question[] = [
     options: [
       'When import tariffs rise, traders should always pass the full increase to consumers regardless of how sensitive buyers are to higher prices',
       'If demand is elastic (price-sensitive), raising prices drives customers away significantly. If inelastic (necessity goods like medicine), prices can rise without large demand drops. Traders must know their product\'s elasticity to set optimal prices',
-      'Traders in informal Nigerian markets should apply a fixed 30% markup on all products, as variable markups are prohibited and enforceable under FCCPC consumer pricing rules',
+      'Traders operating across informal and formal Nigerian markets should apply a standardised fixed 30% markup to every product category, since variable or differential markups are completely prohibited by regulation and fully enforceable under the FCCPC\'s comprehensive consumer pricing rules',
       'The CBN\'s monetary policy rate directly determines the maximum markup traders may apply, so pricing strategy is set by the central bank',
     ],
     correctIndex: 1,
@@ -396,7 +396,12 @@ const questions: Question[] = [
   {
     id: 'bs-028',
     text: 'What\'s an example of a fair trade when buying something?',
-    options: ['Paying a price that both you and the seller agree is fair', 'Taking something without paying anything', 'Paying much more than something is worth', 'Refusing to pay for anything ever'],
+    options: [
+      'Paying a price that both you and the seller agree is fair',
+      'Taking an item from a seller without handing over any money or other form of value in exchange for it',
+      'Paying much more than something is worth',
+      'Refusing to pay for anything ever',
+    ],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -426,7 +431,12 @@ const questions: Question[] = [
   {
     id: 'bs-031',
     text: 'Why is honesty important when selling something to a friend or family member?',
-    options: ['It builds trust so people feel good buying from you in the future', 'Honesty has no connection to selling things', 'You should never be honest about what you\'re selling', 'Trust doesn\'t matter in buying and selling'],
+    options: [
+      'It builds trust so people feel good buying from you in the future',
+      'Honesty has no connection to selling things',
+      'You should always conceal the real condition or value of what you are selling so that buyers cannot use that information to negotiate the price down',
+      'Trust doesn\'t matter in buying and selling',
+    ],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -436,7 +446,12 @@ const questions: Question[] = [
   {
     id: 'bs-032',
     text: 'What\'s the connection between buying and selling in everyday life?',
-    options: ['People exchange money for goods and services regularly', 'Buying and selling never actually happen in daily life', 'They are completely unrelated activities', 'Only adults are ever involved in buying and selling'],
+    options: [
+      'People exchange money for goods and services regularly',
+      'Buying and selling never actually occur in everyday daily life because all goods and services are distributed freely by the government',
+      'They are completely unrelated activities',
+      'Only adults are ever involved in buying and selling',
+    ],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -446,7 +461,12 @@ const questions: Question[] = [
   {
     id: 'bs-033',
     text: 'Why might it feel good to earn a small amount of money from selling something you made or no longer need?',
-    options: ['It can build a sense of accomplishment and teach the value of effort', 'Selling things never feels rewarding', 'Earning money from selling has no connection to effort', 'Only large sales ever feel meaningful'],
+    options: [
+      'It can build a sense of accomplishment and teach the value of effort',
+      'Selling things never feels rewarding',
+      'Earning money from selling the things you create has absolutely no emotional connection to the effort, time, or skill you invested in making them',
+      'Only large sales ever feel meaningful',
+    ],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -471,7 +491,12 @@ const questions: Question[] = [
   {
     id: 'bs-035',
     text: 'Why might building a reputation for honest, reliable transactions matter if you\'re regularly buying and selling online?',
-    options: ['Reputation has no real effect on future buying or selling opportunities', 'A strong reputation can build trust, leading to more opportunities and smoother future transactions', 'Honesty in transactions is irrelevant to online selling success', 'Only large businesses need to think about reputation'],
+    options: [
+      'Reputation has absolutely no measurable or meaningful real-world effect on any future buying or selling opportunities regardless of the platform or market you operate in',
+      'A strong reputation can build trust, leading to more opportunities and smoother future transactions',
+      'Honesty in transactions is irrelevant to online selling success',
+      'Only large businesses need to think about reputation',
+    ],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -481,7 +506,12 @@ const questions: Question[] = [
   {
     id: 'bs-036',
     text: 'What\'s a reasonable step before buying a used item from someone you don\'t know?',
-    options: ['Pay immediately without inspecting the item or verifying details', 'Inspect the item where possible and verify key details before completing the purchase', 'Used item purchases require no additional caution compared to new items', 'Buying from strangers is always completely risk-free'],
+    options: [
+      'Pay the full asking price immediately upfront without taking any time to inspect the condition of the item or verify any of the key details the seller has stated',
+      'Inspect the item where possible and verify key details before completing the purchase',
+      'Used item purchases require no additional caution compared to new items',
+      'Buying from strangers is always completely risk-free',
+    ],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -491,7 +521,12 @@ const questions: Question[] = [
   {
     id: 'bs-037',
     text: 'Why might negotiating a price respectfully be a valuable skill in buying and selling situations?',
-    options: ['Negotiation has no real place in typical buying or selling situations', 'Respectful negotiation can lead to fairer outcomes for both buyer and seller, when done appropriately', 'Prices should never be discussed or negotiated under any circumstances', 'Only professional buyers or sellers should ever negotiate'],
+    options: [
+      'Negotiation has absolutely no real place in any typical everyday buying or selling situation in Nigeria, and attempting to negotiate is always considered inappropriate and rude',
+      'Respectful negotiation can lead to fairer outcomes for both buyer and seller, when done appropriately',
+      'Prices should never be discussed or negotiated under any circumstances',
+      'Only professional buyers or sellers should ever negotiate',
+    ],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -516,7 +551,12 @@ const questions: Question[] = [
   {
     id: 'bs-039',
     text: 'Why might understanding basic supply and demand help you decide when to sell an item for a better price?',
-    options: ['Understanding when demand is higher can help inform better timing and pricing decisions', 'Supply and demand have no real connection to pricing decisions', 'Prices should always remain completely fixed regardless of demand', 'Timing has no effect on how much something can sell for'],
+    options: [
+      'Understanding when demand is higher can help inform better timing and pricing decisions',
+      'Supply and demand principles have absolutely no practical or measurable connection to any pricing decisions made by individual sellers or traders operating in any Nigerian market',
+      'Prices should always remain completely fixed regardless of demand',
+      'Timing has no effect on how much something can sell for',
+    ],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -526,7 +566,12 @@ const questions: Question[] = [
   {
     id: 'bs-040',
     text: 'What\'s a smart habit when receiving payment for something you\'ve sold online?',
-    options: ['Confirm payment has genuinely been received before releasing the item, especially with unfamiliar buyers', 'Release the item immediately based only on a buyer\'s unverified claim of payment', 'Payment verification has no real importance in online transactions', 'Trust every buyer completely with no verification needed'],
+    options: [
+      'Confirm payment has genuinely been received before releasing the item, especially with unfamiliar buyers',
+      'Release the item to the buyer right away based entirely on their unverified verbal or written claim that payment has already been sent to your account',
+      'Payment verification has no real importance in online transactions',
+      'Trust every buyer completely with no verification needed',
+    ],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -536,7 +581,12 @@ const questions: Question[] = [
   {
     id: 'bs-041',
     text: 'Why might tracking what you\'ve bought and sold over time (even informally) be useful, especially if you do this regularly?',
-    options: ['Tracking has no practical benefit for casual buying and selling', 'It helps you understand your actual profitability and patterns over time', 'Only professional resellers benefit from any tracking', 'Tracking transactions is unnecessary regardless of frequency'],
+    options: [
+      'Tracking what you have bought and sold has absolutely no practical benefit or useful purpose whatsoever for casual or occasional resellers',
+      'It helps you understand your actual profitability and patterns over time',
+      'Only professional resellers benefit from any tracking',
+      'Tracking transactions is unnecessary regardless of frequency',
+    ],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -561,7 +611,12 @@ const questions: Question[] = [
   {
     id: 'bs-043',
     text: 'Why might developing comfort with basic buying and selling skills as a teen be valuable preparation for later financial life?',
-    options: ['These skills have no real connection to later financial or entrepreneurial activity', 'They build practical experience with pricing, negotiation, and value assessment that can transfer to future opportunities', 'Only people who plan to become full-time sellers benefit from these skills', 'Buying and selling skills are irrelevant outside of a teen\'s immediate context'],
+    options: [
+      'These practical skills have absolutely no real connection to any later financial, professional, or entrepreneurial activity that a young person might pursue in their adult life',
+      'They build practical experience with pricing, negotiation, and value assessment that can transfer to future opportunities',
+      'Only people who plan to become full-time sellers benefit from these skills',
+      'Buying and selling skills are irrelevant outside of a teen\'s immediate context',
+    ],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -586,7 +641,12 @@ const questions: Question[] = [
   {
     id: 'bs-045',
     text: 'What\'s a sound reason to use secure, verifiable payment methods for larger buying/selling transactions?',
-    options: ['Payment method has no bearing on transaction safety', 'Secure methods reduce the risk of fraud or non-payment compared to less verifiable arrangements', 'Cash and untraceable methods are always the safest option', 'Larger transactions require no additional payment security considerations'],
+    options: [
+      'The specific method used to make or receive payment has absolutely no bearing on the overall safety, security, or legal protection of any buying or selling transaction',
+      'Secure methods reduce the risk of fraud or non-payment compared to less verifiable arrangements',
+      'Cash and untraceable methods are always the safest option',
+      'Larger transactions require no additional payment security considerations',
+    ],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -597,7 +657,7 @@ const questions: Question[] = [
     id: 'bs-046',
     text: 'Why might understanding negotiation dynamics matter significantly in larger transactions, like buying a used vehicle?',
     options: [
-      'Vehicle prices are set by the National Automotive Design and Development Council and cannot legally be altered by private sellers',
+      'Vehicle transaction prices are officially set and strictly regulated by the National Automotive Design and Development Council of Nigeria and therefore cannot be legally altered, reduced, or negotiated by any private individual seller under any circumstances',
       'Larger transactions often involve more room for negotiation, and skilled negotiation can meaningfully affect the final price and terms',
       'Accepting the first stated price in large transactions protects both parties from legal complications around price fraud',
       'Banks require buyers to pay exactly the advertised price before releasing a car loan to finance the purchase',
@@ -673,7 +733,7 @@ const questions: Question[] = [
     text: 'What\'s a reasonable perspective on the trade-off between selling quickly at a lower price versus waiting for a potentially better offer?',
     options: [
       'This decision involves weighing your need for speed/liquidity against the potential benefit of waiting, rather than a single universally correct answer',
-      'Selling at any price immediately is always optimal because holding an item longer guarantees further value depreciation in every case',
+      'Selling your item at any available price immediately is always the most financially optimal strategy because continuing to hold an unsold item for any longer period will inevitably guarantee further and irreversible value depreciation in every possible scenario',
       'Holding out for the maximum price is always correct regardless of liquidity needs, since patience is universally rewarded in every market',
       'The Nigerian market always rewards the first offer that arrives, so accepting the initial bid is the financially dominant strategy',
     ],
@@ -686,7 +746,12 @@ const questions: Question[] = [
   {
     id: 'bs-052',
     text: 'Why might maintaining clear records of significant buying and selling transactions matter for an adult, beyond just personal tracking?',
-    options: ['Clear records have no practical value beyond casual personal tracking', 'Records can support tax reporting, dispute resolution, and informed financial decision-making over time', 'Only formal businesses ever need to maintain any transaction records', 'Record-keeping is unnecessary regardless of transaction size'],
+    options: [
+      'Clear and detailed records of all your buying and selling transactions have absolutely no practical value or meaningful use beyond serving as a basic form of informal casual personal tracking',
+      'Records can support tax reporting, dispute resolution, and informed financial decision-making over time',
+      'Only formal businesses ever need to maintain any transaction records',
+      'Record-keeping is unnecessary regardless of transaction size',
+    ],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -825,7 +890,7 @@ const questions: Question[] = [
       'A CBN monetary policy tool that controls how much money circulates and how that affects total consumer spending',
       'The relationship between how much of a product is available (supply) and how much buyers want (demand), which influences price',
       'A FCCPC regulation that sets the maximum permitted price gap between wholesale and retail markets for essential goods',
-      'An economic formula used exclusively by the CBN to set interest rates and manage inflation within the formal banking system',
+      'An economic formula developed and used exclusively by the Central Bank of Nigeria to officially set interest rates and actively manage overall inflation levels within the formal banking and broader financial services system',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -884,7 +949,7 @@ const questions: Question[] = [
     options: [
       'The percentage gap between the factory gate price and the final retail price across the full supply chain',
       'A measure of how sensitive consumer demand is to a change in price — elastic demand changes a lot; inelastic demand changes little',
-      'The total volume of a good that producers are willing to supply across every possible price level in the market',
+      'The total volume of goods that producers and manufacturers are willing and able to supply to all buyers across every possible price point that could theoretically exist within a given national or regional market',
       'The rate at which a seller\'s production costs increase relative to the total volume of goods manufactured and sold',
     ],
     correctIndex: 1,
@@ -977,7 +1042,7 @@ const questions: Question[] = [
     id: 'bs-074',
     text: "What is a \"letter of credit\" (LC) in trade?",
     options: [
-      'A signed agreement between two traders confirming the agreed quantity and quality of goods to be delivered',
+      'A signed commercial contract between two traders in different countries formally confirming the agreed quantity, quality standards, and delivery schedule for all goods to be shipped and received',
       'A bank guarantee that a seller will receive payment from a buyer — used in international trade to reduce payment risk',
       'A CBN-issued approval that allows a Nigerian importer to purchase foreign currency at the official exchange rate',
       'A FIRS document confirming that a business\'s export income qualifies for an exemption from company income tax',
@@ -992,7 +1057,7 @@ const questions: Question[] = [
     id: 'bs-075',
     text: "What is \"working capital management\" in a trading business?",
     options: [
-      'Securing long-term loans to fund factory expansion projects and capital equipment purchases over a five-year horizon',
+      'Securing long-term development finance loans to fund large-scale factory expansion projects and major capital equipment purchases planned and budgeted across an extended five-year strategic investment horizon',
       'Optimising current assets (inventory, receivables, cash) and current liabilities to ensure the business can meet short-term obligations',
       'Preparing the annual financial statements and statutory reports required by the CAC for a company\'s compliance filing',
       'Reinvesting all retained profits into fixed assets to maximise the book value of the business\'s property and equipment',
@@ -1022,7 +1087,7 @@ const questions: Question[] = [
     id: 'bs-077',
     text: "What is \"consignment selling\"?",
     options: [
-      'Delivering goods to a buyer before payment is received, with the buyer agreeing to pay within a fixed number of days',
+      'Delivering a consignment of goods to a commercial buyer before any payment has been received, with the buyer formally agreeing to settle the full invoice amount within a contractually fixed and binding number of days',
       'Giving goods to a retailer to sell, with the retailer paying the supplier only when goods are sold — the supplier retains ownership until sold',
       'A drop-shipping arrangement where the manufacturer ships goods directly to the end customer, bypassing the retailer\'s warehouse',
       'A competitive tender process where goods are offered to multiple buyers and sold to whoever submits the highest bid',
@@ -1037,7 +1102,7 @@ const questions: Question[] = [
     id: 'bs-078',
     text: "What is \"cash flow management\" for a selling business?",
     options: [
-      'Calculating the total net profit a business earns after paying all expenses and taxes across a full financial year',
+      'Calculating the total net profit figure that a trading business earns each period after deducting all operating expenses, mandatory taxes, and other statutory deductions recorded across a complete financial year',
       'Tracking and optimising the timing of cash inflows (from sales) and outflows (to suppliers) to maintain sufficient liquidity',
       'Preparing the annual staff salary budget, rent commitments, and utility bill forecasts based on projected revenue',
       'Filing quarterly VAT returns and annual company income tax reports with FIRS as required for all registered businesses',
@@ -1067,7 +1132,7 @@ const questions: Question[] = [
     id: 'bs-080',
     text: "What is \"channel pricing\" in a distribution strategy?",
     options: [
-      'Raising prices uniformly across all channels simultaneously to offset naira depreciation and protect profit margins',
+      'Raising all product prices uniformly and simultaneously across every available distribution channel in order to offset the ongoing negative impact of naira depreciation and fully protect the business\'s overall profit margins',
       'Setting different prices for different distribution channels (retail, wholesale, online) reflecting channel costs and customer segments',
       'Maintaining identical wholesale prices for all buyers regardless of order volume, in line with FCCPC competition rules',
       'Applying different prices for identical goods based only on the buyer\'s location, which FCCPC classifies as discriminatory',
@@ -1085,7 +1150,7 @@ const questions: Question[] = [
       'A CBN interest rate cap that limits what banks can charge on short-term trade loans to small and medium enterprises',
       'Financial solutions that optimise cash flow by allowing buyers to extend payment terms while suppliers receive early payment from a financier',
       'A NEXIM Bank facility that provides Nigerian exporters with pre-shipment financing at concessionary interest rates',
-      'A NIRSAL guarantee that covers the full cost of a trade if the buyer defaults or the supplier fails to deliver on time',
+      'A NIRSAL-issued guarantee scheme that automatically covers the full invoice cost of any completed trade transaction if the buyer subsequently defaults on payment or the supplier entirely fails to deliver the goods on the agreed schedule',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -1097,7 +1162,7 @@ const questions: Question[] = [
     id: 'bs-082',
     text: "What is the \"bullwhip effect\" in supply chains?",
     options: [
-      'A logistics disruption caused by port congestion in Apapa that creates empty shelves at the retail end of the supply chain',
+      'A severe logistics disruption caused by prolonged and chronic port congestion at the Apapa terminal that creates widespread empty shelves and product shortages at the consumer retail end of the entire Nigerian supply chain',
       'Small fluctuations in end-consumer demand get amplified as orders move up the supply chain — causing excessive inventory swings',
       'A production-scheduling technique that synchronises a manufacturer\'s output volume with confirmed retailer purchase orders',
       'A strategy where suppliers deliberately restrict shipments to create artificial scarcity and push up market prices',
@@ -1114,7 +1179,7 @@ const questions: Question[] = [
     options: [
       'The official CBN exchange rate that Nigerian companies must apply when converting foreign-currency transactions to naira',
       'The price at which goods, services, or intellectual property are sold between related entities in different countries, affecting tax liabilities',
-      'The standard naira markup applied by Nigerian importers when converting foreign-currency invoices for domestic retail pricing',
+      'The standard naira markup percentage that Nigerian importers are required to apply when officially converting all foreign-currency supplier invoices into naira for domestic retail pricing and consumer-facing sales documentation',
       'The profit-sharing ratio agreed between a Nigerian parent company and its overseas subsidiaries at the financial year-end',
     ],
     correctIndex: 1,
@@ -1143,7 +1208,7 @@ const questions: Question[] = [
     text: "Product A has a 4.6-star rating from 2 reviews. Product B has 4.5 stars from 1,000 reviews. Which rating is more reliable?",
     options: [
       "Product A — a higher score is always better",
-      "They are equally reliable — both show the same general rating",
+      "They are equally reliable and trustworthy because both products display the same general star rating score, and the total number of reviews submitted has no meaningful bearing on overall reliability",
       "Product B — a much larger number of buyers makes the rating far more trustworthy",
       "Neither — only buy from brands you already know",
     ],
@@ -1197,7 +1262,7 @@ const questions: Question[] = [
     id: 'bs-089',
     text: "What is a common sign that an online product review might be fake?",
     options: [
-      "The reviewer has a long purchase history and has previously bought and reviewed similar products on the platform",
+      "The reviewer has an extensive verified purchase history and has previously bought, tested, and reviewed many similar products over a long period of consistent and active use on the same platform",
       "The review was written over a month after purchase and includes clear photographs of the actual item received",
       "It focuses on a single specific design flaw rather than giving a generic positive summary of the whole product",
       "It uses very generic praise ('Amazing! Perfect! Must buy!') with no specific details, and was posted the same day as many other 5-star reviews",
@@ -1212,7 +1277,7 @@ const questions: Question[] = [
     id: 'bs-090',
     text: "One store is selling a ₦1,000 box of cereal at 20% off. Another store sells 20% more cereal for ₦1,000. Which gives you more cereal per naira?",
     options: [
-      "Both deals are mathematically equivalent — a 20% price reduction and a 20% quantity increase are identical in value",
+      "Both deals are mathematically identical and perfectly equivalent in real value — a 20% reduction in selling price and a 20% increase in the quantity of product received produce exactly the same value per naira spent by the consumer",
       "The 20% off store — you pay ₦800 for the same box, equivalent to getting 25% more cereal per naira compared to buying at full price",
       "The extra-cereal store — more physical product per purchase always produces better value than any price-based discount",
       "Neither can be meaningfully compared without knowing the calorie density and nutritional content per 100g of cereal",

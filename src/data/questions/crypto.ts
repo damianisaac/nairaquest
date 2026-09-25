@@ -5,7 +5,7 @@ const questions: Question[] = [
     id: 'cr-001',
     text: 'What is Bitcoin?',
     options: [
-      'A digital currency issued and controlled by the Nigerian government',
+      'A government-issued digital currency controlled and regulated exclusively by the Nigerian Central Bank',
       'A decentralized digital currency that operates without a central bank or authority',
       'A special type of bank account that earns high interest',
       'A mobile payment app popular in Nigeria',
@@ -24,7 +24,7 @@ const questions: Question[] = [
       'A centralised database managed by crypto companies that records trades and can be edited by platform administrators',
       'A distributed digital ledger that records all transactions across a network of computers — transparent and tamper-resistant',
       'A specialised server farm maintained by Bitcoin miners that holds wallet balances and private keys securely',
-      'A secure inter-bank settlement protocol developed in Nigeria to speed up domestic payment processing and reduce fraud',
+      'A secure inter-bank settlement protocol developed in Nigeria to speed up domestic payment processing, reduce fraud, and lower transaction costs',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -112,7 +112,7 @@ const questions: Question[] = [
     id: 'cr-008',
     text: 'Someone on WhatsApp promises to double your Bitcoin in 48 hours. What should you do?',
     options: [
-      'Send a small test amount first to verify it\'s real',
+      'Send a small test amount first and wait 48 hours to verify it is real before committing any more',
       'Ask your friends to join too so everyone benefits',
       'Ignore and block them — this is a classic crypto doubling scam',
       'Report them to FIRS and send the crypto',
@@ -162,7 +162,7 @@ const questions: Question[] = [
     options: [
       'You will owe capital gains tax at a flat 20% rate on all profits, which can significantly reduce your total returns',
       'Crypto is extremely volatile — it can lose 80–90% of its value quickly, and there is no deposit insurance or government protection',
-      'Nigerian merchants are now legally prohibited from accepting crypto payments following recent CBN payment-system guidelines',
+      'Nigerian merchants are now legally prohibited from accepting crypto payments following the CBN\'s recent digital payment-system guidelines issued in 2023',
       'Your bank account will be flagged by the CBN and could be frozen if large crypto proceeds are transferred through it',
     ],
     correctIndex: 1,
@@ -241,7 +241,7 @@ const questions: Question[] = [
       'The Nigerian government',
       'The Central Bank of Nigeria',
       'No single person or government — it is decentralised',
-      'The person who invented it controls all Bitcoin',
+      'The person who invented it still controls all Bitcoin transactions and can reverse or block any transfer',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -317,7 +317,7 @@ const questions: Question[] = [
       'Nothing — they are the same',
       'Cryptocurrency is not controlled by any government or bank — it is decentralised',
       'Naira is digital too',
-      'Cryptocurrency is guaranteed by the Nigerian government',
+      'Cryptocurrency is fully guaranteed and protected by the Nigerian government through the CBN\'s dedicated digital asset reserve fund',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -384,7 +384,7 @@ const questions: Question[] = [
   {
     id: 'cr-027',
     text: 'Why is it important to be careful with digital money the same way you\'re careful with cash?',
-    options: ['Because digital money still has real value and can be lost or misused', 'Digital money has no real value at all', 'Digital money can never be spent by mistake', 'Only physical cash needs to be handled carefully'],
+    options: ['Because digital money still has real value and can be lost or misused', 'Digital money has no real value at all', 'Digital money can never be spent by mistake', 'Only physical cash requires careful handling since all digital money stored in apps is automatically insured by the platform'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -394,7 +394,7 @@ const questions: Question[] = [
   {
     id: 'cr-028',
     text: 'What might happen if you keep buying small things in an app without asking?',
-    options: ['The costs could add up to a large real amount without realizing it', 'Nothing happens, app purchases are always free', 'It automatically stops after a small amount', 'Digital purchases don\'t add up like real money'],
+    options: ['The costs could add up to a large real amount without realizing it', 'Nothing happens because all app stores automatically refund any accidental in-app purchase to the linked account', 'It automatically stops after a small amount', 'Digital purchases don\'t add up like real money'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -404,7 +404,7 @@ const questions: Question[] = [
   {
     id: 'cr-029',
     text: 'Why do some apps ask for a card number linked to a parent\'s account?',
-    options: ['Because purchases within the app often cost real money', 'Because the app wants your favorite color', 'It\'s just for fun, with no real purpose', 'Apps never actually need payment information'],
+    options: ['Because purchases within the app often cost real money', 'Because the app wants your favorite color', 'It\'s just for fun, with no real purpose', 'Apps never actually need real payment information because all in-app content is provided free to registered users'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -414,7 +414,7 @@ const questions: Question[] = [
   {
     id: 'cr-030',
     text: 'What\'s a responsible habit with any online purchases, even small ones?',
-    options: ['Always check with a trusted adult first', 'Buy anything you want without asking', 'Ignore prices completely', 'Share payment details with friends'],
+    options: ['Always check with a trusted adult first', 'Buy anything you want without asking since all digital purchases are automatically reversed if disputed', 'Ignore prices completely', 'Share payment details with friends'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -434,7 +434,7 @@ const questions: Question[] = [
   {
     id: 'cr-032',
     text: 'What should you do if you\'re unsure whether something in an app costs real money?',
-    options: ['Ask a trusted adult before doing anything', 'Guess and hope it\'s free', 'Proceed without checking', 'Ignore the question entirely'],
+    options: ['Ask a trusted adult before doing anything', 'Guess and hope it\'s free', 'Proceed without checking', 'Ignore the question entirely because all in-app purchases are reversed and refunded to you automatically'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -474,7 +474,7 @@ const questions: Question[] = [
   {
     id: 'cr-036',
     text: 'Why might mobile money differ from cryptocurrency, even though both are \'digital money\'?',
-    options: ['Mobile money is typically tied to a regulated financial system and a real currency, while crypto often operates independently with more volatility', 'Both mobile money and cryptocurrency are unregulated digital tokens with identical risk profiles and no government backing whatsoever', 'Mobile money wallets run on the same blockchain infrastructure as Bitcoin and hold the same regulatory classification globally', 'Cryptocurrency is pegged to the naira through CBN agreements, giving it better price stability than any mobile money balance'],
+    options: ['Mobile money is typically tied to a regulated financial system and a real currency, while crypto often operates independently with more volatility', 'Both mobile money and cryptocurrency are completely unregulated digital tokens with identical risk profiles and operate without any government, regulatory, or central bank backing whatsoever', 'Mobile money wallets run on the same blockchain infrastructure as Bitcoin and hold the same regulatory classification globally', 'Cryptocurrency is pegged to the naira through CBN agreements, giving it better price stability than any mobile money balance'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -484,7 +484,7 @@ const questions: Question[] = [
   {
     id: 'cr-037',
     text: 'What\'s a reasonable first step before considering any crypto investment?',
-    options: ['Invest immediately based on social media hype', 'Research thoroughly and understand the risks involved before committing any money', 'Skip research since crypto is always safe', 'Borrow money specifically to invest in crypto without research'],
+    options: ['Invest immediately based on social media hype', 'Research thoroughly and understand the risks involved before committing any money', 'Skip research since crypto is always safe', 'Borrow as much money as possible to invest in a trending cryptocurrency without doing any prior research at all'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -494,7 +494,7 @@ const questions: Question[] = [
   {
     id: 'cr-038',
     text: 'Why should you be cautious about sharing crypto wallet details or private keys with anyone?',
-    options: ['Sharing this information can lead to loss of funds through unauthorized access', 'Wallet details are meant to be shared publicly with anyone', 'Private keys have no real security implication whatsoever', 'Only public information is stored in a standard crypto wallet'],
+    options: ['Sharing this information can lead to loss of funds through unauthorized access', 'Wallet details are meant to be shared publicly with anyone', 'Private keys have no real security implication whatsoever', 'Only harmless public information is stored in a standard crypto wallet, so sharing any wallet details or keys poses no real security risk'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -544,7 +544,7 @@ const questions: Question[] = [
   {
     id: 'cr-043',
     text: 'You see a crypto investment group online promising guaranteed 300 percent returns in a week. What is this most likely?',
-    options: ['A legitimate high-growth opportunity', 'A pump-and-dump or Ponzi-style scheme', 'A government-backed investment', 'A savings account'],
+    options: ['A legitimate high-growth investment opportunity with verified and guaranteed returns', 'A pump-and-dump or Ponzi-style scheme', 'A government-backed investment', 'A savings account'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -554,7 +554,7 @@ const questions: Question[] = [
   {
     id: 'cr-044',
     text: 'Why is volatility a central consideration when evaluating cryptocurrency as part of a broader financial strategy?',
-    options: ['Volatility is irrelevant because a diversified crypto portfolio automatically hedges against all price fluctuations', 'Significant price swings can affect both potential gains and losses substantially, which should inform allocation decisions', 'Major cryptocurrencies like Bitcoin are now pegged to stable commodities, keeping price swings within a 5% daily band', 'Price volatility only affects traders who sell frequently; long-term holders are completely insulated from its impact'],
+    options: ['Volatility is irrelevant because a diversified crypto portfolio automatically hedges against all price fluctuations', 'Significant price swings can affect both potential gains and losses substantially, which should inform allocation decisions', 'Major cryptocurrencies like Bitcoin are now formally pegged to a basket of stable commodities, ensuring all daily price swings remain within a 5% band', 'Price volatility only affects traders who sell frequently; long-term holders are completely insulated from its impact'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -664,7 +664,7 @@ const questions: Question[] = [
   {
     id: 'cr-055',
     text: "What does it mean if a cryptocurrency price is \"volatile\"?",
-    options: ["It is very stable", "It changes a lot in value very quickly", "It only goes up in value", "It is backed by the government"],
+    options: ["It is very stable", "It changes a lot in value very quickly", "It only goes up in value", "It is officially guaranteed and backed by the central government's digital currency reserves"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -914,7 +914,7 @@ const questions: Question[] = [
   {
     id: 'cr-080',
     text: "What is \"yield farming\" in DeFi?",
-    options: ["Growing food using blockchain technology", "Earning rewards by providing liquidity to DeFi protocols", "A method of mining cryptocurrency", "Staking coins to earn free tokens without any risk"],
+    options: ["Growing food using blockchain technology", "Earning rewards by providing liquidity to DeFi protocols", "A method of mining cryptocurrency", "Staking coins on a centralised exchange to earn guaranteed free tokens on a daily basis and completely without any risk"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['adults'],
@@ -934,7 +934,7 @@ const questions: Question[] = [
   {
     id: 'cr-082',
     text: "What is \"proof of stake\" (PoS) vs \"proof of work\" (PoW)?",
-    options: ["PoS relies on specialised ASIC hardware identical to PoW miners, making both mechanisms equally energy-intensive in practice", "PoS validators are chosen based on their staked crypto (energy-efficient); PoW uses computational power to mine (energy-intensive)", "Both mechanisms require validators to spend computational power, the only difference being the reward calculation formula", "PoW was introduced by Ethereum in 2022 as an upgrade to replace PoS, which had been the original blockchain consensus design"],
+    options: ["PoS relies on specialised ASIC hardware identical to PoW miners, making both mechanisms equally energy-intensive in practice", "PoS validators are chosen based on their staked crypto (energy-efficient); PoW uses computational power to mine (energy-intensive)", "Both mechanisms require validators to spend computational power, the only difference being the reward calculation formula", "PoW was introduced by Ethereum in 2022 as a major protocol upgrade intended to replace PoS, which had originally been the primary consensus mechanism since the chain first launched"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['adults'],

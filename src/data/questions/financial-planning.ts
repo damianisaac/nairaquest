@@ -6,7 +6,7 @@ const questions: Question[] = [
     id: 'fp-001',
     text: 'What is a financial goal?',
     options: [
-      'A target for how much money you want to spend',
+      'A target amount set by your parents or teacher to guide how you spend your pocket money each week',
       'Something specific you want to save or earn money for',
       'A rule the bank gives you',
       'The amount of money you have right now',
@@ -20,7 +20,7 @@ const questions: Question[] = [
   {
     id: 'fp-002',
     text: 'Amaka wants to save up for a bicycle that costs ₦5,000. This is an example of a:',
-    options: ['Loan', 'Financial goal', 'Tax payment', 'Budget'],
+    options: ['A long-term loan', 'Financial goal', 'Tax payment', 'Budget'],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -44,7 +44,7 @@ const questions: Question[] = [
       'Borrow money from a friend',
       'Spend money on other things first',
       'Decide clearly what you want and how much it costs',
-      'Wait for someone to give you the money',
+      'Wait patiently for a family member or generous friend to give you the money as a gift',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -96,7 +96,7 @@ const questions: Question[] = [
     id: 'fp-008',
     text: 'A "short-term goal" is something you want to achieve:',
     options: [
-      'In more than 10 years',
+      'At some point far in the future, perhaps five or ten years from now',
       'Never',
       'Within a few weeks or months',
       'Only at New Year',
@@ -114,7 +114,7 @@ const questions: Question[] = [
     options: [
       'Save More And Reduce Tax',
       'Specific, Measurable, Achievable, Relevant, Time-bound',
-      'Save Monthly And Reinvest Thoughtfully',
+      'Save Monthly, Allocate Resources, Increase Returns, Negotiate Terms',
       'Spend Minimally And Reach Targets',
     ],
     correctIndex: 1,
@@ -130,7 +130,7 @@ const questions: Question[] = [
       'A dedicated pool of money set aside specifically for annual holidays and luxury travel expenses',
       'Cash savings set aside for unexpected expenses like medical bills or job loss — usually 3–6 months of living expenses',
       'A government-issued grant automatically released to Nigerians who experience a sudden financial crisis',
-      'A bank credit line that unlocks automatically whenever your account balance drops below a set minimum threshold',
+      'A bank overdraft facility that unlocks automatically whenever your savings or current account balance falls below a set minimum threshold',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -168,7 +168,7 @@ const questions: Question[] = [
     id: 'fp-013',
     text: 'What is the difference between saving and investing for a financial goal?',
     options: [
-      'They are fundamentally the same activity — both involve setting money aside with the aim of preserving and growing your financial resources',
+      'They are essentially the same activity — both simply involve setting money aside to preserve and gradually grow your overall financial resources and wealth over many years',
       'Saving keeps money safe and liquid with low returns; investing puts money to work for higher potential returns but with more risk and less liquidity',
       'Investing is only suitable for wealthy individuals who can afford to lock up large sums for many years without ever needing to access them',
       'Keeping money in a high-yield savings account will always produce better total returns than investing in stocks, bonds, or mutual funds',
@@ -321,7 +321,7 @@ const questions: Question[] = [
   {
     id: 'fp-024',
     text: 'Why is it helpful to know exactly what you\'re saving for?',
-    options: ['It helps you stay motivated and know how much to save', 'Knowing your goal has no real benefit', 'Saving works the same whether or not you have a goal', 'Goals only matter for adults'],
+    options: ['It helps you stay motivated and know how much to save', 'Knowing your goal has no real benefit', 'Saving works exactly the same whether or not you have a clear financial goal', 'Goals only matter for adults'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -341,7 +341,7 @@ const questions: Question[] = [
   {
     id: 'fp-026',
     text: 'Why might breaking a big goal into smaller steps make it easier?',
-    options: ['Smaller steps feel more manageable and help you track progress', 'Breaking goals into steps makes them harder', 'Big goals should never be broken down', 'Smaller steps have no real benefit'],
+    options: ['Smaller steps feel more manageable and help you track progress', 'Breaking a large savings goal into smaller steps only creates more complexity and makes the overall goal harder to follow', 'Big goals should never be broken down', 'Smaller steps have no real benefit'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -351,7 +351,7 @@ const questions: Question[] = [
   {
     id: 'fp-027',
     text: 'If your goal is far away, like 3 months from now, what\'s a helpful habit?',
-    options: ['Saving a little bit regularly instead of waiting until the end', 'Waiting until the last moment to start saving', 'Ignoring the goal until it\'s too late', 'Spending randomly with no plan'],
+    options: ['Saving a little bit regularly instead of waiting until the end', 'Waiting until the very last week or final few days before your deadline to start putting money aside', 'Ignoring the goal until it\'s too late', 'Spending randomly with no plan'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -361,7 +361,7 @@ const questions: Question[] = [
   {
     id: 'fp-028',
     text: 'Why might writing down your money goal help you remember it?',
-    options: ['Writing it down keeps it clear and easy to track', 'Writing goals down has no benefit', 'Goals are easier to forget when written down', 'Only adults should write down goals'],
+    options: ['Writing it down keeps it clear and easy to track', 'Writing goals down has no benefit', 'Goals that are written down are far easier to forget than those you simply hold in your memory', 'Only adults should write down goals'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -371,7 +371,7 @@ const questions: Question[] = [
   {
     id: 'fp-029',
     text: 'What\'s an example of a short-term money goal for a child?',
-    options: ['Saving for a toy you want soon', 'Planning for retirement', 'Buying a house', 'Starting a large business'],
+    options: ['Saving for a toy you want soon', 'Planning for retirement', 'Buying a house', 'Saving enough money to cover your full university tuition and all living costs'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -381,7 +381,7 @@ const questions: Question[] = [
   {
     id: 'fp-030',
     text: 'Why is checking your progress toward a goal helpful?',
-    options: ['It shows you how close you are and keeps you motivated', 'Checking progress has no value', 'Progress checks make saving harder', 'Only adults need to check their progress'],
+    options: ['It shows you how close you are and keeps you motivated', 'Checking progress has no value', 'Progress checks make saving harder', 'Only certified financial advisors and fully grown adults ever need to monitor or review their savings progress toward a goal'],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -411,7 +411,7 @@ const questions: Question[] = [
   {
     id: 'fp-033',
     text: 'Why might separating short-term and long-term financial goals help with planning?',
-    options: ['Different timeframes often call for different saving strategies and levels of urgency', 'All goals should always be treated identically regardless of timeframe', 'Separating goals has no practical planning benefit', 'Only long-term goals are worth planning for'],
+    options: ['Different timeframes often call for different saving strategies and levels of urgency', 'All saving goals should be treated identically and with the same level of urgency regardless of whether they are short-term or long-term', 'Separating goals has no practical planning benefit', 'Only long-term goals are worth planning for'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -421,7 +421,7 @@ const questions: Question[] = [
   {
     id: 'fp-034',
     text: 'What\'s a reasonable first step when setting a new financial goal?',
-    options: ['Defining a clear, specific target amount and timeframe', 'Starting to save with no specific target in mind', 'Skipping the goal-setting step entirely', 'Assuming the goal will work itself out'],
+    options: ['Defining a clear, specific target amount and timeframe', 'Starting to put money aside immediately without first deciding on a specific target amount or any deadline for the goal', 'Skipping the goal-setting step entirely', 'Assuming the goal will work itself out'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -451,7 +451,7 @@ const questions: Question[] = [
   {
     id: 'fp-037',
     text: 'Why might having a specific savings goal make it easier to resist impulse spending?',
-    options: ['A clear goal gives a concrete reason to pause before an unplanned purchase', 'Specific goals have no connection to resisting impulse spending', 'Impulse spending is unrelated to goal-setting', 'Goals make spending decisions harder, not easier'],
+    options: ['A clear goal gives a concrete reason to pause before an unplanned purchase', 'Having a specific financial goal has absolutely no connection to whether you are able to resist unplanned or impulse purchases', 'Impulse spending is unrelated to goal-setting', 'Goals make spending decisions harder, not easier'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -461,7 +461,7 @@ const questions: Question[] = [
   {
     id: 'fp-038',
     text: 'What\'s a practical way to track progress toward a mid-term financial goal (several months away)?',
-    options: ['Regularly checking saved amount against the target and timeline', 'Never checking progress until the deadline arrives', 'Tracking progress has no real usefulness', 'Progress tracking only matters for very large goals'],
+    options: ['Regularly checking saved amount against the target and timeline', 'Never checking any progress at all until the very final deadline arrives, then reviewing everything at once to see how you did', 'Tracking progress has no real usefulness', 'Progress tracking only matters for very large goals'],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -501,7 +501,7 @@ const questions: Question[] = [
   {
     id: 'fp-042',
     text: 'You want to save ₦600,000 for a business launch in 12 months. What\'s the most useful first step?',
-    options: ['Wait until you have extra money left over each month', 'Calculate a fixed monthly savings target and automate it', 'Borrow the full amount instead', 'Spend normally and hope to save what\'s left'],
+    options: ['Simply wait and hope that extra money happens to be available at the end of each month before deciding to save anything', 'Calculate a fixed monthly savings target and automate it', 'Borrow the full amount instead', 'Spend normally and hope to save what\'s left'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -521,7 +521,7 @@ const questions: Question[] = [
   {
     id: 'fp-044',
     text: 'What\'s a sound reason to periodically revisit a financial plan as life circumstances change (marriage, new job, new dependents)?',
-    options: ['Major life changes can shift priorities, income, and expenses, making a static plan potentially outdated', 'Financial plans should never be revisited once created', 'Life circumstances have no bearing on financial planning', 'A financial plan should remain identical regardless of major life changes'],
+    options: ['Major life changes can shift priorities, income, and expenses, making a static plan potentially outdated', 'Financial plans should never be revisited once created', 'Life circumstances have no bearing on financial planning', 'A financial plan created at one stage of your life should always remain permanently fixed and identical regardless of what changes occur'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -531,7 +531,7 @@ const questions: Question[] = [
   {
     id: 'fp-045',
     text: 'Why might building an emergency fund typically be considered a foundational step before pursuing more ambitious financial goals?',
-    options: ['It provides a buffer that can prevent other goals from being derailed by unexpected expenses', 'Emergency funds have no real relationship to other financial goals', 'Ambitious goals should always be pursued first, regardless of any buffer', 'Emergency funds are unnecessary if other goals are well-planned'],
+    options: ['It provides a buffer that can prevent other goals from being derailed by unexpected expenses', 'Emergency funds have no real relationship to other financial goals', 'All ambitious financial goals should always be pursued as the highest priority before any form of emergency savings buffer is ever established', 'Emergency funds are unnecessary if other goals are well-planned'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -561,7 +561,7 @@ const questions: Question[] = [
   {
     id: 'fp-048',
     text: 'What\'s a sound way to incorporate risk management (insurance, emergency funds) into a broader financial plan, rather than treating it as separate?',
-    options: ['Risk management is unrelated to broader financial planning', 'Protecting against major setbacks supports the stability needed to pursue other financial goals over time', 'Financial planning should ignore risk entirely and focus only on growth', 'Risk management should always take priority over every other consideration'],
+    options: ['Risk management is unrelated to broader financial planning', 'Protecting against major setbacks supports the stability needed to pursue other financial goals over time', 'Financial planning in Nigeria should concentrate entirely on maximising investment growth and returns while completely setting aside any consideration of risk', 'Risk management should always take priority over every other consideration'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -571,7 +571,7 @@ const questions: Question[] = [
   {
     id: 'fp-049',
     text: 'Why might reviewing progress against a financial plan annually, at minimum, be a reasonable practice?',
-    options: ['Annual review has no practical benefit for financial planning', 'Regular review helps ensure the plan still reflects your actual circumstances, goals, and progress', 'Financial plans require no periodic review whatsoever once created', 'Reviewing progress should only happen once, at the very end of a plan\'s timeline'],
+    options: ['Annual review has no practical benefit for financial planning', 'Regular review helps ensure the plan still reflects your actual circumstances, goals, and progress', 'Financial plans require no periodic review whatsoever once created', 'Reviewing your progress against your financial plan should happen only once at the very end, after all your financial goals have been fully achieved'],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -581,7 +581,7 @@ const questions: Question[] = [
   {
     id: 'fp-050',
     text: 'What\'s a balanced perspective on pursuing aggressive financial goals versus maintaining a sustainable, realistic pace?',
-    options: ['Balancing ambition with realistic sustainability tends to support consistent long-term progress better than an unsustainable aggressive pace that risks burnout or abandonment', 'Aggressively ambitious goals should always be pursued at maximum intensity regardless of whether the saving pace is realistically sustainable over time', 'Choosing a sustainable and realistic savings pace has no measurable long-term advantage over setting the most aggressively ambitious target you can possibly commit to', 'Financial goals should never be ambitious in any form — always aim for the most conservative achievable target to guarantee you never fall behind or feel any pressure'],
+    options: ['Balancing ambition with realistic sustainability tends to support consistent long-term progress better than an unsustainable aggressive pace that risks burnout or abandonment', 'Aggressively ambitious financial goals should always be pursued at maximum intensity regardless of whether the saving pace can be realistically sustained through unexpected life changes and setbacks over the long term', 'Choosing a sustainable and realistic savings pace has no measurable long-term advantage over setting the most aggressively ambitious target you can possibly commit to', 'Financial goals should never be ambitious in any form — always aim for the most conservative achievable target to guarantee you never fall behind or feel any pressure'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -591,7 +591,7 @@ const questions: Question[] = [
   {
     id: 'fp-051',
     text: 'Why might involving a spouse or family in shared financial planning discussions matter for household goals?',
-    options: ['Shared goals benefit from shared visibility, alignment, and accountability among those involved', 'Financial planning should always remain entirely individual, even for shared household goals', 'Family involvement has no real bearing on achieving household financial goals', 'Only one person in a household should ever be involved in financial planning'],
+    options: ['Shared goals benefit from shared visibility, alignment, and accountability among those involved', 'All personal and household financial planning should always remain entirely individual and private, even when the goals are fully shared between two partners or spouses', 'Family involvement has no real bearing on achieving household financial goals', 'Only one person in a household should ever be involved in financial planning'],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -631,7 +631,7 @@ const questions: Question[] = [
   {
     id: 'fp-055',
     text: "What is a \"short-term financial goal\"?",
-    options: ["A goal to achieve in 20 years", "A goal you plan to achieve within the next 12 months", "A goal with no deadline", "A savings target set by the government"],
+    options: ["A saving target you expect to complete sometime within the next fifteen to twenty years from the date you set it", "A goal you plan to achieve within the next 12 months", "A goal with no deadline", "A savings target set by the government"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -641,7 +641,7 @@ const questions: Question[] = [
   {
     id: 'fp-056',
     text: "What is a \"long-term financial goal\"?",
-    options: ["A goal to achieve in 1 week", "A goal with no savings involved", "A goal planned for more than 5 years away", "A target set by parents"],
+    options: ["A goal to achieve in 1 week", "A goal that involves no financial saving, planning, or specific target amount of any kind", "A goal planned for more than 5 years away", "A target set by parents"],
     correctIndex: 2,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -661,7 +661,7 @@ const questions: Question[] = [
   {
     id: 'fp-058',
     text: "Which SMART element is missing from \"I will save money for a phone\"?",
-    options: ["It is completely SMART", "Time-bound — no deadline given", "Specific — no phone model stated", "Both time-bound and specific are missing"],
+    options: ["It is completely SMART", "Time-bound — no deadline given", "Specific is the only missing element because the goal does not name a particular phone model or mention a target price", "Both time-bound and specific are missing"],
     correctIndex: 3,
     difficulty: 'hard',
     ageTrack: ['kids'],
@@ -711,7 +711,7 @@ const questions: Question[] = [
   {
     id: 'fp-063',
     text: "What is a \"financial plan\"?",
-    options: ["A simple week-by-week spending log you maintain to track where your daily money goes each day", "A comprehensive document outlining goals, savings targets, investment strategies, and timelines for your financial future", "A certificate or payment receipt you receive from your financial advisor after completing an annual review session", "An official government form that Nigerians are required to complete each year for their personal income tax return"],
+    options: ["A simple week-by-week and day-by-day spending diary you maintain to record where every naira of your daily money goes throughout each month", "A comprehensive document outlining goals, savings targets, investment strategies, and timelines for your financial future", "A certificate or payment receipt you receive from your financial advisor after completing an annual review session", "An official government form that Nigerians are required to complete each year for their personal income tax return"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -731,7 +731,7 @@ const questions: Question[] = [
   {
     id: 'fp-065',
     text: "What is \"asset allocation\"?",
-    options: ["The total amount you spend across all expense categories during a given calendar month", "Dividing investments among different asset classes (stocks, bonds, cash, property) to balance risk and return", "The combined current market value of all property, savings, and investments you own at any given time", "The total number of active savings and current accounts you maintain across all Nigerian commercial banks"],
+    options: ["The total amount you spend across all expense categories during a given calendar month", "Dividing investments among different asset classes (stocks, bonds, cash, property) to balance risk and return", "The combined current market value of all property, savings, and investments you own at any given time", "The total number of active savings and current accounts you maintain across all Nigerian commercial banks and registered mobile money providers"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -841,7 +841,7 @@ const questions: Question[] = [
   {
     id: 'fp-076',
     text: "What does \"financial planning\" encompass beyond just budgeting?",
-    options: ["Only the management of day-to-day household spending and monthly budget tracking, with nothing more complex involved beyond that", "Budgeting, saving, investing, tax planning, insurance, retirement planning, and estate planning — a comprehensive life financial strategy", "The selection and active management of investment assets such as stocks, bonds, and mutual funds held on the Nigerian Exchange Group", "The exclusive management of outstanding loans and repayments covering everything owed to banks, cooperatives, and private lenders"],
+    options: ["Only the management of day-to-day household spending and monthly budget tracking, with nothing more complex involved beyond that", "Budgeting, saving, investing, tax planning, insurance, retirement planning, and estate planning — a comprehensive life financial strategy", "The selection and active daily management of specific investment assets such as Nigerian equities, federal government bonds, and regulated mutual funds listed on the Nigerian Exchange", "The exclusive management of outstanding loans and repayments covering everything owed to banks, cooperatives, and private lenders"],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['adults'],

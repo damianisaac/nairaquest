@@ -9,7 +9,7 @@ const questions: Question[] = [
       'Keep even more money under the bed for safety',
       'Split it — save some at the bank and keep a little at home',
       'Give all his money to a friend to keep',
-      'Spend it all immediately so there is nothing to steal',
+      'Spend all the money right away on things he needs so there is nothing left to worry about',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -36,7 +36,7 @@ const questions: Question[] = [
     id: 'rm-003',
     text: 'Aisha puts all her savings into one friend\'s business. The business fails and she loses everything. What should she have done?',
     options: [
-      'Invest all her money in one very trusted business',
+      'Invest all her money in the most reliable and profitable Nigerian business she can identify',
       'Split her savings across several different places rather than one',
       'Never invest money at all',
       'Borrow more money to invest',
@@ -66,7 +66,7 @@ const questions: Question[] = [
     id: 'rm-005',
     text: 'If someone offers you a chance to double your money in 24 hours with zero risk, what should you think?',
     options: [
-      'This is an amazing opportunity — invest everything',
+      'This is a fantastic opportunity and you should invest all your savings as quickly as possible',
       'This sounds too good to be true and is likely a scam',
       'Ask them to double only half your money first',
       'Zero risk is normal for all investments',
@@ -81,7 +81,7 @@ const questions: Question[] = [
     id: 'rm-006',
     text: 'Why is having savings important for managing risk?',
     options: [
-      'Savings automatically earn you more money',
+      'Having savings in your bank account means the bank will automatically grow your money for you',
       'Savings act as a safety net when unexpected problems happen',
       'Savings mean you never need to work',
       'Banks give you prizes for saving',
@@ -129,7 +129,7 @@ const questions: Question[] = [
     options: [
       'Higher risk always leads to higher guaranteed returns',
       'Investments with higher potential returns typically come with higher risk of loss',
-      'Low-risk investments always earn more than high-risk ones',
+      'Low-risk savings instruments like Nigerian Treasury Bills always outperform stocks over any time period',
       'Risk and return have no relationship',
     ],
     correctIndex: 1,
@@ -245,7 +245,7 @@ const questions: Question[] = [
     id: 'rm-017',
     text: 'What is "systemic risk" and why is it different from "idiosyncratic risk"?',
     options: [
-      'Both terms describe different ways portfolio losses accumulate — one from company failures and one from sector collapses — but both can be fully reduced through diversification across enough assets',
+      'Both terms describe different ways portfolio losses accumulate — one from company failures and one from sector collapses — but both can be fully reduced through diversification across enough diverse assets',
       'Systemic risk affects the entire financial system (banking crisis, recession) and cannot be diversified away; idiosyncratic risk is specific to one company and can be reduced through diversification',
       'Systemic risk only affects fixed-income instruments like Federal Government of Nigeria bonds; idiosyncratic risk applies exclusively to shares in privately-owned companies listed on the NSE',
       'Idiosyncratic risk is always larger and more damaging than systemic risk because individual company failures occur far more frequently than broad market downturns across the economy',
@@ -316,7 +316,12 @@ const questions: Question[] = [
   {
     id: 'rm-022',
     text: 'Why might wearing a seatbelt in a car relate to the idea of managing risk?',
-    options: ['It helps reduce potential harm if something unexpected happens', 'Seatbelts have no connection to risk at all', 'Wearing a seatbelt increases risk', 'Risk management only applies to money'],
+    options: [
+      'It helps reduce potential harm if something unexpected happens',
+      'Wearing a seatbelt has no real connection to the concept of managing risk in everyday life',
+      'Wearing a seatbelt increases risk',
+      'Risk management only applies to money',
+    ],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -326,7 +331,12 @@ const questions: Question[] = [
   {
     id: 'rm-023',
     text: 'If you\'re unsure whether to spend all your saved money on one thing, what\'s a smart thing to think about?',
-    options: ['What might happen if it turns out to be a bad choice', 'There\'s no need to think about outcomes', 'Spending decisions never carry any risk', 'Only adults need to think about risk'],
+    options: [
+      'What might happen if it turns out to be a bad choice',
+      'There is no point thinking through possible outcomes since spending decisions rarely go wrong anyway',
+      'Spending decisions never carry any risk',
+      'Only adults need to think about risk',
+    ],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -361,7 +371,12 @@ const questions: Question[] = [
   {
     id: 'rm-026',
     text: 'Why might thinking ahead about \'what could go wrong\' actually help you make better choices?',
-    options: ['It helps you prepare and make more thoughtful decisions', 'Thinking ahead has no real value', 'Things going wrong can never be anticipated', 'Only adults need to think ahead about problems'],
+    options: [
+      'It helps you prepare and make more thoughtful decisions',
+      'Thinking ahead has no real value',
+      'Things going wrong can never be anticipated',
+      'Only adults with significant financial obligations ever need to think ahead about potential problems',
+    ],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -371,7 +386,12 @@ const questions: Question[] = [
   {
     id: 'rm-027',
     text: 'What\'s a simple example of reducing risk with money?',
-    options: ['Not spending all your savings on one single thing', 'Spending every bit of money you have immediately', 'Risk reduction has no connection to money', 'Only rich people need to think about risk'],
+    options: [
+      'Not spending all your savings on one single thing',
+      'Spending every bit of money you have right away so there is nothing left to potentially lose',
+      'Risk reduction has no connection to money',
+      'Only rich people need to think about risk',
+    ],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -396,7 +416,12 @@ const questions: Question[] = [
   {
     id: 'rm-029',
     text: 'What\'s an example of a \'safe choice\' versus a \'risky choice\' with your allowance?',
-    options: ['Saving some versus spending it all on something uncertain', 'Both choices are always equally risky', 'There\'s no such thing as a safe choice', 'Risky choices are always better than safe ones'],
+    options: [
+      'Saving some versus spending it all on something uncertain',
+      'Both choices are always equally risky',
+      'There\'s no such thing as a safe choice',
+      'A risky choice with higher potential reward is always the smarter option compared to a safe one with limited upside',
+    ],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -436,7 +461,12 @@ const questions: Question[] = [
   {
     id: 'rm-032',
     text: 'Why might diversifying where you keep or use your money (not putting everything in one place) reduce overall risk?',
-    options: ['Diversification has no real effect on risk', 'Spreading resources can reduce the impact if any single option encounters a problem', 'Concentrating everything in one place is always the safer approach', 'Diversification only applies to large investment portfolios'],
+    options: [
+      'Diversification has no real effect on risk',
+      'Spreading resources can reduce the impact if any single option encounters a problem',
+      'Concentrating everything in one well-chosen place is always the simpler and safer long-term financial approach',
+      'Diversification only applies to large investment portfolios',
+    ],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -476,7 +506,12 @@ const questions: Question[] = [
   {
     id: 'rm-035',
     text: 'What\'s a reasonable way to weigh a decision that has a small chance of a big negative outcome?',
-    options: ['Consider both the likelihood and the potential severity of the outcome, not just one or the other', 'Only the likelihood of an outcome matters, never its severity', 'Only the severity of an outcome matters, never its likelihood', 'Decisions with any negative possibility should always be avoided entirely'],
+    options: [
+      'Consider both the likelihood and the potential severity of the outcome, not just one or the other',
+      'Only the likelihood of an outcome matters, never its severity',
+      'Only the severity of an outcome matters, never its likelihood',
+      'Any decision with even a small chance of a negative result should be avoided because the downside is never worth the risk',
+    ],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -501,7 +536,12 @@ const questions: Question[] = [
   {
     id: 'rm-037',
     text: 'What\'s a sound approach before committing significant time or money to an unfamiliar opportunity?',
-    options: ['Commit immediately without any evaluation to avoid missing out', 'Research and evaluate the opportunity\'s legitimacy and risks before committing significant resources', 'Unfamiliar opportunities require no additional caution compared to familiar ones', 'Research has no real value in evaluating opportunities'],
+    options: [
+      'Commit immediately without any evaluation to avoid missing out',
+      'Research and evaluate the opportunity\'s legitimacy and risks before committing significant resources',
+      'Unfamiliar opportunities from people you have worked with before require no additional investigation or due diligence beyond their word',
+      'Research has no real value in evaluating opportunities',
+    ],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -541,7 +581,12 @@ const questions: Question[] = [
   {
     id: 'rm-040',
     text: 'Why might building the habit of thinking through \'what could go wrong\' before financial decisions serve you well long-term?',
-    options: ['It builds a habit of thoughtful risk evaluation that can support better decision-making as financial stakes grow over time', 'This habit has no real long-term value', 'Thinking through risks only matters for large financial decisions, not smaller ones', 'Financial decision-making doesn\'t benefit from this kind of habit'],
+    options: [
+      'It builds a habit of thoughtful risk evaluation that can support better decision-making as financial stakes grow over time',
+      'Thinking through what could go wrong is a pessimistic habit that reduces financial confidence and leads to missed opportunities over time',
+      'Thinking through risks only matters for large financial decisions, not smaller ones',
+      'Financial decision-making doesn\'t benefit from this kind of habit',
+    ],
     correctIndex: 0,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -551,7 +596,12 @@ const questions: Question[] = [
   {
     id: 'rm-041',
     text: 'Why might diversification across different types of assets (savings, investments, property) reduce overall financial risk?',
-    options: ['Diversification has no real effect on overall risk exposure', 'Spreading exposure across different asset types can reduce the impact of any single asset performing poorly', 'Concentrating all resources in a single asset type is always the lower-risk approach', 'Diversification only matters for institutional investors, not individuals'],
+    options: [
+      'Diversification has no real effect on overall risk exposure',
+      'Spreading exposure across different asset types can reduce the impact of any single asset performing poorly',
+      'Concentrating all resources in a single well-researched asset type is always the lower-risk and more efficient approach to wealth building',
+      'Diversification only matters for institutional investors, not individuals',
+    ],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -561,7 +611,12 @@ const questions: Question[] = [
   {
     id: 'rm-042',
     text: 'What\'s a sound framework for evaluating whether to accept a financial risk (like a new investment or business venture)?',
-    options: ['Weighing the potential upside against the potential downside, likelihood of each outcome, and your capacity to absorb a loss', 'Only the potential upside should ever factor into the evaluation', 'Financial risk evaluation should be purely intuitive with no structured consideration', 'All risks should be avoided entirely regardless of potential benefit'],
+    options: [
+      'Weighing the potential upside against the potential downside, likelihood of each outcome, and your capacity to absorb a loss',
+      'Only the potential upside should ever factor into the evaluation',
+      'Financial risk evaluation should rely entirely on intuition and personal confidence rather than any structured probability assessment or formal analysis',
+      'All risks should be avoided entirely regardless of potential benefit',
+    ],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -646,7 +701,12 @@ const questions: Question[] = [
   {
     id: 'rm-048',
     text: 'What\'s a balanced view on risk tolerance changing over different life stages?',
-    options: ['Risk tolerance and capacity can reasonably shift with changing responsibilities, time horizons, and financial obligations across life stages', 'Risk tolerance should always remain completely fixed throughout life regardless of circumstances', 'Life stage has no bearing on appropriate risk management approaches', 'Only younger individuals should ever consider their risk tolerance'],
+    options: [
+      'Risk tolerance and capacity can reasonably shift with changing responsibilities, time horizons, and financial obligations across life stages',
+      'Risk tolerance should always remain entirely fixed throughout every life stage because consistent risk-taking produces the best long-term financial outcomes',
+      'Life stage has no bearing on appropriate risk management approaches',
+      'Only younger individuals should ever consider their risk tolerance',
+    ],
     correctIndex: 0,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -658,7 +718,7 @@ const questions: Question[] = [
     text: 'Why is understanding the difference between risk and uncertainty useful in financial decision-making?',
     options: [
       'Risk generally involves quantifiable probabilities, while uncertainty involves unknown or unpredictable outcomes, and this distinction can inform how decisions are approached',
-      'Risk and uncertainty are completely interchangeable financial terms, and treating them differently in decision-making creates unnecessary analytical complexity',
+      'Risk and uncertainty are completely interchangeable financial concepts in all practical contexts, and distinguishing between them only adds unnecessary analytical complexity without providing any real decision-making benefit',
       'The difference between quantifiable risk and unmeasurable uncertainty has no relevance to real-world financial planning or decision-making under realistic conditions',
       'Only credentialled risk professionals working in regulated Nigerian financial institutions are ever required to distinguish between risk and uncertainty',
     ],
@@ -686,7 +746,12 @@ const questions: Question[] = [
   {
     id: 'rm-051',
     text: "What is a \"risk\"?",
-    options: ["A certain outcome that always happens", "The possibility that something bad could happen", "A guaranteed profit from an investment", "A type of savings account"],
+    options: [
+      "A guaranteed negative outcome that always materialises whenever a person makes an investment or financial decision",
+      "The possibility that something bad could happen",
+      "A guaranteed profit from an investment",
+      "A type of savings account",
+    ],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -721,7 +786,12 @@ const questions: Question[] = [
   {
     id: 'rm-054',
     text: "What is \"diversification\"?",
-    options: ["Investing all money in one type of asset for maximum return", "Spreading money across different investments to reduce the impact of any single loss", "A type of bank savings product", "A government investment programme"],
+    options: [
+      "Concentrating all your available money in a single high-performing asset type to maximise total portfolio returns over time",
+      "Spreading money across different investments to reduce the impact of any single loss",
+      "A type of bank savings product",
+      "A government investment programme",
+    ],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -735,7 +805,7 @@ const questions: Question[] = [
       "Permanently eliminates all categories of financial risk from your personal and business finances",
       "Transfers the financial consequence of certain risks to an insurance company in exchange for premiums",
       "Generates additional passive income by investing your premium payments in the capital market",
-      "Physically prevents insured events like accidents or theft from occurring through proactive measures",
+      "Physically prevents insured events like accidents or theft from ever occurring by imposing safety and security conditions on all policyholders",
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -856,7 +926,12 @@ const questions: Question[] = [
   {
     id: 'rm-064',
     text: "What is \"credit risk\"?",
-    options: ["The risk of getting a low credit score", "The risk that a borrower will fail to repay money owed", "The risk that interest rates change", "The risk of theft from a bank"],
+    options: [
+      "The risk that your credit score falls significantly after you apply for multiple loans at the same time",
+      "The risk that a borrower will fail to repay money owed",
+      "The risk that interest rates change",
+      "The risk of theft from a bank",
+    ],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -867,7 +942,7 @@ const questions: Question[] = [
     id: 'rm-065',
     text: "What is \"operational risk\"?",
     options: [
-      "Risk of portfolio losses arising from falling equity and bond markets in Nigeria and globally",
+      "The risk of significant portfolio losses arising from broad declines in equity and bond markets across Nigeria and other global financial markets",
       "Risk of loss resulting from failed processes, systems, human error, or fraud within an organisation",
       "Risk that new competitors enter the Nigerian market and erode revenue and customer market share",
       "Risk that naira depreciation raises costs for businesses that import raw materials or machinery",
@@ -895,7 +970,7 @@ const questions: Question[] = [
       "The maximum possible profit a portfolio can generate over a defined investment horizon period",
       "The maximum expected loss of a portfolio over a given time period with a given confidence level",
       "The current total market value of all assets held within a diversified investment portfolio",
-      "The annualised standard deviation of a portfolio's returns over the preceding twelve months",
+      "The annualised standard deviation of a portfolio\'s daily returns over any rolling twelve-month period, used as a measure of historical price volatility",
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -909,7 +984,7 @@ const questions: Question[] = [
     options: [
       "Allocating a portion of your investment portfolio exclusively to hedge fund strategies and products",
       "Taking an offsetting position in a related asset to reduce or eliminate exposure to a specific risk",
-      "Spreading investments across many different asset classes, sectors, and geographic regions broadly",
+      "Spreading your investments as broadly as possible across many different asset classes, sectors, and geographic regions to achieve maximum portfolio diversification",
       "Liquidating all high-volatility positions to hold only cash and government bonds in the portfolio",
     ],
     correctIndex: 1,
@@ -922,7 +997,7 @@ const questions: Question[] = [
     id: 'rm-069',
     text: "A business earns 80% of its revenue from one client. What type of risk does this create?",
     options: [
-      "Market risk — broader sector downturns affect all revenues equally",
+      "Market risk — a broad sector-wide economic downturn would reduce this client\'s purchasing power along with all other business revenues equally",
       "Customer concentration risk — losing this client would devastate revenue",
       "Credit risk — the client may delay or default on payment",
       "Liquidity risk — cash flow gaps make it hard to pay suppliers",
@@ -939,7 +1014,7 @@ const questions: Question[] = [
     options: [
       "Both systematic and unsystematic risk can be completely eliminated by holding a large enough portfolio of diversified assets across all major asset classes",
       "Systematic risk affects the whole market (e.g. recession) and cannot be diversified away; unsystematic risk is specific to one company or sector and can be reduced through diversification",
-      "Both systematic and unsystematic risk refer to the same broad category of portfolio exposure, differing only in how financial textbooks label them for academic purposes",
+      "Both systematic and unsystematic risk describe the same general category of portfolio exposure, with the two labels being used interchangeably in academic and professional financial literature for classification purposes only",
       "Unsystematic risk is always the larger and more dangerous category because company-specific failures occur far more frequently than broad market downturns do",
     ],
     correctIndex: 1,
@@ -952,9 +1027,9 @@ const questions: Question[] = [
     id: 'rm-071',
     text: "What is an \"enterprise risk management\" (ERM) framework?",
     options: [
-      "A government-mandated risk assessment tool required by the CBN for all licensed Nigerian financial institutions",
+      "A government-mandated risk assessment and disclosure framework that the CBN requires all licensed Nigerian financial institutions to complete and submit on an annual basis",
       "A structured approach to identifying, assessing, and managing all significant risks across an entire organisation",
-      "A quantitative financial model for projecting risk-adjusted returns across an organisation's investment portfolio",
+      "A quantitative financial model for projecting risk-adjusted returns across an organisation\'s investment portfolio",
       "An insurance product that covers all categories of organisational risk under one comprehensive corporate policy",
     ],
     correctIndex: 1,
@@ -997,7 +1072,7 @@ const questions: Question[] = [
     id: 'rm-074',
     text: "What does \"risk transfer\" mean?",
     options: [
-      "Physically relocating business assets to a safer location to reduce the likelihood of theft or damage",
+      "Physically relocating all key business assets to a more secure location as a primary strategy for reducing the likelihood of theft, fire, or accidental damage",
       "Shifting the financial consequence of a risk to another party — e.g. via insurance or contractual clauses",
       "Completely avoiding any activity that carries a measurable chance of financial loss or harm",
       "Accepting a risk and setting aside your own reserves to cover any resulting financial losses",
@@ -1014,7 +1089,7 @@ const questions: Question[] = [
     options: [
       "A strategic plan for expanding a Nigerian business into new markets and product lines over the next five years",
       "A documented strategy ensuring an organisation can continue essential functions during and after a disaster or major disruption",
-      "An annual profitability planning exercise that projects revenue, costs, and net income for the coming financial year",
+      "An annual strategic profitability planning exercise that projects detailed revenue targets, operating costs, and expected net income for the coming financial year",
       "A risk assessment checklist used to identify and score all operational threats facing an organisation each quarter",
     ],
     correctIndex: 1,
@@ -1042,10 +1117,10 @@ const questions: Question[] = [
     id: 'rm-077',
     text: "What is \"tail risk\" in investing?",
     options: [
-      "The smallest possible gain or loss that a portfolio can experience under normal day-to-day market conditions",
+      "The minimum possible gain or loss that an investment portfolio is statistically expected to experience during typical day-to-day market trading conditions over a year",
       "The risk of rare but extremely severe events (in the tails of a probability distribution) that conventional risk models underestimate",
       "The risk that prolonged inflation gradually erodes real returns on a portfolio over a multi-year investment horizon",
-      "The standard deviation of a portfolio's historical returns over a specified period, used to measure daily volatility",
+      "The standard deviation of a portfolio\'s historical returns over a specified period, used to measure daily volatility",
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -1059,7 +1134,7 @@ const questions: Question[] = [
     options: [
       "A mandatory physical and psychological fitness test administered annually to all Nigerian bank employees",
       "Simulating extreme adverse scenarios to assess how a portfolio or organisation would perform — identifying vulnerabilities",
-      "Calculating the average risk-adjusted return a portfolio generates under typical market and economic conditions",
+      "Calculating the average risk-adjusted return that a diversified portfolio generates under normal and typical market conditions throughout an investment period",
       "Testing whether a new financial product will attract sufficient customer demand in the Nigerian retail market",
     ],
     correctIndex: 1,
@@ -1072,7 +1147,7 @@ const questions: Question[] = [
     id: 'rm-079',
     text: "What is \"moral hazard\" in risk management?",
     options: [
-      "When senior managers within a Nigerian bank deliberately falsify records to conceal poor-performing loans and protect their annual performance bonuses",
+      "When senior managers within a Nigerian commercial bank deliberately falsify internal financial records to conceal poor-performing loans and protect their personal annual performance bonuses from scrutiny",
       "When protection from consequences encourages riskier behaviour — e.g. a company taking excessive risk because losses are covered by government bailout",
       "When a Nigerian insurance company rejects a legitimate policyholder claim by citing fine-print exclusions in the original insurance contract",
       "The risk that employees commit internal fraud by manipulating financial records or misappropriating company funds without detection",

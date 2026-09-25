@@ -19,7 +19,7 @@ const questions: Question[] = [
       'The fee charged by a bank for transferring money abroad',
       'The price of one currency expressed in terms of another — e.g., ₦1,500 per US$1',
       'The difference between buying and selling price at a Bureau de Change',
-      'The maximum amount of dollars you can buy per day',
+      'The maximum daily dollar purchase limit per individual customer set by the CBN and enforced by commercial banks',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -35,7 +35,7 @@ const questions: Question[] = [
       'A savings account exclusively for Nigerians in the diaspora that earns interest in British pounds or euros',
       'A bank account in Nigeria that holds foreign currencies (dollars, euros, pounds) and allows foreign currency transactions',
       'An account that automatically converts naira deposits to US dollars at the CBN interbank rate on request',
-      'A government-regulated account used exclusively for settling import and export duty payments to customs',
+      'A government-regulated escrow account administered through NEXIM Bank exclusively for settling import and export duty and customs clearing charges on behalf of Nigerian traders and registered importers',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -48,7 +48,7 @@ const questions: Question[] = [
     id: 'fx-004',
     text: 'What is a Bureau de Change (BDC)?',
     options: [
-      'A government body that sets the official exchange rate',
+      'A government-mandated monetary policy body that establishes and publishes the official exchange rate benchmark used for all interbank and government-regulated transactions',
       'A CBN subsidiary that sells dollars to importers',
       'A licensed business authorised to buy and sell foreign currencies to the public',
       'An international bank specialising in African currencies',
@@ -112,7 +112,7 @@ const questions: Question[] = [
     id: 'fx-008',
     text: 'Why are diaspora remittances important to Nigeria\'s economy?',
     options: [
-      'They are insignificant compared to oil revenue and foreign direct investment, which together dominate Nigeria\'s external earnings by a wide margin',
+      'Remittances are largely insignificant compared to oil revenue and foreign direct investment inflows, which together account for the overwhelming majority of Nigeria\'s total external earnings and foreign exchange receipts each year',
       'Nigeria receives about $20–25 billion in remittances annually — one of Africa\'s largest, exceeding foreign direct investment and rivalling oil revenue',
       'Remittances are only relevant for rural households in the north, since urban residents rarely depend on money sent from abroad',
       'They allow the CBN to increase its gold and foreign reserve holdings by channelling diaspora inflows into the official reserve account',
@@ -144,7 +144,7 @@ const questions: Question[] = [
     id: 'fx-010',
     text: 'What is a "naira float" and what effect did the June 2023 float have?',
     options: [
-      'Floating the naira means fixing it at a permanently lower exchange rate agreed in advance between the CBN and the IMF under a structural adjustment programme',
+      'Floating the naira means pegging it permanently at a lower, pre-agreed exchange rate negotiated between the CBN, the Federal Ministry of Finance, and the IMF as part of a conditional structural adjustment programme designed to restore external balance',
       'Allowing the naira\'s exchange rate to be determined by market forces (supply and demand) rather than a fixed CBN rate — leading to significant naira depreciation in 2023',
       'A government programme that distributes naira-denominated bonds to diaspora Nigerians living in the UK, US, and Canada as an investment incentive',
       'A newly redesigned naira coin series introduced in 2023 that replaced all existing denominations below ₦200 as part of a currency reform',
@@ -187,7 +187,7 @@ const questions: Question[] = [
   {
     id: 'fx-018',
     text: 'Tunde wants to send $500 to his cousin studying in Canada. Rate at bank: ₦1,500/$. Rate via Lemfi app: ₦1,480/$. How much does he save by using Lemfi (excluding platform fees)?',
-    options: ['He saves ₦1,000', 'He saves ₦10,000', 'He saves ₦100', 'He saves ₦5,000'],
+    options: ['He saves ₦1,000 by using the better rate', 'He saves ₦10,000', 'He saves ₦100', 'He saves ₦5,000'],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -217,7 +217,7 @@ const questions: Question[] = [
     options: [
       'Only sourcing raw materials and finished goods from domestic Nigerian suppliers to avoid all foreign exchange exposure and import costs entirely',
       'Using financial instruments or contracts to lock in an exchange rate in advance, protecting against naira depreciation before an import payment is due',
-      'Getting a CBN foreign exchange subsidy allocated through the NEXIM Bank facility to offset the rising naira cost of importing essential goods',
+      'Applying for and obtaining a CBN foreign exchange subsidy or concessionary allocation through the NEXIM Bank pre-export financing facility to offset the rising naira cost of importing essential production inputs and finished goods',
       'Buying a comprehensive insurance policy from NAICOM-licensed underwriters that pays out when exchange rates move against the naira on import orders',
     ],
     correctIndex: 1,
@@ -234,7 +234,7 @@ const questions: Question[] = [
       'A savings account exclusively for students that offers elevated interest rates paid in naira by participating commercial banks, with no foreign currency component',
       'A foreign currency bank account held in Nigeria — beneficial if you earn or receive money in dollars/pounds/euros, or want to save in a currency stronger than the naira',
       'A joint account held together with a parent that allows controlled spending limits and automatic monthly transfers between linked naira accounts at the same bank',
-      'An account designed specifically for paying tuition fees and educational expenses to approved institutions both within and outside Nigeria directly in foreign currency',
+      'An account exclusively designed for paying school tuition fees and educational expenses abroad directly in foreign currency, offered to eligible students with verified foreign institution admission letters and certified financial sponsorship documentation',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -267,7 +267,7 @@ const questions: Question[] = [
       'A contract to purchase imported goods from a foreign supplier at a price locked in today, with delivery and payment due at a future agreed date after the goods are shipped',
       'An agreement to exchange currency at a pre-agreed rate on a future date — an exporter uses it to lock in today\'s rate on dollars they expect to receive in 3 months, eliminating uncertainty from naira fluctuations',
       'A CBN-issued special licence granting a designated company or bank the right to purchase unlimited foreign exchange directly from the interbank market at any approved rate',
-      'A short-term contract between two licensed commercial banks for overnight lending of US dollars at an agreed interbank rate, backed by approved government securities as collateral',
+      'A short-term interbank lending arrangement between two CBN-licensed commercial banks for overnight borrowing of US dollar liquidity at a pre-agreed interest rate, collateralised by approved Federal Government of Nigeria securities as legally mandated backing',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -282,7 +282,7 @@ const questions: Question[] = [
     options: [
       'Physically transporting large amounts of foreign banknotes across international borders to exploit price differences at money exchange counters in different countries',
       'Borrowing in a low-interest currency and investing in a high-interest currency to profit from the interest differential — risky because exchange rate movements can wipe out the interest gain',
-      'A forex trading strategy that restricts all buy and sell orders to specific African trading hours when the naira and other African currencies show the highest daily volatility',
+      'A specialised forex trading strategy that restricts all currency buy and sell orders exclusively to specific West African market trading hours when the naira and other African currencies historically demonstrate the highest intraday price volatility and available liquidity',
       'Purchasing Nigerian government bonds, treasury bills, or equities using US dollars specifically when the naira is at its weakest point in the current trading cycle',
     ],
     correctIndex: 1,
@@ -315,7 +315,7 @@ const questions: Question[] = [
       'It is entirely beneficial because each rate tier is carefully calibrated by the CBN to serve the specific foreign exchange needs of different economic groups without distortion',
       'It creates arbitrage opportunities (buy cheap at official rate, sell high at parallel rate), discourages genuine investment, and leads to capital flight as market participants lose confidence',
       'Multiple exchange rate tiers only create minor difficulties for importers of raw materials and have no meaningful effect on the wider Nigerian economy or everyday citizens',
-      'Having several exchange rate tiers strengthens the naira by creating healthy competition among licensed dealers, which ultimately drives rates toward fair and transparent market values',
+      'Having several distinct exchange rate tiers administered by the CBN fosters healthy competition among licensed dealers and BDCs, which ultimately converges rates toward fundamentally fair and fully transparent market values over the long run',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -328,7 +328,7 @@ const questions: Question[] = [
     id: 'fx-027',
     text: 'The CBN uses "sterilisation" to manage excess naira liquidity after forex interventions. What does sterilisation mean?',
     options: [
-      'Physically withdrawing and destroying old naira banknotes from circulation at CBN currency management centres in order to permanently reduce the domestic money supply',
+      'Physically withdrawing, shredding, and permanently destroying worn or excess naira banknotes retrieved from active circulation at designated CBN currency management and processing centres, in order to permanently reduce and tightly control the total domestic money supply',
       'When CBN sells naira (to support the naira\'s value), it creates excess dollars in the system — sterilisation means CBN then issues treasury bills or bonds to absorb excess naira and prevent inflation',
       'Cleaning chemically contaminated naira banknotes removed from general circulation and returning them safely to the vaults after a full disinfection treatment process',
       'Converting Nigeria\'s external dollar-denominated debt into long-term naira bonds issued to domestic investors so that future repayments no longer require foreign exchange reserves',
@@ -400,7 +400,7 @@ const questions: Question[] = [
     id: 'fx-017',
     text: 'Where can you legally exchange naira for foreign currency in Nigeria?',
     options: [
-      'With any stranger on the street offering a better rate',
+      'With any street trader or informal agent who offers a better exchange rate than the bank',
       'At CBN-licensed bureau de change or official bank counters',
       'At any supermarket',
       'At a petrol station',
@@ -461,7 +461,7 @@ const questions: Question[] = [
     id: 'fx-031',
     text: 'The exchange rate goes from ₦1,000/$ to ₦1,500/$. Has the naira gotten stronger or weaker?',
     options: [
-      'Stronger — more naira per dollar means naira is valuable',
+      'Stronger — a higher naira-to-dollar number means the naira has gained significant purchasing power against foreign currencies',
       'Weaker — you now need MORE naira to buy the same dollar, meaning naira lost value',
       'Neither — only the dollar changed',
       'Stronger — the number got bigger',
@@ -531,7 +531,12 @@ const questions: Question[] = [
   {
     id: 'fx-036',
     text: 'Why might different countries use different types of money?',
-    options: ['Each country typically has its own currency system', 'All countries use identical money', 'Currency has no connection to countries', 'Only some countries are allowed to have money'],
+    options: [
+      'Each country typically has its own currency system',
+      'All countries use identical money',
+      'Currency has no connection to countries',
+      'Only certain approved countries that meet international reserve and economic stability criteria are permitted to issue and manage their own national currencies',
+    ],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -541,7 +546,12 @@ const questions: Question[] = [
   {
     id: 'fx-037',
     text: 'If your family exchanges dollars for naira, what are they doing?',
-    options: ['Converting one currency into another', 'Making the dollars disappear', 'Creating new money', 'Nothing meaningful'],
+    options: [
+      'Converting one currency into another',
+      'Making the foreign currency temporarily vanish from the official monetary system before the naira equivalent reappears',
+      'Creating new money',
+      'Nothing meaningful',
+    ],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -551,7 +561,12 @@ const questions: Question[] = [
   {
     id: 'fx-038',
     text: 'Why might sending money between countries take a little time?',
-    options: ['It usually needs to go through proper channels to be safe and accurate', 'It never takes any time at all', 'International transfers are always instant with no process', 'There\'s no real process involved'],
+    options: [
+      'It usually needs to go through proper channels to be safe and accurate',
+      'It never takes any time at all',
+      'International money transfers are always completed instantly and in real time because digital payment systems process all currencies simultaneously without any delay or regulatory check',
+      'There\'s no real process involved',
+    ],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -591,7 +606,12 @@ const questions: Question[] = [
   {
     id: 'fx-041',
     text: 'What\'s an example of why families might value money sent from relatives abroad?',
-    options: ['It can help support the family\'s needs at home', 'It has no real value or purpose', 'It\'s only symbolic with no financial use', 'Families never rely on money sent from abroad'],
+    options: [
+      'It can help support the family\'s needs at home',
+      'It has no real value or purpose',
+      'It\'s only symbolic with no financial use',
+      'Families in Nigeria never actually rely on money sent home by relatives working abroad for any household expenses or daily needs',
+    ],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -601,7 +621,12 @@ const questions: Question[] = [
   {
     id: 'fx-042',
     text: 'Why should families be careful about how money sent from abroad is received?',
-    options: ['To make sure it arrives safely through a trusted method', 'Care has no real importance in this process', 'All methods of receiving money are equally safe', 'There\'s nothing to be careful about'],
+    options: [
+      'To make sure it arrives safely through a trusted method',
+      'Care has no real importance in this process',
+      'All officially available methods of receiving money sent from abroad are completely equal in safety, reliability, and speed with no meaningful difference between them whatsoever',
+      'There\'s nothing to be careful about',
+    ],
     correctIndex: 0,
     difficulty: 'easy',
     ageTrack: ['kids'],
@@ -636,7 +661,12 @@ const questions: Question[] = [
   {
     id: 'fx-045',
     text: 'What\'s a reasonable understanding of why exchange rates fluctuate?',
-    options: ['Exchange rates never actually change', 'They can be influenced by various economic factors and market conditions over time', 'Exchange rates are set randomly with no underlying reasons', 'Only governments can cause exchange rates to change'],
+    options: [
+      'Exchange rates are fixed permanently by international treaty and never change regardless of prevailing economic or market conditions in any country',
+      'They can be influenced by various economic factors and market conditions over time',
+      'Exchange rates are set randomly with no underlying reasons',
+      'Only governments can cause exchange rates to change',
+    ],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -661,7 +691,12 @@ const questions: Question[] = [
   {
     id: 'fx-047',
     text: 'What\'s a sound first step before using an unfamiliar money transfer app for the first time?',
-    options: ['Enter all your personal details immediately without any checks', 'Verify it\'s a legitimate, reputable service before sharing personal or financial information', 'Skip any verification since all apps are trustworthy', 'There\'s no need to check an app\'s legitimacy'],
+    options: [
+      'Enter all your personal and financial details immediately into the app without performing any background checks, legitimacy verification, or due diligence of any kind',
+      'Verify it\'s a legitimate, reputable service before sharing personal or financial information',
+      'Skip any verification since all apps are trustworthy',
+      'There\'s no need to check an app\'s legitimacy',
+    ],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -686,7 +721,12 @@ const questions: Question[] = [
   {
     id: 'fx-049',
     text: 'Why might remittances play a significant economic role for many Nigerian households?',
-    options: ['Remittances have no real economic significance for households', 'They can represent a meaningful source of income supporting household needs and spending', 'Remittances are purely symbolic gestures with no financial impact', 'Only wealthy households ever receive remittances'],
+    options: [
+      'Remittances sent by relatives abroad carry no meaningful economic significance or measurable impact on Nigerian household income, spending, or financial stability at all',
+      'They can represent a meaningful source of income supporting household needs and spending',
+      'Remittances are purely symbolic gestures with no financial impact',
+      'Only wealthy households ever receive remittances',
+    ],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -696,7 +736,12 @@ const questions: Question[] = [
   {
     id: 'fx-050',
     text: 'What\'s a reasonable caution around unsolicited messages offering to help transfer money internationally for a fee?',
-    options: ['Such offers are always legitimate and should be trusted immediately', 'This can be a common scam pattern, warranting careful verification before proceeding', 'There\'s no reason to be cautious about unsolicited offers', 'Fees should never factor into evaluating such offers'],
+    options: [
+      'Such unsolicited offers to assist with international money transfers are always fully legitimate services and should be trusted and acted upon immediately without any hesitation or verification',
+      'This can be a common scam pattern, warranting careful verification before proceeding',
+      'There\'s no reason to be cautious about unsolicited offers',
+      'Fees should never factor into evaluating such offers',
+    ],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['teens'],
@@ -766,7 +811,12 @@ const questions: Question[] = [
   {
     id: 'fx-055',
     text: 'Why might currency volatility be an important consideration for a business relying on imported inputs paid in foreign currency?',
-    options: ['Currency volatility has no effect on businesses using foreign currency', 'Fluctuations can directly affect input costs, which can impact pricing and profitability', 'Businesses using foreign currency are entirely insulated from currency changes', 'Only exporters are affected by currency volatility'],
+    options: [
+      'Currency volatility has no effect on businesses using foreign currency',
+      'Fluctuations can directly affect input costs, which can impact pricing and profitability',
+      'Businesses that pay for imported inputs in foreign currency are entirely insulated from any exchange rate changes because their supply contracts are always priced in fixed naira terms by agreement',
+      'Only exporters are affected by currency volatility',
+    ],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -791,7 +841,12 @@ const questions: Question[] = [
   {
     id: 'fx-057',
     text: 'Why is verifying the licensing status of a forex or remittance service provider important before large transactions?',
-    options: ['Licensing status has no bearing on transaction safety', 'Regulated providers typically offer more accountability and consumer protection than unregulated ones', 'Unregulated providers always offer better rates with no additional risk', 'Licensing is only relevant for institutional transactions'],
+    options: [
+      'The licensing status of a forex or remittance provider has absolutely no bearing whatsoever on the safety, security, or reliability of any transaction it processes for any customer',
+      'Regulated providers typically offer more accountability and consumer protection than unregulated ones',
+      'Unregulated providers always offer better rates with no additional risk',
+      'Licensing is only relevant for institutional transactions',
+    ],
     correctIndex: 1,
     difficulty: 'hard',
     ageTrack: ['adults'],
@@ -876,7 +931,12 @@ const questions: Question[] = [
   {
     id: 'fx-063',
     text: "What does \"exchange rate\" mean?",
-    options: ["The fee charged by a bank for all services", "The rate at which one currency is converted into another", "The interest rate on savings accounts", "The price of goods in a foreign country"],
+    options: [
+      'The total administrative fee and processing charge levied by a commercial bank for completing all account services and transactions on behalf of its customers',
+      'The rate at which one currency is converted into another',
+      'The interest rate on savings accounts',
+      'The price of goods in a foreign country',
+    ],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['kids'],
@@ -986,7 +1046,12 @@ const questions: Question[] = [
   {
     id: 'fx-073',
     text: "What is the \"official exchange rate\" in Nigeria?",
-    options: ["The rate set by street money changers", "The rate set by the CBN for official government transactions", "The rate used by online crypto platforms", "The rate fixed by commercial banks only"],
+    options: [
+      'The unofficial exchange rate negotiated informally on the street by unlicensed money changers operating completely outside any regulatory or legal framework',
+      'The rate set by the CBN for official government transactions',
+      'The rate used by online crypto platforms',
+      'The rate fixed by commercial banks only',
+    ],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
@@ -1041,7 +1106,12 @@ const questions: Question[] = [
   {
     id: 'fx-077',
     text: "What is the \"bid-offer spread\" in forex?",
-    options: ["The difference between the naira and the dollar value", "The difference between the buying rate and the selling rate of a currency", "The fee charged for international transfers", "The fluctuation in exchange rates over a day"],
+    options: [
+      'The numerical gap between the current naira equivalent value and the US dollar benchmark rate used for all domestic import pricing and customs valuation purposes',
+      'The difference between the buying rate and the selling rate of a currency',
+      'The fee charged for international transfers',
+      'The fluctuation in exchange rates over a day',
+    ],
     correctIndex: 1,
     difficulty: 'easy',
     ageTrack: ['teens'],
