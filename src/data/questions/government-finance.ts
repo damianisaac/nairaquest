@@ -746,7 +746,7 @@ const questions: Question[] = [
   {
     id: 'gf-054',
     text: "What happens when a government spends more than it earns?",
-    options: ["The economy automatically grows", "The government runs a budget deficit and must borrow to cover the gap", "Nothing — governments can always print money safely", "Taxes automatically increase"],
+    options: ["The economy automatically grows", "The government runs a budget deficit and must borrow to cover the gap", "Nothing happens — governments can always print money without any negative consequences", "Taxes automatically increase"],
     correctIndex: 1,
     difficulty: 'medium',
     ageTrack: ['kids'],

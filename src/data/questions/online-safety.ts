@@ -1162,7 +1162,7 @@ const questions: Question[] = [
     id: 'os-081',
     text: "What is a \"man-in-the-middle\" (MITM) attack?",
     options: [
-      "A physical robbery method where armed criminals ambush and steal cash transfers being moved between bank couriers at a scheduled handover point",
+      "A physical robbery method where armed criminals ambush and steal cash transfers being moved between bank couriers at a scheduled handover point in transit",
       "An attack where a third party secretly intercepts and possibly alters communications between two parties who believe they are communicating directly",
       "A type of phishing email that embeds invisible tracking pixels in images to record when and where the target opens it",
       "A cyberattack where a criminal remotely hacks a company's server and downloads sensitive employee financial records",

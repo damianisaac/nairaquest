@@ -885,7 +885,7 @@ const questions: Question[] = [
       "The risk that the Nigerian Stock Exchange suspends trading for an extended period",
       "The risk that investment values will fall due to broader economic or market conditions",
       "The risk of failing to find a buyer for your property or goods at an acceptable price",
-      "The risk that rising inflation in Nigeria erodes the real value of your cash holdings",
+      "The risk that rising inflation in Nigeria gradually erodes the real purchasing value of your cash holdings",
     ],
     correctIndex: 1,
     difficulty: 'easy',

@@ -856,7 +856,7 @@ const questions: Question[] = [
       "Only the president decides how tax revenue is spent, with no citizen input needed",
       "Citizens fund the government through taxes and have the right to demand accountability",
       "Only elected officials should know where taxes go; public oversight is not required",
-      "Tax money vanishes into government accounts and nobody has the right to ask questions",
+      "Tax money vanishes into government accounts and no ordinary citizen has the right to ask any questions",
     ],
     correctIndex: 1,
     difficulty: 'hard',
