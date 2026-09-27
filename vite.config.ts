@@ -48,6 +48,7 @@ export default defineConfig({
         ],
       },
       workbox: {
+        maximumFileSizeToCacheInBytes: 4 * 1024 * 1024, // 4 MiB
         // Take control immediately on every new deploy — prevents stale bundle white screens
         skipWaiting: true,
         clientsClaim: true,
